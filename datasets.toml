@@ -162,3 +162,6 @@ role = "test"
 # Real Italian forms (docs/EXTERNAL.md), built by generators/make_xfund.py into external/. CC BY-NC-SA 4.0: evaluation only.
 [dataset."external/xfund_it_val"]
 role = "test"
+# OmniDocBench v1.5, a fixed subset of 200 pages (docs/EXTERNAL.md), built by generators/make_omnidoc.py. Apache-2.0.
+[dataset."external/omnidoc_200"]
+role = "test"

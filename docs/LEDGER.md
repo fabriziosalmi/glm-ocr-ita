@@ -149,3 +149,21 @@ Whatever the outcome, it goes in the README and in the model card, next to the s
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+
+## `external/omnidoc_200` (OmniDocBench v1.5, 200 pages) - open
+
+Written on 2026-10-14, before any model read any page of the benchmark; the evaluator was checked first with the annotation's own text as prediction. Read on the Mac mini, both sides there, official prompt, full resolution, pages as they are.
+
+**Why.** The fine-tuning taught Italian and English documents. This checks that it did not cost the model what it was built for: Chinese and English pages of every kind, scored by the benchmark's own code.
+
+**Tags.** BASE `omnidoc200_bf16_1.0_op`; release `omnidoc200_v8d8e8op1_1.0_op`.
+
+**Measure.** Normalized edit distance of the text blocks, official evaluator (`experiments/omnidoc_eval.py`), per page = mean over its matched blocks; lower is better. Difference = BASE - release, times 100, so that positive means the release is better; paired bootstrap over pages (2000, seed 0).
+
+**Questions and thresholds**, on the English pages (150) and on the Chinese pages (50) apart:
+
+1. Is the release not worse than BASE? Passes if the lower bound of the difference is above -1.5.
+2. Reading order edit distance: reported, no threshold.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
