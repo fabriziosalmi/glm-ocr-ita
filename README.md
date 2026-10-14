@@ -2,9 +2,26 @@
 
 [GLM-OCR](https://huggingface.co/zai-org/GLM-OCR), fine-tuned for Italian documents and compressed to 8 bits, for OCR on Apple Silicon with MLX.
 
-**Release v1.0.0: `GLM-OCR-ita-mlx-8bit`** ([weights on Hugging Face](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-mlx-8bit), model card in `docs/MODEL_CARD.md`, changes in `CHANGELOG.md`). It reads Italian better than the original, English too, at 45% of the size.
+**Release v1.1.0: `GLM-OCR-ita-mlx-8bit`** ([weights on Hugging Face](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-mlx-8bit), model card in `docs/MODEL_CARD.md`, changes in `CHANGELOG.md`). Better than the original on 50 real Italian forms and on synthetic Italian and English pages, at 45% of the size; worse on Chinese.
 
 This repository holds the harness, the synthetic test sets, the fine-tuning and every raw output behind the numbers below. Every number in the tables is recomputed from `results/` by the test suite.
+
+## Release v1.1.0
+
+Same weights as v1.0.0. What changes is how a page is read: a page that falls into a repetition loop is read a second time with a repetition penalty of 1.1 (mlx-vlm's), and the second reading is kept unless it loops too and returns less text (`engine.keep_retry`, fixed before any retry was measured). `glmocr infer` does it by default. The penalty was chosen on the 149 forms of the XFUND Italian training split, used as a dev set and never trained on; 1.05, 1.1 and 1.2 were tried (`docs/ROADMAP.md`).
+
+| Page set | Role | Pages | Original | v1.0.0 | **v1.1.0** | v1.1.0 - original [95% CI] | Verdict | Loops |
+|---|---|---|---|---|---|---|---|---|
+| XFUND Italian forms, val (real scans) | test | 50 | 74.6% | 74.9% | **77.7%** | **+3.1 [+1.3, +5.9]** | better | 2 / 3 / **0** |
+| same, filled-in values only | test | 50 | 76.9% | 74.5% | 77.9% | +1.1 [-0.9, +3.2] | not worse | |
+| XFUND Italian forms, train | dev | 149 | 77.3% | 78.5% | 80.2% | +2.9 [+1.1, +4.2] | better | 1 / 6 / 1 |
+| OmniDocBench v1.5 subset, English (text edit distance x100, lower is better) | test | 140 | 7.6 | 8.1 | 7.9 | -0.3 [-2.7, +1.7] | not shown | |
+| OmniDocBench v1.5 subset, Chinese | test | 45 | 14.8 | 19.6 | 19.7 | **-4.8 [-10.6, -0.9]** | **worse** | 5 / 7 / 5 (all 200 pages) |
+
+- **Real Italian documents, measured.** XFUND (Xu et al., 2022) holds real forms, filled in by hand or by machine and scanned; entities are its annotated segments of 2 characters or more. v1.0.0 alone was not shown better there: it fell into loops on comb fields (one character per box, as in tax codes) on 2 of 50 forms and lost the rest of each form. The retry reads both again in full.
+- **Chinese pays.** On OmniDocBench (200 pages of the benchmark, 150 English and 50 Chinese, scored by its own evaluator on text blocks; formulas and tables left out) the model is not shown to keep English and is worse on Chinese, both as v1.0.0 and as v1.1.0. No training page was Chinese. On 2 Chinese pages the model writes a table as markdown, as it was trained to, and the evaluator files it under tables; that explains part of the loss, but the split was made after seeing the result. For Chinese documents, use the original.
+- **Cost.** A second read only where a page loops: 22.5 s per form on average against 20.7 for v1.0.0 and 21.5 for the original (Mac mini M4).
+- **Limits.** XFUND val had been read once for v1.0.0, and that read is what pointed at comb fields; this second read is of a configuration chosen on another split, and is said as such in `docs/LEDGER.md`. The next model change needs a fresh test set. Accented words on the dev split: 90.6% for the original, 88.8% for v1.1.0, not yet understood. XFUND is CC BY-NC-SA 4.0, used for evaluation only; its outputs are not in git, nor are those of OmniDocBench, whose pages include copyrighted newspapers and books.
 
 ## Release v1.0.0
 
@@ -205,7 +222,8 @@ Python 3.12 on Apple Silicon.
 ```bash
 python3.12 -m venv .venv && .venv/bin/pip install -r requirements.lock -e ".[dev]"   # every package pinned
 source .venv/bin/activate
-glmocr infer page.png          # the release, downloaded from Hugging Face (1.2 GB) on first use; exit code 2 on a repetition loop
+glmocr infer page.png          # the release, downloaded from Hugging Face (1.2 GB) on first use; a page that loops is read again
+                               # with repetition penalty 1.1 (--retry-penalty 0 to turn it off); exit code 2 if it still loops
 ```
 
 With mlx-vlm alone, the prompt must be the official one: `Text Recognition:` right after the image, and nothing else in the assistant turn. mlx-vlm's own chat template adds `/nothink` and an empty think block, which the model was not trained with (`docs/MODEL_CARD.md` has the snippet).
@@ -260,8 +278,8 @@ Tags in `results/`: `test_*` test-set reads (`docs/LEDGER.md`); `sparkA_*`, `cha
 | Path | What is there |
 |---|---|
 | `glmocr/` | The package behind the `glmocr` command: `models.py` (checkpoint and variants), `engine.py` (the one place that calls the model), `guard.py` (memory fences), `metrics.py` and `score.py` (scoring), `check.py` (page-set validation), `corpus.py` (paths and roles) |
-| `generators/` | `make_hard.py` for `hard/` and `held/`; `make_sroie.py` converts the SROIE receipts into `external/` |
-| `experiments/` | Fine-tuning (`ft_data.py`, `ft_targets.py`, `ft_train.py`, `ft_points.py`, `ft_merge.py`, `panel.py`), per-language comparison (`compare_lang.py`), dataset audit (`dataset_audit.py`), orientation (`orient_*.py`), reading a page in pieces (`crops.py`) |
+| `generators/` | `make_hard.py` for `hard/` and `held/`; `make_sroie.py`, `make_xfund.py`, `make_omnidoc.py` convert third-party sets into `external/`; `make_f24.py`, `make_photo_set.py`, `augment.py` and `ids.py` build training pages for comb fields (`augment.py` and `make_f24.py` run in their own environment) |
+| `experiments/` | Fine-tuning (`ft_data.py`, `ft_targets.py`, `ft_train.py`, `ft_points.py`, `ft_merge.py`, `panel.py`), per-language or per-type comparison (`compare_lang.py`), the retry on saved runs (`loop_retry.py`), the OmniDocBench evaluator (`omnidoc_eval.py`), dataset audit (`dataset_audit.py`), orientation (`orient_*.py`), reading a page in pieces (`crops.py`) |
 | `hard/`, `held/` | Ground truth and metadata of the two synthetic sets |
 | `results/` | Raw per-page outputs and timings of every run |
 | `tests/` | The scorer on broken inputs, the README tables (`test_tables.py`, and `test_release.py` where the page sets are on the machine), the rules that code can enforce |
@@ -271,7 +289,8 @@ Tags in `results/`: `test_*` test-set reads (`docs/LEDGER.md`); `sparkA_*`, `cha
 
 ## Not done
 
-- **Real Italian documents.** Every Italian page measured is synthetic. SROIE (real receipts, English) is the only real set, and it was read on a subset of 100.
+- **Real Italian documents beyond forms.** The only real Italian set is XFUND (forms, 50 test and 149 dev); invoices, letters and photographs of documents are not measured. SROIE (real receipts, English) was read on a subset of 100.
+- **Comb fields in training.** v1.1.0 avoids the loops at reading time; the model itself was not trained on comb fields. Synthetic training data for that (the official F24 form, filled with made-up values and degraded) is in `generators/`, not yet used.
 - **Speed.** The release is as fast as the original. Fewer visual tokens per page is where time is saved (0.7x halves it), but it loses small print; reading a page in pieces (`docs/ROADMAP.md`) is a separate line of work, not started.
 - **Smaller than 1184 MB with fine-tuning.** The 4-bit decoder skips small print; widths between 4 and 8 bits were not measured.
 - **Vocabulary pruning** to Italian and English: tried, about 70 MB to gain, abandoned because the renumbered tokenizer did not load.

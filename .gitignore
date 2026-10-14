@@ -25,3 +25,4 @@ photo_set/*.png
 photo_set/print.pdf
 photo_set/photos/
 augraphy_cache/
+results/omnidoc*

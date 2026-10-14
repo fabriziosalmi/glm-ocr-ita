@@ -238,8 +238,8 @@ def main(argv=None):
     p.add_argument("--mem-gb", type=float, default=None)
     p = add("check", cmd_check, "validate page sets (default: every set in datasets.toml)")
     p.add_argument("corpus", nargs="*")
-    for name in ("infer", "run"):
-        sub.choices[name].add_argument("--retry-penalty", type=float, default=None, help="read a page that loops a second time with this repetition penalty (e.g. 1.1); see engine.keep_retry")
+    for name, default in (("infer", 1.1), ("run", None)):   # infer reads as release v1.1.0; run measures only what it is told
+        sub.choices[name].add_argument("--retry-penalty", type=float, default=default, help=f"read a page that loops a second time with this repetition penalty, 0 for never (default {default}); see engine.keep_retry")
     for name in ("infer", "run", "smoke"):
         sub.choices[name].add_argument("--prompt", choices=["official", "mlx"], default="official", help="official: as the reference implementation; mlx: with /nothink and <think></think>, as every run before 2026-10-14")
     a = ap.parse_args(argv)

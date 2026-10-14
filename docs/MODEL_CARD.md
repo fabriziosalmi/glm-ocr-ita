@@ -16,9 +16,9 @@ tags:
 - 8-bit
 ---
 
-# GLM-OCR-ita-mlx-8bit (v1.0.0)
+# GLM-OCR-ita-mlx-8bit (v1.1.0)
 
-[GLM-OCR](https://huggingface.co/zai-org/GLM-OCR), fine-tuned for Italian documents and quantized to 8 bits for Apple Silicon with [MLX](https://github.com/ml-explore/mlx). It reads Italian better than the original, and English too, at 45% of the size.
+[GLM-OCR](https://huggingface.co/zai-org/GLM-OCR), fine-tuned for Italian documents and quantized to 8 bits for Apple Silicon with [MLX](https://github.com/ml-explore/mlx). It reads Italian better than the original, on real forms and on synthetic documents, at 45% of the size. It is worse on Chinese: for Chinese documents, use the original.
 
 Code, test sets, raw outputs and the full measurement record: [github.com/fabriziosalmi/glm-ocr-ita](https://github.com/fabriziosalmi/glm-ocr-ita).
 
@@ -32,6 +32,14 @@ Entity recall: share of the entities of a page (amounts, dates, IBAN, VAT number
 | Synthetic English pages, same renderer | 25 | 86.8% | **93.9%** | **+7.1 [+4.1, +10.5]** |
 | Dense synthetic Italian documents (`chatgpt/itdoc_c`) | 24 | 93.0% | 93.7% | +0.7 [+0.0, +1.4] |
 | SROIE 2019 real scanned receipts, English (subset) | 100 | 92.0% | 92.0% | +0.0 [-1.2, +1.5] |
+| **XFUND real Italian forms** (val), read with the retry below | 50 | 74.6% | **77.7%** | **+3.1 [+1.3, +5.9]** |
+
+OmniDocBench v1.5, a fixed subset of 200 pages, official evaluator, text blocks only (normalized edit distance x100, lower is better; formulas and tables not scored):
+
+| Pages | Original (bf16) | This model (v1.1.0) | Original - this model [95% CI] |
+|---|---|---|---|
+| English, 140 with matched text | 7.6 | 7.9 | -0.3 [-2.7, +1.7], not shown either way |
+| Chinese, 45 with matched text | 14.8 | 19.7 | **-4.8 [-10.6, -0.9], worse** |
 
 | | Size | Peak memory | Generation speed |
 |---|---|---|---|
@@ -40,13 +48,20 @@ Entity recall: share of the entities of a page (amounts, dates, IBAN, VAT number
 
 Most of the gain is text the original leaves out: letterheads and footers (pages returning under 90% of their text drop from 25 to 3 of 120). Tax codes go from 60% to 72%, IBANs from 72% to 84%, VAT numbers from 73% to 87%.
 
-Every test set was read once for this model, with its question and threshold written down before the read.
+Every test read had its question and threshold written down before the read ([LEDGER.md](https://github.com/fabriziosalmi/glm-ocr-ita/blob/main/docs/LEDGER.md)). XFUND val was read twice: once for v1.0.0, where the model was not shown better (+0.3 [-3.0, +2.9]) because it looped on 2 forms, then for v1.1.0, with the retry chosen on the XFUND training split (149 forms, never trained on: +2.9 [+1.1, +4.2] there).
+
+## What changed in v1.1.0
+
+The weights are those of v1.0.0 (same SHA-256). On forms with comb fields (one character per box, as in tax codes) the model can fall into a repetition loop and lose the rest of the page. v1.1.0 reads such a page a second time with `repetition_penalty=1.1` and keeps the second reading unless it loops too and returns less text. On XFUND val this closes every loop (original 2, v1.0.0 3, v1.1.0 0) at about 1 second per form on average. The `glmocr` harness does it by default; with mlx-vlm alone, see Use.
 
 ## Limits
 
 - **Every Italian page measured is synthetic**, from three page generators commissioned for this work. Real Italian documents have not been measured.
 - **Not faster than the original per page**: generation is faster, reading the image costs the same.
-- Repetition loops are rare but happen on degraded pages (2 of 120 on the test set, on pages where no entity was lost). Stop generation when the output starts repeating itself; the `glmocr` package does it.
+- **Chinese is worse** than with the original (OmniDocBench, above): no training page was Chinese.
+- **Real Italian documents measured are forms only** (XFUND). Invoices, letters and phone photos of documents are not measured.
+- Repetition loops happen on comb fields and degraded pages. Stop generation when the output starts repeating itself and read the page again with `repetition_penalty=1.1`; the `glmocr` package does both. One XFUND dev form still loops at every penalty tried.
+- Accented words on XFUND dev: 88.8% against 90.6% for the original; not yet understood.
 - Pages rotated by 90 degrees are unreadable, as for the original: straighten them first.
 
 ## Use
@@ -60,10 +75,11 @@ from mlx_vlm.prompt_utils import apply_chat_template
 model, processor = load("fabriziosalmi/GLM-OCR-ita-mlx-8bit")
 prompt = apply_chat_template(processor, model.config, "Text Recognition:", num_images=1)
 prompt = prompt.replace("/nothink", "").replace("<think></think>\n", "")   # the official prompt
-print(generate(model, processor, prompt, image="page.png", max_tokens=3000, temperature=0.0).text)
+text = generate(model, processor, prompt, image="page.png", max_tokens=3000, temperature=0.0).text
+# if the text ends in a repetition loop, read again with repetition_penalty=1.1 (v1.1.0) and keep that reading
 ```
 
-Or with the harness, which also guards memory and stops loops: `pip install -r requirements.lock -e .` in the repository, then `glmocr infer page.png`.
+Or with the harness, which also guards memory and stops loops: `pip install -r requirements.lock -e .` in the repository, then `glmocr infer page.png` (the retry is on by default).
 
 Tested with mlx 0.32.3 and mlx-vlm 0.7.6 (`requirements.lock` in the repository). `model.safetensors` SHA-256: `f98e8f0c4e26903f71cccd2c115add8000a150141963da6f7b51ed0624d61ccd`.
 
@@ -76,4 +92,4 @@ Tested with mlx 0.32.3 and mlx-vlm 0.7.6 (`requirements.lock` in the repository)
 
 ## License and citation
 
-MIT, as the base model. Base model: GLM-OCR by Z.ai; cite the GLM-OCR technical report ([arXiv 2603.10910](https://arxiv.org/abs/2603.10910)). SROIE: ICDAR 2019 Robust Reading Challenge on Scanned Receipts OCR and Information Extraction, used for evaluation only.
+MIT, as the base model. Base model: GLM-OCR by Z.ai; cite the GLM-OCR technical report ([arXiv 2603.10910](https://arxiv.org/abs/2603.10910)). SROIE: ICDAR 2019 Robust Reading Challenge on Scanned Receipts OCR and Information Extraction; XFUND: Xu et al., ACL Findings 2022 (CC BY-NC-SA 4.0); OmniDocBench: Ouyang et al., CVPR 2025 (Apache-2.0). All used for evaluation only.

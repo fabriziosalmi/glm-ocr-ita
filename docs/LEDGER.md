@@ -177,12 +177,16 @@ Written on 2026-10-14, before any model read any page of the benchmark; the eval
 | 2026-10-14 | same | 2 | Reading order: English 17.2 -> 18.1, -0.9 [-3.5, +1.6] (148 pages); Chinese 30.2 -> 31.5, -1.4 [-4.4, +0.7] (50) |
 | 2026-10-14 | | verdict | **The release costs Chinese text and is not shown to keep English** on this subset, by the benchmark's own code. Loops 5 -> 7 (cut by the reader; one English page loses all its text). Read with v1.0.0, without the retry. Said as such in the README and the model card. Comparison: `experiments/omnidoc_compare.py` (written after the evaluator ran, before this comparison) |
 
-## `external/omnidoc_200`, second read: v1.1 - open
+## `external/omnidoc_200`, second read: v1.1 - closed: worse on Chinese
 
 Written on 2026-10-14, after the v1.0.0 outcome above and before any retry on this set. v1.1 is the released configuration (retry at penalty 1.1, chosen on XFUND train); it rereads only the pages that looped. Tag `omnidoc200_v8d8e8op1_1.0_op_rp110`, from `omnidoc200_v8d8e8op1_1.0_op` by `experiments/loop_retry.py`, on the Mac mini. Same measure and threshold as above: question 1 on English and on Chinese apart, lower bound above -1.5. Expected, and said before the read: only the 7 looping pages can change, so Chinese is unlikely to pass.
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-10-14 | `omnidoc200_bf16_1.0_op`, `omnidoc200_v8d8e8op1_1.0_op_rp110` | 1, English | **Not shown.** 7.6 -> 7.9, -0.3 [-2.7, +1.7] on 140 pages |
+| 2026-10-14 | same | 1, Chinese | **Fails: worse.** 14.8 -> 19.7, -4.8 [-10.6, -0.9] on 45 pages |
+| 2026-10-14 | same | 2 | Reading order: English -1.0 [-3.6, +1.5], Chinese -1.3 [-4.3, +0.8] |
+| 2026-10-14 | | verdict | **As expected: the retry does not change the verdict.** 9 pages reread (newspapers, mostly), the second reading kept on 7; loops cut by the reader 7 -> 5. Seen after the outcome, and not a claim: on 2 Chinese pages the model writes a table as markdown (`a \| b`), as it was trained to, where the original wrote plain text; the evaluator then files the table under tables, which this measure leaves out, and the page's text counts as missed. Without those 2 pages the Chinese difference would be -2.7. The fine-tuning had no Chinese page |
 
 ## `external/xfund_it_val`, second read: v1.1 - closed: better
 

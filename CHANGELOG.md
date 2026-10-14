@@ -2,6 +2,14 @@
 
 Versions of the released model and of the `glmocr` package go together. Dates are those of the measurements.
 
+## v1.1.0 - 2026-10-14
+
+Same weights as v1.0.0 (same SHA-256); the reading changes.
+
+- **Retry on loops.** A page that loops is read a second time with mlx-vlm's `repetition_penalty=1.1`; the second reading is kept unless it loops too and returns less text (`engine.keep_retry`). On by default in `glmocr infer` (`--retry-penalty 0` turns it off); off in `glmocr run` unless asked. Penalty chosen on XFUND Italian train (149 real forms, dev): 1.05, 1.1, 1.2 tried; 1.1 closes 5 of 6 loops.
+- **Measured** (README, "Release v1.1.0"): on XFUND Italian val (50 real forms, test) +3.1 [+1.3, +5.9] over the original, filled-in values +1.1 [-0.9, +3.2], loops 2 -> 0. v1.0.0 alone was +0.3 [-3.0, +2.9] there, with two new loops on comb fields. On an OmniDocBench subset (200 pages, official evaluator, text blocks) English is not shown either way (-0.3 [-2.7, +1.7]) and Chinese is worse (-4.8 [-10.6, -0.9]), with or without the retry.
+- **New.** Converters for XFUND and an OmniDocBench subset, the official OmniDocBench evaluator wrapper (`experiments/omnidoc_eval.py`), the retry on saved runs (`experiments/loop_retry.py`), per-type comparison. Training pages for comb fields, not yet used: the official F24 filled with made-up values, twelve printable Italian forms, continuous-severity degradation.
+
 ## v1.0.0 - 2026-10-14
 
 First release of weights: `GLM-OCR-ita-mlx-8bit` on Hugging Face (`fabriziosalmi/GLM-OCR-ita-mlx-8bit`).

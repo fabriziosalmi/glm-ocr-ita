@@ -1,6 +1,6 @@
-"""Every number of the release table in the README (model v1.0.0, `v8d8e8_op1`), recomputed from results/.
-The page sets are not in this repository (docs/DATASETS.md): each test is skipped where its set is not on the machine,
-and SROIE outputs are not in git at all (docs/EXTERNAL.md)."""
+"""Every number of the release tables in the README (weights `v8d8e8_op1`: v1.0.0, and v1.1.0 = the same weights read with the
+retry at repetition penalty 1.1), recomputed from results/. The page sets are not in this repository (docs/DATASETS.md): each test
+is skipped where its set is not on the machine, and SROIE and XFUND outputs are not in git at all (docs/EXTERNAL.md)."""
 import pytest
 
 from glmocr import corpus, metrics, score
@@ -15,6 +15,9 @@ ROWS = {
     "chatgpt/itdoc_a": ("chatgptA_", 94.2, 94.7, 0.5, (-0.1, 1.1), 0, 0, 0, 0),
     "external/sroie_test#100": ("sroie100_", 92.0, 92.0, 0.0, (-1.2, 1.5), 2, 0, 0, 0),
 }
+# XFUND Italian forms (test, read on the Mac mini): v1.0.0, then v1.1.0
+XFUND = {"xfund_it_v8d8e8op1_1.0_op": (74.6, 74.9, 0.3, (-3.0, 2.9), 12, 8, 2, 3),
+         "xfund_it_v8d8e8op1_1.0_op_rp110": (74.6, 77.7, 3.1, (1.3, 5.9), 12, 5, 2, 0)}
 LANGS = {"spark/itdoc_b#120": {"it": (88.7, 92.4, 3.7, (2.4, 5.1)), "en": (86.8, 93.9, 7.1, (4.1, 10.5))}}
 
 
@@ -62,3 +65,19 @@ def test_release_by_language(name):
         d = lambda s: metrics.recall(cb, s) - metrics.recall(ca, s)
         lo, hi = metrics.bootstrap(d, ids)
         assert (r1(metrics.recall(ca, ids)), r1(metrics.recall(cb, ids)), r1(d(ids)), (r1(lo), r1(hi))) == (ra, rb, diff, ci)
+
+
+@pytest.mark.parametrize("tag", XFUND)
+def test_xfund(tag):
+    name, a = "external/xfund_it_val", "xfund_it_bf16_1.0_op"
+    try:
+        corpus.corpus_dir(name)
+    except corpus.Missing:
+        pytest.skip(f"{name} is not on this machine")
+    if not (corpus.result_path(a).exists() and corpus.result_path(tag).exists()):
+        pytest.skip(f"the runs on {name} are not in results/")
+    ra, rb, diff, ci, skip_a, skip_b, loop_a, loop_b = XFUND[tag]
+    c = score.compare(name, a, tag)
+    assert (r1(c["recall_a"]), r1(c["recall_b"]), r1(c["diff"]), (r1(c["ci"][0]), r1(c["ci"][1]))) == (ra, rb, diff, ci)
+    sa, sb = score.summarize(name, a, with_cer=False), score.summarize(name, tag, with_cer=False)
+    assert (len(sa["skipped"]), len(sb["skipped"]), len(sa["loops"]), len(sb["loops"])) == (skip_a, skip_b, loop_a, loop_b)
