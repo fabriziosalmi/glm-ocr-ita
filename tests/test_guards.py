@@ -127,3 +127,11 @@ def test_hash_suffix_selects_a_prefix_and_keeps_the_role():
     assert len(corpus.load_meta("held#30")) == 30
     assert {m["id"] for m in corpus.load_meta("held#30")} < {m["id"] for m in corpus.load_meta("held#60")}
     assert corpus.role("held#30") == "spent"
+
+
+def test_keep_retry():
+    from glmocr.engine import keep_retry
+    first = {"text": "a" * 500, "looped": True}
+    assert keep_retry(first, {"text": "short", "looped": False})          # a second reading that does not loop wins
+    assert keep_retry(first, {"text": "b" * 900, "looped": True})        # both loop: more text before the loop
+    assert not keep_retry(first, {"text": "b" * 100, "looped": True})

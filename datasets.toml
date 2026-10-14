@@ -165,3 +165,5 @@ role = "test"
 # OmniDocBench v1.5, a fixed subset of 200 pages (docs/EXTERNAL.md), built by generators/make_omnidoc.py. Apache-2.0.
 [dataset."external/omnidoc_200"]
 role = "test"
+[dataset."external/xfund_it_train"]
+role = "dev"

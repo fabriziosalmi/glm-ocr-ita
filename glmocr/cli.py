@@ -20,7 +20,7 @@ def cmd_quant(a):
 
 def cmd_infer(a):
     from .engine import Reader
-    r = Reader(a.model, max_tokens=a.max_tokens, mem_gb=a.mem_gb, prompt_style=a.prompt).read(a.image, a.scale)
+    r = Reader(a.model, max_tokens=a.max_tokens, mem_gb=a.mem_gb, prompt_style=a.prompt, retry_penalty=a.retry_penalty).read(a.image, a.scale)
     print(r["text"])
     print(f"{r['s']:.1f} s, {r['prompt_tokens']} prompt tokens, {r['gen_tokens']} generated"
           + (" - REPETITION LOOP, page not read" if r["looped"] else ""), file=sys.stderr)
@@ -39,8 +39,8 @@ def cmd_run(a):
     d = corpus.corpus_dir(a.corpus)
     out = corpus.result_path(a.tag)
     out.parent.mkdir(exist_ok=True)
-    reader = Reader(a.model, adapter=a.adapter, max_tokens=a.max_tokens, mem_gb=a.mem_gb, wait=a.wait, prompt_style=a.prompt)
-    setup = {"model": a.model, "corpus": corpus.split_name(a.corpus)[0], "scale": a.scale, "max_tokens": a.max_tokens, "adapter": a.adapter, "prompt": a.prompt, "env": environment()}
+    reader = Reader(a.model, adapter=a.adapter, max_tokens=a.max_tokens, mem_gb=a.mem_gb, wait=a.wait, prompt_style=a.prompt, retry_penalty=a.retry_penalty)
+    setup = {"model": a.model, "corpus": corpus.split_name(a.corpus)[0], "scale": a.scale, "max_tokens": a.max_tokens, "adapter": a.adapter, "prompt": a.prompt, **({"retry_penalty": a.retry_penalty} if a.retry_penalty else {}), "env": environment()}
     res = json.load(open(out)) if out.exists() else {"tag": a.tag, **setup, "load_s": reader.load_s, "pages": {}}
     res.setdefault("prompt", "mlx")   # files written before 2026-10-14 used mlx-vlm's prompt and do not say so
     for k, v in setup.items():   # a resumed run must be the same run; older files carry only the model
@@ -238,6 +238,8 @@ def main(argv=None):
     p.add_argument("--mem-gb", type=float, default=None)
     p = add("check", cmd_check, "validate page sets (default: every set in datasets.toml)")
     p.add_argument("corpus", nargs="*")
+    for name in ("infer", "run"):
+        sub.choices[name].add_argument("--retry-penalty", type=float, default=None, help="read a page that loops a second time with this repetition penalty (e.g. 1.1); see engine.keep_retry")
     for name in ("infer", "run", "smoke"):
         sub.choices[name].add_argument("--prompt", choices=["official", "mlx"], default="official", help="official: as the reference implementation; mlx: with /nothink and <think></think>, as every run before 2026-10-14")
     a = ap.parse_args(argv)

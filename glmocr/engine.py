@@ -51,7 +51,7 @@ class LoopStop:
 
 
 class Reader:
-    def __init__(self, model, adapter=None, max_tokens=MAX_TOKENS, mem_gb=None, wait=False, stop_loops=True, prompt_style="official"):
+    def __init__(self, model, adapter=None, max_tokens=MAX_TOKENS, mem_gb=None, wait=False, stop_loops=True, prompt_style="official", retry_penalty=None):
         self.ceiling = mem_gb or guard.CEILING_GB
         self._lock = guard.lock(WORK / ".model.lock", wait)
         if not pathlib.Path(model).is_dir():   # a Hugging Face id: download first, so that the fences see the size of the weights
@@ -71,14 +71,16 @@ class Reader:
             self.prompt = official_prompt(self.prompt)
             assert self.prompt.endswith(PROMPT + "<|assistant|>\n"), repr(self.prompt[-80:])
         self.max_tokens = max_tokens
+        self.retry_penalty = retry_penalty
         eos = self.model.config.eos_token_id
         self.stop = LoopStop(self.proc.tokenizer, eos if isinstance(eos, (list, tuple)) else [eos]) if stop_loops else None
         self._tmp = tempfile.TemporaryDirectory(prefix="glmocr_")
 
-    def read(self, image, scale=1.0):
-        """image: a path or a PIL image. scale: resize factor per side before OCR (Lanczos); 1.0 hands a file over untouched."""
+    def read(self, image, scale=1.0, penalty=None):
+        """image: a path or a PIL image. scale: resize factor per side before OCR (Lanczos); 1.0 hands a file over untouched.
+        penalty: a repetition penalty for this one read (mlx-vlm's, over its default context). With retry_penalty set on the
+        reader, a page that loops is read a second time with that penalty, and the second reading is kept by keep_retry()."""
         import mlx.core as mx
-        from mlx_vlm import generate
         from PIL import Image
         if isinstance(image, (str, pathlib.Path)) and scale == 1.0:
             path = str(image)
@@ -91,17 +93,41 @@ class Reader:
             path = str(pathlib.Path(self._tmp.name) / "page.png")
             im.save(path)
         mx.reset_peak_memory()
+        out = self._generate(path, penalty)
+        if out["looped"] and penalty is None and self.retry_penalty:
+            second = self._generate(path, self.retry_penalty)
+            first, kept = out, keep_retry(out, second)
+            out = dict(second if kept else first)
+            out["retry"] = {"penalty": self.retry_penalty, "kept": kept,
+                            "first": {k: first[k] for k in ("text", "loop_cut", "s", "gen_tokens", "looped")},
+                            "second": {k: second[k] for k in ("text", "loop_cut", "s", "gen_tokens", "looped")}}
+            out["s"] = first["s"] + second["s"]
+        out["peak_gb"] = mx.get_peak_memory() / 1e9
+        self.last = out   # the caller can save it before the watch stops the job
+        guard.watch(out["peak_gb"], self.ceiling)
+        return out
+
+    def _generate(self, path, penalty):
+        import mlx.core as mx
+        from mlx_vlm import generate
         t = time.time()
         extra = {"stopping_criteria": self.stop.start()} if self.stop else {}
+        if penalty:
+            extra["repetition_penalty"] = penalty
         r = generate(self.model, self.proc, self.prompt, image=path, max_tokens=self.max_tokens, temperature=0.0, verbose=False, **extra)
         text, cut = r.text, None
         if self.stop and self.stop.loop:   # keep what came before the repetition and one unit of it
             hit = loop_start(text)
             if hit:
                 cut = len(text) - (hit[0] + hit[1]); text = text[:hit[0] + hit[1]]
-        out = {"text": text, "loop_cut": cut, "s": time.time() - t, "prompt_tokens": r.prompt_tokens, "gen_tokens": r.generation_tokens,
+        return {"text": text, "loop_cut": cut, "s": time.time() - t, "prompt_tokens": r.prompt_tokens, "gen_tokens": r.generation_tokens,
                 "prefill_tps": r.prompt_tps, "gen_tps": r.generation_tps, "peak_gb": mx.get_peak_memory() / 1e9,
                 "looped": cut is not None or is_loop(r.text, r.generation_tokens, self.max_tokens)}
-        self.last = out   # the caller can save it before the watch stops the job
-        guard.watch(out["peak_gb"], self.ceiling)
-        return out
+
+
+def keep_retry(first, second):
+    """Which reading of a page that looped to keep, fixed on 2026-10-14 before any retry was measured: the second, read with a
+    repetition penalty, if it does not loop itself; if both loop, the one with more text before its loop. No ground truth is used."""
+    if not second["looped"]:
+        return True
+    return len(second["text"]) > len(first["text"])

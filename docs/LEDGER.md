@@ -34,6 +34,7 @@ v8d4e4 at 0.7x had been chosen on `hard/` before `held/` existed. v8d8e8 at 1.0x
 | 2026-10-13 | Roles of the sets that arrived the same day: `gemini/itdoc_g` to `_k` are `train`; `chatgpt/itdoc_f` to `_z` are `dev`. Before this, the original model had read their first page only (and 16 pages of `gemini/itdoc_j`), as a probe |
 | 2026-10-14 | `gemini/itdoc_l` to `_z` are `train`, by the rule already fixed for that renderer. They arrived overnight; no model has read any page of them. `gemini` is complete: 26 sets, 39000 pages, all passing `glmocr check` |
 | 2026-10-14 | Roles of `spark/itdoc_c` to `_k`, fixed by the owner while no model had read any of their pages: `c`, `d`, `e`, `f`, `g` are `dev`; `h`, `i`, `j`, `k` are `test`. `spark/itdoc_b` stays `test`; it was read once on 2026-10-13 with mlx-vlm's prompt, so a second read needs its own entry and reason here |
+| 2026-10-14 | `external/xfund_it_train` (149 real Italian forms) is `dev`, and is never trained on: its license (CC BY-NC-SA 4.0) must not reach the MIT weights. Fixed before any model read it |
 
 ## `spark/itdoc_b` and `chatgpt/itdoc_c` - open
 

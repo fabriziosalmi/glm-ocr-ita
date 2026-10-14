@@ -233,6 +233,16 @@ Two halves + bands against the whole page: +12.8 points (95% CI +7.1 to +19.2), 
 
 So most of the loss is an input problem: the model treats the letterhead as page furniture and reads it when shown alone, and it does not resolve very small print until it is enlarged. **Fine-tuning is postponed**: what would be left for it is about 9 points instead of 21, and it has to be characterised on more pages first. Caveats: 18 synthetic pages from one generator; a policy that joins several readings holds more text, so short entities have more chances to match by accident; and that version of `itdoc_a` was regenerated on 2026-10-13, so the table cannot be recomputed (raw outputs in `results/itdocval_*`). Next check: the same reading on `held/` with the 4-bit decoder, which also tells whether half pages stop it from skipping blocks.
 
+## v1.1 - comb fields (planned on 2026-10-14, before any of its reads)
+
+**Why.** On 50 real Italian forms (XFUND, `LEDGER.md`) v1.0.0 is not shown better than the original, and it loops twice on comb fields (digits in boxes) where the original does not; the reader cuts the loop and the rest of the form is lost.
+
+**First fix tried: read again what loops.** A page that loops is read a second time with mlx-vlm's repetition penalty, and `engine.keep_retry` keeps the second reading if it does not loop, else the one with more text before its loop (rule fixed before measuring, no ground truth). It costs time only on pages that loop. Training on comb fields comes second, with pages we draw ourselves, only if this is not enough.
+
+**Where it is chosen.** `external/xfund_it_train` (149 real forms, `dev`): BASE and v1.0.0 read once (`xfundtr_bf16_1.0_op`, `xfundtr_v8d8e8op1_1.0_op`), then the looping pages of v1.0.0 read again with penalties 1.05, 1.1 and 1.2 (`experiments/loop_retry.py`, tags `xfundtr_v8d8e8op1_1.0_op_rp105` and so on). The penalty kept is the one with the highest entity recall on all entities; on a tie, the smaller. It must also leave the synthetic dev pages no worse: the retry touches only pages that loop, so on `spark/itdoc_a#60` and `chatgpt/itdoc_a` it is checked on those pages alone.
+
+**Then one test read**, question written first: v1.1 (v1.0.0 weights + retry) against BASE on `external/xfund_it_val`. That set was read once for v1.0.0, and it is what pointed at comb fields; the setting is chosen on another split, and the second read is said as such.
+
 ## Phase 5 - Release
 
 - [x] Final table on `test`: BASE and one released configuration, `v8d8e8` with adapter `op1` fused in (v1.0.0, 2026-10-14; README, `LEDGER.md`). Q4 was compared with `v8d8e8` on `test` on 2026-10-13 and not shown worse or better; the "small" configuration is not released, because 0.7x loses small print.

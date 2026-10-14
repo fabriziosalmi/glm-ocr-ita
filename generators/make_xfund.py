@@ -1,19 +1,20 @@
-"""python generators/make_xfund.py : put the Italian validation split of XFUND (50 real forms, docs/EXTERNAL.md) in the format of this
-repository -> external/xfund_it_val/{id}.png, {id}.txt, meta.json. Nothing is written outside external/, which is not in git:
+"""python generators/make_xfund.py [val|train] : put an Italian split of XFUND (val: 50 real forms, a test set; train: 149, a dev set;
+docs/EXTERNAL.md) in the format of this repository -> external/xfund_it_<split>/{id}.png, {id}.txt, meta.json. Nothing is written outside external/, which is not in git:
 the forms are CC BY-NC-SA 4.0 and are used for evaluation only.
-Source: external/xfund_src/it.val.json and the images of it.val.zip (github.com/doc-analysis/XFUND, release v1.0).
+Source: external/xfund_src/it.<split>.json and the images of it.<split>.zip (github.com/doc-analysis/XFUND, release v1.0).
 Ground truth text = the text of every annotated segment, in reading order (top to bottom, then left to right, by the top of its box).
 Entities = segments of at least 2 characters once whitespace is removed, typed by the dataset's own label: "answer" (the values
 filled in a form, the number that matters), "question" (the printed field names), "header", "other". Short segments are left out
 because a 1-character string matches anywhere.
 Images: the long side is reduced to 1754 px (A4 at 150 dpi), as for SROIE; every XFUND form is 2480 x 3508. Fixed before the first read."""
-import json, os, pathlib
+import json, os, pathlib, sys
 from glmocr.corpus import ROOT; os.chdir(ROOT)   # every path below is relative to the repository
 from glmocr.metrics import squash
 from PIL import Image
 
-SRC = pathlib.Path("external/xfund_src"); OUT = pathlib.Path("external/xfund_it_val"); OUT.mkdir(exist_ok=True)
-data = json.load(open(SRC / "it.val.json", encoding="utf-8"))
+split = sys.argv[1] if len(sys.argv) > 1 else "val"
+SRC = pathlib.Path("external/xfund_src"); OUT = pathlib.Path(f"external/xfund_it_{split}"); OUT.mkdir(exist_ok=True)
+data = json.load(open(SRC / f"it.{split}.json", encoding="utf-8"))
 meta = []
 for doc in data["documents"]:
     i = pathlib.Path(doc["img"]["fname"]).stem
