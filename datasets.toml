@@ -204,12 +204,11 @@ role = "test"
 [dataset."external/docatlas_it_scan_test"]
 role = "test"
 # Commissioned on 2026-10-14 night (chatgpt renderer), cut on 2026-10-15 by generators/split_chatgpt.py before any read:
-# 20 pages to measure, 80 kept for fine-tuning iterations, as asked by the owner of the project.
+# realistic: 20 pages to measure, 80 kept for fine-tuning iterations; scientific: all 100 to measure, none for training.
+# Both as asked by the owner of the project, before any read.
 [dataset."external/realistic_test"]
 role = "test"
 [dataset."external/realistic_train"]
 role = "train"
 [dataset."external/scientific_test"]
 role = "test"
-[dataset."external/scientific_train"]
-role = "train"
