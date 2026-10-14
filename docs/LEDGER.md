@@ -172,3 +172,14 @@ Written on 2026-10-14, before any model read any page of the benchmark; the eval
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+
+## `external/xfund_it_val`, second read: v1.1 - open
+
+Written on 2026-10-14, after the dev measurement above and before any retry was run on this set. The set was read once for v1.0.0 (section above), and that read is what pointed at comb fields: this second read is for a different configuration, chosen on another split (`external/xfund_it_train`, `ROADMAP.md`), and is said as such.
+
+**Configuration.** v1.1 = v1.0.0 weights (`models/v8d8e8_op1`) + the reader's retry: a form that loops is read again with repetition penalty 1.1 (`engine.keep_retry`). Tag `xfund_it_v8d8e8op1_1.0_op_rp110`, built by `experiments/loop_retry.py` from `xfund_it_v8d8e8op1_1.0_op` on the Mac mini, where that run was read; BASE is `xfund_it_bf16_1.0_op`, as before.
+
+**Questions and thresholds**, the same three as for v1.0.0 (filled-in values not worse, all entities not worse, no new loop that costs entities), and a fourth: 4. all entities better than BASE, lower bound above 0.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|

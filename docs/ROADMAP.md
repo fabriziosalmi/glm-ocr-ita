@@ -241,6 +241,17 @@ So most of the loss is an input problem: the model treats the letterhead as page
 
 **Where it is chosen.** `external/xfund_it_train` (149 real forms, `dev`): BASE and v1.0.0 read once (`xfundtr_bf16_1.0_op`, `xfundtr_v8d8e8op1_1.0_op`), then the looping pages of v1.0.0 read again with penalties 1.05, 1.1 and 1.2 (`experiments/loop_retry.py`, tags `xfundtr_v8d8e8op1_1.0_op_rp105` and so on). The penalty kept is the one with the highest entity recall on all entities; on a tie, the smaller. It must also leave the synthetic dev pages no worse: the retry touches only pages that loop, so on `spark/itdoc_a#60` and `chatgpt/itdoc_a` it is checked on those pages alone.
 
+**Outcome on `external/xfund_it_train`, 2026-10-14** (149 forms, against BASE `xfundtr_bf16_1.0_op`; loops cut or not):
+
+| | loops | entities | against BASE [95% CI] | extra time |
+|---|---|---|---|---|
+| v1.0.0 | 6 (BASE: 1) | 78.5% | +1.2 [-1.1, +3.1] | |
+| retry at 1.05 | 5 | 79.0% | +1.7 [-0.2, +3.5] | 0.8 s per form |
+| **retry at 1.1** | **1** | **80.2%** | **+2.9 [+1.1, +4.2]** | **1.0 s per form** |
+| retry at 1.2 | 2 | 79.6% | +2.3 [+0.2, +4.0] | 0.9 s per form |
+
+The penalty kept is **1.1**, by the rule above. Without retry, v1.0.0 gains 377 entities on the 144 forms where it does not loop and loses 238 on the 5 where it loops and BASE does not. One form (`it_train_120`) loops at the same place at every penalty: retry does not reach it. On the synthetic dev pages v1.0.0 never loops, so retry changes nothing there. Accented words written right: BASE 90.6%, v1.0.0 88.8% of 1425, to look into.
+
 **Then one test read**, question written first: v1.1 (v1.0.0 weights + retry) against BASE on `external/xfund_it_val`. That set was read once for v1.0.0, and it is what pointed at comb fields; the setting is chosen on another split, and the second read is said as such.
 
 ## Later (v1.2 or after, only if v1.1 leaves room)
