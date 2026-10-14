@@ -254,3 +254,16 @@ Written on 2026-10-14, before any model read these pages. 40 real Italian docume
 |---|---|---|---|
 | 2026-10-15 | v1.1 vs BASE | 1, clean | 98.4 -> 98.3%, -0.1 [-0.8, +0.4] not worse (40 pages) |
 
+## `external/realistic_test` and `external/scientific_test` (20 pages each) - open
+
+Written on 2026-10-15, before any model read a page of either set. Two chatgpt sets arrived on the night of 2026-10-14: `itdoc_13_realistic` (100 Italian pages, 12 kinds of paperwork, 4 levels of scan damage, half the entities in small print) and `itdoc_14_scientific` (100 clean Italian pages growing from one character to 5000, 5 levels). `generators/split_chatgpt.py` cut each into 20 test pages (the first 20 of the sampling order: 5 per level, and 4 per level) and 80 training pages, kept for fine-tuning iterations. Entities: those of the set for realistic (320); for scientific, long words, codes and decimal numbers drawn from the ground truth (887).
+
+**Configuration.** Read with the loop guard as released (after the revert of 2026-10-15). BASE against v1.1 in one pass (`--retry-penalty 1.1`). Tags: `realistic_bf16_1.0_op` `realistic_v8d8e8op1_1.0_op_rp110` (this Mac), `scientific_bf16_1.0_op` `scientific_v8d8e8op1_1.0_op_rp110` (Mac mini).
+
+**Questions and thresholds**, on each set apart:
+
+1. Is v1.1 not worse than BASE on all entities? Passes if the lower bound of the difference is above -1.5; "better" if above 0. 20 pages give a wide interval: read with care.
+2. Recall by level, reported without a verdict (5 or 4 pages a level).
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
