@@ -221,3 +221,16 @@ Written on 2026-10-14, before any model read any of these forms. Same format and
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
 
+## `chatgpt/itdoc_12_scontrini`, `itdoc_10_adversarial`, `itdoc_11_contracts_multilingual` - open
+
+Written on 2026-10-14, before any model read these pages (they arrived that evening). One read each, BASE against v1.1 as released plus the reader of that night: the loop guard no longer cuts runs of punctuation alone (`metrics.loop_start`, min_span_punct), on both sides. v1.1 is read in one pass with `--retry-penalty 1.1`. Tags: `scontrini_bf16_1.0_op` and `scontrini_v8d8e8op1_1.0_op_rp110`; `adversarial_bf16_1.0_op` and `adversarial_v8d8e8op1_1.0_op_rp110`; `contracts_ml_bf16_1.0_op` and `contracts_ml_v8d8e8op1_1.0_op_rp110`. Read on the Mac mini.
+
+**Questions and thresholds.**
+
+1. `itdoc_12_scontrini` (100 Italian receipts): is v1.1 not worse than BASE on entities? Passes if the lower bound is above -1.5; "better" if above 0.
+2. `itdoc_10_adversarial` (10 dense pages): the same rule, read with care: 10 pages give a wide interval.
+3. `itdoc_11_contracts_multilingual` (10 contracts, one per language): per language, entities found by each model, reported without a verdict (one page per language). Italian and English must not lose; a large loss in a European language is noted as an alert.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
+

@@ -10,7 +10,7 @@ Sampling. Years 2019 to 2025; from each year --issues-per-year issues drawn with
 an issue with the other: the same decree cannot sit on both sides.
 Ground truth. The text layer in its own order (column by column, as printed), with words hyphenated at a line end joined again
 (pdfium marks those hyphens with U+FFFE). Running headers are kept: they are on the page.
-Entities. Taken by pattern from the ground truth: dates written out ("6 settembre 2005") or in figures ("1-9-2023"), act numbers
+Entities. Taken by pattern from the ground truth, running header and page number left out (entities() says why): dates written out ("6 settembre 2005") or in figures ("1-9-2023"), act numbers
 ("n. 206"), amounts with a decimal comma ("1.234,56"). Whitespace is ignored when they are matched, so a line break inside one
 does not matter. Fixed before any model read a page.
 Images: rendered from the PDF with the long side at 1754 px (A4 at 150 dpi), as every other page set."""
@@ -56,7 +56,11 @@ def page_text(page):
 
 
 def entities(text):
-    flat = re.sub(r"\s+", " ", text); out = []
+    """from the body only: the page number ("— 5 —") and the running header (issue date, title, number) are left out. Both
+    models skip running headers, as most OCR does, and a header entity would measure that habit, not the reading of the page.
+    Decided on 2026-10-14 after the first dev reads, before any read of gu_test."""
+    body = [l for l in text.split("\n") if not re.fullmatch(r"—\s*\d+\s*—", l) and "GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA" not in l]
+    flat = re.sub(r"\s+", " ", "\n".join(body)); out = []
     for typ, pat in PATTERNS.items():
         out += [{"type": typ, "text": m.group(0)} for m in re.finditer(pat, flat, flags=re.I)]
     return out

@@ -191,3 +191,10 @@ role = "train"
 role = "train"
 [dataset."external/photo_train_aug"]
 role = "train"
+# Commissioned on 2026-10-14 evening (chatgpt renderer, never trained on): Italian receipts, adversarial dense pages, one contract per language.
+[dataset."chatgpt/itdoc_10_adversarial"]
+role = "test"
+[dataset."chatgpt/itdoc_11_contracts_multilingual"]
+role = "test"
+[dataset."chatgpt/itdoc_12_scontrini"]
+role = "test"

@@ -63,12 +63,15 @@ def is_loop(text, gen_tokens, max_tokens=MAX_TOKENS):
     return gen_tokens >= max_tokens or (len(text.encode()) >= LOOP_MIN_BYTES and compress_ratio(text) < LOOP_RATIO)
 
 
-def loop_start(text, max_period=400, min_repeats=4, min_span=160):
+def loop_start(text, max_period=400, min_repeats=4, min_span=160, min_span_punct=1000):
     """(index, period) of a repetition the text ends with, or None: one unit of at most max_period characters, repeated
     at least min_repeats times in a row over at least min_span characters, right up to the last character.
     Used while a page is being read, to stop a loop as it starts instead of paying the whole token budget for it.
     On the 4201 outputs saved by 2026-10-14, checked every 200 characters: 68 of 75 loops caught, after a fifth of
-    their length in the median; it fired on one output that is_loop does not flag, a sentence written five times."""
+    their length in the median; it fired on one output that is_loop does not flag, a sentence written five times.
+    A unit with no letter or digit (the dots of a table of contents, a rule of dashes or underscores, empty boxes) counts
+    only from min_span_punct characters: dot leaders run to 160 characters and more, and cutting them lost whole index
+    pages (Gazzetta Ufficiale, OmniDocBench, 2026-10-14), while a real loop of punctuation goes on to the token limit."""
     n = len(text)
     for p in range(1, min(max_period, n // min_repeats) + 1):
         unit = text[n - p:]
@@ -77,7 +80,7 @@ def loop_start(text, max_period=400, min_repeats=4, min_span=160):
         k = 2
         while n - (k + 1) * p >= 0 and text[n - (k + 1) * p:n - k * p] == unit:
             k += 1
-        if k >= min_repeats and k * p >= min_span:
+        if k >= min_repeats and k * p >= (min_span if any(c.isalnum() for c in unit) else min_span_punct):
             return n - k * p, p
     return None
 

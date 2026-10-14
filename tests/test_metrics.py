@@ -109,3 +109,13 @@ def test_a_page_with_similar_rows_is_not_a_loop():
     assert metrics.loop_start(rows) is None
     assert metrics.loop_start("Totale 0,00 €\n" * 3) is None           # three equal lines, under the span
     assert metrics.loop_start("") is None
+
+
+def test_dot_leaders_are_not_a_loop():
+    """A table of contents writes long runs of dots; cutting there lost whole index pages. A run of punctuation alone is
+    a loop only from 1000 characters on."""
+    toc = "6.2.2 Sets of Tuple Data " + "." * 300
+    assert metrics.loop_start(toc) is None
+    assert metrics.loop_start("Revoca del medicinale «Algimesil» " + ". " * 120) is None
+    assert metrics.loop_start(toc + "." * 800) == (len("6.2.2 Sets of Tuple Data "), 1)   # a real loop of dots still stops
+    assert metrics.loop_start("Assenza di redditi\n" + "□\n" * 600) is not None
