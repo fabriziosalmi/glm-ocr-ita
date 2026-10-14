@@ -16,4 +16,6 @@ Considered and not downloaded, for size: `osamahosamabdellatif/high-quality-invo
 
 SROIE is English. It serves the compression goal (real scans), not the Italian one.
 
+**XFUND, Italian validation split** (downloaded on 2026-10-14 from the v1.0 release of github.com/doc-analysis/XFUND; `it.val.json` SHA-256 `3a3d505790607b7cf3e2c581c29ba317abec9a4059f04f378cbb8c3fba47bb7a`, `it.val.zip` `4e2232d9abb562bbd2b394cf8a2932ceda20f7402eeb61a7ef65859bbead9d16`): 50 real Italian forms (residence declarations, applications, administrative forms), scanned or photographed, filled in, with every text segment transcribed and labelled by hand (question, answer, header, other). License CC BY-NC-SA 4.0 (Xu et al., ACL 2022 Findings): used for evaluation only; forms, transcriptions and per-form outputs stay in `external/` and in git-ignored `results/xfund*`, and only aggregate numbers are published, with a citation. `generators/make_xfund.py` converts it. It is the first set of real Italian documents in this work, and a `test` set from the start.
+
 Files in `external/` are untrusted: nothing in them is executed, and the bundled model files are never loaded.

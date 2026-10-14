@@ -131,3 +131,21 @@ Written on 2026-10-14, before any read of these receipts by either model. The wh
 |---|---|---|---|
 | 2026-10-14 | `sroie100_bf16_1.0_op`, `sroie100_v8d8e8op1_1.0_op` | not worse on real receipts | **Passes.** 92.0% and 92.0% of the entities, +0.0 [-1.2, +1.5]; 3 receipts lose one entity, 2 gain one. Receipts under 90% of the text 2 -> 0, loops 0 and 0. By field: address 79 -> 80%, company 94 -> 91%, date 96 -> 97%, total 99 -> 100%. 8.6 s per receipt against 9.4, peak 2.2 GB against 3.2 (Mac mini) |
 
+## `external/xfund_it_val` (50 real Italian forms, XFUND) - open
+
+Written on 2026-10-14, before any model read any of these forms. The first real Italian documents of this work (`docs/EXTERNAL.md`). Read on the Mac mini, both sides there, official prompt. All 50 forms, no subset, no extension.
+
+**Tags.** BASE `xfund_it_bf16_1.0_op` (`work/glm-ocr-bf16`); release `xfund_it_v8d8e8op1_1.0_op` (`models/v8d8e8_op1`, v1.0.0).
+
+**Entities.** Every annotated segment of at least 2 characters once whitespace is removed, typed by the dataset's label: 1512 `answer` (the values filled in), 1222 `question` (printed field names), 65 `header`, 1115 `other`. A segment counts as found if its exact text, whitespace removed, is in the output. Segments that hold check-box marks (`O`, `x`, a square) can be missed by both models for that reason alone; the comparison is paired, so it is fair, but the absolute recall is a floor.
+
+**Questions and thresholds**, differences release - BASE, paired bootstrap over forms (`experiments/compare_lang.py --by type` for 1; `glmocr compare` for 2):
+
+1. Filled-in values (`answer`): is the release not worse than BASE? Passes if the lower bound is above -1.5. If it is above 0, the claim is "better".
+2. All entities: the same threshold.
+3. No more forms under 90% of the text than BASE + 1, and no new loop on a form where the release finds fewer entities.
+
+Whatever the outcome, it goes in the README and in the model card, next to the synthetic results.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
