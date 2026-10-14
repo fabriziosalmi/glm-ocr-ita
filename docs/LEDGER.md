@@ -204,7 +204,7 @@ Written on 2026-10-14, after the dev measurement above and before any retry was 
 | 2026-10-14 | same | 4, all entities better | **Passes.** Lower bound +1.3 > 0 |
 | 2026-10-14 | | verdict | **v1.1 is better than the original on 50 real Italian forms**, +3.1 [+1.3, +5.9], with no loop left. Same weights as v1.0.0; the gain is the retry, chosen on the training split. This set has now been read twice, so the next model change needs a new test set |
 
-## `external/xfund_{de,es,fr,pt}_val`: the other European languages - open
+## `external/xfund_{de,es,fr,pt}_val`: the other European languages - closed: better
 
 Written on 2026-10-14, before any model read any of these forms. Same format and converter as the Italian forms (`generators/make_xfund.py val LANG`): 50 real forms per language, German, Spanish, French, Portuguese.
 
@@ -220,8 +220,12 @@ Written on 2026-10-14, before any model read any of these forms. Same format and
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-10-15 | v1.1 vs BASE | 1, all entities | German 84.8 -> 87.3%, +2.5 [+0.0, +5.0] better; Spanish 81.2 -> 85.0%, +3.8 [+2.3, +5.6] better; French 73.2 -> 77.2%, +4.0 [+2.4, +5.7] better; Portuguese 81.1 -> 84.3%, +3.2 [+2.1, +4.5] better. No alert |
+| 2026-10-15 | v1.1 vs BASE | 2, filled-in values | German -0.7 [-3.9, +2.0] not shown; Spanish +2.3 [+0.3, +4.7] better; French +2.3 [-0.1, +4.7] not worse; Portuguese +2.4 [+1.0, +4.0] better |
+| 2026-10-15 | all | 3, loops (`metrics.is_loop`) | none on BASE or v1.1 in any language; one on v1.0.0 in Portuguese, recovered by the retry |
+| 2026-10-15 | | verdict | **The fine-tuning did not cost the European languages: v1.1 reads German, Spanish, French and Portuguese forms better than the original.** |
 
-## `chatgpt/itdoc_12_scontrini`, `itdoc_10_adversarial`, `itdoc_11_contracts_multilingual` - open
+## `chatgpt/itdoc_12_scontrini`, `itdoc_10_adversarial`, `itdoc_11_contracts_multilingual` - closed: alert on the adversarial pages
 
 Written on 2026-10-14, before any model read these pages (they arrived that evening). One read each, BASE against v1.1 as released plus the reader of that night: the loop guard no longer cuts runs of punctuation alone (`metrics.loop_start`, min_span_punct), on both sides. v1.1 is read in one pass with `--retry-penalty 1.1`. Tags: `scontrini_bf16_1.0_op` and `scontrini_v8d8e8op1_1.0_op_rp110`; `adversarial_bf16_1.0_op` and `adversarial_v8d8e8op1_1.0_op_rp110`; `contracts_ml_bf16_1.0_op` and `contracts_ml_v8d8e8op1_1.0_op_rp110`. Read on the Mac mini.
 
@@ -233,6 +237,9 @@ Written on 2026-10-14, before any model read these pages (they arrived that even
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-10-15 | v1.1 vs BASE | 1, receipts #30 | 99.9% both, +0.0 [+0.0, +0.0] not worse; no loop, no skipped block. The set is too easy to tell two models apart |
+| 2026-10-15 | v1.1 vs BASE | 2, adversarial | 79.3 -> 74.0%, -5.3 [-11.3, -0.7] **worse** (10 pages, 150 entities). The pages repeat near-identical sentences by design: `is_loop` flags 8 of 10 outputs of each model, both run to the token limit on 4 to 6 pages. Losses: amounts of tens of millions written with a comma as thousands separator ("29.467,745,94", 5 of 40 against 1 of 40 for BASE), two PEC addresses misspelt, a CIG and a reference read wrong. The same amounts on the Gazzetta (`gu_dev`, 113 amounts of a million or more) are read better by v1.1, 108 against 105: an alert on this kind of page, not a general loss on Italian amounts |
+| 2026-10-15 | both | 3, contracts multilingual | 0 of 120 entities for both models: the pages are rendered so small and soft (1240 px, print a few pixels high) that the codes, dates and amounts cannot be read by either. The set measures nothing as made; not used |
 
 ## `external/docatlas_it_test` and `external/docatlas_it_scan_test` - open
 
@@ -245,4 +252,5 @@ Written on 2026-10-14, before any model read these pages. 40 real Italian docume
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-10-15 | v1.1 vs BASE | 1, clean | 98.4 -> 98.3%, -0.1 [-0.8, +0.4] not worse (40 pages) |
 
