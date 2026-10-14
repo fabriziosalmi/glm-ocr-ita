@@ -210,7 +210,7 @@ Written on 2026-10-14, before any model read any of these forms. Same format and
 
 **Why.** The fine-tuning taught Italian and English. These check that it did not cost the European languages next to them; a loss on them is an alert, not a reason to hold the release, as said by the owner of the project on 2026-10-14 (Italian and English must not lose; Chinese and non-European languages may; European languages are watched).
 
-**Configuration.** BASE `xfund_<lang>_bf16_1.0_op`; v1.1 = `xfund_<lang>_v8d8e8op1_1.0_op_rp110`, built by `experiments/loop_retry.py` from `xfund_<lang>_v8d8e8op1_1.0_op`.
+**Configuration.** BASE `xfund_<lang>_bf16_1.0_op`; v1.1 = `xfund_<lang>_v8d8e8op1_1.0_op_rp110`, built by `experiments/loop_retry.py` from `xfund_<lang>_v8d8e8op1_1.0_op`. Tags: `xfund_de_bf16_1.0_op` `xfund_de_v8d8e8op1_1.0_op` `xfund_de_v8d8e8op1_1.0_op_rp110` `xfund_es_bf16_1.0_op` `xfund_es_v8d8e8op1_1.0_op` `xfund_es_v8d8e8op1_1.0_op_rp110` `xfund_fr_bf16_1.0_op` `xfund_fr_v8d8e8op1_1.0_op` `xfund_fr_v8d8e8op1_1.0_op_rp110` `xfund_pt_bf16_1.0_op` `xfund_pt_v8d8e8op1_1.0_op` `xfund_pt_v8d8e8op1_1.0_op_rp110`.
 
 **Questions and thresholds**, for each language apart:
 
