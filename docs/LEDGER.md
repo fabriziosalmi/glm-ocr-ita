@@ -131,7 +131,7 @@ Written on 2026-10-14, before any read of these receipts by either model. The wh
 |---|---|---|---|
 | 2026-10-14 | `sroie100_bf16_1.0_op`, `sroie100_v8d8e8op1_1.0_op` | not worse on real receipts | **Passes.** 92.0% and 92.0% of the entities, +0.0 [-1.2, +1.5]; 3 receipts lose one entity, 2 gain one. Receipts under 90% of the text 2 -> 0, loops 0 and 0. By field: address 79 -> 80%, company 94 -> 91%, date 96 -> 97%, total 99 -> 100%. 8.6 s per receipt against 9.4, peak 2.2 GB against 3.2 (Mac mini) |
 
-## `external/xfund_it_val` (50 real Italian forms, XFUND) - open
+## `external/xfund_it_val` (50 real Italian forms, XFUND) - closed
 
 Written on 2026-10-14, before any model read any of these forms. The first real Italian documents of this work (`docs/EXTERNAL.md`). Read on the Mac mini, both sides there, official prompt. All 50 forms, no subset, no extension.
 
@@ -149,6 +149,10 @@ Whatever the outcome, it goes in the README and in the model card, next to the s
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-10-14 | `xfund_it_bf16_1.0_op`, `xfund_it_v8d8e8op1_1.0_op` | 1, filled-in values | **Not shown.** 76.9% -> 74.5%, -2.4 [-8.3, +2.1] on 1512 values |
+| 2026-10-14 | same | 2, all entities | **Not shown.** 74.6% -> 74.9%, +0.3 [-3.0, +2.9] on 3914; 29 forms gain entities, 5 lose. By type: printed field names 86.7 -> 86.6%, headers 75.4 -> 78.5%, other text 58.0 -> 62.4% (+4.4 [+1.9, +7.2]) |
+| 2026-10-14 | same | 3 | **Fails.** Forms under 90% of the text 12 -> 8 (passes), but two new loops on forms where the release finds fewer entities: `it_val_29` (74 -> 50 of 121) and `it_val_32` (105 -> 55 of 168). Both start on a comb field (digits in boxes, written `3\|4\|3\|4...`), the reader cuts them, and the rest of the form is lost. Loops 2 -> 3 overall; one of BASE's two is gone |
+| 2026-10-14 | | verdict | **The release is not shown better or worse than the original on real Italian forms**, and it loops on comb fields where the original does not, twice in 50. Said as such in the README and the model card. Two forms carry the loss: over the other 48 the release finds 87 entities more, but that split was made after seeing the result and is not a claim. Next: study loops on comb fields on the XFUND Italian training split (149 forms), never on this one |
 
 ## `external/omnidoc_200` (OmniDocBench v1.5, 200 pages) - open
 
