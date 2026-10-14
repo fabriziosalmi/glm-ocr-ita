@@ -1,0 +1,38 @@
+[project]
+name = "glmocr"
+version = "1.0.0"
+description = "GLM-OCR fine-tuned for Italian documents and quantized to 8 bits for MLX on Apple Silicon, with the harness that measures it"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+keywords = ["ocr", "italian", "glm-ocr", "mlx", "apple-silicon", "document-ai", "quantization", "lora"]
+# Pinned to the versions every number in results/ was produced with (Apple Silicon).
+dependencies = [
+    "mlx==0.32.3",
+    "mlx-vlm==0.7.6",
+    "transformers==5.19.0",
+    "huggingface-hub==2.2.0",
+    "pillow==12.3.0",
+    "numpy==2.5.3",
+    "jiwer==4.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+glmocr = "glmocr.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["glmocr"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[project.urls]
+Homepage = "https://github.com/fabriziosalmi/glm-ocr-ita"
+Model = "https://huggingface.co/fabriziosalmi/GLM-OCR-ita-mlx-8bit"

@@ -1,0 +1,111 @@
+{
+ "tag": "panel_gemini_itdoc_f_bf16_1.0",
+ "model": "work/glm-ocr-bf16",
+ "corpus": "gemini/itdoc_f",
+ "scale": 1.0,
+ "max_tokens": 3000,
+ "adapter": null,
+ "env": {
+  "macos": "26.3",
+  "python": "3.12.15",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "load_s": 1.0520532131195068,
+ "pages": {
+  "itdoc_f_0060_invoice_detail_lines_L1_it": {
+   "text": "CHIESI FARMACEUTICI RICERCA E SVILUPPO S.P.A.\nProspetto Paga e Competenze protocollo CED/2025-178 del 17 gennaio 2026\n\nDATI DEL DATORE DI LAVORO E DEL DIPENDENTE:\nAzienda: Chiesi Farmaceutici Ricerca e Sviluppo S.p.A. (Parma)\nDipendente: Marco Santoro | MATR-7401\nP.IVA: 74711939459 | C.F.: MWLZHQ91E27F205T | PEC: segreteria@pec.venetotecno.example\nInquadramento: CCNL Terziario Liv. 1 - Impiegato Direttivo | Periodo: Gennaio 2025\n\nCodice Descrizione Competenza / Trattenuta Base/Ore Quota Base Competenze Trattenute\n0010 Stipendio base mensile contrattuale 173 14,50 € 2.508,50 € -\n0020 Indennità di contingenza conglobata 173 3,10 € 536,30 € -\n0035 Elemento Distinto della Retribuzione 1 10,33 € 10,33 € -\n0050 Superminimo individuale concordato 1 450,00 € 450,00 € -\n0080 Scatti periodici di anzianità (n. 3) 3 32,50 € 97,50 € -\n0110 Maggiorazione lavoro straordinario 25% 14 18,12 € 253,68 € -\n0140 Indennità di turno e reperibilità 8 16,40 € 131,20 € -\n0510 Contributi IVS a carico dipendente 9,19% 3987,51 € - 366,45 €\n0620 Ritenuta fiscale IRPEF netta del mese scagl. 3621,06 € - 684,20 €\n0630 Addizionale regionale IRPEF a rate 1,73% 3621,06 € - 62,64 €\n0640 Addizionale comunale IRPEF a saldo 0,80% 3621,06 € - 28,97 €\n0710 Contributo fondo pensione complementare 1,20% 3987,51 € - 47,85 €\n\nTOTALE RIEPILOGO COMPETENZE E TRATTENUTE 3.987,51 € 1.190,11 €\n\nImponibile Previdenziale: 3.987,51 € (IVS 9,19%) | NETTO DEL MESE: 2.797,40 €\nAccredito stipendio su c/c bancario dipendente - IBAN: IT11 J203 8274 9055 9126 9659 453\n\nINFORMATIVA TRASPARENZA CONTRATTUALE, TUTELA PREVIDENZIALE E TERMINI DI RECLAMO:\nL'imposta lorda è quantificata applicando le aliquote vigenti per ciascun scaglione di reddito imponibile IRPEF. La contribuzione previdenziale obbligatoria IVS è calcolata sull'imponibile lordo a fini previdenziali. L'indennità per mancato preavviso di malattia è applicata nei casi di ingiustificata omissione della comunicazione tempestiva.\n\nIl Responsabile Risorse Umane:\nDott.ssa Michela Grassi",
+   "s": 24.919085025787354,
+   "prompt_tokens": 2788,
+   "gen_tokens": 953,
+   "prefill_tps": 330.729420768039,
+   "gen_tps": 59.59108572090821,
+   "peak_gb": 3.090327602
+  },
+  "itdoc_f_0601_invoice_detail_lines_L2_it": {
+   "text": "CHIESI FARMACEUTICI RICERCA E SVILUPPO S.P.A.\nProspetto Paga e Competenze protocollo CED/2024-522 del 26/04/2025\n\nDATI DEL DATORE DI LAVORO E DEL DIPENDENTE:\nAzienda: Chiesi Farmaceutici Ricerca e Sviluppo S.p.A. (Parma)\nDipendente: Davide Moretti | MATR-6912\nP.IVA: 67680244992 | C.F.: CTFDQG55L64L219X | PEC: ufficio.acquisti@pec.piemonteindustria.example\nInquadramento: CCNL Metalmeccanico Liv. C3 - Operaio Specializzato | Periodo: Agosto 2024\n\nCodice Descrizione Competenza / Trattenuta Base/Ore Quota Base Competenze Trattenute\n0010 Stipendio base mensile contrattuale 173 14,50 € 2.508,50 € -\n0020 Indennità di contingenza conglobata 173 3,10 € 536,30 € -\n0035 Elemento Distinto della Retribuzione 1 10,33 € 10,33 € -\n0050 Superminimo individuale concordato 1 450,00 € 450,00 € -\n0080 Scatti periodici di anzianità (n. 3) 3 32,50 € 97,50 € -\n0110 Maggiorazione lavoro straordinario 25% 14 18,12 € 253,68 € -\n0140 Indennità di turno e reperibilità 8 16,40 € 131,20 € -\n0510 Contributi IVS a carico dipendente 9,19% 3987,51 € - 366,45 €\n0620 Ritenuta fiscale IRPEF netta del mese scagl. 3621,06 € - 684,20 €\n0630 Addizionale regionale IRPEF a rate 1,73% 3621,06 € - 62,64 €\n0640 Addizionale comunale IRPEF a saldo 0,80% 3621,06 € - 28,97 €\n0710 Contributo fondo pensione complementare 1,20% 3987,51 € - 47,85 €\n\nTOTALE RIEPILOGO COMPETENZE E TRATTENUTE 3.987,51 € 1.190,11 €\n\nImponibile Previdenziale: 3.987,51 € (IVS 9,19%) | NETTO DEL MESE: 2.797,40 €\nAccredito stipendio su c/c bancario dipendente - IBAN: IT66 L304 1263 4752 3078 9691 225\n\nINFORMATIVA TRASPARENZA CONTRATTUALE, TUTELA PREVIDENZIALE E TERMINI DI RECLAMO:\nLa quota di trattamento di fine rapporto trattenuta a garanzia di prestiti o cessioni del quinto è vincolata all'ente creditore. La Certificazione Unica (CU) riepiloga i redditi di lavoro dipendente corrisposti e le ritenute d'acconto operate. La modifica dell'orario di lavoro da tempo pieno a tempo parziale richiede stipula di apposito accordo scritto.\n\nIl Responsabile Risorse Umane:\nDott.ssa Michela Grassi",
+   "s": 23.668431997299194,
+   "prompt_tokens": 2788,
+   "gen_tokens": 953,
+   "prefill_tps": 337.56826320727026,
+   "gen_tps": 62.202891750734445,
+   "peak_gb": 3.15929939
+  },
+  "itdoc_f_0842_invoice_detail_lines_L3_it": {
+   "text": "FERRERO LOGISTICA E DISTRIBUZIONE S.R.L.\nProspetto Paga e Competenze protocollo CED/2024-448 del 12.05.2025\n\nDATI DEL DATORE DI LAVORO E DEL DIPENDENTE:\nAzienda: Ferrero Logistica e Distribuzione S.r.l. (Torino)\nDipendente: Davide Moretti | MATR-6912\nP.IVA: 40260770777 | C.F.: BJMCMP56M50D612Z | PEC: ufficio.acquisti@adriaticaforniture.example\nInquadramento: CCNL Metalmeccanico Liv. C3 - Operaio Specializzato | Periodo: Marzo 2024\n\nCodice Descrizione Competenza / Trattenuta Base/Ore Quota Base Competenze Trattenute\n0010 Stipendio base mensile contrattuale 173 14,50 € 2.508,50 € -\n0020 Indennità di contingenza conglobata 173 3,10 € 536,30 € -\n0035 Elemento Distinto della Retribuzione 1 10,33 € 10,33 € -\n0050 Superminimo individuale concordato 1 450,00 € 450,00 € -\n0080 Scatti periodici di anzianità (n. 3) 3 32,50 € 97,50 € -\n0110 Maggiorazione lavoro straordinario 25% 14 18,12 € 253,68 € -\n0140 Indennità di turno e reperibilità 8 16,40 € 131,20 € -\n0510 Contributi IVS a carico dipendente 9,19% 3987,51 € - 366,45 €\n0620 Ritenuta fiscale IRPEF netta del mese scagl. 3621,06 € - 684,20 €\n0630 Addizionale regionale IRPEF a rate 1,73% 3621,06 € - 62,64 €\n0640 Addizionale comunale IRPEF a saldo 0,80% 3621,06 € - 28,97 €\n0710 Contributo fondo pensione complementare 1,20% 3987,51 € - 47,85 €\n\nTOTALE RIEPILOGO COMPETENZE E TRATTENUTE 3.987,51 € 1.190,11 €\n\nImponibile Previdenziale: 3.987,51 € (IVS 9,19%) | NETTO DEL MESE: 2.797,40 €\nAccredito stipendio su c/c bancario dipendente - IBAN: IT83 G040 4917 8365 2609 8992 192\n\nINFORMATIVA TRASPARENZA CONTRATTUALE, TUTELA PREVIDENZIALE E TERMINI DI RECLAMO:\nLa retribuzione teorica mensile corrisponde al monte ore contrattuale stabilito nel piano individuale. L'accordo di prossimità aziendale introduce deroghe concordate in materia di organizzazione del lavoro e turnazioni. La quietanza di pagamento a saldo e stralcio è rilasciata a tacitazione definitiva di ogni diritto derivante dal rapporto di lavoro.\n\nIl Responsabile Risorse Umane:\nDott.ssa Michela Grassi\n\nApprovato il 28.06.2025",
+   "s": 24.65711998939514,
+   "prompt_tokens": 2788,
+   "gen_tokens": 956,
+   "prefill_tps": 345.2414814326238,
+   "gen_tps": 57.98048599943633,
+   "peak_gb": 3.15929939
+  },
+  "itdoc_f_1168_letter_small_footer_L4_it": {
+   "text": "LUXOTTICA MANIFATTURA E DESIGN S.R.L.\nDirezione Risorse Umane e Organizzazione - Corso Porta Nuova 66, Verona\n\nVerona, il 09.09.2026\n\nSpettabile Dipendente\nAndrea Fontana\nC.F.: KPDFBG64E64C351O\nMatricola Dipendente: MATR-5182\n\nOggetto: Lettera di assunzione a tempo indeterminato rif. ASS-PROPOSTA-2025-177\n\nCon la presente ci pregiamo confermarle la Sua assunzione alle dipendenze della nostra società con decorrenza 5 aprile 2026.\nIl rapporto sarà disciplinato dalle norme del CCNL Metalmeccanico Liv. B2.\n\nL'indennità di buonuscita aggiuntiva è erogata nel rispetto dei limiti di deducibilità previsti dalla legge tributaria.\n\nIl trattamento economico concordato corrisponde ad una Retribuzione Annua Lorda (RAL) pari a 67.030,66 EUR, ripartita nelle mensilità ordinarie e nelle gratifiche di legge. L'accredito avverrà su IBAN: IT41 V383 2328 5502 8679 1469 706.\n\nLa certificazione dei crediti contributivi è rilasciata dalla sede INPS territorialmente competente per matricola.\n\nDistinti Saluti,\nDott. Roberto Baroni\nIl Direttore Amministrazione del Personale\n\nVERIFICATO UFFICIO PERSONALE\n\nRicevuto saldo 1.614,98 €\n\nLuxottica Manifattura e Design S.r.l. - Sede di Verona - REA VR-648192\nP.JVA 00719759862 | PEC: forniture@venetotecno.example | Tel: 045-801234\nPosizione INAIL: 1116184 | Matricola INPS: 6662182304\nDocumento redatto in conformità alle prescrizioni del Regolamento UE 2016/679 per la privacy.",
+   "s": 20.305686712265015,
+   "prompt_tokens": 2788,
+   "gen_tokens": 555,
+   "prefill_tps": 318.0576352549697,
+   "gen_tps": 48.71383818873461,
+   "peak_gb": 3.090328482
+  },
+  "itdoc_f_0874_executive_payslip_L5_it": {
+   "text": "DATALOGIC SISTEMI INFORMATICI E BARCODE S.P.A.\nProspetto Retributivo Dirigente protocollo CED-DIR/2023-388\n\nDATI DEL DIRIGENTE E INQUADRAMENTO DIRETIVO:\nDatore di Lavoro: Datalogic Sistemi Informatici e Barcode S.p.A. (Bologna)\nDirigente: Valentina Lombardi | MATR.8921 | Considente Giuridico del Lavoro Interno\nP.IVA: 62746796521 | Codice Fiscale: NSHISSE3L48B157E\nPrevidenza Dirigente: Fondo Previndai | Assistenza: FASDAC | Periodo: Dicembre 2023\nResapito PEC istituzionale: contabilità@piemonteindustria.example\n\nCodice Descrizione Emolumento Direttivo Riferimento Competenze Trattenute\nDIR-01 Retribuzione tabellare mensile dirigente mensile 5.200.00 € -\nDIR-02 Superminimo ad personam non assorbibile contratto 2.800.00 € -\nDIR-03 Indennita posizione e responsabilità funzione 1.500.00 € -\nDIR-04 Fringe benefit autovetrura uso promisso tabelle ACI 380.00 € -\nDIR-05 Contributi previdenziali IVS e Previndai quota dir 894.20 €\nDIR-06 Ritenuta Fiscale IRPEF e addizionali progressivo 3.420.50 €\n\nTOTALE CONTO CONSOLIDATO RETRIBUZIONE DIRIGENTE 9.880.00 € 4.314.70 €\n\nNetto del mese spettante al dirigente: 5.565.30 € | Traffamento accessorio: Previndai/FASDAC\nDisposizione bonifico su cer dedicato del dirigente IBAN: IT83 U207 1179 0296 3586 2663 567\n\nDISCIPLINA DEL RAPPORTO DIRIGENZIALE, OBRLIGHI FIDUCIABI E FORO COMPETENTE:\nIl traffamento integrativo della retribuzione sex benna Ranzi e etrogato mensilmente agli aventi dirutto. I rimborai forfettari di trasferta all interno del territorio comunale concorrente interamente a formare reddito di lavoro. La base impossibile facale e determinata sottraendo dalla retribuzione bordo i contribui previdenziali a carico dipendente.\n\nIl Legale Rappresentante:\nDott. Giancarlo Piras",
+   "s": 21.96293020248413,
+   "prompt_tokens": 2788,
+   "gen_tokens": 691,
+   "prefill_tps": 315.44728405444187,
+   "gen_tps": 56.728363815026704,
+   "peak_gb": 3.090328482
+  },
+  "itdoc_f_0710_service_certificate_L1_it": {
+   "text": "CAMPARI BEVERAGE & HOSPITALITY SERVICES S.R.L.\nAttestato di Servizio e Carriera protocollo ATT-CARRIERA-2024-6863\n\nDATI DEL LAVORATORE E SINTESI DELLA CARRIERA AZIENDALE:\nDatore di Lavoro: Campari Beverage & Hospitality Services S.r.l. (Bari)\nLavoratore Dipendente: Silvia Brambilla | MATR-1024\nP.IVA: 19343198842 | Codice Fiscale: TWHGZH55E18C351U\nData Inizio Rapporto: 8 ottobre 2024 | Qualifica Finale: Dirigente\nCanale Notifiche PEC: protocollo@ediltoscana.example\n\nPeriodo Mansione e Ruolo Operativo Livello CCNL Dipartimento Valutazione\n2019 - 2020 Specialista Tecnico Junior Livello C2 Produzione Ottimo\n2021 - 2022 Referente di Processo Livello B1 Qualità Distinto\n2023 - 2024 Senior Specialist di Area Livello A1 Operazioni Eccellente\n2025 - pres. Coordinatore di Divisione Quadro Dir. Direzione Lodevole\n\nRIEPILOGO RETRIBUZIONE GLOBALE LORDA FINALE 73.870,56 €\n\nRetribuzione globale lorda annua finale: 73.870,56 € (Incentivo di carriera: 12,50%)\nDisposizione competenze finali su c/c - IBAN: IT77 B227 5069 7697 4991 8691 418\n\nVALORE PROBATORIO DEL CERTIFICATO DI SERVIZIO E TUTELA DEI DATI (ART. 2124 C.C.):\nI permessi elettorali per scrutatori e presidenti di seggio sono interamente retribuiti secondo le norme vigenti. Le giornate di smart working sono tracciate nel calendario mensile del lavoro agile concordato. La voce di assegno ad personam riassorbibile segue le clausole stabilite nella lettera di assegnazione. La trattenuta a favore dell’istituto finanziario estingue il debito residuo del prestito contro cessione del quinto dello stipendio.\n\nIl Responsabile Risorse Umane:\nDott.ssa Michela Grassi\n\nCertificato Carriera ATT-CARRIERA-2024-6863 - Campari Beverage & Hospitality Services S.r.l.",
+   "s": 19.192572832107544,
+   "prompt_tokens": 2788,
+   "gen_tokens": 662,
+   "prefill_tps": 327.6298970495702,
+   "gen_tps": 62.5785863328853,
+   "peak_gb": 3.090328482
+  },
+  "itdoc_f_0931_executive_payslip_L2_it": {
+   "text": "CHIESI FARMACEUTICI RICERCA E SVILUPPO S.P.A.\nProspetto Retributivo Dirigente protocollo CED-DIR/2023-630\n\nDATI DEL DIRIGENTE E INQUADRAMENTO DIRETTIVO:\nDatore di Lavoro: Chiesi Farmaceutici Ricerca e Sviluppo S.p.A. (Parma)\nDirigente: Chiara Morandi | MATR-6240 | Operatore di Produzione Specializzato\nP.IVA: 35995130917 | Codice Fiscale: CMDRFF79D14A944G\nPrevidenza Dirigenti: Fondo Previndai | Assistenza: FASDAC | Periodo: Agosto 2023\nRecapito PEC Istituzionale: contabilità@pec.italforniture.example\n\nCodice Descrizione Emolumento Direttivo Riferimento Competenze Trattenute\nDIR-01 Retribuzione tabellare mensile dirigente mensile 5.200,00 € -\nDIR-02 Superminimo ad personam non assorbibile contratto 2.800,00 € -\nDIR-03 Indennità posizione e responsabilità funzione 1.500,00 € -\nDIR-04 Fringe benefit autovettura uso promiscuo tabelle ACI 380,00 € -\nDIR-05 Contributi previdenziali IVS e Previndai quota dir. - 894,20 €\nDIR-06 Ritenuta fiscale IRPEF e addizionali progressivo - 3.420,50 €\n\nTOTALE CONTO CONSOLIDATO RETRIBUZIONE DIRIGENTE 9.880,00 € 4.314,70 €\n\nNetto del mese spettante al dirigente: 5.565,30 € | Trattamento accessorio: Previndai/FASDAC\nDisposizione bonifico su c/c dedicato del dirigente - IBAN: IT61 R124 9729 8547 9493 1713 615\n\nDISCIPLINA DEL RAPPORTO DIRIGENZIALE, OBBLIGHI FIDUCIARI E FORO COMPETENTE:\nLe clausole di deroga contrattuale sono ammesse unicamente nei limiti e con le tutele previste dall'ordinamento sindacale. La trattenuta fiscale operata a titolo provvisorio sul TFR è soggetta a riliquidazione definitiva da parte dell'Agenzia delle Entrate. Il certificato di compiuto tirocinio formativo è rilasciato al termine del periodo di apprendistato professionalizzante.\n\nIl Legale Rappresentante:\nDott. Giancarlo Piras",
+   "s": 19.93668508529663,
+   "prompt_tokens": 2788,
+   "gen_tokens": 705,
+   "prefill_tps": 326.7188058360843,
+   "gen_tps": 62.34495653283129,
+   "peak_gb": 3.15929939
+  },
+  "itdoc_f_0117_tax_withholding_cud_L3_it": {
+   "text": "LUXOTTICA MANIFATTURA E DESIGN S.R.L.\nCertificazione Unica (CU) Redditi Lavoro protocollo CU-2024-81233\n\nDATI DEL SOSTITUTO D'IMPOSTA E DEL CONTRIBUENTE PERCETTORE:\nSostituto d'Imposta: Luxottica Manifattura e Design S.r.l. (Verona)\nPercettore Reddito: Elena Bianchi | MATR-8152\nP.IVA: 35398374419 | Codice Fiscale: ZCZJTW61T11I480U\nPeriodo d'Imposta: Anno Solare 2024 | Giorni di Lavoro Dipendente: 365\nCanale Notifiche PEC: protocollo@pec.lombardaservizi.example\n\nPunto CU Quadro Certificazione Unica - Dati Fiscali Anno Aliquota Importo Fiscale\nPunto 1 Redditi da lavoro dipendente e assimilati 2024 ordinaria 42.500,00 €\nPunto 21 Ritenute IRPEF operate a titolo d'acconto 2024 progressiva 9.820,00 €\nPunto 22 Addizionale regionale all'IRPEF trattuta 2024 1,73% 735,25 €\nPunto 26 Addizionale comunale all'IRPEF - Saldo 2024 0,80% 340,00 €\nPunto 27 Addizionale comunale all'IRPEF - Acconto 2024 0,80% acc 102,00 €\nPunto 367 Detrazioni per lavoro dipendente riconosciute 2024 ex art. 13 1.910,00 €\n\nTOTALE TOTALE RITENUTE FISCALI COMPLESSIVE VERSATE 10.997,25 €\n\nVersamento imposte F24 telematico rif. TRIB-7084 | Aliquota media: 25,87%\nRiconciliazione F24 su c/c - IBAN: IT02 F889 0949 6640 2811 8550 451\n\nINFORMATIVA FISCALE, TERMINI DI TRASMISSIONE TELEMATICA E MODELLO 730 PRECOMPILATO:\nLe ritenute fiscali per addizionali locali sono riversate agli enti impositori tramite appositi codici tributo F24. La sede principale di lavoro è fissata presso lo stabilimento aziendale con facoltà di temporaneo distacco operativo. La base imponibile fiscale è determinata sottraendo dalla retribuzione lorda i contributi previdenziali a carico dipendente.\n\nIl Direttore Amministrazione del Personale:\nDott. Roberto Baroni\n\nRegistrato in data 10/09/2024",
+   "s": 21.33681583404541,
+   "prompt_tokens": 2788,
+   "gen_tokens": 757,
+   "prefill_tps": 328.8488443293963,
+   "gen_tps": 59.29979998317966,
+   "peak_gb": 3.15929939
+  },
+  "itdoc_f_0663_invoice_detail_lines_L4_it": {
+   "text": "BREMBO MECCANICA DI PRECISIONE S.P.A.\nProspetto Paga e Competenze protocollo CED/2023-691 del 18/08/2025\n\nDATI DEL DATORE DI LAVORO E DEL DIPENDENTE:\nAzienda: Brembo Meccanica di Precisione S.p.A (Milano)\nDipendente: Alessandro Rossi | MATR-9083\nP.IVA: 07897634221 | C.F: BDGGDS74T04A944X | PEC: segreteria@piemonteindustria.example\nInquadramento: CCNL Credito e Assicurazioni 3A4L - Quadro Direttivo | Periodo: Settembre 2023\n\nCodice Descrizione Competenza / Trattenuta Base/Ore Quota Base Competenze Trattenute\n0010 Stipendio base mensile contrattuale 173 14,50 € 2,508,50 € -\n0020 Indennità di contingenza conglobata 173 3,10 € 536,30 € -\n0035 Elemento Distinto della Retribuzione 1 10,33 € 10,33 € -\n0050 Superminimo individuale concordato 1 450,00 € 450,00 € -\n0080 Scatti periodici di anzianità (n. 3) 3 32,50 € 97,50 € -\n0110 Maggiorazione lavoro straordinario 25% 14 18,12 € 253,68 € -\n0140 Indennità di turno e reperibilità 8 16,40 € 131,20 € -\n0510 Contributi IVS a carico dipendente 9,19% 3987,51 € - 366,45 €\n0620 Ritenuta fiscale IRPEF netta del mese scaql. 3621,06 € - 684,20 €\n0630 Addizionale regionale IRPEF a rate 1,73% 3621,06 € - 62,64 €\n0640 Addizionale comunale IRPEF a saldo 0,80% 3621,06 € - 28,97 €\n0710 Contributo fondo pensione complementare 1,20% 3987,51 € - 47,85 €\n\nTOTALE RIEPILOGO COMPETENZE E TRATTENUTE 3,987,51 € 1,190,11 €\n\nImponibile Previdenziale: 3,987,51 € (IVS 9,19%) | NETTO DEL MESE: 2,797,40 €\nAccredito stipendio su c/c bancario dipendente - IBAN: IT62 H411 2305 5017 3757 1820 350\n\nINFORMATIVA TRASPARENZA CONTRATTUALE, TUTELA PREVIDENZIALE E TERMINI DI RECLAMO:\nLa denuncia aziendale DM10 è integrata nella sezione contributiva del flusso unificato mensile Uniemens. L'accordo individuale di lavoro agile definisce le modalità di disconnessione e i canali di comunicazione telematici. L'importo del bonus produttività è correlato al raggiungimento degli obiettivi di efficienza industriale.\n\nIl Responsabile Risorse Umane:\nDott ssa Michela Grassi\n\nVERIFICATO UFFICIO PERSONALE\n\nConforme ordine 18 aprile 2026",
+   "s": 24.353779077529907,
+   "prompt_tokens": 2788,
+   "gen_tokens": 953,
+   "prefill_tps": 327.15771003619506,
+   "gen_tps": 60.68042865157988,
+   "peak_gb": 3.090328482
+  },
+  "itdoc_f_0849_body_footnotes_L5_it": {
+   "text": "FERRERO LOGISTICA E DISTRIBUZIONE S.R.L.\nATTRESTATO DI SERVIZIO E LAVORO DIPENDENTE N. CERT-SERV-2024-1550\nData di Bilascio: 24 marzo 2026 | Sede Aziendale: Torino\nP.IVR: 70854004424 | C.F.: SRDPQB66H65H501F | PEC: officio.acquisti@pec.lombardaservizi.example\n\nArt. 1 - Il atteata formalmente che il dipendente Andrea Fontana è assunto con decorrenza\n02.06.2024, L'importo del TFR maturato è garantito dal privilegio speciale sui beni mobili e\nimmobili del datore al sensi dell'art. 2751-bis c.c.[1]\n\nArt. 2 - Il lavoratore è inquadrato nel livello CCNL Metalmeccanico Liv. B2 con qualifica di\nImplegato Tecnico. Il regolamento interno aziendale costituisce parte integrante del contratto di\nlavoro ed è affisso nel locali comuni.[2]\n\nArt. 3 - Nell'espletamento dei compiti di Specialista Salute e Sicurezza RSPP, La detrazione\nd'imposta per canone di locazione per glivani lavoratori trasferiti è concessa per 1 primi tre\nanni.[3]\n\nArt. 4 - Il compenso per ferie non godute è liquidato esclusivamente nei casi previsti di\nrisoluzione del rapporto.[4]\n\nArt. 5 - Il rapporto di lavoro prosegue a tempo indeterminato con piena soddisfazione delle parti,\nIl netto spettante in busta paga è determinato previa detrazione delle ritenute previdenziali e\nfiscali.[5] Registrazione archivio NR.[6]\n\n[1] Posizione matricolare e previdenziale INPS codice INPS-POS-393995.\n[2] Retribuzione annua lorda globale concordata pari a 54.712,65 EUR.\n[3] Prestazioni collegate ad appalto con codice CIG BTLL6DETO9.\n[4] Progetto speciale di formazione codice CUP D79H50734789318.\n[5] Regime orario e impegno lavorativo stabilito nella misurazione.\n[6] Coordinate bancarie accreditito stipendio - IBAN: IT48 N780 4338 2240 5753 2016 727.",
+   "s": 19.23764395713806,
+   "prompt_tokens": 2788,
+   "gen_tokens": 652,
+   "prefill_tps": 328.6505993166936,
+   "gen_tps": 61.301150770495866,
+   "peak_gb": 3.090328482
+  }
+ }
+}

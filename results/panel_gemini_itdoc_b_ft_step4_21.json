@@ -1,0 +1,64 @@
+{
+ "tag": "panel_gemini_itdoc_b_ft_step4_21",
+ "model": "work/glm-ocr-bf16",
+ "corpus": "gemini/itdoc_b",
+ "scale": 1.0,
+ "adapter": "work/ft/step4_21",
+ "env": {
+  "macos": "26.3",
+  "python": "3.12.15",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "pages": {
+  "itdoc_b_0060_invoice_detail_lines_L1_it": {
+   "text": "PIEMONTE OLEODINAMICA S.R.L.\nCorso Francia 204 – Torino\nP.IVA: 35219349681 | C.F.: BHZKGL76T51H501Y\nPEC: amministrazione@pec.emiliaimpianti.example\nFATTURA COMMERCIALE IMMEDIATA N. FAT/2026-1\nData emissione: 16.11.2025\nCodice CIG: 8YY7QQEQM2 | Codice CUP: V96V72845972344\nDESTINATARIO / CLIENTE:\nCostruzioni Generali Adriatica S.r.l.\nVia Flaminia 88 – Rimini\nCod. Descrizione Articolo / Prestazione Q.tà Prezzo Totale\nART-101 Valvola sfera acciaio inox DN50 20 PZ 68,40 € 1,368,00 €\nART-102 Relè differenziale trifase 24V 15 PZ 51,30 € 769,50 €\nART-103 Cavo flessibile FG16 1x35 mmq 20 METRI 7,20 € 144,00 €\nART-104 Quadro elettrico parete IP65 10 PZ 315,00 € 3,150,00 €\nART-105 Interruttore magnetotermico 4P 50 PZ 62,40 € 3,120,00 €\nART-106 Motoriduttore 1.5 kW 1400 rpm 20 PZ 576,00 € 11,520,00 €\nART-107 Cuscinetto a rulli conici 20 PZ 42,75 € 855,00 €\nART-108 Filtro disoleatore aria 1/2 25 PZ 36,00 € 900,00 €\nART-109 Guarnizione spirometallica 10 PZ 11,52 € 115,20 €\nART-110 Tubo alta pressione R2AT 3/8 5 METRI 21,75 € 108,75 €\nART-111 Raccordo dritto maschio 1 pol. 20 PZ 8,64 € 172,80 €\nART-112 Contattore tripolare 40A 230V 50 PZ 52,00 € 2,600,00 €\nART-113 Pressostato regolabile 0-10 bar 25 PZ 95,00 € 2,375,00 €\nART-114 Termometro radiale 0-120 C 20 PZ 36,00 € 720,00 €\nART-115 Manometro cassa inox 63 mm 10 PZ 15,60 € 156,00 €\nART-116 Morsettiera guida DIN 6 mmq 5 CONF. 30,40 € 152,00 €\nART-117 Sensore prossimità M18 PNP 10 PZ 42,00 € 420,00 €\nMODALITÀ DI PAGAMENTO:\nBonifico Bancario a 30 giorni data fattura\nData Scadenza: 13.10.2026\nIBAN: IT69 W970 8522 8254 5136 4721 851\nRIEPILOGO TOTALI DOCUMENTO\nImponibile netto: 28.646,25 €\nAliquota IVA 22%: 6.302,18 €\nTOTALE FATTURA: 34.948,43 €\nI codici identificativi gara CIG 8YY7QQEQM2 devono essere riportati su tutta la corrispondenza relativa. Iscrizione nel registro elettronico nazionale delle imprese che esercitano la professione di trasportatore con decorrenza fissata al 13.10.2026. I beni riparati in garanzia vengono riconsegnati al cliente senza alcun addebito economico entro la data fissata del 13.10.2026.\nPagina 1 di 1 - Documento fiscale FAT/2026-1281 - Emesso da Piemonte Oleodinamica S.r.l.",
+   "s": 29.176320791244507,
+   "prompt_tokens": 2788,
+   "gen_tokens": 1205,
+   "prefill_tps": 355.4186214468506,
+   "gen_tps": 56.70755099867418,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_b_0601_invoice_detail_lines_L2_it": {
+   "text": "TOSCANA CARPENTERIE METALLICHE S.P.A.\nVia Leonardo da Vinci 24 - Firenze\nP.IVA: 39528601410 | C.F.: KVZWCP74S18A944T\nPEC: gare.appalti@pec.emiliaimpianti.example\nFATTURA COMMERCIALE IMMEDIATA N. FAT-2026-0670\nData emissione: 26.05.2024\nCodice CIG: 7YEQTTQC8E | Codice CUP: W23K35421979064\nDESTINATARIO / CLIENTE:\nOfficine Meccaniche Lombarde S.p.A.\nVia Sondrio 12 - Milano\nCod. Descrizione Articolo / Prestazione Q.tà Prezzo Totale\nART-101 Valvola sfera acciaio inox DN50 15 PZ 85,50 € 1.282,50 €\nART-102 Relè differenziale trifase 24V 50 PZ 41,04 € 2.052,00 €\nART-103 Cavo flessibile FG16 1x35 mmq 50 METRI 5,76 € 288,00 €\nART-104 Quadro elettrico parete IP65 10 PZ 168,00 € 1.680,00 €\nART-105 Interruttore magnetotermico 4P 50 PZ 93,60 € 4.680,00 €\nART-106 Motoriduttore 1.5 kW 1400 rpm 50 PZ 576,00 € 28.800,00 €\nART-107 Cuscinetto a rulli conici 15 PZ 42,75 € 641,25 €\nART-108 Filtro disoleatore aria 1/2 2 PZ 67,50 € 135,00 €\nART-109 Guarnizione spirometallica 10 PZ 14,40 € 144,00 €\nART-110 Tubo alta pressione R2AT 3/8 25 METRI 17,40 € 435,00 €\nART-111 Raccordo dritto maschio 1 pol. 10 PZ 7,20 € 72,00 €\nART-112 Contattore tripolare 40A 230V 20 PZ 52,00 € 1.040,00 €\nART-113 Pressostato regolabile 0-10 bar 25 PZ 95,00 € 2.375,00 €\nART-114 Termometro radiale 0-120 C 50 PZ 28,80 € 1.440,00 €\nMODALITÀ DI PAGAMENTO:\nBonifico Bancario a 30 giorni data fattura\nData Scadenza: 5 febbraio 2026\nIBAN: IT47 E686 6670 0630 1820 1752 464\nRIEPILOGO TOTALI DOCUMENTO\nImponibile netto: 45.064,75 €\nAliquota IVA 22%: 9.914,25 €\nTOTALE FATTURA: 54.979,00 €\nI materiali forniti sono accompagnati dal certificato di collaudo tipo 3.1 EN 10204 convenuto tra Toscana Carpenterie Metalliche S.p.A. e Officine Meccaniche Lombarde S.p.A. con sede a Torino. Documento collegato al documento di trasporto n. FAT-2026-0670 emesso in data 5 febbraio 2026. Eventuali insoluti comporteranno l'addebito delle relative spese bancarie per ciascun effetto protestato su conto corrente dedicato con IBAN IT47 E686 6670 0630 1820 1752 464.\nPagina 1 di 1 - Documento fiscale FAT-2026-0670 - Emesso da Toscana Carpenterie Metalliche S.p.A.",
+   "s": 27.90864396095276,
+   "prompt_tokens": 2788,
+   "gen_tokens": 1153,
+   "prefill_tps": 356.9046166815405,
+   "gen_tps": 57.65452588026165,
+   "peak_gb": 3.361333198
+  },
+  "itdoc_b_0842_invoice_detail_lines_L3_it": {
+   "text": "EMILIA IMPIANTI TECNOLOGICI S.P.A.\nVia dell'Artigianato 18 - Modena\nP.IVA: 44463238657 | C.F.: VWTVBH50S64G273J\nPEC: direzione@pec.piemonteindustria.example\nFATTURA COMMERCIALE IMMEDIATA N. FAT-2024-2\nData emissione: 11 gennaio 2026\nCodice CIG: MDMHTKBFK7 | Codice CUP: W25Z47198548370\nDESTINATARIO / CLIENTE:\nCostruzioni Generali Adriatica S.r.l.\nVia Flaminia 88 - Rimini\nCod. Descrizione Articolo / Prestazione Q.tà Prezzo Totale\nART-101 Valvola sfera acciaio inox DN50 5 PZ 68,40 € 342,00 €\nART-102 Relè differenziale trifase 24V 15 PZ 51,30 € 769,50 €\nART-103 Cavo flessibile FG16 1x35 mmq 15 METRI 7,20 € 108,00 €\nART-104 Ouadro elettrico parete IP65 50 PZ 315,00 € 15,750,00 €\nART-105 Interruttore magnetotermico 4P 25 PZ 49,92 € 1,248,00 €\nART-106 Motoriduttore 1,5 kW 1400 rpm 20 PZ 480,00 € 9,600,00 €\nART-107 Cuscinetto a rulli conici 15 PZ 42,75 € 641,25 €\nART-108 Filtro disoleatore aria 1/2 25 PZ 54,00 € 1,350,00 €\nART-109 Guarnizione spirometallica 2 PZ 9,60 € 19,20 €\nART-110 Tubo alta pressione R2AT 3/8 20 METRI 14,50 € 290,00 €\nART-111 Raccordo dritto maschio 1 pol. 15 PZ 8,64 € 129,60 €\nART-112 Contattore tripolare 40A 230V 20 PZ 78,00 € 1,560,00 €\nART-113 Pressostato regolabile 0-10 bar 20 PZ 76,00 € 1,520,00 €\nART-114 Termometro radiale 0-120 C 2 PZ 19,20 € 38,40 €\nART-115 Manometro cassa inox 63 mm 25 PZ 23,40 € 585,00 €\nMODALITÀ DI PAGAMENTO:\nBonifico Bancario a 30 giorni data fattura\nData Scadenza: 13 aprile 2025\nIBAN: IT10 N437 8504 0643 3427 1140 646\nRIEPILOGO TOTALI DOCUMENTO\nImponibile netto: 33.950,95 €\nAliquota IVA 22%: 7.469,21 €\nTOTALE FATTURA: 41.420,16 €\nLo svincolo delle ritenute di garanzia avverrà a seguito dell'approvazione del certificato di collaudo per la procedura contraddistinta da CIG MDMHTKBFK7. La merce in restituzione viaggia accompagnata dall'autorizzazione al reso n.\nFAT-2024-2716. Formazione obbligatoria in materia di salute e sicurezza erogata a tutti i dipendenti impiegati per un corrispettivo quantificato in € 41.705,66.\nRegistrato in data 22.05.2025\nPagina 1 di 1 - Documento fiscale FAT-2024-2716 - Emesso da Emilia Impianti Tecnologici S.p.A.",
+   "s": 35.467108964920044,
+   "prompt_tokens": 2788,
+   "gen_tokens": 1148,
+   "prefill_tps": 320.22661047013764,
+   "gen_tps": 43.076280637416104,
+   "peak_gb": 3.361333198
+  },
+  "itdoc_b_1168_letter_small_footer_L4_it": {
+   "text": "PIEMONTE OLEODINAMICA S.R.L.\nDivisione Impianti Industriali e Grandi Forniture - Corso Francia 204, Torino\nTorino, il 27/11/2025\nSpettabile Società:\nCentro Diagnostico Sanitario S.p.A.\nViale Regina Margherita 33\nRoma\nPAGATO - SALDO CONFORME\nOggetto: Conferma ordinativo di forniture n. ORD-2026-1375\nPiano operativo di sicurezza POS depositato dall'impresa esecutrice prima dell'inizio attività conforme all'accordo quadro n. ORD-2026-1375.\nLe somme corrisposte a titolo di rimborso chilometrico sono esenti da ritenuta per € 660.529,53.\nDetrazione forfettaria applicata per convenzione aziendale nella misura pattuita dello 5,0%.\nRimborso forfettario delle spese generali determinato nella misura del 15% sull'onorario entro la data fissata del 23 agosto 2025.\nDistinti Saluti,\nPiemonte Oleodinamica S.r.l.\nLa Direzione Generale\nCiquidato 2404,72 EUR\nPiemonte Oleodinamica S.r.l. - S.r.l. - Capitale Sociale EUR 1.813.485.51 iv - Iscr. R.E.A. n. 849201\nSede: Torino - P.IVA: 87293446271 - C.F. VTK2DW74M47D612N - PEC: contabilità@italforniture.example\nCoordinate per pagamenti tracciati: Bonifico su conto IBAN: IT93 C398 5216 1819 2681 8360 502\nRiferimenti appalti: Tracciabilita finanziaria L. 136/2010 - CIG LR9M09ETDL - CUP L84N93541587290",
+   "s": 21.400118112564087,
+   "prompt_tokens": 2788,
+   "gen_tokens": 541,
+   "prefill_tps": 306.4723570834032,
+   "gen_tps": 44.418783148720756,
+   "peak_gb": 3.361333198
+  },
+  "itdoc_b_0874_private_agreement_L5_it": {
+   "text": "SCRITTURA PRIVATA DI ACCORDO COMMERCIALE E DI FORNITURA\nRepertorio Contratti Privati N. SCR/2024/05763 - Data: 17/01/2026\nPARTI CONTRAENTI:\nParte A (Fornitore): NordMeccanica Industriale S.p.A. - Sede: Milano\nP.JVA: 84371959598 | C.F: DPPTLW81C57A944F | PEC: forniture@pec.lombardaservizi.example\nParte B (Committeente): Costruzioni Generali Adriatica S.r.l. - Sede: Rimini\nP.JVA: 43496418625 | C.F: VTPGRDB2M25FS839I | PEC: segreteria@nordmeccanica.example\ndi seguito determinare congiuntamente la Parte e l'indicazione la Parte\nPREMESSO CHE\nI beni oggetto dell'ordine devono essere imballati con materiali riciclabili secondo i criteri ambientali minimi registrato al repertorio n. SCR/2024/05763.\nTUTTO CIÓ PREMESSO, SI CONVIENE E STIPULA QUANTO SEGUE:\nArticolo 1 - Oggetto e corrispettivo dell'affidamento\nStato di avanzamento lavori numero SCR/2024/05763 emesso per l'importo netto di EUR 633.943,92.\nArticolo 2 - Termini di adempimento e penali\nRecupero graduale dell'anticipazione contrattuale mediante trattenuta proporzionale del 15,0%.\nArticolo 3 - Flussi Finanziari e tracciabilità\nAccredito da eseguire esclusivamente sulle coordinate bancarie IBAN IT21 W873 2428 5385 0607 6573 426 intestate alla società.\nCONDURZIONI GENERALI FORO COMPETENTE E MISERVATETRA:\nLa seconda rate a saldo cadrà improrogabilmente il porto 28 giugno 2024 per 2 residuo di 12,749,76 EUR. Il personale addetto allo ocazio deve indessare i dispositivi di protezione individuale previsti a cura della societa NordMeccanica Industriale S.p.A. per l'ordine n. RCR/2024/05763. Per ogni chiusura administrativa e possibile contattare l'ufficio acquisti alla casella.\nexcreibilità@pec.lombardaservizi.example.\nPer la Parte Fornitrice (Parte A):\nNordMeccanica Industriale S.p.A.\nFirma del Legge Sapproccio della Pro Tempore\nPer la Parte Committeente (Parte B):\nCostruzioni Generali Adriatica S.r.l.\nFirma per Accontazione e Mandato Emcito\nPagato il 26/01/2025\nScrittura Privata SCR/2024/05763 - Registrare nell'associato contrattuale - NordMeccanica Industriale l.p.A.",
+   "s": 27.780724048614502,
+   "prompt_tokens": 2788,
+   "gen_tokens": 810,
+   "prefill_tps": 297.3493182915839,
+   "gen_tps": 44.25475343356829,
+   "peak_gb": 3.361316814
+  }
+ }
+}

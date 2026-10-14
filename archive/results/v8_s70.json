@@ -1,0 +1,250 @@
+{
+ "tag": "v8_s70",
+ "model": "models/v8d4e4",
+ "load_s": 0.608896017074585,
+ "pages": {
+  "syn_00_it_prose": {
+   "text": "Contratto di forniture di servizi\n\nNel corso dell'esercizio 2025 il fatturato è cresciuto del 12,4% rispetto all'anno precedente, grazie soprattutto all'espansione nei mercati dell'Europa meridionale e a un più efficiente utilizzo della logistica.\n\nIl Responsabile del trattamento è tenuto a garantire che le persone autorizzate abbiano assunto un impegno di riservatezza e adottare tutte le misure di sicurezza richieste dall'articolo 32.\n\nQualora il cliente non provveda al pagamento entro la scadenza indicata, decorreranno automaticamente gli interessi di mora nella misura prevista dal D.Lgs. 231/2002, oltre alle spese di recupero.",
+   "s": 6.975081920623779,
+   "prompt_tokens": 1380,
+   "gen_tokens": 192,
+   "prefill_tps": 341.05158888583793,
+   "gen_tps": 67.972267213167,
+   "peak_gb": 1.734882802
+  },
+  "syn_01_it_dense": {
+   "text": "Relazione annuale sulla gestione\n\nPerché l'intervento sia efficace, è necessario verificare più volte la tensione dell'impianto: così si evitano guasti, perdite e—soprattutto—rischi per l'incolumità degli operatori.\n\nLa riunione del consiglio di amministrazione si è tenuta presso la sede di Genova il 14 marzo; è stata approvata all'unanimità la proposta di destinare l'utile a riserva straordinaria.\n\nLa società si impegna a fornire i servizi descritti nel presente contratto entro trenta giorni dalla data di sottoscricione, salvo cause di forza maggiore debitamente documentate.\n\nNel corso dell'esercizio 2025 il fatturato è cresciuto del 12,4% rispetto all'anno precedente, grazie soprattutto all'espansione nei mercati dell'Europa meridionale e a un più efficiente utilizzo della logistica.\n\nPerché l'intervento sia efficace, è necessario verificare più volte la tensione dell'impianto: così si evitano guasti, perdite e—soprattutto—rischi per l'incolumità degli operatori.\n\nLa riunione del consiglio di amministrazione si è tenuta presso la sede di Genova il 14 marzo; è stata approvata all'unanimità la proposta di destinare l'utile a riserva straordinaria.",
+   "s": 14.82041597366333,
+   "prompt_tokens": 1380,
+   "gen_tokens": 346,
+   "prefill_tps": 237.38511694160374,
+   "gen_tps": 38.846550300653135,
+   "peak_gb": 1.735013874
+  },
+  "syn_02_it_twocol": {
+   "text": "Verbale del consiglio di amministrazione\n\nLa riunione del consiglio di amministrazione si è tenuta presso la sede di Genova il 14 marzo; è stata approvata all'unanimità la proposta di destinare l'utile a riserva straordinaria.\n\nIl Responsabile del trattamento è tenuto a garantire che le persone autorizzate abbiano assunto un impegno di riservatezza e adottare tutte le misure di sicurezza richieste dall'articolo 32.\n\nLa società si impegna a fornire i servizi descritti nel presente contratto entro trenta giorni dalla data di sottoscricione, salvo cause di forza maggiore debitamente documentate.\n\nPerché l'intervento sia efficace, è necessario verificare più volte la tensione dell'impianto: così si evitano guasti, perdite e—soprattutto—rischi per l'incolumità degli operatori.",
+   "s": 11.864007949829102,
+   "prompt_tokens": 1380,
+   "gen_tokens": 224,
+   "prefill_tps": 214.93104558431364,
+   "gen_tps": 41.773402138163775,
+   "peak_gb": 1.735013874
+  },
+  "syn_03_it_table": {
+   "text": "Relazione annuale sulla gestione\n\nQualora il cliente non provveda al pagamento entro la scadenza indicata,\ndecorreranno automaticamente gli interessi di mora nella misura prevista dal D.Lgs.\n231/2002, oltre alle spese di recupero.\n\nLa società si impegna a fornire i servizi descritti nel presente contratto entro trenta\ngiorni dalla data di sottoscrizione, salvo cause di forza maggiore debitamente\ndocumentate.\n\nIl Responsabile del trattamento è tenuto a garantire che le persone autorizzate\nabbiano assunto un impegno di riservatezza e adottare tutte le misure di sicurezza\nrichieste dall’articolo 32.\n\nDescrizione Q.tà Prezzo Totale\nConsulenza tecnica 10 € 85,00 € 850,00\nLicenza annuale 2 € 1.200,00 € 2.400,00\nTrasferta Genova–Milano 1 € 143,50 € 143,50\nTotale imponibile",
+   "s": 12.996712923049927,
+   "prompt_tokens": 1380,
+   "gen_tokens": 273,
+   "prefill_tps": 217.80295581159552,
+   "gen_tps": 41.375287525455235,
+   "peak_gb": 1.735013874
+  },
+  "syn_04_en_prose": {
+   "text": "To ensure the intervention is effective, the system voltage must be checked repeatedly: this prevents failures, leaks and—above all—risks to the safety of the operators.\n\nThe board meeting was held at the Geneva headquarters on 14 March; the proposal to allocate the profit to an extraordinary reserve was approved unanimously by all directors present.\n\nThe Supplier shall deliver the services described in this Agreement within thirty days of the effective date, save for force majeure events duly documented in writing.",
+   "s": 8.571184873580933,
+   "prompt_tokens": 1380,
+   "gen_tokens": 106,
+   "prefill_tps": 215.81357554166237,
+   "gen_tps": 49.89272379523815,
+   "peak_gb": 1.735013874
+  },
+  "syn_05_en_dense": {
+   "text": "Master Services Agreement\n\nAny dispute arising out of the interpretation or performance of this agreement shall be subject to the exclusive jurisdiction of the courts of London, to the exclusion of any other forum.\n\nThe board meeting was held at the Geneva headquarters on 14 March; the proposal to allocate the profit to an extraordinary reserve was approved unanimously by all directors present.\n\nThe Supplier shall deliver the services described in this Agreement within thirty days of the effective date, save for force majeure events duly documented in writing.\n\nIf the Customer fails to pay by the due date stated on the invoice, late-payment interest shall accrue automatically at the statutory rate, together with reasonable recovery costs.\n\nAny dispute arising out of the interpretation or performance of this agreement shall be subject to the exclusive jurisdiction of the courts of London, to the exclusion of any other forum.\n\nThe board meeting was held at the Geneva headquarters on 14 March; the proposal to allocate the profit to an extraordinary reserve was approved unanimously by all directors present.",
+   "s": 6.6219398975372314,
+   "prompt_tokens": 1380,
+   "gen_tokens": 210,
+   "prefill_tps": 304.9146019540583,
+   "gen_tps": 102.84546883042078,
+   "peak_gb": 1.735013874
+  },
+  "syn_06_en_twocol": {
+   "text": "The Supplier shall deliver the services described in this Agreement within thirty days of the effective date, save for force majeure events duly documented in writing.\n\nThe board meeting was held at the Geneva headquarters on 14 March; the proposal to allocate the profit to an extraordinary reserve was approved unanimously by all directors present.\n\nThe Processor shall ensure that persons authorised to process the personal data have committed themselves to confidentiality and shall implement all measures required pursuant to Article 32.\n\nDuring fiscal year 2025 revenue grew by 12.4% compared with the previous year, driven mainly by expansion in Southern European markets and more efficient use of logistics.",
+   "s": 5.489867925643921,
+   "prompt_tokens": 1380,
+   "gen_tokens": 141,
+   "prefill_tps": 350.3217448957565,
+   "gen_tps": 93.9869018599095,
+   "peak_gb": 1.735013874
+  },
+  "syn_07_en_table": {
+   "text": "The Processor shall ensure that persons authorised to process the personal data have committed themselves to confidentiality and shall implement all measures required pursuant to Article 32.\n\nThe board meeting was held at the Geneva headquarters on 14 March; the proposal to allocate the profit to an extraordinary reserve was approved unanimously by all directors present.\n\nThe Supplier shall deliver the services described in this Agreement within thirty days of the effective date, save for force majeure events duly documented in writing.\n\n| Description | Qty | Price | Total |\n| :--- | :--- | :--- | :--- |\n| Technical consulting | 10 | $ 85.00 | $ 850.00 |\n| Annual licence | 2 | $ 1,200.00 | $ 2,400.00 |\n| Travel London–Paris | 1 | $ 143.50 | $ 143.50 |\n| Subtotal | | | $ 3,393.50 |",
+   "s": 6.311416149139404,
+   "prompt_tokens": 1380,
+   "gen_tokens": 225,
+   "prefill_tps": 348.3387909973444,
+   "gen_tps": 97.4321785710164,
+   "peak_gb": 1.735013874
+  },
+  "01_p1": {
+   "text": "COMUNE DI VALDARNO\nServizio Provisioning e Manutenzione Informatica\nCONTRATTO DI FORNITURA DI BENI\n\nCIG: Z1A4B7C3D2E1 CUP: none\n\nIl presente contratto, stipulato in data 14 marzo 2024, ha per oggetto la fornitura di materiale informatico destinato agli uffici comunali, come di seguito specificato.\n\nVisto il decreto legislativo 50/2016 e successive modificazioni;\n\nPreso atto delle determine dirigenziali nn. 118 e 124 del 2024;\n\nArt. 1 - Parti contraenti\n\nIl presente contratto e' stipulato tra il Comune di Valdarno, con sede in Piazza Roma 12, C.F. 01234567890, rappresentato dal Segretario Generale Dott. Marco Ferretti, e la societa' Tecnologie Elettroniche S.r.l., con sede in Via dell'Industria 44, P.I.V.A. IT009988776655, rappresentata dall'Amministratore Unico Sig. Luca Bertani.\n\nArt. 2 - Oggetto\n\nLa fornitura comprende n. 45 postazioni di lavoro complete (monitor 24 pollici, tastiera, mouse, cavi), n. 3 stampanti laser e n. 12 switch di rete da 24 porte, secondo l'elenco analitico di cui all'Allegato A.\n\nArt. 3 - Importo e IVA\n\nL'importo complessivo della fornitura, oneri fiscali esclusi, e' pari a Euro 18.400,00 (diciottomilaquattrocento/00). All'importo si applica l'IVA nella misura del 22%, per un totale complessivo di Euro 22.448,00 (ventiduemilaquattrocentoquarantotto/00).\n\nArt. 4 - Tempi di consegna\n\nLa consegna deve avvenire presso la sede comunale entro il giorno 1 aprile 2024. Il contratto ha efficacia dal 1 aprile 2024 e si conclude il 30 settembre 2024.\n\nArt. 5 - Pagamenti\n\nIl pagamento avverra' in un'unica soluzione, entro trenta giorni dalla consegna, a mezzo di mandato di pagamento su conto dedicato.\n\nArt. 6 - Clausole finali\n\nIl presente contratto e' redatto in duplice copia originale per ciascuna delle parti. Non sono previsti allegati ulteriori oltre a quelli richiamati nel testo.\n\nLuogo e data\n\nIl funzionario verbalizzante\n\nFirmato digitalmente\n\nIl contraente",
+   "s": 17.276882886886597,
+   "prompt_tokens": 2394,
+   "gen_tokens": 694,
+   "prefill_tps": 291.4977391098526,
+   "gen_tps": 77.1804463107694,
+   "peak_gb": 1.756880782
+  },
+  "02_p1": {
+   "text": "REGIONE PIEMONTE\n\nDirezione competente: Direzione Regionale Servizi Tecnologici\nCONTRATTO PUBBLICO DI SERVIZI\n\nCIG: 9876543210 - CUP: F19F21000000001\n\nRepubblica Italiana\n\nL'ANNO DUEMILAVENTITRE il giorno venti del mese di novembre, in Torino, presso la sede della Regione Piemonte.\n\nArt. 1 - Oggetto del contratto\n\nIl presente contratto ha per oggetto l'affidamento dei servizi di manutenzione ordinaria e straordinaria delle postazioni di lavoro e dei sistemi informativi in dotazione alla Regione Piemonte, per la durata di trentasei mesi.\n\nArt. 2 - Parti contraenti\n\nIl contratto e' stipulato con la societa' Nord Servizi Integrati S.p.A., con sede in Corso Sebastopoli 210, Torino, Partita IVA IT04455667788, iscritta al Registro Imprese di Torino al n. TO-4455667, in persona dell'Amministratore Delegato Dott.ssa Chiara Bonetti.\n\nArt. 3 - Importo complessivo e durata\n\nL'importo complessivo dell'appalto, al netto dell'IVA, e' pari a Euro 1.476.000,00 (unmilioneduecentosettantaseimila/00). Il valore lordo complessivo, comprensivo d'IVA al 22%, e' pari a Euro 1.800.672,00. Il contratto ha decorrenza dal 1 gennaio 2024 e scadenza il 31 dicembre 2026.\n\nArt. 4 - Fatturazione e pagamenti\n\nLa fatturazione aviene con cadenza trimestrale, a seguito del SAL presentato dal direttore dell'esecuzione del contratto. I pagamenti sono disposti entro trenta giorni dalla data di ricezione della fattura, previa verifica del dettaglio delle attività svolte.\n\nArt. 5 - Garanzie\n\nIl fornitore e' tenuto a prestare cauzione definitiva pari al 2% dell'importo di aggiudicazione e resta valido per l'intera durata del contratto.\n\nArt. 6 - Penali\n\nPer ogni ora di ritardo non giustificato nell'esecuzione delle attività' programmate e' prevista una penale pari a 60,00 Euro, secondo le modalita' definite nel Capitolato tecnico di cui all'Allegato B.\n\nArt. 7 - Subappalto\n\nE' ammesso il subappalto previa autorizzazione scritta della stazione appaltante, nei limiti previsti dall'articolo 105 del decreto legislativo 50/2016. Il subappaltatore deve possedere i requisiti di ordine speciale.\n\nArt. 8 - Allegati\n\nSono parte integrante del presente contratto i seguenti allegati:\n\nAllegato A - Capitolato tecnico\nAllegato B - Piano di dettaglio delle prestazioni\nAllegato C - Schema di Offerta economica",
+   "s": 16.730298042297363,
+   "prompt_tokens": 2394,
+   "gen_tokens": 793,
+   "prefill_tps": 320.7946148110498,
+   "gen_tps": 86.19597228886765,
+   "peak_gb": 1.756880782
+  },
+  "02_p4": {
+   "text": "Contratto di servizi di manutenzione\nSeguito del contratto - pagina 4 di 4\n\nOgni variazione della ragione sociale, della denominazione, della sede legale ovvero della struttura societaria deve essere comunicata all’altra parte entro trenta giorni dal verificarsi dell’evento, a mezzo di lettera raccomandata.\n\nIl responsabile del trattamento dei dati personali ai sensi del Regolamento UE 2016/679 e’ il Legale Rappresentante dell’ente; i dati raccolti in esecuzione del contratto sono conservati per il tempo strettamente necessario al raggiungimento delle finalita’ pubbliche.\n\nNel caso in cui una delle parti diventi soggetta a procedura di liquidazione giudiziale o fallimento, l’altra parte ha facolta’ di recedere dal contratto con preavviso di trenta giorni senza responsabilità’ di qualunque sorta.\n\nLe parti dichiarano di aver valutato con attenzione ogni clausola del presente contratto e di accettarne per l’intero il contenuto, rinunciando a qualsiasi eccezione o contestazione di nullita’ o non pattuita.\n\nEventuali modifiche al presente contratto sono valide solo se redatte per iscritto e sottoscritte dai legali rappresentanti delle parti; non sono ammesse modifiche orali o scambio di e-mail prive di sottoscrizione.\n\nPer quanto non espressamente previsto dal presente contratto si applicano le disposizioni del Codice civile e del D.Lgs. 50/2016, per quanto compatibili.",
+   "s": 12.626105070114136,
+   "prompt_tokens": 2394,
+   "gen_tokens": 384,
+   "prefill_tps": 303.37738454562754,
+   "gen_tps": 82.13460422022217,
+   "peak_gb": 1.756880782
+  },
+  "03_p1": {
+   "text": "UNIONE DEI COMUNI DELLA VALBELLUNA\nSERVIZIO ASSOCIATO AFFARI ISTITUZIONALI\nCONVENZIONE QUADRO PER L'AFFIDAMENTO DI LAVORI DI MANUTENZIONE EDILIZIA\nRegistro: CQ/2023/041 del 5 giugno 2023\n\nArt. 1 - Premesse e finalita'\nL'Unione dei Comuni della Valbelluna, di seguito anche denominata 'Amministrazione', intende procedere alla stipulazione di convenzioni quadro con i soggetti qualificati al fine di garantire la continuita' degli interveni di manutenzione ordinaria e straordinaria del patrimonio immobiliare di proprieta' dei Comuni associati.\n\nLa presente convenzione non vincola le parti alla sottoscricione di contratti derivati; ciascun contratto derivato verra' stipulato sulla base delle condizioni economiche e tecniche di seguito indicate, salvo quanto previsto dal D.Lgs. 50/2016 e dal D.P.R. 207/2010.\n\nArt. 2 - Soggetti ammessi\nSono soggetti ammessi a presentare offerta i Consorzi artigiani, le imprese individuali e le cooperative di cantiere iscritte al Registro Imprese o all'Albo delle Imprese Artigiane, in possesso dei requisiti di capacita' tecnico-organizzativa previsti dall'Allegato 1.\n\nArt. 3 - Caratteristiche dell'accordo\nLa convenzione quadro ha una durata di quattro anni, decorrenti dal 1 luglio 2023 fino al 30 giugno 2027.\nL'ammontare complessivo massimo delle prestazioni affidate ai sensi della presente convenzione non puo' superare Euro 900.000,00 al netto di IVA. L'importo complessivo lordo ammissibile e' pari a Euro 1.098.000,00, calcolato applicando l'aliquota IVA del 22%.\n\nArt. 4 - Parti contraenti\nL'Amministrazione, con sede in Piazza Vittorio Emanuele II n. 9, P.IVA 01234567890, nella persona del Segretario Generale Dott. Andrea Rinaldi, e il Consorzio Artigiano Valli Ovest, con sede in Via Roma 55, P.IVA IT03213213213, nella persona del Legale Rappresentante Sig. Giulio Bertoli.\n\nArt. 5 - Disciplina dei lavori\nL'esecuzione dei lavori ordinativi avviene sulla base di ordinativi di lavoro annuali, con indicazione dell'importo, del tempo di esecuzione e della tipologia di intervento. Ogni ordinativo costituisce contratto derivato ed e' soggetto alla normativa di cui all'articolo 1341 del Codice civile.\n\nArt. 6 - Prezzi e listati\nI prezzi sono quelli risultanti dal prezzario regionale vigente alla data di emissione dell'ordinativo, decurtati del ribasso percentuale offerto in sede di gara. Il ribasso offerto non puo' superare il 35% (trentaicinque per cento) e resta valido per l'intera durata della convenzione.\n\nArt. 7 - Anticipazione\nAi sensi dell'articolo 5, comma 3, del D.Lgs. 50/2016, il pagamento dell'anticipazione del 10% avviene previa presentazione di polizza fideiussiva bancaria o assicurativa rilasciata da soggetti abilitati.\n\nArt. 8 - Liquidazione finale\nIl pagamento del corrispettivo avviene in tre rate annuali, previa presentazione del certificato di regolare esecuzione e della fattura elettronica e dello split payment, per il rispetto delle disposizioni di cui al D.L. 24/2017 e alla legge 190/2014.\n\nArt. 9 - Allegati\nAllegato 1 - Requisiti di capacita' tecnico-organizzativa Allegato 2 - Schema di contratto derivato",
+   "s": 21.71794319152832,
+   "prompt_tokens": 2394,
+   "gen_tokens": 1053,
+   "prefill_tps": 312.0617876985804,
+   "gen_tps": 75.41769352029559,
+   "peak_gb": 1.756880782
+  },
+  "03_p5": {
+   "text": "Convenzione / accordo interstituzionale\nSeguito del contratto - pagina 5 di 5\n\nLe parti convengono che ogni comunicazione relativa al presente contratto debba essere trasmessa a mezzo raccomandata con avviso di ricevimento oppure a mezzo posta elettronica certificata all'indirizzo indicato nel curriculum vitae aziendale.\n\nIl fornitore si impegna a mantenere aggiornati i propri sistemi di gestione della qualita’ secondo gli standard UNI EN ISO 9001:2015 e a trasmettere la relativa certificazione su richiesta della stazione appaltante.\n\nOgni variazione della ragione sociale, della denominazione, della sede legale ovvero della struttura societaria deve essere comunicata all'altra parte entro trenta giorni dal verificarsi dell'evento, a mezzo di lettera raccomandata.\n\nIl responsabile del trattamento dei dati personali ai sensi del Regolamento UE 2016/679 e' il Legale Rappresentante dell'ente; i dati raccolti in esecuzione del contratto sono conservati per il tempo strettamente necessario al raggiungimento delle finalita' pubbliche.\n\nNel caso in cui una delle parti diventi soggetta a procedura di liquidazione giudiziale o fallimento, l'altra parte ha facolta' di recedere dal contratto con preavviso di trenta giorni senza responsabilità' di qualunque sorta.\n\nLe parti dichiarano di aver valutato con attenzione ogni clausola del presente contratto e di accettarne per l'intero il contenuto, rinunciando a qualsiasi eccezione o contestazione di nullita' o non pattuita.",
+   "s": 24.867581844329834,
+   "prompt_tokens": 2394,
+   "gen_tokens": 410,
+   "prefill_tps": 192.16767296215457,
+   "gen_tps": 33.298172515185705,
+   "peak_gb": 1.756880782
+  },
+  "04_p1": {
+   "text": "CONTRATTO DI LOCAZIONE COMMERCIALE\n\nRepubblica Italiana\n\nAddi', 15 settembre 2022, in Bergamo, presso lo studio del Notaio Dott. Giuseppe Marelli.\n\nArt. 1 - Parti contraenti\n\nTra la societa' Immobiliare San Marco S.r.l., con sede in Bergamo, Viale Alessandro Volta 12, Partita IVA IT07778899001, codice fiscale 01234567890, qui di seguito denominata 'locatore', e la societa' Alfa Distribuzione S.p.A., con sede in Bergamo, Via Carducci 8, Partita IVA IT02233445566, qui di seguito denominata 'conduttore', si stipula il presente contratto.\n\nArt. 2 - Oggetto e identificazione del bene\n\nLocatore concede in locazione alla conduttrice l'unita' immobiliare sita in Bergamo, Viale Alessandro Volta 12, Piano terra, di superficie complessiva di mq 180,00, con annesso deposito di mq 40,00, censito al foglio 42, particella 1234, categoria A/10.\n\nArt. 3 - Durata\n\nIl contratto ha decorrenza dal 1 ottobre 2022 e ha durata di sette anni, con scadenza il 30 settembre 2029. Alla scadenza il conduttore ha facolta' di rinnovare per ulteriori quattro anni, previo preavviso di almeno sei mesi e conferma del canone.\n\nArt. 4 - Canone\n\nIl canone annuale e' stabilito in Euro 72.000,00 (settantaduemila/00), da corrispondersi in rate mensili anticipate di Euro 6.000,00, mediante accredito sul conto corrente indicato nel contratto medesimo. Il canone e' soggetto ad IVA nella misura del 22%.\n\nArt. 5 - Adeguamento ISTAT\n\nDal secondo anno di locazione il canone potra' essere adeguato nella misura massima del 75% della variazione annua dell'indice ISTAT per il costo di vita, a decorrere dal mese di gennaio di ciascun anno successivo alla sottoscrizione.\n\nArt. 6 - Registrazione\n\nIl contratto sara' registrato a cura del locatore con imposta di registro nella misura prevista dal D.P.R. 642/1972. Le spese di registrazione sono a carico delle parti in egual misura. Non sono previsti allegati al presente contratto.\n\nLuogo e data Firmato digitalmente\n\nIl funzionario verbalizzante Il contraente",
+   "s": 27.060004949569702,
+   "prompt_tokens": 2394,
+   "gen_tokens": 701,
+   "prefill_tps": 162.51296683760273,
+   "gen_tps": 58.587810409997765,
+   "peak_gb": 1.756880782
+  },
+  "04_p3": {
+   "text": "Contratto di locazione commerciale\nSeguito del contratto - pagina 3 di 3\n\nNel caso in cui una delle parti diventi soggetta a procedura di liquidazione giudiziale o fallimento, l'altra parte ha facolta' di recedere dal contratto con preavviso di trenta giorni senza responsabilità' di qualunque sorta.\n\nLe parti dichiarano di aver valutato con attenzione ogni clausola del presente contratto e di accettarne per l'intero il contenuto, rinunciando a qualsiasi eccezione o contestazione di nullita' o non pattuita.\n\nEventuali modifiche al presente contratto sono valide solo se redatte per iscritto e sottoscritte dai legali rappresentanti delle parti; non sono ammesse modifiche orali o scambio di e-mail prive di sottoscrizione.\n\nPer quanto non espressamente previsto dal presente contratto si applicano le disposizioni del Codice civile e del D.Lgs. 50/2016, per quanto compatibili.\n\nLe parti convengono che ogni comunicazione relativa al presente contratto debba essere trasmessa a mezzo raccomandata con avviso di ricevimento oppure a mezzo posta elettronica certificata all'indirizzo indicato nel curriculum vitae aziendale.\n\nIl fornitore si impegna a mantenere aggiornati i propri sistemi di gestione della qualita' secondo gli standard UNI EN ISO 9001:2015 e a trasmettere la relativa certificazione su richiesta della stazione appaltante.",
+   "s": 14.947304010391235,
+   "prompt_tokens": 2394,
+   "gen_tokens": 373,
+   "prefill_tps": 239.26069046308072,
+   "gen_tps": 78.91781669423297,
+   "peak_gb": 1.756880782
+  },
+  "05_p1": {
+   "text": "PROVINCIA DI NOVARA\nDirezione Viabilita' e Lavori Pubblici\nCONTRATTO DI APPALTO DI LAVORI PUBBLICI\nRegistro n. L.2022/4471 del 30 maggio 2022\n\nArt. 1 - Oggetto dei lavori\nIl presente contratto ha per oggetto l'esecuzione dei lavori di manutenzione straordinaria e riqualificazione della Provinciale 11 dal km 12+300 al km 18+750, nel territorio del Comune di Novara.\n\nArt. 2 - Importo dei lavori\nL'importo complessivo dei lavori compresi i lavori a misura ammonta a Euro 2.340.000,00, oltre oneri fiscali. Il contratto ha durata di trentasei mesi decorrenti dal 1 luglio 2022 e scadenza al 30 giugno 2025.\n\nArt. 3 - Soggetto esecutore\nImpresa esecutrice: Impresa Edile Costruzioni Veneto S.r.l., con sede in Vicenza, Via dei Platani 9, Partita IVA IT06121212121, iscritta all'Albo Nazionale delle Imprese qualificate al n. 38291MQ.\n\nArt. 4 - Penali e garanzie\nLa cauzione definitiva ammonta a Euro 46.800,00. Le penali per ritardo sono pari allo 0,1% del valore mensile del contratto per ogni giorno di ritardo. Il pagamento del saldo avviene a 90 giorni dal collaudo.\n\nQuadro economico dei lavori\n\nA1 Demolizioni e rimozioni 128.000,00 5,47%\nA2 Opere murarie 742.000,00 31,71%\nB1 Opere di finitura 486.000,00 20,77%\nB2 Pavimentazioni 312.000,00 13,33%\nC1 Impianti elettrici 268.000,00 11,45%\nC2 Impianti termoidraulici 291.000,00 12,44%\nO1 Oneri per la sicurezza non soggetti a ribasso 113.000,00 4,83%\nTOT Totale lavori a misura 2.340.000,00 100,00%\n\nLuogo e data Firmato digitalmente\nIl funzionario verbalizzante Il contraente",
+   "s": 17.338973999023438,
+   "prompt_tokens": 2394,
+   "gen_tokens": 669,
+   "prefill_tps": 269.6366721871166,
+   "gen_tps": 79.96925307722769,
+   "peak_gb": 1.756880782
+  },
+  "05_p5": {
+   "text": "Appalto di lavori pubblici\nSeguito del contratto - pagina 5 di 5\n\nLe parti convengono che ogni comunicazione relativa al presente contratto debba essere trasmessa a mezzo raccomandata con avviso di ricevimento oppure a mezzo posta elettronica certificata all'indirizzo indicato nel curriculum vitae aziendale.\n\nIl fornitore si impegna a mantenere aggiornati i propri sistemi di gestione della qualita' secondo gli standard UNI EN ISO 9001:2015 e a trasmettere la relativa certificazione su richiesta della stazione appaltante.\n\nOgni variazione della ragione sociale, della denominazione, della sede legale ovvero della struttura societaria deve essere comunicata all'altra parte entro trenta giorni dal verificarsi dell'evento, a mezzo di lettera raccomandata.\n\nIl responsabile del trattamento dei dati personali ai sensi del Regolamento UE 2016/679 e' il Legale Rappresentante dell'ente; i dati raccolti in esecuzione del contratto sono conservati per il tempo strettamente necessario al raggiungimento delle finalita' pubbliche.\n\nNel caso in cui una delle parti diventi soggetta a procedura di liquidazione giudiziale o fallimento, l'altra parte ha facolta' di recedere dal contratto con preavviso di trenta giorni senza responsabilita' di qualunque sorta.\n\nLe parti dichiarano di aver valutato con attenzione ogni clausola del presente contratto e di accettarne per l'intero il contenuto, rinunciando a qualsiasi eccezione o contestazione di nullita' o non pattuita.",
+   "s": 14.003461122512817,
+   "prompt_tokens": 2394,
+   "gen_tokens": 410,
+   "prefill_tps": 266.7481458274213,
+   "gen_tps": 83.42649008219328,
+   "peak_gb": 1.756880782
+  },
+  "06_p1": {
+   "text": "COMUNE DI SAN DONATO MILANESE\n\nSettore Lavori Pubblici e Manutenzione\n\nCONVENZIONE DI SOMMINISTRAZIONE DI ENERGIA E GAS\n\nCodice identificativo: CS/2024/2200-A\n\nArt. 1 - Oggetto\n\nIl presente contratto disciplina la somministrazione di energia elettrica, gas naturale e teleriscaldamento per gli immobili di proprieta' del Comune di San Donato Milanese, per sessanta mesi decorrenti dal 1 aprile 2024 al 31 marzo 2029.\n\nArt. 2 - Parti contraenti\n\nComune di San Donato Milanese, P.IVA 01234567890, e Energia Verde Italia S.p.A., con sede in Milano, Corso di Porta Romana 110, P.IVA IT09988776655, in persona dell'Amministratore Delegato Dott.ssa Federica Neri.\n\nArt. 3 - Importo\n\nL'importo complessivo stimato per l'intera durata del contratto e' pari a Euro 5.880.000,00 (cinquemilionescinquecentomila/00) al netto di IVA. Le prestazioni sono soggette ad IVA nella misura ridotta del 10% ai sensi dell'articolo 16-bis del D.P.R. 633/1972. Il valore lordo complessivo e' pari a Euro 6.468.000,00.\n\nArt. 4 - Penali\n\nIn caso di mancato rispetto del valore di soglia di riduzione della spesa pari al 3% rispetto alla baseline energetica 2022, il fornitore versa una penale pari al 5% del risparmio non conseguito.\n\nArt. 5 - Ripartizione della spesa\n\nArt. 6 - Allegati\n\nAllegato A - Elenco punti di prelievo e consumi storici\nAllegato B - Regolamento di esecuzione della somministrazione\nAllegato C - Schema di garanzia di credito\nAllegato D - Piano di efficient energetico 2024-2029\n\nArt. 5 - Piano di ripartizione della spesa (euro)\n\nAnno solare | Energia elettrica | Gas naturale | Teleriscaldamento | Totale annuo\n--- | --- | --- | --- | --- |\nImponibile | IVA 10% | Imponibile | IVA 10% | Imponibile | IVA 10%\n2024 | 412.000,00 | 41.200,00 | 388.000,00 | 38.800,00 | 180.000,00 | 18.000,00 | 1.080.000,00\n2025 | 425.000,00 | 42.500,00 | 401.000,00 | 40.100,00 | 186.000,00 | 18.600,00 | 1.113.200,00\n2026 | 438.000,00 | 43.800,00 | 413.000,00 | 41.300,00 | 191.000,00 | 19.100,00 | 1.146.200,00\n2027 | 452.000,00 | 45.200,00 | 426.000,00 | 42.600,00 | 197.000,00 | 19.700,00 | 1.182.500,00\n2028 | 466.000,00 | 46.600,00 | 439.000,00 | 43.900,00 | 203.000,00 | 20.300,00 | 1.218.800,00\n2029 | 170.000,00 | 17.000,00 | 160.000,00 | 16.000,00 | 79.000,00 | 7.900,00 | 449.900,00\nTOTALE | 2.363.000,00 | 236.300,00 | 2.227.000,00 | 222.700,00 | 1.036.000,00 | 103.600,00 | 6.188.600,00\n\nLuogo e data\n\nIl funzionario verbalizzante\n\nFirmato digitalmente\n\nIl contraente",
+   "s": 26.81193232536316,
+   "prompt_tokens": 2394,
+   "gen_tokens": 1291,
+   "prefill_tps": 253.69417076723258,
+   "gen_tps": 74.78976765036535,
+   "peak_gb": 1.756880782
+  },
+  "06_p4": {
+   "text": "Contratto di somministrazione / convenzione finanziaria\nSeguito del contratto - pagina 4 di 4\n\nOgni variazione della ragione sociale, della denominazione, della sede legale ovvero della struttura societaria deve essere comunicata all’altra parte entro trenta giorni dal verificarsi dell’evento, a mezzo di lettera raccomandata.\n\nIl responsabile del trattamento dei dati personali ai sensi del Regolamento UE 2016/679 e’ il Legale Rappresentante dell’ente; i dati raccolti in esecuzione del contratto sono conservati per il tempo strettamente necessario al raggiungimento delle finalita’ pubbliche.\n\nNel caso in cui una delle parti diventi soggetta a procedura di liquidazione giudiziale o fallimento, l’altra parte ha facolta’ di recedere dal contratto con preavviso di trenta giorni senza responsabilità’ di qualunque sorta.\n\nLe parti dichiarano di aver valutato con attenzione ogni clausola del presente contratto e di accettarne per l’intero il contenuto, rinunciando a qualsiasi eccezione o contestazione di nullita’ o non pattuita.\n\nEventuali modifiche al presente contratto sono valide solo se redatte per iscritto e sottoscritte dai legali rappresentanti delle parti; non sono ammesse modifiche orali o scambio di e-mail prive di sottoscrizione.\n\nPer quanto non espressamente previsto dal presente contratto si applicano le disposizioni del Codice civile e del D.Lgs. 50/2016, per quanto compatibili.",
+   "s": 14.294893980026245,
+   "prompt_tokens": 2394,
+   "gen_tokens": 386,
+   "prefill_tps": 253.74188798034493,
+   "gen_tps": 81.37945556142336,
+   "peak_gb": 1.756880782
+  },
+  "07_p1": {
+   "text": "CONTRATTO DI DISTRIBUZIONE ESCLUSIVA\n\nRepubblica Italiana\n\nIl giorno 22 del mese di aprile dell’anno duemilaventuno, in Milano, presso la sede della società.\n\nArt. 1 - Parti contraenti\n\nIl presente contratto e’ concluso tra Delta Retail Group S.p.A., con sede in Milano, Corso Buenos Aires 62, Partita IVA IT01239876543, rappresentata dal Dott. Paolo Ferrara, e la società’ Sigma Distribution Italia S.p.A., con sede in Assago, Via Volta 3, Partita IVA IT04556677889, rappresentata dal Sig. Alessandro Ruggiero.\n\nArt. 2 - Oggetto e durata\n\nLa Sigma Distribution Italia si impegna ad acquistare in esclusiva i prodotti a marchio Delta per la distribuzione sul territono nazionale. Il contratto ha durata di trentasei mesi, dal 1 maggio 2021 al 30 aprile 2024.\n\nArt. 3 - Compensi\n\nIl corrispettivo complessivo stimato per i tre anni di durata del contratto e’ pari a Euro 318.000,00 al netto di IVA. L’importo lordo complessivo, comprisivo di IVA al 22%, e’ pari a Euro 387.960,00.\n\nArt. 4 - Condizioni e allegati\n\nLe condizioni generali di vendita sono regolate dal contratto tipo allegato alla proposta commerciale del 3 marzo 2021. Il presente contratto non contiene ulteriore allegati.\n\nLuogo e data\n\nFirmato digitalmente\n\nIl funzionario verbalizzante\n\nIl contraente",
+   "s": 14.133151054382324,
+   "prompt_tokens": 2394,
+   "gen_tokens": 436,
+   "prefill_tps": 267.52392901614354,
+   "gen_tps": 85.8976075890841,
+   "peak_gb": 1.756880782
+  },
+  "07_p4": {
+   "text": "Contratto di distribuzione / contratto tipo agenti\nSeguito del contratto - pagina 4 di 4\n\nOgni variazione della ragione sociale, della denominazione, della sede legale ovvero della struttura societaria deve essere comunicata all'altra parte entro trenta giorni dal verificarsi dell'evento, a mezzo di lettera raccomandata.\n\nIl responsabile del trattamento dei dati personali ai sensi del Regolamento UE 2016/679 e' il Legale Rappresentante dell'ente; i dati raccolti in esecuzione del contratto sono conservati per il tempo strettamente necessario al raggiungimento delle finalita' pubbliche.\n\nNel caso in cui una delle parti diventi soggetta a procedura di liquidazione giudiziale o fallimento, l'altra parte ha facolta' di recedere dal contratto con preavviso di trenta giorni senza responsabilità' di qualunque sorta.\n\nLe parti dichiarano di aver valutato con attenzione ogni clausola del presente contratto e di accettarne per l'intero il contenuto, rinunciando a qualsiasi eccezione o contestazione di nullita' o non pattuita.\n\nEventuali modifiche al presente contratto sono valide solo se redatte per iscritto e sottoscritte dai legali rappresentanti delle parti; non sono ammesse modifiche orali o scambio di e-mail prive di sottoscrizione.\n\nPer quanto non espressamente previsto dal presente contratto si applicano le disposizioni del Codice civile e del D.Lgs. 50/2016, per quanto compatibili.",
+   "s": 12.09824275970459,
+   "prompt_tokens": 2394,
+   "gen_tokens": 385,
+   "prefill_tps": 309.1997700099688,
+   "gen_tps": 90.06849681334434,
+   "peak_gb": 1.756880782
+  },
+  "08_p1": {
+   "text": "SOFTWARE LICENSE AGREEMENT / ACCORDO DI LICENZA\nSOFTWARE\n\nENGLISH VERSION PREVAILS / IN CASO DI CONFLITTO PREVALE LA VERSIONE INGLESE\n\nThis Agreement is made on 25 January 2024 between Enel S.p.A., a company organized under the laws of Italy, with registered office in Rome, Viale Michelangelo Buonarroti 45, VAT IT00905811057, and Nordic Systems AB, a company organized under the laws of Sweden, with registered office in Stockholm, Vasagatan 41, VAT SE556677889901.\n\n1. Definitions / Definizioni\n\n'Software' means the platform, including all modules, updates and related documentation, licensed under this Agreement. 'Authorized Users' means the employees of the Licensee who require access for internal business purposes.\n\n2. Grant of License / Concessione della licenza\n\nSubject to payment of the Fees, the Licensor grants the Licensee a non-exclusive, non-transferable license to use the Software within the Territory for the Term. La licenza e' non esclusiva e non trasferibile.\n\n3. Fees and Payment / Canoni e pagamento\n\nThe total Fees for the Term amount to EUR 2,100,000.00 (two million one hundred thousand euro), exclusive of VAT. L'importo complessivo al netto di IVA e' pari a Euro 2.100.000,00; l'importo lordo con IVA al 22% e' pari a Euro 2.562.000,00.\n\n4. Term / Durata\n\nThis Agreement shall commence on 1 March 2024 and shall expire on 28 February 2029, unless terminated earlier in accordance with clause 9. La durata e' di cinque anni.\n\n5. Governing Law / Legge applicabile\n\nThis Agreement is governed by Italian law, and the courts of Rome shall have exclusive jurisdiction. La legge applicabile e' quella italiana.\n\n6. Exhibits / Allegati\n\nExhibit A - Technical Specification / Specifica Tecnica\nExhibit B - Support and Maintenance Terms\nSchedule 1 - Implementation Milestones\n\nLuogo e data Firmato digitalmente\n\nIl funzionario verbalizzante Il contraente",
+   "s": 13.919799089431763,
+   "prompt_tokens": 2394,
+   "gen_tokens": 552,
+   "prefill_tps": 318.3702810748494,
+   "gen_tps": 87.22440794315371,
+   "peak_gb": 1.756880782
+  },
+  "08_p5": {
+   "text": "Contratto internazionale di licenza software\nSeguito del contratto - pagina 5 di 5\n\nLe parti convengono che ogni comunicazione relativa al presente contratto debba essere trasmessa a mezzo raccomandata con avviso di ricevimento oppure a mezzo posta elettronica certificata all'indirizzo indicato nel curriculum vitae aziendale.\n\nIl fornitore si impegna a mantenere aggiornati i propri sistemi di gestione della qualita' secondo gli standard UNI EN ISO 9001:2015 e a trasmettere la relativa certificazione su richiesta della stazione appaltante.\n\nOgni variazione della ragione sociale, della denominazione, della sede legale ovvero della struttura societaria deve essere comunicata all'altra parte entro trenta giorni dal verificarsi dell'evento, a mezzo di lettera raccomandata.\n\nIl responsabile del trattamento dei dati personali ai sensi del Regolamento UE 2016/679 e' il Legale Rappresentante dell'ente; i dati raccolti in esecuzione del contratto sono conservati per il tempo strettamente necessario al raggiungimento delle finalita' pubbliche.\n\nNel caso in cui una delle parti diventi soggetta a procedura di liquidazione giudiziale o fallimento, l'altra parte ha facolta' di recedere dal contratto con preavviso di trenta giorni senza responsabilità' di qualunque sorta.\n\nLe parti dichiarano di aver valutato con attenzione ogni clausola del presente contratto e di accettarne per l'intero il contenuto, rinunciando a qualsiasi eccezione o contestazione di nullita' o non pattuita.",
+   "s": 12.35247802734375,
+   "prompt_tokens": 2394,
+   "gen_tokens": 411,
+   "prefill_tps": 314.43620074978,
+   "gen_tps": 87.79456526805318,
+   "peak_gb": 1.756880782
+  },
+  "09_p1": {
+   "text": "CAMERA DI COMMERCIO DI VERONA\n\nUfficio Affari Generali e Promozione Economica\nCONTRATTO DI CONSULENZA E SERVIZI PROFESSIONALI\n\nCIG: Z7C2D9E1B3F5 Rep.: CONS/2024/118\n\nArt. 1 - Oggetto dell’incarico\n\nIl presente contratto disciplina l’affidamento delle attività' di consulenza in materia di internazionalizzazione, supporto all’export e acquisizione di nuovi mercati, a favore della Camera di Commercio di Verona, con sede in Corso Porta Nuova 95, C.F. 8000317018.\n\nArt. 2 - Parti contraenti\n\nStudio Riccardi & Partners S.r.l., con sede in Verona, Via San Fermo 4, P.IVA IT02991223344, in persona del Socio Amministratore Avv. Marco Riccardi.\n\nArt. 3 - Durata\n\nL’incarico ha durata di ventiquattro mesi, decorrenti dal 1 febbraio 2024 fino al 31 gennaio 2026, prorogabile una sola volta per periodi non superiori a sei mesi con atto scritto delle parti.\n\nArt. 4 - Compensi\n\nGli onorari complessivi per l’intero periodo sono pari a Euro 240.000,00 al netto di IVA, erogati in dodici rate mensili di Euro 20.000,00. L’importo complessivo comprenivo di IVA al 22% e’ pari a Euro 292.800,00.\n\nArt. 5 - Allegati\n\nAllegato A - Piano di lavoro e milestones\nAllegato B - Elenco delle attività' di consulenza\n\nLuogo e data\n\nFirmato digitalmente\n\nIl funzionario verbalizzante\n\nIl contraente",
+   "s": 13.30013370513916,
+   "prompt_tokens": 2394,
+   "gen_tokens": 485,
+   "prefill_tps": 312.986719802724,
+   "gen_tps": 86.99826999019862,
+   "peak_gb": 1.756880782
+  },
+  "09_p5": {
+   "text": "Contratto di consulenza e servizi professionali\nSeguito del contratto - pagina 5 di 6\n\nLe parti convengono che ogni comunicazione relativa al presente contratto debba essere trasmessa a mezzo raccomandata con avviso di ricevimento oppure a mezzo posta elettronica certificata all'indirizzo indicato nel curriculum vitae aziendale.\n\nIl fornitore si impegna a mantenere aggiornati i propri sistemi di gestione della qualita' secondo gli standard UNI EN ISO 9001:2015 e a trasmettere la relativa certificazione su richiesta della stazione appaltante.\n\nOgni variazione della ragione sociale, della denominazione, della sede legale ovvero della struttura societaria deve essere comunicata all'altra parte entro trenta giorni dal verificarsi dell'evento, a mezzo di lettera raccomandata.\n\nIl responsabile del trattamento dei dati personali ai sensi del Regolamento UE 2016/679 e' il Legale Rappresentante dell'ente; i dati raccolti in esecuzione del contratto sono conservati per il tempo strettamente necessario al raggiungimento delle finalita' pubbliche.\n\nNel caso in cui una delle parti diventi soggetta a procedura di liquidazione giudiziale o fallimento, l'altra parte ha facolta' di recedere dal contratto con preavviso di trenta giorni senza responsabilità' di qualunque sorta.\n\nLe parti dichiarano di aver valutato con attenzione ogni clausola del presente contratto e di accettarne per l'intero il contenuto, rinunciando a qualsiasi eccezione o contestazione di nullita' o non pattuita.",
+   "s": 12.927881956100464,
+   "prompt_tokens": 2394,
+   "gen_tokens": 410,
+   "prefill_tps": 306.3259067035638,
+   "gen_tps": 81.6742029601322,
+   "peak_gb": 1.756880782
+  },
+  "10_p1": {
+   "text": "CONTRATTO DI APPAIO COMPRESSE (CONVERTIZIONE QUADRO MULTI-LOTTO)\n\nREGIONE SICILIANA\n\nDipartimento Infrastructure e Mobilità - Palermo\nCONVENZIONE QUADRO MULTI-LOTTO\n\nIdentificativo: CO-2023-ML/0077 del 19 luglio 2023\n\nArt. 1 - Oggetto e ambito di applicazione\nLa presente convenzione quadro disciplina Teseucuzione dei servizi di manutenzione delle strade di proprietà, regione e della segnaletta verticale e orizzontale, articoltati in tre lotti come specificato nell'Allegato A. La convenzione ha una durata compressiva di cinque anni, dal 1 settembre 2023 al 31 agosto 2028.\n\nArt. 2 - Soggetti aggriudicati\nConsorzio Imprese Mediterranee S. c. a. 1, con sede in Catania, Via Enea 220. Parita IVA IT05112233445, in persona del Legale Rappresentante Dott. Rosano Patane / Consorzio Mediterranee Enterprises\n\nArt. 3 - Importo compressivo\nL'importo compressivo massimo delle prestazioni convenzione e pan a Euro '14,750,000,00 (quattordici millioni settecenti cinquantamila/00) al netto dTVA. Il valore lordo compressivo compressivo di IVA nella misura del 22% e pari a Euro 17,995,000,00.\n\nArt. 4 - Anticipazione, cauzioni e penali\nL'anticipazione prevista dell'art. 5 del D.Lgs. 50/2016 e pari al 10% del importo del lotto. La cauzione definitiva e pari al 10% per lotto. Le penail per inadempimento sono calcolate sulla base del 0,3%, mensile del valore del lotto interessato.\n\nArt. 5 - Criteri di aggudicazione e ripartizione del lotti\n\nArt. 6 - Fatturazione elettronica\nLa fatturazione aviene preva la correttezza del dettaglio delle attività svolte e del inspetto delle milestone previste dall'Allegato B, con pagamento entro trerita giorni.\n\nArt. 7 - Allegati\nAllegato A - Quadro economico e ripartizione del lotti\nAllegato B - Piano di lavoro e milestone per lotto\nAllegato C - Schema del contratto di subappalo tipo\n\nArt. 8 - Disposizioni finali\n\nVISTO - AMMINISTRAZIONE",
+   "s": 19.20007300376892,
+   "prompt_tokens": 2394,
+   "gen_tokens": 680,
+   "prefill_tps": 242.00805424832146,
+   "gen_tps": 74.07422335209444,
+   "peak_gb": 1.756880782
+  },
+  "10_p5": {
+   "text": "Contratto di appalto complesso (Convenzione quadro multi-lotto)\nContratto di appalto complesso (Convenzione quadro multi-lotto)\nSeguito del contratto - pagina 5 di 5\nLe parti convengono che ogni comunicazione relativa al presente contratto debba essere trasmessa a mezzo raccomandata con avviso di neovimento oppure a mezzo posta\nelettronica certificata all'indirizzo indicato nel curriculum vitae aziendale.\nIl formitore si impegna a mantenere aggiomati i propri sistemi di gestione della qualità’ secondo gil standard UNI EN ISO 9001:2015 e a trasmettere la relativa certificazione\nsu nichesta della stazione appaltante.\nOgni varazione della ragione sociale, della denominazione, della sede legale ovvero della struttura societaria deve essere comunicata all'attra parte entro trenta giorni dal\nverificarsi dell'evento, a mezzo di lettera raccomandata.\nIl responsabile del trattamento del dati personali ai sensi del Regolamento UE 2016/679 e’ il Legale Rappresentante dellente; i dati raccolti in esecuzione del contratto sono\nconservati per il tempo strettamente necessario al raggiungimento delle finalità’ pubbliche.\nNel caso in cui una delle parti diveni soggetta a procedura di liquidazione giudiziale o fallimento, l'attra parte ha facotta’ di recedere dal contratto con preawiso di trenta giorni\nsenza responsabilità’ di qualunque sorta.\nLe parti dichiarano di aver valutato con attenzione ogni clausola del presente contratto e di accettare per l'intero il contenuto, inunciando a qualsiasi eccezione o\ncontestazione di nullità’ o non pattuia.\n\nVISTO - AMMINISTRAZIONE\n\nPagina 5 di 5",
+   "s": 16.21983003616333,
+   "prompt_tokens": 2394,
+   "gen_tokens": 465,
+   "prefill_tps": 241.3504332935261,
+   "gen_tps": 75.5981131645483,
+   "peak_gb": 1.756880782
+  }
+ }
+}

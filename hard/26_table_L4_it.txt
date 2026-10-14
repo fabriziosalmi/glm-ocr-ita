@@ -1,0 +1,55 @@
+Verbale di consegna
+Voce
+Q.tà
+Prezzo unit.
+Importo
+Inverter F292
+27
+441,02 €
+11.907,54 €
+Pannello E895
+5
+354,42 €
+1.772,10 €
+Inverter B600
+20
+791,68 €
+15.833,60 €
+Sensore G748
+29
+236,56 €
+6.860,24 €
+Sensore C113
+18
+40,74 €
+733,32 €
+Inverter C953
+5
+511,41 €
+2.557,05 €
+Sensore F567
+9
+556,51 €
+5.008,59 €
+Cavo H934
+22
+31,09 €
+683,98 €
+Guarnizione E461
+32
+421,84 €
+13.498,88 €
+Cavo B982
+31
+529,36 €
+16.410,16 €
+Pannello D857
+25
+525,43 €
+13.135,75 €
+Inverter B593
+34
+174,34 €
+5.927,56 €
+Totale
+94.328,77 €

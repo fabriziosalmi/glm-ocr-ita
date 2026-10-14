@@ -1,0 +1,47 @@
+Convenzione quadro
+Voce
+Q.tà
+Prezzo unit.
+Importo
+Guarnizione D748
+31
+51,56 €
+1.598,36 €
+Valvola B706
+21
+856,03 €
+17.976,63 €
+Guarnizione F859
+17
+217,75 €
+3.701,75 €
+Cavo D632
+27
+475,14 €
+12.828,78 €
+Inverter E337
+39
+19,24 €
+750,36 €
+Pannello A429
+29
+146,71 €
+4.254,59 €
+Sensore D234
+29
+95,32 €
+2.764,28 €
+Modulo H599
+10
+493,77 €
+4.937,70 €
+Cavo B426
+28
+811,73 €
+22.728,44 €
+Sensore D835
+18
+166,18 €
+2.991,24 €
+Totale
+74.532,13 €

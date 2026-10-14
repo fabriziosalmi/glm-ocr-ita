@@ -1,0 +1,7058 @@
+[
+ {
+  "id": "000_prose_L1_en",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "prose",
+  "lang": "en",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 13,803.44"
+   },
+   {
+    "type": "cf",
+    "text": "ZCHRBF64P18D176X"
+   },
+   {
+    "type": "date",
+    "text": "November 18, 2024"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,621,667.42"
+   },
+   {
+    "type": "amount",
+    "text": "$ 7,895,901.18"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/09424"
+   },
+   {
+    "type": "date",
+    "text": "2025-11-23"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,676.39"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,518,702.39"
+   },
+   {
+    "type": "cf",
+    "text": "NCMBAM97C13F682U"
+   },
+   {
+    "type": "date",
+    "text": "2025-07-05"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/00662"
+   },
+   {
+    "type": "date",
+    "text": "2024-09-13"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/00996"
+   },
+   {
+    "type": "date",
+    "text": "2025-06-04"
+   }
+  ]
+ },
+ {
+  "id": "001_twocol_L1_it",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "twocol",
+  "lang": "it",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "iban",
+    "text": "IT13 E562 7739 1619 8105 2324 774"
+   },
+   {
+    "type": "amount",
+    "text": "4.158.391,58 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT67 E102 0236 2703 9894 2398 645"
+   },
+   {
+    "type": "amount",
+    "text": "875.573,53 €"
+   },
+   {
+    "type": "cf",
+    "text": "GSTFNS79M22M978M"
+   },
+   {
+    "type": "date",
+    "text": "13/01/2024"
+   },
+   {
+    "type": "amount",
+    "text": "8.142.293,38 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT14 T701 8616 3113 9021 9297 597"
+   },
+   {
+    "type": "amount",
+    "text": "1.100,54 €"
+   }
+  ]
+ },
+ {
+  "id": "002_table_L1_en",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "table",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 117,155.30"
+   },
+   {
+    "type": "amount",
+    "text": "$ 637.20"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,240.90"
+   },
+   {
+    "type": "amount",
+    "text": "$ 26,671.68"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,164.98"
+   },
+   {
+    "type": "amount",
+    "text": "$ 10,310.58"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,934.18"
+   },
+   {
+    "type": "amount",
+    "text": "$ 712.69"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,696.92"
+   },
+   {
+    "type": "amount",
+    "text": "$ 7,988.97"
+   },
+   {
+    "type": "amount",
+    "text": "$ 10,564.70"
+   },
+   {
+    "type": "amount",
+    "text": "$ 21,388.59"
+   },
+   {
+    "type": "amount",
+    "text": "$ 9,273.00"
+   },
+   {
+    "type": "amount",
+    "text": "$ 9,902.61"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,668.30"
+   }
+  ]
+ },
+ {
+  "id": "003_form_L1_it",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "10955251820"
+   },
+   {
+    "type": "cf",
+    "text": "LVGCMT95R25L660C"
+   },
+   {
+    "type": "iban",
+    "text": "IT30 Q252 1997 6198 0358 2308 890"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/02796"
+   },
+   {
+    "type": "cig",
+    "text": "E195631600"
+   },
+   {
+    "type": "date",
+    "text": "22/11/2024"
+   },
+   {
+    "type": "amount",
+    "text": "484.282,73 €"
+   },
+   {
+    "type": "date",
+    "text": "24 settembre 2023"
+   }
+  ]
+ },
+ {
+  "id": "004_invoice_L1_en",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "invoice",
+  "lang": "en",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "13743113687"
+   },
+   {
+    "type": "vat",
+    "text": "16084890495"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/02796"
+   },
+   {
+    "type": "date",
+    "text": "October 24, 2022"
+   },
+   {
+    "type": "amount",
+    "text": "$ 699.36"
+   },
+   {
+    "type": "amount",
+    "text": "$ 627.90"
+   },
+   {
+    "type": "amount",
+    "text": "$ 611.64"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,107.80"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,671.40"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,025.55"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,892.61"
+   },
+   {
+    "type": "amount",
+    "text": "$ 15,636.26"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,439.98"
+   },
+   {
+    "type": "amount",
+    "text": "$ 19,076.24"
+   },
+   {
+    "type": "iban",
+    "text": "IT67 U137 4092 0448 4848 2369 453"
+   }
+  ]
+ },
+ {
+  "id": "005_footnotes_L1_it",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "footnotes",
+  "lang": "it",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "7.961.215,20 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT50 Z165 3790 0557 5608 2164 666"
+   },
+   {
+    "type": "cf",
+    "text": "FVLAEE52C04Z241K"
+   },
+   {
+    "type": "date",
+    "text": "17 settembre 2023"
+   },
+   {
+    "type": "amount",
+    "text": "3.522.716,53 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.302,94 €"
+   },
+   {
+    "type": "cf",
+    "text": "LCLGDV73T25G611V"
+   },
+   {
+    "type": "date",
+    "text": "23/12/2022"
+   }
+  ]
+ },
+ {
+  "id": "006_bilingual_L1_en",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "bilingual",
+  "lang": "en",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "649.494,76 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 649,494.76"
+   },
+   {
+    "type": "date",
+    "text": "24/06/2024"
+   },
+   {
+    "type": "date",
+    "text": "2024-06-24"
+   },
+   {
+    "type": "date",
+    "text": "14/09/2026"
+   },
+   {
+    "type": "date",
+    "text": "2026-09-14"
+   },
+   {
+    "type": "date",
+    "text": "20/04/2022"
+   },
+   {
+    "type": "date",
+    "text": "2022-04-20"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/06548"
+   }
+  ]
+ },
+ {
+  "id": "007_clauses_L1_it",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "clauses",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "18816840837"
+   },
+   {
+    "type": "cig",
+    "text": "43D7A8D52E"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/09842"
+   },
+   {
+    "type": "date",
+    "text": "10 luglio 2023"
+   },
+   {
+    "type": "amount",
+    "text": "2.026,74 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.562,01 €"
+   },
+   {
+    "type": "vat",
+    "text": "33719102523"
+   },
+   {
+    "type": "cig",
+    "text": "607B9E6500"
+   }
+  ]
+ },
+ {
+  "id": "008_prose_L1_it",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "prose",
+  "lang": "it",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "14474502368"
+   },
+   {
+    "type": "cig",
+    "text": "9BE93AF173"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/00231"
+   },
+   {
+    "type": "date",
+    "text": "08/02/2022"
+   },
+   {
+    "type": "vat",
+    "text": "85477851008"
+   },
+   {
+    "type": "cig",
+    "text": "26C561E1A4"
+   },
+   {
+    "type": "cf",
+    "text": "AFTSCZ95P17D627S"
+   },
+   {
+    "type": "date",
+    "text": "25 giugno 2026"
+   },
+   {
+    "type": "amount",
+    "text": "5.811.145,88 €"
+   },
+   {
+    "type": "cf",
+    "text": "NNSCNE98M10F620U"
+   },
+   {
+    "type": "date",
+    "text": "6 aprile 2023"
+   },
+   {
+    "type": "amount",
+    "text": "1.082.185,28 €"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/02023"
+   },
+   {
+    "type": "date",
+    "text": "22 gennaio 2024"
+   },
+   {
+    "type": "iban",
+    "text": "IT38 W562 1081 1977 6759 8104 771"
+   },
+   {
+    "type": "amount",
+    "text": "310,66 €"
+   }
+  ]
+ },
+ {
+  "id": "009_twocol_L1_en",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "twocol",
+  "lang": "en",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "19946566631"
+   },
+   {
+    "type": "cig",
+    "text": "BA5C31384B"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/00881"
+   },
+   {
+    "type": "date",
+    "text": "2023-05-16"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,074,427.87"
+   },
+   {
+    "type": "iban",
+    "text": "IT44 N928 4277 3244 2609 7270 196"
+   },
+   {
+    "type": "amount",
+    "text": "$ 730.58"
+   },
+   {
+    "type": "cf",
+    "text": "NGRFPV62C16M824Z"
+   },
+   {
+    "type": "date",
+    "text": "June 17, 2026"
+   },
+   {
+    "type": "iban",
+    "text": "IT28 A195 1622 3050 7644 2617 642"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,452.31"
+   }
+  ]
+ },
+ {
+  "id": "010_table_L1_it",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "table",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "74.532,13 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.598,36 €"
+   },
+   {
+    "type": "amount",
+    "text": "17.976,63 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.701,75 €"
+   },
+   {
+    "type": "amount",
+    "text": "12.828,78 €"
+   },
+   {
+    "type": "amount",
+    "text": "750,36 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.254,59 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.764,28 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.937,70 €"
+   },
+   {
+    "type": "amount",
+    "text": "22.728,44 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.991,24 €"
+   }
+  ]
+ },
+ {
+  "id": "011_form_L1_en",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "form",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "92828880516"
+   },
+   {
+    "type": "cf",
+    "text": "BSRCCM71D26F565S"
+   },
+   {
+    "type": "iban",
+    "text": "IT28 D808 2989 4305 8257 4285 354"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/03723"
+   },
+   {
+    "type": "cig",
+    "text": "CD0571C025"
+   },
+   {
+    "type": "date",
+    "text": "2025-11-01"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,081,209.50"
+   },
+   {
+    "type": "date",
+    "text": "September 6, 2025"
+   }
+  ]
+ },
+ {
+  "id": "012_invoice_L1_it",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "invoice",
+  "lang": "it",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "00865761366"
+   },
+   {
+    "type": "vat",
+    "text": "89755970493"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/09686"
+   },
+   {
+    "type": "date",
+    "text": "06/04/2026"
+   },
+   {
+    "type": "amount",
+    "text": "2.004,12 €"
+   },
+   {
+    "type": "amount",
+    "text": "6.981,10 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.137,62 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.004,32 €"
+   },
+   {
+    "type": "amount",
+    "text": "5.901,00 €"
+   },
+   {
+    "type": "amount",
+    "text": "6.181,45 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.518,16 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.729,80 €"
+   },
+   {
+    "type": "amount",
+    "text": "5.102,46 €"
+   },
+   {
+    "type": "amount",
+    "text": "42.560,03 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.363,21 €"
+   },
+   {
+    "type": "amount",
+    "text": "51.923,24 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT89 D593 7667 0318 6910 7670 752"
+   }
+  ]
+ },
+ {
+  "id": "013_footnotes_L1_en",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "footnotes",
+  "lang": "en",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 4,938.59"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/02135"
+   },
+   {
+    "type": "date",
+    "text": "March 27, 2025"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,239.63"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,213,287.56"
+   },
+   {
+    "type": "iban",
+    "text": "IT85 E824 1126 5849 8070 0538 676"
+   },
+   {
+    "type": "iban",
+    "text": "IT52 R764 0496 8442 1764 1838 568"
+   }
+  ]
+ },
+ {
+  "id": "014_bilingual_L1_it",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "bilingual",
+  "lang": "it",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2025/07513"
+   },
+   {
+    "type": "date",
+    "text": "09/06/2025"
+   },
+   {
+    "type": "date",
+    "text": "2025-06-09"
+   },
+   {
+    "type": "date",
+    "text": "11/04/2023"
+   },
+   {
+    "type": "date",
+    "text": "2023-04-11"
+   },
+   {
+    "type": "amount",
+    "text": "504.778,78 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 504,778.78"
+   },
+   {
+    "type": "date",
+    "text": "04/08/2024"
+   },
+   {
+    "type": "date",
+    "text": "2024-08-04"
+   }
+  ]
+ },
+ {
+  "id": "015_clauses_L1_en",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "clauses",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "cf",
+    "text": "BSCSDV93S04F130C"
+   },
+   {
+    "type": "date",
+    "text": "April 21, 2023"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/09772"
+   },
+   {
+    "type": "date",
+    "text": "July 22, 2026"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,624.13"
+   },
+   {
+    "type": "vat",
+    "text": "51255659754"
+   },
+   {
+    "type": "cig",
+    "text": "96F0B5E3C3"
+   },
+   {
+    "type": "cf",
+    "text": "SAAERL95R28L699W"
+   },
+   {
+    "type": "date",
+    "text": "2023-05-21"
+   }
+  ]
+ },
+ {
+  "id": "016_prose_L1_en",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "prose",
+  "lang": "en",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 6,095,658.78"
+   },
+   {
+    "type": "iban",
+    "text": "IT14 Y229 8492 1542 9535 7556 603"
+   },
+   {
+    "type": "amount",
+    "text": "$ 642.96"
+   },
+   {
+    "type": "cf",
+    "text": "HCLVLL80C08B796M"
+   },
+   {
+    "type": "date",
+    "text": "June 21, 2024"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,967.08"
+   },
+   {
+    "type": "iban",
+    "text": "IT44 Y607 9235 6069 5368 1519 503"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/03966"
+   },
+   {
+    "type": "date",
+    "text": "2023-10-17"
+   },
+   {
+    "type": "cf",
+    "text": "TSMANL96M15A325M"
+   },
+   {
+    "type": "date",
+    "text": "2024-03-06"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,364,449.24"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,680,113.39"
+   }
+  ]
+ },
+ {
+  "id": "017_twocol_L1_it",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "twocol",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "874,48 €"
+   },
+   {
+    "type": "cf",
+    "text": "MZNTST67T24L700E"
+   },
+   {
+    "type": "date",
+    "text": "26/07/2024"
+   },
+   {
+    "type": "iban",
+    "text": "IT66 W437 8577 6343 6886 2024 813"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/08774"
+   },
+   {
+    "type": "date",
+    "text": "20/12/2025"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/07560"
+   },
+   {
+    "type": "date",
+    "text": "15 gennaio 2024"
+   },
+   {
+    "type": "amount",
+    "text": "1.180,52 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.174,59 €"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/07714"
+   },
+   {
+    "type": "date",
+    "text": "13/02/2023"
+   }
+  ]
+ },
+ {
+  "id": "018_table_L1_en",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "table",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 143,841.56"
+   },
+   {
+    "type": "amount",
+    "text": "$ 12,250.94"
+   },
+   {
+    "type": "amount",
+    "text": "$ 16,870.04"
+   },
+   {
+    "type": "amount",
+    "text": "$ 11,657.12"
+   },
+   {
+    "type": "amount",
+    "text": "$ 7,143.20"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,950.64"
+   },
+   {
+    "type": "amount",
+    "text": "$ 32,109.20"
+   },
+   {
+    "type": "amount",
+    "text": "$ 10,905.68"
+   },
+   {
+    "type": "amount",
+    "text": "$ 17,585.19"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,745.72"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,873.18"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,395.29"
+   },
+   {
+    "type": "amount",
+    "text": "$ 17,355.36"
+   }
+  ]
+ },
+ {
+  "id": "019_form_L1_it",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "27689084013"
+   },
+   {
+    "type": "cf",
+    "text": "ETRNBM65P24M248Y"
+   },
+   {
+    "type": "iban",
+    "text": "IT60 N592 9272 4179 6864 3378 785"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/09186"
+   },
+   {
+    "type": "cig",
+    "text": "017A41F5D5"
+   },
+   {
+    "type": "date",
+    "text": "15 novembre 2024"
+   },
+   {
+    "type": "amount",
+    "text": "1.516.327,77 €"
+   },
+   {
+    "type": "date",
+    "text": "27/07/2025"
+   }
+  ]
+ },
+ {
+  "id": "020_invoice_L1_en",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "invoice",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "42730057758"
+   },
+   {
+    "type": "vat",
+    "text": "11267645391"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/01070"
+   },
+   {
+    "type": "date",
+    "text": "2026-09-23"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,014.44"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,639.20"
+   },
+   {
+    "type": "amount",
+    "text": "$ 7,651.44"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,281.05"
+   },
+   {
+    "type": "amount",
+    "text": "$ 7,879.80"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,960.16"
+   },
+   {
+    "type": "amount",
+    "text": "$ 33,426.09"
+   },
+   {
+    "type": "amount",
+    "text": "$ 7,353.74"
+   },
+   {
+    "type": "amount",
+    "text": "$ 40,779.83"
+   },
+   {
+    "type": "iban",
+    "text": "IT85 B822 7333 0416 5229 7330 286"
+   }
+  ]
+ },
+ {
+  "id": "021_footnotes_L1_it",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "footnotes",
+  "lang": "it",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "286,76 €"
+   },
+   {
+    "type": "cf",
+    "text": "TERPMS56C08Z267C"
+   },
+   {
+    "type": "date",
+    "text": "9 maggio 2023"
+   },
+   {
+    "type": "vat",
+    "text": "04424477397"
+   },
+   {
+    "type": "cig",
+    "text": "97A24BD66D"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/07160"
+   },
+   {
+    "type": "date",
+    "text": "10 febbraio 2023"
+   },
+   {
+    "type": "iban",
+    "text": "IT66 F491 8143 1629 1092 7982 148"
+   },
+   {
+    "type": "cf",
+    "text": "RRVSBD64B26H286C"
+   },
+   {
+    "type": "date",
+    "text": "2 maggio 2025"
+   },
+   {
+    "type": "vat",
+    "text": "11119612281"
+   },
+   {
+    "type": "cig",
+    "text": "243AE9A75C"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/06051"
+   },
+   {
+    "type": "date",
+    "text": "06/03/2023"
+   }
+  ]
+ },
+ {
+  "id": "022_bilingual_L1_en",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "bilingual",
+  "lang": "en",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2025/08210"
+   },
+   {
+    "type": "amount",
+    "text": "159.663,81 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 159,663.81"
+   },
+   {
+    "type": "amount",
+    "text": "284.736,32 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 284,736.32"
+   },
+   {
+    "type": "amount",
+    "text": "336.481,60 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 336,481.60"
+   },
+   {
+    "type": "date",
+    "text": "23/08/2022"
+   },
+   {
+    "type": "date",
+    "text": "2022-08-23"
+   }
+  ]
+ },
+ {
+  "id": "023_clauses_L1_it",
+  "gt": "exact",
+  "level": 1,
+  "tpl": "clauses",
+  "lang": "it",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2026/03906"
+   },
+   {
+    "type": "date",
+    "text": "4 novembre 2026"
+   },
+   {
+    "type": "cf",
+    "text": "PMMDRH69P09G316P"
+   },
+   {
+    "type": "date",
+    "text": "06/04/2026"
+   },
+   {
+    "type": "iban",
+    "text": "IT73 S737 3010 0306 2583 1815 249"
+   },
+   {
+    "type": "vat",
+    "text": "70215613510"
+   },
+   {
+    "type": "cig",
+    "text": "9DF238518F"
+   },
+   {
+    "type": "vat",
+    "text": "83921719798"
+   },
+   {
+    "type": "cig",
+    "text": "3AFDA5CBCF"
+   }
+  ]
+ },
+ {
+  "id": "024_prose_L2_it",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "prose",
+  "lang": "it",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "iban",
+    "text": "IT24 N067 8704 4288 5083 0285 363"
+   },
+   {
+    "type": "amount",
+    "text": "6.885.074,71 €"
+   },
+   {
+    "type": "vat",
+    "text": "64123001711"
+   },
+   {
+    "type": "cig",
+    "text": "6EA8ECD564"
+   },
+   {
+    "type": "amount",
+    "text": "1.689.329,62 €"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/00718"
+   },
+   {
+    "type": "date",
+    "text": "09/09/2022"
+   },
+   {
+    "type": "iban",
+    "text": "IT61 Z375 2893 3560 2829 7471 940"
+   },
+   {
+    "type": "cf",
+    "text": "GRSZMZ75E06C711S"
+   },
+   {
+    "type": "date",
+    "text": "28 settembre 2023"
+   },
+   {
+    "type": "amount",
+    "text": "3.435,90 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.339.083,42 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.079,14 €"
+   }
+  ]
+ },
+ {
+  "id": "025_twocol_L2_en",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "twocol",
+  "lang": "en",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 4,443,504.17"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,194.87"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,705,659.92"
+   },
+   {
+    "type": "vat",
+    "text": "33664203735"
+   },
+   {
+    "type": "cig",
+    "text": "CA5FBE2497"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/01710"
+   },
+   {
+    "type": "date",
+    "text": "2026-04-26"
+   },
+   {
+    "type": "vat",
+    "text": "52364771921"
+   },
+   {
+    "type": "cig",
+    "text": "5827FE6743"
+   },
+   {
+    "type": "amount",
+    "text": "$ 779,550.30"
+   },
+   {
+    "type": "vat",
+    "text": "71242374466"
+   },
+   {
+    "type": "cig",
+    "text": "B707076EE5"
+   }
+  ]
+ },
+ {
+  "id": "026_table_L2_it",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "table",
+  "lang": "it",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "92.563,70 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.438,00 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.479,30 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.033,40 €"
+   },
+   {
+    "type": "amount",
+    "text": "6.013,63 €"
+   },
+   {
+    "type": "amount",
+    "text": "19.961,57 €"
+   },
+   {
+    "type": "amount",
+    "text": "22.950,72 €"
+   },
+   {
+    "type": "amount",
+    "text": "16.287,48 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.093,30 €"
+   },
+   {
+    "type": "amount",
+    "text": "6.306,30 €"
+   }
+  ]
+ },
+ {
+  "id": "027_form_L2_en",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "form",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "37842101100"
+   },
+   {
+    "type": "cf",
+    "text": "EGCERA76T16A394S"
+   },
+   {
+    "type": "iban",
+    "text": "IT47 Z510 1235 2776 7397 5124 735"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/08616"
+   },
+   {
+    "type": "cig",
+    "text": "2399C78508"
+   },
+   {
+    "type": "date",
+    "text": "August 5, 2026"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,558,509.94"
+   },
+   {
+    "type": "date",
+    "text": "2022-10-13"
+   }
+  ]
+ },
+ {
+  "id": "028_invoice_L2_it",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "invoice",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "50372885841"
+   },
+   {
+    "type": "vat",
+    "text": "51220767974"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/02739"
+   },
+   {
+    "type": "date",
+    "text": "18 dicembre 2024"
+   },
+   {
+    "type": "amount",
+    "text": "360,09 €"
+   },
+   {
+    "type": "amount",
+    "text": "265,96 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.286,72 €"
+   },
+   {
+    "type": "amount",
+    "text": "5.350,80 €"
+   },
+   {
+    "type": "amount",
+    "text": "559,00 €"
+   },
+   {
+    "type": "amount",
+    "text": "7.371,54 €"
+   },
+   {
+    "type": "amount",
+    "text": "16.194,11 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.562,70 €"
+   },
+   {
+    "type": "amount",
+    "text": "19.756,81 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT25 K666 9916 5117 3754 5666 353"
+   }
+  ]
+ },
+ {
+  "id": "029_footnotes_L2_en",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "footnotes",
+  "lang": "en",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "iban",
+    "text": "IT10 S259 2736 6124 8887 7991 201"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/04528"
+   },
+   {
+    "type": "date",
+    "text": "March 18, 2026"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,814,441.00"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/05181"
+   },
+   {
+    "type": "date",
+    "text": "2024-08-28"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,269.92"
+   },
+   {
+    "type": "vat",
+    "text": "01744390351"
+   },
+   {
+    "type": "cig",
+    "text": "1EDA296C4B"
+   },
+   {
+    "type": "vat",
+    "text": "23391123280"
+   },
+   {
+    "type": "cig",
+    "text": "B8229954FC"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,795,169.51"
+   },
+   {
+    "type": "cf",
+    "text": "FTESAL67E27D677T"
+   },
+   {
+    "type": "date",
+    "text": "April 3, 2024"
+   }
+  ]
+ },
+ {
+  "id": "030_bilingual_L2_it",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "bilingual",
+  "lang": "it",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2025/08581"
+   },
+   {
+    "type": "amount",
+    "text": "501.507,95 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 501,507.95"
+   },
+   {
+    "type": "amount",
+    "text": "181.130,66 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 181,130.66"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/07689"
+   },
+   {
+    "type": "date",
+    "text": "19/09/2022"
+   },
+   {
+    "type": "date",
+    "text": "2022-09-19"
+   }
+  ]
+ },
+ {
+  "id": "031_clauses_L2_en",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "clauses",
+  "lang": "en",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "cf",
+    "text": "CRFLBC93H25F720T"
+   },
+   {
+    "type": "date",
+    "text": "October 5, 2022"
+   },
+   {
+    "type": "vat",
+    "text": "84568072743"
+   },
+   {
+    "type": "cig",
+    "text": "983DFCA202"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,421.57"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,275,866.53"
+   },
+   {
+    "type": "amount",
+    "text": "$ 620.48"
+   }
+  ]
+ },
+ {
+  "id": "032_prose_L2_en",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "prose",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 2,025.77"
+   },
+   {
+    "type": "cf",
+    "text": "LNADDA64T23H425V"
+   },
+   {
+    "type": "date",
+    "text": "February 14, 2023"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/02352"
+   },
+   {
+    "type": "date",
+    "text": "December 5, 2022"
+   },
+   {
+    "type": "vat",
+    "text": "43518280651"
+   },
+   {
+    "type": "cig",
+    "text": "45B2F4E237"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/06351"
+   },
+   {
+    "type": "date",
+    "text": "2024-06-17"
+   },
+   {
+    "type": "iban",
+    "text": "IT23 N828 1586 0697 2419 9626 798"
+   },
+   {
+    "type": "vat",
+    "text": "92677886450"
+   },
+   {
+    "type": "cig",
+    "text": "2690907850"
+   },
+   {
+    "type": "cf",
+    "text": "BPCVDT65D05G910R"
+   },
+   {
+    "type": "date",
+    "text": "2023-12-23"
+   },
+   {
+    "type": "iban",
+    "text": "IT40 V278 5980 9353 5630 4845 915"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/00565"
+   },
+   {
+    "type": "date",
+    "text": "March 14, 2026"
+   }
+  ]
+ },
+ {
+  "id": "033_twocol_L2_it",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "twocol",
+  "lang": "it",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "71341055488"
+   },
+   {
+    "type": "cig",
+    "text": "1993265FA7"
+   },
+   {
+    "type": "amount",
+    "text": "472.976,32 €"
+   },
+   {
+    "type": "amount",
+    "text": "257.622,03 €"
+   },
+   {
+    "type": "vat",
+    "text": "43319664458"
+   },
+   {
+    "type": "cig",
+    "text": "718BF40B6F"
+   },
+   {
+    "type": "vat",
+    "text": "20574547581"
+   },
+   {
+    "type": "cig",
+    "text": "80636268CC"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/05201"
+   },
+   {
+    "type": "date",
+    "text": "10/02/2022"
+   },
+   {
+    "type": "iban",
+    "text": "IT31 R973 1233 1692 8466 7139 111"
+   },
+   {
+    "type": "amount",
+    "text": "2.544,42 €"
+   }
+  ]
+ },
+ {
+  "id": "034_table_L2_en",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "table",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 71,726.35"
+   },
+   {
+    "type": "amount",
+    "text": "$ 137.70"
+   },
+   {
+    "type": "amount",
+    "text": "$ 29,516.00"
+   },
+   {
+    "type": "amount",
+    "text": "$ 10,866.90"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,857.28"
+   },
+   {
+    "type": "amount",
+    "text": "$ 18,560.16"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,642.76"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,412.91"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,732.64"
+   }
+  ]
+ },
+ {
+  "id": "035_form_L2_it",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "form",
+  "lang": "it",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "32171489295"
+   },
+   {
+    "type": "cf",
+    "text": "STVNZS62A01F533X"
+   },
+   {
+    "type": "iban",
+    "text": "IT17 N231 4197 5725 7760 0952 479"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/02904"
+   },
+   {
+    "type": "cig",
+    "text": "C30CC07741"
+   },
+   {
+    "type": "date",
+    "text": "22/05/2025"
+   },
+   {
+    "type": "amount",
+    "text": "371.456,63 €"
+   },
+   {
+    "type": "date",
+    "text": "20 marzo 2022"
+   }
+  ]
+ },
+ {
+  "id": "036_invoice_L2_en",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "invoice",
+  "lang": "en",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "03866078631"
+   },
+   {
+    "type": "vat",
+    "text": "78449867928"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/05149"
+   },
+   {
+    "type": "date",
+    "text": "2024-12-04"
+   },
+   {
+    "type": "amount",
+    "text": "$ 614.37"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,608.68"
+   },
+   {
+    "type": "amount",
+    "text": "$ 690.60"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,850.20"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,165.91"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,869.25"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,621.36"
+   },
+   {
+    "type": "amount",
+    "text": "$ 27,420.37"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,032.48"
+   },
+   {
+    "type": "amount",
+    "text": "$ 33,452.85"
+   },
+   {
+    "type": "iban",
+    "text": "IT19 T859 0068 2503 8447 8355 784"
+   }
+  ]
+ },
+ {
+  "id": "037_footnotes_L2_it",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "footnotes",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "17626944876"
+   },
+   {
+    "type": "cig",
+    "text": "C44E747A88"
+   },
+   {
+    "type": "iban",
+    "text": "IT25 H113 9796 1696 9393 8801 357"
+   },
+   {
+    "type": "amount",
+    "text": "1.369.165,59 €"
+   },
+   {
+    "type": "cf",
+    "text": "GLLAFN91T25D393L"
+   },
+   {
+    "type": "date",
+    "text": "3 maggio 2022"
+   },
+   {
+    "type": "amount",
+    "text": "2.726,00 €"
+   },
+   {
+    "type": "amount",
+    "text": "359,14 €"
+   },
+   {
+    "type": "cf",
+    "text": "RABLFB94B23C704P"
+   },
+   {
+    "type": "date",
+    "text": "20 luglio 2024"
+   },
+   {
+    "type": "cf",
+    "text": "NMBVVC53A10B253W"
+   },
+   {
+    "type": "date",
+    "text": "17/10/2025"
+   }
+  ]
+ },
+ {
+  "id": "038_bilingual_L2_en",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "bilingual",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "date",
+    "text": "22/05/2024"
+   },
+   {
+    "type": "date",
+    "text": "2024-05-22"
+   },
+   {
+    "type": "amount",
+    "text": "136.313,69 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 136,313.69"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/04023"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/02641"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/05812"
+   }
+  ]
+ },
+ {
+  "id": "039_clauses_L2_it",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "clauses",
+  "lang": "it",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "3.154,32 €"
+   },
+   {
+    "type": "amount",
+    "text": "8.906.522,55 €"
+   },
+   {
+    "type": "vat",
+    "text": "54750198240"
+   },
+   {
+    "type": "cig",
+    "text": "EE7D07FC2D"
+   },
+   {
+    "type": "amount",
+    "text": "3.076,86 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.263,63 €"
+   }
+  ]
+ },
+ {
+  "id": "040_prose_L2_it",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "prose",
+  "lang": "it",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2022/04131"
+   },
+   {
+    "type": "date",
+    "text": "01/02/2026"
+   },
+   {
+    "type": "cf",
+    "text": "CEAMCB50M14Z851N"
+   },
+   {
+    "type": "date",
+    "text": "18/11/2024"
+   },
+   {
+    "type": "amount",
+    "text": "3.162,29 €"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/05990"
+   },
+   {
+    "type": "date",
+    "text": "6 settembre 2026"
+   },
+   {
+    "type": "vat",
+    "text": "47560983318"
+   },
+   {
+    "type": "cig",
+    "text": "95E27BB0E3"
+   },
+   {
+    "type": "amount",
+    "text": "2.145,92 €"
+   },
+   {
+    "type": "cf",
+    "text": "EDVZLS93L04M140L"
+   },
+   {
+    "type": "date",
+    "text": "24/08/2026"
+   },
+   {
+    "type": "vat",
+    "text": "66061147119"
+   },
+   {
+    "type": "cig",
+    "text": "5BF7DD65D1"
+   },
+   {
+    "type": "iban",
+    "text": "IT13 A341 4878 2344 9928 6115 022"
+   },
+   {
+    "type": "vat",
+    "text": "76427293316"
+   },
+   {
+    "type": "cig",
+    "text": "0FFB27E036"
+   }
+  ]
+ },
+ {
+  "id": "041_twocol_L2_en",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "twocol",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "84106584607"
+   },
+   {
+    "type": "cig",
+    "text": "7A75FB14FB"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,072,403.08"
+   },
+   {
+    "type": "iban",
+    "text": "IT43 M435 2215 2927 2258 7423 046"
+   },
+   {
+    "type": "amount",
+    "text": "$ 222.40"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,296.25"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,585.87"
+   },
+   {
+    "type": "cf",
+    "text": "LRDLVP57C18H961E"
+   },
+   {
+    "type": "date",
+    "text": "March 14, 2026"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/04247"
+   },
+   {
+    "type": "date",
+    "text": "August 15, 2024"
+   }
+  ]
+ },
+ {
+  "id": "042_table_L2_it",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "table",
+  "lang": "it",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "66.177,44 €"
+   },
+   {
+    "type": "amount",
+    "text": "13.565,62 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.155,74 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.971,78 €"
+   },
+   {
+    "type": "amount",
+    "text": "7.048,08 €"
+   },
+   {
+    "type": "amount",
+    "text": "8.292,25 €"
+   },
+   {
+    "type": "amount",
+    "text": "7.314,45 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.438,72 €"
+   },
+   {
+    "type": "amount",
+    "text": "7.390,80 €"
+   }
+  ]
+ },
+ {
+  "id": "043_form_L2_en",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "form",
+  "lang": "en",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "41531191199"
+   },
+   {
+    "type": "cf",
+    "text": "RBHPDC59B16E954U"
+   },
+   {
+    "type": "iban",
+    "text": "IT18 Y381 1344 6866 6722 8669 958"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/03147"
+   },
+   {
+    "type": "cig",
+    "text": "2DDA201905"
+   },
+   {
+    "type": "date",
+    "text": "December 2, 2025"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,442,361.65"
+   },
+   {
+    "type": "date",
+    "text": "2023-01-15"
+   }
+  ]
+ },
+ {
+  "id": "044_invoice_L2_it",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "invoice",
+  "lang": "it",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "69024502602"
+   },
+   {
+    "type": "vat",
+    "text": "53329508387"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/09396"
+   },
+   {
+    "type": "date",
+    "text": "2 agosto 2025"
+   },
+   {
+    "type": "amount",
+    "text": "11.950,20 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.326,88 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.706,13 €"
+   },
+   {
+    "type": "amount",
+    "text": "503,91 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.032,52 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.303,20 €"
+   },
+   {
+    "type": "amount",
+    "text": "382,24 €"
+   },
+   {
+    "type": "amount",
+    "text": "8.054,28 €"
+   },
+   {
+    "type": "amount",
+    "text": "5.987,06 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.430,83 €"
+   },
+   {
+    "type": "amount",
+    "text": "237,18 €"
+   },
+   {
+    "type": "amount",
+    "text": "41.914,43 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.221,17 €"
+   },
+   {
+    "type": "amount",
+    "text": "51.135,60 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT40 B306 6607 8515 0328 5286 631"
+   }
+  ]
+ },
+ {
+  "id": "045_footnotes_L2_en",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "footnotes",
+  "lang": "en",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "cf",
+    "text": "NEVHVS98H22L520Y"
+   },
+   {
+    "type": "date",
+    "text": "2023-11-01"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/08589"
+   },
+   {
+    "type": "date",
+    "text": "January 4, 2025"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,296,081.46"
+   },
+   {
+    "type": "iban",
+    "text": "IT40 Z502 4037 9619 0245 6634 463"
+   },
+   {
+    "type": "cf",
+    "text": "NZBRAF77T18Z423S"
+   },
+   {
+    "type": "date",
+    "text": "September 7, 2022"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,635.15"
+   },
+   {
+    "type": "amount",
+    "text": "$ 634.46"
+   }
+  ]
+ },
+ {
+  "id": "046_bilingual_L2_it",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "bilingual",
+  "lang": "it",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "328.828,69 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 328,828.69"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/07335"
+   },
+   {
+    "type": "amount",
+    "text": "318.392,79 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 318,392.79"
+   },
+   {
+    "type": "amount",
+    "text": "631.293,80 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 631,293.80"
+   },
+   {
+    "type": "amount",
+    "text": "469.066,38 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 469,066.38"
+   }
+  ]
+ },
+ {
+  "id": "047_clauses_L2_en",
+  "gt": "exact",
+  "level": 2,
+  "tpl": "clauses",
+  "lang": "en",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "iban",
+    "text": "IT61 E918 2150 9930 7451 3770 763"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/09899"
+   },
+   {
+    "type": "date",
+    "text": "June 21, 2022"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/07140"
+   },
+   {
+    "type": "date",
+    "text": "June 3, 2024"
+   },
+   {
+    "type": "cf",
+    "text": "HBFTTE93R10F320K"
+   },
+   {
+    "type": "date",
+    "text": "2026-09-27"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,817.21"
+   }
+  ]
+ },
+ {
+  "id": "048_prose_L3_en",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "prose",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "cf",
+    "text": "FDELBP51P28Z157R"
+   },
+   {
+    "type": "date",
+    "text": "2025-07-04"
+   },
+   {
+    "type": "amount",
+    "text": "$ 205,159.05"
+   },
+   {
+    "type": "amount",
+    "text": "$ 280.99"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/02572"
+   },
+   {
+    "type": "date",
+    "text": "February 9, 2025"
+   },
+   {
+    "type": "vat",
+    "text": "78732636525"
+   },
+   {
+    "type": "cig",
+    "text": "D821266A7D"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,265,766.64"
+   },
+   {
+    "type": "cf",
+    "text": "BDTZAZ54H11Z675K"
+   },
+   {
+    "type": "date",
+    "text": "March 8, 2023"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,731,265.64"
+   },
+   {
+    "type": "iban",
+    "text": "IT52 E889 0933 3704 8550 0182 882"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/08744"
+   },
+   {
+    "type": "date",
+    "text": "June 3, 2024"
+   },
+   {
+    "type": "hand",
+    "text": "$ 2,980.45"
+   }
+  ]
+ },
+ {
+  "id": "049_twocol_L3_it",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "twocol",
+  "lang": "it",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2025/07042"
+   },
+   {
+    "type": "date",
+    "text": "10 febbraio 2026"
+   },
+   {
+    "type": "amount",
+    "text": "2.964.455,24 €"
+   },
+   {
+    "type": "vat",
+    "text": "72976455971"
+   },
+   {
+    "type": "cig",
+    "text": "FDBE66D8AF"
+   },
+   {
+    "type": "amount",
+    "text": "1.699,32 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.689.406,59 €"
+   },
+   {
+    "type": "cf",
+    "text": "VEBRTD56S16E961Z"
+   },
+   {
+    "type": "date",
+    "text": "3 febbraio 2025"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/00776"
+   },
+   {
+    "type": "date",
+    "text": "6 settembre 2023"
+   },
+   {
+    "type": "vat",
+    "text": "59655239369"
+   },
+   {
+    "type": "cig",
+    "text": "4B33FDE9C5"
+   }
+  ]
+ },
+ {
+  "id": "050_table_L3_en",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "table",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 123,988.58"
+   },
+   {
+    "type": "amount",
+    "text": "$ 8,689.66"
+   },
+   {
+    "type": "amount",
+    "text": "$ 16,868.40"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,473.72"
+   },
+   {
+    "type": "amount",
+    "text": "$ 846.93"
+   },
+   {
+    "type": "amount",
+    "text": "$ 498.64"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,149.20"
+   },
+   {
+    "type": "amount",
+    "text": "$ 26,597.70"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,625.38"
+   },
+   {
+    "type": "amount",
+    "text": "$ 579.81"
+   },
+   {
+    "type": "amount",
+    "text": "$ 18,842.98"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,045.96"
+   },
+   {
+    "type": "amount",
+    "text": "$ 9,209.64"
+   },
+   {
+    "type": "amount",
+    "text": "$ 16,755.84"
+   },
+   {
+    "type": "amount",
+    "text": "$ 12,804.72"
+   }
+  ]
+ },
+ {
+  "id": "051_form_L3_it",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "form",
+  "lang": "it",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "85311846532"
+   },
+   {
+    "type": "cf",
+    "text": "SCVGFP97T23B114R"
+   },
+   {
+    "type": "iban",
+    "text": "IT36 K962 4874 7331 1994 3875 484"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/08646"
+   },
+   {
+    "type": "cig",
+    "text": "CF6DF681C5"
+   },
+   {
+    "type": "date",
+    "text": "4 luglio 2024"
+   },
+   {
+    "type": "amount",
+    "text": "858.270,25 €"
+   },
+   {
+    "type": "date",
+    "text": "21/12/2025"
+   },
+   {
+    "type": "hand",
+    "text": "1.383,01 €"
+   }
+  ]
+ },
+ {
+  "id": "052_invoice_L3_en",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "invoice",
+  "lang": "en",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "35279560636"
+   },
+   {
+    "type": "vat",
+    "text": "25058878469"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/09579"
+   },
+   {
+    "type": "date",
+    "text": "July 14, 2022"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,098.00"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,223.64"
+   },
+   {
+    "type": "amount",
+    "text": "$ 962.64"
+   },
+   {
+    "type": "amount",
+    "text": "$ 133.20"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,782.13"
+   },
+   {
+    "type": "amount",
+    "text": "$ 305.80"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,116.78"
+   },
+   {
+    "type": "amount",
+    "text": "$ 712.65"
+   },
+   {
+    "type": "amount",
+    "text": "$ 70.41"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,399.92"
+   },
+   {
+    "type": "amount",
+    "text": "$ 19,805.17"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,357.14"
+   },
+   {
+    "type": "amount",
+    "text": "$ 24,162.31"
+   },
+   {
+    "type": "iban",
+    "text": "IT76 L734 7946 4304 7362 8588 796"
+   },
+   {
+    "type": "hand",
+    "text": "$ 8,483.19"
+   }
+  ]
+ },
+ {
+  "id": "053_footnotes_L3_it",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "footnotes",
+  "lang": "it",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "cf",
+    "text": "CHVHRE64P24M846H"
+   },
+   {
+    "type": "date",
+    "text": "15/01/2026"
+   },
+   {
+    "type": "amount",
+    "text": "2.057,18 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.427,90 €"
+   },
+   {
+    "type": "cf",
+    "text": "MZLZMS52P23F911C"
+   },
+   {
+    "type": "date",
+    "text": "26 maggio 2023"
+   },
+   {
+    "type": "amount",
+    "text": "948,95 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT39 R819 4067 0844 1538 0163 288"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/03184"
+   },
+   {
+    "type": "date",
+    "text": "10/11/2024"
+   },
+   {
+    "type": "iban",
+    "text": "IT42 R804 2690 9361 1016 7114 897"
+   },
+   {
+    "type": "vat",
+    "text": "31905931132"
+   },
+   {
+    "type": "cig",
+    "text": "2217654217"
+   }
+  ]
+ },
+ {
+  "id": "054_bilingual_L3_en",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "bilingual",
+  "lang": "en",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "date",
+    "text": "19/04/2023"
+   },
+   {
+    "type": "date",
+    "text": "2023-04-19"
+   },
+   {
+    "type": "amount",
+    "text": "612.902,91 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 612,902.91"
+   },
+   {
+    "type": "amount",
+    "text": "64.922,42 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 64,922.42"
+   },
+   {
+    "type": "amount",
+    "text": "710.486,38 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 710,486.38"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/00091"
+   }
+  ]
+ },
+ {
+  "id": "055_clauses_L3_it",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "clauses",
+  "lang": "it",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "34853280229"
+   },
+   {
+    "type": "cig",
+    "text": "C4C0FD3AA9"
+   },
+   {
+    "type": "vat",
+    "text": "14475514433"
+   },
+   {
+    "type": "cig",
+    "text": "50CCB870AE"
+   },
+   {
+    "type": "cf",
+    "text": "RDZLFM90R20D260C"
+   },
+   {
+    "type": "date",
+    "text": "13/04/2024"
+   },
+   {
+    "type": "iban",
+    "text": "IT92 M490 5524 9401 9350 1435 844"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/04435"
+   },
+   {
+    "type": "date",
+    "text": "1 settembre 2026"
+   },
+   {
+    "type": "hand",
+    "text": "2.004,37 €"
+   }
+  ]
+ },
+ {
+  "id": "056_prose_L3_it",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "prose",
+  "lang": "it",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "8.210.274,52 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.385,79 €"
+   },
+   {
+    "type": "vat",
+    "text": "32811380324"
+   },
+   {
+    "type": "cig",
+    "text": "0427EA514B"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/08244"
+   },
+   {
+    "type": "date",
+    "text": "05/09/2024"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/05858"
+   },
+   {
+    "type": "date",
+    "text": "11/04/2026"
+   },
+   {
+    "type": "amount",
+    "text": "2.380,87 €"
+   },
+   {
+    "type": "cf",
+    "text": "ZVMSNG76R25F273W"
+   },
+   {
+    "type": "date",
+    "text": "16 agosto 2026"
+   },
+   {
+    "type": "amount",
+    "text": "6.747.638,51 €"
+   },
+   {
+    "type": "cf",
+    "text": "CLGEBS63S14A760M"
+   },
+   {
+    "type": "date",
+    "text": "2 ottobre 2023"
+   },
+   {
+    "type": "amount",
+    "text": "1.027,50 €"
+   },
+   {
+    "type": "hand",
+    "text": "6.897,46 €"
+   }
+  ]
+ },
+ {
+  "id": "057_twocol_L3_en",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "twocol",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 1,181.37"
+   },
+   {
+    "type": "iban",
+    "text": "IT40 Q485 3814 7236 1426 0506 755"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,028.20"
+   },
+   {
+    "type": "iban",
+    "text": "IT95 M159 9045 0528 4191 1769 342"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/09742"
+   },
+   {
+    "type": "date",
+    "text": "February 3, 2023"
+   },
+   {
+    "type": "vat",
+    "text": "74384614533"
+   },
+   {
+    "type": "cig",
+    "text": "DF5A4322D8"
+   },
+   {
+    "type": "cf",
+    "text": "ZZLRNV79R21F729V"
+   },
+   {
+    "type": "date",
+    "text": "December 24, 2026"
+   },
+   {
+    "type": "iban",
+    "text": "IT39 V852 1430 6583 4226 8964 672"
+   }
+  ]
+ },
+ {
+  "id": "058_table_L3_it",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "table",
+  "lang": "it",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "114.253,51 €"
+   },
+   {
+    "type": "amount",
+    "text": "19.936,32 €"
+   },
+   {
+    "type": "amount",
+    "text": "5.120,64 €"
+   },
+   {
+    "type": "amount",
+    "text": "349,92 €"
+   },
+   {
+    "type": "amount",
+    "text": "794,04 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.130,50 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.226,40 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.436,65 €"
+   },
+   {
+    "type": "amount",
+    "text": "11.216,40 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.081,16 €"
+   },
+   {
+    "type": "amount",
+    "text": "17.300,79 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.586,65 €"
+   },
+   {
+    "type": "amount",
+    "text": "956,08 €"
+   },
+   {
+    "type": "amount",
+    "text": "26.633,60 €"
+   },
+   {
+    "type": "amount",
+    "text": "445,32 €"
+   },
+   {
+    "type": "amount",
+    "text": "966,56 €"
+   },
+   {
+    "type": "amount",
+    "text": "14.072,48 €"
+   }
+  ]
+ },
+ {
+  "id": "059_form_L3_en",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "form",
+  "lang": "en",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "14251210859"
+   },
+   {
+    "type": "cf",
+    "text": "VEREDH79E26G864M"
+   },
+   {
+    "type": "iban",
+    "text": "IT59 N357 3679 5296 4036 7014 002"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/08828"
+   },
+   {
+    "type": "cig",
+    "text": "E51F297F84"
+   },
+   {
+    "type": "date",
+    "text": "2025-11-08"
+   },
+   {
+    "type": "amount",
+    "text": "$ 806,971.16"
+   },
+   {
+    "type": "date",
+    "text": "2025-09-07"
+   },
+   {
+    "type": "hand",
+    "text": "$ 8,678.09"
+   }
+  ]
+ },
+ {
+  "id": "060_invoice_L3_it",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "invoice",
+  "lang": "it",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "83775445462"
+   },
+   {
+    "type": "vat",
+    "text": "84106143937"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/08682"
+   },
+   {
+    "type": "date",
+    "text": "5 luglio 2025"
+   },
+   {
+    "type": "amount",
+    "text": "665,48 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.314,80 €"
+   },
+   {
+    "type": "amount",
+    "text": "10.881,28 €"
+   },
+   {
+    "type": "amount",
+    "text": "7.308,40 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.439,20 €"
+   },
+   {
+    "type": "amount",
+    "text": "484,96 €"
+   },
+   {
+    "type": "amount",
+    "text": "5.585,58 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.265,22 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.839,20 €"
+   },
+   {
+    "type": "amount",
+    "text": "6.932,52 €"
+   },
+   {
+    "type": "amount",
+    "text": "6.555,57 €"
+   },
+   {
+    "type": "amount",
+    "text": "54.272,21 €"
+   },
+   {
+    "type": "amount",
+    "text": "11.939,89 €"
+   },
+   {
+    "type": "amount",
+    "text": "66.212,10 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT94 N454 4352 7930 4752 1929 448"
+   },
+   {
+    "type": "hand",
+    "text": "7.566,85 €"
+   }
+  ]
+ },
+ {
+  "id": "061_footnotes_L3_en",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "footnotes",
+  "lang": "en",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 4,145.59"
+   },
+   {
+    "type": "vat",
+    "text": "83083777435"
+   },
+   {
+    "type": "cig",
+    "text": "12336C24C5"
+   },
+   {
+    "type": "iban",
+    "text": "IT59 Y012 8222 7628 2513 6314 853"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/00699"
+   },
+   {
+    "type": "date",
+    "text": "2022-09-21"
+   },
+   {
+    "type": "vat",
+    "text": "38578939867"
+   },
+   {
+    "type": "cig",
+    "text": "30B1568F06"
+   },
+   {
+    "type": "cf",
+    "text": "EAGSVC62T01E219E"
+   },
+   {
+    "type": "date",
+    "text": "September 23, 2026"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,152,282.43"
+   },
+   {
+    "type": "iban",
+    "text": "IT41 E320 7530 7766 5085 6339 070"
+   }
+  ]
+ },
+ {
+  "id": "062_bilingual_L3_it",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "bilingual",
+  "lang": "it",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "462.556,77 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 462,556.77"
+   },
+   {
+    "type": "amount",
+    "text": "604.617,61 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 604,617.61"
+   },
+   {
+    "type": "amount",
+    "text": "876.675,23 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 876,675.23"
+   },
+   {
+    "type": "date",
+    "text": "25/06/2026"
+   },
+   {
+    "type": "date",
+    "text": "2026-06-25"
+   },
+   {
+    "type": "amount",
+    "text": "280.579,89 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 280,579.89"
+   }
+  ]
+ },
+ {
+  "id": "063_clauses_L3_en",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "clauses",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 3,124,397.88"
+   },
+   {
+    "type": "iban",
+    "text": "IT14 P175 0057 1952 7679 8541 581"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,913.45"
+   },
+   {
+    "type": "vat",
+    "text": "99502401738"
+   },
+   {
+    "type": "cig",
+    "text": "C219EC6C76"
+   },
+   {
+    "type": "cf",
+    "text": "BRNGTR85E13F572R"
+   },
+   {
+    "type": "date",
+    "text": "December 4, 2023"
+   },
+   {
+    "type": "hand",
+    "text": "$ 7,947.34"
+   }
+  ]
+ },
+ {
+  "id": "064_prose_L3_en",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "prose",
+  "lang": "en",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "cf",
+    "text": "BMZGES69L27H985D"
+   },
+   {
+    "type": "date",
+    "text": "March 22, 2026"
+   },
+   {
+    "type": "iban",
+    "text": "IT79 Q636 7683 5090 9978 1352 832"
+   },
+   {
+    "type": "amount",
+    "text": "$ 854,427.13"
+   },
+   {
+    "type": "amount",
+    "text": "$ 631,083.59"
+   },
+   {
+    "type": "cf",
+    "text": "HZSTDV92L13Z827R"
+   },
+   {
+    "type": "date",
+    "text": "2026-05-07"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,622,127.75"
+   },
+   {
+    "type": "iban",
+    "text": "IT43 L640 6084 8244 0560 9789 281"
+   },
+   {
+    "type": "iban",
+    "text": "IT14 G356 4997 8988 4647 4612 425"
+   },
+   {
+    "type": "iban",
+    "text": "IT59 Y438 0933 2451 8674 1953 808"
+   },
+   {
+    "type": "cf",
+    "text": "LZMTVP97T15H945H"
+   },
+   {
+    "type": "date",
+    "text": "2026-09-04"
+   },
+   {
+    "type": "hand",
+    "text": "$ 2,908.89"
+   }
+  ]
+ },
+ {
+  "id": "065_twocol_L3_it",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "twocol",
+  "lang": "it",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "1.603.431,52 €"
+   },
+   {
+    "type": "amount",
+    "text": "338,99 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.246.497,96 €"
+   },
+   {
+    "type": "amount",
+    "text": "996.595,30 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.089.287,78 €"
+   },
+   {
+    "type": "vat",
+    "text": "56531210794"
+   },
+   {
+    "type": "cig",
+    "text": "D54B242222"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/09675"
+   },
+   {
+    "type": "date",
+    "text": "20/03/2025"
+   },
+   {
+    "type": "amount",
+    "text": "1.258,22 €"
+   }
+  ]
+ },
+ {
+  "id": "066_table_L3_en",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "table",
+  "lang": "en",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 99,594.61"
+   },
+   {
+    "type": "amount",
+    "text": "$ 14,280.17"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,260.20"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,123.04"
+   },
+   {
+    "type": "amount",
+    "text": "$ 24,270.09"
+   },
+   {
+    "type": "amount",
+    "text": "$ 7,145.41"
+   },
+   {
+    "type": "amount",
+    "text": "$ 824.76"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,559.70"
+   },
+   {
+    "type": "amount",
+    "text": "$ 17,499.57"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,453.56"
+   },
+   {
+    "type": "amount",
+    "text": "$ 420.42"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,270.32"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,585.07"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,902.30"
+   }
+  ]
+ },
+ {
+  "id": "067_form_L3_it",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "form",
+  "lang": "it",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "66951141432"
+   },
+   {
+    "type": "cf",
+    "text": "RPMZTC60L13C807A"
+   },
+   {
+    "type": "iban",
+    "text": "IT49 S716 0187 1896 3867 3564 275"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/08170"
+   },
+   {
+    "type": "cig",
+    "text": "2FA1B4019D"
+   },
+   {
+    "type": "date",
+    "text": "04/04/2024"
+   },
+   {
+    "type": "amount",
+    "text": "2.574.932,20 €"
+   },
+   {
+    "type": "date",
+    "text": "09/04/2023"
+   },
+   {
+    "type": "hand",
+    "text": "796,69 €"
+   }
+  ]
+ },
+ {
+  "id": "068_invoice_L3_en",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "invoice",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "84184211207"
+   },
+   {
+    "type": "vat",
+    "text": "14464375489"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/04048"
+   },
+   {
+    "type": "date",
+    "text": "2023-05-15"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,323.52"
+   },
+   {
+    "type": "amount",
+    "text": "$ 138.84"
+   },
+   {
+    "type": "amount",
+    "text": "$ 291.48"
+   },
+   {
+    "type": "amount",
+    "text": "$ 7,783.80"
+   },
+   {
+    "type": "amount",
+    "text": "$ 725.73"
+   },
+   {
+    "type": "amount",
+    "text": "$ 254.88"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,437.20"
+   },
+   {
+    "type": "amount",
+    "text": "$ 981.48"
+   },
+   {
+    "type": "amount",
+    "text": "$ 728.00"
+   },
+   {
+    "type": "amount",
+    "text": "$ 15,664.93"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,446.28"
+   },
+   {
+    "type": "amount",
+    "text": "$ 19,111.21"
+   },
+   {
+    "type": "iban",
+    "text": "IT23 A226 2604 3227 2236 1362 149"
+   },
+   {
+    "type": "hand",
+    "text": "$ 3,499.62"
+   }
+  ]
+ },
+ {
+  "id": "069_footnotes_L3_it",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "footnotes",
+  "lang": "it",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "3.057,47 €"
+   },
+   {
+    "type": "vat",
+    "text": "15953700944"
+   },
+   {
+    "type": "cig",
+    "text": "42F26CC5AE"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/09671"
+   },
+   {
+    "type": "date",
+    "text": "12/11/2022"
+   },
+   {
+    "type": "amount",
+    "text": "8.500.545,07 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT61 C190 0231 2182 5856 8384 595"
+   },
+   {
+    "type": "iban",
+    "text": "IT80 P787 8219 3113 5188 3771 714"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/02079"
+   },
+   {
+    "type": "date",
+    "text": "2 gennaio 2024"
+   },
+   {
+    "type": "iban",
+    "text": "IT53 S894 9522 1077 4586 1278 422"
+   }
+  ]
+ },
+ {
+  "id": "070_bilingual_L3_en",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "bilingual",
+  "lang": "en",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "date",
+    "text": "18/09/2026"
+   },
+   {
+    "type": "date",
+    "text": "2026-09-18"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/08206"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/04785"
+   },
+   {
+    "type": "amount",
+    "text": "280.785,36 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 280,785.36"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/01431"
+   }
+  ]
+ },
+ {
+  "id": "071_clauses_L3_it",
+  "gt": "exact",
+  "level": 3,
+  "tpl": "clauses",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "2.312.851,19 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.525,30 €"
+   },
+   {
+    "type": "cf",
+    "text": "TGPAFV61R22H998Z"
+   },
+   {
+    "type": "date",
+    "text": "1 luglio 2024"
+   },
+   {
+    "type": "vat",
+    "text": "25525085409"
+   },
+   {
+    "type": "cig",
+    "text": "A3CF795FAE"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/02543"
+   },
+   {
+    "type": "date",
+    "text": "04/12/2026"
+   },
+   {
+    "type": "hand",
+    "text": "6.181,68 €"
+   }
+  ]
+ },
+ {
+  "id": "072_prose_L4_it",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "prose",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "96,19 €"
+   },
+   {
+    "type": "amount",
+    "text": "6.829.485,04 €"
+   },
+   {
+    "type": "vat",
+    "text": "93020047874"
+   },
+   {
+    "type": "cig",
+    "text": "7BABFA6EB0"
+   },
+   {
+    "type": "amount",
+    "text": "4.685.051,88 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.177,98 €"
+   },
+   {
+    "type": "amount",
+    "text": "5.869.548,64 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.071,64 €"
+   },
+   {
+    "type": "cf",
+    "text": "SGBEAL64H26L565A"
+   },
+   {
+    "type": "date",
+    "text": "22/07/2025"
+   },
+   {
+    "type": "amount",
+    "text": "2.163,03 €"
+   },
+   {
+    "type": "amount",
+    "text": "260,68 €"
+   },
+   {
+    "type": "hand",
+    "text": "8.563,26 €"
+   }
+  ]
+ },
+ {
+  "id": "073_twocol_L4_en",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "twocol",
+  "lang": "en",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2022/07571"
+   },
+   {
+    "type": "date",
+    "text": "September 5, 2022"
+   },
+   {
+    "type": "cf",
+    "text": "GRVNDC96S23E413P"
+   },
+   {
+    "type": "date",
+    "text": "February 9, 2025"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,928.67"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/05428"
+   },
+   {
+    "type": "date",
+    "text": "2024-04-28"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/06979"
+   },
+   {
+    "type": "date",
+    "text": "December 2, 2024"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/09383"
+   },
+   {
+    "type": "date",
+    "text": "March 1, 2022"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/04320"
+   },
+   {
+    "type": "date",
+    "text": "December 7, 2025"
+   },
+   {
+    "type": "cf",
+    "text": "TPLMTH60E27E152F"
+   },
+   {
+    "type": "date",
+    "text": "2022-06-24"
+   }
+  ]
+ },
+ {
+  "id": "074_table_L4_it",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "table",
+  "lang": "it",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "81.152,54 €"
+   },
+   {
+    "type": "amount",
+    "text": "8.617,80 €"
+   },
+   {
+    "type": "amount",
+    "text": "649,22 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.605,59 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.404,20 €"
+   },
+   {
+    "type": "amount",
+    "text": "7.744,69 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.769,04 €"
+   },
+   {
+    "type": "amount",
+    "text": "180,18 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.457,85 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.948,98 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.051,49 €"
+   },
+   {
+    "type": "amount",
+    "text": "17.954,70 €"
+   },
+   {
+    "type": "amount",
+    "text": "13.254,03 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.440,85 €"
+   },
+   {
+    "type": "amount",
+    "text": "15.319,11 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.754,81 €"
+   }
+  ]
+ },
+ {
+  "id": "075_form_L4_en",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "form",
+  "lang": "en",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "31468319500"
+   },
+   {
+    "type": "cf",
+    "text": "ENNPBA64C19L141N"
+   },
+   {
+    "type": "iban",
+    "text": "IT69 C349 4888 0842 5117 0889 713"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/05154"
+   },
+   {
+    "type": "cig",
+    "text": "F95B8BFBA1"
+   },
+   {
+    "type": "date",
+    "text": "2023-04-08"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,925,512.60"
+   },
+   {
+    "type": "date",
+    "text": "September 26, 2023"
+   },
+   {
+    "type": "hand",
+    "text": "$ 7,364.26"
+   }
+  ]
+ },
+ {
+  "id": "076_invoice_L4_it",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "invoice",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "89544613654"
+   },
+   {
+    "type": "vat",
+    "text": "55510681379"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/09542"
+   },
+   {
+    "type": "date",
+    "text": "20/09/2024"
+   },
+   {
+    "type": "amount",
+    "text": "1.435,06 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.451,48 €"
+   },
+   {
+    "type": "amount",
+    "text": "992,18 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.831,68 €"
+   },
+   {
+    "type": "amount",
+    "text": "6.661,80 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.269,28 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.086,80 €"
+   },
+   {
+    "type": "amount",
+    "text": "19.728,28 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.340,22 €"
+   },
+   {
+    "type": "amount",
+    "text": "24.068,50 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT11 F740 1010 9080 6747 6603 618"
+   },
+   {
+    "type": "hand",
+    "text": "1.854,36 €"
+   }
+  ]
+ },
+ {
+  "id": "077_footnotes_L4_en",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "footnotes",
+  "lang": "en",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "84872886685"
+   },
+   {
+    "type": "cig",
+    "text": "CC3CC6C83F"
+   },
+   {
+    "type": "cf",
+    "text": "APTAVN58P02M950D"
+   },
+   {
+    "type": "date",
+    "text": "2022-11-17"
+   },
+   {
+    "type": "iban",
+    "text": "IT83 A880 4149 0772 4162 3266 415"
+   },
+   {
+    "type": "amount",
+    "text": "$ 8,695,169.23"
+   },
+   {
+    "type": "cf",
+    "text": "PMSEPH76D15A880B"
+   },
+   {
+    "type": "date",
+    "text": "2025-06-02"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,995.51"
+   },
+   {
+    "type": "vat",
+    "text": "77768878507"
+   },
+   {
+    "type": "cig",
+    "text": "E449ABFFF7"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,536.42"
+   }
+  ]
+ },
+ {
+  "id": "078_bilingual_L4_it",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "bilingual",
+  "lang": "it",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "841.411,40 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 841,411.40"
+   },
+   {
+    "type": "amount",
+    "text": "518.885,84 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 518,885.84"
+   },
+   {
+    "type": "date",
+    "text": "07/01/2025"
+   },
+   {
+    "type": "date",
+    "text": "2025-01-07"
+   },
+   {
+    "type": "date",
+    "text": "16/12/2022"
+   },
+   {
+    "type": "date",
+    "text": "2022-12-16"
+   },
+   {
+    "type": "amount",
+    "text": "128.036,57 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 128,036.57"
+   }
+  ]
+ },
+ {
+  "id": "079_clauses_L4_en",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "clauses",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 2,639.45"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,366,102.51"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,133.34"
+   },
+   {
+    "type": "vat",
+    "text": "73020433024"
+   },
+   {
+    "type": "cig",
+    "text": "35419FAA9F"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,598.21"
+   },
+   {
+    "type": "hand",
+    "text": "$ 4,081.04"
+   }
+  ]
+ },
+ {
+  "id": "080_prose_L4_en",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "prose",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 3,449.78"
+   },
+   {
+    "type": "iban",
+    "text": "IT43 Q317 7784 2626 0999 3112 825"
+   },
+   {
+    "type": "vat",
+    "text": "95990188759"
+   },
+   {
+    "type": "cig",
+    "text": "F9B2DEDAF2"
+   },
+   {
+    "type": "cf",
+    "text": "VEANSD90P01M509K"
+   },
+   {
+    "type": "date",
+    "text": "2025-09-22"
+   },
+   {
+    "type": "cf",
+    "text": "FRECZT89R01Z116D"
+   },
+   {
+    "type": "date",
+    "text": "January 4, 2026"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/08608"
+   },
+   {
+    "type": "date",
+    "text": "February 16, 2026"
+   },
+   {
+    "type": "iban",
+    "text": "IT24 B170 3975 1883 7808 4650 704"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/01775"
+   },
+   {
+    "type": "date",
+    "text": "March 6, 2025"
+   },
+   {
+    "type": "iban",
+    "text": "IT58 Z743 7419 2159 0671 3543 580"
+   },
+   {
+    "type": "vat",
+    "text": "15161389179"
+   },
+   {
+    "type": "cig",
+    "text": "744C9FF2D5"
+   },
+   {
+    "type": "hand",
+    "text": "$ 8,734.68"
+   }
+  ]
+ },
+ {
+  "id": "081_twocol_L4_it",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "twocol",
+  "lang": "it",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "99369571197"
+   },
+   {
+    "type": "cig",
+    "text": "B01640BDE8"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/08321"
+   },
+   {
+    "type": "date",
+    "text": "24/09/2022"
+   },
+   {
+    "type": "vat",
+    "text": "08216242472"
+   },
+   {
+    "type": "cig",
+    "text": "135276F84F"
+   },
+   {
+    "type": "amount",
+    "text": "1.499.643,97 €"
+   },
+   {
+    "type": "vat",
+    "text": "39531462284"
+   },
+   {
+    "type": "cig",
+    "text": "E0F782C1AA"
+   },
+   {
+    "type": "vat",
+    "text": "61921245693"
+   },
+   {
+    "type": "cig",
+    "text": "08BDB6DC9A"
+   },
+   {
+    "type": "vat",
+    "text": "75428769512"
+   },
+   {
+    "type": "cig",
+    "text": "3E0CE840C5"
+   },
+   {
+    "type": "vat",
+    "text": "60108045689"
+   },
+   {
+    "type": "cig",
+    "text": "CA5DD557D8"
+   }
+  ]
+ },
+ {
+  "id": "082_table_L4_en",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "table",
+  "lang": "en",
+  "font": "verdana",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 187,150.78"
+   },
+   {
+    "type": "amount",
+    "text": "$ 18,661.12"
+   },
+   {
+    "type": "amount",
+    "text": "$ 11,263.89"
+   },
+   {
+    "type": "amount",
+    "text": "$ 9,602.60"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,392.56"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,070.06"
+   },
+   {
+    "type": "amount",
+    "text": "$ 9,590.47"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,347.07"
+   },
+   {
+    "type": "amount",
+    "text": "$ 26,828.20"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,827.76"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,108.05"
+   },
+   {
+    "type": "amount",
+    "text": "$ 13,021.44"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,249.04"
+   },
+   {
+    "type": "amount",
+    "text": "$ 21,474.72"
+   },
+   {
+    "type": "amount",
+    "text": "$ 23,208.00"
+   },
+   {
+    "type": "amount",
+    "text": "$ 20,391.60"
+   },
+   {
+    "type": "amount",
+    "text": "$ 12,114.20"
+   }
+  ]
+ },
+ {
+  "id": "083_form_L4_it",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "form",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "32565387345"
+   },
+   {
+    "type": "cf",
+    "text": "GTFLPM89H09B311T"
+   },
+   {
+    "type": "iban",
+    "text": "IT21 B666 6662 9806 9752 3861 030"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/09912"
+   },
+   {
+    "type": "cig",
+    "text": "8BCA1F0513"
+   },
+   {
+    "type": "date",
+    "text": "27/09/2024"
+   },
+   {
+    "type": "amount",
+    "text": "1.989.450,12 €"
+   },
+   {
+    "type": "date",
+    "text": "17 maggio 2024"
+   },
+   {
+    "type": "hand",
+    "text": "7.334,32 €"
+   }
+  ]
+ },
+ {
+  "id": "084_invoice_L4_en",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "invoice",
+  "lang": "en",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "90771618491"
+   },
+   {
+    "type": "vat",
+    "text": "01573234715"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/06385"
+   },
+   {
+    "type": "date",
+    "text": "2022-06-26"
+   },
+   {
+    "type": "amount",
+    "text": "$ 133.68"
+   },
+   {
+    "type": "amount",
+    "text": "$ 813.68"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,245.12"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,885.96"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,185.04"
+   },
+   {
+    "type": "amount",
+    "text": "$ 11,902.55"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,501.19"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,457.40"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,779.68"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,839.10"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,158.21"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,182.90"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,006.25"
+   },
+   {
+    "type": "amount",
+    "text": "$ 42,090.76"
+   },
+   {
+    "type": "amount",
+    "text": "$ 9,259.97"
+   },
+   {
+    "type": "amount",
+    "text": "$ 51,350.73"
+   },
+   {
+    "type": "iban",
+    "text": "IT27 V045 3979 0548 6696 0939 439"
+   },
+   {
+    "type": "hand",
+    "text": "$ 5,283.70"
+   }
+  ]
+ },
+ {
+  "id": "085_footnotes_L4_it",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "footnotes",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "4.306,75 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.268,96 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.097,06 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT44 G926 4692 9000 7143 3038 642"
+   },
+   {
+    "type": "vat",
+    "text": "51592890806"
+   },
+   {
+    "type": "cig",
+    "text": "2C80CB6195"
+   },
+   {
+    "type": "cf",
+    "text": "GPRCTS51B17B280M"
+   },
+   {
+    "type": "date",
+    "text": "6 novembre 2025"
+   },
+   {
+    "type": "amount",
+    "text": "780.229,40 €"
+   }
+  ]
+ },
+ {
+  "id": "086_bilingual_L4_en",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "bilingual",
+  "lang": "en",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "259.981,86 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 259,981.86"
+   },
+   {
+    "type": "date",
+    "text": "01/09/2024"
+   },
+   {
+    "type": "date",
+    "text": "2024-09-01"
+   },
+   {
+    "type": "date",
+    "text": "03/07/2022"
+   },
+   {
+    "type": "date",
+    "text": "2022-07-03"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/02664"
+   },
+   {
+    "type": "amount",
+    "text": "521.510,48 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 521,510.48"
+   }
+  ]
+ },
+ {
+  "id": "087_clauses_L4_it",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "clauses",
+  "lang": "it",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "6.313.452,88 €"
+   },
+   {
+    "type": "amount",
+    "text": "7.498.417,00 €"
+   },
+   {
+    "type": "amount",
+    "text": "6.709.839,15 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.768,94 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.892.471,49 €"
+   },
+   {
+    "type": "hand",
+    "text": "1.784,69 €"
+   }
+  ]
+ },
+ {
+  "id": "088_prose_L4_it",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "prose",
+  "lang": "it",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "65268933689"
+   },
+   {
+    "type": "cig",
+    "text": "A59ECBF474"
+   },
+   {
+    "type": "iban",
+    "text": "IT95 A625 2990 9644 6886 3441 212"
+   },
+   {
+    "type": "iban",
+    "text": "IT79 A018 3729 9269 4369 2425 190"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/00079"
+   },
+   {
+    "type": "date",
+    "text": "24 novembre 2024"
+   },
+   {
+    "type": "cf",
+    "text": "LGNLNH67H01C103R"
+   },
+   {
+    "type": "date",
+    "text": "07/01/2026"
+   },
+   {
+    "type": "amount",
+    "text": "8.632.254,67 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.479.378,32 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.531,93 €"
+   },
+   {
+    "type": "vat",
+    "text": "04475618653"
+   },
+   {
+    "type": "cig",
+    "text": "0B6989AC2B"
+   },
+   {
+    "type": "iban",
+    "text": "IT37 Y486 3194 3684 8288 1224 434"
+   },
+   {
+    "type": "hand",
+    "text": "1.161,85 €"
+   }
+  ]
+ },
+ {
+  "id": "089_twocol_L4_en",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "twocol",
+  "lang": "en",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2026/02963"
+   },
+   {
+    "type": "date",
+    "text": "2022-10-12"
+   },
+   {
+    "type": "iban",
+    "text": "IT37 L579 5387 7019 7826 7476 101"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,458.72"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/04730"
+   },
+   {
+    "type": "date",
+    "text": "2024-10-22"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/06089"
+   },
+   {
+    "type": "date",
+    "text": "2026-10-06"
+   },
+   {
+    "type": "iban",
+    "text": "IT86 D702 8025 5491 4497 0546 832"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,262,162.45"
+   },
+   {
+    "type": "cf",
+    "text": "CBZRTA53E20Z419D"
+   },
+   {
+    "type": "date",
+    "text": "November 6, 2023"
+   }
+  ]
+ },
+ {
+  "id": "090_table_L4_it",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "table",
+  "lang": "it",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "122.580,19 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.680,68 €"
+   },
+   {
+    "type": "amount",
+    "text": "15.103,82 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.021,54 €"
+   },
+   {
+    "type": "amount",
+    "text": "14.949,80 €"
+   },
+   {
+    "type": "amount",
+    "text": "14.705,90 €"
+   },
+   {
+    "type": "amount",
+    "text": "13.553,08 €"
+   },
+   {
+    "type": "amount",
+    "text": "7.898,10 €"
+   },
+   {
+    "type": "amount",
+    "text": "22.299,92 €"
+   },
+   {
+    "type": "amount",
+    "text": "5.855,20 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.835,39 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.273,48 €"
+   },
+   {
+    "type": "amount",
+    "text": "5.406,12 €"
+   },
+   {
+    "type": "amount",
+    "text": "462,24 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.534,92 €"
+   }
+  ]
+ },
+ {
+  "id": "091_form_L4_en",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "form",
+  "lang": "en",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "83309044777"
+   },
+   {
+    "type": "cf",
+    "text": "VFTAFR57A27D445X"
+   },
+   {
+    "type": "iban",
+    "text": "IT37 Y238 4781 8220 0910 3356 800"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/03281"
+   },
+   {
+    "type": "cig",
+    "text": "3378EF952B"
+   },
+   {
+    "type": "date",
+    "text": "2024-01-17"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,635,964.11"
+   },
+   {
+    "type": "date",
+    "text": "2026-09-01"
+   },
+   {
+    "type": "hand",
+    "text": "$ 4,877.96"
+   }
+  ]
+ },
+ {
+  "id": "092_invoice_L4_it",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "invoice",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "86228599180"
+   },
+   {
+    "type": "vat",
+    "text": "48467823087"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/03198"
+   },
+   {
+    "type": "date",
+    "text": "7 novembre 2023"
+   },
+   {
+    "type": "amount",
+    "text": "4.765,20 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.374,60 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.155,85 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.098,56 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.317,96 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.602,62 €"
+   },
+   {
+    "type": "amount",
+    "text": "628,71 €"
+   },
+   {
+    "type": "amount",
+    "text": "945,48 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.977,81 €"
+   },
+   {
+    "type": "amount",
+    "text": "154,52 €"
+   },
+   {
+    "type": "amount",
+    "text": "8.214,48 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.938,80 €"
+   },
+   {
+    "type": "amount",
+    "text": "479,70 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.212,60 €"
+   },
+   {
+    "type": "amount",
+    "text": "41.866,89 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.210,72 €"
+   },
+   {
+    "type": "amount",
+    "text": "51.077,61 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT43 N082 7604 1455 6683 4087 474"
+   },
+   {
+    "type": "hand",
+    "text": "3.690,25 €"
+   }
+  ]
+ },
+ {
+  "id": "093_footnotes_L4_en",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "footnotes",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2026/02895"
+   },
+   {
+    "type": "date",
+    "text": "2022-10-28"
+   },
+   {
+    "type": "iban",
+    "text": "IT56 S756 1069 4131 0716 2906 527"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,023,410.25"
+   },
+   {
+    "type": "iban",
+    "text": "IT66 B273 6102 9329 9034 8787 654"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,398.64"
+   },
+   {
+    "type": "cf",
+    "text": "CVPPLE59R08L342H"
+   },
+   {
+    "type": "date",
+    "text": "2025-07-04"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/09265"
+   },
+   {
+    "type": "date",
+    "text": "July 6, 2026"
+   }
+  ]
+ },
+ {
+  "id": "094_bilingual_L4_it",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "bilingual",
+  "lang": "it",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2025/08778"
+   },
+   {
+    "type": "date",
+    "text": "21/10/2022"
+   },
+   {
+    "type": "date",
+    "text": "2022-10-21"
+   },
+   {
+    "type": "date",
+    "text": "27/02/2025"
+   },
+   {
+    "type": "date",
+    "text": "2025-02-27"
+   },
+   {
+    "type": "amount",
+    "text": "503.610,69 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 503,610.69"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/06792"
+   }
+  ]
+ },
+ {
+  "id": "095_clauses_L4_en",
+  "gt": "exact",
+  "level": 4,
+  "tpl": "clauses",
+  "lang": "en",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "cf",
+    "text": "PVECBN99D08F404U"
+   },
+   {
+    "type": "date",
+    "text": "2026-05-15"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,789,244.98"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/04852"
+   },
+   {
+    "type": "date",
+    "text": "2025-03-12"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,076.98"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,364.08"
+   },
+   {
+    "type": "hand",
+    "text": "$ 7,382.98"
+   }
+  ]
+ },
+ {
+  "id": "096_prose_L5_en",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "prose",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2026/08026"
+   },
+   {
+    "type": "date",
+    "text": "September 19, 2024"
+   },
+   {
+    "type": "iban",
+    "text": "IT75 L131 6820 6552 9042 0716 209"
+   },
+   {
+    "type": "amount",
+    "text": "$ 115.87"
+   },
+   {
+    "type": "iban",
+    "text": "IT31 Z204 9080 6789 1652 6509 527"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/07506"
+   },
+   {
+    "type": "date",
+    "text": "2026-07-02"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/02013"
+   },
+   {
+    "type": "date",
+    "text": "2025-10-15"
+   },
+   {
+    "type": "cf",
+    "text": "GRFMEN72S15F858R"
+   },
+   {
+    "type": "date",
+    "text": "2023-02-21"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/09995"
+   },
+   {
+    "type": "date",
+    "text": "August 25, 2022"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,918,269.11"
+   },
+   {
+    "type": "iban",
+    "text": "IT13 W616 5782 0877 2896 2820 104"
+   },
+   {
+    "type": "hand",
+    "text": "$ 2,306.81"
+   }
+  ]
+ },
+ {
+  "id": "097_twocol_L5_it",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "twocol",
+  "lang": "it",
+  "font": "times",
+  "rot90": true,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "3.980,88 €"
+   },
+   {
+    "type": "vat",
+    "text": "71152061930"
+   },
+   {
+    "type": "cig",
+    "text": "4728A627C1"
+   },
+   {
+    "type": "amount",
+    "text": "2.022.902,52 €"
+   },
+   {
+    "type": "cf",
+    "text": "TGADVB65M09D945G"
+   },
+   {
+    "type": "date",
+    "text": "19/07/2026"
+   },
+   {
+    "type": "amount",
+    "text": "2.670,55 €"
+   },
+   {
+    "type": "cf",
+    "text": "FVLPMG53C16F478F"
+   },
+   {
+    "type": "date",
+    "text": "11/06/2023"
+   },
+   {
+    "type": "vat",
+    "text": "53986918494"
+   },
+   {
+    "type": "cig",
+    "text": "B92CCD9255"
+   },
+   {
+    "type": "iban",
+    "text": "IT96 E918 2031 4586 2585 8651 133"
+   }
+  ]
+ },
+ {
+  "id": "098_table_L5_en",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "table",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 144,166.85"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,431.78"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,496.55"
+   },
+   {
+    "type": "amount",
+    "text": "$ 10,022.52"
+   },
+   {
+    "type": "amount",
+    "text": "$ 643.92"
+   },
+   {
+    "type": "amount",
+    "text": "$ 20,025.75"
+   },
+   {
+    "type": "amount",
+    "text": "$ 520.56"
+   },
+   {
+    "type": "amount",
+    "text": "$ 9,491.13"
+   },
+   {
+    "type": "amount",
+    "text": "$ 33,336.26"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,019.26"
+   },
+   {
+    "type": "amount",
+    "text": "$ 30,887.85"
+   },
+   {
+    "type": "amount",
+    "text": "$ 9,512.29"
+   },
+   {
+    "type": "amount",
+    "text": "$ 22,778.98"
+   }
+  ]
+ },
+ {
+  "id": "099_form_L5_it",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "form",
+  "lang": "it",
+  "font": "courier",
+  "rot90": true,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "54054931654"
+   },
+   {
+    "type": "cf",
+    "text": "PDCTEN66P26Z681H"
+   },
+   {
+    "type": "iban",
+    "text": "IT51 W163 8519 6467 5554 6501 038"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/04539"
+   },
+   {
+    "type": "cig",
+    "text": "91E9B5D532"
+   },
+   {
+    "type": "date",
+    "text": "21 marzo 2023"
+   },
+   {
+    "type": "amount",
+    "text": "300.289,49 €"
+   },
+   {
+    "type": "date",
+    "text": "4 settembre 2025"
+   },
+   {
+    "type": "hand",
+    "text": "1.379,56 €"
+   }
+  ]
+ },
+ {
+  "id": "100_invoice_L5_en",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "invoice",
+  "lang": "en",
+  "font": "helv",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "81349477563"
+   },
+   {
+    "type": "vat",
+    "text": "61332144442"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/03506"
+   },
+   {
+    "type": "date",
+    "text": "January 22, 2024"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,599.00"
+   },
+   {
+    "type": "amount",
+    "text": "$ 10,982.38"
+   },
+   {
+    "type": "amount",
+    "text": "$ 7,544.60"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,921.92"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,954.50"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,534.63"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,083.61"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,535.30"
+   },
+   {
+    "type": "amount",
+    "text": "$ 9,245.70"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,652.77"
+   },
+   {
+    "type": "amount",
+    "text": "$ 506.06"
+   },
+   {
+    "type": "amount",
+    "text": "$ 700.00"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,790.24"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,808.30"
+   },
+   {
+    "type": "amount",
+    "text": "$ 62,859.01"
+   },
+   {
+    "type": "amount",
+    "text": "$ 13,828.98"
+   },
+   {
+    "type": "amount",
+    "text": "$ 76,687.99"
+   },
+   {
+    "type": "iban",
+    "text": "IT52 U344 3540 3956 5600 1148 373"
+   },
+   {
+    "type": "hand",
+    "text": "$ 5,795.13"
+   }
+  ]
+ },
+ {
+  "id": "101_footnotes_L5_it",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "footnotes",
+  "lang": "it",
+  "font": "verdana",
+  "rot90": true,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2026/06769"
+   },
+   {
+    "type": "date",
+    "text": "20/10/2023"
+   },
+   {
+    "type": "iban",
+    "text": "IT16 C547 1930 5236 7380 9178 957"
+   },
+   {
+    "type": "cf",
+    "text": "SFZASV56C23M471T"
+   },
+   {
+    "type": "date",
+    "text": "14/01/2022"
+   },
+   {
+    "type": "amount",
+    "text": "3.297,99 €"
+   },
+   {
+    "type": "amount",
+    "text": "7.583.118,23 €"
+   },
+   {
+    "type": "cf",
+    "text": "HRASPC64D13Z969S"
+   },
+   {
+    "type": "date",
+    "text": "19 maggio 2023"
+   },
+   {
+    "type": "vat",
+    "text": "17290240390"
+   },
+   {
+    "type": "cig",
+    "text": "D77EEA18F9"
+   },
+   {
+    "type": "amount",
+    "text": "3.440,08 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT61 H437 5312 4974 1277 3575 483"
+   }
+  ]
+ },
+ {
+  "id": "102_bilingual_L5_en",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "bilingual",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "contract",
+    "text": "CTR/2025/04938"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/06674"
+   },
+   {
+    "type": "amount",
+    "text": "64.149,30 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 64,149.30"
+   },
+   {
+    "type": "date",
+    "text": "11/03/2026"
+   },
+   {
+    "type": "date",
+    "text": "2026-03-11"
+   },
+   {
+    "type": "amount",
+    "text": "57.658,34 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 57,658.34"
+   }
+  ]
+ },
+ {
+  "id": "103_clauses_L5_it",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "clauses",
+  "lang": "it",
+  "font": "verdana",
+  "rot90": true,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "3.149,73 €"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/06011"
+   },
+   {
+    "type": "date",
+    "text": "09/10/2024"
+   },
+   {
+    "type": "cf",
+    "text": "HCDGNM94E25B593X"
+   },
+   {
+    "type": "date",
+    "text": "23/02/2026"
+   },
+   {
+    "type": "amount",
+    "text": "8.307.896,76 €"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/08490"
+   },
+   {
+    "type": "date",
+    "text": "26/10/2025"
+   },
+   {
+    "type": "hand",
+    "text": "4.606,35 €"
+   }
+  ]
+ },
+ {
+  "id": "104_prose_L5_it",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "prose",
+  "lang": "it",
+  "font": "courier",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "cf",
+    "text": "VTDFZB58P28C779V"
+   },
+   {
+    "type": "date",
+    "text": "03/07/2026"
+   },
+   {
+    "type": "vat",
+    "text": "67704419752"
+   },
+   {
+    "type": "cig",
+    "text": "57DEBA96E9"
+   },
+   {
+    "type": "amount",
+    "text": "2.184.075,13 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.783,81 €"
+   },
+   {
+    "type": "vat",
+    "text": "64933864655"
+   },
+   {
+    "type": "cig",
+    "text": "DD9281C34F"
+   },
+   {
+    "type": "amount",
+    "text": "360.103,90 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.812.036,57 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT16 P532 2385 1986 0577 3938 607"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/08716"
+   },
+   {
+    "type": "date",
+    "text": "12 settembre 2023"
+   },
+   {
+    "type": "amount",
+    "text": "2.640,79 €"
+   },
+   {
+    "type": "hand",
+    "text": "7.102,50 €"
+   }
+  ]
+ },
+ {
+  "id": "105_twocol_L5_en",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "twocol",
+  "lang": "en",
+  "font": "times",
+  "rot90": true,
+  "entities": [
+   {
+    "type": "cf",
+    "text": "VEHSTR51A23Z842P"
+   },
+   {
+    "type": "date",
+    "text": "2022-10-22"
+   },
+   {
+    "type": "cf",
+    "text": "FDBHRT73M06M630X"
+   },
+   {
+    "type": "date",
+    "text": "2026-07-14"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/01001"
+   },
+   {
+    "type": "date",
+    "text": "November 28, 2025"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,150.02"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/05913"
+   },
+   {
+    "type": "date",
+    "text": "2022-11-28"
+   },
+   {
+    "type": "cf",
+    "text": "TDHEES71D20F982A"
+   },
+   {
+    "type": "date",
+    "text": "2024-05-15"
+   },
+   {
+    "type": "amount",
+    "text": "$ 738,158.77"
+   },
+   {
+    "type": "vat",
+    "text": "90073275188"
+   },
+   {
+    "type": "cig",
+    "text": "E22914F8D8"
+   }
+  ]
+ },
+ {
+  "id": "106_table_L5_it",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "table",
+  "lang": "it",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "127.823,45 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.277,80 €"
+   },
+   {
+    "type": "amount",
+    "text": "490,44 €"
+   },
+   {
+    "type": "amount",
+    "text": "7.553,64 €"
+   },
+   {
+    "type": "amount",
+    "text": "7.140,16 €"
+   },
+   {
+    "type": "amount",
+    "text": "18.363,20 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.358,16 €"
+   },
+   {
+    "type": "amount",
+    "text": "10.664,00 €"
+   },
+   {
+    "type": "amount",
+    "text": "13.887,28 €"
+   },
+   {
+    "type": "amount",
+    "text": "19.510,26 €"
+   },
+   {
+    "type": "amount",
+    "text": "10.569,24 €"
+   },
+   {
+    "type": "amount",
+    "text": "7.374,40 €"
+   },
+   {
+    "type": "amount",
+    "text": "21.634,87 €"
+   }
+  ]
+ },
+ {
+  "id": "107_form_L5_en",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "form",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": true,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "46528668623"
+   },
+   {
+    "type": "cf",
+    "text": "AHREGN75A21L638V"
+   },
+   {
+    "type": "iban",
+    "text": "IT29 T898 6300 3921 4281 0902 844"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/03267"
+   },
+   {
+    "type": "cig",
+    "text": "24EB1EB5B0"
+   },
+   {
+    "type": "date",
+    "text": "November 19, 2026"
+   },
+   {
+    "type": "amount",
+    "text": "$ 622,596.17"
+   },
+   {
+    "type": "date",
+    "text": "May 24, 2026"
+   },
+   {
+    "type": "hand",
+    "text": "$ 7,147.52"
+   }
+  ]
+ },
+ {
+  "id": "108_invoice_L5_it",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "invoice",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "38897693950"
+   },
+   {
+    "type": "vat",
+    "text": "05820286008"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/07325"
+   },
+   {
+    "type": "date",
+    "text": "17 dicembre 2024"
+   },
+   {
+    "type": "amount",
+    "text": "1.045,90 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.224,20 €"
+   },
+   {
+    "type": "amount",
+    "text": "100,47 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.510,13 €"
+   },
+   {
+    "type": "amount",
+    "text": "6.502,65 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.013,60 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.179,45 €"
+   },
+   {
+    "type": "amount",
+    "text": "166,75 €"
+   },
+   {
+    "type": "amount",
+    "text": "818,30 €"
+   },
+   {
+    "type": "amount",
+    "text": "3.569,80 €"
+   },
+   {
+    "type": "amount",
+    "text": "8.359,40 €"
+   },
+   {
+    "type": "amount",
+    "text": "6.892,60 €"
+   },
+   {
+    "type": "amount",
+    "text": "2.617,60 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.540,60 €"
+   },
+   {
+    "type": "amount",
+    "text": "41.541,45 €"
+   },
+   {
+    "type": "amount",
+    "text": "9.139,12 €"
+   },
+   {
+    "type": "amount",
+    "text": "50.680,57 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT38 N035 6019 8058 3810 2662 133"
+   },
+   {
+    "type": "hand",
+    "text": "3.198,59 €"
+   }
+  ]
+ },
+ {
+  "id": "109_footnotes_L5_en",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "footnotes",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": true,
+  "entities": [
+   {
+    "type": "iban",
+    "text": "IT33 U370 4161 0706 0335 1341 170"
+   },
+   {
+    "type": "cf",
+    "text": "MLRRMB81R06G884Y"
+   },
+   {
+    "type": "date",
+    "text": "2025-09-05"
+   },
+   {
+    "type": "amount",
+    "text": "$ 4,531.31"
+   },
+   {
+    "type": "vat",
+    "text": "60867173240"
+   },
+   {
+    "type": "cig",
+    "text": "62F314A68E"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/08243"
+   },
+   {
+    "type": "date",
+    "text": "March 7, 2026"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,712,498.11"
+   },
+   {
+    "type": "vat",
+    "text": "96412046807"
+   },
+   {
+    "type": "cig",
+    "text": "D487148AE9"
+   }
+  ]
+ },
+ {
+  "id": "110_bilingual_L5_it",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "bilingual",
+  "lang": "it",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "date",
+    "text": "19/02/2025"
+   },
+   {
+    "type": "date",
+    "text": "2025-02-19"
+   },
+   {
+    "type": "date",
+    "text": "04/11/2025"
+   },
+   {
+    "type": "date",
+    "text": "2025-11-04"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/01270"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/01077"
+   },
+   {
+    "type": "amount",
+    "text": "396.718,70 €"
+   },
+   {
+    "type": "amount",
+    "text": "$ 396,718.70"
+   }
+  ]
+ },
+ {
+  "id": "111_clauses_L5_en",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "clauses",
+  "lang": "en",
+  "font": "helv",
+  "rot90": true,
+  "entities": [
+   {
+    "type": "cf",
+    "text": "REGEDF59A24L185Y"
+   },
+   {
+    "type": "date",
+    "text": "2025-08-04"
+   },
+   {
+    "type": "cf",
+    "text": "GVHGGS71R04Z541V"
+   },
+   {
+    "type": "date",
+    "text": "2024-01-01"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,043,715.91"
+   },
+   {
+    "type": "vat",
+    "text": "12547411045"
+   },
+   {
+    "type": "cig",
+    "text": "2CEC805081"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,033.38"
+   },
+   {
+    "type": "hand",
+    "text": "$ 3,032.79"
+   }
+  ]
+ },
+ {
+  "id": "112_prose_L5_en",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "prose",
+  "lang": "en",
+  "font": "georgia",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "cf",
+    "text": "MVZVRR99R23A339G"
+   },
+   {
+    "type": "date",
+    "text": "2024-07-07"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2024/06332"
+   },
+   {
+    "type": "date",
+    "text": "2025-09-10"
+   },
+   {
+    "type": "amount",
+    "text": "$ 22,726.76"
+   },
+   {
+    "type": "amount",
+    "text": "$ 605.61"
+   },
+   {
+    "type": "cf",
+    "text": "VHESZF96B10H920U"
+   },
+   {
+    "type": "date",
+    "text": "February 17, 2024"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/00755"
+   },
+   {
+    "type": "date",
+    "text": "2025-02-15"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2022/00845"
+   },
+   {
+    "type": "date",
+    "text": "May 4, 2023"
+   },
+   {
+    "type": "cf",
+    "text": "ATSLZH60L16F274E"
+   },
+   {
+    "type": "date",
+    "text": "February 24, 2022"
+   },
+   {
+    "type": "amount",
+    "text": "$ 820.91"
+   },
+   {
+    "type": "amount",
+    "text": "$ 7,094,815.61"
+   },
+   {
+    "type": "hand",
+    "text": "$ 5,361.55"
+   }
+  ]
+ },
+ {
+  "id": "113_twocol_L5_it",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "twocol",
+  "lang": "it",
+  "font": "trebuchet",
+  "rot90": true,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "4.532,88 €"
+   },
+   {
+    "type": "amount",
+    "text": "1.455,30 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT33 L508 5233 1578 8614 7916 877"
+   },
+   {
+    "type": "vat",
+    "text": "19902783466"
+   },
+   {
+    "type": "cig",
+    "text": "FB50D2F198"
+   },
+   {
+    "type": "amount",
+    "text": "2.903,60 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT83 S806 2893 7937 6354 9142 330"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/09592"
+   },
+   {
+    "type": "date",
+    "text": "9 novembre 2025"
+   },
+   {
+    "type": "vat",
+    "text": "83868504925"
+   },
+   {
+    "type": "cig",
+    "text": "EF27181B83"
+   }
+  ]
+ },
+ {
+  "id": "114_table_L5_en",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "table",
+  "lang": "en",
+  "font": "times",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "amount",
+    "text": "$ 192,980.85"
+   },
+   {
+    "type": "amount",
+    "text": "$ 23,340.45"
+   },
+   {
+    "type": "amount",
+    "text": "$ 15,796.00"
+   },
+   {
+    "type": "amount",
+    "text": "$ 23,819.04"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,479.28"
+   },
+   {
+    "type": "amount",
+    "text": "$ 23,619.09"
+   },
+   {
+    "type": "amount",
+    "text": "$ 20,888.25"
+   },
+   {
+    "type": "amount",
+    "text": "$ 12,126.06"
+   },
+   {
+    "type": "amount",
+    "text": "$ 24,570.88"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,295.40"
+   },
+   {
+    "type": "amount",
+    "text": "$ 10,895.39"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,192.36"
+   },
+   {
+    "type": "amount",
+    "text": "$ 5,710.10"
+   },
+   {
+    "type": "amount",
+    "text": "$ 21,162.57"
+   },
+   {
+    "type": "amount",
+    "text": "$ 85.98"
+   }
+  ]
+ },
+ {
+  "id": "115_form_L5_it",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "form",
+  "lang": "it",
+  "font": "times",
+  "rot90": true,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "02793469762"
+   },
+   {
+    "type": "cf",
+    "text": "CNTGEP99M20L878R"
+   },
+   {
+    "type": "iban",
+    "text": "IT60 L183 5512 4595 2181 4490 674"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/06724"
+   },
+   {
+    "type": "cig",
+    "text": "F274A4C453"
+   },
+   {
+    "type": "date",
+    "text": "26 novembre 2024"
+   },
+   {
+    "type": "amount",
+    "text": "3.758.105,73 €"
+   },
+   {
+    "type": "date",
+    "text": "1 marzo 2024"
+   },
+   {
+    "type": "hand",
+    "text": "8.325,07 €"
+   }
+  ]
+ },
+ {
+  "id": "116_invoice_L5_en",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "invoice",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "vat",
+    "text": "56274638202"
+   },
+   {
+    "type": "vat",
+    "text": "66070385097"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2026/01292"
+   },
+   {
+    "type": "date",
+    "text": "2026-01-27"
+   },
+   {
+    "type": "amount",
+    "text": "$ 1,979.40"
+   },
+   {
+    "type": "amount",
+    "text": "$ 8,115.84"
+   },
+   {
+    "type": "amount",
+    "text": "$ 7,390.75"
+   },
+   {
+    "type": "amount",
+    "text": "$ 6,857.64"
+   },
+   {
+    "type": "amount",
+    "text": "$ 12,038.40"
+   },
+   {
+    "type": "amount",
+    "text": "$ 484.54"
+   },
+   {
+    "type": "amount",
+    "text": "$ 3,639.90"
+   },
+   {
+    "type": "amount",
+    "text": "$ 2,640.84"
+   },
+   {
+    "type": "amount",
+    "text": "$ 43,147.31"
+   },
+   {
+    "type": "amount",
+    "text": "$ 9,492.41"
+   },
+   {
+    "type": "amount",
+    "text": "$ 52,639.72"
+   },
+   {
+    "type": "iban",
+    "text": "IT65 L276 0858 8314 2640 7834 406"
+   },
+   {
+    "type": "hand",
+    "text": "$ 6,425.02"
+   }
+  ]
+ },
+ {
+  "id": "117_footnotes_L5_it",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "footnotes",
+  "lang": "it",
+  "font": "verdana",
+  "rot90": true,
+  "entities": [
+   {
+    "type": "iban",
+    "text": "IT50 U412 9421 6190 5045 9401 411"
+   },
+   {
+    "type": "cf",
+    "text": "LMAFAM63P01C486U"
+   },
+   {
+    "type": "date",
+    "text": "24/10/2026"
+   },
+   {
+    "type": "vat",
+    "text": "64361144771"
+   },
+   {
+    "type": "cig",
+    "text": "4A665BDAEB"
+   },
+   {
+    "type": "vat",
+    "text": "57776366220"
+   },
+   {
+    "type": "cig",
+    "text": "7331C34D52"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2023/01321"
+   },
+   {
+    "type": "date",
+    "text": "25 settembre 2022"
+   },
+   {
+    "type": "vat",
+    "text": "59122537999"
+   },
+   {
+    "type": "cig",
+    "text": "02B8DB5223"
+   },
+   {
+    "type": "iban",
+    "text": "IT32 S483 6909 7763 3938 7877 000"
+   },
+   {
+    "type": "iban",
+    "text": "IT28 U416 1061 9278 9909 3503 925"
+   },
+   {
+    "type": "vat",
+    "text": "17934897321"
+   },
+   {
+    "type": "cig",
+    "text": "8524344D0D"
+   }
+  ]
+ },
+ {
+  "id": "118_bilingual_L5_en",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "bilingual",
+  "lang": "en",
+  "font": "trebuchet",
+  "rot90": false,
+  "entities": [
+   {
+    "type": "date",
+    "text": "09/04/2026"
+   },
+   {
+    "type": "date",
+    "text": "2026-04-09"
+   },
+   {
+    "type": "date",
+    "text": "09/01/2025"
+   },
+   {
+    "type": "date",
+    "text": "2025-01-09"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/07322"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/09692"
+   },
+   {
+    "type": "contract",
+    "text": "CTR/2025/02813"
+   }
+  ]
+ },
+ {
+  "id": "119_clauses_L5_it",
+  "gt": "exact",
+  "level": 5,
+  "tpl": "clauses",
+  "lang": "it",
+  "font": "trebuchet",
+  "rot90": true,
+  "entities": [
+   {
+    "type": "iban",
+    "text": "IT22 E606 2532 7709 0159 9257 262"
+   },
+   {
+    "type": "amount",
+    "text": "3.677.410,66 €"
+   },
+   {
+    "type": "amount",
+    "text": "4.044.061,35 €"
+   },
+   {
+    "type": "iban",
+    "text": "IT88 Y014 1673 0016 2917 6408 085"
+   },
+   {
+    "type": "vat",
+    "text": "86853367507"
+   },
+   {
+    "type": "cig",
+    "text": "6BE7B4CAFB"
+   },
+   {
+    "type": "hand",
+    "text": "418,61 €"
+   }
+  ]
+ }
+]

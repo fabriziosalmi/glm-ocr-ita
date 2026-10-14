@@ -1,0 +1,69 @@
+{
+ "tag": "panel_gemini_itdoc_d_ft_op1_30",
+ "model": "work/glm-ocr-bf16",
+ "corpus": "gemini/itdoc_d",
+ "scale": 1.0,
+ "adapter": "work/ft/op1_30",
+ "env": {
+  "macos": "26.3",
+  "python": "3.12.15",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "pages": {
+  "itdoc_d_0060_invoice_detail_lines_L1_it": {
+   "text": "BANCA POPOLARE DELL'ETRURIA E DEL LAZIO S.P.A.\nEstratto Conto Scalare e Lista Movimenti n. EST/2024-5507 al 06/07/2026\n\nINTESTAZIONE DEL RAPPORTO E DATI ANAGRAFICI CLIENTE:\nIstituto: Banca Popolare dell'Etruria e del Lazio S.p.A. - Sede di Arezzo\nCorrentista: Farmaceutica Meridionale S.p.A. (Napoli)\nP.IVA: 42967128036 | C.F.: QZCBRC58L29B157O | PEC: direzione@venetotecno.example\nIdentificativo CIG: 34SLT2G6U1 | CUP: V47J88418118141\n\nN. Descrizione Operazione Bancaria CIG / Rif. Q.tà Importo Singolo Totale Voce\n01 Versamento assegni circolari non tra 34SLT2G6U1 4 8.500,00 € 34.000,00 €\n02 Addebito imposta di bollo conto peri 34SLT2G6U1 2 25,00 € 50,00 €\n03 Bonifico SEPA disposta a favore ditt 34SLT2G6U1 3 4.850,00 € 14.550,00 €\n04 Addebito diretto SEPA SDD per canone 34SLT2G6U1 3 2.350,00 € 7.050,00 €\n05 Incasso effetti commerciali procedur 34SLT2G6U1 9 6.750,00 € 60.750,00 €\n06 Liquidazione interessi debitori e co 34SLT2G6U1 3 460,00 € 1.380,00 €\n07 Addebito utenze energia elettrica e 34SLT2G6U1 3 1.240,00 € 3.720,00 €\n08 Commissione istruttoria veloce su ex 34SLT2G6U1 3 120,00 € 360,00 €\n09 Commissione per bonifico estero non- 34SLT2G6U1 2 35,00 € 70,00 €\n10 Rimborso quota capitale e interessi 34SLT2G6U1 2 3.420,00 € 6.840,00 €\n11 Prelievo contante autorizzato cassa 34SLT2G6U1 3 2.500,00 € 7.500,00 €\n12 Accredito dividendi azionari titoli 34SLT2G6U1 2 1.890,00 € 3.780,00 €\n13 Ritenuta fiscale 26% su proventi fini 34SLT2G6U1 2 112,50 € 225,00 €\n14 Addebito POS esercente per transazio 34SLT2G6U1 2 385,00 € 770,00 €\n\nTOTALE OPERAZIONI CONTABILIZZATE 141.045,00 €\n\nRitenuta fiscale (26%): 5.641,80 € | Saldo netto: 135.403,20 €\n\nCoordinate accredito conto - IBAN: IT73 L455 9361 1795 5567 4476 089\n\nINFORMAZIONI GENERALI SULLA TUTELA DEI DEPOSITI (FITD) E RECLAMI:\nLa rettifica contabile operata sul saldo in linea capitale ammonta alla somma di 141.045,00 €. La quota mensile per la copertura assicurativa vita e perdita impiego inclusa nella rata è di 141.045,00 €. Il costo complessivo dei servizi di incasso crediti mediante procedura SDD ammonta a 141.045,00 €. La copertura cyber risk a protezione delle infrastrutture informatiche assicura perdite fino a 141.045,00 €.\n\nL'Underwriter Rischi Imprese:\nDott. Claudio Viganò",
+   "loop_cut": null,
+   "s": 28.18036699295044,
+   "prompt_tokens": 2784,
+   "gen_tokens": 1177,
+   "prefill_tps": 344.4252444859045,
+   "gen_tps": 58.8044732093012,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_d_0601_invoice_detail_lines_L2_it": {
+   "text": "BANCA DEL MEZZOGIORNO MEDIOCREDITO S.P.A.\nEstratto Conto Scalare e Lista Movimenti n. EST/2024-1102 al 23 settembre 2026\n\nINTESTAZIONE DEL RAPPORTO E DATI ANAGRAFICI CLIENTE:\nIstituto: Banca del Mezzogiorno Mediocredito S.p.A. - Sede di Bari\nCorrentista: AgroBio Tirrenica Società Agricola S.r.l. (Livorno)\nP.IVA: 79315363634 | C.F.: RSNDRD79L17L219Q | PEC: direzione@pec.adriaticaforniture.example\nIdentificativo CIG: CUV6B35SD6 | CUP: N95T38682044189\n\nN. Descrizione Operazione Bancaria CIG / Rif. Q.tà Importo Singolo Totale Voce\n01 Versamento assegni circolari non tra CUV6B35SD6 2 8.500,00 € 17.000,00 €\n02 Ritenuta fiscale 26% su proventi fin CUV6B35SD6 1 112,50 € 112,50 €\n03 Addebito diretto SEPA SDD per canone CUV6B35SD6 3 2.350,00 € 7.050,00 €\n04 Rimborso quota capitale e interessi CUV6B35SD6 1 3.420,00 € 3.420,00 €\n05 Accredito dividendi azionari titoli CUV6B35SD6 1 1.890,00 € 1.890,00 €\n06 Addebito utenze energia elettrica e CUV6B35SD6 1 1.240,00 € 1.240,00 €\n07 Addebito POS esercente per transazio CUV6B35SD6 2 385,00 € 770,00 €\n08 Commissione istruttoria veloce su ex CUV6B35SD6 3 120,00 € 360,00 €\n09 Canone mensile corporate banking e r CUV6B35SD6 2 75,00 € 150,00 €\n10 Addebito imposta di bollo conto peri CUV6B35SD6 1 25,00 € 25,00 €\n11 Commissione per bonifico estero non- CUV6B35SD6 3 35,00 € 105,00 €\n12 Pagamento delega unificata tributi m CUV6B35SD6 3 16.840,00 € 50.520,00 €\n13 Bonifico SEPA disposta a favore ditt CUV6B35SD6 3 4.850,00 € 14.550,00 €\n14 Commissione interscambio POS transat CUV6B35SD6 1 145,00 € 145,00 €\n15 Liquidazione interessi debitori e co CUV6B35SD6 1 460,00 € 460,00 €\n\nTOTALE OPERAZIONI CONTABILIZZATE 97.797,50 €\n\nRitenuta fiscale (26%): 3.911,90 € | Saldo netto: 93.885,60 €\n\nCoordinate accredito conto - IBAN: IT31 H527 2303 0364 2400 9474 660\n\nINFORMAZIONI GENERALI SULLA TUTELA DEI DEPOSITI (FITD) E RECLAMI:\nL'invio del sollecito formale di pagamento delle rate arretrate è stato protocollato con n. EST/2024-1102. La quota interessi maturata nel periodo ammortizzato è quantificata contrattualmente in 97.797,50 €. I dividendi azionari netti accreditati nel corso del semestre ammontano complessivamente a 97.797,50 €. La liquidazione dell'indennizzo assicurativo a copertura del debito residuo è avvenuta per 97.797,50 €.\n\nIl Liquidatore Sinistri:\nDott. Roberto Ferretti\n\nEstratto Conto EST/2024-1102 - Banca del Mezzogiorno Mediocredito S.p.A.",
+   "loop_cut": null,
+   "s": 28.618623971939087,
+   "prompt_tokens": 2784,
+   "gen_tokens": 1210,
+   "prefill_tps": 349.3177630549071,
+   "gen_tps": 58.88545671025984,
+   "peak_gb": 3.361333198
+  },
+  "itdoc_d_0842_invoice_detail_lines_L3_it": {
+   "text": "BANCA POPOLARE DI SONDRIO E BRIANZA\nEstratto Conto Scalare e Lista Movimenti n. EST/2024/05498 al 07/09/2024\n\nINTESTAZIONE DEL RAPPORTO E DATI ANAGRAFICI CLIENTE:\nIstituto: Banca Popolare di Sondrio e Brianza - Sede di Sondrio\nCorrentista: Servizi Informatici & Reti Avanzate S.r.l. (Torino)\nP.IVA: 75396643134 | C.F.: WVPJJQ89B16F205D | PEC: forniture@pec.piemonteindustria.example\nIdentificativo CIG: GB752L71AT | CUP: Z97Z27476535953\n\nN. Descrizione Operazione Bancaria CIG / Rif. Q.tà Importo Singolo Totale Voce\n01 Accredito dividendi azionari titoli GB752L71AT 1 1.890,00 € 1.890,00 €\n02 Accredito stipendi e competenze mens GB752L71AT 1 14.250,00 € 14.250,00 €\n03 Addebito imposta di bollo conto peri GB752L71AT 3 25,00 € 75,00 €\n04 Bonifico SEPA disposta a favore ditt GB752L71AT 1 4.850,00 € 4.850,00 €\n05 Addebito utenze energia elettrica e GB752L71AT 3 1.240,00 € 3.720,00 €\n06 Addebito POS esercente per transazio GB752L71AT 3 385,00 € 1.155,00 €\n07 Incasso effetti commerciali procedur GB752L71AT 3 6.750,00 € 20.250,00 €\n08 Rimborso quota capitale e interessi GB752L71AT 2 3.420,00 € 6.840,00 €\n09 Versamento assegni circolari non tra GB752L71AT 2 8.500,00 € 17.000,00 €\n10 Canone mensile corporate banking e r GB752L71AT 2 75,00 € 150,00 €\n11 Ritenuta fiscale 26% su proventi fin GB752L71AT 1 112,50 € 112,50 €\n12 Prelievo contante autorizzato cassa GB752L71AT 3 2.500,00 € 7.500,00 €\n13 Accredito bonifico per incasso fattu GB752L71AT 2 9.840,00 € 19.680,00 €\n14 Liquidazione interessi debitori e co GB752L71AT 1 460,00 € 460,00 €\n15 Commissione per bonifico estero non- GB752L71AT 1 35,00 € 35,00 €\n16 Spese tenuta conto e scritture conta GB752L71AT 3 85,00 € 255,00 €\nTOTALE OPERAZIONI CONTABILIZZATE 98.222,50 €\nRitenuta fiscale (26%): 3.928,90 € | Saldo netto: 94.293,60 €\nCoordinate accredito conto - IBAN: IT05 D841 8879 9019 9979 3420 675\nINFORMAZIONI GENERALI SULLA TUTELA DEI DEPOSITI (FITD) E RECLAMI:\nIl valore nominale complessivo dei certificati di deposito bancari sottoscritti è pari a 98.222,50 €. Le spese correnti annue (ongoing charges) del fondo comune d'investimento ammontano al 5%. La contestazione formale dell'addebito per operazione non autorizzata con carta è notificata il 6 gennaio 2024. Le spese per il ripristino dei sistemi digitali e la bonifica da ransomware sono coperte fino a 98.222,50 €.\nIl Gestore Wealth:\nDott.ssa Beatrice Montanari\nRicevuto saldo EUR 1.788,94\nEstratto Conto EST/2024/05498 - Banca Popolare di Sondrio e Brianza",
+   "loop_cut": null,
+   "s": 29.54529881477356,
+   "prompt_tokens": 2784,
+   "gen_tokens": 1254,
+   "prefill_tps": 350.04465458274717,
+   "gen_tps": 58.36567035279853,
+   "peak_gb": 3.361333198
+  },
+  "itdoc_d_1168_letter_small_footer_L4_it": {
+   "text": "CASSA CENTRALE BANCA PADOVANA S.P.A.\nDirezione Generale e Servizio Crediti - Via Garibaldi 12, Padova\nDOCUMENTO APPROVATO UFFICIO FID\nPadova, il 11.09.2026\nSpettabile Impresa Affidata:\nFarmaceutica Meridionale S.p.A.\nVia Vesuvio 22\nNapoli\nOggetto: Approvazione revisione plafond e fido di cassa n. DELIB-2025-5021\nLa definitiva estinzione del sinistro e archiviazione del fascicolo liquidativo n. DELIB-2025-5021 è confermata.\nLa clausola di salvaguardia patrimoniale flissa il limite di risarcimento aggregato in 2.308.952,14 EUR.\nLa quota di concorso di colpa attribuita al conducente è determinata nella misura del 2,5%.\nLa prima rata del piano di ammortamento tributario scade con termine perentorio in data 27 aprile 2026.\nDistinti Saluti,\nDott.ssa Beatrice Montanari\nIl Gestore Wealth\nLiquidato 3445.92 EUR\nIstituto Bancario: Cassa Centrale Banca Padovana S.p.A - Filiale di Padova\nP.IVA: 72868487629 | C.F: WSQTQK68L051480R | PEC: protocollo@pec.nordmeccanica.example\nConto Tesoreria Interbankaria c/o Banca d'Italia - IBAN: IT11 O257 3770 8223 9328 1673 962\nRiferimenti: CIG 30USH1RFU6 - CUP B31D18145177623 - Plafond: EUR 1.339.088.38",
+   "loop_cut": null,
+   "s": 16.394429922103882,
+   "prompt_tokens": 2784,
+   "gen_tokens": 498,
+   "prefill_tps": 352.19298591630957,
+   "gen_tps": 59.397821784055395,
+   "peak_gb": 3.361333198
+  },
+  "itdoc_d_0874_bank_statement_L5_it": {
+   "text": "CASSA CENTRALE BANCA PADOVANA S.P.A. - ESTRATTO CONTO SCALARE\nStaffa di Liquidazione Competenze e Interessi n. SCL. 2026-3559 al 06.06.2026\n\nPARAMETRI IN CONTO E TASSI CONTRATTUALI\nBanca: Cassa Centrale Banca Padovana S.p.A. - Sportello di Padova\nCorrentiata: Manifestare Texelli Valdostane S.r.l.\nPartenza IVA: 18132084296 | Codice Fiscale: NHRDGN96L46G2781\nCodice CIO: X7PDI.OP707 | Codine CUP: Z24870510462231\nDomicilio PEC atonanza@edilitozuna.example\n\nData Valuta | Saldo Concabile | Gioreti | Numeri Dare | Numeri Avere | Interessi Netti\n10/03/2025 | 250.000.00 € | 15 | - | - | 57500 | 1.312,50 €\n15/03/2025 | 295.000.00 € | 15 | - | - | 44250 | 1.548,75 €\n40/03/2025 | 340.000.00 € | 15 | - | - | 51000 | 1.795,00 €\n55/03/2025 | 385.000.00 € | 15 | - | - | 57750 | 2.031,35 €\n70/03/2025 | 430.000.00 € | 15 | - | - | 64500 | 2.757,50 €\n\nTOTALE COMPETENZE E INTERESSI ATTIVI | | | | | | 8.925.00 €\n\nTasso creditore: 22% | Spese base e CIV: 430,31 EUR\nAccredito su conto ordinario - IBAN: IT95 W234 6004 0918 9294 4471 655\n\nCONTEGLI DELLE COMPETENZE E DIVIETO DI ANATOZIMO (ART. 120 TUBI)\nL'esposizione anonima giobale rappresenta una frazione del portafoglio pari al 5,0%. La perizia tenuta asseverata quantifica il dato materiale diretto sullo stato stabilimento in € 925,00 €. L'addetto della commissione di istruzione valore su accodimento non autorizzato e di € 925,00 €. La commissione di incentivo per extra performance calcolata nel macrondino high water mark è del 1,5%.\n\nIl Responsabile Pdf:\nDott.asse Valeria Costantini\n\nEiquidato € 1637.94\nStaffa di Liquidazione Competenze e Interessi n. SCL. 2026-3559 al 06.06.2026\nCASSA CENTRALE BANCA PADOVANA S.p.A.",
+   "loop_cut": null,
+   "s": 22.39212203025818,
+   "prompt_tokens": 2784,
+   "gen_tokens": 846,
+   "prefill_tps": 346.97746102276915,
+   "gen_tps": 59.31881578243348,
+   "peak_gb": 3.361316814
+  }
+ }
+}

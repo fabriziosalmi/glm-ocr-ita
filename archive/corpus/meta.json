@@ -1,0 +1,110 @@
+[
+ {
+  "id": "syn_00_it_prose",
+  "gt": "exact"
+ },
+ {
+  "id": "syn_01_it_dense",
+  "gt": "exact"
+ },
+ {
+  "id": "syn_02_it_twocol",
+  "gt": "exact"
+ },
+ {
+  "id": "syn_03_it_table",
+  "gt": "exact"
+ },
+ {
+  "id": "syn_04_en_prose",
+  "gt": "exact"
+ },
+ {
+  "id": "syn_05_en_dense",
+  "gt": "exact"
+ },
+ {
+  "id": "syn_06_en_twocol",
+  "gt": "exact"
+ },
+ {
+  "id": "syn_07_en_table",
+  "gt": "exact"
+ },
+ {
+  "id": "01_p1",
+  "gt": "textlayer"
+ },
+ {
+  "id": "02_p1",
+  "gt": "textlayer"
+ },
+ {
+  "id": "02_p4",
+  "gt": "textlayer"
+ },
+ {
+  "id": "03_p1",
+  "gt": "textlayer"
+ },
+ {
+  "id": "03_p5",
+  "gt": "textlayer"
+ },
+ {
+  "id": "04_p1",
+  "gt": "none"
+ },
+ {
+  "id": "04_p3",
+  "gt": "none"
+ },
+ {
+  "id": "05_p1",
+  "gt": "none"
+ },
+ {
+  "id": "05_p5",
+  "gt": "none"
+ },
+ {
+  "id": "06_p1",
+  "gt": "textlayer"
+ },
+ {
+  "id": "06_p4",
+  "gt": "textlayer"
+ },
+ {
+  "id": "07_p1",
+  "gt": "none"
+ },
+ {
+  "id": "07_p4",
+  "gt": "none"
+ },
+ {
+  "id": "08_p1",
+  "gt": "none"
+ },
+ {
+  "id": "08_p5",
+  "gt": "none"
+ },
+ {
+  "id": "09_p1",
+  "gt": "textlayer"
+ },
+ {
+  "id": "09_p5",
+  "gt": "none"
+ },
+ {
+  "id": "10_p1",
+  "gt": "none"
+ },
+ {
+  "id": "10_p5",
+  "gt": "none"
+ }
+]

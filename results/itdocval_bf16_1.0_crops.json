@@ -1,0 +1,398 @@
+{
+ "itdoc_a_0527_service_order_L2_it": {
+  "top": {
+   "text": "Officine Meccaniche Ferri S.a.s.\nViale Matteotti 47, 20408 Ravenna (IT)\nP.IVA: 99362810188 - C.F.: DQZBGM94D28D838P - PEC: gare@veneta-distribuzione.example\n\nORDINE DI SERVIZIO E COMMESSA D'APPALTO\nDocumento n.: COMM-2025-7812 | Data emissione: 20.09.2025\n\nCodice CIG: GEKVH68S1N | Codice CUP: T13F10305272629 | Conto Dedicato L. 136/2010: IT39 I569 7234 4107 0740 2694 554",
+   "s": 3.6287548542022705,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "```markdown\n\n```",
+   "s": 0.746596097946167,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Officine Meccaniche Ferri S.a.s.\nViale Matteotti 47, 20408 Ravenna (IT)\nP.IVA: 99362810188 - C.F.: DQZBGM94D28D838P - PEC: gare@veneta-distribuzione.example\n\nORDINE DI SERVIZIO E COMMESSA D'APPALTO\nDocumento n.: COMM-2025-7812 | Data emissione: 20.09.2025\n\nCodice CIG: GEKVH68S1N | Codice CUP: T13F10305272629 | Conto Dedicato L. 136/2010: IT39 I569 7234 4107 0740 2694 554\n\nFase WBS Attività / Prestazione Specialistica Ore Tariffa Termine Importo\n01 1.01 Attività di consulenza e sviluppo ingegneristico fase 1 task 340 80 € 55,79 14.10.2025 EUR 4.463,20\n02 1.02 Attività di consulenza e sviluppo ingegneristico fase 2 task 770 62 58,35 € 24.08.2025 EUR 3.617,70\n03 1.03 Attività di consulenza e sviluppo ingegneristico fase 3 task 127 72 51,41 € 6 maggio 2025 EUR 3.701,52\n04 1.04 Attività di consulenza e sviluppo ingegneristico fase 4 task 526 36 51,30 € 2 dicembre 2025 € 1.846,80\n05 1.05 Attività di consulenza e sviluppo ingegneristico fase 5 task 739 38 80,19 € 18.03.2025 3.047,22 €\n06 1.06 Attività di consulenza e sviluppo ingegneristico fase 6 task 668 34 EUR 88,15 05.08.2025 € 2.997,10\n07 1.07 Attività di consulenza e sviluppo ingegneristico fase 7 task 995 54 92,29 € 16 settembre 2025 EUR 4.983,66\n08 1.08 Attività di consulenza e sviluppo ingegneristico fase 8 task 825 53 85,27 € 26.05.2025 € 4.519,31\n09 1.09 Attività di consulenza e sviluppo ingegneristico fase 9 task 590 47 84,02 € 17/11/2025 EUR 3.948,94\n10 1.10 Attività di consulenza e sviluppo ingegneristico fase 10 task 475 17 EUR 49,90 08/04/2025 848,30 €\n11 1.11 Attività di consulenza e sviluppo ingegneristico fase 11 task 641 73 EUR 94,70 12/01/2025 € 6.913,10\n12 1.12 Attività di consulenza e sviluppo ingegneristico fase 12 task 757 11 76,15 € 27 marzo 2025 837,65 €\n\nTotale Commessa: EUR 41.724,50\n\nCondizioni generali di esecuzione commessa: La ditta produttrice garantisce la conformità ambientale dei materiali impiegati nel ciclo produttivo. Tutti gli atti relativi alla procedura sono pubblicati sul portale istituzionale dell'amministrazione. La nullità o inefficacia di una clausola non travolge la validità dell'intero accordo quadro.",
+   "s": 24.49760413169861,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "```markdown\n\n```",
+   "s": 8.790294885635376,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_1000_labelled_form_L1_it": {
+  "top": {
+   "text": "Forniture Industriali Conti S.r.l.\nPiazza Dante 55, 68984 Ancona (IT)\nP.IVA: 41945910192 - C.F.: QSVNZZ57A57L321C - PEC: segreteria@lombarda-forniture.example\n\nMODULO DI REGISTRAZIONE E CENSIMENTO ANAGRAFICO FORNITORE\nDocumento n.: MOD/2025/05598 | Data emissione: 8 marzo 2025\n\nDENOMINAZIONE O RAGIONE SOCIALE\nPARTITA IVA SOCIETARIA",
+   "s": 2.97440505027771,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "www.",
+   "s": 0.7224881649017334,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Forniture Industriali Conti S.r.l.\nPiazza Dante 55, 68984 Ancona (IT)\nP.IVA: 41945910192 - C.F.: QSVNZZ57A57L321C - PEC: segreteria@lombarda-forniture.example\n\nMODULO DI REGISTRAZIONE E CENSIMENTO ANAGRAFICO FORNITORE\nDocumento n.: MOD/2025/05598 | Data emissione: 8 marzo 2025\n\nDEN OMINAZIONE O RAGIONE SOCIALE\nGruppo Logistica Fontana S.r.l.\n\nPARTITA IVA SOCIETARIA\n78430640710\n\nCODICE FISCALE INTESTATARIO\nLKBWSJ70H51G345W\n\nINDIRIZZO PEC CERTIFICATO\nlegale@tirreno-logistica.example\n\nCOORDINATE BAN CARIE IBAN\nIT93 K290 5516 8978 7244 8130 276\n\nCODICE DI PROTOCOLLO ASSEGNATO\nMOD/2025/05598\n\nIMPORTO FIDO COMMERCIALE RICHIESTO\n€ 118.051,02\n\nDATA DI COSTITUZIONE SOCIETARIA\n16.02.2025\n\nALIQUOTA SCONTO RISERVATO\n1,5%\n\nCODICE IDENTIFICATIVO GARA CIG\nJL08R0FFXL\n\nCODICE UNICO DI PROGETTO CUP\nH10M11921017584\n\nREFERENTE AMMINISTRATIVO\nDott. Marco Rinaldi - Resp. Acquisti\n\nDATA ULTIMA VERIFICA DUR C\n26 maggio 2025\n\nIMPORTO CAPITALE SOCIALE VERSATO\nEUR 30.025.348,76\n\nDichiarazione sostitutiva e trattamento dati: L'operatore attesta il rispetto rigoroso dei criteri ambientali minimi per l'intera durata della fornitura. Il termine finale per la consegna e ultimazione delle prestazioni è fissato per il 8 gennaio 2025. La conformità dei lotti consegnati deve essere riscontrata entro 45 giorni dalla consegna.",
+   "s": 18.153587341308594,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "Dichiarazione sostitutiva e trattamento dati: L'operatore attesta il rispetto rigoroso dei criteri ambientali minimi per l'intera durata della forniture. Il termine finale per la consegna e ultimazione delle prestazioni è fissato per il 8 gennaio 2025. La conformità dei lotti consegnati deve essere riscontrata entro 45 giorni dalla consegna.",
+   "s": 10.66649603843689,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_1185_proforma_invoice_L3_it": {
+  "top": {
+   "text": "Servizi Integrati Fontana S.p.A.\nVia Dante 36, 56120 Livorno (IT)\nP.IVA: 23471520884 - C.F: DBCBZY80T63H052V - PEC legale@alpina-meccanica.example\n\nFATTURA PRO-FORMA / PRO-FORMA COMMERCIAL INVOICE\nDocumento n.: PRO-2025-3453 | Data emissione: 9 novembre 2025\n\nDOCUMENTO NON VALIDO AI FINI FISCALI - ART. 21 D.P.R. 633/1973",
+   "s": 2.9105119705200195,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "```markdown\n\n```",
+   "s": 0.7635798454284668,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Servizi Integrati Fontana S.p.A.\nVia Dante 36, 56120 Livorno (IT)\nP.IVA: 23471520884 - C.F.: DBCRZY80T63H052V - PEC legale@alpina-meccanica.example\n\nFATTURA PRO-FORMA / PRO-FORMA COMMERCIAL INVOICE\nDocumento n.: PRO-2025-3453 | Data emissione: 9 novembre 2025\n\nDOCUMENTO NON VALIDO AI FINI FISCALI - ART. 21 D.P.R. 633/1972\n\nValidità Offerta: 04/04/2025 | P.IVA Cliente: 27994950882 | Bonifico anticipato su IBAN: IT37 D744 9471 7627 6770 7847 604\n\nPos. Cod. Dogana Descrizione Tecnica Beni Q.tà UM Valore Unit. Valore Totale\n01 8471.10.00 Apparecchi atura elettroni ca di controllo serie e 100 rev. 27 19 PZ 398,14 € EUR 7.564,66\n02 8471.11.00 Apparecchi atura elettroni ca di controllo serie e 101 rev. 22 12 PZ € 153,70 1.844,40 €\n03 8471.12.00 Apparecchi atura elettroni ca di controllo serie e 102 rev. 41 19 PZ EUR 291,24 5.533,56 €\n04 8471.13.00 Apparecchi atura elettroni ca di controllo serie e 103 rev. 84 13 PZ 506,98 € 6.589,83 €\n05 8471.14.00 Apparecchi atura elettroni ca di controllo serie e 104 rev. 29 12 PZ 248,98 € € 2.987,76\n06 8471.15.00 Apparecchi atura elettroni ca di controllo serie e 105 rev. 93 12 PZ 100,66 € € 1.207,92\n07 8471.16.00 Apparecchi atura elettroni ca di controllo serie e 106 rev. 65 4 PZ EUR 406,33 EUR 1.625,32\n08 8471.17.00 Apparecchi atura elettroni ca di controllo serie e 107 rev. 21 17 PZ € 236,26 € 4.016,42\n09 8471.18.00 Apparecchi atura elettroni ca di controllo serie e 108 rev. 46 2 PZ 493,95 € 987,90 €\n10 8471.19.00 Apparecchi atura elettroni ca di controllo serie e 109 rev. 69 17 PZ € 371,99 € 6.323,83\n11 8471.20.00 Apparecchi atura elettroni ca di controllo serie e 110 rev. 70 2 PZ EUR 471,68 943,36 €\n12 8471.21.00 Apparecchi atura elettroni ca di controllo serie e 111 rev. 33 12 PZ 121,85 € € 1.462,20\n13 8471.22.00 Apparecchi atura elettroni ca di controllo serie e 112 rev. 71 8 PZ 27,81 € € 222,48\n\nTotale Pro-Forma: € 41.309,64\n\nConditions e clausole pro-forma desportazione: La conformità dei lotti consegnai deve essere ricontrata entro 15 giorni dalla consegna. L'atto convenzionale n. NOT/2025/05459 sancisce Timpegno pluriennale delle parti contraenti. Il saldo della prestasi one avverrà previa emissi one del certificato di regolare esecuzione.",
+   "s": 28.10927104949951,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "regolare esecuzione.",
+   "s": 9.406452894210815,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_0786_delivery_note_L1_it": {
+  "top": {
+   "text": "Sistemi Informatici Santoro S.p. A.\nStrada Garibaldi 100, 67854 Torino (IT)\nP.IVA: 99636290217 - C.F.: VCMMQS50M03G145X - PEC: fatturazione@tiirreno-logistica.example\n\nDOCUMENTO DI TRASPORTO (D.D.T. - D.P.R. 472/96)\nDocumento n.: DDT-2025-4588 | Data emissione: 13 ottobre 2025\n\nCausale: VENDITA CON RISERVA | Asnetto beni: A VISTA (COLLI IMBALLATI) | Porto: FRANCO CON ADDEBITO",
+   "s": 3.3361852169036865,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "www.",
+   "s": 0.8318758010864258,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Sistemi Informatici Santoro S.p.A.\nStrada Garibaldi 100, 67854 Torino (IT)\nP.IVA: 99636290217 - C.F.: VCMMQS50M03G145X - PEC: fatturazione@tirreno-logistica.example\n\nDOCUMENTO DI TRASPORTO (D.D.T. - D.P.R. 472/96)\nDocumento n.: DDT-2025-4588 | Data emissione: 13 ottobre 2025\n\nCausale: VENDITA CON RISERVA | Aspetto beni: A VISTA (COLLI IMBALLATI) | Porto: FRANCO CON ADDEBITO\nVettore: Corriere Espresso Nazionale S.p.A. - P.IVA Vettore: 28087850344 - Colli: 7 - Peso: 864 Kg\n\nPos. Codice Descrizione Merci Consegnate Q.tà UM Prezzo Val. Valore Merce\n01 CMP-101 Forni tura componenti industriali tipo 1 lotto 734 33 PZ € 86,59 2.857,47 €\n02 CMP-102 Forni tura componenti industriali tipo 2 lotto 111 7 PZ 273,75 € 1.916,25 €\n03 CMP-103 Forni tura componenti industriali tipo 3 lotto 334 7 PZ EUR 60,47 EUR 423,29\n04 CMP-104 Forni tura componenti industriali tipo 4 lotto 856 38 PZ € 186,18 EUR 7.074,84\n05 CMP-105 Forni tura componenti industriali tipo 5 lotto 572 30 PZ EUR 22,56 € 676,80\n06 CMP-106 Forni tura componenti industriali tipo 6 lotto 737 11 PZ 165,83 € 1.824,13\n07 CMP-107 Forni tura componenti industriali tipo 7 lotto 357 24 PZ 208,27 € EUR 4.998,48\n08 CMP-108 Forni tura componenti industriali tipo 8 lotto 796 6 PZ 321,88 € 1.931,28 €\n09 CMP-109 Forni tura componenti industriali tipo 9 lotto 872 23 PZ 67,82 € 1.559,86 €\n10 CMP-110 Forni tura componenti industriali tipo 10 lotto 362 7 PZ 127,59 € EUR 893,13\n11 CMP-111 Forni tura componenti industriali tipo 11 lotto 818 6 PZ 336,29 € EUR 2.017,74\n12 CMP-112 Forni tura componenti industriali tipo 12 lotto 819 15 PZ EUR 92,76 1.391,40 €\n\nCondizioni generali di trasporto merci: La convenzione quadro acquista piena validità a far data dalla formale sottoscritione del 26/07/2025. L'importo contrattuale è liqui dato con bonifico su conto dedicato con IBAN IT86 B678 6187 8714 8535 5674 957. Il certificato di pagamento n. NOT_2534_2025 è emesso previa acquisizione del DURC telematico regolare.",
+   "s": 24.010314464569092,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "```markdown\n\n```",
+   "s": 9.358335018157959,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_1457_official_letter_L3_it": {
+  "top": {
+   "text": "Industrie Metallurgiche Rinaldi S.n.c.\nStrada Europa 72, 3972B Milano (IT)\nP.IVA: 20150950010 - C.F: YMRYBV78M13I69BJ - PEC: ufficio.acquisti@orobie-technologie.example\n\nCOMUNICAZIONE COMMERCIALE DI AFFIDAMENTO FORNITURA\nDocumento n: Prot. n. 1862/2025 | Data emissione: 15.09.2025\n\nSpettabile Societk\nOffering Massoniche Forri S.n.c.",
+   "s": 2.9599220752716064,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "Capitale Sociale deliberato e versato: € 1.126.757.00 ix | R.E.A. n. 584912 | Registro Imprese competente\nPartita IVA: 30848370802 - Codice Fiscale: YQLTJM90H25D5235 - PEC: legale@oroble-technologie.example\nConto dedicato L: 136/2010 IBAN: IT62 A654 2483 1215 6981 5313 475",
+   "s": 2.6980648040771484,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Industrie Metallurgiche Rinaldi S.n.c.\nStrada Europa 72, 39728 Milano (IT)\nP.IVA: 20150950010 - C.F.: YMRYBV78M13I698J - PEC: ufficio.acquisti@orobie-technologie.example\n\nCOMUNICAZIONE COMMERCIALE DI AFFIDAMENTO FORNITURA\nDocumento n.: Prot. n. 1862/2025 | Data emissione: 15.09.2025\n\nSpettabile Societk\nOfficine Meccaniche Ferri S.r.l.\nStrada Industria 76, 55525 Bari (IT)\nP.IVA / Tax ID: 85463950783\n\nOggetto: Conferma affidamento fornitura n. Prot. n. 1862/2025 - CIG YM8X28CS9W\nSi conferma la ricezione dell'ordine n. CTR/2025/06929 e la regolare emissione della relativa nota debito.\nLa causale del trasporto corrisponde a vendita con riserva di gradimento.\nLe spese accessorie di incasso e bollo ammontano a complessivi 218.771,64 €.\nDistinti saluti,\nLa Direzione Generale",
+   "s": 14.515347957611084,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "Capitale Sociale deliberato e versato: € 1,126,757,00 i.v. | R.E.A. n. 584912 | Registro Imprese competente\nPartita IVA: 30848370802 - Codice Fiscale: YQLT/JM90H25D5235 - PEC: legale@oroble-technologie.example\nConto dedicato L: 136/2010 IBAN: IT62 A654 2483 1215 6981 5313 475",
+   "s": 11.509862899780273,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_1468_labelled_form_L3_it": {
+  "top": {
+   "text": "Costruzioni Generali Conti S.p.A.\nPiazza Industria 22, 57444 Parma (IT)\nP.IVA: 98923490860 - C.F.: PQCMKW83R21I734Z - PEC: ufficio.acquisti@veneta-distribuzione.example\n\nMODULO DI REGISTRAZIONE E CENSIMENTO ANAGRAFICO FORNITORE\nDocumento n.: MOD/2025/05970 | Data emissione: 10 agosto 2025",
+   "s": 2.664184808731079,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "```markdown\n\n```",
+   "s": 0.782235860824585,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Costruzioni Generali Conti S.p.A.\nPiazza Industria 22, 57444 Parma (IT)\nP.IVA: 98923490860 - C.F.: POCMKW83R21I734Z - PEC: ufficio.acquisti@veneta-distribuzione.example\n\nMODULO DI REGISTRAZIONE E CENSIMENTO ANAGRAFICO FORNITORE\nDocumento n.: MOD/2025/05970 | Data emissione: 10 agosto 2025\n\nDENOMINAZIONE O RAGIONE SOCIALE\nServizi Integrati Barbieri S.r.l.\n\nPARTITA IVA SOCIETARIA\n94349270531\n\nCODICE FISCALE INTESTATARIO\nWWQTQV61M15H711N\n\nINDIRIZZO PEC CERTIFICATO\nsegreteria@lombarda-forniture.example\n\nCOORDINATE BANCARIE IBAN\nIT83 P838 2124 4966 5322 5609 521\n\nCODICE DI PROTOCOLLO ASSEGNATO\nMOD/2025/05970\n\nIMPORTO FIDO COMMERCIALE RICHIESTO\nEUR 105.300,81\n\nDATA DI COSTITUZIONE SOCIETARIA\n17 gennaio 2025\n\nALIQUOTA SCONTO RIGERVATO\n1,5%\n\nCODICE IDENTIFICATIVO GARA CIG\n8UQ54XVXTG\n\nCODICE UNICO DI PROGETTO CUP\nK48E89865088641\n\nREFERENTE AMMINISTRATIVO\nDott. Marco Rinaldi - Resp. Acquisti\n\nDATA ULTIMA VERIFICA DURC\n13 giugno 2025\n\nIMPORTO CAPITALE SOCIALE VERSATO\n680.949,15 €\n\nDichiarazione sostitutiva e trattamento dati: La rispondenza dei beni alle schede omologative è verificata mediante audit periodici di filiera. La somma concordata per la forniture a corpo corrisponde all'importo contrattuale di 112.702,20 €. I termini di resa sono stabiliti in conformità alla clausola DDP stabilita nell'accordo.",
+   "s": 19.007342100143433,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "Dichiarazione sostitutiva e trattamento dati: La rispondenza dei beni alle schede omologative è verificata mediante audit periodici di filiera. La somma concordata per la forniture a corpo corrisponde all'importo contrattuale di 112.702,20 €. I termini di resa sono stabiliti in conformità alla clausola DDP stabilita nell'accordo.",
+   "s": 11.022802114486694,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_1063_purchase_order_L2_it": {
+  "top": {
+   "text": "Forniture Industriali Conti S.a.s.\nCorso Verdi 96, 55672 Bologna (IT)\nP.IVA: 37721770610 - C.P.: DVXPTV82S11H073T - PEC: legale@nord-impianti.example\n\nORDINE D'ACQUISTO / BUONO D'ORDINE FORNITORE\nDocumento n.: ODA/2025/07439 | Data emissione: 17/03/2025\n\nData Consegna Tassativa: 13/06/2025 | Resa: DDP Destinazione | Pagamento: Bonifico 60 gg d.f.",
+   "s": 3.2942252159118652,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "```markdown\n\n```",
+   "s": 0.8139262199401855,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Forniture Industriali Conti S.a.s.\nCorso Verdi 96, 55672 Bologna (IT)\nP.IVA: 37721770610 - C.F.: DVXFTV82S11H073T - PEC: legale@nord-impianti.example\n\nORDINE D'ACQUISTO / BUONO D'ORDINE FORNITORE\nDocumento n.: ODA/2025/07439 | Data emissione: 17/03/2025\n\nData Consegna Tassativa: 13/06/2025 | Resa: DDP Destinazione | Pagamento: Bonifico 60 gg d.f.\nCodice CIG: XMBM3M3E43 - Codice CUP: Z41B84079863539 - IBAN Dedicato: IT62 H751 3709 2475 3089 0792 488\n\nRiga Cod. Ordine Specifica Fornitura Termine Q.tà Prezzo Unit. Sc.% Importo\n01 PO-010 Fornitura materiali conformi a specifica tecnica n. 1 rif5/02/2025 5 € 120,89 0% EUR 604,45\n02 PO-011 Fornitura materiali conformi a specifica tecnica n. 2 rif5/02/2025 6 316,84 € 0% EUR 1.901,04\n03 PO-012 Fornitura materiali conformi a specifica tecnica n. 319igen810 2025 13 60,65 € 0% 788,45 €\n04 PO-013 Fornitura materiali conformi a specifica tecnica n. 4 rif8.09/2025 21 EUR 85,67 0% € 1.799,07\n05 PO-014 Fornitura materiali conformi a specifica tecnica n. 5 rifugi414 2025 22 € 167,16 0% EUR 3.677,52\n06 PO-015 Fornitura materiali conformi a specifica tecnica n. 6 rifugi417 2025 10 EUR 26,29 0% 262,90 €\n07 PO-016 Fornitura materiali conformi a specifica tecnica n. 7 rifugi304 2025 19 EUR 27,39 0% 520,41 €\n08 PO-017 Fornitura materiali conformi a specifica tecnica n. 8 rif9/02/2025 5 € 107,30 0% € 536,50\n09 PO-018 Fornitura materiali conformi a specifica tecnica n. 9 rif1/04/2025 6 67,54 € 0% EUR 405,24\n10 PO-019 Fornitura materiali conformi a specifica tecnica n. 10 rif1.04/2025 15 306,03 € 0% € 4.590,45\n11 PO-020 Fornitura materiali conformi a specifica tecnica n. 125rigenn12 2025 10 EUR 215,89 0% € 2.158,90\n12 PO-021 Fornitura materiali conformi a specifica tecnica n. 12 rif.082025 25 441,18 € 0% 11.029,50 €\n13 PO-022 Fornitura materiali conformi a specifica tecnica n. 13 rif.166025 14 49,46 € 0% EUR 692,44\n14 PO-023 Fornitura materiali conformi a specifica tecnica n. 122rifto872 2025 23 € 61,84 0% 1.422,32 €\n15 PO-024 Fornitura materiali conformi a specifica tecnica n. 15 rif/02/2025 20 318,98 € 0% 6.379,60 €\n16 PO-025 Fornitura materiali conformi a specifica tecnica n. 108rifto802 2025 11 EUR 163,56 0% 1.799,16 €\n\nTotale Ordinativo: EUR 38.567,95\n\nCondizioni generali d'acquisto e fornitura: La rendicontazione delle spese sostenute nell'ambito del CUP Y66M08977216023 deve rispettare i manuali di gestione. Il contratto di fornitura è registrato presso l'ufficio competente con protocollo n. NOT-2025-4812. I prodotti forniti sono coperti da garanzia convenzionale per la durata di ventiquattro mesi.",
+   "s": 31.077014923095703,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "sono coperti da garanzia convenzionale per la durata di ventiquattro mesi.",
+   "s": 9.607155084609985,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_0566_table_dense_L2_it": {
+  "top": {
+   "text": "Sistemi Informatici Moretti S.p.A.\nCorso Roma 91, 72127 Udine (IT)\nP.IVA: 83217420781 - C.F: CLMBFJ55E56H882N - PEC: ufficio.acquisti@adriatica-trasporti.example\n\nPROSPETTO ANALITICO FORNITURE E STATO AVANZAMENTO\nDocumento n.: TAB_5638_2025 | Data emissione: 25.11.2025\n\nIDENTIFICAZIONE COMMESSA SCADENZE VALORI ECONOMICI E TRACCIABILITÀ",
+   "s": 3.1313319206237793,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "```markdown\n\n```",
+   "s": 0.7597289085388184,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Sistemi Informatici Moretti S.p.A.\nCorso Roma 91, 72127 Udine (IT)\nP.IVA: 83217420781 - C.F: CLMBFJ55E56H882N - PEC: ufficio.acquisti@adriatica-trasporti.example\n\nPROSPETTO ANALITICO FORNITURE E STATO AVANZAMENTO\nDocumento n.: TAB_5638_2025 | Data emissione: 25.11.2025\n\nIDENTIFICAZIONE COMMESSA SCADENZE VALORI ECONOMICI E TRACCIABILITÀ\nN. Articolo Descrizione Forniture Termine Qtà Prezzo Unit. Aliquota Importo Netto Codice CIG\n01 ART-995-99 Lotto componentistica meccanica serie 101 cod. 444 8 dicembre 2025 77 204,52 € 5% 15.748,04 € MC0958AM25\n02 ART-735-83 Lotto componentistica meccanica serie 102 cod. 828 25 agosto 2025 55 € 146,90 1,5% 8.079,50 € LNESMYMWEV\n03 ART-939-65 Lotto componentistica meccanica serie 103 cod. 851 7 giugno 2025 99 649,86 € 15% EUR 64.336,14 3E3P4PVU04\n04 ART-260-40 Lotto componentistica meccanica serie 104 cod. 489 22 agosto 2025 42 278,02 € 10% 11.676,84 € H0Q3H28QE0\n05 ART-790-34 Lotto componentistica meccanica serie 105 cod. 658 18/12/2025 5 EUR 771,31 10% EUR 3.856,55 TVDSG TU34F\n06 ART-589-53 Lotto componentistica meccanica serie 106 cod. 128 02.04.2025 73 € 708,35 15% € 51.709,55 F3N6PD5NBS\n07 ART-218-47 Lotto componentistica meccanica serie 107 cod. 669 4 luglio 2025 42 788,36 € 5,5% EUR 33.111,12 S8HZD4TU6\n08 ART-880-57 Lotto componentistica meccanica serie 108 cod. 282 11.01.2025 92 465,17 € 5% 42.795,64 € LSNCS7SPSJ\n09 ART-741-31 Lotto componentistica meccanica serie 109 cod. 634 13 novembre 2025 10 EUR 468,67 4% € 4.686,70 972M21G5XQ\n10 ART-884-98 Lotto componentistica meccanica serie 110 cod. 564 24 marzo 2025 96 642,34 € 1,5% EUR 61.664,64 0K28Y8D67G\n11 ART-609-82 Lotto componentistica meccanica serie 111 cod. 148 25.06.2025 20 EUR 152,16 1,5% EUR 3.043,20 BWJ3JRGG0X\n12 ART-153-85 Lotto componentistica meccanica serie 112 cod. 460 20/10/2025 66 € 222,66 15% 14.695,56 € DDHGA697PQ\n13 ART-177-42 Lotto componentistica meccanica serie 113 cod. 475 27 maggio 2025 37 74,51 € 4,5% EUR 2.756,87 2GK9380X5J\n14 ART-133-10 Lotto componentistica meccanica serie 114 cod. 860 09.072025 15 EUR 46,87 8% EUR 703,05 UTC7CRH58U\n15 ART-565-70 Lotto componentistica meccanica serie 115 cod. 979 23.06.2025 93 EUR 494,46 2,5% € 45.984,78 7HSNYK92KH\n16 ART-254-41 Lotto componentistica meccanica serie 116 cod. 179 01/08/2025 100 € 514,60 4,5% 51.460,00 € B5YPJ5K0X3\n\nTOTALE GENERALE RENDICONTATO: EUR 416.308,18\n\nNote esplicative al prospetto contabile. Le coordinate bancarie per il bonifico sono espresse dall'IBAN IT83 C139 4420 4984 0660 6106 498 intestato all'emittente. L'efficacia della presente scrittura privata decorre a tutti gli effetti di legge dal 28.10.2025. La fattura elettronica corrispondente è stata trasmessa al Sistema di Interscambio con esito positivo.",
+   "s": 33.36883592605591,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "```markdown\n\n```",
+   "s": 8.939549922943115,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_0297_proforma_invoice_L1_it": {
+  "top": {
+   "text": "Servizi Integrati Marchetti S.p.A.\nPiazza Mazzini 78, 59369 Torino (IT)\nP.IVA: 46827880942 - C.F.: NRGYNW56T45F845B - PEC: amministrazione@nord-impianti.example\n\nFATTURA PRO-FORMA / PRO-FORMA COMMERCIAL INVOICE\nDocumento n.: PRO_7910_2025 | Data emissione: 17.11.2025\n\nDOCUMENTO NON VALIDO AI FINI FISCALI - ART. 21 D.P.R. 633/1972",
+   "s": 3.0118467807769775,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "www.",
+   "s": 0.7093749046325684,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Servizi Integrati Marchetti S.p.A.\nPiazza Mazzini 78, 59369 Torino (IT)\nP.IVA: 46827880942 - C.F.: NRGYNW56T45F845B - PEC: amministrazione@nord-impianti.example\n\nFATTURA PRO-FORMA / PRO-FORMA COMMERCIAL INVOICE\nDocumento n.: PRO_7910_2025 | Data emissione: 17.11.2025\n\nDOCUMENTO NON VALIDO AI FINI FISCALI - ART. 21 D.P.R. 633/1972\n\nValidità Offerta: 01/06/2025 | P.IVA Cliente: 57003100682 | Bonifico anticipato su IBAN: IT90 K406 1422 9958 8133 1297 349\n\nPos. Cod. Dogana Descrizione Tecnica Beni Q.tà UM Valore Unit. Valore Totale\n01 8471.10.00 Apparecchiatura elettronica di controllo serie 100 rev. 72 18 PZ 403,66 € € 7.265,88\n02 8471.11.00 Apparecchiatura elettronica di controllo serie 101 rev. 53 3 PZ € 491,25 1.473,75 €\n03 8471.12.00 Apparecchiatura elettronica di controllo serie 102 rev. 23 13 PZ 358,76 € 4.663,88 €\n04 8471.13.00 Apparecchiatura elettronica di controllo serie 103 rev. 64 7 PZ EUR 109,59 EUR 767,13\n05 8471.14.00 Apparecchiatura elettronica di controllo serie 104 rev. 96 20 PZ EUR 59,96 € 1.199,20\n06 8471.15.00 Apparecchiatura elettronica di controllo serie 105 rev. 71 19 PZ EUR 441,65 € 8.391,35\n07 8471.16.00 Apparecchiatura elettronica di controllo serie 106 rev. 47 15 PZ EUR 415,21 € 6.228,15\n08 8471.17.00 Apparecchiatura elettronica di controllo serie 107 rev. 91 8 PZ EUR 488,79 € 3.910,32\n09 8471.18.00 Apparecchiatura elettronica di controllo serie 108 rev. 88 20 PZ EUR 57,51 1.150,20 €\n10 8471.19.00 Apparecchiatura elettronica di controllo serie 109 rev. 14 20 PZ € 19,58 € 391,60\n11 8471.20.00 Apparecchiatura elettronica di controllo serie 110 rev. 20 9 PZ 479,18 € 4.312,62\n12 8471.21.00 Apparecchiatura elettronica di controllo serie 111 rev. 18 15 PZ EUR 509,31 € 7.639,65\n\nTotale Pro-Forma: 47.393,73 €\n\nCondizioni e clausole pro-forma d'esportazione: La clausola compromissoria devolve la decisione a un collegio arbitrale secondo le regole della Camera di Commercio. La mancata conferma scritta dell'ordine entro dieci giorni attribuisce facoltà di recesso. L'inadempimento agli obblighi di tracciabilità comporta la risoluzione di diritto del presente accordo.",
+   "s": 26.62894892692566,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "```markdown\n\n```",
+   "s": 8.997205972671509,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_0879_multi_column_L3_en": {
+  "top": {
+   "text": "Pinnacle Engineering Ltd.\n319 Commercial Road, Atlanta T1 7PN\nVAT ID: 51403640975 - Fiscal ID: NWDKWH99063D950R - PEC: gare@etnea-forniture.example\n\nGENERAL TERMS AND CONDITIONS OF SUPPLY FRAMEWORK\nDoc Ref: CTR-2025-6998 | Issue Date: 2025-08-25\n\nCLAUSE 1 - CONTRACTUAL PROVISIONS\nAny exterior carton compromise mandates signature acceptance under qualified specific reservation.\n\nCLAUSE 5 - CONTRACTUAL PROVISIONS\nFormal notice of equipment malfunctioning was received at corporate certified mail legale@sabauda-siluppo.example.\n\nCLAUSE 9 - CONTRACTUAL PROVISIONS\nGoods stored under bonded warehouse terms remain subject to release authorization by the lawful owner.",
+   "s": 3.5880720615386963,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "```markdown\n\n```",
+   "s": 0.7653279304504395,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "GENERAL TERMS AND CONDITIONS OF SUPPLY FRAMEWORK\n\nCLAUSE 1 - CONTRACTUAL PROVISIONS\nAny exterior carton compromise mandates signature acceptance under qualified specific reservation.\n\nCLAUSE 2 - CONTRACTUAL PROVISIONS\nPerformance oversight of the works under code CIG YRD29FEJLM is entrusted to the lead technical supervisor.\n\nCLAUSE 3 - CONTRACTUAL PROVISIONS\nSettlement of the first installment of EUR 25,668.59 confirms unconditional acceptance of the payment schedule.\n\nCLAUSE 5 - CONTRACTUAL PROVISIONS\nFormal notice of equipment malfunctioning was received at corporate certified mail legale@sabauda-sviluppo.example.\n\nCLAUSE 6 - CONTRACTUAL PROVISIONS\nProcessing of personal data is carried out in strict accordance with European Regulation 2016/679 (GDPR).\n\nCLAUSE 7 - CONTRACTUAL PROVISIONS\nThe standard commercial credit term is agreed at 30 calendar days from invoice date.\n\nCLAUSE 9 - CONTRACTUAL PROVISIONS\nGoods stored under bonded warehouse terms remain subject to release authorization by the lawful owner.\n\nCLAUSE 10 - CONTRACTUAL PROVISIONS\nAncillary collection charges and revenue stamps total $61,170.17 on the final billing statement.\n\nCLAUSE 11 - CONTRACTUAL PROVISIONS\nThe deductible policy retention applied to third-party liability insurance claims is $93,204.59.\n\nCLAUSE 12 - CONTRACTUAL PROVISIONS\nThe manufacturer certifies absence of hazardous volatile organic substances in exterior coatings.",
+   "s": 14.721808910369873,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "```markdown\n\n```",
+   "s": 9.132459878921509,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_0144_invoice_detail_L1_en": {
+  "top": {
+   "text": "Nexus Logistics Ltd.\n854 King Street, London C1 2JR\nVAT ID: 70452800314 - Fiscal ID: TZWNXB73L09B360E - PEC: direzione@sabauda-sviluppo.example\n\nCOMMERCIAL SALES INVOICE\n\nDoc Ref: FAT_0682_2025 | Issue Date: 22 March 2025\n\nINVOICE TO:\nApex Logistics Inc.\n\nPAYMENT & PROCUREMENT:\nScadenza: January 25, 2025 - IBAN IT95 E402 6152 2642 8142 3411372",
+   "s": 3.498913049697876,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "General supply terms & statutory conditions: The agreed lump-sum charge for extraordinary factory re-certification is established at $ 11,044,03773. Early contract termination entitles the service provider to compensation solely for work performed. Prototype stress testing demonstrated generous mechanical safety margins above operational duty.",
+   "s": 1.6258108615875244,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Nexus Logistics Ltd.\n854 King Street, London C1 2JR\nVAT ID: 70452800314 - Fiscal ID: TZWNXB73L09B360E - PEC: direzione@sabauda-sviluppo.example\n\nCOMMERCIAL SALES INVOICE\n\nINVOICE TO:\nApex Logistics Inc.\n712 Victoria Way, Leeds C2 2TA - P.I.VA: 23838970582\n\nPAYMENT & PROCUREMENT:\nScadenza: January 25, 2025 – IBAN: IT95 E402 6152 2642 8142 3411 372\nCIG: 5HHGR78NBZ – CUP: T97S4344349666\n\nItem Description of Goods Qty UoM Unit Price Disc% Total Net Tax%\n01 Regulated switching power supply unit 24V 10A DIN mod. 362 15 EA EUR 182.66 0% GBP 2,739.90 1.5%\n02 Multi-core shielded industrial signal cable 100m reel mod. 762 12 EA GBP 173.07 0% $ 2,076.84 1.5%\n03 Emergency stop push-button switch twist-to-release mod. 619 43 EA EUR 156.91 0% GBP 6,747.13 1.5%\n04 Nickel-plated brass cable gland metric M20 IP68 rated mod. 248 17 EA EUR 439.66 0% EUR 7,474.22 1.5%\n05 Pneumatic compressed air filter–regulator unit 1/2 mod. 762 48 EA $ 129.54 0% EUR 6,217.92 1.5%\n06 Heavy-duty zinc-plated structural mounting angle mod. 537 47 EA $ 118.40 0% $ 5,564.80 1.5%\n07 Multi-tier LED optical signal tower beacon 24VDC mod. 414 26 EA GBP 51.81 0% GBP 1,347.06 1.5%\n08 Four-pole electromagnetic contactor 25A 24VAC coil mod. 325 39 EA GBP 359.10 0% GBP 14,004.90 1.5%\n09 Precision deep groove ball bearing ISO series 6205 mod. 875 25 EA $ 365.19 0% EUR 9,129.75 1.5%\n10 Residual current circuit breaker 4P 32A 30mA Class A mod. 753 23 EA GBP 18.92 0% GBP 435.16 1.5%\n11 Pneumatic directional control valve 5/2 24VDC IP65 mod. 240 49 EA EUR 396.42 0% EUR 19,424.58 1.5%\n12 Modular terminal block connector assembly DIN-rail mod. 105 28 EA $ 404.74 0% $ 11,332.72 1.5%\n13 Brushless industrial servomotor 3.5Nm optical encoder mod. 635 22 EA $ 268.39 0% EUR 5,904.58 1.5%\n14 Flanged RTD PT100 temperature sensor stainless steel mod. 698 4 EA EUR 120.08 0% EUR 480.32 1.5%\n\nSubtotal Net: GBP 92,879.88\nVAT Amount (22%): GBP 20,433.57\nTOTAL AMOUNT DUE: $ 113,313.45",
+   "s": 28.774308919906616,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "General supply terms & statutory conditions: The agreed lump-sum charge for extraordinary factory re-certification is established at $11,044,037.73. Early contract termination entitles the service provider to compensation solely for work performed. Prototype stress testing demonstrated generous mechanical safety margins above operational duty.",
+   "s": 11.329310894012451,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_0404_commercial_statement_L3_en": {
+  "top": {
+   "text": "Beacon Engineering Corp.\n745 Victoria Way, Seattle GI 5PN\nVAT ID: 19501000186 - Fiscal ID: STBSHD72E52L149N - PEC ufficio acquisti@sabauda-swluppo.example\n\nSUPPLIER STATEMENT OF ACCOUNT & OPEN ITEMS\nDoc Ref: EST/2025/05471 | Issue Date: 9 May 2025\n\nPenodo contabile: 01/01/2025 - 9 May 2025 | Saldo Iniziale Riportato: GBP 147,260 II | Coordinate IT84 Q587 8805 4360 1223 1934 476",
+   "s": 4.672948122024536,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "```markdown\n\n```",
+   "s": 0.7611749172210693,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "SUPPLIER STATEMENT OF ACCOUNT & OPEN ITEMS\n\nDoc Ref: EST/2025/05471 | Issue Date: 9 May 2025\n\nPenodo contabile: 01/01/2025 - 9 May 2025 | Saldo Iniziale Rapportato: GBP 147,260 II | Coordinate IT84 Q587 8805 4360 1223 1934 476\n\n| Doc Date | Document No. | Due Date | Accounting Transaction Description | Debit | Credit | Balance |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| April 6, 2025 | FAT-2025-3970 | 6 January 2025 | Fattura acquisto fornitura n FAT-2025-3970 | GBP 1,27791 | - | $ 6,27791 |\n| 8 June 2025 | BON-2025-8546 | 2025-08-04 | Disposizione one bonifico bancano ref BON-2025-8546 | - | GBP 5,989.27 | $ 288.64 |\n| June 21, 2025 | FAT-2025-7029 | 2025-10-28 | Fattura acquisto fornitura n FAT-2025-7029 | $ 3,931.47 | - | EUR 4,220.11 |\n| 2025-07-27 | BON-2025-6668 | 2025-02-06 | Disposizione one bonifico bancano ref BON-2025-6668 | - | EUR 3,081.69 | GBP 1,138.42 |\n| 2025-10-12 | FAT-2025-8950 | September 11, 2025 | Fattura acquisto fornitura n FAT-2025-8950 | $ 995.58 | - | EUR 2,134.00 |\n| February 12, 2025 | BON/2025/03351 | 2025-06-14 | Disposizione one bonifico bancano ref BON/2025/03351 | - | EUR 6,892.21 | EUR 4,758.21 |\n| 17 October 2025 | FAT-2025-3615 | August 17, 2025 | Fattura acquisto fornitura n FAT-2025-3615 | EUR 2852.73 | - | EUR 3,094.52 |\n| February 20, 2025 | BON/2025/05108 | April 20, 2025 | Disposizione one bonifico bancano ref BON/2025/05108 | - | GBP 8,287.72 | GBP 5,193.20 |\n| 7 September 2025 | FAT-2025-8667 | March 16, 2025 | Fattura acquisto fornitura n FAT-2025-8667 | EUR 7126.83 | - | EUR 1,933.63 |\n| 5 December 2025 | BON_0352_2025 | December 3, 2025 | Disposizione one bonifico bancano ref BON_0352_2025 | - | EUR 7674.81 | $ 5,741.18 |\n| August 13, 2025 | FAT_9216_2025 | 9 April 2025 | Fattura acquisto fornitura n FAT_9216_2025 | GBP 6,520.91 | - | GBP 779.73 |\n| 2025-02-01 | BON/2025/03149 | 2025-03-04 | Disposizione one bonifico bancano ref BON/2025/03149 | - | GBP 2,390.06 | EUR 1,610.33 |\n| 27 March 2025 | FAT-2025-5026 | October 6, 2025 | Fattura acquisto fornitura n FAT-2025-5026 | EUR 725.46 | - | EUR 6,115.13 |\n| 9 July 2025 | BON_5915_2025 | 6 October 2025 | Disposizione one bonifico bancano ref BON_5915_2025 | - | GBP 4,214.88 | $ 1,900.25 |\n| 2025-01-17 | FAT/2025/08380 | 2025-11-12 | Fattura acquisto fornitura n FAT/2025/08380 | $ 6,773.02 | - | GBP 8,673.27 |\n\nAccount reconciliation instructions & covenants. Failure to meet the payment deadline of 2025-09-09 shall cause immediate forfeiture of all commercial allowances. For corporate tax purposes, the vendor certifies the statutory withholding rate of 15%. Milestone deadlines set forth in the work program validated on December 25, 2025 constitute essential terms.",
+   "s": 40.93551015853882,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "```markdown\n\n```",
+   "s": 10.389141082763672,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_1035_multi_column_L3_it": {
+  "top": {
+   "text": "Industrie Metallurgiche De Luca S.n.c.\nVia Mazzini 53, 78073 Modena (IT)\nP.JVA: 29781780795 - C.F.: JHDRWH97L55B956R - PEC: direzione@nord-impianti.example\n\nCONDIZIONI GENERALI DI FORNITURA E CONTRATTO QUADRO\nDocumento n.: CTR_1004_2025 | Data emissione: 19.11.2025\n\nART. 1 - CLAUSOLE E CONDIZIONI\nL'aspetto esteciore del beni risulta conforme a questo\n\nART. 5 - CLAUSOLE E CONDIZIONI\nL'aspetto esteciore del beni risulta conforme a questo\n\nART. 9 - CLAUSOLE E CONDIZIONI",
+   "s": 5.3048927783966064,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "```markdown\n\n```",
+   "s": 0.9893889427185059,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Industrie Metallurgiche De Luca S.n.c.\nVia Mazzini 53, 78073 Modena (IT)\nP.JVA: 29781780795 - C.F.: JHDRWH97L55B956R - PEC: direzione@nord-impianti.example\n\nCONDIZIONI GENERALI DI FORNITURA E CONTRATTO QUADRO\nDocumento n.: CTR_1004_2025 | Data emissione: 19.11.2025\n\nART. 1 - CLAUSOLE E CONDIZIONI\nL'aspetto esteriore dei beni risulta conforme a quanto\nspecificato nell'ordine n. CTR_2360_2025.\n\nART. 2 - CLAUSOLE E CONDIZIONI\nL'operazione non costituisce cessione rilevante ai fini IVA\nal sensi della normativa vigente.\n\nART. 3 - CLAUSOLE E CONDIZIONI\nLa ditta rilascia dichiarazione di conformità dei\nmacchinari alla Direttiva Macchine comunitaria.\n\nART. 5 - CLAUSOLE E CONDIZIONI\nL'accordo n. CTR_5187_2025 si intende tacitamente\nrinnovato per un ulteriore anno in assenza di disdetta\nformale.\n\nART. 6 - CLAUSOLE E CONDIZIONI\nIl responsabile del controllo qualità della società con\ncodice fiscale VNCYVG84518A786H ha widimato il lotto.\n\nART. 7 - CLAUSOLE E CONDIZIONI\nIl collaudo dei sistemi è stato eseguito con esito positivo\nin data 22 dicembre 2025.\n\nART. 8 - CLAUSOLE E CONDIZIONI\nLa risoluzione opera di diritto trascorsi inutilmente 30\ngiorni dalla ricezione dell'intimazione scritta.\n\nART. 9 - CLAUSOLE E CONDIZIONI\nI beni soggetti a deperibilità devono essere stoccati a\ntemperatura controllata all'arrivo.\n\nART. 10 - CLAUSOLE E CONDIZIONI\nIl tetto massimo di responsabilità contrattuale è fissato\nnel valore pattuito di EUR 91.253.00.\n\nART. 11 - CLAUSOLE E CONDIZIONI\nI dati anagrafici del trasportatore corrispondono al\ncodice fiscale BHSMDS93E61A956G.",
+   "s": 19.37318181991577,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "```markdown\n\n```",
+   "s": 8.964034080505371,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_0396_invoice_detail_L3_it": {
+  "top": {
+   "text": "Forniture Industriali Brambilla S.a.s.\nStrada Industria 81, 27178 Parma (IT)\nPIVA 35460050996 - C.F. JDGSJM96C56F204F - PEC fatturazione@orobie-technologie.example\n\nFATTURA COMMERCIALE DI VENDITA\nDocumento n.: FAT_2126_2025 | Data emissione: 21.05.2025\n\nDESTINATARIO / CLIENTE:\nServizi Integrati Marchetti S.n.c.\nViale Matteotti 125, 19961 Torino (IT) - PIVA: 78408260509\n\nDATI DI PAGAMENTO E APPALTO:\nScadenza: 0906 2025 - IBAN: IT05 Q049 7062 2228 2078 0788 863",
+   "s": 4.171374797821045,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "Condizioni generali di forniture e vendita. Per ogni chiarimento contabile è possibile contattare l'amministrazione via PEC alfindirizzo\nlegale@alpina-meccanica.example. Il collaudatore nominato con determinazione n. NOT_4952_2025 ha approvato gli atti contabili finali. Il codice identificativo di gara\nCIG CJ3YLR1DKL deve comparire su ogni atto inerente la forniture.",
+   "s": 2.179504156112671,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Forniture Industriali Brambilla S.a.s.\nStrada Industria 81, 27178 Parma (IT)\nPIVA 35460050996 - C.F. JDGSJM96C56F204F - PEC latturazione@orobie-technologie example\n\nFATTURA COMMERCIALE DI VENDITA\nDocumento n: FAT_2126_2025 | Data emissione e 21.05.2025\n\nDESTINATARIO / CLIENTE:\nServizi Integrati Marchetti S.n.c.\nViale Matteotti 125, 19951 Torino (IT) - PIVA: 78408260509\n\nDATI DI PAGAMENTO E APPALTO:\nScadenza: 0906.2025 - IBAN: IT05 Q049 7062 2228 2078 0788 863\nCIG: YJ59026443 - CUP: D68V36531536278\n\nPos. Descrizione Articolo Qt. UM Prezzo Unit. Sc.% Totale Riga IVA\n01 Pulsante d'arresto d'emergenza a fungo con sb locco mod. 982 38 PZ EUR 198,99 0% EUR 7561,62 2,5%\n02 Internuttore magnetotermico differenziale 4P 32A 30mA mod. 846 39 PZ EUR 198,87 0% 7755,93 € 2,5%\n03 Contattore quadripolare 2S A bobina comando 24VAC mod. 731 38 PZ EUR 299,84 0% 11393,92 € 2,5%\n04 Scheda elettronica interfaccia I/O bus Modbus RTU mod. 908 9 PZ EUR 310,51 0% EUR 2.794,59 2,5%\n05 Cavo schermato multipolare FROR 4x15mm bobina 100m mod. 644 28 PZ € 358,37 0% € 10.034,36 2,5%\n06 Cuscinetto radiale a sfere schermato classe ISO 6205 mod. 219 4 PZ 275,55 € 0% EUR 1102,20 2,5%\n07 Pressacavo metrico M20 in ottone nichelato IP68 mod. 224 36 PZ EUR 427,99 0% 1540764 € 2,5%\n08 Barra profilata in alluminio anodizza to 40x40 cava 8 mod. 765 4 PZ EUR 239,25 0% € 967,00 2,5%\n09 Relé statico di potenza monofase 40A 230VAC mod. 291 14 PZ 16,87 € 0% EUR 236,18 2,5%\n10 Modulo alimentatore stabilizzato switching 24V 10A mod. 541 49 PZ 336,77 € 0% EUR 16501,73 2,5%\n11 Morsettiera componibile su guida DIN passo 5mm mod. 304 38 PZ 182,72 € 0% € 6.943,36 2,5%\n12 Lampada di segnalazione a LED multicolore IP65 24V mod. 945 22 PZ EUR 419,34 0% € 9.225,48 2,5%\n13 Filtro regolatore per aria compressa attacco 1/2 mod. 574 18 PZ € 431,86 0% 7773,48 € 2,5%\n14 Staffa angolare di fissaggio pesante in acciaio zincato mod. 556 47 PZ € 121,16 0% 5.694,52 € 2,5%\n15 Servomotore brushless coppia nominale 35N m con encoder mod. 668 9 PZ EUR 275,39 0% 2.478,51 € 2,5%\n16 Sensore di temperatura industriale PT100 flangiato mod. 636 32 PZ EUR 58,24 0% EUR 1.863,68 2,5%\n17 Guarnizione di tenuta in EPDM rinforza di diam. 120mm mod. 500 37 PZ EUR 299,14 0% 11.068,18 € 2,5%\n18 Valvola pneumatica proporzionale 5/2 vie 24VDC mod. 608 8 PZ € 370,69 0% 2.965,52 € 2,5%\n19 Pulsante d'arresto d'emergenza a fungo con sb locco mod. 600 15 PZ € 167,99 0% € 2.519,85 2,5%\n\nTotale Imponibile Netto: 124.277,75 €\nImposta IVA (22%): EUR27.341,10\nTOTALE DA PAGARE: 151.618,85 €",
+   "s": 32.90485095977783,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "Liquidato 14.419,00 € in data 09.06.2025\n\nTotale Imponibile Netto: 124.277,75 €\nImposta IVA (22%): EUR27.341,10\nTOTALE DA PAGARE: 151.618,85 €\n\nCondizioni generali di forniture e vendita. Per ogni chiarimento contabile è possibile contattare l'amministrazione via PEC all'indirizzo\nlegale@alpina-meccanica.example. Il collaudatore nominato con determinazione n. NOT_4952_2025 ha approvato gli atti contabili finali. Il codice identificativo di gara\nCIG CJ3YLR1DKL deve comparire su ogni atto inerente la forniture.",
+   "s": 11.734601020812988,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_1480_labelled_form_L2_it": {
+  "top": {
+   "text": "Officine Meccaniche Conti S.n.c.\nVia Matteotti 74, 36878 Torino (IT)\nP.IVA: 88057290293 - C.F.: BPQFVN82H59I271D - PEC: amministrazione@veneta-distribuzione.example\n\nMODULO DI REGISTRAZIONE E CENSIMENTO ANAGRAFICO FORNITORE\nDocumento n.: MOD/2025/05459 | Data emissione: 18.10.2025\n\nDEN OMINAZIONE O RAGIONE SOCIALE\nPARTITA IVA SOCIETARIA",
+   "s": 2.9661388397216797,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "```markdown\n\n```",
+   "s": 0.7446470260620117,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Officine Meccaniche Conti S.n.c.\nVia Matteotti 74, 36878 Torino (IT)\nP.IVA: 88057290293 - C.F.: BPQFVN82H59I271D - PEC: ammini strazione@veneta-distribuzione.example\n\nMODULO DI REGISTRAZIONE E CENSIMENTO ANAGRAFICO FORNITORE\nDocumento n.: MOD/2025/05459 | Data emissione: 18.10.2025\n\nDEN OMINAZIONE O RAGIONE SOCIALE\nIndustrie Metallurgiche Brambilla S.r.l.\n\nPARTITA IVA SOCIETARIA\n49306350825\n\nCODICE FISCALE INTESTATARIO\nWHSFNN55E28H708O\n\nINDIRIZZO PEC CERTIFICATO\ngare@veneta-distribuzione.example\n\nCOORDINATE BAN CARIE IBAN\nIT25 A661 1697 0450 5307 0948 213\n\nCODICE DI PROTOCOLLO ASSEGNATO\nMOD/2025/05459\n\nIMPORTO FIDO COMMERCIALE RICHIESTO\n133.121,37 €\n\nDATA DI COSTITUZI ONE SOCIETARIA\n6 settembre 2025\n\nALIQUOTA SCONTO RISERVATO\n22%\n\nCODICE IDENTIFICATIVO GARA CIG\nWKKKCHZMV2\n\nCODICE UNICO DI PROGETTO CUP\nJ21A64970002412\n\nREFERENTE AMMINISTRATIVO\nDott. Marco Rinaldi - Resp. Acquisti\n\nDATA ULTIMA VERIFICA DUR C\n12 novembre 2025\n\nIMPORTO CAPITALE SOCIALE VERSATO\nEUR 432.749,09\n\nDichiarazione sostitutiva e trattamento dati: La manutenzione programmata eseguita con regolarità preserva la validità dei termini di garanzia. Il contraente principale assume tutti gli obblighi di tracciabilità finanziaria sul conto IBAN IT69 W174 9336 8092 2628 0167 726. L'importo netto liquidabile risulta pari a EUR 104.391,35 al lordo delle compensazioni previste.",
+   "s": 18.250272035598755,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "Dichiarazione sostitutiva e trattamento dati: La manutenzione programmata eseguita con regolarità preserva la validità dei termini di garanzia. Il contraente principale assume tutti gli obblighi di tracciabilità finanziaria sul conto IBAN IT69 W174 9336 8092 2628 0167 726. L'importo netto liquidabile risulta pari a EUR 104.391,35 al lordo delle compensazioni previste.",
+   "s": 10.580550909042358,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_0493_report_footnotes_L3_it": {
+  "top": {
+   "text": "Officine Meccaniche Ferri S.r.l.\nStrada Marconi 70, 26064 Padova (IT)\nP.IVA: 16946470982 - C.F.: FPLNPR82T55D749H - PEC: direzione@adriatica-trasporti.example\n\nRELAZIONE SULLA GESTIONE E MONITORAGGIO FORNITURE\nDocumento n.: REL-2025-6447 | Data emissione: 22 dicembre 2025\n\nLa ditta venditrice dichiara di operare nel pieno rispetto della sicurezza sul",
+   "s": 2.862931966781616,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "```markdown\n\n```",
+   "s": 0.7441279888153076,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Officine Meccaniche Ferri S.r.l.\nStrada Marconi 70, 26064 Padova (IT)\nP.IVA: 16946470982 - C.F.: FPLNPR82T55D749H - PEC: direzione@adriatica-trasporti.example\n\nRELAZIONE SULLA GESTIONE E MONITORAGGIO FORNITURE\nDocumento n.: REL-2025-6447 | Data emissione: 22 dicembre 2025\n\nLa ditta venditrice dichiara di operare nel pieno rispetto della sicurezza sul lavoro. [1]\n\nLa manutenzione programmata eseguita con regolarità preserva la validità dei termini di garanzia. [2]\n\nI colli fragili richiedono specifica manipolazione e stoccaggio in ambiente asciutto. [3]\n\nIl saldo delle competenze per i servizi resi entro il 20.12.2025 è pari a € 22.744.216,64. [4]",
+   "s": 12.813902139663696,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "[1] Saggio degli interessi contrattualmente concordato pari a: 8%.\n[2] Termine perentorio fissato dalla delibera del consiglio: 11 ottobre 2025.\n[3] Identificativo tributario dell'ente verificatore esterno: 10494590903.\n[4] Importo certificato al collaudo finale: 2.419.792.03 €.\n[5] Riferimento alla convenzione quadro applicabile: n. CTR_5870_2025.\n[6] Saggio degli interessi contrattualmente concordato pari a: 1,5%.\n\nVisto di conformità: 11/07/2025",
+   "s": 11.969391107559204,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_0483_multi_column_L1_it": {
+  "top": {
+   "text": "Officine Meccaniche Barbieri S.r.l.\nCorso Industria 87, 38393 Perugia (IT)\nP.IVA: 82479340638 - C.F.: YSXFGV77B21D350U - PEC: fatturazione@valle-servizi.example\n\nCONDIZIONI GENERALI DI FORNITURA E CONTRATTO QUADRO\nDocumento n.: CTR_5488_2025 | Data emissione: 16.01.2025\n\nART. 1 - CLAUSOLE E CONDIZIONI\n\nART. 5 - CLAUSOLE E CONDIZIONI",
+   "s": 3.036283016204834,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "www.",
+   "s": 0.7140369415283203,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Officine Meccaniche Barbieri S.r.l.\nCorso Industria 87, 38393 Perugia (IT)\nP.IVA: 82479340638 - C.F.: YSXFGV77B21D350U - PEC: fatturazione@valle-servizi.example\n\nCONDIZIONI GENERALI DI FORNITURA E CONTRATTO QUADRO\nDocumento n.: CTR_5488_2025 | Data emissione: 16.01.2025\n\nART. 1 - CLAUSOLE E CONDIZIONI\nLa notifica dei provvedimenti di esclusione è effettuata via posta elettronica certificata a legale@partenope-si-stemi.example.\n\nART. 2 - CLAUSOLE E CONDIZIONI\nEventuali contestazioni sulla liquidazione di € 4.129.980,24 dovranno pervenire entro quindi giorni.\n\nART. 3 - CLAUSOLE E CONDIZIONI\nLe comunicazioni inerenti la commessa saranno trasmesse all'indirizzo PEC gare@adriatica-trasporti.example.\n\nART. 5 - CLAUSOLE E CONDIZIONI\nI beni soggetti a deperibiliità devono essere stoccati a temperatura controllata all'arrivo.\n\nART. 6 - CLAUSOLE E CONDIZIONI\nI contraenti attestano che il presente testo rispecchi a fedelmente la comune intenzione delle parti.\n\nART. 7 - CLAUSOLE E CONDIZIONI\nIl codice univoco CIG S9FAWBRBKA deve essere obbligatoriamente indicato in tutte le fatture elettriche emesse.",
+   "s": 15.182254076004028,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "```markdown\n\n```",
+   "s": 8.84647798538208,
+   "ptok": 3054
+  }
+ },
+ "itdoc_a_0468_invoice_detail_L3_it": {
+  "top": {
+   "text": "Industrie Metallurgiche Rinaldi S.n.c.\nStrada Matteotti 104, 44652 Torino (IT)\nP.JVA: 21672800352 - C.F.: WHVNVY66S4SL240B - PEC amministrazione@etnea-forniture.example\n\nFATTURA COMMERCIALE DI VENDITA\nDocumento n.: FAT/2025/00066 | Data emissione: 01.07.2025\n\nDESTINATARIO / CLIENTE:\nCostruzioni Generali Santoro S.r.l.\n\nDATI DI PAGAMENTO E APPALTO:\nScadenza: 12 agosto 2025 - IBAN: 1T66 A310 0009 5587 5438 0802 380",
+   "s": 3.5941131114959717,
+   "ptok": 456
+  },
+  "bottom": {
+   "text": "Condizioni generali di forniture e vendita: Per ogni chiarimento contabile è possibile contattare Iamministrazione via PEC alFindirizzo\ndirezione@adriatica-trasporti.example. L'importo netto a pagare è determinato in 9.184.04€ con scadenza valuta al 18.03.2025. Le verifiche di cassa non evidenziano\ndiscrepanze rispetto al totale rendicontato di EUR 52.497,70.",
+   "s": 2.3270649909973145,
+   "ptok": 412
+  },
+  "half1": {
+   "text": "Industrie Metallurgiche Rinaldi S.n.c.\nStrada Matteotti 104, 44652 Torino (IT)\nP.IVA: 21672800352 - C.F.: WHVNVY66S45L240B - PEC amministrazione@etnea-forniture.example\n\nFATTURA COMMERCIALE DI VENDITA\nDocumento n.: FAT/2025/00066 | Data emissione: 01.07.2025\n\nDESTINATARIO / CLIENTE:\nCostruzioni Generali Santoro S.r.l.\nStrada Mazzini 20, 11534 Perugia (IT) - P.IVA: 94412970454\n\nDATI DI PAGAMENTO E APPALTO:\nScadenza: 12 agosto 2025 - IBAN: IT66 A310 0009 5587 5438 0802 380\nCIG: UCH1G5STWB - CUP: T10Z54941814063\n\nPos. Descrizione Articolo Qtà UM Prezzo Unit. Sc.% Totale Riga IVA\n01 Modulo alimentatore stabilizzato switching 24V 10A mod. 845 14 PZ 366,90 € 0% EUR 5.136,60 4%\n02 Guarnizione di tenuta in EPDM rinforzato diam. 120mm mod. 234 17 PZ 437,68 € 0% 7.440,56 € 4%\n03 Interruttore magnetotermico differenziale 4P 32A 30mA mod. 559 36 PZ EUR 201,58 0% EUR 7.256,88 4%\n04 Pulsante d'arresto d'emergenza a fungo con sblocco mod. 870 48 PZ € 114,91 0% EUR 5.515,68 4%\n05 Contattore quadripolare 25A bobina comando 24VAC mod. 345 14 PZ 62,37 € 0% € 873,18 4%\n06 Filtro regolatore per aria compressa attacco 1/2 mod. 530 23 PZ 96,43 € 0% EUR 2.217,89 4%\n07 Lampada di segnalazione a LED multicolore IP65 24V mod. 341 43 PZ 280,44 € 0% EUR 12.058,92 4%\n08 Pressacavo metrico M20 in ottone nickelato IP68 mod. 245 17 PZ EUR 300,93 0% EUR 5.115,81 4%\n09 Valvola pneumatica proporzionale 5/2 vie 24VDC mod. 672 45 PZ EUR 143,22 0% EUR 6.444,90 4%\n10 Staffa angolare di fissaggio pesante in acciaio zincato mod. 773 21 PZ 326,14 € 0% 6.848,94 € 4%\n11 Scheda elettronica interfaccia I/O bus Modbus RTU mod. 265 25 PZ 92,07 € 0% € 2.301,75 4%\n12 Cavo schermato multipolare PROR 4x1.5mm bobina 100m mod. 423 48 PZ € 377,81 0% € 18.134,88 4%\n13 Morsettiera componibile su guida DIN passo 5mm mod. 209 22 PZ 287,75 € 0% EUR 6.330,50 4%\n14 Cuscinetto radiale a sfere schermato classe ISO 6205 mod. 149 19 PZ 324,58 € 0% EUR 6.167,02 4%\n15 Relè statico di potenza monofase 40A 230VAC mod. 859 39 PZ 34,10 € 0% € 1.329,90 4%\n16 Servomotore brushless coppia nominale 3. SNm con encoder mod. 344 34 PZ € 167,30 0% EUR 5.688,20 4%\n17 Barra profilata in alluminio anodizzato 40x40 cava 8 mod. 222 46 PZ 150,25 € 0% EUR 6.911,50 4%\n18 Sensore di temperatura industriale PT100 flangiato mod. 350 10 PZ 98,98 € 0% 989,80 € 4%\n19 Modulo alimentatore stabilizzato switching 24V 10A mod. 842 14 PZ EUR 235,93 0% 3.303,02 € 4%\n\nTotale Imponibile Netto: 110.065,93 €\nImposta IVA (22%): €24.214,50\nTOTALE DA PAGARE: EUR 134.280,43",
+   "s": 31.74997901916504,
+   "ptok": 3054
+  },
+  "half2": {
+   "text": "Liquidato EUR 7.454,00 in data 12 agosto 2025\n\nTotale Imponibile Netto: 110.065,93 €\nImposta IVA (22%): €24.214,50\nTOTALE DA PAGARE: EUR 134.280,43\n\nCondizioni generali di forniture e vendita: Per ogni chiarimento contabile è possibile contattare PEC all'indirizzo\ndirezione@adriatica-trasporti.example. L'importo netto a pagare è determinato in 9.184,04€ con scadenza valuta al 18.03.2025. Le verifiche di cassa non evidenziano\ndiscrepanze rispetto al totale rendicontato di EUR 52.497,70.",
+   "s": 12.116227149963379,
+   "ptok": 3054
+  }
+ }
+}

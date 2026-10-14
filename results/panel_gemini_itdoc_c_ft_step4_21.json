@@ -1,0 +1,64 @@
+{
+ "tag": "panel_gemini_itdoc_c_ft_step4_21",
+ "model": "work/glm-ocr-bf16",
+ "corpus": "gemini/itdoc_c",
+ "scale": 1.0,
+ "adapter": "work/ft/step4_21",
+ "env": {
+  "macos": "26.3",
+  "python": "3.12.15",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "pages": {
+  "itdoc_c_0060_invoice_detail_lines_L1_it": {
+   "text": "ATTO DI LIQUIDAZIONE CONTABILE FATTURE PA\nDisposizione di Liquidazione n. LIQ/2024/01617 del 12.04.2025\nAMMINISTRAZIONE LIQUIDATRICE E OPERATORE CREDITORE:\nEnte: Città di Bari - Politiche Educative (Bari)\nFornitore: Adriatica Costruzioni Stradali S.r.l.\nP.IVA: 68523779590 | C.F.: LZCTPV87L05D612O | PEC: forniture@pec.lombardaservizi.example\nCodice CIG: 1ASRBD21HM | CUP: C64D93123795742\nN. Descrizione Voce Fornitura Cod. CIG Q.tà Prezzo Unit. Totale Netto\n01 Manutenzione straordinaria 1ASRBD21HM 10 interv. 18.500,00 € 185.000,00 €\n02 Sanificazione presidi civici 1ASRBD21HM 6 mesi 8.900,00 € 53.400,00 €\n03 Bonifica amianto e tetti 1ASRBD21HM 10mq 68,00 € 680,00 €\n04 Adeguamento antincendio 1ASRBD21HM 9 opere 32.500,00 € 292.500,00 €\n05 Demolizione manufatti 1ASRBD21HM 17 interv. 28.000,00 € 476.000,00 €\n06 Rifacimento asfalto 1ASRBD21HM 11mq 42,00 € 462,00 €\n07 Riconversione impianti 1ASRBD21HM 14 impianti 48.000,00 € 672.000,00 €\n08 Potatura alberature parchi 1ASRBD21HM 20 interv. 380,00 € 7.600,00 €\n09 Segnaletica stradale 1ASRBD21HM 4 lotti 5.200,00 € 20.800,00 €\n10 Servizio igiene urbana 1ASRBD21HM 16 mesi 14.200,00 € 227.200,00 €\n11 Fornitura arredi studio 1ASRBD21HM 13 postaz. 320,00 € 4.160,00 €\n12 Monitoraggio versanti 1ASRBD21HM 20 mesi 4.600,00 € 92.000,00 €\n13 Vigilanza uffici comunali 1ASRBD21HM 10 ore 26,50 € 265,00 €\n14 Assistenza sistemica ICT 1ASRBD21HM 9 ore 65,00 € 585,00 €\nTOTALE IMPONIBILE LIQUIDATO 2.032.652,00 €\nQuota IVA Split Payment (22%) versata all'Erario: 447.183,44 € | Totale Lordo: 2.479.835,44 €\nAccredito su conto corrente dedicato L. 136/2010 - IBAN: IT74 C504 1361 3380 8354 7794 610\nATTESTAZIONE DI REGOLARITÀ FISCALE E TRACCIABILITÀ DEI FLUSSI:\nL'importo del fondo cassa per le piccole spese minute dell'ufficio economato è reintegrato per 2.032.652,00 €. L'importo complessivo dei lavori a misura al netto del ribasso d'asta contrattuale risulta pari a 2.032.652,00 €. In sede di stipula contrattuale l'operatore economico affidatario ha dichiarato il proprio domicilio digitale PEC contabilità@nordmeccanica.example.\nIl Funzionario Verbalizzante:\nDott. Simone Bianchi\nAtto di Liquidazione LIQ/2024/01617 - Città di Bari - Politiche Educative\nAtto di Liquidazione LIQ/2024/01617 - Città di Bari - Politiche Educative",
+   "s": 35.53306007385254,
+   "prompt_tokens": 2788,
+   "gen_tokens": 1177,
+   "prefill_tps": 296.37161232475495,
+   "gen_tps": 45.1981433605738,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_c_0601_invoice_detail_lines_L2_it": {
+   "text": "ATTO DI LIQUIDAZIONE CONTABILE FATTURE PA\nDisposizione di Liquidazione n. LIQ/2025/00945 del 11/08/2026\nAMMINISTRAZIONE LIQUIDATRICE E OPERATORE CREDITORE:\nEnte: Città Metropolitana di Bologna - Lavori (Bologna)\nFornitore: ToscoFacility Gestione Immobili S.p.A.\nP.IVA: 65979118414 | C.F.: NPTZVG80L63I480W | PEC: forniture@pec.adriaticaforniture.example\nCodice CIG: GD2H7USES3 | CUP: B97R92489803977\nN. Descrizione Voce Fornitura Cod. CIG Q.tà Prezzo Unit. Totale Netto\n01 Messa in sicurezza argini GD2H7USES3 5 interv. 64.000,00 € 320.000,00 €\n02 Rifacimento asfalto GD2H7USES3 7mq 42,00 € 294,00 €\n03 Ripristino guardrail GD2H7USES3 3 metri 115,00 € 345,00 €\n04 Sanificazione presidi civici GD2H7USES3 14 mesi 8.900,00 € 124.600,00 €\n05 Licenze software gestione GD2H7USES3 8 lic. 850,00 € 6.800,00 €\n06 Adeguamento antincendio GD2H7USES3 14 opere 32.500,00 € 455.000,00 €\n07 Vigilanza uffici comunali GD2H7USES3 19 ore 26,50 € 503,50 €\n08 Bonifica amianto e tetti GD2H7USES3 18mq 68,00 € 1.224,00 €\n09 Consulenza specialistica GD2H7USES3 16 giorni 550,00 € 8.800,00 €\n10 Fornitura arredi studio GD2H7USES3 20 postaz. 320,00 € 6.400,00 €\n11 Manutenzione straordinaria GD2H7USES3 19 interv. 18.500,00 € 351.500,00 €\n12 Riconversione impianti GD2H7USES3 5 impianti 48.000,00 € 240.000,00 €\n13 Manutenzione ascensori GD2H7USES3 17 mesi 3.100,00 € 52.700,00 €\n14 Demolizione manufatti GD2H7USES3 11 interv. 28.000,00 € 308.000,00 €\nTOTALE IMPONIBILE LIQUIDATO 1.876.166,50 €\nQuota IVA Split Payment (22%) versata all'Erario: 412.756,63 € | Totale Lordo: 2.288.923,13 €\nAccredito su conto corrente dedicato L. 136/2010 - IBAN: IT59 T631 9440 0222 0263 6076 670\nATTESTAZIONE DI REGOLARITÀ FISCALE E TRACCIABILITÀ DEI FLUSSI:\nL'importo massimo concedibile a titolo di sussidio straordinario di solidarietà è stabilito in 1.876.166,50 €. La conferenza dei servizi decisoria per l'approvazione dell'opera pubblica è convocata per la data del 06/04/2024. Il pagamento del canone di concessione è stato disposto tramite procedura SEPA credit transfer su IBAN IT59 T631 9440 0222 0263 6076 670.\nIl Dirigente Risorse Finanziarie:\nDott.ssa Francesca Rossi\nAtto di Liquidazione LIQ/2025/00945 - Città Metropolitana di Bologna - Lavori\nAtto di Liquidazione LIQ/2025/00945 - Città Metropolitana di Bologna - Lavori",
+   "s": 29.911759853363037,
+   "prompt_tokens": 2788,
+   "gen_tokens": 1203,
+   "prefill_tps": 331.47316115895825,
+   "gen_tps": 56.216746603647685,
+   "peak_gb": 3.361333198
+  },
+  "itdoc_c_0842_invoice_detail_lines_L3_it": {
+   "text": "ATTO DI LIQUIDAZIONE CONTABILE FATTURE PA\nDisposizione di Liquidazione n. LIQ/2025/01246 del 02.09.2026\nAMMINISTRAZIONE LIQUIDATRICE E OPERATORE CREDITORE:\nEnte: Regione Veneto - Infrastrutture e Suolo (Venezia)\nForniture: ToscoFacility Gestione Immobili S.p.A.\nP.IVA: 75993900648 | C.F.: WDZNWK93C64A944P | PEC: amministrazione@pec.piemonteindustria.example\nCodice CIG: 97CEH4IGVD | CUP: D49N45721292022\nN. Descrizione Voce Fornitura Cod. CIG Q.tà Prezzo Unit. Totale Netto\n01 Bonifica ammianto e tetti 97CEH4IGVD 2mq 68,00 € 136,00 €\n02 Assistenza sistemica ICT 97CEH4IGVD 12 ore 65,00 € 780,00 €\n03 Riqualificazione fari LED 97CEH4IGVD 20 corpi 240,00 € 4,800,00 €\n04 Sanificazione presidi civici 97CEH4IGVD 20 mesi 8,900,00 € 178,000,00 €\n05 Demolizione manufatti 97CEH4IGVD 5 interv. 28,000,00 € 140,000,00 €\n06 Adeguamento antincendio 97CEH4IGVD 16 opere 32,500,00 € 520,000,00 €\n07 Rifacimento asfalto 97CEH4IGVD 18mq 42,00 € 756,00 €\n08 Manutenzione straordinaria 97CEH4IGVD 6 interv. 18,500,00 € 111,000,00 €\n09 Ripristino guardrail 97CEH4IGVD 5 metri 115,00 € 575,00 €\n10 Consulenza specialistica 97CEH4IGVD 10 giorni 550,00 € 5,500,00 €\n11 Monitoraggio versanti 97CEH4IGVD 11 mesi 4,600,00 € 50,600,00 €\n12 Potatura alberature parchi 97CEH4IGVD 16 interv. 380,00 € 6,080,00 €\n13 Licenze software gestione 97CEH4IGVD 15 lic. 850,00 € 12,750,00 €\n14 Fornitura arredi studio 97CEH4IGVD 3 postaz. 320,00 € 960,00 €\nTOTALE IMPONIBILE LIQUIDATO 1.031.937,00 €\nQuota IVA Split Payment (22%) versata all'Erario: 227.026,14 € | Totale Lordo: 1.258.963,14 €\nAccredito su conto corrente dedicato L. 136/2010 - IBAN: IT83 I499 8698 8258 4041 0622 596\nATTESTAZIONE DI REGOLARITÀ FISCALE E TRACCIABILITÀ DEI FLUSSI:\nIl conto corrente bancario intestato alla tesoreria per la riscosse delle entrate patrimoniali è l'IBAN IT83 I499 8698 8258 4041 0622 596. L'amministrazione si riserva di richiedere la cauzione provvisoria mediante bonifico bancario su IBAN IT83 I499 8698 8258 4041 0622 596. La quota di ammortamento dei beni strumentali acquisiti per il servizio di trasporto pubblico è del 1,5%.\nIl Presidente della Commissione:\nIng. Roberto Conti\nRegistrato in data 09/02/2024\nAtto di Liquidazione LIQ/2025/01246 - Regione Veneto - Infrastrutture e Suolo",
+   "s": 29.809340238571167,
+   "prompt_tokens": 2788,
+   "gen_tokens": 1175,
+   "prefill_tps": 342.86885938639455,
+   "gen_tps": 54.4304879847844,
+   "peak_gb": 3.361333198
+  },
+  "itdoc_c_1168_letter_small_footer_L4_it": {
+   "text": "REGIONE VENETO - INFRASTRUTTURE E SUOLO\nDirezione Centrale Gare e Contratti - Fondamenta Santa Lucia 23, Venezia\nVenezia, il 07/07/2024\nSpettabile Impresa Affidatura:\nSicula Servizi Ambientali S.p.A.\nVia Roma 220\nPalermo\nPAGATO - SALDO CONFORME\nOggetto: Comunicazione aggiudicazione efficace commessa n. NOT/2025/09568\nIl verbale di sorteggio pubblico per l'individuazione degli operatori da invitare reca il protocollo n. NOT/2025/09568.\nL'indennizzo dovuto a titolo di risarcimento del danno per occupazione illegittima ammonta a 503.338,60 €.\nLa percentuale di incidenza delle spese generali di cantiere stabilita dal capitolato speciale è pari al 5,0%.\nLa data della seduta riservata della commissione giudicatrice per la valutazione tecnica è fissata al 13 giugno 2024.\nDistinti Saluti,\nDott. Alessandro Monti\nIl Responsabile Unico del Progetto\nApprovato il 07/07/2024\nStazione Appaltante: Regione Veneto - Infrastrutture e Suolo (Venezia)\nP.IVA: 34780152293 | C.F. CJVDQQ86H44F839W | PEC contabiliita@lombardaservizi.example\nTesoreria dell'Ente c/o Banca d'Italia - IBAN: IT60 C319 4535 1578 6480 7752 291\nRiferimenti: CIG T5TUHP4RA0 - CUP Q51V71317803579 - Quadro: 4.209 734,59 EUR",
+   "s": 17.521131992340088,
+   "prompt_tokens": 2788,
+   "gen_tokens": 505,
+   "prefill_tps": 355.18447942175095,
+   "gen_tps": 52.797859646141184,
+   "peak_gb": 3.361333198
+  },
+  "itdoc_c_0874_pa_resolution_L5_it": {
+   "text": "PROVINCIA DI BRESCIA - SUA CENTRALE - REGISTRO DELLE DELIBERAZIONI\nDeliberazione n. DEL/2026/07938 adottata in seduta ordinaria del 25.04.2025\nESTRANGE AMMINISTRATIU DELLE INTERVENTO PUBBLICO:\nOggetto: Approvazione quadro economico e determinazione a contrarre\nOperatore Agglionoattario: Biruta Servizi Ambientali S.p.A. - Sede: Palermo\nCodice CIG: 949VCB4764 | Codice CUP: W2589652928883\nP.IVA: E7642814926 | C.F.: CMHL5M3M27A944T | PRC. direzione@pec.venetotecno.example\nLA GIUNTA COMUNALE / L'ORGANO COLLEGIALE\nPremesso che in data 03/12/2025 il RUP nominato conatto n. NOM/2024/02598 ha rassegnato la perizia tecnica. La notifica ha valore legale a tutti gli effetti per il destinatario avente sede legale a Brescia.\nL'importo del fondo cassa per le piccole spese minute dell'ufficio economato è reintegrato per 3,341,187,76 €.\nLa percentuale di incremento del canone di locazione passiva concordata tra le parti e stabilita al 5%.\nDELIBERA DI 1. Validare il quadro economico rimostabile; 2. lscrivere l'impegno contabile per 3,341,187,76 €; 3. Canalizzare i flusal sul conto IBAN: IT09 R142 3694 5487 4659 6676 856.\nEISCUTIVITA AMMINISTRATIU E PUBBLICAZIONE AMMINISTRAZIONE TRASPARINTE:\nL amministrazione al rivista di rehondere la canzone pervisoria mediante bonifico bancario su IBAN IT09 T169 0570 0482 1194 7080 328.\nLa memoria dell'innovazione dal presentatore speciale del concorso di impressione e pervenata via PEC.\nregistratiapercodinecancina.example. L'intervento per la matrizione degli infianti alloggi di edificia residenziale pubblica e cenato non CUP R57Q34862724933.\nIl Responsabile Unico del Pengertia:\nDott. Alessandro Monti\nIl Segregato Generale:\nAvv. Marco Barbieri\nApprovato il 24/08/2024\nDelibera DIL/2026/07938 - Provincia di Brescia - SUA Centrale",
+   "s": 24.573617935180664,
+   "prompt_tokens": 2788,
+   "gen_tokens": 744,
+   "prefill_tps": 304.7077580870689,
+   "gen_tps": 48.572474529855135,
+   "peak_gb": 3.361316814
+  }
+ }
+}

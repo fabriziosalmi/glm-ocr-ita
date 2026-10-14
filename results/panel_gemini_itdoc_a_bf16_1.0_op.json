@@ -1,0 +1,69 @@
+{
+ "tag": "panel_gemini_itdoc_a_bf16_1.0_op",
+ "model": "work/glm-ocr-bf16",
+ "corpus": "gemini/itdoc_a",
+ "scale": 1.0,
+ "adapter": null,
+ "env": {
+  "macos": "26.3",
+  "python": "3.12.15",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "pages": {
+  "itdoc_a_0060_invoice_detail_lines_L1_it": {
+   "text": "TOSCANA CARPENTERIE METALLICHE S.P.A.\nVia Leonardo da Vinci 24 – Firenze\nP.IVA: 64913236812 | C.F.: ZLCTBQ92H69F205I | PEC: direzione@lombardaservizi.example\n\nFATTURA COMMERCIALE IMMEDIATA N. FAT-2026-1551\nData emissione: 1 settembre 2025\nCodice CIG: 80DQJHZDYR | Codice CUP: D86B39183160732\n\nDESTINATARIO / CLIENTE:\nConsorzio Servizi Integrati S.c.a.r.l.\nPiazza Garibaldi 5 – Napoli\n\nCod. Descrizione Articolo / Prestazione Q.tà Prezzo Unit. Totale\nART-101 Valvola a sfera in acciaio inox DN50 PN16 50 PZ 128,25 € 6.412,50 €\nART-102 Relè termico differenziale trifase 24V 15 PZ 51,30 € 769,50 €\nART-103 Cavo unipolare flessibile FG16OR16 1x35 mmq 5 METRI 5,76 € 28,80 €\nART-104 Quadro elettrico modulare da parete IP65 5 PZ 315,00 € 1,575,00 €\nART-105 Interruttore magnetotermico differenziale 4P 32A 20 PZ 93,60 € 1,872,00 €\nART-106 Motoriduttore coassiale 1.5 kW 1400 giri/min 25 PZ 720,00 € 18.000,00 €\nART-107 Cuscinetto a rulli conici ad alta precisione 5 PZ 22,80 € 114,00 €\nART-108 Filtro disoleatore per aria compressa 1/2 pollice 50 PZ 36,00 € 1.800,00 €\nART-109 Guarnizione spirometallica in grafite e acciaio 2 PZ 14,40 € 28,80 €\nART-110 Tubo flessibile per alta pressione R2AT 3/8 50 METRI 14,50 € 725,00 €\nART-111 Raccordo a pressare dritto maschio 1 pollice 50 PZ 8,64 € 432,00 €\nART-112 Contattore tripolare di potenza 40A 230V AC 2 PZ 78,00 € 156,00 €\nART-113 Pressostato differenziale regolabile 0-10 bar 20 PZ 95,00 € 1.900,00 €\nART-114 Termometro bimetallico radiale scala 0-120 C 10 PZ 19,20 € 192,00 €\nART-115 Manometro a molla tubolare cassa inox 63 mm 50 PZ 15,60 € 780,00 €\nART-116 Morsettiera passante su guida DIN 6 mmq 25 CONFEZIONI 38,00 € 950,00 €\n\nMODALITÀ DI PAGAMENTO:\nBonifico Bancario a 30 giorni data fattura\nData Scadenza: 20 luglio 2025\nIBAN: IT11 V911 6156 8252 4005 4849 623\n\nRIEPILOGO TOTALI DOCUMENTO\nImponibile netto: 35.735,60 €\nAliquota IVA 22%: 7.861,83 €\nTOTALE FATTURA: 43.597,43 €\n\nAttestati di partecipazione ai corsi antincendio e primo soccorso allegati al fascicolo tecnico convenuto tra Toscana Carpenterie Metalliche S.p.A. e Consorzio Servizi Integrati S.c.a.r.l. con sede a Torino. Codice identificativo univoco CIG 80DQJHZDYR generato sulla banca dati nazionale dei contratti pubblici. Data e ora di inizio del trasporto concordate: 20 luglio 2025 alle ore 08:30 presso lo stabilimento.",
+   "loop_cut": null,
+   "s": 25.21406316757202,
+   "prompt_tokens": 2784,
+   "gen_tokens": 1214,
+   "prefill_tps": 366.6201203530131,
+   "gen_tps": 69.1324562726401,
+   "peak_gb": 3.15929939
+  },
+  "itdoc_a_0601_invoice_detail_lines_L2_it": {
+   "text": "TOSCANA CARPENTERIE METALLICHE S.P.A.\nVia Leonardo da Vinci 24 - Firenze\nP.IVA: 45739086499 | C.F.: BCPHLQ91M71F839X | PEC: contabilita@pec.piemonteindustria.example\n\nFATTURA COMMERCIALE IMMEDIATA N. FAT/2025/05264\nData emissione: 10 aprile 2026\nCodice CIG: GGN3C7A48Q | Codice CUP: Z92W38953990893\n\nDESTINATARIO / CLIENTE:\nManifatture Tessili del Nord S.p.A.\nVia Cavour 19 - Bergamo\n\nCod. Descrizione Articolo / Prestazione Q.tà Prezzo Unit. Totale\nART-101 Valvola a sfera in acciaio inox DN50 PN16 15 PZ 102,60 € 1.539,00 €\nART-102 Relè termico differenziale trifase 24V 25 PZ 27,36 € 684,00 €\nART-103 Cavo unipolare flessibile FG16OR16 1x35 mmq 15 METRI 7,20 € 108,00 €\nART-104 Quadro elettrico modulare da parete IP65 25 PZ 168,00 € 4.200,00 €\nART-105 Interruttore magnetotermico differenziale 4P 32A 10 PZ 62,40 € 624,00 €\nART-106 Motoriduttore coassiale 1.5 kW 1400 giri/min 50 PZ 480,00 € 24.000,00 €\nART-107 Cuscinetto a rulli conici ad alta precisione 2 PZ 34,20 € 68,40 €\nART-108 Filtro disoleatore per aria compressa 1/2 pollice 50 PZ 67,50 € 3.375,00 €\nART-109 Guarnizione spirometallica in grafite e acciaio 20 PZ 7,68 € 153,60 €\nART-110 Tubo flessibile per alta pressione R2AT 3/8 10 METRI 21,75 € 217,50 €\nART-111 Raccordo a pressare dritto maschio 1 pollice 10 PZ 5,76 € 57,60 €\nART-112 Contattore tripolare di potenza 40A 230V AC 50 PZ 52,00 € 2.600,00 €\nART-113 Pressostato differenziale regolabile 0-10 bar 10 PZ 95,00 € 950,00 €\nART-114 Termometro bimetallico radiale scala 0-120 C 5 PZ 36,00 € 180,00 €\nART-115 Manometro a molla tubolare cassa inox 63 mm 50 PZ 19,50 € 975,00 €\n\nMODALITÀ DI PAGAMENTO:\nBonifico Bancario a 30 giorni data fattura\nData Scadenza: 12.06.2024\nIBAN: IT22 V315 1094 1235 0363 1761 627\n\nRIEPILOGO TOTALI DOCUMENTO\nImponibile netto: 39.732,10 €\nAliquota IVA 22%: 8.741,06 €\nTOTALE FATTURA: 48.473,16 €\n\nEsecuzione negli ultimi cinque anni di forniture analoghe per un importo non inferiore a 17.131,13 €. I pezzi di ricambio originali dovranno essere garantiti per un periodo non inferiore a dieci anni entro la data fissata del 12.06.2024.\nDisposizione di pagamento mandata all'istituto tesoriere per la liquidazione sul conto IT22 V315 1094 1235 0363 1761 627.",
+   "loop_cut": null,
+   "s": 24.596513986587524,
+   "prompt_tokens": 2784,
+   "gen_tokens": 1168,
+   "prefill_tps": 364.4508282652131,
+   "gen_tps": 69.17781544450261,
+   "peak_gb": 3.15929939
+  },
+  "itdoc_a_0842_invoice_detail_lines_L3_it": {
+   "text": "EMILIA IMPIANTI TECNOLOGICI S.P.A.\nVia dell'Artigianato 18 - Modena\nP.IVA: 43140754391 | C.F.: WDBCLD99T45F205O | PEC: contabilità@emiliaimpianti.example\n\nFATTURA COMMERCIALE IMMEDIATA N. FAT/2025-5427\nData emissione: 04/09/2024\nCodice CIG: K7YTDQL4Q1 | Codice CUP: F12S74177974598\n\nDESTINATARIO / CLIENTE:\nConsorzio Servizi Integrati S.c.a.r.l.\nPiazza Garibaldi 5 - Napoli\n\nCod. Descrizione Articolo / Prestazione Q.tà Prezzo Unit. Totale\nART-101 Valvola a sfera in acciaio inox DN50 PN16 15 PZ 128.25 € 1.923.75 €\nART-102 Relè termico differenziale trifase 24V 2 PZ 51.30 € 102.60 €\nART-103 Cavo unipolare flessibile FG16OR16 1x35 mmq 5 METRI 5.76 € 28.80 €\nART-104 Ouadro elettrico modulare da parete IP65 25 PZ 168.00 € 4.200.00 €\nART-105 Interruttore magnetotermico differenziale 4P 32A 25 PZ 74.88 € 1.872.00 €\nART-106 Motoriduttore coassiale 1.5 kW 1400 giri/min 25 PZ 480.00 € 12.000.00 €\nART-107 Cuscinetto a rulli conici ad alta precisione 5 PZ 28.50 € 142.50 €\nART-108 Filtro disoleatore per aria compressa 1/2 pollice 10 PZ 45.00 € 450.00 €\nART-109 Guarnizione spirometallica in grafite e acciaio 5 PZ 11.52 € 57.60 €\nART-110 Tubo flessibile per alta pressione R2AT 3/8 2 METRI 17.40 € 34.80 €\nART-111 Raccordo a pressare dritto maschio 1 pollice 25 PZ 10.80 € 270.00 €\nART-112 Contattore tripolare di potenza 40A 230V AC 2 PZ 41.60 € 83.20 €\nART-113 Pressostato differenziale regolabile 0-10 bar 10 PZ 142.50 € 1.425.00 €\nART-114 Termometro bimetallico radiale scala 0-120 C 5 PZ 19.20 € 96.00 €\nART-115 Manometro a molla tubolare cassa inox 63 mm 20 PZ 19.50 € 390.00 €\nART-116 Morsettiera passante su guida DIN 6 mmq 25 CONFEZIONI 30.40 € 760.00 €\nART-117 Sensore di prossimità induttivo M18 PNP NO 25 PZ 50.40 € 1.260.00 €\nART-118 Pompa centrifuga monoblocco 2.2 kW 380V 25 PZ 520.00 € 13.000,00 €\n\nMODALITÀ DI PAGAMENTO:\nBonifico Bancario a 30 giorni data fattura\nData Scadenza: 21.04.2026\nIBAN: IT09 R178 3510 7169 1848 5675 407\n\nRIEPILOGO TOTALI DOCUMENTO\nImponibile netto: 38.096,25 €\nAliquota IVA 22%: 8.381,17 €\nTOTALE FATTURA: 46.477,43 €\n\nI materiali forniti sono accompagnati dal certificato di collaudo tipo 3.1 EN 10204 convenuto tra Emilia Impianti Tecnologici S.p.A. e Consorzio Servizi Integrati S.c.a.r.l. con sede a Bologna. Iscrizione nell'elenco dei fornitori prestatori e prestatori di servizi non soggetti a tentativi di infiltrazione mafiosa concordato da Emilia Impianti Tecnologici S.p.A. a favore di Consorzio Servizi Integrati S.c.a.r.l.",
+   "loop_cut": null,
+   "s": 26.585428953170776,
+   "prompt_tokens": 2784,
+   "gen_tokens": 1300,
+   "prefill_tps": 363.4527936754967,
+   "gen_tps": 68.9247081465853,
+   "peak_gb": 3.15929939
+  },
+  "itdoc_a_1168_letter_small_footer_L4_it": {
+   "text": "ROMAGNA COMPONENTI MECCANICI S.P.A.\nDivisione Impianti Industriali e Grandi Forniture - Via Faentina 35, Ravenna\n\nRavenna, il 5 dicembre 2025\n\nSpettabile Società:\nManifatture Tessili del Nord S.p.A.\nVia Cavour 19\nBergamo\n\nOggetto: Conferma ordinativo di forniture n. ORD-2026-8974 e trasmissione cronoprogramma\n\nIl contratto è redatto in duplice originale ed è soggetto a registrazione solo in caso d'uso registrato al repertorio n. ORD-2026-8974.\n\nAbbuono concesso per arrotondamento contabile concordato tra le parti per un totale di 600.808,26 €.\n\nRibasso percentuale offerto sull'importo posto a base di gara pari esattamente allo 4%.\n\nIn caso di mancato accredito entro i termini, la pratica sarà rimessa al legale di fiducia entro la data fissata del 10.01.2026.\n\nDistinti Saluti,\nRomagna Componenti Meccanici S.p.A.\nLa Direzione Generale\n\nConforme ordine 25 dicembre 2025\n\nRomagna Componenti Meccanici S.p.A. - S.r.l. a socio unico - Capitale Sociale deliberato 891.747,76 € i.v. - Iscr. R.E.A. n. 849201\nSede Legale: Via Faentina 35, Ravenna - Partita IVA: 86046167473 - Codice Fiscale: MH5ZRj92R22F205K - PEC: amministrazione@pec.edi\nCoordinate per pagamenti tracciati: Bonifici bancari presso Istituto Tesoriere - IBAN: IT19 K733 3160 5425 4588 7888 379\nRiferimenti appalti pubblici: Tracciabilità finanziaria L. 136/2010 - Codice Identificativo Gara CIG 0YAXGGTDHG - CUP G50W12582474",
+   "loop_cut": null,
+   "s": 15.840772151947021,
+   "prompt_tokens": 2784,
+   "gen_tokens": 567,
+   "prefill_tps": 363.08060593143693,
+   "gen_tps": 70.01868029240647,
+   "peak_gb": 3.15929795
+  },
+  "itdoc_a_0874_delivery_note_standard_L5_it": {
+   "text": "DOCUMENTO DI TRASPORTO (D.D.T.)\nNumero Documento: DDT/2024-6149 del 14.06.2026 - D.P.R. 472/1996\n\nPITTENTE / MEDITORE:\nNordMeccanica Industriale S.p.A.\nVia Galileo Gallini 82 - Milano\nP.I.V.A. 14297381965 - C.P. DCTBIN74D6214800\n\nDESTINATARIO / LITOO DI CONSEGNA:\nCostruzioni Generali Adriatica S.r.l.\nVia Plaminia 88\nRimbal i Custiere Operativo?\n\nDATI DEL TRASPORTO / VETTORRE:\nVettore: Autotrasporti Nazionali Veloci S.r.l.\nCassata: Vendita - Porto Frasco\nAspetto beni: Cartoni Sigillati - Colli 6\n\nPos. Codice Descrizione Articolo U.M. Quantità Lotto Produzione\n01 ART-201 Valvola a sfera in acciaio inox DN50 PN16 PZ 10 LOT-2025-0810\n02 ART-202 Rele termico differenziale trifase 24V PZ 50 LOT-2025-0811\n03 ART-203 Caeso uninolare flessibile PG16OR16 1x35 mmO METRI 100 LOT-2025-0812\n04 ART-204 Quadro elettrico modulare da parete IP65 PZ 50 LOT-2025-0813\n05 ART-205 Interruttore magnetotermico differenziale 4P 32A PZ 50 LOT-2025-0814\n06 ART-206 Motoriduttore coassiale 1.5 kW 1400 giri/min PZ 10 LOT-2025-0815\n07 ART-207 Cucicetto a rulli consci ad alta precisione PZ 150 LOT-2025-0816\n08 ART-208 Filtro disoleatore per aria compressa 1/2 pollice PZ 100 LOT-2025-0817\n09 ART-209 Guarnizione spirometallica in grafite e acciaio PZ 100 LOT-2025-0818\n10 ART-210 Tubo feasible per alta pressione R2AT 3/8 METRI 25 LOT-2025-0819\n\nTOTALE COLLI COMPLESSIVI SPEDITI 645\n\nLa forniture comprende tutti i beni specificati nell'allegato tecnico con decoreenza a partire dal 25 ottobre 2026. La consegna parziale della merce non esonera il forniture dal completare l'intero lotto patolino entro la data fissata del 20 luglio 2025.\nAttestazione di regolariità fiscale rilasciata dall'Agenzia delle Entrate acquista in atti a cura della societa NordMeccanica Industriale S.p.A. per lordine n. DDT/2024-6149.\n\nFIRMA DEL CONSEGNA / VETTORRE\nFIRMA DEL DESTINATARIO PER RICEVUTA\nDATA E ORA DCEPFETTIVO SCANCO\n14.06.2026 ore 10:45",
+   "loop_cut": null,
+   "s": 21.320142030715942,
+   "prompt_tokens": 2784,
+   "gen_tokens": 937,
+   "prefill_tps": 358.1137669534673,
+   "gen_tps": 69.5567633839895,
+   "peak_gb": 3.15929939
+  }
+ }
+}

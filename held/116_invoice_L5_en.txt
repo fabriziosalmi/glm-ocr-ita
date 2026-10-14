@@ -1,0 +1,47 @@
+Meridian Logistics Ltd.
+P.IVA 56274638202
+Via Garibaldi 12, 16124 Genova
+Thames Works Ltd.
+P.IVA 66070385097
+Corso Italia 45, 20122 Milano
+Invoice n. CTR/2026/01292 - 2026-01-27
+Service A16/2022
+15
+$ 131.96
+$ 1,979.40
+Service F60/2023
+16
+$ 507.24
+$ 8,115.84
+Service G43/2022
+17
+$ 434.75
+$ 7,390.75
+Service E54/2023
+12
+$ 571.47
+$ 6,857.64
+Service G88/2022
+18
+$ 668.80
+$ 12,038.40
+Service E64/2024
+7
+$ 69.22
+$ 484.54
+Service D39/2023
+15
+$ 242.66
+$ 3,639.90
+Service H93/2023
+6
+$ 440.14
+$ 2,640.84
+Subtotal
+$ 43,147.31
+VAT 22%
+$ 9,492.41
+TOTAL
+$ 52,639.72
+IBAN IT65 L276 0858 8314 2640 7834 406
+The Supplier warrants that the goods conform to the attached technical specifications and applicable law.

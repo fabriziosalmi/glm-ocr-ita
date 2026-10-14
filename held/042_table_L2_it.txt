@@ -1,0 +1,39 @@
+Fattura commerciale
+Voce
+Q.tà
+Prezzo unit.
+Importo
+Sensore H585
+29
+467,78 €
+13.565,62 €
+Inverter E459
+22
+416,17 €
+9.155,74 €
+Inverter B321
+14
+712,27 €
+9.971,78 €
+Cavo A970
+13
+542,16 €
+7.048,08 €
+Cavo G117
+25
+331,69 €
+8.292,25 €
+Valvola D513
+39
+187,55 €
+7.314,45 €
+Cavo E557
+24
+143,28 €
+3.438,72 €
+Valvola G400
+20
+369,54 €
+7.390,80 €
+Totale
+66.177,44 €

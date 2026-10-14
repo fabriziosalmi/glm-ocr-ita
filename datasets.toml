@@ -1,0 +1,161 @@
+# The role of every page set (rule 2 of docs/ROADMAP.md). Names resolve as in glmocr/corpus.py:
+# inside the repository, then under $GLMOCR_DATASETS (default ~/Documents/git/datasets).
+#   train  the only pages weights or calibration statistics may see
+#   dev    for choosing between configurations
+#   test   read once per decision; `glmocr run` refuses until the tag is written in docs/LEDGER.md
+#   spent  a former test set, kept as a regression check: it decides nothing
+# Why each set has its role: docs/DATASETS.md.
+
+# The handwritten amounts of make_hard.py are drawn on the page and listed as entities, but are not in the .txt:
+# they count for entity recall and are invisible to CER and to the skipped-block count.
+[dataset."hard"]
+role = "dev"
+accept = ["handwritten entity not in the ground truth"]
+[dataset."held"]
+role = "spent"
+accept = ["handwritten entity not in the ground truth"]
+
+# Commissioned synthetic sets (docs/DATASET_PROMPT.md), one renderer per folder.
+[dataset."gemini/itdoc_a"]
+role = "train"
+[dataset."gemini/itdoc_b"]
+role = "train"
+[dataset."gemini/itdoc_c"]
+role = "train"
+[dataset."gemini/itdoc_d"]
+role = "train"
+[dataset."gemini/itdoc_e"]
+role = "train"
+[dataset."gemini/itdoc_f"]
+role = "train"
+# Arrived on 2026-10-13, same renderer: training data, not used by the first run.
+[dataset."gemini/itdoc_g"]
+role = "train"
+[dataset."gemini/itdoc_h"]
+role = "train"
+[dataset."gemini/itdoc_i"]
+role = "train"
+[dataset."gemini/itdoc_j"]
+role = "train"
+[dataset."gemini/itdoc_k"]
+role = "train"
+# Arrived on 2026-10-13 and 14, same renderer: training data. gemini is complete at 26 sets, 39000 pages.
+[dataset."gemini/itdoc_l"]
+role = "train"
+[dataset."gemini/itdoc_m"]
+role = "train"
+[dataset."gemini/itdoc_n"]
+role = "train"
+[dataset."gemini/itdoc_o"]
+role = "train"
+[dataset."gemini/itdoc_p"]
+role = "train"
+[dataset."gemini/itdoc_q"]
+role = "train"
+[dataset."gemini/itdoc_r"]
+role = "train"
+[dataset."gemini/itdoc_s"]
+role = "train"
+[dataset."gemini/itdoc_t"]
+role = "train"
+[dataset."gemini/itdoc_u"]
+role = "train"
+[dataset."gemini/itdoc_v"]
+role = "train"
+[dataset."gemini/itdoc_w"]
+role = "train"
+[dataset."gemini/itdoc_x"]
+role = "train"
+[dataset."gemini/itdoc_y"]
+role = "train"
+[dataset."gemini/itdoc_z"]
+role = "train"
+[dataset."spark/itdoc_a"]
+role = "dev"
+[dataset."chatgpt/itdoc_a"]
+role = "dev"
+[dataset."chatgpt/itdoc_b"]
+role = "dev"
+[dataset."chatgpt/itdoc_d"]
+role = "dev"
+[dataset."chatgpt/itdoc_e"]
+role = "dev"
+# Arrived on 2026-10-13: 24-page previews, validation. Their first page was read by the original model the same day.
+[dataset."chatgpt/itdoc_f"]
+role = "dev"
+[dataset."chatgpt/itdoc_g"]
+role = "dev"
+[dataset."chatgpt/itdoc_h"]
+role = "dev"
+[dataset."chatgpt/itdoc_i"]
+role = "dev"
+[dataset."chatgpt/itdoc_j"]
+role = "dev"
+[dataset."chatgpt/itdoc_k"]
+role = "dev"
+[dataset."chatgpt/itdoc_l"]
+role = "dev"
+[dataset."chatgpt/itdoc_m"]
+role = "dev"
+[dataset."chatgpt/itdoc_n"]
+role = "dev"
+[dataset."chatgpt/itdoc_o"]
+role = "dev"
+[dataset."chatgpt/itdoc_p"]
+role = "dev"
+[dataset."chatgpt/itdoc_q"]
+role = "dev"
+[dataset."chatgpt/itdoc_r"]
+role = "dev"
+[dataset."chatgpt/itdoc_s"]
+role = "dev"
+[dataset."chatgpt/itdoc_t"]
+role = "dev"
+[dataset."chatgpt/itdoc_u"]
+role = "dev"
+[dataset."chatgpt/itdoc_v"]
+role = "dev"
+[dataset."chatgpt/itdoc_w"]
+role = "dev"
+[dataset."chatgpt/itdoc_x"]
+role = "dev"
+[dataset."chatgpt/itdoc_y"]
+role = "dev"
+[dataset."chatgpt/itdoc_z"]
+role = "dev"
+# itdoc_c was designated as test on 2026-10-12, before any of these existed. The gemini rendering of it went to
+# train on 2026-10-13, unread (docs/LEDGER.md); the chatgpt one keeps the designation.
+# Its language is tied to level (every English page is level 5): accepted, and its by-language numbers are not used.
+[dataset."chatgpt/itdoc_c"]
+role = "test"
+accept = ["a level holds one language only (language and level cannot be told apart)"]
+# A renderer no training page comes from.
+[dataset."spark/itdoc_b"]
+role = "test"
+
+# spark c to k arrived on 2026-10-13 and were unread when their roles were fixed (2026-10-14, docs/LEDGER.md).
+[dataset."spark/itdoc_c"]
+role = "dev"
+[dataset."spark/itdoc_d"]
+role = "dev"
+[dataset."spark/itdoc_e"]
+role = "dev"
+[dataset."spark/itdoc_f"]
+role = "dev"
+[dataset."spark/itdoc_g"]
+role = "dev"
+# The test of the measurements redone with the official prompt: never read, and 16 templates that dev does not have.
+[dataset."spark/itdoc_h"]
+role = "test"
+[dataset."spark/itdoc_i"]
+role = "test"
+[dataset."spark/itdoc_j"]
+role = "test"
+[dataset."spark/itdoc_k"]
+role = "test"
+
+# Real scans (docs/EXTERNAL.md), built by generators/make_sroie.py into external/, which is not in git.
+[dataset."external/sroie_train"]
+role = "dev"
+[dataset."external/sroie_test"]
+role = "test"

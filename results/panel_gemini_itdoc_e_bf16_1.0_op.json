@@ -1,0 +1,69 @@
+{
+ "tag": "panel_gemini_itdoc_e_bf16_1.0_op",
+ "model": "work/glm-ocr-bf16",
+ "corpus": "gemini/itdoc_e",
+ "scale": 1.0,
+ "adapter": null,
+ "env": {
+  "macos": "26.3",
+  "python": "3.12.15",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "pages": {
+  "itdoc_e_0060_invoice_detail_lines_L1_it": {
+   "text": "GEOCONSULT INDAGINI GEOTECNICHE E PERIZIE\nPreventivo Analitico Opere e Forniture n. PREV/2025/03403 del 17 agosto 2024\n\nCOMMITTENTE E DATI GENERALI DELL'OFFERTA ECONOMICA:\nImpresa Appaltatrice: GeoConsult Indagini Geotecniche e Perizie (Bologna)\nCommitte: Distillerie Venete Riunite S.p.A. - Sede: Treviso\nP.IVA: 15315964740 | C.F.: WNLDCV59M66D612X | PEC: gare.appalti@nordmeccanica.example\nCodice CIG: FTJLUC788C | Codice CUP: N16L56544957206\n\nN. Descrizione Lavorazione / Voce Rif. CIG Q.tà Prezzo Unit. Importo Totale\n01 Assistenza muraria a tutti gli impianti FTJLUC7000 1 3.500,00 € 3.500,00 €\n02 Collaudo statico e prove di carico FTJLUC7001 1 2.400,00 € 2.400,00 €\n03 Impermeabilizzazione bituminosa 2 strati FTJLUC7002 220 28,50 € 6.270,00 €\n04 Oneri sicurezza e coordinamento PSC FTJLUC7003 1 2.800,00 € 2.800,00 €\n05 Scavo sbancamento terreno sciolto FTJLUC7004 150 24,50 € 3.675,00 €\n06 Impianto fotovoltaico potenza 6 kWp FTJLUC7005 1 8.200,00 € 8.200,00 €\n07 Getto calcestruzzo fondazioni C25/30 FTJLUC7006 65 142,00 € 9.230,00 €\n08 Serramenti alluminio a taglio termico FTJLUC7007 14 850,00 € 11.900,00 €\n09 Impianto elettrico completo e dorsali FTJLUC7008 1 6.800,00 € 6.800,00 €\n10 Muratura tamponamento termolaterizio FTJLUC7009 180 58,00 € 10.440,00 €\n11 Pavimento gres porcellanato rettificato FTJLUC7010 130 48,00 € 6.240,00 €\n12 Ponteggio metallico fisso tubolare FTJLUC7011 450 16,50 € 7.425,00 €\n13 Acciaio sagomato armature B450C FTJLUC7012 4800 1,85 € 8.880,00 €\n14 Pompa di calore aria-acqua inverter FTJLUC7013 1 7.400,00 € 7.400,00 €\n\nTOTALE IMPONIBILE LAVORI A CORPO 95.160,00 €\n\nSconto commerciale (10%): 9.516,00 € | Netto a saldo: 85.644,00 €\n\nCoordinate bonifico acconto - IBAN: IT68 Q872 5099 1200 9649 3901 672\n\nCONDIZIONI GENERALI DI FORNITURA, VALIDITÀ E TERMINI DI CONSEGNA:\nLe coordinate di tesoreria per il pagamento dei diritti di istruttoria tecnica corrispondono all'IBAN IT68 Q872 5099 1200 9649 3901 672. La data di contabilizzazione definitiva del versamento sul conto della tesoreria provinciale è il 24.11.2026. La data improrogabile di consegna dei campioni di materiale presso la direzione lavori è il 13.04.2026.\n\nIl Progettista e D.L.:\nDott.ssa Arch. Valeria Costantini",
+   "loop_cut": null,
+   "s": 24.548102140426636,
+   "prompt_tokens": 2784,
+   "gen_tokens": 1157,
+   "prefill_tps": 358.77942891896976,
+   "gen_tps": 69.15833701279166,
+   "peak_gb": 3.15929939
+  },
+  "itdoc_e_0601_invoice_detail_lines_L2_it": {
+   "text": "EUROCOLLAUDI VERIFICHE TECNICHE E SICUREZZA\nPreventivo Analitico Opere e Forniture n. PREV-2025-1906 del 6 novembre 2025\n\nCOMMITTENTE E DATI GENERALI DELL'OFFERTA ECONOMICA:\nImpresa Appaltatrice: EuroCollaudi Verifiche Tecniche e Sicurezza (Brescia)\nCommitte: Distillerie Venete Riunite S.p.A. - Sede: Treviso\nP.IVA: 56253020665 | C.F.: HSPCJF65L59H501G | PEC: contabilità@emiliaaimpianti.example\nCodice CIG: 1RBPF5UBZ0 | Codice CUP: V75B30428975089\n\nN. Descrizione Lavorazione / Voce Rif. CIG Q.tà Prezzo Unit. Importo Totale\n01 Pavimento gres porcellanato rettificato 1RBPF5U000 130 48,00 € 6.240,00 €\n02 Oneri sicurezza e coordinamento PSC 1RBPF5U001 1 2.800,00 € 2.800,00 €\n03 Impermeabilizzazione bituminosa 2 strati 1RBPF5U002 220 28,50 € 6.270,00 €\n04 Serramenti alluminio a taglio termico 1RBPF5U003 14 850,00 € 11.900,00 €\n05 Scavo sbancamento terreno sciolto 1RBPF5U004 150 24,50 € 3.675,00 €\n06 Riscaldamento a pavimento radiante 1RBPF5U005 140 55,00 € 7.700,00 €\n07 Impianto elettrico completo e dorsali 1RBPF5U006 1 6.800,00 € 6.800,00 €\n08 Isolamento lana di roccia sp 12cm 1RBPF5U007 240 36,00 € 8.640,00 €\n09 Intonaco premiscelato per interni 1RBPF5U008 320 21,00 € 6.720,00 €\n10 Ponteggio metallico fisso tubolare 1RBPF5U009 450 16,50 € 7.425,00 €\n11 Collaudo statico e prove di carico 1RBPF5U010 1 2.400,00 € 2.400,00 €\n12 Assistenza muraria a tutti gli impianti 1RBPF5U011 1 3.500,00 € 3.500,00 €\n13 Muratura tamponamento termolaterizio 1RBPF5U012 180 58,00 € 10.440,00 €\n14 Getto calcestruzzo fondazioni C25/30 1RBPF5U013 65 142,00 € 9.230,00 €\n15 Tramezze in cartongesso idrorepellente 1RBPF5U014 160 42,00 € 6.720,00 €\n\nTOTALE IMPONIBILE LAVORI A CORPO 100.460,00 €\n\nSconto commerciale (10%): 10.046,00 € | Netto a saldo: 90.414,00 €\n\nCoordinate bonifico acconto - IBAN: IT56 Z295 2424 7211 1525 1447 413\n\nCONDIZIONI GENERALI DI FORNITURA, VALIDITÀ E TERMINI DI CONSEGNA:\nLa percentuale di rivalutazione monetaria applicata all'importo originariamente riconosciuto è del 4,5%. La decorrenza dei termini di consegna dei materiali decorre dalla conferma formale in data 09/12/2026. Il codice CIG attribuito alla gara telematica per i servizi di architettura e ingegneria è CIG 1RBPF5UBZ0. L'importo complessivo delle lavorazioni residue per il completamento delle finiture è di 100.460,00 €.\n\nIl Tecnico Rilevatore:\nGeom. Roberto Ferretti",
+   "loop_cut": null,
+   "s": 25.526214122772217,
+   "prompt_tokens": 2784,
+   "gen_tokens": 1227,
+   "prefill_tps": 361.5718342261111,
+   "gen_tps": 69.11135635458031,
+   "peak_gb": 3.15929939
+  },
+  "itdoc_e_0842_invoice_detail_lines_L3_it": {
+   "text": "EUROCOLLAUDI VERIFICHE TECNICHE E SICUREZZA\nPreventivo Analitico Opere e Forniture n. PREV-2025-9018 del 21 marzo 2026\n\nCOMMITTENTE E DATI GENERALI DELL'OFFERTA ECONOMICA:\nImpresa Appaltatrice: EuroCollaudi Verifiche Tecniche e Sicurezza (Brescia)\nCommittete: Distillerie Venete Riunite S.p.A. - Sede: Treviso\nP.IVA: 20941084251 | C.F.: HMPZJG58T03I480W | PEC: protocollo@pec.emiliaaimpianti.example\nCodice CIG: ZJMG6USGTC | Codice CUP: S22S89298202646\n\nN. Descrizione Lavorazione / Voce Rif. CIG Q.tà Prezzo Unit. Importo Totale\n01 Collaudo statico e prove di carico ZJMG6US000 1 2.400,00 € 2.400,00 €\n02 Pavimento gres porcellanato rettificato ZJMG6US001 130 48,00 € 6.240,00 €\n03 Isolamento lana di roccia sp 12cm ZJMG6US002 240 36,00 € 8.640,00 €\n04 Acciaio sagomato armature B450C ZJMG6US003 4800 1,85 € 8.880,00 €\n05 Impianto fotovoltaico potenza 6 kWp ZJMG6US004 1 8.200,00 € 8.200,00 €\n06 Oneri sicurezza e coordinamento PSC ZJMG6US005 1 2.800,00 € 2.800,00 €\n07 Assistenza muraria a tutti gli impianti ZJMG6US006 1 3.500,00 € 3.500,00 €\n08 Serramenti alluminio a taglio termico ZJMG6US007 14 850,00 € 11.900,00 €\n09 Scavo sbancamento terreno sciolto ZJMG6US008 150 24,50 € 3.675,00 €\n10 Tramezze in cartongesso idrorepellente ZJMG6US009 160 42,00 € 6.720,00 €\n11 Pompa di calore aria-acqua inverter ZJMG6US010 1 7.400,00 € 7.400,00 €\n12 Riscaldamento a pavimento radiante ZJMG6US011 140 55,00 € 7.700,00 €\n13 Ponteggio metallico fisso tubolare ZJMG6US012 450 16,50 € 7.425,00 €\n14 Getto calcestruzzo fondazioni C25/30 ZJMG6US013 65 142,00 € 9.230,00 €\n15 Impermeabilizzazione bituminosa 2 strati ZJMG6US014 220 28,50 € 6.270,00 €\n16 Muratura tamponamento termolaterizio ZJMG6US015 180 58,00 € 10.440,00 €\n\nTOTALE IMPONIBILE LAVORI A CORPO 111.420,00 €\n\nSconto commerciale (10%): 11.142,00 € | Netto a saldo: 100.278,00 €\n\nCoordinate bonifico acconto - IBAN: IT90 L590 5467 8413 8734 5450 375\n\nCONDIZIONI GENERALI DI FORNITURA, VALIDITÀ E TERMINI DI CONSEGNA:\nIl coefficiente di isolamento termico globale dell'involucro edilizio garantisce un miglioramento del 5%. La fornitura di arredi e strumentazioni per gli uffici comunali è identificata dal codice CIG ZJMG6USGTC. La percentuale di detrazione fiscale per interventi di efficientamento energetico applicabile è del 4%. L'asseverazione notarile della perizia tecnica di divisione ereditaria è stata siglata a Modena.\n\nIl Tecnico Rilevatore:\nGeom. Roberto Ferretti",
+   "loop_cut": null,
+   "s": 25.81289315223694,
+   "prompt_tokens": 2784,
+   "gen_tokens": 1246,
+   "prefill_tps": 363.39132211847533,
+   "gen_tps": 68.9313683889397,
+   "peak_gb": 3.15929939
+  },
+  "itdoc_e_1168_letter_small_footer_L4_it": {
+   "text": "SISTEMI ELETTRICI & AUTOMAZIONE INDUSTRIALE\nStudio di Ingegneria e Progettazione - Viale Europa 112, Firenze\n\nFirenze, Il 03/11/2026\n\nSpettabile Committenza:\nImmobiliare San Marco S.r.l.\nPiazza San Marco 12\nVenezia\n\nLIQUIDATO A SALDO\n\nOggetto: Deposito asseverazione di conformità edilizia n. TRASM/2026-9330\n\nLa ricevuta fiscale emessa per il noleggio a caldo di piattaforme aeree è registrata al n. TRASM/2026-9330.\nL'importo netto percepito dal professionista al netto delle ritenute fiscali e contributive è di 1.087.230,85 EUR.\nLa percentuale di maggiorazione per contributo integrativo previdenziale alla cassa di categoria è del 5,0%.\nSi rilascia formale quietanza di avvenuto pagamento a saldo per le prestazioni svolte in data 10 aprile 2026.\n\nDistinti Saluti,\nGeom. Roberto Ferretti\nIl Tecnico Rilevatore\n\nVerificato in data 2 febbraio 2026\n\nStudio Tecnico: Sistemi Elettrici & Automazione Industriale - Sede di Firenze\nP.JVA: 24289697534 | C.F: QHHMMK71P53A944H | PEC: segreteria@pecemiliaimpianti.example\nConto Corrente Studio per Liquidazioni - IBAN: IT55 V838 5961 9314 8410 8288 080\nRiferimenti Commessa: CIG 95USKRSM61 - CUP C14B74789774602 - Massimale: 3.107.493,62 EUR",
+   "loop_cut": null,
+   "s": 14.945444107055664,
+   "prompt_tokens": 2784,
+   "gen_tokens": 505,
+   "prefill_tps": 362.848438442243,
+   "gen_tps": 70.19702933478362,
+   "peak_gb": 3.15929939
+  },
+  "itdoc_e_0874_commercial_quote_L5_it": {
+   "text": "IMPIANTI TERMOIDRAULICI PADANI S.R.L.\nOfferte Economica e Preventivo di Speza n. OFF/2026-2529 del 27/12/2025\n\nDATI DEL COMMITTEE E EXPERIMENTI COMMERCIALI:\nSocietà Appaltatrice: Impianti Termoidraulici Padani S.r.l (Padova)\nSpettabile Chiense: Anienda Agricola Valpolicella S.r.l. - Sede: Verona\nP.JVA: 24225900638 | Codice Fiscale: HTQTMP88L43G273Z\nCodice CIO: TDEP429B4X | Codice CUP: R15T89211838246\nRecapito PBC: Formatore@per.piemonteindustria.example\n\nPase Macro-Voce di Intervento Tempistica Importo Partiale Totale Voce\nPase 1 Progettazione esecutiva e calcoli 50 giorni 18,500.00 € 18,500.00 €\nPase 2 Opere demolizione e preparazione cantiere 20 giorni 24,000.00 € 24,000.00 €\nPase 3 Costruzione strutture in cemento armato 60 giorni 125,000.00 € 125,000.00 €\nPase 4 Installazione Impianti meccanici-elettrici 45 giorni 68,000.00 € 68,000.00 €\nPase 5 Finiture architetturiche e collado 25 giorni 32,500.00 € 32,500.00 €\n\nTOTALE COMPLESSIVO OFFERTA A CORPO 268,000.00 €\n\nAccosto all ordine part al 80% - Validità offerta garantita fino al 7 settembre 2026\nCoordinate benificio bancario acconto - IBAN: IT90 HS30 1846 6410 5032 9651 800\n\nCONSEGIO GENERALI DI CONTRATTO, REVISIONE PREZZILE FORO COMPETENTE:\nLa data di emissione della ricercata liberatoria del valdo parcella per l'assistenza legale e il 15.11.2024. Il crossprogramma executive allegato alla proposta commerciale e stato aggiornato in data 22 novembre 2025. La data di valuta concordata per lincasso del crossprogramma partito tra le parti e il 27 gennaio 2025. La progettazione strutturale ed esecutiva del presidio di protezione vera afferenza al CUP R15T89211838246\n\nIl Progettiste e D.L.:\nDott. asa Arch. Valeria Costantini\n\nRegistrato in data 20 marzo 2026",
+   "loop_cut": null,
+   "s": 18.945110082626343,
+   "prompt_tokens": 2784,
+   "gen_tokens": 766,
+   "prefill_tps": 358.48382777254926,
+   "gen_tps": 68.98552777715544,
+   "peak_gb": 3.15929939
+  }
+ }
+}

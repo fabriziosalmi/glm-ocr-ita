@@ -1,0 +1,154 @@
+{
+ "tag": "panel_spark_itdoc_a_ft_step4_21",
+ "model": "work/glm-ocr-bf16",
+ "corpus": "spark/itdoc_a",
+ "scale": 1.0,
+ "adapter": "work/ft/step4_21",
+ "env": {
+  "macos": "26.3",
+  "python": "3.12.15",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "pages": {
+  "itdoc_a_0005_letter_L1_it": {
+   "text": "Tipografia Palazzolo S.p.A.\nVia Marconi 18, 45745 Cremona\nVicenza, 04/05/2024\nF.lli Garbagnate S.r.l. — Via Cavour 111, 25268 Palermo\nOggetto: Fatt. n. 4012 del 2025\nEgregi signori,\nCon riferimento al DDT n. 17670/2020, trasmettiamo il\nriepilogo contabile aggiornato al 5 gennaio 2024 per un totale\ndi EUR 2.451.037,65, con decorrenza immediata.\nCon riferimento al DDT ORD-2023-9132, comunichiamo\nl’applicazione dell’aliquota 25% sull’imponibile di\nEUR 4.690,64, con addebito in fattura.\nIn riferimento all’ordine DDT n. 4657 del 2022, richiediamo\ncopia del documento di identita’ di Zaira Gallo ai fini della\nregistrazione, fino a esaurimento delle scorte disponibili.\nDistinti saluti.\nSimone Vitale — Il responsabile amministrativo\nAvvertenze e condizioni: Il committente dichiara che il codice fiscale GVZSMN80A47R361X e la partita IVA\n24025182494 comunicati sono corretti. Lo sconto di 4,5% sara’ riconosciuto a condizione che il pagamento avvenga\nentro il 12/02/2023. Il venditore si riserva la proprieta’ dei beni fino all’integrale pagamento del prezzo di\n9.853,01 €. Il responsabile del procedimento, dott. Elisa Valdorbia, ha approvato gli atti in data 16/12/2020.\nTipografia Palazzolo S.p.A. — Via Marconi 18, 45745 Cremona\nP.IVA 08189289054 — C.F. VLLGDU58B19V641L\nIBAN IT26 I789 2213 6993 8620 8660 966 — PEC segreteria@roncadelle.example — Pag. 6",
+   "s": 20.408382177352905,
+   "prompt_tokens": 2788,
+   "gen_tokens": 620,
+   "prefill_tps": 301.9761280450242,
+   "gen_tps": 56.016453387642855,
+   "peak_gb": 3.426295782
+  },
+  "itdoc_a_0606_form_L2_it": {
+   "text": "Falegnameria Castegnate S.n.c.\nVia Matteotti 6, 52307 Napoli\nTel. 82 6953531 – info@cernusco-cert.example\nMODULO DI RICHIESTA – DET/2019/12428\nALIQUOTA APPLICATA\n15%\nTELEFONO\n+39 91 3041739\nDENOMINAZIONE\nPastificio Brentegani\nS.n.c.\nCAUSALE\nIn relazione al\ncontratto n. 4530/2026,\nconfermiamo il\nricevimento del\nCONTO DI ADDEBITO\nIT50 J496 9879 4581 8681 4695 488\nCODICE CUP\nL04D10762824332\npagamento di € 59,56 a\nmezzo bonifico del\nCODICE CIG\n4WTQY7QA77\n9 luglio 2026, entro i\ntermini di legge.\nCITTA’ DI CONSEGNA\nParma\nPARTITA IVA\n20546689264\nCODICE IBAN\nIT20 S174 2137 0763 6071 3457 679\nDATA DI DECORRENZA\n21/09/2026\nCODICE FISCALE\nGLLDNI82E57S114L\nAvvertenze e condizioni: Le spese di imballo e trasporto, pari a 5.595,95 €, restano a carico del destinatario salvo diverso accordo. Il committente dichiara che il codice fiscale LNECHR61D04R936U e la partita IVA 63331156271 comunicati sono corretti. Ogni modifica alle condizioni di forniture dovra’ risultare da atto scritto richiamante il contratto DET/2025/12931. Il trattamento dei dati personali e’ effettuato dal titolare F.lli Selvino S.p.A., contattabile alla PEC ordini@valdorbiasrl.example.\nFalegnameria Castegnate S.n.c. – Via Matteotti 6, 52307 Napoli\nP.IVA 43597876101 – C.F. VLDCLL92L62K252E\nIBAN IT39 Z725 2740 0157 1943 8218 042 – PEC gare@verdello.example – Pag. 607",
+   "s": 20.30514621734619,
+   "prompt_tokens": 2788,
+   "gen_tokens": 694,
+   "prefill_tps": 351.09018429211915,
+   "gen_tps": 56.56831630369963,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_0832_delivery_L3_it": {
+   "text": "Torrefazione Trescore S.n.c.\nVia dei Tigli 109, 40368 Modena\nTel. 39 8279187 – affari.generali@romano-pec.example\nDOCUMENTO DI TRASPORTO Prot. n. 64705/2021\nDel 25/09/2019\nDestinatario: Oleificio Clusone S.p.A. – Via dell'Artigianato 98,\n63434 Vicenza – Vettore: Simone Farina – Causale: Vendita –\nColli: 19\nDescrizione Q.tà Valore\nCatene da neve omologate – cod. 582716 181 pz 9,977,10 €\nSanitari in ceramica bianca – cod. 73581 177 pz 1,293,78 €\nVasi in terracotta – cod. 152385 146 pz 7,384,03 €\nSerrature di sicurezza – cod. 596704 175 pz 6,358,50 €\nCerniere in acciaio inox – cod. 657851 104 pz EUR 3.105,68\nCassette in plastica impilabili – cod. 231428 190 pz € 13.071,24\nSedie ergonomiche con braccioli – cod. 437555 114 pz 15.634,24 €\nCavi elettrici multipolari – cod. 587652 149 pz 4.217,98 €\nVasi in terracotta – cod. 869590 152 pz 12.228,86 €\nLampade LED da scrivania – cod. 303140 48 pz 4.611,06 €\nAvvertenze e condizioni: Il venditore si riserva la proprieta’ dei beni fino all’integrale pagamento del prezzo di\n1.041.589,05 €. Il trattamento dei dati personali e’ effettuato dal titolare Sartoria Albino S.p.A., contattabile alla\nPEC protocollo@travagliato-pec.example. Il recesso anticipato comporta l’addebito di una penale pari a € 8.75\noltre agli oneri maturati. La merce viaggia a rischio e pericolo del committente anche quando il trasporto e’ curato\ndal fornitore.\nOK 05/03/2020 – 8.841.476,92 €\nTorrefazione Trescore S.n.c. – Via dei Tigli 109, 40368 Modena\nP.JVA 21281990545 – C.P. MRTVNI00M56P933B\nIBAN IT28 J589 8823 6218 7357 0212 503 – PEC affari.generali@romano-cert.example – Pag. 833\n",
+   "s": 22.573313236236572,
+   "prompt_tokens": 2788,
+   "gen_tokens": 822,
+   "prefill_tps": 349.8752265188291,
+   "gen_tps": 56.60134958397432,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_1163_footnotes_L4_it": {
+   "text": "Vetreria Osio S.p.A.\nVia Monte Grappa 27, 42144 Ancona\nTel. 08 2837010 - protocollo@nembrospa.example\n\nNOTA INFORMATIVA – DDT/2025/22011\nA integrazione della documentazione trasmessa,\ntrasmettiamo il riepilogo contabile aggiornato al\n01/05/2025 per un totale di 14.178.728,77 €, ai fini\ndella rendicontazione periodica.\n\nA conferma di quanto concordato, segnaliamo una\ndifferenza inventariale di 60 unita’ rilevata il\n20.03.2021, con addebito in fattura.\n\nNote\n(1) Lo sconto di 5% sara’ riconosciuto a condizione che il pagamento avvenga entro il\n16 marzo 2020.\n(2) La quietanza dell'importo di 118,71 € e’ subordinata al buon fine dell’accredito sul\nconto IT50 U551 5275 6348 7631 7801 137.\n(3) Il pagamento dovra’ essere effettuato entro trenta giorni dalla data della fattura\nProt. n. 7315/2021 mediante bonifico sul conto IT20 R634 6294 0918 0513 8824 612.\n\nAvvertenze e condizioni: Il trattamento dei dati personali e’ effettuato dal titolare\nLibreria Albino S.r.l., contattabile alla PEC amministrazione@nembro-pec.example. Il recesso\nanticipato comporta l’addebito di una penale pari a 58.885,61 € oltre agli oneri maturati.\nOgni modifica alle condizioni di forniture dovra’ risultare da atto scritto richiamante il\ncontratto DDT n. 3884 del 2023. Ai sensi dell’art. 13 del Regolamento UE 2016/679 i dati\nsaranno trattati per le finalita’ contrattuali indicate.\n\nPagato il 08.12.2020 — 764,24 €\n\nVetreria Osio S.p.A. – Via Monte Grappa 27, 42144 Ancona\nP.IVA 07837375506 – C.F. MRNLSE80P80J3600\nISAN IT06 Y807 0000 8146 8314 8000 485 – PEC offari.generali@castegnatespa.example – Pag. 1164",
+   "s": 21.262042760849,
+   "prompt_tokens": 2788,
+   "gen_tokens": 715,
+   "prefill_tps": 340.15637859842747,
+   "gen_tps": 55.0437147656102,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_0869_footnotes_L5_it": {
+   "text": "Torrefazione Brentegani S.n.c.\nVia delle Rose 90, 87551 Ancona\nTel. 37 5260585 – protocollo@castegnate.example\n\nMEMORIA — Prot. n. 55566/2024\nCon riferimento alla fattura Prot. n. 57999/2020, comunichiamo che il pagamento di € 118.444,60 e’ stato eseguito in data 08/05/2019, come previsto dal capitolato tecnico.\n\nIn occasione del controllo periodico, trasmettiamo le coordinate IBAN IT78 Q086 9174 5845 2820 6813 375 per l’accredito dell’importo di EUR 2.528,70, previa autorizzazione del responsabile.\n\nCon riferimento al DDT CONV-2024-5826, comunichiamo che la pratica ORD/2020/14798 e’ stata istruita presso gli uffici di Treviso, ai sensi delle condizioni generali allegate.\n\nNote\n(1) I prezzi indicati si intendono al netto dell’IVA, con applicazione dell’aliquota 5% ai sensi della normativa vigente.\n(2) Le consegne parziali sono ammesse e saranno fatturate separatamente con documento DDT/2023/57254.\n(3) Il pagamento dovra’ essere effettuato entro trenta giorni dalla data della fattura n. 5523/2019 mediante bonifico sul conto IT72 P670 1715 6033 5910 2309 632.\n\nAvvertenze e condizioni: Il presente documento e’ stato emesso con riferimento al CIG GPZHNFYTVR e al CUP K24R09124099358 riportati in fattura. Le consegne parziali sono ammesse e saranno fatturate separatamente con documento ORD-2021-9158. Il recesso anticipato comporta l’addebito di una penale pari a € 170,37 oltre agli oneri maturati. Eventuali contestazioni dovranno pervenire per iscritto entrootto giorni dal ricevimento della merce.\n\nVisto, 13 luglio 2023\n\nTorrefazione Brentegani S.n.c. — Via delle Rose 90, 87551 Ancona\nP. IVA 30006212895 – C.F. NRELSE65056A270D\nIBAN IT04 3351 5424 4899 1176 1017 104 – PEC fatture@dalminse-pec.example – Pag. 870",
+   "s": 20.842922925949097,
+   "prompt_tokens": 2788,
+   "gen_tokens": 737,
+   "prefill_tps": 353.929400524884,
+   "gen_tps": 57.16189023739261,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_0275_contract_L1_en": {
+   "text": "SUPPLY AGREEMENT – INV/2023/39730\nBetween Trelawney Supplies Ltd and Whitlock Distributors LLP, signed on April 25, 2025.\n\nArt. 1 – Subject\nFollowing the operations meeting, confirm that tax code PGNMTT74C08P215X was verified against the tax register, subject to the approval of the manager.\n\nArt. 2 – Term\nDuring the periodic review, request a copy of the identity document of Owen Vane for registration, to be charged to the cost centre indicated.\n\nRead, approved and signed – Arthur Jewell\nTerms and notices: Prices are quoted net of VAT, with the 4% rate applied under the legislation in force. Payment shall be made within thirty days of invoice\nCTR-2025-2345 by transfer to account IT71 Y345 2902 6086 4006 2444 774. Goods travel at the purchaser’s risk even where carriage is arranged by the supplier. The courts of Hereford shall have exclusive jurisdiction over any dispute.\n\nTrelawney Supplies Ltd – 219 High Street, Exeter\nVAT 73273026549 – Tax code GLLDRA02H20B572M\nIBAN IT76 U247 1065 8560 2152 3276 121 – PEC amministrazione@roncadellespa.example – Page 276",
+   "s": 17.882572174072266,
+   "prompt_tokens": 2788,
+   "gen_tokens": 364,
+   "prefill_tps": 284.6742508021934,
+   "gen_tps": 45.38912948830108,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_0726_notice_L2_en": {
+   "text": "PAYMENT NOTICE\nAmount due GBP 11,382.81\nPayable by 2024-06-12 by transfer to account\nIT98 N054 8382 2698 3937 3221 575.\n\nFurther to your request, request written confirmation of order Order No. 7548/2025 for an aggregate value of $ 2,265.85, pending satisfactory inspections.\n\nFollowing the operations meeting, note that the deadline of 2024-06-13 carries penalty interest thereafter, at no further cost to the purchaser.\n\nWe hereby transmit the certificate requested under reference CTR/2021/07089 dated 21 April 2026, awaiting your kind reply.\n\nTerms and notices: Prices are quoted net of VAT, with the 8% rate applied under the legislation in force. The courts of Durham shall have exclusive jurisdiction over any dispute. Packing and carriage, amounting to $ 1,382,826.91, are charged to the consignee unless agreed otherwise. Payment shall be made within thirty days of invoice INV/2024/07294 by transfer to account IT29 C137 2861 7286 6356 4280 581.\n\nGoodwin Logistics LLP – 103 Park Avenue, Salisbury\nVAT 43011748050 – Tax code GTTSLV92P58M783D\nIBAN IT86 N844 0338 6932 7796 5077 547 – PEC affari.generali@gromo-pec.example – Page 727",
+   "s": 19.307646989822388,
+   "prompt_tokens": 2788,
+   "gen_tokens": 428,
+   "prefill_tps": 284.1035696684664,
+   "gen_tps": 45.455999747217255,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_1102_creditnote_L3_en": {
+   "text": "Pryce Industries Ltd\n164 Quarry Road, Norwich\nTel. 61 9720010 - fatture@azzano.example\n\nCREDIT NOTE INV/2019/36780\nPartial reversal of invoice Order no. 592 of 2023 for returned goods.\n\nDescription Amount\nPacking tape in cartons - cod. 737249 $ 12,439.43\nStainless-steel hinges - cod. 925468 $ 1,476.85\nModular metal shelving - cod. 268386 GBP 17,395.88\nWeatherproof industrial sockets - cod. 591497 EUR 9,738.82\nLiquid-soap dispensers - cod. 524538 $ 12,838.71\nFlush interior doors - cod. 696922 EUR 10,100.32\nRecharged powder extinguishers - cod. 112364 EUR 10,914.69\nHigh-visibility vests - cod. 760464 $ 9,003.99\n\nTotal credit EUR 83,908.69\n\nTerms and notices: Payment shall be made within thirty days of invoice CTR/2020/54358 by transfer to account IT74 G343 9320 2015 4659 1882 487. The data controller Ellery Manufacturing Ltd may be contacted at amministrazione@dalminespa.example for any data-protection matter. Late payment shall bear penalty interest at the statutory rate from the due date of 2020-02-28. The courts of Hull shall have exclusive jurisdiction over any dispute.\n\nOK 18 August 2019 – EUR 2,855,584.89\n\nPryce Industries Ltd - 164 Quarry Road, Norwich\nVAT 96904239173 - Tax code CLMCLL73B42V878Q\nIBAN IT66 C555 4476 1768 7002 6360 740 - PEC fatture@trivulzio-pec.example - Page 1103",
+   "s": 23.347881078720093,
+   "prompt_tokens": 2788,
+   "gen_tokens": 583,
+   "prefill_tps": 281.3478308401477,
+   "gen_tps": 43.659053272908615,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_0828_table_L4_en": {
+   "text": "Larkin Trading Ltd.\n116 Victoria Road, Hereford\nTel. 64 5267988 — contabilita@olgiate-cert.example\n\nMOVEMENT SUMMARY\nSchedule CTR/2021/37021 — amounts in euro\nBreakdown by expense item\n\nDate Item Amount\n9 November 2022 Heavy-duty refuse sacks — 7541 GBP 53,663.97\n23 June 2020 Plasterboard sheets — 2911 $ 64,533.90\n2019-05-19 Certified filtering masks — 8623 GBP 70,605.93\n28 December 2025 Stackable plastic crates — 5280 EUR 23,975.80\n6 October 2020 Rock-wool insulation panels — 3088 EUR 80,365.85\n12 August 2023 LED desk lamps — 7833 $ 30,952.01\nAugust 27, 2022 Certified filtering masks — 4115 GBP 25,983.50\n27 July 2021 Multi-core electric cable — 2869 GBP 6,514.72\n2019-10-10 Security locks — 5956 GBP 79,561.20\n20 November 2020 Adjustable safety helmets — 6033 $ 46,125.01\nAugust 13, 2021 Modular metal shelving — 7493 $ 42,097.29\n23 March 2023 Liquid-soap dispensers — 1021 EUR 383.31\nTotal GBP 524,762.49\n\nTerms and notices: Payment shall be made within thirty days of invoice Inv. no. 356 of 2023 by transfer to account IT73 W363 1482 6693 0318 3190 610. Late payment shall bear penalty interest at the statutory rate from the due date of June 12, 2023. Title to the goods remains with the seller until the price of $ 17,451.07 is paid in full. A discount of 12% applies provided payment is received by 18 October 2025.\n\nAdvanced EUR 73.01 on 6 September 2024\n\nLarkin Trading Ltd. — 116 Victoria Road, Hereford\nVAT 94398389216 — Tax code DEXLCU60C12C152G\nIBAN IT52 Q067 4161 8824 3379 5687 907 — PEC protocollo@martinengo-cert.example — Page 829",
+   "s": 26.405670166015625,
+   "prompt_tokens": 2788,
+   "gen_tokens": 728,
+   "prefill_tps": 288.00528615717485,
+   "gen_tps": 43.782266069803384,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_0329_order_L5_en": {
+   "text": "Ashworth Logistics Ltd.\n122 Cedar Close, Leeds\n\nPURCHASE ORDER CTR-2019-2730\nSupplier: Fairbanks Wholesale Ltd — 107 Mill Lane, Bristol —\nDate: 22 May 2025 — Code: FZVGPFSD5I\n\nDescription Qty Price Amount\nCorrugated cardboard boxes — cod. 556486 366 pcs $ 524.48 EUR 191,959.68\nErgonomic chairs with armrests — cod. 900045 325 pcs EUR 478.55 GBP 155,528.75\nMulti-core electric cable — cod. 657564 240 pcs EUR 175.11 GBP 42,026.40\nPacking tape in cartons — cod. 717740 203 pcs $ 1,293.92 EUR 262,665.76\nAssorted plumbing fittings — cod. 335049 464 pcs $ 1,082.93 EUR 502,479.52\nPlasterboard sheets — cod. 253216 330 pcs $ 285.91 GBP 94,350.30\nRock-wool insulation panels — cod. 695901 227 pcs EUR 1,414.29 GBP 321,043.83\nMetal studs for partitions — cod. 483439 429 pcs EUR 450.17 EUR 193,122.93\nRock-wool insulation panels — cod. 875608 348 pcs GBP 449.07 GBP 156,276.36\nHeavy-duty refuse sacks — cod. 156744 444 pcs EUR 1,173.75 GBP 521,145.00\nPaper hand-towel rolls — cod. 600230 138 pcs GBP 793.60 GBP 109,516.80\nStainless-steel hinges — cod. 212607 21 pcs $ 779.00 EUR 16,359.00\nErgonomic chairs with armrests — cod. 747312 459 pcs EUR 381.83 GBP 175,259.97\n\nOrder total GBP 2,741,734.30\n\nTerms and notices: Goods travel at the purchaser’s risk even where carriage is arranged by the supplier. Personal data shall be processed for the contractual purposes stated, in line with the privacy notice. Part deliveries are permitted and will be invoiced separately under ORD-2024-0621. The courts of Cambridge shall have exclusive jurisdiction over any dispute.\n\nOK 7 October 2019 — EUR 2,823.70\n\nAshworth Logistics Ltd. — 122 Cedar Close, Leeds\nVAT 77332730215 — Tax code GRLMTT58E44E891Q\nIBAN IT77 I194 0489 7142 6649 8163 474 — PEC segreteria@martinengo.example — Page 330",
+   "s": 30.29365301132202,
+   "prompt_tokens": 2788,
+   "gen_tokens": 897,
+   "prefill_tps": 290.50393005272883,
+   "gen_tps": 43.5287373237714,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_1275_footnotes_L1_en": {
+   "text": "MEMORANDUM — ORD-2026-7633\nFurther to your request, confirm receipt of payment of EUR 83,237.48 by transfer dated 2019-01-18, pending satisfactory inspections.\n\nWith reference to invoice INV/2024/29227, transmit IBAN IT34 R886 3264 4460 9621 7362 417 for credit of the sum of $ 5.52, as set out in the technical specification.\n\nFollowing the operations meeting, advise temporary suspension of deliveries until April 5, 2019 for stocktaking, pending satisfactory inspections.\n\nNotes\n(1) The data controller Bramwell Wholesale Ltd. may be contacted at segreteria@dalmine-pec.example for any data-protection matter.\n(2) Goods are warranted for twenty-four months from delivery on 2024-05-09.\n(3) Prices are quoted net of VAT, with the 22% rate applied under the legislation in force.\n(4) The courts of Chester shall have exclusive jurisdiction over any dispute.\n\nTerms and notices: Any complaint must reach us in writing within eight days of receipt of the goods. Title to the goods remains with the seller until the price of EUR 1,133.79 is paid in full. Personal data shall be processed for the contractual purposes stated, in line with the privacy notice. Part deliveries are permitted and will be invoiced separately under Ref. no. 3603 of 2024.\n\nBramwell Industries Ltd — 165 Mill Lane, Salisbury\nVAT 61873283628 — Tax code RZZWLM63L43O132T\nIBAN IT34 S288 7013 8270 8980 1364 437 — PEC protocollo@trescore-cert.example — Page 1276",
+   "s": 20.367784023284912,
+   "prompt_tokens": 2788,
+   "gen_tokens": 472,
+   "prefill_tps": 293.56147454183525,
+   "gen_tps": 43.7476001672492,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_0976_creditnote_L2_en": {
+   "text": "Fairbanks Trading Ltd.\n211 Mill Lane, Salisbury\nTel. 70 2205034 – fatture@nembro-cert.example\n\nCREDIT NOTE Ref. no. 2055 of 2019\nPartial reversal of invoice Order no. 548 of 2022 for returned goods.\n\nDescription Amount\nConcentrated multi-surface cleaner – cod. 813302 $ 959.80\nPlasterboard sheets – cod. 980979 EUR 10,144.18\nBreathable interior paint – cod. 713523 $ 2,149.58\nCopper piping for installations – cod. 239116 GBP 6,067.50\nCompatible printer toner cartridges – cod. 162146 EUR 16,758.99\nCopper piping for installations – cod. 161959 $ 861.17\nOffice desks with drawer units – cod. 189154 $ 7,915.35\nSecurity locks – cod. 744800 $ 16,387.22\nStainless-steel hinges – cod. 734490 GBP 17,783.12\nLiquid-soap dispensers – cod. 49337 EUR 874.39\nOffice desks with drawer units – cod. 316841 EUR 17,088.71\nModular metal shelving – cod. 949865 EUR 14,312.29\nLiquid-soap dispensers – cod. 682428 EUR 2,047.73\nProfessional brushes and rollers – cod. 520931 $ 3,427.67\n\nTotal credit EUR 116,777.70\n\nTerms and notices: Payment shall be made within thirty days of invoice ORD-2021-5817 by transfer to account IT20 Y558 7603 4698 7134 7107 176. Any complaint must reach us in writing within eight days of receipt of the goods. Personal data shall be processed for the contractual purposes stated, in line with the privacy notice. Prices are quoted net of VAT, with the 10% rate applied under the legislation in force.\n\nFairbanks Trading Ltd. – 211 Mill Lane, Salisbury\nVAT 15560472837 – Tax code MRNPLA05D48T622V\nIBAN IT88 B109 7123 2406 5578 0830 690 – PEC ufficio.acquisti@trivulziosrl.example – Page 977",
+   "s": 26.34899926185608,
+   "prompt_tokens": 2788,
+   "gen_tokens": 713,
+   "prefill_tps": 292.6027597960327,
+   "gen_tps": 42.627080676443335,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_0427_order_L3_en": {
+   "text": "Mercer Wholesale plc\n54 Quarry Road, Oxford\nTel. 78 5839371 – fatture@clusonespa.example\n\nPURCHASE ORDER Order No. 6893/2021\nSupplier: Dunsmore Wholesale Ltd. – 111 Willow Drive, Plymouth – Date: 4 August 2025 – Code: J4564MJXXK\n\nDescription Qty Price Amount\nCompatible printer toner cartridges – cod. 806505 89 pcs $ 963.11 GBP 85,716.79\nModular metal shelving – cod. 688983 230 pcs EUR 833.92 GBP 191,801.60\nManual pallet trucks – cod. 810814 195 pcs GBP 1,387.87 EUR 270,634.65\nBreathable interior paint – cod. 128798 119 pcs $ 377.48 EUR 44,920.12\nWeatherproof industrial sockets – cod. 577389 329 pcs GBP 1,126.13 EUR 370,496.77\nConcentrated multi-surface cleaner – cod. 387783 460 pcs GBP 389.00 $ 178,940.00\n\nOrder total GBP 1,142,509.93\n\nTerms and notices: Goods are warranted for twenty-four months from delivery on December 5, 2021. A discount of 10% applies provided payment is received by November 19, 2025. Packing and carriage, amounting to EUR 9,363,883.53, are charged to the consignee unless agreed otherwise. Personal data shall be processed for the contractual purposes stated, in line with the privacy notice.\n\nOK 2021-05-20 – $ 18,535.21\n\nMercer Wholesale plc – 54 Quarry Road, Oxford\nVAT 67726455735 – Tax code BRNCRL86C24V203C\nIBAN IT93 O159 6773 1064 2087 0535 977 – PEC info@caravaggio.example – Page 428",
+   "s": 24.48753571510315,
+   "prompt_tokens": 2788,
+   "gen_tokens": 626,
+   "prefill_tps": 288.4782033331379,
+   "gen_tps": 42.52078893419508,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_0153_banknote_L4_en": {
+   "text": "Pryce Goods Ltd\n10 Willow Drive, Bristol\n\nBANK NOTICE — INV-2019-5412\nWe hereby request a copy of the identity document of Maude Copperfield for registration, for the purposes of periodic reporting.\n\nAs agreed between the parties, report a charge of EUR 6,615,609.81 for carriage and packing dated 2020-09-15, awaiting your kind reply.\n\nWe hereby confirm that amministrazione@dalminesrl.example is the elected address for official communications, subject to agreement on delivery terms.\n\nDate Amount\nFebruary 2, 2019 GBP 6,111.00\nSeptember 17, 2020 EUR 369.96\n2021-05-18 $ 18,734.23\nMarch 12, 2026 GBP 17,586.23\n19 August 2022 GBP 11,575.12\n2025-01-28 $ 5,425.95\n14 November 2026 EUR 19,737.03\n2019-03-12 $ 12,767.34\n\nHandling fee EUR 22.89 charged to account IT12 Z703 5522 6453 9618 5407 982.\n\nTerms and notices: Packing and carriage, amounting to GBP 6.08, are charged to the consignee unless agreed otherwise. The purchaser warrants that tax code RCCLV177P05X000F and VAT number SB428755506 as given are correct. Personal data shall be processed for the contractual purposes stated, in line with the privacy notice. Title to the goods remains with the seller until the price of GBP 3.26 is paid in full.\n\nBalance $ 5,218.92 of August 25, 2021\n\nPryce Goods Ltd — 10 Willow Drive, Bristol\nVAT 23763010420 — Tax code BNCLEY94T11V998A\nIBAN IT10 D02B 2756 2327 9055 3877 936 — PEC gare@albino-pec.example — Page 154",
+   "s": 23.356560945510864,
+   "prompt_tokens": 2788,
+   "gen_tokens": 597,
+   "prefill_tps": 282.1157308699074,
+   "gen_tps": 44.58398728955326,
+   "peak_gb": 3.361316814
+  },
+  "itdoc_a_1479_contract_L5_en": {
+   "text": "Trelawney Logistics plc\n154 Wilton Drive, Oxford\nTel. 15 1501300 — gare@travagliato.cert.example\n\nSUPPLY AGREEMENT — Order no. 2746 of 2024\nBetween Trelawney Logistics plc and Ashworth Manufacturing Ltd., signed on 2021-03-12.\n\nArt. 1 — Subject\nDuring the periodic review, confirm that fatture@travagliato.example is the elected address for official communications, for the purposes of periodic reporting.\n\nArt. 2 — Term\nIn response to the reminder received, request payment of $ 467,532.60 in settlement of the supply under contract Ref. 91756/2023, for the purposes of periodic reporting.\n\nRead, approved and signed — James Pryce\nTerms and notices: Personal data shall be processed for the contractual purposes stated, in line with the privacy notice. The purchaser warrants that tax code NREDVD62L08H033Q and VAT number 40435661871 as given are correct. The courts of Derby shall have exclusive jurisdiction over any dispute. Any complaint must reach us in writing within eight days of receipt of the goods.\n\nOK June 21, 2026 — EUR 10.69\nTrelawney Logistics plc — 80124000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "s": 91.20128893852234,
+   "prompt_tokens": 2788,
+   "gen_tokens": 3000,
+   "prefill_tps": 283.305255910806,
+   "gen_tps": 36.91341206453334,
+   "peak_gb": 3.361316814
+  }
+ }
+}

@@ -1,0 +1,67 @@
+Ordine di acquisto
+Voce
+Q.tà
+Prezzo unit.
+Importo
+Modulo F990
+20
+430,89 €
+8.617,80 €
+Guarnizione A382
+1
+649,22 €
+649,22 €
+Modulo H438
+3
+868,53 €
+2.605,59 €
+Inverter B462
+5
+280,84 €
+1.404,20 €
+Guarnizione H185
+17
+455,57 €
+7.744,69 €
+Inverter E782
+8
+346,13 €
+2.769,04 €
+Sensore A563
+9
+20,02 €
+180,18 €
+Cavo H679
+15
+97,19 €
+1.457,85 €
+Valvola E896
+22
+88,59 €
+1.948,98 €
+Modulo E315
+11
+95,59 €
+1.051,49 €
+Valvola B265
+30
+598,49 €
+17.954,70 €
+Inverter G798
+27
+490,89 €
+13.254,03 €
+Inverter D362
+35
+98,31 €
+3.440,85 €
+Guarnizione B400
+37
+414,03 €
+15.319,11 €
+Pannello G325
+27
+102,03 €
+2.754,81 €
+Totale
+81.152,54 €

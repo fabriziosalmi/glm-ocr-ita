@@ -1,0 +1,55 @@
+Verbale di consegna
+Voce
+Q.tà
+Prezzo unit.
+Importo
+Guarnizione D700
+34
+112,58 €
+3.827,72 €
+Inverter G927
+5
+500,53 €
+2.502,65 €
+Modulo G105
+8
+722,16 €
+5.777,28 €
+Staffa C637
+16
+179,39 €
+2.870,24 €
+Valvola E271
+18
+821,22 €
+14.781,96 €
+Valvola H662
+3
+199,04 €
+597,12 €
+Inverter A979
+3
+322,04 €
+966,12 €
+Inverter A398
+13
+586,44 €
+7.623,72 €
+Valvola E309
+6
+154,00 €
+924,00 €
+Cavo H365
+1
+260,35 €
+260,35 €
+Pannello D607
+5
+797,39 €
+3.986,95 €
+Sensore G575
+4
+488,88 €
+1.955,52 €
+Totale
+46.073,63 €

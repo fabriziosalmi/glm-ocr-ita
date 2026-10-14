@@ -1,0 +1,39 @@
+Framework Agreement
+Item
+Qty
+Unit price
+Amount
+Cable B636
+27
+$ 5.10
+$ 137.70
+Valve G566
+40
+$ 737.90
+$ 29,516.00
+Sensor C170
+37
+$ 293.70
+$ 10,866.90
+Gasket G387
+16
+$ 178.58
+$ 2,857.28
+Panel G796
+24
+$ 773.34
+$ 18,560.16
+Module H347
+18
+$ 146.82
+$ 2,642.76
+Gasket E441
+27
+$ 52.33
+$ 1,412.91
+Bracket G442
+9
+$ 636.96
+$ 5,732.64
+Total
+$ 71,726.35

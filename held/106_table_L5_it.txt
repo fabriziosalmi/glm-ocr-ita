@@ -1,0 +1,55 @@
+Verbale di consegna
+Voce
+Q.tà
+Prezzo unit.
+Importo
+Guarnizione G479
+5
+255,56 €
+1.277,80 €
+Guarnizione C700
+3
+163,48 €
+490,44 €
+Valvola C393
+38
+198,78 €
+7.553,64 €
+Guarnizione G950
+16
+446,26 €
+7.140,16 €
+Cavo A518
+32
+573,85 €
+18.363,20 €
+Staffa E576
+14
+668,44 €
+9.358,16 €
+Guarnizione G737
+32
+333,25 €
+10.664,00 €
+Inverter H839
+22
+631,24 €
+13.887,28 €
+Pannello D132
+33
+591,22 €
+19.510,26 €
+Cavo D560
+33
+320,28 €
+10.569,24 €
+Sensore E456
+32
+230,45 €
+7.374,40 €
+Sensore F789
+29
+746,03 €
+21.634,87 €
+Totale
+127.823,45 €

@@ -1,0 +1,79 @@
+{
+ "tag": "U_bf16",
+ "model": "work/glm-ocr-bf16",
+ "load_s": 0.42945194244384766,
+ "pages": {
+  "00_prose_L1_en": {
+   "text": "The legal representative, tax code ZDHSVT65A20B213L, signs for acceptance on 2025-02-27. The Supplier warrants that the goods conform to the attached technical specifications and applicable law. Thames Works Ltd., VAT no. 53645568151, ref. 99E490BBED, is the contractor.\n\nThe total consideration is $ 3,589,561.17, plus VAT. Any dispute shall be subject to the exclusive jurisdiction of the courts of London, excluding any other forum. The legal representative, tax code VDSZVR83E28G677T, signs for acceptance on 2022-09-17.\n\nPayment shall be made to account IBAN IT35 L081 9672 7317 7848 6488 766 held by Granite & Co. LLP. The Supplier shall deliver the services within thirty days of signature, save for documented force majeure events. The total consideration is $ 1,349,443.90, plus VAT.\n\nThe legal representative, tax code TZVPGL94M15L885T, signs for acceptance on 2026-07-26. In the event of late payment, default interest shall accrue at the statutory rate in force at the due date. This agreement, no. CTR/2025/01612, is entered into on December 15, 2026.\n\nHarborline Services Inc., VAT no. 67147513627, ref. 020E267318, is the contractor. The Supplier warrants that the goods conform to the attached technical specifications and applicable law. The daily penalty is set at $ 1,818.39 for each day of delay.",
+   "s": 9.301814079284668,
+   "prompt_tokens": 1380,
+   "gen_tokens": 445,
+   "prefill_tps": 469.52967204204964,
+   "gen_tps": 70.72190764964388,
+   "peak_gb": 3.059071282
+  },
+  "01_twocol_L1_it": {
+   "text": "Convenzione quadro\n\nLa penale giornaliera è fissata in 2.936,17 € per ogni giorno di ritardo. Le parti dichiarano di aver letto e approvato specificamente le clausole di cui agli articoli 7, 9 e 12.\n\nLa penale giornaliera è fissata in 3.616,34 € per ogni giorno di ritardo. Il corrispettivo è dovuto a mezzo bonifico bancario entro sessanta giorni dalla data di ricevimento della fattura.\n\nIl legale rappresentante, C.F.\nHVEZMC76S06C902W, firma per accettazione in data 10 settembre 2025. Il corrispettivo è dovuto a mezzo bonifico bancario entro sessanta giorni dalla data di ricevimento della fattura.\n\nIl legale rappresentante, C.F.\nGRADRC53H21F888A, firma per accettazione in data 1 settembre 2025. Il Fornitore garantisce la conformità dei beni alle specifiche tecniche allegate e alla normativa vigente.\n\nIl presente contratto, n. CTR/2025/05342, è stipulato in data 04/08/2025. Il corrispettivo è dovuto a mezzo bonifico bancario entro sessanta giorni dalla data di ricevimento della fattura.\n\nIl legale rappresentante, C.F.\nZGSNTH93T03L508B, firma per accettazione in data 07/11/2023. Il Fornitore garantisce la conformità dei beni alle specifiche tecniche allegate e alla normativa vigente.\n\nIl legale rappresentante, C.F.\nBTGVAE91P07L241F, firma per accettazione in data 22 marzo 2025. Le parti dichiarano di aver letto e approvato specificamente le clausole di cui agli articoli 7, 9 e 12.\n\nIl legale rappresentante, C.F.\nSCRMFP61E15H898R, firma per accettazione in data 10 agosto 2023. Per ogni controversia sarà competente in via esclusiva il Foro di Genova, con rinuncia a qualsiasi altro foro.",
+   "s": 10.651311874389648,
+   "prompt_tokens": 1380,
+   "gen_tokens": 559,
+   "prefill_tps": 487.88944813937167,
+   "gen_tps": 71.85103326762456,
+   "peak_gb": 3.066193454
+  },
+  "02_table_L1_en": {
+   "text": "Purchase Order\n\nItem Qty Unit price Amount\nBracket B968 8 $ 475.94 $ 3,807.52\nValve H761 14 $ 210.51 $ 2,947.14\nPanel A460 22 $ 368.98 $ 8,117.56\nSensor B735 11 $ 318.48 $ 3,503.28\nSensor E676 18 $ 501.55 $ 9,027.90\nPanel B900 18 $ 604.27 $ 10,876.86\nModule C208 17 $ 89.50 $ 1,521.50\nPanel B618 4 $ 683.92 $ 2,735.68\nValve E422 21 $ 251.28 $ 5,276.88\nValve A521 11 $ 236.99 $ 2,606.89\nCable A198 17 $ 374.83 $ 6,372.11\nValve B802 16 $ 23.61 $ 377.76\n\nTotal $ 57,171.08",
+   "s": 7.679397106170654,
+   "prompt_tokens": 1380,
+   "gen_tokens": 351,
+   "prefill_tps": 488.36954268727993,
+   "gen_tps": 72.83773921601771,
+   "peak_gb": 3.066193454
+  },
+  "03_form_L1_it": {
+   "text": "Fattura commerciale\n\nRAGIONE SOCIALE\nCantieri del Tirreno S.r.l.\n\nPARTITA IVA\n55799065939\n\nCODICE FISCALE\nTSDPZL74E27F159R\n\nIBAN\nIT76 N045 4146 5908 5380 1291 102\n\nNUMERO CONTRATTO\nCTR/2026/04952\n\nCIG\n0D4BDCC7D7\n\nDATA STIPULA\n25/03/2023\n\nIMPORTO\n3.308.151,87 €\n\nSCADENZA\n18 novembre 2026\n\nREFERENTE\nPaolo Neri",
+   "s": 5.4974400997161865,
+   "prompt_tokens": 1380,
+   "gen_tokens": 195,
+   "prefill_tps": 488.9043295270444,
+   "gen_tps": 73.85304913730253,
+   "peak_gb": 3.066193454
+  },
+  "04_invoice_L1_en": {
+   "text": "Harborline Services Inc.\nP.IVA 04876452912\nVia Garibaldi 12, 16124 Genova\n\nNorthbridge Ltd.\nP.IVA 80845850037\nCorso Italia 45, 20122 Milano\n\nInvoice n. CTR/2022/03635 - September 22, 2023\n\nService D81/2024 12 $665.94 $7,991.28\nService F55/2025 11 $603.54 $6,638.94\nService H96/2026 15 $386.41 $5,796.15\nService G29/2025 10 $135.59 $1,355.90\nService G14/2023 1 $665.56 $665.56\nService E27/2022 3 $212.83 $638.49\nService E83/2022 1 $375.72 $375.72\nService C75/2022 13 $269.50 $3,503.50\nService G52/2026 3 $103.62 $310.86\n\nSubtotal $27,276.40\nVAT 22% $6,000.81\nTOTAL $33,277.21\n\nIBAN IT13 F440 9324 4845 2630 9765 828\n\nIn the event of late payment, default interest shall accrue at the statutory rate in force at the due date.",
+   "s": 9.081162929534912,
+   "prompt_tokens": 1380,
+   "gen_tokens": 458,
+   "prefill_tps": 489.2555159854781,
+   "gen_tps": 73.49296644829738,
+   "peak_gb": 3.066193454
+  },
+  "05_footnotes_L1_it": {
+   "text": "Verbale di consegna\n\nIl pagamento sarà effettuato sul conto IBAN IT88 L018 0515\n4382 9932 1571 164 intestato a Studio Bianchi & Associati. La Società si impegna a fornire i servizi entro trenta giorni dalla sottoscricione, salvo cause di forza maggiore documentate. [1]\n\nIl presente contratto, n. CTR/2025/08172, è stipulato in data 04/09/2026. In caso di ritardo nel pagamento decorreranno gli interessi di mora nella misura prevista dal D.Lgs. 231/2002. [2]\n\nLa penale giornaliera è fissata in 4.085,64 € per ogni giorno di ritardo. Per ogni controversia sarà competente in via esclusiva il Foro di Genova, con rinuncia a qualsiasi altro foro. [3]\n\n[1] Il presente contratto, n. CTR/2022/01132, è stipulato in data 25 febbraio 2025.\n[2] Il presente contratto, n. CTR/2023/02759, è stipulato in data 11 luglio 2026.\n[3] Il presente contratto, n. CTR/2025/06604, è stipulato in data 11 marzo 2023.\n[4] Il pagamento sarà effettuato sul conto IBAN IT52 E556 9632 7926 4515 4742 843 intestato a Meridiana Logistica S.p.A..\n[5] Il corrispettivo complessivo è pari a 2.411.922,28 €, oltre IVA.",
+   "s": 9.166542053222656,
+   "prompt_tokens": 1380,
+   "gen_tokens": 462,
+   "prefill_tps": 487.5155467897113,
+   "gen_tps": 73.31615785969554,
+   "peak_gb": 3.066193454
+  },
+  "06_bilingual_L1_en": {
+   "text": "Contratto / Agreement\n\nRiferimento CTR/2025/09007, soggetto a Foro di Genova.\n\nIn caso di ritardo nel pagamento decorreranno gli interessi di mora nella misura prevista dal D.Lgs. 231/2002.\n\nRiferimento CTR/2025/08953, soggetto a Foro di Genova.\n\nIl corrispettivo è dovuto a mezzo bonifico bancario entro sessanta giorni dalla data di ricevimento della fattura.\n\nIl corrispettivo è di 370.266,82 €.\n\nIn caso di ritardo nel pagamento decorreranno gli interessi di mora nella misura prevista dal D.Lgs. 231/2002.\n\nData di consegna: 05/06/2026.\n\nLe parti dichiarano di aver letto e approvato specificamente le clausole di cui agli articoli 7, 9 e 12.\n\nData di consegna: 25/04/2022.\n\nLa Società si impegna a fornire i servizi entro trenta giorni dalla sottoscricione, salvo cause di forza maggiore documentate.\n\nReference CTR/2025/09007, subject to the courts of London.\n\nThe Supplier warrants that the goods conform to the attached technical specifications and applicable law.\n\nReference CTR/2025/08953, subject to the courts of London.\n\nThe parties declare that they have read and specifically approved the clauses set out in articles 7, 9 and 12.\n\nThe fee is $ 370,266.82.\n\nAny dispute shall be subject to the exclusive jurisdiction of the courts of London, excluding any other forum.\n\nDelivery date: 2026-06-05.\n\nIn the event of late payment, default interest shall accrue at the statutory rate in force at the due date.\n\nDelivery date: 2022-04-25.\n\nThe fee is payable by bank transfer within sixty days from the date the invoice is received.",
+   "s": 9.655372142791748,
+   "prompt_tokens": 1380,
+   "gen_tokens": 500,
+   "prefill_tps": 488.2791697193007,
+   "gen_tps": 73.47763390222217,
+   "peak_gb": 3.066193454
+  },
+  "07_clauses_L1_it": {
+   "text": "Fattura commerciale\n\nArt. 1 - Corrispettivo\n1.1 Il legale rappresentante, C.F. PCGADE71D15D720Z, firma per accettazione in data 06/12/2024.\n1.2 Per ogni controversia sarà competente in via esclusiva il Foro di Genova, con rinuncia a qualsiasi altro foro.\n\nArt. 2 - Recesso\n2.1 La penale giornaliera è fissata in 2.632,91 € per ogni giorno di ritardo.\n2.2 Per ogni controversia sarà competente in via esclusiva il Foro di Genova, con rinuncia a qualsiasi altro foro.\n\nArt. 3 - Foro competente\n3.1 Il pagamento sarà effettuato sul conto IBAN IT27 A104 6028 8375 5559 7475 407 intestato a Alpi Energia S.r.l..\n3.2 In caso di ritardo nel pagamento decorreranno gli interessi di mora nella misura prevista dal D.Lgs. 231/2002.\n\nArt. 4 - Corrispettivo\n4.1 Valdarno Servizi S.p.A., P.IVA 54864390618, CIG 9F2AFAAB52, è l'appaltatore.\n4.2 Per ogni controversia sarà competente in via esclusiva il Foro di Genova, con rinuncia a qualsiasi altro foro.\n\nArt. 5 - Durata\n5.1 Il presente contratto, n. CTR/2026/08529, è stipulato in data 28/07/2022.\n5.2 La Società si impegna a fornire i servizi entro trenta giorni dalla sottoscricione, salvo cause di forza maggiore documentate.",
+   "s": 9.138280153274536,
+   "prompt_tokens": 1380,
+   "gen_tokens": 463,
+   "prefill_tps": 488.7539300279743,
+   "gen_tps": 73.64950196321175,
+   "peak_gb": 3.066205578
+  }
+ }
+}

@@ -1,0 +1,5 @@
+# Line endings are LF everywhere; images are binary and never diffed.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.safetensors binary
