@@ -173,7 +173,7 @@ Written on 2026-10-14, before any model read any page of the benchmark; the eval
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
 
-## `external/xfund_it_val`, second read: v1.1 - open
+## `external/xfund_it_val`, second read: v1.1 - closed: better
 
 Written on 2026-10-14, after the dev measurement above and before any retry was run on this set. The set was read once for v1.0.0 (section above), and that read is what pointed at comb fields: this second read is for a different configuration, chosen on another split (`external/xfund_it_train`, `ROADMAP.md`), and is said as such.
 
@@ -183,3 +183,8 @@ Written on 2026-10-14, after the dev measurement above and before any retry was 
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-10-14 | `xfund_it_bf16_1.0_op`, `xfund_it_v8d8e8op1_1.0_op_rp110` | 1, filled-in values | **Passes.** 76.9% -> 77.9%, +1.1 [-0.9, +3.2] on 1512 values |
+| 2026-10-14 | same | 2, all entities | **Passes.** 74.6% -> 77.7%, +3.1 [+1.3, +5.9] on 3914; 31 forms gain entities, 3 lose (worst `it_val_34`, -6). By type: printed field names 86.7 -> 89.0% (+2.2 [+0.2, +5.3]), headers 75.4 -> 78.5%, other text 58.0 -> 64.9% (+6.9 [+3.2, +11.9]) |
+| 2026-10-14 | same | 3 | **Passes.** Loops 2 (BASE: `it_val_22`, `it_val_46`) -> 0. The retry re-read the three forms v1.0.0 looped on (`it_val_29`, `it_val_32`, `it_val_46`) and kept the second reading on all three |
+| 2026-10-14 | same | 4, all entities better | **Passes.** Lower bound +1.3 > 0 |
+| 2026-10-14 | | verdict | **v1.1 is better than the original on 50 real Italian forms**, +3.1 [+1.3, +5.9], with no loop left. Same weights as v1.0.0; the gain is the retry, chosen on the training split. This set has now been read twice, so the next model change needs a new test set |
