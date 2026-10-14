@@ -243,6 +243,11 @@ So most of the loss is an input problem: the model treats the letterhead as page
 
 **Then one test read**, question written first: v1.1 (v1.0.0 weights + retry) against BASE on `external/xfund_it_val`. That set was read once for v1.0.0, and it is what pointed at comb fields; the setting is chosen on another split, and the second read is said as such.
 
+## Later (v1.2 or after, only if v1.1 leaves room)
+
+- **A larger OCR as a teacher, on real images with no transcription** (the photo set, real documents): filtered, since a teacher errs too (keep what two teachers agree on). An open model as teacher: the terms of most API models forbid training on their output.
+- **GRPO or DPO on small comb-field crops**, with rewards that need no reference: the check character of a tax code, an IBAN or a VAT number read back is right or wrong, and an output loops or not. Several samples per crop: slow on this machine, possible on crops.
+
 ## Phase 5 - Release
 
 - [x] Final table on `test`: BASE and one released configuration, `v8d8e8` with adapter `op1` fused in (v1.0.0, 2026-10-14; README, `LEDGER.md`). Q4 was compared with `v8d8e8` on `test` on 2026-10-13 and not shown worse or better; the "small" configuration is not released, because 0.7x loses small print.

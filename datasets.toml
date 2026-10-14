@@ -167,3 +167,12 @@ role = "test"
 role = "test"
 [dataset."external/xfund_it_train"]
 role = "dev"
+# Training pages drawn here (generators/make_f24.py, make_photo_set.py, augment.py): never used to measure.
+[dataset."external/f24_synth"]
+role = "train"
+[dataset."external/f24_aug"]
+role = "train"
+[dataset."external/photo_train"]
+role = "train"
+[dataset."external/photo_train_aug"]
+role = "train"
