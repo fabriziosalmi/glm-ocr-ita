@@ -254,6 +254,18 @@ The penalty kept is **1.1**, by the rule above. Without retry, v1.0.0 gains 377 
 
 **Then one test read**, question written first: v1.1 (v1.0.0 weights + retry) against BASE on `external/xfund_it_val`. That set was read once for v1.0.0, and it is what pointed at comb fields; the setting is chosen on another split, and the second read is said as such.
 
+**Outcome.** Released as v1.1.0 on 2026-10-14: on `external/xfund_it_val` +3.1 [+1.3, +5.9] over BASE, loops 2 -> 0 (`LEDGER.md`). On the OmniDocBench subset Chinese is worse (-4.8) with or without the retry, English not shown either way.
+
+## v1.2 - where things stand (2026-10-14, evening)
+
+**Rule on languages, set by the owner on 2026-10-14.** Italian and English must not lose. Chinese and non-European languages may, even badly. Other European languages are watched: a large loss there is an alert, not a blocker. The format of tables (markdown or plain) does not matter.
+
+**Pilot `op2`, a hint and not a release** (owner's go, 2026-10-14). Data: the 91 pages of `op1` (Italian and English, so that what op1 learnt is kept) + 35 comb-field pages (12 clean F24, 11 degraded F24, 12 degraded printable forms; `external/ft_tr_cb`, teacher `fttr_cb_bf16_1.0_op`, answers by `ft_targets.py`) = `work/ft/train_op2.jsonl`, 126 pages, one pass, lr 1e-5, rank 8. Trained on the Mac mini (this machine stopped it for swap at step 10). Read on dev only, raw (no retry) against raw v1.0.0: XFUND Italian train (loops and entities), `spark/itdoc_a#60` and `chatgpt/itdoc_a` (Italian and English must not lose), `external/gu_dev`. Queue: `work/pilot_op2.sh` on the mini. What would make it a v1.2: fewer loops on comb fields with Italian and English not worse on dev; then the test reads, with fresh test sets.
+
+**New page sets.** `external/gu_dev` and `external/gu_test` (Gazzetta Ufficiale, real Italian print, text layer as ground truth, `generators/make_gu.py`): the fresh Italian test set that XFUND val, read twice, no longer is. `external/xfund_{de,es,fr,pt}_val`: the European guard, question in `LEDGER.md`, reads queued on this machine (`work/eu_reads.sh`, BASE, v1.0.0, retry).
+
+**Open.** The F24's reuse terms before publishing anything trained on it. Photos of the printed forms (X01, X02 as test). A JSON-extraction track (CORD for it). The old private repository to delete (needs `gh auth refresh -s delete_repo`).
+
 ## Later (v1.2 or after, only if v1.1 leaves room)
 
 - **A larger OCR as a teacher, on real images with no transcription** (the photo set, real documents): filtered, since a teacher errs too (keep what two teachers agree on). An open model as teacher: the terms of most API models forbid training on their output.
