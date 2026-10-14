@@ -3,7 +3,7 @@ versamento unificato - F24 Ordinario", page 1; external/forms_src/f24_ordinario.
 {id}.png, {id}.txt, meta.json. Training data for comb fields: the form is the real one, the values are made up.
 Runs in its own environment (work/gen_venv: pypdfium2, pillow), so the measuring environment is never touched.
 
-The form is rendered at 300 dpi and the values are written into its boxes, whose positions come from the PDF's own vector
+The form is rendered at 300 dpi, saved at 150 (long side 1754 px, as every other page set), and the values are written into its boxes, whose positions come from the PDF's own vector
 paths (in points, origin top left). The printed labels are LABELS below, transcribed once by hand from the PDF's text layer,
 which has broken ligatures and split words ("f lli ... a mentare" for "fallimentare"). The rotated text in the left margin is
 left out. Ground truth: labels and values together, grouped into lines by their vertical centre and read left to right, as the
@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT / "generators"))
 from ids import codice_fiscale, iban_it, COMUNI, SURNAMES, NAMES_M, NAMES_F, BANKS   # noqa: E402
 
 SRC, OUT = pathlib.Path("external/forms_src/f24_ordinario.pdf"), pathlib.Path("external/f24_synth")
-DPI = 300; K = DPI / 72
+DPI = 300; K = DPI / 72; MAX_SIDE = 1754   # A4 at 150 dpi, as every other page set: at 300 dpi a page is 6000 visual tokens
 S = "/System/Library/Fonts/"; SS = S + "Supplemental/"
 PENS = [(SS + "Bradley Hand Bold.ttf", (25, 35, 120)), (SS + "Courier New Bold.ttf", (20, 20, 20)), (S + "Helvetica.ttc", (20, 20, 20)),
         (SS + "Courier New.ttf", (30, 30, 30)), (SS + "Bradley Hand Bold.ttf", (20, 20, 20))]
@@ -193,8 +193,9 @@ if __name__ == "__main__":
     for i in range(n):
         rng = random.Random(f"f24-{i}")
         f = fill(base, rng); pid = f"f24_{i:04d}"
-        f.img.save(OUT / f"{pid}.png"); (OUT / f"{pid}.txt").write_text(f.text(), encoding="utf-8")
-        meta.append({"id": pid, "gt": "generated", "level": 1, "tpl": "f24", "lang": "it", "rot90": False, "size": list(f.img.size),
+        img = f.img.resize((round(f.img.width * MAX_SIDE / f.img.height), MAX_SIDE), Image.LANCZOS)   # drawn at 300 dpi, saved at 150
+        img.save(OUT / f"{pid}.png"); (OUT / f"{pid}.txt").write_text(f.text(), encoding="utf-8")
+        meta.append({"id": pid, "gt": "generated", "level": 1, "tpl": "f24", "lang": "it", "rot90": False, "size": list(img.size),
                      "entities": f.entities})
     json.dump(meta, open(OUT / "meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(n, "F24 forms,", sum(len(m["entities"]) for m in meta), "values ->", OUT)

@@ -167,6 +167,21 @@ role = "test"
 role = "test"
 [dataset."external/xfund_it_train"]
 role = "dev"
+# The other European languages of XFUND, val (50 forms each): the guard that Italian was not learnt at their cost.
+[dataset."external/xfund_de_val"]
+role = "test"
+[dataset."external/xfund_es_val"]
+role = "test"
+[dataset."external/xfund_fr_val"]
+role = "test"
+[dataset."external/xfund_pt_val"]
+role = "test"
+# Real Italian printed pages: the Gazzetta Ufficiale, Serie Generale 2019-2025 (docs/EXTERNAL.md), built by generators/make_gu.py.
+# Issues alternate between the two sets, so no decree is on both sides. Official acts: law 633/1941, art. 5.
+[dataset."external/gu_dev"]
+role = "dev"
+[dataset."external/gu_test"]
+role = "test"
 # Training pages drawn here (generators/make_f24.py, make_photo_set.py, augment.py): never used to measure.
 [dataset."external/f24_synth"]
 role = "train"

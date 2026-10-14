@@ -203,3 +203,21 @@ Written on 2026-10-14, after the dev measurement above and before any retry was 
 | 2026-10-14 | same | 3 | **Passes.** Loops 2 (BASE: `it_val_22`, `it_val_46`) -> 0. The retry re-read the three forms v1.0.0 looped on (`it_val_29`, `it_val_32`, `it_val_46`) and kept the second reading on all three |
 | 2026-10-14 | same | 4, all entities better | **Passes.** Lower bound +1.3 > 0 |
 | 2026-10-14 | | verdict | **v1.1 is better than the original on 50 real Italian forms**, +3.1 [+1.3, +5.9], with no loop left. Same weights as v1.0.0; the gain is the retry, chosen on the training split. This set has now been read twice, so the next model change needs a new test set |
+
+## `external/xfund_{de,es,fr,pt}_val`: the other European languages - open
+
+Written on 2026-10-14, before any model read any of these forms. Same format and converter as the Italian forms (`generators/make_xfund.py val LANG`): 50 real forms per language, German, Spanish, French, Portuguese.
+
+**Why.** The fine-tuning taught Italian and English. These check that it did not cost the European languages next to them; a loss on them is an alert, not a reason to hold the release, as said by the owner of the project on 2026-10-14 (Italian and English must not lose; Chinese and non-European languages may; European languages are watched).
+
+**Configuration.** BASE `xfund_<lang>_bf16_1.0_op`; v1.1 = `xfund_<lang>_v8d8e8op1_1.0_op_rp110`, built by `experiments/loop_retry.py` from `xfund_<lang>_v8d8e8op1_1.0_op`.
+
+**Questions and thresholds**, for each language apart:
+
+1. Is v1.1 not worse than BASE on all entities? Passes if the lower bound of the difference is above -1.5. **Alert** if the verdict is worse.
+2. Filled-in values (type "answer"): reported with the same rule.
+3. Loops: reported.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
+
