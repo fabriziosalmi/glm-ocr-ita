@@ -155,7 +155,7 @@ Whatever the outcome, it goes in the README and in the model card, next to the s
 | 2026-10-14 | same | 3 | **Fails.** Forms under 90% of the text 12 -> 8 (passes), but two new loops on forms where the release finds fewer entities: `it_val_29` (74 -> 50 of 121) and `it_val_32` (105 -> 55 of 168). Both start on a comb field (digits in boxes, written `3\|4\|3\|4...`), the reader cuts them, and the rest of the form is lost. Loops 2 -> 3 overall; one of BASE's two is gone |
 | 2026-10-14 | | verdict | **The release is not shown better or worse than the original on real Italian forms**, and it loops on comb fields where the original does not, twice in 50. Said as such in the README and the model card. Two forms carry the loss: over the other 48 the release finds 87 entities more, but that split was made after seeing the result and is not a claim. Next: study loops on comb fields on the XFUND Italian training split (149 forms), never on this one |
 
-## `external/omnidoc_200` (OmniDocBench v1.5, 200 pages) - open
+## `external/omnidoc_200` (OmniDocBench v1.5, 200 pages) - closed: worse on Chinese
 
 Written on 2026-10-14, before any model read any page of the benchmark; the evaluator was checked first with the annotation's own text as prediction. Read on the Mac mini, both sides there, official prompt, full resolution, pages as they are.
 
@@ -169,6 +169,17 @@ Written on 2026-10-14, before any model read any page of the benchmark; the eval
 
 1. Is the release not worse than BASE? Passes if the lower bound of the difference is above -1.5.
 2. Reading order edit distance: reported, no threshold.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
+| 2026-10-14 | `omnidoc200_bf16_1.0_op`, `omnidoc200_v8d8e8op1_1.0_op` | 1, English | **Not shown.** Text edit distance 7.6 -> 8.1, difference -0.5 [-3.0, +1.6] on 140 pages with matched text blocks (official averages over all pages: 0.080 -> 0.100) |
+| 2026-10-14 | same | 1, Chinese | **Fails: worse.** 14.8 -> 19.6, -4.8 [-10.6, -0.8] on 45 pages |
+| 2026-10-14 | same | 2 | Reading order: English 17.2 -> 18.1, -0.9 [-3.5, +1.6] (148 pages); Chinese 30.2 -> 31.5, -1.4 [-4.4, +0.7] (50) |
+| 2026-10-14 | | verdict | **The release costs Chinese text and is not shown to keep English** on this subset, by the benchmark's own code. Loops 5 -> 7 (cut by the reader; one English page loses all its text). Read with v1.0.0, without the retry. Said as such in the README and the model card. Comparison: `experiments/omnidoc_compare.py` (written after the evaluator ran, before this comparison) |
+
+## `external/omnidoc_200`, second read: v1.1 - open
+
+Written on 2026-10-14, after the v1.0.0 outcome above and before any retry on this set. v1.1 is the released configuration (retry at penalty 1.1, chosen on XFUND train); it rereads only the pages that looped. Tag `omnidoc200_v8d8e8op1_1.0_op_rp110`, from `omnidoc200_v8d8e8op1_1.0_op` by `experiments/loop_retry.py`, on the Mac mini. Same measure and threshold as above: question 1 on English and on Chinese apart, lower bound above -1.5. Expected, and said before the read: only the 7 looping pages can change, so Chinese is unlikely to pass.
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
