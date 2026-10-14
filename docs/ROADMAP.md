@@ -264,6 +264,8 @@ The penalty kept is **1.1**, by the rule above. Without retry, v1.0.0 gains 377 
 
 **New page sets.** `external/gu_dev` and `external/gu_test` (Gazzetta Ufficiale, real Italian print, text layer as ground truth, `generators/make_gu.py`): the fresh Italian test set that XFUND val, read twice, no longer is. `external/xfund_{de,es,fr,pt}_val`: the European guard, question in `LEDGER.md`, reads queued on this machine (`work/eu_reads.sh`, BASE, v1.0.0, retry).
 
+**GGUF track (agreed 2026-10-14, after the pilot).** llama.cpp supports GLM-OCR since PR #19677 (model + `mmproj`; `--flash-attn off` needed for now). The fused bf16 checkpoint (`work/ft/op1_90_merged`) has the upstream layout, so `convert_hf_to_gguf.py` should take it as is. A GGUF Q8_0 is a different model from the one measured (other quantization, other image preprocessing): it is read on the same sets with the official prompt and the same retry, and published only if Italian and English do not lose against the MLX release. Then, maybe, an application on top (a validated Italian entity extractor first; an app, or a paperless-ngx OCR backend, after).
+
 **Open.** The F24's reuse terms before publishing anything trained on it. Photos of the printed forms (X01, X02 as test). A JSON-extraction track (CORD for it). The old private repository to delete (needs `gh auth refresh -s delete_repo`).
 
 ## Later (v1.2 or after, only if v1.1 leaves room)
