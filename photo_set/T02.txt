@@ -1,0 +1,28 @@
+T02
+BANCA POPOLARE DELLA VALDELSA
+Disposizione di bonifico SEPA
+Ordinante titolare del rapporto, con addebito sul conto corrente indicato. La
+valuta beneficiario sarà riconosciuta entro la giornata operativa successiva
+all'esecuzione dell'ordine.
+Ordinante Ferraguti Ornella
+IBAN ordinante IT50Z2700958706700093866963
+Beneficiario Officine Meccaniche Zanardi S.r.l.
+IBAN beneficiario IT66O8321292266786439260691
+Partita IVA beneficiario 22975266069
+Importo euro 1.846,50
+Data esecuzione 17/11/2025
+Causale Saldo fattura 412/B riparazione tornio
+☐ Bonifico ordinario
+☒ Bonifico istantaneo
+☐ Giroconto tra rapporti
+Commissione applicata secondo il prospetto informativo vigente. L'ordine
+diventa irrevocabile dopo la conferma mediante codice dispositivo.
+Riepilogo addebiti
+Voce | Euro
+--- | ---
+Importo disposto | 1.846,50
+Commissione | 1,75
+Totale addebitato | 1.848,25
+Conservare la contabile come prova liberatoria. Per contestazioni rivolgersi alla
+filiale entro tredici mesi dalla data valuta.
+Poggibonsi, 16 novembre 2025 Firma

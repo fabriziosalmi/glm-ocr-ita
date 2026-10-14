@@ -1,0 +1,722 @@
+[
+ {
+  "id": "T01",
+  "gt": "generated",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "rot90": false,
+  "size": [
+   2480,
+   3508
+  ],
+  "role": "train",
+  "entities": [
+   {
+    "type": "name",
+    "text": "Bertolini Gianmaria"
+   },
+   {
+    "type": "cf",
+    "text": "BRTGMR79C14C225F"
+   },
+   {
+    "type": "date",
+    "text": "14/03/1979"
+   },
+   {
+    "type": "cap",
+    "text": "37014"
+   },
+   {
+    "type": "address",
+    "text": "Via delle Ortensie 27, interno 4"
+   },
+   {
+    "type": "phone",
+    "text": "3202892967"
+   },
+   {
+    "type": "table",
+    "text": "11/06/1983"
+   },
+   {
+    "type": "table",
+    "text": "02/09/2017"
+   }
+  ]
+ },
+ {
+  "id": "T02",
+  "gt": "generated",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "rot90": false,
+  "size": [
+   2480,
+   3508
+  ],
+  "role": "train",
+  "entities": [
+   {
+    "type": "name",
+    "text": "Ferraguti Ornella"
+   },
+   {
+    "type": "iban",
+    "text": "IT50Z2700958706700093866963"
+   },
+   {
+    "type": "company",
+    "text": "Officine Meccaniche Zanardi S.r.l."
+   },
+   {
+    "type": "iban",
+    "text": "IT66O8321292266786439260691"
+   },
+   {
+    "type": "vat",
+    "text": "22975266069"
+   },
+   {
+    "type": "amount",
+    "text": "1.846,50"
+   },
+   {
+    "type": "date",
+    "text": "17/11/2025"
+   },
+   {
+    "type": "text",
+    "text": "Saldo fattura 412/B riparazione tornio"
+   },
+   {
+    "type": "table",
+    "text": "1.846,50"
+   },
+   {
+    "type": "table",
+    "text": "1,75"
+   },
+   {
+    "type": "table",
+    "text": "1.848,25"
+   }
+  ]
+ },
+ {
+  "id": "T03",
+  "gt": "generated",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "rot90": false,
+  "size": [
+   2480,
+   3508
+  ],
+  "role": "train",
+  "entities": [
+   {
+    "type": "name",
+    "text": "Quaranta Benedetta"
+   },
+   {
+    "type": "cf",
+    "text": "QRNBDT01P62E783S"
+   },
+   {
+    "type": "id",
+    "text": "M8812047"
+   },
+   {
+    "type": "number",
+    "text": "108"
+   },
+   {
+    "type": "date",
+    "text": "22/09/2001"
+   },
+   {
+    "type": "phone",
+    "text": "3968396974"
+   },
+   {
+    "type": "email",
+    "text": "b.quaranta@studenti.unimc.example"
+   },
+   {
+    "type": "table",
+    "text": "12"
+   },
+   {
+    "type": "table",
+    "text": "30"
+   },
+   {
+    "type": "table",
+    "text": "9"
+   },
+   {
+    "type": "table",
+    "text": "28"
+   },
+   {
+    "type": "table",
+    "text": "6"
+   },
+   {
+    "type": "table",
+    "text": "27"
+   }
+  ]
+ },
+ {
+  "id": "T04",
+  "gt": "generated",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "rot90": false,
+  "size": [
+   2480,
+   3508
+  ],
+  "role": "train",
+  "entities": [
+   {
+    "type": "name",
+    "text": "Scognamiglio Pasquale"
+   },
+   {
+    "type": "cf",
+    "text": "SCGPQL66T05F839B"
+   },
+   {
+    "type": "id",
+    "text": "40027781936"
+   },
+   {
+    "type": "amount",
+    "text": "742,00"
+   },
+   {
+    "type": "date",
+    "text": "09/06/2026"
+   },
+   {
+    "type": "iban",
+    "text": "IT43X1404202323918774385756"
+   },
+   {
+    "type": "table",
+    "text": "118/A"
+   },
+   {
+    "type": "table",
+    "text": "90,00"
+   },
+   {
+    "type": "table",
+    "text": "131/A"
+   },
+   {
+    "type": "table",
+    "text": "520,00"
+   },
+   {
+    "type": "table",
+    "text": "136/A"
+   },
+   {
+    "type": "table",
+    "text": "132,00"
+   }
+  ]
+ },
+ {
+  "id": "T05",
+  "gt": "generated",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "rot90": false,
+  "size": [
+   2480,
+   3508
+  ],
+  "role": "train",
+  "entities": [
+   {
+    "type": "name",
+    "text": "Vitaliano Ermenegildo"
+   },
+   {
+    "type": "cf",
+    "text": "VTLRNG48A30L219G"
+   },
+   {
+    "type": "name",
+    "text": "Vitaliano Rosalba"
+   },
+   {
+    "type": "cf",
+    "text": "VTLRLB75L48L219M"
+   },
+   {
+    "type": "id",
+    "text": "AG55190274"
+   },
+   {
+    "type": "date",
+    "text": "04/12/2025"
+   },
+   {
+    "type": "id",
+    "text": "CA48261KX"
+   },
+   {
+    "type": "table",
+    "text": "RA779301245IT"
+   },
+   {
+    "type": "table",
+    "text": "CP448120773IT"
+   }
+  ]
+ },
+ {
+  "id": "T06",
+  "gt": "generated",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "rot90": false,
+  "size": [
+   2480,
+   3508
+  ],
+  "role": "train",
+  "entities": [
+   {
+    "type": "company",
+    "text": "Immobiliare Corsini Ghirardelli S.a.s."
+   },
+   {
+    "type": "vat",
+    "text": "51378440526"
+   },
+   {
+    "type": "name",
+    "text": "Lombardozzi Fiammetta"
+   },
+   {
+    "type": "cf",
+    "text": "LMBFMT90D57A944M"
+   },
+   {
+    "type": "amount",
+    "text": "785,00"
+   },
+   {
+    "type": "date",
+    "text": "01/03/2026"
+   },
+   {
+    "type": "number",
+    "text": "112"
+   },
+   {
+    "type": "number",
+    "text": "4479"
+   },
+   {
+    "type": "number",
+    "text": "23"
+   },
+   {
+    "type": "table",
+    "text": "01/03/2026"
+   },
+   {
+    "type": "table",
+    "text": "785,00"
+   },
+   {
+    "type": "table",
+    "text": "01/04/2026"
+   },
+   {
+    "type": "table",
+    "text": "785,00"
+   },
+   {
+    "type": "table",
+    "text": "28/02/2026"
+   },
+   {
+    "type": "table",
+    "text": "2.355,00"
+   }
+  ]
+ },
+ {
+  "id": "T07",
+  "gt": "generated",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "rot90": false,
+  "size": [
+   2480,
+   3508
+  ],
+  "role": "train",
+  "entities": [
+   {
+    "type": "company",
+    "text": "Gestioni Pellegatta"
+   },
+   {
+    "type": "id",
+    "text": "97537071205"
+   },
+   {
+    "type": "number",
+    "text": "684"
+   },
+   {
+    "type": "number",
+    "text": "17"
+   },
+   {
+    "type": "amount",
+    "text": "96.300,00"
+   },
+   {
+    "type": "iban",
+    "text": "IT03Q5627461254733008318825"
+   },
+   {
+    "type": "table",
+    "text": "14"
+   },
+   {
+    "type": "table",
+    "text": "3"
+   },
+   {
+    "type": "table",
+    "text": "17"
+   },
+   {
+    "type": "table",
+    "text": "0"
+   },
+   {
+    "type": "table",
+    "text": "12"
+   },
+   {
+    "type": "table",
+    "text": "5"
+   }
+  ]
+ },
+ {
+  "id": "T08",
+  "gt": "generated",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "rot90": false,
+  "size": [
+   2480,
+   3508
+  ],
+  "role": "train",
+  "entities": [
+   {
+    "type": "name",
+    "text": "Dall'Olio Settimio"
+   },
+   {
+    "type": "plate",
+    "text": "GH417TZ"
+   },
+   {
+    "type": "cf",
+    "text": "DLLSTM58R02D548J"
+   },
+   {
+    "type": "date",
+    "text": "06/01/2026"
+   },
+   {
+    "type": "time",
+    "text": "0745"
+   },
+   {
+    "type": "id",
+    "text": "RCA7730218845"
+   },
+   {
+    "type": "phone",
+    "text": "3529685316"
+   },
+   {
+    "type": "table",
+    "text": "3"
+   },
+   {
+    "type": "table",
+    "text": "2"
+   },
+   {
+    "type": "table",
+    "text": "1"
+   }
+  ]
+ },
+ {
+  "id": "T09",
+  "gt": "generated",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "rot90": false,
+  "size": [
+   2480,
+   3508
+  ],
+  "role": "train",
+  "entities": [
+   {
+    "type": "name",
+    "text": "Iannucci Viola"
+   },
+   {
+    "type": "cf",
+    "text": "NNCVLI12E51H400A"
+   },
+   {
+    "type": "date",
+    "text": "30/06/2026"
+   },
+   {
+    "type": "size",
+    "text": "XS"
+   },
+   {
+    "type": "amount",
+    "text": "260,00"
+   },
+   {
+    "type": "phone",
+    "text": "3867202805"
+   },
+   {
+    "type": "table",
+    "text": "1"
+   },
+   {
+    "type": "table",
+    "text": "2"
+   },
+   {
+    "type": "table",
+    "text": "3"
+   }
+  ]
+ },
+ {
+  "id": "T10",
+  "gt": "generated",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "rot90": false,
+  "size": [
+   2480,
+   3508
+  ],
+  "role": "train",
+  "entities": [
+   {
+    "type": "name",
+    "text": "Kofler Matthias"
+   },
+   {
+    "type": "cf",
+    "text": "KFLMTH85B26A952M"
+   },
+   {
+    "type": "id",
+    "text": "28899358445042"
+   },
+   {
+    "type": "id",
+    "text": "G4R0039281"
+   },
+   {
+    "type": "cap",
+    "text": "39100"
+   },
+   {
+    "type": "number",
+    "text": "1350"
+   },
+   {
+    "type": "iban",
+    "text": "IT35W1702310900522495391213"
+   },
+   {
+    "type": "table",
+    "text": "24"
+   },
+   {
+    "type": "table",
+    "text": "2025"
+   },
+   {
+    "type": "table",
+    "text": "7"
+   },
+   {
+    "type": "table",
+    "text": "2025"
+   },
+   {
+    "type": "table",
+    "text": "11"
+   },
+   {
+    "type": "table",
+    "text": "2019"
+   }
+  ]
+ },
+ {
+  "id": "X01",
+  "gt": "generated",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "rot90": false,
+  "size": [
+   2480,
+   3508
+  ],
+  "role": "test",
+  "entities": [
+   {
+    "type": "name",
+    "text": "Mancinelli Adalgisa"
+   },
+   {
+    "type": "cf",
+    "text": "MNCDGS61M59I921H"
+   },
+   {
+    "type": "vat",
+    "text": "08457006313"
+   },
+   {
+    "type": "amount",
+    "text": "58.920,00"
+   },
+   {
+    "type": "number",
+    "text": "20931"
+   },
+   {
+    "type": "iban",
+    "text": "IT60Q5120148342548541338801"
+   },
+   {
+    "type": "date",
+    "text": "15/10/2026"
+   },
+   {
+    "type": "table",
+    "text": "48 mq"
+   },
+   {
+    "type": "table",
+    "text": "21.600,00"
+   },
+   {
+    "type": "table",
+    "text": "14 pz"
+   },
+   {
+    "type": "table",
+    "text": "9.800,00"
+   },
+   {
+    "type": "table",
+    "text": "1 corpo"
+   },
+   {
+    "type": "table",
+    "text": "27.520,00"
+   }
+  ]
+ },
+ {
+  "id": "X02",
+  "gt": "generated",
+  "level": 1,
+  "tpl": "form",
+  "lang": "it",
+  "rot90": false,
+  "size": [
+   2480,
+   3508
+  ],
+  "role": "test",
+  "entities": [
+   {
+    "type": "name",
+    "text": "Di Censo Ottavio"
+   },
+   {
+    "type": "cf",
+    "text": "DCNTTV72S03G482T"
+   },
+   {
+    "type": "number",
+    "text": "4127"
+   },
+   {
+    "type": "date",
+    "text": "23/07/2026"
+   },
+   {
+    "type": "id",
+    "text": "PNR8XQ27LM"
+   },
+   {
+    "type": "amount",
+    "text": "38,90"
+   },
+   {
+    "type": "iban",
+    "text": "IT13A8266290768853677037333"
+   },
+   {
+    "type": "table",
+    "text": "74,00"
+   },
+   {
+    "type": "table",
+    "text": "22,50"
+   },
+   {
+    "type": "table",
+    "text": "18,00"
+   }
+  ]
+ }
+]

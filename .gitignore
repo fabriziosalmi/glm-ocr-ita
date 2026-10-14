@@ -21,3 +21,6 @@ results/smoke_*
 .ruff_cache/
 *.pyc
 *.log
+photo_set/*.png
+photo_set/print.pdf
+photo_set/photos/
