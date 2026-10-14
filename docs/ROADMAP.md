@@ -250,7 +250,7 @@ So most of the loss is an input problem: the model treats the letterhead as page
 | **retry at 1.1** | **1** | **80.2%** | **+2.9 [+1.1, +4.2]** | **1.0 s per form** |
 | retry at 1.2 | 2 | 79.6% | +2.3 [+0.2, +4.0] | 0.9 s per form |
 
-The penalty kept is **1.1**, by the rule above. Without retry, v1.0.0 gains 377 entities on the 144 forms where it does not loop and loses 238 on the 5 where it loops and BASE does not. One form (`it_train_120`) loops at the same place at every penalty: retry does not reach it. On the synthetic dev pages v1.0.0 never loops, so retry changes nothing there. Accented words written right: BASE 90.6%, v1.0.0 88.8% of 1425, to look into.
+The penalty kept is **1.1**, by the rule above. Without retry, v1.0.0 gains 377 entities on the 144 forms where it does not loop and loses 238 on the 5 where it loops and BASE does not. One form (`it_train_120`) loops at the same place at every penalty: retry does not reach it. On the synthetic dev pages v1.0.0 never loops, so retry changes nothing there. Accented words written right: BASE 90.6%, v1.0.0 88.8% of 1425. Looked into: the gap is the text lost in loops. Counted per word with repeats (1426): BASE 88.5%, v1.0.0 87.2%, v1.1 90.1%; on the 144 forms where v1.0.0 does not loop, BASE 89.8%, v1.0.0 91.5%. The errors left are shared: both models write "Si" for "Sì" (36 times) and "altresi" (12).
 
 **Then one test read**, question written first: v1.1 (v1.0.0 weights + retry) against BASE on `external/xfund_it_val`. That set was read once for v1.0.0, and it is what pointed at comb fields; the setting is chosen on another split, and the second read is said as such.
 

@@ -61,7 +61,6 @@ The weights are those of v1.0.0 (same SHA-256). On forms with comb fields (one c
 - **Chinese is worse** than with the original (OmniDocBench, above): no training page was Chinese.
 - **Real Italian documents measured are forms only** (XFUND). Invoices, letters and phone photos of documents are not measured.
 - Repetition loops happen on comb fields and degraded pages. Stop generation when the output starts repeating itself and read the page again with `repetition_penalty=1.1`; the `glmocr` package does both. One XFUND dev form still loops at every penalty tried.
-- Accented words on XFUND dev: 88.8% against 90.6% for the original; not yet understood.
 - Pages rotated by 90 degrees are unreadable, as for the original: straighten them first.
 
 ## Use
