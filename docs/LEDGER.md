@@ -234,3 +234,15 @@ Written on 2026-10-14, before any model read these pages (they arrived that even
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
 
+## `external/docatlas_it_test` and `external/docatlas_it_scan_test` - open
+
+Written on 2026-10-14, before any model read these pages. 40 real Italian documents of DocAtlas (one page each), clean and the same pages made to look scanned (`scan_fx.py` profiles: flatbed, feeder, photocopy, fax, phone, low-quality PDF; 10 of 40 left clean). Entities: long words (2538) and Italian codes, dates, amounts (118), `generators/make_docatlas.py`. Tags: `docatlas_bf16_1.0_op` `docatlas_v8d8e8op1_1.0_op_rp110` `docatlasscan_bf16_1.0_op` `docatlasscan_v8d8e8op1_1.0_op_rp110`. v1.1 in one pass with `--retry-penalty 1.1`, with the reader of that night (loop guard ignoring runs of punctuation) on both sides. Read on the Mac mini.
+
+**Questions and thresholds.**
+
+1. On each set apart: is v1.1 not worse than BASE on all entities? Passes if the lower bound is above -1.5; "better" if above 0.
+2. What the scan costs each model: recall on the scanned set minus recall on the clean one, reported, no threshold.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
+

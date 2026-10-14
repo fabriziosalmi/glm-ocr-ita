@@ -198,3 +198,8 @@ role = "test"
 role = "test"
 [dataset."chatgpt/itdoc_12_scontrini"]
 role = "test"
+# DocAtlas, real Italian documents rendered from DOCX (docs/EXTERNAL.md), built by generators/make_docatlas.py: 40 pages, clean and scanned.
+[dataset."external/docatlas_it_test"]
+role = "test"
+[dataset."external/docatlas_it_scan_test"]
+role = "test"

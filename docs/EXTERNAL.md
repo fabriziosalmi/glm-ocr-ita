@@ -31,3 +31,8 @@ Files in `external/` are untrusted: nothing in them is executed, and the bundled
 - **Source.** www.gazzettaufficiale.it: the archive page of each year (`/ricercaArchivioCompleto/serie_generale/YEAR`) lists the issues; each issue's PDF is at `/eli/gu/YYYY/MM/DD/NUMBER/sg/pdf`. Downloaded on 2026-10-14 by `generators/make_gu.py`, one request a second, into `external/gu_src/`.
 - **Terms.** Official acts of the State and of public administrations are excluded from copyright (law 633/1941, art. 5). The site publishes no terms of use that we found. The PDFs and the pages built from them stay in `external/`, which is not in git, as for every third-party set.
 - **Use.** 42 issues, 6 a year from 2019 to 2025, drawn with seed 20261014; 4 pages from each (never the cover). Issues alternate: 21 to `external/gu_dev` (84 pages), 21 to `external/gu_test` (84 pages). Ground truth = the PDF's text layer, hyphenated words joined; entities by pattern (dates, act numbers, amounts). Born-digital pages rendered at 150 dpi: real Italian typesetting, but clean renders, not scans.
+
+## DocAtlas, Italian pages
+
+- **Source.** `ahmedheakl/docatlas_instruct` on Hugging Face, CC BY 4.0: pages of real documents found on the web, rendered from their DOCX, with the text of every block (doctags and markdown). The 2356 Italian pages (571 documents) were downloaded by `download_docatlas_it.py` into `~/Documents/git/datasets/huggingface/data/docatlas_it`, and made to look scanned by `scan_fx.py` into `docatlas_it_scan` (both outside this repository).
+- **Use.** Test only, so far: 40 documents, one page each, clean and scanned (`generators/make_docatlas.py`). The 40 documents are listed in `external/docatlas_test_docs.json`; any training drawn from DocAtlas must leave them out.
