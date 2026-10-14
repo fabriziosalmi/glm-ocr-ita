@@ -227,7 +227,7 @@ Written on 2026-10-14, before any model read these pages (they arrived that even
 
 **Questions and thresholds.**
 
-1. `itdoc_12_scontrini` (100 Italian receipts): is v1.1 not worse than BASE on entities? Passes if the lower bound is above -1.5; "better" if above 0.
+1. `itdoc_12_scontrini#30` (the first 30 of the set's sampling order, of 100 Italian receipts; cut to 30 before any read, for time): is v1.1 not worse than BASE on entities? Passes if the lower bound is above -1.5; "better" if above 0.
 2. `itdoc_10_adversarial` (10 dense pages): the same rule, read with care: 10 pages give a wide interval.
 3. `itdoc_11_contracts_multilingual` (10 contracts, one per language): per language, entities found by each model, reported without a verdict (one page per language). Italian and English must not lose; a large loss in a European language is noted as an alert.
 
