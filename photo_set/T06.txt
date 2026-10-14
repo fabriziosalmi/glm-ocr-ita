@@ -11,11 +11,6 @@ Codice fiscale conduttore LMBFMT90D57A944M
 Canone mensile 785,00
 Decorrenza 01/03/2026
 Foglio 112 Particella 4479 Subalterno 23
-☐ Canone libero
-☒ Canone concordato
-☒ Cedolare secca
-Deposito cauzionale corrispondente a tre mensilità, infruttifero. Spese ordinarie di
-portierato e ascensore ripartite secondo le tabelle millesimali allegate.
 Piano dei versamenti
 Rata | Scadenza | Euro
 --- | --- | ---
@@ -24,4 +19,9 @@ Aprile | 01/04/2026 | 785,00
 Cauzione | 28/02/2026 | 2.355,00
 La registrazione telematica presso l'Agenzia competente avverrà a cura del locatore,
 che ne trasmetterà copia al conduttore entro due mesi.
+☐ Canone libero
+☒ Canone concordato
+☒ Cedolare secca
+Deposito cauzionale corrispondente a tre mensilità, infruttifero. Spese ordinarie di
+portierato e ascensore ripartite secondo le tabelle millesimali allegate.
 Bologna, 12 febbraio 2026 Firma

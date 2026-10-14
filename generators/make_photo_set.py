@@ -69,7 +69,9 @@ def partita_iva(rng):
 
 # ---------------------------------------------------------------- page drawing
 class Page:
-    def __init__(self, code, face, rng, k=1.0):
+    def __init__(self, code, face, rng, k=1.0, style=None):
+        self.style = style or {}   # layout of this document: title, headings, field pairs, block order (STYLES)
+        self.pending, self.b_done = None, False
         self.k = k   # every size on the page is multiplied by k, so that the text fills the page
         self.img = Image.new("RGB", (W, H), "white"); self.d = ImageDraw.Draw(self.img)
         self.face, self.rng, self.y, self.lines, self.entities = face, rng, M, [], []
@@ -80,14 +82,21 @@ class Page:
         self.lines.append(code); self.y = M + 120
 
     def title(self, text, size=62):
+        self.flush()
         size = int(size * self.k)
         f = font(self.face, size, bold=True)
         while self.d.textlength(text, font=f) > W - 2 * M - 300:   # clear of the code box, inside the margins
             size -= 2; f = font(self.face, size, bold=True)
         w = self.d.textlength(text, font=f)
-        self.d.text(((W - w) / 2, self.y), text, font=f, fill="black"); self.y += size + 26; self.lines.append(text)
+        if self.style.get("title") == "left":
+            self.d.text((M, self.y), text, font=f, fill="black"); self.y += size + 14
+            self.d.line([M, self.y, W - M - 300 if self.y < M + 300 else W - M, self.y], fill="black", width=4); self.y += 16
+        else:
+            self.d.text(((W - w) / 2, self.y), text, font=f, fill="black"); self.y += size + 26
+        self.lines.append(text)
 
     def para(self, text, size=40, gap=14):
+        self.flush()
         size = int(size * self.k)
         f = font(self.face, size); words = text.split(); line = ""
         for wd in words:
@@ -100,8 +109,20 @@ class Page:
             self.d.text((M, self.y), line, font=f, fill="black"); self.lines.append(line); self.y += size + gap
         self.y += 10
 
-    def comb(self, label, value, kind, size=40, box=62, x=None, newline=True):
+    def flush(self):
+        if self.pending:
+            item, self.pending = self.pending, None
+            self.comb(*item, alone=True)
+
+    def comb(self, label, value, kind, size=40, box=62, x=None, newline=True, alone=False):
         """label then one box per character of value, the value written in the boxes by 'hand'"""
+        if newline and not alone and self.style.get("pair") and len(value) <= 11:   # short fields two to a line in this layout
+            if self.pending is None:
+                self.pending = (label, value, kind); return None
+            first, self.pending = self.pending, None
+            return self.comb_row([first, (label, value, kind)])
+        if newline:
+            self.flush()
         size, box = int(size * self.k), int(box * self.k)
         f = font(self.face, size); x0 = M if x is None else x
         self.d.text((x0, self.y + 12), label, font=f, fill="black")
@@ -130,6 +151,7 @@ class Page:
 
     def comb_row(self, items, size=40, box=58):
         """two or three comb fields on one printed line; a field that would not fit at full size starts a new line"""
+        self.flush()
         x, parts = M, []
         for label, value, kind in items:
             f = font(self.face, int(size * self.k)); bk = int(box * self.k)
@@ -141,6 +163,7 @@ class Page:
         self.lines.append(" ".join(parts)); self.y += int(box * self.k) + 30
 
     def line_field(self, label, value, kind, size=40):
+        self.flush()
         size = int(size * self.k)
         f = font(self.face, size); self.d.text((M, self.y), label, font=f, fill="black")
         x = M + self.d.textlength(label, font=f) + 20
@@ -150,11 +173,17 @@ class Page:
         self.entities.append({"type": kind, "text": value}); self.lines.append(f"{label} {value}"); self.y += size + 34
 
     def heading(self, text, size=46):
+        self.flush()
         size = int(size * self.k)
-        self.y += 16; f = font(self.face, size, bold=True)
-        self.d.text((M, self.y), text, font=f, fill="black"); self.lines.append(text); self.y += size + 22
+        self.y += 16; f = font(self.face, size, bold=True); kind = self.style.get("head", "plain")
+        if kind == "band":
+            self.d.rectangle([M, self.y - 8, W - M, self.y + size + 14], fill=(215, 215, 215))
+        elif kind == "box":
+            self.d.rectangle([M, self.y - 8, W - M, self.y + size + 14], outline="black", width=3)
+        self.d.text((M + (16 if kind != "plain" else 0), self.y), text, font=f, fill="black"); self.lines.append(text); self.y += size + 22 + (14 if kind != "plain" else 0)
 
     def table(self, header, rows, size=36):
+        self.flush()
         size = int(size * self.k)
         """a ruled table; written in the text as the model writes tables: cells joined by " | ", a rule line after the header"""
         f, fb = font(self.face, size), font(self.face, size, bold=True)
@@ -176,6 +205,9 @@ class Page:
                 if re.search(r"\d", str(cell)): self.entities.append({"type": "table", "text": str(cell)})
 
     def ticks(self, options, ticked, size=40):
+        self.flush()
+        if self.style.get("table_first") and not self.b_done:
+            section_b(self)
         size = int(size * self.k)
         f = font(self.face, size)
         for k, opt in enumerate(options):
@@ -188,6 +220,7 @@ class Page:
         self.y += 8
 
     def sign(self, place_date, size=40):
+        self.flush()
         size = int(size * self.k)
         f = font(self.face, size); self.y += 20
         self.d.text((M, self.y), place_date, font=f, fill="black")
@@ -206,9 +239,10 @@ D = lambda d, m, y: f"{d:02d}/{m:02d}/{y}"
 
 def doc(code, face, seed, build):
     """drawn once to measure, then again with every size scaled so that the page is about 85% full (at most 1.6 times)"""
-    rng = random.Random(seed); p = Page(code, face, rng); build(p, rng)
+    style = STYLES[code]
+    rng = random.Random(seed); p = Page(code, face, rng, style=style); build(p, rng); p.flush()
     k = min(1.6, (0.85 * H - M) / (p.y - M))
-    rng = random.Random(seed); p = Page(code, face, rng, k); build(p, rng); p.check(code)
+    rng = random.Random(seed); p = Page(code, face, rng, k, style); build(p, rng); p.flush(); p.check(code)
     return p
 
 
@@ -401,14 +435,33 @@ SECTION_B = {
             "Il tecnico distributore eseguirà la prova di tenuta prima della posa del misuratore; l'appuntamento verrà fissato con preavviso telefonico."),
     "X01": ("Quadro economico", ["Lavorazione", "Quantità", "Euro"], [["Iniezioni consolidanti", "48 mq", "21.600,00"], ["Restauro persiane", "14 pz", "9.800,00"], ["Ponteggio", "1 corpo", "27.520,00"]],
             "Il direttore dei lavori attesterà il regolare compimento; eventuali varianti in corso d'opera richiedono nuova autorizzazione paesaggistica."),
-    "X02": ("Esborsi documentati", ["Voce", "Euro"], [["Pernottamento", "74,00"], ["Taxi", "22,50"], ["Cena", "18,00"]],
+    "X02": ("Esborsi documentati", ["Descrizione", "Importo"], [["Pernottamento", "74,00"], ["Taxi", "22,50"], ["Cena", "18,00"]],
             "L'azienda risponderà entro un mese; in difetto, il passeggero potrà adire l'organismo di conciliazione paritetica gratuitamente."),
 }
 
 
 def section_b(p):
+    if p.b_done:
+        return
+    p.b_done = True
     title, header, rows, text = SECTION_B[p.lines[0]]
     p.heading(title); p.table(header, rows); p.para(text)
+
+
+STYLES = {   # every layout different: title placement, section headings, short fields one or two to a line, table before or after the tick boxes
+    "T01": {"title": "center", "head": "plain", "pair": False, "table_first": False},
+    "T02": {"title": "left", "head": "band", "pair": True, "table_first": True},
+    "T03": {"title": "center", "head": "box", "pair": True, "table_first": False},
+    "T04": {"title": "left", "head": "plain", "pair": False, "table_first": True},
+    "T05": {"title": "center", "head": "band", "pair": False, "table_first": False},
+    "T06": {"title": "left", "head": "box", "pair": False, "table_first": True},
+    "T07": {"title": "center", "head": "plain", "pair": True, "table_first": True},
+    "T08": {"title": "left", "head": "band", "pair": True, "table_first": False},
+    "T09": {"title": "center", "head": "box", "pair": False, "table_first": True},
+    "T10": {"title": "left", "head": "plain", "pair": True, "table_first": False},
+    "X01": {"title": "left", "head": "box", "pair": True, "table_first": True},
+    "X02": {"title": "center", "head": "band", "pair": False, "table_first": False},
+}
 
 
 DOCS = [("T01", "helv", t01), ("T02", "georgia", t02), ("T03", "times", t03), ("T04", "verdana", t04), ("T05", "trebuchet", t05),
@@ -434,6 +487,14 @@ def check_vocabulary(pages):
 
 
 pages = {code: doc(code, face, 20261014 + k, build) for k, (code, face, build) in enumerate(DOCS)}
+import inspect
+for code, (_, _, build) in zip(pages, DOCS):   # every field the builder asks for is on the page and in the text
+    src = inspect.getsource(build)
+    asked = src.count("p.comb(") + src.count("p.line_field(") + sum(r.count('("') for r in re.findall(r"p\.comb_row\(\[(.*?)\]\)", src))
+    have = [e for e in pages[code].entities if e["type"] != "table"]
+    assert len(have) == asked, (code, asked, len(have))
+    for e in have:
+        assert any(e["text"] in line for line in pages[code].lines), (code, e)
 distinct, total = check_vocabulary(pages)
 meta = []
 for code, p in pages.items():

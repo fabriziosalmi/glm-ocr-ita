@@ -11,12 +11,6 @@ Numero tessera 40027781936
 Totale fatture 742,00
 Data prestazione 09/06/2026
 IBAN per l'accredito IT43X1404202323918774385756
-☐ Prestazione in forma diretta
-☒ Prestazione in forma indiretta
-☐ Ricovero ospedaliero
-Documentazione da trasmettere: fatture quietanzate in originale,
-prescrizione del medico curante, piano di cura firmato
-dall'odontoiatra. Franchigia annuale pari a centocinquanta euro.
 Dettaglio fatture
 Numero | Prestazione | Euro
 --- | --- | ---
@@ -26,4 +20,10 @@ Numero | Prestazione | Euro
 Le somme liquidate saranno accreditate entro sessanta giorni
 lavorativi, al netto dello scoperto contrattuale indicato nella
 tabella dei massimali.
+☐ Prestazione in forma diretta
+☒ Prestazione in forma indiretta
+☐ Ricovero ospedaliero
+Documentazione da trasmettere: fatture quietanzate in originale,
+prescrizione del medico curante, piano di cura firmato
+dall'odontoiatra. Franchigia annuale pari a centocinquanta euro.
 Napoli, 14 giugno 2026 Firma

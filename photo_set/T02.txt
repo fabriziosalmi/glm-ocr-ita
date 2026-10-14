@@ -12,11 +12,6 @@ Partita IVA beneficiario 22975266069
 Importo euro 1.846,50
 Data esecuzione 17/11/2025
 Causale Saldo fattura 412/B riparazione tornio
-☐ Bonifico ordinario
-☒ Bonifico istantaneo
-☐ Giroconto tra rapporti
-Commissione applicata secondo il prospetto informativo vigente. L'ordine
-diventa irrevocabile dopo la conferma mediante codice dispositivo.
 Riepilogo addebiti
 Voce | Euro
 --- | ---
@@ -25,4 +20,9 @@ Commissione | 1,75
 Totale addebitato | 1.848,25
 Conservare la contabile come prova liberatoria. Per contestazioni rivolgersi alla
 filiale entro tredici mesi dalla data valuta.
+☐ Bonifico ordinario
+☒ Bonifico istantaneo
+☐ Giroconto tra rapporti
+Commissione applicata secondo il prospetto informativo vigente. L'ordine
+diventa irrevocabile dopo la conferma mediante codice dispositivo.
 Poggibonsi, 16 novembre 2025 Firma

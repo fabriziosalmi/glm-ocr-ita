@@ -16,7 +16,7 @@ IBAN per il rimborso IT13A8266290768853677037333
 Si allegano lo scontrino dell'albergo e il giustificativo del taxi notturno. Il
 sottoscritto resta reperibile all'indirizzo di posta indicato nel profilo personale.
 Esborsi documentati
-Voce | Euro
+Descrizione | Importo
 --- | ---
 Pernottamento | 74,00
 Taxi | 22,50

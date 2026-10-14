@@ -11,12 +11,6 @@ Spesa ammissibile euro 58.920,00
 Protocollo 20931
 IBAN per l'erogazione IT60Q5120148342548541338801
 Data fine lavori prevista 15/10/2026
-☒ Immobile soggetto a tutela
-☒ Residenza del proprietario
-☐ Locato a terzi
-La soprintendenza ha espresso parere favorevole con prescrizioni sulle
-tinteggiature a calce. Liquidazione subordinata al collaudo e alla
-presentazione delle fatture quietanzate.
 Quadro economico
 Lavorazione | Quantità | Euro
 --- | --- | ---
@@ -25,4 +19,10 @@ Restauro persiane | 14 pz | 9.800,00
 Ponteggio | 1 corpo | 27.520,00
 Il direttore dei lavori attesterà il regolare compimento; eventuali varianti in
 corso d'opera richiedono nuova autorizzazione paesaggistica.
+☒ Immobile soggetto a tutela
+☒ Residenza del proprietario
+☐ Locato a terzi
+La soprintendenza ha espresso parere favorevole con prescrizioni sulle
+tinteggiature a calce. Liquidazione subordinata al collaudo e alla
+presentazione delle fatture quietanzate.
 Spoleto, 27 aprile 2026 Firma

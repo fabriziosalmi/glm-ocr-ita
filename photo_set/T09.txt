@@ -10,12 +10,6 @@ Scadenza visita medica 30/06/2026
 Taglia maglia XS
 Quota stagionale euro 260,00
 Cellulare genitore 3867202805
-☒ Consenso alle riprese fotografiche
-☒ Trasporto con pulmino sociale
-☐ Allergie alimentari segnalate
-Allenamenti nella palestra comunale il martedì e il giovedì pomeriggio. Il
-certificato di idoneità non agonistica deve pervenire prima della prima
-partita di campionato.
 Calendario partite
 Turno | Avversaria | Campo
 --- | --- | ---
@@ -24,4 +18,10 @@ Turno | Avversaria | Campo
 3 | Gioventù Pescocostanzo | casa
 Le divise da gara restano di proprietà societaria e vanno riconsegnate lavate
 al termine del torneo primaverile.
+☒ Consenso alle riprese fotografiche
+☒ Trasporto con pulmino sociale
+☐ Allergie alimentari segnalate
+Allenamenti nella palestra comunale il martedì e il giovedì pomeriggio. Il
+certificato di idoneità non agonistica deve pervenire prima della prima
+partita di campionato.
 Roccaraso, 2 settembre 2025 Firma
