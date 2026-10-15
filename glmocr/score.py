@@ -1,4 +1,4 @@
-"""Score saved runs against a page set. Returns plain dicts; cli.py prints them and tests/ check them against the README."""
+"""Score saved runs against a page set. Returns plain dicts; cli.py prints them and tests/ check them against the published tables."""
 import collections
 import statistics
 

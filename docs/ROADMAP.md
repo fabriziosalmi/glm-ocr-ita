@@ -1,6 +1,6 @@
 # Roadmap
 
-Written 2026-10-12. Numbers come from `results/` and are reproduced in the README. File names updated on 2026-10-13 for the `glmocr` package; no goal, rule, threshold or target was changed.
+Written 2026-10-12. Numbers come from `results/` and are reproduced in `docs/RESULTS.md` (in the README until 2026-10-15). File names updated on 2026-10-13 for the `glmocr` package; no goal, rule, threshold or target was changed.
 
 ## Goals
 
@@ -15,7 +15,7 @@ Goal 1 can be reached without training. Goal 2 cannot: quantizing and resizing c
 
 What follows from it, without touching any rule, threshold or target below:
 
-- The starting point is **ACC** (`v8d8e8` at full resolution), the only compressed configuration with no known defect. It matched BASE on two new sets on 2026-10-13 (README, "Pilot on the commissioned sets"): 0.0 [-0.3, +0.3] and -0.1 [-0.4, +0.3].
+- The starting point is **ACC** (`v8d8e8` at full resolution), the only compressed configuration with no known defect. It matched BASE on two new sets on 2026-10-13 (`docs/RESULTS.md`, "Pilot on the commissioned sets"): 0.0 [-0.3, +0.3] and -0.1 [-0.4, +0.3].
 - **NOW is not a release candidate.** A fixed 0.7x scale loses 34 points on dense small print. Speed has to be found at full quality.
 - Order of work: Phase 0 (the yardstick), then Phase 4 (Italian, training on the `gemini` sets from BASE, quantized to 8 bits afterwards), then Phase 3 (speed), then Phases 1 and 2 (size). Phase 4's own precondition, "starts only when Phases 0 to 2 are closed", is replaced by: starts when Phase 0 is closed and ACC is confirmed on `test`.
 - Not pursued for now, by decision of the same day: a learned upscaler, and reading a page in zones at different scales.
@@ -57,8 +57,8 @@ Written on 2026-10-13, before the first training step.
   Page by page: 25 better, 33 equal, 7 worse. On the six `spark` pages where BASE returned 75 to 84% of the text the adapter returns 91 to 100%, with 4 or 5 more entities each: letterheads and footers come back. **The stopping rule discards it all the same**: one English level 5 page (`spark/itdoc_a`, `itdoc_a_1479_contract_L5_en`) that BASE closes normally now ends in a run of zeros until the token budget; it loses no entity, and it is a loop. The adapter at 63 steps was not read. So: the first sign that the training does what it was meant to, and not a candidate under the rule as written.
 - **Amendment to the stopping rule, 2026-10-14, by the owner's decision, written before run `step5`.** Reason: the reader now stops a repetition as it starts (`glmocr/engine.py`, `LoopStop`; `metrics.loop_start`), so a loop no longer costs the token budget and what was read before it is kept. Clause 2 becomes: *a new loop, cut or not, on a page where the adapter finds fewer entities than BASE*. A new loop that costs no entity is reported and does not stop. Clauses 1 and 3 are unchanged. A cut loop is still counted as a loop everywhere. `step4` at 21 steps would pass the amended rule (its one new loop costs no entity); that is a judgement after the fact and it is not taken as a pass: `step5` is the run the amended rule is for.
 - **Fifth run (`step5`), not started.** Planned as `step4` with half the learning rate; suspended when the prompt difference below was found, because it would have been trained and judged on the wrong prompt.
-- **The prompt was not the official one, found on 2026-10-14.** Eight pages were read again with the reference implementation (transformers 5.19 and PyTorch, same weights, `work/ref_read.py`): the clean `gemini/itdoc_j` page that mlx-vlm returned almost empty (2 entities of 14) came back whole (14 of 14), and a `chatgpt/itdoc_r` page went from 68 to 78 entities of 80. The cause is not the generation code. `mlx_vlm.prompt_utils.apply_chat_template` renders the template with thinking switched off, which for GLM-OCR turns `...Text Recognition:<|assistant|>\n` into `...Text Recognition:/nothink<|assistant|>\n<think></think>\n`: four more tokens (2788 against 2784), same image tokens, same pixel values (largest difference 2e-7). With the official prompt mlx-vlm returns the same text as the reference implementation on 7 of the 8 pages and differs by one entity on the eighth. What did not change: the `chatgpt/itdoc_k` page loops with both prompts, and the skipped letterhead and footer on `spark` are identical with both, so that is the model's own behaviour. **Every number in the README was measured with mlx-vlm's prompt.** The reader now uses the official one by default (`--prompt mlx` reproduces the old runs; each result file records which); result tags ending in `_op` are reads with the official prompt. The training targets and the choice of the 63 error pages were made from old-prompt reads, so run `step5` was not started: the baselines are being read again first.
-- **How much the prompt matters overall, measured the same night.** The original model read again with the official prompt, paired with the old reads: `spark/itdoc_a#60` 87.5% against 88.3%, -0.8 [-1.7, -0.1]; `chatgpt/itdoc_a` 94.2% against 94.4%, -0.3 [-0.6, 0.0]; `hard/` at 0.7x 82.0% against 82.2%, -0.2 [-0.6, 0.0]. The official prompt repairs some catastrophic pages and is, on the whole, equal or slightly worse. So the README tables are within a point of what the official prompt gives; they are not void. The official prompt stays the default from now on, for fidelity to the reference implementation and to how the model is trained elsewhere, and new reads are compared with `*_op` baselines only.
+- **The prompt was not the official one, found on 2026-10-14.** Eight pages were read again with the reference implementation (transformers 5.19 and PyTorch, same weights, `work/ref_read.py`): the clean `gemini/itdoc_j` page that mlx-vlm returned almost empty (2 entities of 14) came back whole (14 of 14), and a `chatgpt/itdoc_r` page went from 68 to 78 entities of 80. The cause is not the generation code. `mlx_vlm.prompt_utils.apply_chat_template` renders the template with thinking switched off, which for GLM-OCR turns `...Text Recognition:<|assistant|>\n` into `...Text Recognition:/nothink<|assistant|>\n<think></think>\n`: four more tokens (2788 against 2784), same image tokens, same pixel values (largest difference 2e-7). With the official prompt mlx-vlm returns the same text as the reference implementation on 7 of the 8 pages and differs by one entity on the eighth. What did not change: the `chatgpt/itdoc_k` page loops with both prompts, and the skipped letterhead and footer on `spark` are identical with both, so that is the model's own behaviour. **Every number in the README of that date was measured with mlx-vlm's prompt.** The reader now uses the official one by default (`--prompt mlx` reproduces the old runs; each result file records which); result tags ending in `_op` are reads with the official prompt. The training targets and the choice of the 63 error pages were made from old-prompt reads, so run `step5` was not started: the baselines are being read again first.
+- **How much the prompt matters overall, measured the same night.** The original model read again with the official prompt, paired with the old reads: `spark/itdoc_a#60` 87.5% against 88.3%, -0.8 [-1.7, -0.1]; `chatgpt/itdoc_a` 94.2% against 94.4%, -0.3 [-0.6, 0.0]; `hard/` at 0.7x 82.0% against 82.2%, -0.2 [-0.6, 0.0]. The official prompt repairs some catastrophic pages and is, on the whole, equal or slightly worse. So those tables are within a point of what the official prompt gives; they are not void. The official prompt stays the default from now on, for fidelity to the reference implementation and to how the model is trained elsewhere, and new reads are compared with `*_op` baselines only.
 - **Run `op1`, planned on 2026-10-14 before any of its reads: the first fine-tuning with everything known so far put right.** Official prompt for the teacher read, for training and for the panel; answers formatted as when reading; causal loss; loops cut by the reader; the stopping rule as amended above.
   - Pages: 8 from each of `gemini/itdoc_a` to `_s` (152; levels 1 to 3; the first 10 of every set's sampling order held back), read by the original model with the official prompt (`fttr_op_bf16_1.0`). Sets `t` to `z` are left out: the audit found them near-copies of themselves. Training keeps only the pages where the original misses an entity or returns under 90% of the words, at most 6 per set.
   - Training: rank 8 on the decoder, learning rate 1e-5, one pass, adapters saved at each third of it; the first and the last are read.
@@ -121,7 +121,7 @@ These are not preferences. A result that breaks one of them is not a result.
 7. **Everything is rebuilt by a script** from the pinned upstream checkpoint, and every table can be recomputed from committed raw outputs.
 8. **No private documents**, in any split. Real pages must come from public sources whose reuse terms are checked and written down first.
 9. **English must not pay for Italian.** Every Italian gain is reported next to the English number on the same model.
-10. **Negative results are published** in the README with the same weight as positive ones. A phase that hits its kill criterion is closed, not stretched.
+10. **Negative results are published** (README and `docs/RESULTS.md`) with the same weight as positive ones. A phase that hits its kill criterion is closed, not stretched.
 
 ## Targets
 
@@ -145,7 +145,7 @@ Nothing in Phases 1 to 4 starts before this is done.
 - [ ] Italian metrics, implemented and tested with deliberately broken inputs: entity recall on Italian pages; accented-letter recall; **Italian number notation kept** (`2.100.000,00` must not come back as `2,100,000.00`: the base model does this, rarely on our pages, 3 of 302); skipped-block rate; loop rate.
 - [ ] Size the test sets: BASE against NOW must give an interval of half-width 1.5 points or less. If not, add pages now.
 - [ ] Clean timing protocol scripted.
-- [x] Skipped-block and loop counts printed by the scorer; every README table recomputed by `pytest`; page sets validated by `glmocr check`; a `test` set cannot be read before its tag is in the ledger. Done 2026-10-13.
+- [x] Skipped-block and loop counts printed by the scorer; every published table recomputed by `pytest`; page sets validated by `glmocr check`; a `test` set cannot be read before its tag is in the ledger. Done 2026-10-13.
 - [ ] One read of `test` for BASE, Q4 and NOW: the baseline table that every later phase is compared with. Logged in the ledger.
 
 **Exit:** baseline table committed, test checksums committed, ledger opened.
@@ -164,7 +164,7 @@ All choices on `dev/`. One read of `test` at the end, for one configuration.
 
 Checked and closed: input and output vocabulary matrices are not tied (cosine 0.01), so they cannot be shared.
 
-First pass of 1.1 and 1.2 on `hard/` (2026-10-12, table in the README): encoder at 4 bits fails (-3.9, CI -7.8 to -1.0); groups of 128 cost nothing; `v6d4e4g128` is 707 MB with no measurable loss. Forty pages cannot rank the 5- and 6-bit variants, because one invoice page decides them. To be redone on `dev/`.
+First pass of 1.1 and 1.2 on `hard/` (2026-10-12, table in `docs/RESULTS.md`): encoder at 4 bits fails (-3.9, CI -7.8 to -1.0); groups of 128 cost nothing; `v6d4e4g128` is 707 MB with no measurable loss. Forty pages cannot rank the 5- and 6-bit variants, because one invoice page decides them. To be redone on `dev/`.
 
 **Exit:** one configuration at 650 MB or less that passes Track A on `test`. **Kill:** if nothing passes below 750 MB, publish NOW as the answer to 1A and stop.
 
@@ -258,7 +258,7 @@ The penalty kept is **1.1**, by the rule above. Without retry, v1.0.0 gains 377 
 
 ## After v1.1 (2026-10-14 and 15): fine-tuning runs op2 to op4, new page sets, v1.2.0
 
-**Released as v1.2.0 (2026-10-15): the v1.1 weights with PDFs read from their text layer** (`glmocr/pdf.py`, idea and checks from Indra OCR by Datalab). None of the fine-tuning runs below was released. Outcome in README, "Release v1.2.0", and `LEDGER.md`.
+**Released as v1.2.0 (2026-10-15): the v1.1 weights with PDFs read from their text layer** (`glmocr/pdf.py`, idea and checks from Indra OCR by Datalab). None of the fine-tuning runs below was released. Outcome in `docs/RESULTS.md`, "Release v1.2.0", and `LEDGER.md`.
 
 **Rule on languages, set by the owner on 2026-10-14.** Italian and English must not lose. Chinese and non-European languages may, even badly. Other European languages are watched: a large loss there is an alert, not a blocker. The format of tables (markdown or plain) does not matter.
 
@@ -292,7 +292,7 @@ Both, or op3 is not a candidate. A candidate gets one test read, question writte
 
 ## Phase 5 - Release
 
-- [x] Final table on `test`: BASE and one released configuration, `v8d8e8` with adapter `op1` fused in (v1.0.0, 2026-10-14; README, `LEDGER.md`). Q4 was compared with `v8d8e8` on `test` on 2026-10-13 and not shown worse or better; the "small" configuration is not released, because 0.7x loses small print.
+- [x] Final table on `test`: BASE and one released configuration, `v8d8e8` with adapter `op1` fused in (v1.0.0, 2026-10-14; `docs/RESULTS.md`, `LEDGER.md`). Q4 was compared with `v8d8e8` on `test` on 2026-10-13 and not shown worse or better; the "small" configuration is not released, because 0.7x loses small print.
 - [x] Model card with the tables, the limits, the recipe and MIT attribution to the upstream model (`docs/MODEL_CARD.md`); the weights rebuild by script from the pinned checkpoint and the published adapter.
 - [x] Real scans: 100 SROIE receipts, not worse than the original (`LEDGER.md`).
 - [x] Code license: MIT.

@@ -1,4 +1,4 @@
-"""Every number in the README tables, recomputed from results/. If one of these fails, the README or the scorer is wrong."""
+"""Every number in the tables of docs/RESULTS.md, recomputed from results/. If one of these fails, the document or the scorer is wrong."""
 import glob, pathlib, re
 import json
 
@@ -56,7 +56,7 @@ def test_held_table(tag):
 def test_held_paired_differences(b, a, diff, ci):
     c = score.compare("held", a, b)
     assert c["pages"] == 120
-    # the README rounds each recall first, so a printed difference may be 0.1 away from the rounded exact one
+    # the tables round each recall first, so a printed difference may be 0.1 away from the rounded exact one
     assert near(c["diff"], diff, 0.1) and (r1(c["ci"][0]), r1(c["ci"][1])) == ci
 
 

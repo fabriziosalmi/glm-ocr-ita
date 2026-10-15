@@ -1,4 +1,4 @@
-"""Every number of the release tables in the README (weights `v8d8e8_op1`: v1.0.0, and v1.1.0 = the same weights read with the
+"""Every number of the release tables in the README and docs/RESULTS.md (weights `v8d8e8_op1`: v1.0.0, and v1.1.0 = the same weights read with the
 retry at repetition penalty 1.1), recomputed from results/. The page sets are not in this repository (docs/DATASETS.md): each test
 is skipped where its set is not on the machine, and SROIE and XFUND outputs are not in git at all (docs/EXTERNAL.md)."""
 import pytest
@@ -118,3 +118,41 @@ def test_opb():
         assert lines[k].startswith(v), (k, lines[k])
     assert "all  56.0% of 184" in out and "all  62.5% of 184" in out and "all  76.1% of 184" in out
     assert "independent 62.7% (110)" in out and "independent 70.9% (110)" in out and "independent 80.9% (110)" in out
+
+
+# The other European languages of XFUND (val, test; outputs not in git) and DocAtlas (test), v1.1.0 against the original.
+OTHERS = {("external/xfund_de_val", "xfund_de_"): (84.8, 87.3, 2.5, (0.0, 5.0)),
+          ("external/xfund_es_val", "xfund_es_"): (81.2, 85.0, 3.8, (2.3, 5.6)),
+          ("external/xfund_fr_val", "xfund_fr_"): (73.2, 77.2, 4.0, (2.4, 5.7)),
+          ("external/xfund_pt_val", "xfund_pt_"): (81.1, 84.3, 3.2, (2.1, 4.5)),
+          ("external/docatlas_it_test", "docatlas_"): (98.4, 98.3, -0.1, (-0.8, 0.4)),
+          ("external/docatlas_it_scan_test", "docatlasscan_"): (98.4, 98.1, -0.3, (-1.0, 0.2))}
+
+
+@pytest.mark.parametrize("name,prefix", OTHERS)
+def test_other_sets(name, prefix):
+    a, b = prefix + BASE, prefix + OURS + "_rp110"
+    try:
+        corpus.corpus_dir(name)
+    except corpus.Missing:
+        pytest.skip(f"{name} is not on this machine")
+    if not (corpus.result_path(a).exists() and corpus.result_path(b).exists()):
+        pytest.skip(f"the runs on {name} are not in results/")
+    c = score.compare(name, a, b)
+    assert (r1(c["recall_a"]), r1(c["recall_b"]), r1(c["diff"]), (r1(c["ci"][0]), r1(c["ci"][1]))) == OTHERS[(name, prefix)]
+
+
+def test_omnidoc():
+    """OmniDocBench subset, text blocks, by the benchmark's evaluator (work/omnidoc_eval, on the Mac mini): v1.1.0 against the original."""
+    import subprocess, sys
+    ev = corpus.WORK / "omnidoc_eval"
+    if not (ev / "omnidoc200_bf16_1.0_op.json").exists() or not (ev / "omnidoc200_v8d8e8op1_1.0_op_rp110.json").exists():
+        pytest.skip("OmniDocBench evaluations are not on this machine")
+    try:
+        corpus.corpus_dir("external/omnidoc_200")
+    except corpus.Missing:
+        pytest.skip("external/omnidoc_200 is not on this machine")
+    out = subprocess.run([sys.executable, "experiments/omnidoc_compare.py", "omnidoc200_bf16_1.0_op", "omnidoc200_v8d8e8op1_1.0_op_rp110"],
+                         cwd=corpus.ROOT, capture_output=True, text=True, check=True).stdout
+    assert "text_block     en  140 pages  A   7.6  B   7.9  diff -0.3 [-2.7, +1.7]  not shown" in out
+    assert "text_block     zh   45 pages  A  14.8  B  19.7  diff -4.8 [-10.6, -0.9]  worse" in out

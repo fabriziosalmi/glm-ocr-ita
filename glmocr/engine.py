@@ -22,7 +22,7 @@ def official_prompt(prompt):
 
 
 def environment():
-    """What a run was produced with. Outputs are identical byte for byte only within one environment (see README)."""
+    """What a run was produced with. Outputs are identical byte for byte only within one environment (docs/RESULTS.md, Reproducibility)."""
     import platform
     from importlib.metadata import version
     return {"macos": platform.mac_ver()[0], "python": platform.python_version(),

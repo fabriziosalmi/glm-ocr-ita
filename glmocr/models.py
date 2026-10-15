@@ -7,7 +7,7 @@ import shutil
 
 from .corpus import MODELS, SOURCE, WORK
 
-RELEASE = "fabriziosalmi/GLM-OCR-ita-mlx-8bit"   # v1.0.0: v8d8e8 with the op1 adapter fused in (README, docs/MODEL_CARD.md)
+RELEASE = "fabriziosalmi/GLM-OCR-ita-mlx-8bit"   # v8d8e8 with the op1 adapter fused in; the same weights since v1.0.0 (docs/RESULTS.md, docs/MODEL_CARD.md)
 
 REPO = "zai-org/GLM-OCR"
 REVISION = "2e85a62840ccac27daa451df36c736c4636b8628"

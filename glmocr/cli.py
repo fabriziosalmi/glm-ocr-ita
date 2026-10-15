@@ -1,4 +1,4 @@
-"""glmocr <command>: every step from the upstream checkpoint to the tables in the README."""
+"""glmocr <command>: every step from the upstream checkpoint to the tables in docs/RESULTS.md."""
 import argparse
 import json
 import sys
@@ -225,7 +225,7 @@ def main(argv=None):
     p.add_argument("--mode", choices=("auto", "ocr", "text"), default="auto", help="PDF only: auto = the text layer where it passes the checks, the model elsewhere; ocr = always the model; text = always the layer (glmocr/pdf.py)")
     p.add_argument("--pages", help="PDF only: pages to read, counted from 1, e.g. 1-3,7")
     p.add_argument("--model", default=RELEASE, help=f"local model folder or a Hugging Face id (default the release, {RELEASE})")
-    p.add_argument("--scale", type=float, default=1.0, help="resize factor before OCR; 1.0 = as is. Below 1 small print is lost (README)")
+    p.add_argument("--scale", type=float, default=1.0, help="resize factor before OCR; 1.0 = as is. Below 1 small print is lost (docs/RESULTS.md)")
     p.add_argument("--max-tokens", type=int, default=metrics.MAX_TOKENS)
     p.add_argument("-o", "--output", help="also save a JSON with text and timings")
     p = add("run", cmd_run, "OCR a page set and save results/<tag>.json; resumes a partial run")
