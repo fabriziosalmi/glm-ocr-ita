@@ -81,3 +81,39 @@ def test_xfund(tag):
     assert (r1(c["recall_a"]), r1(c["recall_b"]), r1(c["diff"]), (r1(c["ci"][0]), r1(c["ci"][1]))) == (ra, rb, diff, ci)
     sa, sb = score.summarize(name, a, with_cer=False), score.summarize(name, tag, with_cer=False)
     assert (len(sa["skipped"]), len(sb["skipped"]), len(sa["loops"]), len(sb["loops"])) == (skip_a, skip_b, loop_a, loop_b)
+
+
+# v1.2.0: PDFs read through glmocr/pdf.py (mode auto). Scientific: a commissioned set with PDFs (second read, docs/LEDGER.md).
+def test_pdf_auto_scientific():
+    name, a, b = "external/scientific_test", "scientific_v8d8e8op1_1.0_op_rp110", "scientific_pdfauto"
+    try:
+        corpus.corpus_dir(name)
+    except corpus.Missing:
+        pytest.skip(f"{name} is not on this machine")
+    if not (corpus.result_path(a).exists() and corpus.result_path(b).exists()):
+        pytest.skip(f"the runs on {name} are not in results/")
+    c = score.compare(name, a, b)
+    assert (r1(c["recall_a"]), r1(c["recall_b"]), r1(c["diff"]), (r1(c["ci"][0]), r1(c["ci"][1]))) == (97.3, 100.0, 2.7, (0.9, 5.3))
+    assert sum(p["source"] == "text" for p in corpus.load_run(b)["pages"].values()) == 100
+
+
+# Omni Parse Bench subset: scored by the benchmark's own scorer, which lives in work/opb_venv (docs/EXTERNAL.md); outputs not in git.
+OPB = {"opb_v8d8e8op1_1.0_op_rp110 - opb_bf16_1.0_op, all tests": "+6.9 [+2.2, +12.4] better",
+       "opb_v8d8e8op1_1.0_op_rp110 - opb_bf16_1.0_op, independent tests": "+10.5 [+3.4, +19.4] better",
+       "opb_pdfauto - opb_bf16_1.0_op, all tests": "+19.1 [+11.1, +28.0] better",
+       "opb_pdfauto - opb_v8d8e8op1_1.0_op_rp110, all tests": "+12.2 [+5.8, +19.6] better",
+       "opb_pdfauto - opb_v8d8e8op1_1.0_op_rp110, independent tests": "+8.2 [+2.0, +16.3] better"}
+
+
+def test_opb():
+    import subprocess
+    py = corpus.ROOT / "work/opb_venv/bin/python"
+    tags = ("opb_bf16_1.0_op", "opb_v8d8e8op1_1.0_op_rp110", "opb_pdfauto")
+    if not py.exists() or not all(corpus.result_path(t).exists() for t in tags) or not (corpus.ROOT / "external/opb_sub").exists():
+        pytest.skip("Omni Parse Bench subset, its scorer or its runs are not on this machine")
+    out = subprocess.run([str(py), "experiments/opb_score.py", *tags], cwd=corpus.ROOT, capture_output=True, text=True, check=True).stdout
+    out += subprocess.run([str(py), "experiments/opb_score.py", tags[1], tags[2]], cwd=corpus.ROOT, capture_output=True, text=True, check=True).stdout
+    lines = dict(l.split(": ", 1) for l in out.splitlines() if ": " in l and " - " in l.split(": ")[0])
+    for k, v in OPB.items():
+        assert lines[k].startswith(v), (k, lines[k])
+    assert "all  56.0% of 184" in out and "all  62.5% of 184" in out and "all  76.1% of 184" in out

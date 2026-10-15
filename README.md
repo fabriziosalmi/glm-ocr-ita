@@ -2,9 +2,25 @@
 
 [GLM-OCR](https://huggingface.co/zai-org/GLM-OCR), fine-tuned for Italian documents and compressed to 8 bits, for OCR on Apple Silicon with MLX.
 
-**Release v1.1.0: `GLM-OCR-ita-mlx-8bit`** ([weights on Hugging Face](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-mlx-8bit), model card in `docs/MODEL_CARD.md`, changes in `CHANGELOG.md`). Better than the original on 50 real Italian forms and on synthetic Italian and English pages, at 45% of the size; worse on Chinese.
+**Release v1.2.0: `GLM-OCR-ita-mlx-8bit`** ([weights on Hugging Face](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-mlx-8bit), model card in `docs/MODEL_CARD.md`, changes in `CHANGELOG.md`). Better than the original on 50 real Italian forms, on real forms in German, Spanish, French and Portuguese, on 80 real PDF pages of Omni Parse Bench, and on synthetic Italian and English pages, at 45% of the size; worse on Chinese. PDFs are read from their own text layer where it can be trusted.
 
 This repository holds the harness, the synthetic test sets, the fine-tuning and every raw output behind the numbers below. Every number in the tables is recomputed from `results/` by the test suite.
+
+## Release v1.2.0
+
+Same weights as v1.0.0 and v1.1.0. What is new is how a PDF is read: `glmocr infer file.pdf` takes each page's own text layer where it passes four checks, and reads the page with the model only where it does not (`glmocr/pdf.py`, mode `auto`; `--mode ocr` always uses the model). A layer is not trusted when it is an OCR layer laid invisibly over a scan, when its font map is broken (replacement, private-use or control characters, or Latin text coming out as letters of another script), when its runs have no ink under them, or when its content order is not a reading order. The idea and the checks come from **Indra OCR** by Datalab ([github.com/datalab-to/indra](https://github.com/datalab-to/indra), `indra_ocr/textlayer.py`, Apache-2.0; `NOTICE`), adapted here; added here are the check for Latin text coming out as letters of another script (the Gazzetta Ufficiale's small caps) and the joining of characters beyond the BMP that pdfium returns in two halves. Only their code is used; Indra's model weights are under another license and are neither included nor used.
+
+| Page set | Role | Pages | Original | v1.1.0 | **v1.2.0 (auto)** | v1.2.0 - v1.1.0 [95% CI] | Verdict |
+|---|---|---|---|---|---|---|---|
+| Omni Parse Bench subset, real PDFs, text tests passed | test | 80 | 56.0% | 62.5% | **76.1%** | **+12.2 [+5.8, +19.6]** | better |
+| same, tests not taken from the PDF itself | test | 49 | | | | +8.2 [+2.0, +16.3] | better |
+| `itdoc_14_scientific`, Italian PDFs, entities (second read) | test | 100 | 96.3% | 97.3% | **100.0%** | +2.7 [+0.9, +5.3] | better |
+
+- **Omni Parse Bench** (Datalab, [github.com/datalab-to/omni_parse_bench](https://github.com/datalab-to/omni_parse_bench)): 80 PDF pages, 8 from each of ten suites of real documents (filled forms, multilingual PDFs, multi-column, old scans, tiny text, tables), scored by the benchmark's own scorer on its 184 text tests. 29 of the 80 pages pass the checks and are read from their layer, none of them worse than v1.1.0's reading; the other 51 are v1.1.0's readings. Some tests are derived from the PDF itself and favour the layer: on the others the gain is +8.2. The same set measures v1.1.0 against the original: **+6.9 [+2.2, +12.4]**, no page worse, English alone +4.0 [+0.0, +9.9]. The absolute numbers are not those of the benchmark's own table (GLM-OCR 71.0 on text there), which runs the vendor's pipeline: layout detection, then each region read at 200 dpi. Here a page is read whole at 150 dpi.
+- **Speed.** A page read from its layer takes about 0.01 s and loads no model; a PDF that is all born digital never loads the model.
+- **Limits.** 80 pages and 184 tests are a hint, not a ranking, and few of them are Italian. The scientific set is the best case by construction: its PDFs and its ground truth come from the same source. Text drawn as paths or inside images is not in a layer and is lost on a page read from its layer (a scanned stamp on a digital page). A page whose content order fails the check goes to the model even when its text is sound: on the Omni Parse Bench subset, 19 of 80.
+
+**Also measured since v1.1.0, same weights** (`docs/LEDGER.md`): XFUND val in German +2.5 [+0.0, +5.0], Spanish +3.8 [+2.3, +5.6], French +4.0 [+2.4, +5.7], Portuguese +3.2 [+2.1, +4.5] over the original, all better; 40 real Italian documents of DocAtlas not worse, clean -0.1 [-0.8, +0.4] and scanned -0.3 [-1.0, +0.2]. One alert: on 10 adversarial synthetic pages v1.1.0 is worse, -5.3 [-11.3, -0.7], mostly amounts of tens of millions written with a comma as thousands separator ("29.467,745,94"); on 113 such amounts of the Gazzetta Ufficiale it reads more of them right than the original (108 against 105).
 
 ## Release v1.1.0
 
@@ -211,7 +227,7 @@ Limits: page images are not in the repository. `make_hard.py` draws them with ma
 
 ## Failure modes to guard against
 
-- **Repetition loops.** On the worst pages the decoder repeats one line until it runs out of tokens: 3 of 120 held-out pages for v8d4e4 at 0.7x, 4 for the original model, all on L4 and L5. It is not an effect of compression. `glmocr infer` detects it (token budget exhausted, or text that compresses below 25% with zlib) and exits with code 2. On the 4381 saved outputs of 200 bytes or more, none compresses to between 21% and 27%: the threshold sits in a gap between two separate groups. The gap narrows as outputs accumulate: 19% to 36% on the first 1144, 21% to 29% on 2620, and one level 5 page at 27.2% since, sentences repeated several times that end by themselves. Since 2026-10-14 the reader also stops a repetition as it starts (`metrics.loop_start`), after a fifth of its length in the median, and still counts the page as a loop.
+- **Repetition loops.** On the worst pages the decoder repeats one line until it runs out of tokens: 3 of 120 held-out pages for v8d4e4 at 0.7x, 4 for the original model, all on L4 and L5. It is not an effect of compression. `glmocr infer` detects it (token budget exhausted, or text that compresses below 25% with zlib) and exits with code 2. On the synthetic sets, no saved output of 200 bytes or more compresses to between 21% and 27%, and the threshold sits in that gap. On real pages it does not: right outputs of the Gazzetta Ufficiale, XFUND, DocAtlas, OmniDocBench and of sets whose sentences repeat by design also fall there (73 by 2026-10-15). There the ratio flags pages that did not loop; the retry it starts costs time, not quality, since the better reading is kept, and a loop is told by the token limit. Since 2026-10-14 the reader also stops a repetition as it starts (`metrics.loop_start`), after a fifth of its length in the median, and still counts the page as a loop.
 - **Skipped blocks.** They come from the 4-bit decoder: `v8d8e8` does not have them. For `v8d4e4` no cheap detector was found. Two estimates of how much text a page holds, from connected components and from line geometry, were tried on `hard/` and are far too noisy (ratio to the true length from 0.2 to 1.7). Reading each page at two scales and keeping the longer output gains 0.7 points for three times the cost, and even picking the better output with the ground truth in hand gains only 2.3 (`glmocr adaptive`). If skipped small print matters more than speed, use `v8d8e8` at full resolution.
 - **Rotated pages.** A page rotated by 90 degrees is unreadable for every variant. Straighten it first: the pretrained `PP-LCNet_x1_0_doc_ori` classifier (PaddleX, 30 ms/page on CPU) is right on 159/160 rotations of `hard/` and 475/480 of `held/`, with every error on L5 (`experiments/orient_make.py`, `orient_eval.py`). End to end on `held/`, straightening the 12 rotated pages with the classifier's own answer (10 right, 2 wrong) raises v8d4e4 at 0.7x from 80.1% to 82.1%, +2.0 points with a CI of +0.8 to +3.5 (`experiments/orient_fix.py`); on those pages the entities found go from 18 to 46 of 128, because they are all L5. The original model gains 1.1 points the same way (83.3% to 84.4%).
 
@@ -224,6 +240,8 @@ python3.12 -m venv .venv && .venv/bin/pip install -r requirements.lock -e ".[dev
 source .venv/bin/activate
 glmocr infer page.png          # the release, downloaded from Hugging Face (1.2 GB) on first use; a page that loops is read again
                                # with repetition penalty 1.1 (--retry-penalty 0 to turn it off); exit code 2 if it still loops
+glmocr infer file.pdf          # each page from its text layer where it passes the checks, else with the model; pages separated by
+                               # a form feed; --mode ocr always uses the model, --pages 1-3,7 picks pages; -o out.json says which was which
 ```
 
 With mlx-vlm alone, the prompt must be the official one: `Text Recognition:` right after the image, and nothing else in the assistant turn. mlx-vlm's own chat template adds `/nothink` and an empty think block, which the model was not trained with (`docs/MODEL_CARD.md` has the snippet).
@@ -277,9 +295,9 @@ Tags in `results/`: `test_*` test-set reads (`docs/LEDGER.md`); `sparkA_*`, `cha
 
 | Path | What is there |
 |---|---|
-| `glmocr/` | The package behind the `glmocr` command: `models.py` (checkpoint and variants), `engine.py` (the one place that calls the model), `guard.py` (memory fences), `metrics.py` and `score.py` (scoring), `check.py` (page-set validation), `corpus.py` (paths and roles) |
-| `generators/` | `make_hard.py` for `hard/` and `held/`; `make_sroie.py`, `make_xfund.py`, `make_omnidoc.py` convert third-party sets into `external/`; `make_f24.py`, `make_photo_set.py`, `augment.py` and `ids.py` build training pages for comb fields (`augment.py` and `make_f24.py` run in their own environment) |
-| `experiments/` | Fine-tuning (`ft_data.py`, `ft_targets.py`, `ft_train.py`, `ft_points.py`, `ft_merge.py`, `panel.py`), per-language or per-type comparison (`compare_lang.py`), the retry on saved runs (`loop_retry.py`), the OmniDocBench evaluator (`omnidoc_eval.py`), dataset audit (`dataset_audit.py`), orientation (`orient_*.py`), reading a page in pieces (`crops.py`) |
+| `glmocr/` | The package behind the `glmocr` command: `models.py` (checkpoint and variants), `engine.py` (the one place that calls the model), `guard.py` (memory fences), `metrics.py` and `score.py` (scoring), `check.py` (page-set validation), `corpus.py` (paths and roles), `pdf.py` (PDF pages: the text layer or the model) |
+| `generators/` | `make_hard.py` for `hard/` and `held/`; `make_sroie.py`, `make_xfund.py`, `make_omnidoc.py`, `make_opb.py`, `make_docatlas.py`, `make_gu.py` convert or build third-party sets into `external/`; `make_f24.py`, `make_photo_set.py`, `augment.py` and `ids.py` build training pages for comb fields (`augment.py` and `make_f24.py` run in their own environment) |
+| `experiments/` | Fine-tuning (`ft_data.py`, `ft_targets.py`, `ft_train.py`, `ft_points.py`, `ft_merge.py`, `panel.py`), per-language or per-type comparison (`compare_lang.py`), the retry on saved runs (`loop_retry.py`), the OmniDocBench evaluator (`omnidoc_eval.py`), Omni Parse Bench scoring (`opb_score.py`) and PDF runs (`pdf_eval.py`), dataset audit (`dataset_audit.py`), orientation (`orient_*.py`), reading a page in pieces (`crops.py`) |
 | `hard/`, `held/` | Ground truth and metadata of the two synthetic sets |
 | `results/` | Raw per-page outputs and timings of every run |
 | `tests/` | The scorer on broken inputs, the README tables (`test_tables.py`, and `test_release.py` where the page sets are on the machine), the rules that code can enforce |
@@ -298,6 +316,6 @@ Tags in `results/`: `test_*` test-set reads (`docs/LEDGER.md`); `sparkA_*`, `cha
 
 ## License and attribution
 
-Base model: GLM-OCR by Z.ai (`zai-org/GLM-OCR`), released under the MIT License. The release weights are a derivative of it, under the same license. If you use it, cite the GLM-OCR technical report (arXiv 2603.10910). The orientation classifier is part of PaddleX (Apache 2.0) and is not included here.
+Base model: GLM-OCR by Z.ai (`zai-org/GLM-OCR`), released under the MIT License. The release weights are a derivative of it, under the same license. If you use it, cite the GLM-OCR technical report (arXiv 2603.10910). The orientation classifier is part of PaddleX (Apache 2.0) and is not included here. The PDF text-layer checks of `glmocr/pdf.py` are adapted from Indra OCR by Datalab (Apache-2.0; `NOTICE`, `licenses/`); the reduced Omni Parse Bench subset is Datalab's benchmark, its tests CC BY 4.0 and its pages under the license of each source.
 
 The code, the test-set generators and the results in this repository are released under the MIT License (`LICENSE`).

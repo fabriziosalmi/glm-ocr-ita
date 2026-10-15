@@ -2,6 +2,16 @@
 
 Versions of the released model and of the `glmocr` package go together. Dates are those of the measurements.
 
+## v1.2.0 - 2026-10-15
+
+Same weights as v1.0.0 and v1.1.0 (same SHA-256); PDFs are read differently.
+
+- **PDF text layer.** `glmocr infer file.pdf` reads each page from its own text layer where it passes four checks, and with the model only where it does not (`glmocr/pdf.py`; `--mode auto|ocr|text`, `--pages`). The idea and the checks come from Indra OCR by Datalab ([github.com/datalab-to/indra](https://github.com/datalab-to/indra), `indra_ocr/textlayer.py`, Apache-2.0; `NOTICE`), adapted; added here: Latin text whose font map comes out as another script (the Gazzetta Ufficiale's small caps) is not trusted, and characters beyond the BMP are joined from pdfium's two UTF-16 halves.
+- **Measured** (README, "Release v1.2.0"): on 80 real PDF pages of Omni Parse Bench (Datalab), scored by its own scorer, 76.1% of the text tests against 62.5% for v1.1.0, +12.2 [+5.8, +19.6]; +8.2 [+2.0, +16.3] on the tests not derived from the PDF. v1.1.0 against the original on the same pages: +6.9 [+2.2, +12.4]. Same weights, measured again: XFUND val German, Spanish, French, Portuguese all better than the original; 40 real Italian documents of DocAtlas not worse, clean or scanned.
+- **New.** `experiments/pdf_eval.py` (a page set read from its PDFs), `experiments/opb_score.py` and `generators/make_opb.py` (a reduced Omni Parse Bench), `generators/make_docatlas.py`, `make_gu.py` (Gazzetta Ufficiale), `split_chatgpt.py`; `ft_targets.py` leaves out a page whose ground truth lacks what the teacher reads. Dependency added: `pypdfium2`.
+- **Not released.** Fine-tuning runs op2 to op4 (comb fields; blanks, tick boxes and large amounts) are worse than v1.1.0 on XFUND Italian train with the retry (-2.1 to -2.3): `docs/ROADMAP.md`.
+- **Corrected.** The loop threshold's "gap" holds on synthetic pages only: on real pages right outputs also compress to 21-27% (README, failure modes).
+
 ## v1.1.0 - 2026-10-14
 
 Same weights as v1.0.0 (same SHA-256); the reading changes.
