@@ -7,6 +7,10 @@ pipeline_tag: image-to-text
 language:
 - it
 - en
+- de
+- es
+- fr
+- pt
 tags:
 - ocr
 - mlx
@@ -18,13 +22,13 @@ tags:
 
 # GLM-OCR-ita-mlx-8bit (v1.2.0)
 
-[GLM-OCR](https://huggingface.co/zai-org/GLM-OCR), fine-tuned for Italian documents and quantized to 8 bits for Apple Silicon with [MLX](https://github.com/ml-explore/mlx). It reads Italian better than the original, on real forms and on synthetic documents, and real forms in German, Spanish, French and Portuguese too, at 45% of the size. It is worse on Chinese: for Chinese documents, use the original.
+[GLM-OCR](https://huggingface.co/zai-org/GLM-OCR), fine-tuned for Italian documents and quantized to 8 bits for Apple Silicon with [MLX](https://github.com/ml-explore/mlx). It reads Italian better than the original, on real forms and on synthetic documents, and real forms in German, Spanish, French and Portuguese as well, at 45% of the size. It is worse on Chinese: for Chinese documents, use the original.
 
 Code, test sets, raw outputs and the full measurement record: [github.com/fabriziosalmi/glm-ocr-ita](https://github.com/fabriziosalmi/glm-ocr-ita).
 
 ## Results
 
-Entity recall: share of the entities of a page (amounts, dates, IBAN, VAT numbers, tax codes, CIG and CUP codes, PEC addresses, contract numbers) that come back exactly, whitespace aside. Intervals are a 95% bootstrap over pages; differences are paired on the same pages. M4 with 16 GB, greedy decoding.
+Entity recall: share of the entities of a page (amounts, dates, IBAN, VAT numbers, tax codes, CIG and CUP codes, PEC addresses, contract numbers) that come back exactly, whitespace aside; on XFUND, its annotated segments of 2 characters or more; on DocAtlas, words of 8 letters or more and the same codes. Intervals are a 95% bootstrap over pages; differences are paired on the same pages. M4 with 16 GB, greedy decoding.
 
 | Page set | Pages | Original (bf16) | **This model** | Difference [95% CI] |
 |---|---|---|---|---|
@@ -36,7 +40,7 @@ Entity recall: share of the entities of a page (amounts, dates, IBAN, VAT number
 | XFUND real forms, German / Spanish / French / Portuguese (val) | 50 each | 84.8 / 81.2 / 73.2 / 81.1% | 87.3 / 85.0 / 77.2 / 84.3% | +2.5 / +3.8 / +4.0 / +3.2, all better |
 | DocAtlas, 40 real Italian documents, clean / scanned | 40 | 98.4 / 98.4% | 98.3 / 98.1% | -0.1 / -0.3, not worse |
 
-[Omni Parse Bench](https://github.com/datalab-to/omni_parse_bench) (Datalab), 80 real PDF pages from ten suites, its own scorer, 184 text tests: original 56.0%, this model 62.5%, **+6.9 [+2.2, +12.4]**, no page worse; English pages alone +4.0 [+0.0, +9.9]. Pages read whole at 150 dpi: not comparable with the benchmark's own table, which reads GLM-OCR region by region after layout detection.
+[Omni Parse Bench](https://github.com/datalab-to/omni_parse_bench) (Datalab), 80 real PDF pages from ten suites, its own scorer, 184 text tests: original 56.0%, this model 62.5%, **+6.9 [+2.2, +12.4]**, no page worse; English pages alone +4.0 [+0.0, +9.9], not worse. Pages read whole at 150 dpi: not comparable with the benchmark's own table, which reads GLM-OCR region by region after layout detection.
 
 OmniDocBench v1.5, a fixed subset of 200 pages, official evaluator, text blocks only (normalized edit distance x100, lower is better; formulas and tables not scored):
 
@@ -50,13 +54,13 @@ OmniDocBench v1.5, a fixed subset of 200 pages, official evaluator, text blocks 
 | Original (bf16) | 2651 MB | 3.16 GB | 65 tokens/s |
 | **This model** | **1184 MB** | **2.10 GB** | **72 tokens/s** |
 
-Most of the gain is text the original leaves out: letterheads and footers (pages returning under 90% of their text drop from 25 to 3 of 120). Tax codes go from 60% to 72%, IBANs from 72% to 84%, VAT numbers from 73% to 87%.
+On `spark/itdoc_b` most of the gain is text the original leaves out: letterheads and footers (pages returning under 90% of their text drop from 25 to 3 of 120). Tax codes go from 60% to 72%, IBANs from 72% to 84%, VAT numbers from 73% to 87%.
 
 Every test read had its question and threshold written down before the read ([LEDGER.md](https://github.com/fabriziosalmi/glm-ocr-ita/blob/main/docs/LEDGER.md)). XFUND val was read twice: once for v1.0.0, where the model was not shown better (+0.3 [-3.0, +2.9]) because it looped on 2 forms, then for v1.1.0, with the retry chosen on the XFUND training split (149 forms, never trained on: +2.9 [+1.1, +4.2] there).
 
 ## What changed in v1.2.0
 
-The weights are those of v1.0.0 (same SHA-256). The `glmocr` harness now reads PDFs: each page from its own text layer where the layer passes four checks (not an invisible OCR layer, no broken font map, ink under its text, content order a reading order), and with this model only where it does not. The idea and the checks come from [Indra OCR](https://github.com/datalab-to/indra) by Datalab (`indra_ocr/textlayer.py`, Apache-2.0), adapted. On the Omni Parse Bench subset above this reads 76.1% of the text tests against 62.5% for the model alone, +12.2 [+5.8, +19.6] (+8.2 [+2.0, +16.3] on the tests not derived from the PDF itself); 29 of the 80 pages pass the checks, none of them read worse. With mlx-vlm alone there is no PDF mode: render the page and read the image.
+The weights are those of v1.0.0 (same SHA-256). The `glmocr` harness now reads PDFs: each page from its own text layer where the layer passes four checks (not an invisible OCR layer, no broken font map, ink under its text, content order a reading order), and with this model only where it does not. The idea and the checks come from [Indra OCR](https://github.com/datalab-to/indra) by Datalab (`indra_ocr/textlayer.py`, Apache-2.0), adapted. On the Omni Parse Bench subset above this reads 76.1% of the text tests against 62.5% for the model alone, +12.2 [+5.8, +19.6] (+8.2 [+2.0, +16.3] on the tests not derived from the PDF itself); 29 of the 80 pages pass the checks, and none of them is read worse than by the model. With mlx-vlm alone there is no PDF mode: render the page and read the image.
 
 ## What changed in v1.1.0
 
@@ -99,4 +103,4 @@ Tested with mlx 0.32.3 and mlx-vlm 0.7.6 (`requirements.lock` in the repository)
 
 ## License and citation
 
-MIT, as the base model. Base model: GLM-OCR by Z.ai; cite the GLM-OCR technical report ([arXiv 2603.10910](https://arxiv.org/abs/2603.10910)). SROIE: ICDAR 2019 Robust Reading Challenge on Scanned Receipts OCR and Information Extraction; XFUND: Xu et al., ACL Findings 2022 (CC BY-NC-SA 4.0); OmniDocBench: Ouyang et al., CVPR 2025 (Apache-2.0); Omni Parse Bench: Datalab, 2026 (scorer Apache-2.0, tests CC BY 4.0, pages under the license of each source); DocAtlas (CC BY 4.0). All used for evaluation only. The PDF text-layer checks of the harness are adapted from Indra OCR by Datalab (Apache-2.0).
+MIT, as the base model. Base model: GLM-OCR by Z.ai; cite the GLM-OCR technical report ([arXiv 2603.10910](https://arxiv.org/abs/2603.10910)). SROIE: ICDAR 2019 Robust Reading Challenge on Scanned Receipts OCR and Information Extraction; XFUND: Xu et al., ACL Findings 2022 (CC BY-NC-SA 4.0); OmniDocBench: Ouyang et al., CVPR 2025 (Apache-2.0); Omni Parse Bench: Datalab, 2026 (scorer Apache-2.0, tests CC BY 4.0, pages under the license of each source); DocAtlas (`ahmedheakl/docatlas_instruct`, CC BY 4.0). All used for evaluation only. The PDF text-layer checks of the harness are adapted from Indra OCR by Datalab (Apache-2.0).

@@ -256,7 +256,9 @@ The penalty kept is **1.1**, by the rule above. Without retry, v1.0.0 gains 377 
 
 **Outcome.** Released as v1.1.0 on 2026-10-14: on `external/xfund_it_val` +3.1 [+1.3, +5.9] over BASE, loops 2 -> 0 (`LEDGER.md`). On the OmniDocBench subset Chinese is worse (-4.8) with or without the retry, English not shown either way.
 
-## v1.2 - where things stand (2026-10-14, evening)
+## After v1.1 (2026-10-14 and 15): fine-tuning runs op2 to op4, new page sets, v1.2.0
+
+**Released as v1.2.0 (2026-10-15): the v1.1 weights with PDFs read from their text layer** (`glmocr/pdf.py`, idea and checks from Indra OCR by Datalab). None of the fine-tuning runs below was released. Outcome in README, "Release v1.2.0", and `LEDGER.md`.
 
 **Rule on languages, set by the owner on 2026-10-14.** Italian and English must not lose. Chinese and non-European languages may, even badly. Other European languages are watched: a large loss there is an alert, not a blocker. The format of tables (markdown or plain) does not matter.
 
@@ -283,7 +285,7 @@ Both, or op3 is not a candidate. A candidate gets one test read, question writte
 
 **Open.** The F24's reuse terms before publishing anything trained on it. Photos of the printed forms (X01, X02 as test). A JSON-extraction track (CORD for it). The old private repository to delete (needs `gh auth refresh -s delete_repo`).
 
-## Later (v1.2 or after, only if v1.1 leaves room)
+## Later
 
 - **A larger OCR as a teacher, on real images with no transcription** (the photo set, real documents): filtered, since a teacher errs too (keep what two teachers agree on). An open model as teacher: the terms of most API models forbid training on their output.
 - **GRPO or DPO on small comb-field crops**, with rewards that need no reference: the check character of a tax code, an IBAN or a VAT number read back is right or wrong, and an output loops or not. Several samples per crop: slow on this machine, possible on crops.

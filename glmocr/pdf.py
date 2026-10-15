@@ -2,19 +2,20 @@
 
 A digital PDF already holds its text. Where that text layer is sound, reading it is exact and takes milliseconds; the model is
 needed only for scans and for pages whose layer fails a check. Modes, per page:
-  auto  the text layer if it passes every check below, else OCR of the page rendered at 150 dpi (default)
+  auto  the text layer if it passes every check below, else the model on the page rendered with its long side at 1754 px (default)
   ocr   always the model
   text  always the text layer, even when a check fails (and nothing for a page that has none)
 
-The checks and the run extraction are adapted from Indra OCR, datalab-to/indra, indra_ocr/textlayer.py (Apache-2.0,
-Datalab; NOTICE and licenses/), 2026-10-15. Changes: characters beyond the BMP are put together from pdfium's UTF-16 units (Indra counts their halves as broken
-characters); the order check is part of the verdict (Indra also asks an order model, which
-we do not have, so two columns written line by line across the gutter are not caught here); a run's character boxes are not kept;
-the text of a page is its runs in content order, one per line. A layer is not trusted when:
+The checks and the run extraction are adapted from Indra OCR by Datalab, github.com/datalab-to/indra, indra_ocr/textlayer.py
+(Apache-2.0; NOTICE and licenses/), on 2026-10-15. Changes: characters beyond the BMP are put together from pdfium's two UTF-16
+units before they are checked (Indra counts each half as a broken character); the check for letters of another script is ours;
+the order check is part of the verdict (Indra also asks an order model, which we do not have, so two columns written line by
+line across the gutter are not caught here); a run's character boxes are not kept; the text of a page is its runs in content
+order, one per line. A layer is not trusted when:
 - more than 5% of its text objects are drawn invisibly: an OCR layer laid over a scan, as good as the OCR that made it;
 - more than 0.5% of its characters are replacement, private-use or control characters: a broken font map;
-- on a page whose letters are 90% Latin or more, three letters or more of another script than Latin, Greek or Cyrillic: a font
-  map that is broken without leaving a bad character (added here; the Gazzetta Ufficiale sets its running head in small caps
+- on a page whose letters are 90% Latin or more, three letters or more of another script (OTHER_SCRIPTS): a font map that is
+  broken without leaving a bad character (the Gazzetta Ufficiale sets the running head of some issues in small caps
   whose codes come out as Malayalam and Sinhala letters, "Gൺඓඓൾඍඍൺ Uൿൿංർංൺඅൾ", on 5 of 313 pages sampled on 2026-10-15);
 - more than 3% of its runs have no ink under them in the render: hidden or misplaced text;
 - its content order moves upward, other than to a column on the right, more than max(1, 2% of the runs): not a reading order.

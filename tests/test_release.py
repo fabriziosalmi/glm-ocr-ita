@@ -117,3 +117,4 @@ def test_opb():
     for k, v in OPB.items():
         assert lines[k].startswith(v), (k, lines[k])
     assert "all  56.0% of 184" in out and "all  62.5% of 184" in out and "all  76.1% of 184" in out
+    assert "independent 62.7% (110)" in out and "independent 70.9% (110)" in out and "independent 80.9% (110)" in out

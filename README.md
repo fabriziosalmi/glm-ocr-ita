@@ -8,19 +8,21 @@ This repository holds the harness, the synthetic test sets, the fine-tuning and 
 
 ## Release v1.2.0
 
-Same weights as v1.0.0 and v1.1.0. What is new is how a PDF is read: `glmocr infer file.pdf` takes each page's own text layer where it passes four checks, and reads the page with the model only where it does not (`glmocr/pdf.py`, mode `auto`; `--mode ocr` always uses the model). A layer is not trusted when it is an OCR layer laid invisibly over a scan, when its font map is broken (replacement, private-use or control characters, or Latin text coming out as letters of another script), when its runs have no ink under them, or when its content order is not a reading order. The idea and the checks come from **Indra OCR** by Datalab ([github.com/datalab-to/indra](https://github.com/datalab-to/indra), `indra_ocr/textlayer.py`, Apache-2.0; `NOTICE`), adapted here; added here are the check for Latin text coming out as letters of another script (the Gazzetta Ufficiale's small caps) and the joining of characters beyond the BMP that pdfium returns in two halves. Only their code is used; Indra's model weights are under another license and are neither included nor used.
+Same weights as v1.0.0 and v1.1.0. What is new is how a PDF is read: `glmocr infer file.pdf` takes each page's own text layer where it passes four checks, and reads the page with the model only where it does not (`glmocr/pdf.py`, mode `auto`; `--mode ocr` always uses the model). A layer is not trusted when it is an OCR layer laid invisibly over a scan, when its font map is broken, when its text has no ink under it, or when its content order is not a reading order.
+
+The idea and the checks come from **Indra OCR** by Datalab ([github.com/datalab-to/indra](https://github.com/datalab-to/indra), `indra_ocr/textlayer.py`, Apache-2.0; `NOTICE`). Two changes are ours: Latin text whose font map comes out as letters of another script is not trusted (the running head of the Gazzetta Ufficiale, set in small caps, reads "Gൺඓඓൾඍඍൺ Uൿൿංർංൺඅൾ"), and characters beyond the BMP, which pdfium returns in two halves, are joined before they are checked. Only Indra's code is used; its model weights are under another license and are neither included nor used.
 
 | Page set | Role | Pages | Original | v1.1.0 | **v1.2.0 (auto)** | v1.2.0 - v1.1.0 [95% CI] | Verdict |
 |---|---|---|---|---|---|---|---|
 | Omni Parse Bench subset, real PDFs, text tests passed | test | 80 | 56.0% | 62.5% | **76.1%** | **+12.2 [+5.8, +19.6]** | better |
-| same, tests not taken from the PDF itself | test | 49 | | | | +8.2 [+2.0, +16.3] | better |
+| same, tests not taken from the PDF itself | test | 49 | 62.7% | 70.9% | **80.9%** | +8.2 [+2.0, +16.3] | better |
 | `itdoc_14_scientific`, Italian PDFs, entities (second read) | test | 100 | 96.3% | 97.3% | **100.0%** | +2.7 [+0.9, +5.3] | better |
 
 - **Omni Parse Bench** (Datalab, [github.com/datalab-to/omni_parse_bench](https://github.com/datalab-to/omni_parse_bench)): 80 PDF pages, 8 from each of ten suites of real documents (filled forms, multilingual PDFs, multi-column, old scans, tiny text, tables), scored by the benchmark's own scorer on its 184 text tests. 29 of the 80 pages pass the checks and are read from their layer, none of them worse than v1.1.0's reading; the other 51 are v1.1.0's readings. Some tests are derived from the PDF itself and favour the layer: on the others the gain is +8.2. The same set measures v1.1.0 against the original: **+6.9 [+2.2, +12.4]**, no page worse, English alone +4.0 [+0.0, +9.9]. The absolute numbers are not those of the benchmark's own table (GLM-OCR 71.0 on text there), which runs the vendor's pipeline: layout detection, then each region read at 200 dpi. Here a page is read whole at 150 dpi.
 - **Speed.** A page read from its layer takes about 0.01 s and loads no model; a PDF that is all born digital never loads the model.
 - **Limits.** 80 pages and 184 tests are a hint, not a ranking, and few of them are Italian. The scientific set is the best case by construction: its PDFs and its ground truth come from the same source. Text drawn as paths or inside images is not in a layer and is lost on a page read from its layer (a scanned stamp on a digital page). A page whose content order fails the check goes to the model even when its text is sound: on the Omni Parse Bench subset, 19 of 80.
 
-**Also measured since v1.1.0, same weights** (`docs/LEDGER.md`): XFUND val in German +2.5 [+0.0, +5.0], Spanish +3.8 [+2.3, +5.6], French +4.0 [+2.4, +5.7], Portuguese +3.2 [+2.1, +4.5] over the original, all better; 40 real Italian documents of DocAtlas not worse, clean -0.1 [-0.8, +0.4] and scanned -0.3 [-1.0, +0.2]. One alert: on 10 adversarial synthetic pages v1.1.0 is worse, -5.3 [-11.3, -0.7], mostly amounts of tens of millions written with a comma as thousands separator ("29.467,745,94"); on 113 such amounts of the Gazzetta Ufficiale it reads more of them right than the original (108 against 105).
+**Also measured since v1.1.0, same weights** (`docs/LEDGER.md`): XFUND val in German +2.5 [+0.0, +5.0], Spanish +3.8 [+2.3, +5.6], French +4.0 [+2.4, +5.7], Portuguese +3.2 [+2.1, +4.5] over the original, all better; 40 real Italian documents of DocAtlas not worse, clean -0.1 [-0.8, +0.4] and scanned -0.3 [-1.0, +0.2]. One alert: on 10 adversarial synthetic pages v1.1.0 is worse, -5.3 [-11.3, -0.7], mostly amounts of tens of millions written with a comma as thousands separator ("29.467,745,94"). On the 113 amounts of a million or more in the Gazzetta Ufficiale dev set it reads more of them right than the original, 108 against 105.
 
 ## Release v1.1.0
 
@@ -61,7 +63,7 @@ Same weights as v1.0.0. What changes is how a page is read: a page that falls in
 - **Italian up, English up, on a renderer no training page came from.** Entities are amounts, dates, IBAN, VAT numbers, tax codes, CIG and CUP codes, PEC addresses, contract numbers. On `spark/itdoc_b` tax codes go from 60% to 72%, IBANs from 72% to 84%, PEC addresses from 60% to 79%, VAT numbers from 73% to 87%. Most of the gain is text the original leaves out: letterheads and footers.
 - **Not worse where the original was already good** (`chatgpt/itdoc_c`, 93%), and **not worse on real scanned receipts** (SROIE), which no training page resembles.
 - **Same size and speed as the plain 8-bit compression** (`v8d8e8`): fine-tuning adds nothing at inference. The questions and thresholds of every test read were written in `docs/LEDGER.md` before the read; each test set was read once for this model.
-- **Limits.** Every Italian page is synthetic: three renderers (`gemini` for training, `spark` and `chatgpt` for evaluation), commissioned for this work. Real Italian documents have not been measured. The SROIE row is a 100-receipt subset, read on a second M4. The `dev` rows guided the choices; only the `test` rows are claims.
+- **Limits.** At this release every Italian page measured was synthetic: three renderers (`gemini` for training, `spark` and `chatgpt` for evaluation), commissioned for this work. Real Italian documents were measured from v1.1.0 on. The SROIE row is a 100-receipt subset, read on a second M4. The `dev` rows guided the choices; only the `test` rows are claims.
 
 What did not work on the way, and why, is in `docs/ROADMAP.md`: three void fine-tuning runs (mlx-vlm 0.7.6 trains GLM-OCR without a causal mask, [mlx-vlm#2509](https://github.com/Blaizzy/mlx-vlm/issues/2509)), and a prompt that differed from the official one by four tokens.
 
@@ -210,7 +212,7 @@ Checked again on 2026-10-13, after the repository was reorganised into the `glmo
 - The source weights match the upstream checksum (`glmocr prepare` pins revision and SHA-256).
 - `glmocr quant v8d4e4`, run again from a fresh download of the source checkpoint, gives a file with the same SHA-256 as the one measured (`cec967e1...e7ee23`).
 - **Outputs are identical byte for byte only within one environment.** In today's fresh environment the original `run.py` and the new package give the same text on 40 pages of `hard/` out of 40. Against the saved run (`C_v8d4e4`), with the same weights, the same images and the same pinned packages, only 19 of 40 are identical: the others differ by a few characters, and five L5 pages by more. Entity recall moves from 81.0% to 81.4% (paired +0.4, CI -1.9 to +2.6; `rebuild_v8d4e4_0.7`). The previous environment is gone, so the cause is not established: the packages that were not pinned then, or the system. Consequences: two runs are compared only if they come from the same environment; the baselines have to be read again before any new comparison; `requirements.lock` now pins every package, and each new result file records its environment.
-- **The four baselines read again in the new environment** (`E2_*`, `hard/` at 0.7x) against the tuning table below:
+- **The four baselines read again in the new environment** (`E2_*`, `hard/` at 0.7x) against the tuning table above:
 
   | Config | Old | New | New - old [95% CI] | Pages identical | Skipped, old / new |
   |---|---|---|---|---|---|
@@ -302,13 +304,14 @@ Tags in `results/`: `test_*` test-set reads (`docs/LEDGER.md`); `sparkA_*`, `cha
 | `results/` | Raw per-page outputs and timings of every run |
 | `tests/` | The scorer on broken inputs, the README tables (`test_tables.py`, and `test_release.py` where the page sets are on the machine), the rules that code can enforce |
 | `datasets.toml` | The role of every page set: train, dev, test or spent |
+| `NOTICE`, `licenses/` | Attribution and license of third-party code adapted here (Indra OCR, Apache-2.0) |
 | `docs/` | `ROADMAP.md` goals and rules, `LEDGER.md` every test-set read, `DATASETS.md` the commissioned sets, `EXTERNAL.md` third-party data and its terms, `DATASET_PROMPT.md` the brief the sets were commissioned with, `MODEL_CARD.md` the card published with the weights. Versions in `CHANGELOG.md` |
 | `archive/` | The first, smaller test bed. Nothing in the tables depends on it |
 
 ## Not done
 
-- **Real Italian documents beyond forms.** The only real Italian set is XFUND (forms, 50 test and 149 dev); invoices, letters and photographs of documents are not measured. SROIE (real receipts, English) was read on a subset of 100.
-- **Comb fields in training.** v1.1.0 avoids the loops at reading time; the model itself was not trained on comb fields. Synthetic training data for that (the official F24 form, filled with made-up values and degraded) is in `generators/`, not yet used.
+- **Real Italian invoices and photographs of documents.** Real Italian pages measured are forms (XFUND), 40 documents of DocAtlas and pages of the Gazzetta Ufficiale (dev); invoices and phone photos are not. SROIE (real receipts, English) was read on a subset of 100.
+- **Comb fields, blanks and tick boxes in training.** Three fine-tuning runs (op2 to op4, `docs/ROADMAP.md`) were worse than v1.1.0 on XFUND Italian train once both are read with the retry; the cause is in what op2 adds to the release's data, and is not isolated yet. The release avoids comb-field loops at reading time only.
 - **Speed.** The release is as fast as the original. Fewer visual tokens per page is where time is saved (0.7x halves it), but it loses small print; reading a page in pieces (`docs/ROADMAP.md`) is a separate line of work, not started.
 - **Smaller than 1184 MB with fine-tuning.** The 4-bit decoder skips small print; widths between 4 and 8 bits were not measured.
 - **Vocabulary pruning** to Italian and English: tried, about 70 MB to gain, abandoned because the renumbered tokenizer did not load.

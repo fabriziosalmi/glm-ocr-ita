@@ -39,7 +39,7 @@ def infer_pdf(a, make_reader):
     for r in read_pdf(a.image, mode=a.mode, pages=a.pages, make_reader=make_reader):
         print(("\f" if pages else "") + r["text"])
         how = "text layer" if r["source"] == "text" else f"model ({r['reason']})" if r["reason"] != "mode ocr" else "model"
-        print(f"page {r['page']}: {how}, {r['s']:.1f} s" + (" - REPETITION LOOP, page not read" if r.get("looped") else ""), file=sys.stderr)
+        print(f"page {r['page']}: {how}, {r['s']:.{2 if r['source'] == 'text' else 1}f} s" + (" - REPETITION LOOP, page not read" if r.get("looped") else ""), file=sys.stderr)
         pages.append(r); looped |= bool(r.get("looped"))
     if a.output:
         json.dump(pages, open(a.output, "w"), ensure_ascii=False, indent=1)
