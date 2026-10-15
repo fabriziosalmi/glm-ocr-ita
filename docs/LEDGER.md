@@ -325,3 +325,23 @@ Written on 2026-10-15, before any model or the layout detector saw a page of thi
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+
+## `external/ocrbench_test` (ocr-bench-v1, 50 synthetic stress pages) - open
+
+Written on 2026-10-15, before any model read a page of this set. The owner's own set, commissioned elsewhere: 100 pages drawn by its
+own generator (Python, procedural degradations: camera keystone and page curl, skew up to 15 degrees, stamps and signatures over text,
+thermal fading, bleed-through, dense borderless tables), 10 kinds of 10 pages; cut into 50 to measure and 50 for fine-tuning by
+`generators/make_ocrbench.py` (5 pages of each kind on each side; 22 Italian, 23 English, 5 mixed here). Its PDFs are the PNGs
+with no text layer, so only the images are read. Its Italian is written without accents in the image and in the ground truth alike
+(1 page of 100 has an accented letter): a reader that restores "sarà" for "sara" loses there. Entities as for `scientific_test`.
+Its own Tesseract baseline (CER 24.9% on all 100) is another metric on other pages: not compared.
+
+**Configuration.** Whole page, as released: BASE `ocrbt_bf16_1.0_op`, v1.1 `ocrbt_v8d8e8op1_1.0_op_rp110` (retry 1.1). Same images.
+
+**Questions and thresholds.**
+
+1. v1.1 against BASE on all entities: not worse if the lower bound is above -1.5; Italian and English each reported, a "worse" on either is a finding against v1.1.
+2. Per kind of page (5 pages each, descriptive only): where both models fail, which is what the training half could teach.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|

@@ -227,3 +227,9 @@ role = "train"
 # Omni Parse Bench (Datalab), a reduced subset: 80 real PDF pages from ten suites, built by generators/make_opb.py (docs/EXTERNAL.md).
 [dataset."external/opb_sub"]
 role = "test"
+# ocr-bench-v1, the owner's synthetic stress set (2026-10-15): 50 pages to measure, 50 kept for fine-tuning iterations, cut by
+# generators/make_ocrbench.py before any read.
+[dataset."external/ocrbench_test"]
+role = "test"
+[dataset."external/ocrbench_train"]
+role = "train"
