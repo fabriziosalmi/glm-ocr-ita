@@ -258,7 +258,7 @@ Written on 2026-10-14, before any model read these pages. 40 real Italian docume
 | 2026-10-15 | | note | v1.1 loses the same page in both sets (6 words): it writes a row of dots for a blank to fill in and stops there, before the rest of the page. Dot leaders again, as on the Gazzetta and OmniDocBench: the next fine-tuning should hold pages with blanks drawn as dots, whole |
 | 2026-10-15 | | verdict | **v1.1 is not worse than the original on 40 real Italian documents, clean or scanned.** |
 
-## `external/realistic_test` (20 pages) and `external/scientific_test` (100 pages) - open
+## `external/realistic_test` (20 pages) and `external/scientific_test` (100 pages) - closed: not worse, and not shown
 
 Written on 2026-10-15, before any model read a page of either set. Two chatgpt sets arrived on the night of 2026-10-14: `itdoc_13_realistic` (100 Italian pages, 12 kinds of paperwork, 4 levels of scan damage, half the entities in small print) and `itdoc_14_scientific` (100 clean Italian pages growing from one character to 5000, 5 levels). `generators/split_chatgpt.py` cut realistic into 20 test pages (the first 20 of the sampling order, 5 per level) and 80 training pages kept for fine-tuning iterations; scientific is kept whole for testing (100 pages, 20 per level) and out of training, both decided by the owner of the project before any read. Entities: those of the set for realistic (320); for scientific, long words, codes and decimal numbers drawn from the ground truth.
 
@@ -273,3 +273,6 @@ Written on 2026-10-15, before any model read a page of either set. Two chatgpt s
 |---|---|---|---|
 | 2026-10-15 | v1.1 vs BASE | 1, realistic | 99.1 -> 99.7%, +0.6 [+0.0, +2.0] not worse (20 pages, 320 entities); no loop on either side |
 | 2026-10-15 | both | 2, realistic by level | BASE 97.3 / 100 / 100 / 98.8, v1.1 100 / 100 / 100 / 98.8 (levels 1 to 4). Too easy for both: the set cannot tell two models apart |
+| 2026-10-15 | v1.1 vs BASE | 1, scientific | 96.3 -> 97.3%, +1.0 [-1.5, +3.7] **not shown**: the lower bound sits on the margin. 29 pages gained, 11 lost; one page decides most of it (`itdoc_14_scientific_0081_botanica_L5_it`, -37 words: v1.1 repeats a sentence, the guard cuts it at 624 characters, the retry loops at the same place, and the rest of the page is lost). Pages with a skipped block: 15 BASE, 7 v1.1 |
+| 2026-10-15 | both | 2, scientific by level | BASE 79.8 / 100 / 99.8 / 98.9 / 91.5, v1.1 96.8 / 99.8 / 99.7 / 98.7 / 93.5 (levels 1 to 5, 20 pages each). v1.1 is ahead on the shortest pages and on the densest |
+| 2026-10-15 | | note | `metrics.is_loop` is blind on this set: 23 of the 100 ground truths compress below 0.25 themselves (the pages repeat sentence patterns by design), so the loop count (28 on each side) and the retry it starts (28 pages re-read by v1.1, 18 kept) say nothing here; the retry makes v1.1 slower, 27.2 s a page against 18.7 |
