@@ -1,0 +1,122 @@
+{
+ "tag": "panelda_v8d8e8op1_1.0_op",
+ "model": "models/v8d8e8_op1",
+ "corpus": "external/docatlas_train",
+ "scale": 1.0,
+ "max_tokens": 3000,
+ "adapter": null,
+ "prompt": "official",
+ "env": {
+  "macos": "26.4.1",
+  "python": "3.12.13",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "load_s": 0.33222460746765137,
+ "pages": {
+  "doc_3857434f2a7443f7f2fdda4e29eb214b96b562a7_p00004": {
+   "text": "ADR PRO GEST ITALIA\nORGANISMO DI MEDIAZIONE\n\nDichiara inoltre:\n□di non avere riportato condanne con sentenza definitiva per i reati di cui agli articoli 416-bis del codice penale (associazione a delinquere di tipo mafioso), 291-quater del testo unico di cui al decreto del Presidente della Repubblica 23 gennaio 1973, n. 43 (associazione per delinquere finalizzata al contrabbando di tabacchi lavorati esteri), 73 limitatamente alle ipotesi aggravate ai sensi dell'articolo 80 e 74, comma 1, del testo unico di cui al decreto del Presidente della Repubblica 9 ottobre 1990, n. 309 (associazione finalizzata al traffico di stupefacenti), nonché per i reati commessi avvalendosi delle condizioni previste dal predetto articolo 416-bis ovvero al fine di agevolare l'attività delle associazioni previste dallo stesso articolo.\n\nAllega certificazione del Consolato di Fare clic qui per immettere testo.,\novvero attesta la veridicità delle dichiarazioni contenute nella presente istanza.\n(solo per i cittadini extra Unione Europea che hanno prodotto redditi all'estero)\n\nFare clic qui per immettere testo.liFare clic qui per immettere testo.\n\nFirma_Fare clic qui per immettere testo.\n\nNOTE ed AVVERTENZE\n• Sanzioni previste in caso di dichiarazioni false\nArt. 125, D.P.R. 115/2002: Chiunque, al fine di ottenere o mantenere l'ammissione al patrocinio, formula l'istanza corredata dalla dichiarazione sostitutiva di certificazione, attestante falsamente la sussistenza o il mantenimento delle condizioni di reddito previste, è punito con la reclusione da uno a cinque anni e con la multa da € 309,87 a € 1549,37.\nLa pena è aumentata se del fatto consegue l'ottenimento o il mantenimento dell'ammissione al patrocinio; la condanna importa la revoca con efficacia retroattiva e il recupero a carico del responsabile delle somme corrisposte dallo Stato.\nLa documentazione sarà inviata all'ufficio dell'agenzia delle entrate territorialmente competente.\n\nADR PRO GEST ITALIA srl\nVia Enrico de Nicola nr. 7 Cap.80053 Castellammare di Stabia\nEmail: italia@adrprogestitalia.com  Pec: italia@pec.adrprogestitalia.com",
+   "loop_cut": null,
+   "s": 17.19585084915161,
+   "prompt_tokens": 2784,
+   "gen_tokens": 680,
+   "prefill_tps": 341.1366173158003,
+   "gen_tps": 75.9641166075173,
+   "peak_gb": 2.101976974
+  },
+  "doc_3ecaf06c04cb3ac4f54b37419202de35f440c617_p00009": {
+   "text": "15. Per il servizio di riscosse tramite bollettino (bancario o postale), l'Istituto corrisponderà al Gestore un compenso pari a € .....per singola transazione.\n16. Per il servizio di riscosse tramite Acquirring (POS fisico o virtuale), l'Istituto corrisponderà al Gestore un compenso diversificato in dipendenza dei circuiti che applicano interchange fee diverse.\n17. Il Gestore è rimborsato delle spese postali relative alle comunicazioni inerenti al servizio trasmesse all'Istituto e per conto dello stesso, delle spese sostenute per l'esecuzione dei pagamenti. che richiedono la corresponsione di un onere, delle tasse postali relative al prellevo dal conto corrente postale e degli oneri fiscali.\n\nArt. 15\n(IMPOSTA DI BOLLO)\n1. In ordine all'assolvimento dell'imposta di bollo quàlora dovuta per le quietanze relative ai mandati di pagamento ed alle reversali di incasso, l'Istituto e il Gestore si danno reciprocamente atto che, poiché le procedure informatiche inerenti all'OIL non consentono di accertare la correttezza degli specifici codici e/o descrizioni apposti dall'Istituto, il Gestore non è in grado di operare verifiche circa la valenza di detta imposta. Pertanto, nei casi di errata/mancante indicazione, nei flussi, dei codici o delle descrizioni appropriati, l'Istituto si impegna a rifondere al Gestore ogni pagamento inerente le eventuali sanzioni.\n\nArt. 16\n(DURATA DELLA CONVENZIONE)\n1. La presente convenzione ha una durata di tre anni a partire dal 15/11/2022 e fino al 14/11/2025\n2. È stabilita la possibilità di ricorrere ad un regime di proroga della convenzione per il tempo strettamente necessario alla definizione della procedura di aggiudicazione del servizio e comunque per un periodo massimo di sei mesi.\n\nArt. 17\n(STIPULA DELLA CONVENZIONE)\n1. Le spese di stipulazione della presente convenzione ed ogni altra conseguente sono a carico del Gestore.\n2. La registrazione della convenzione è prevista solo in caso d'uso e le relative spese sono a carico del richiedente.\n\nArt. 18\n(RINVIO, CONTROVERSIE E DOMICILIO DELLE PARTI)\n1. Per gli effetti della presente convenzione e per tutte le conseguenze dalla medesima derivanti, l'Istituto e il Gestore eleggono il proprio domicilio presso le rispettive sedi come di seguito indicato:\n2. Istituto Comprensivo Statale Castell'Umberto, via F. Crispi, 25 Castell'Umberto (ME).\n3. Gestore – ......\n4. Per quanto non previsto dalla presente convenzione, si fa rinvio alla legge ed ai regolamenti che disciplinano la materia.\n5. Per ogni controversia che dovesse sorgere nell'applicazione del presente contratto il foro competente deve intendersi quello di ..... (luogo ove ha sede l'Istituto).\n\nArt. 19\n(TRACCIABILITA' DEI FLUSSI FINANZIARI)\n1. L'Istituto e il Gestore si conformano alla disciplina di cui all'art. 3 della legge 136/2010, tenuto conto della Determinazione n. 4 del 7 luglio 2011 dell'Autorità della Vigilanza sui Contratti Pubblici (ora A.N.AC.), avente ad oggetto le Linee Guida sulla tracciabilità dei flussi finanziari e ss.mm: e ii.",
+   "loop_cut": null,
+   "s": 20.720843076705933,
+   "prompt_tokens": 2784,
+   "gen_tokens": 921,
+   "prefill_tps": 337.41654518936946,
+   "gen_tps": 74.26743186459849,
+   "peak_gb": 2.101976974
+  },
+  "doc_out_la_docx_batch_12_118.docx__la__14_p00054": {
+   "text": "Criterio D.2.5 - Sezione 0\nNel caso di valutazione del criterio da operarsi su un livello di progettazione inferiore all’Esecutivo, selezionare uno scenario/indicatore di riferimento, attribuire il corrispondente punteggio ed esplicitare le strategie progettuali che si intendono adottare compilando i campi sottostanti.\n\nSCENARIO/INDICATORE SELEZIONATO\n(Riportare per esteso lo scenario selezionato o il valore dell’indicatore corrispondente nella scala di prestazione)\n.....\n\nPUNTEGGIO CORRISPONDENTE ALLO SCENARIO/INDICATORE SELEZIONATO\n(Inserire valore --->)\n\n1. Indicazioni preliminari di carattere tecnico-prestazionale\nIndicare sintetricamente (con relazioni e/o schemi, elaborati grafici, immagini) in funzione dei successivi elaborati del Progetto Definitivo e del Progetto Esecutivo, le scelte di carattere tipologico e tecnico costruttive che attengono alla definizione delle strategie per favorire la ventilazione naturale e che siano relative allo scenario selezionato.\n\n2. Indicazioni preliminari di carattere economico\nOperare una valutazione dei costi – benefici dell’intervento soprattutto in relazione all’abbattimento di costi di gestione dell’uso della ventilazione meccanizzata.\n\n3. Allegati\nRiportare eventualmente l’elenco dei documenti che giustificano la scelta dello scenario selezionato e del relativo punteggio.",
+   "loop_cut": null,
+   "s": 13.45177435874939,
+   "prompt_tokens": 2784,
+   "gen_tokens": 400,
+   "prefill_tps": 338.6362868766472,
+   "gen_tps": 77.26875119523423,
+   "peak_gb": 2.101976974
+  },
+  "doc_69ad6ceca1eb456a49b2a91e6e0a9a9ff35fe8c5_p00001": {
+   "text": "ASCOM SERVIZI\nCAT - MOLISE SRL UNIPERSONALE\nc.da Colle delle Api Z.I. snc\n86100 Campobasso\ntel. 0874 6891 fax 0874494210\nemail:formazione@confcommerciomolise.it\n\nArea dei Servizi Tecnici e Formativi\nSettore formazione e progetti\n\nSCHEDA DI ISCRIZIONE\nDa inviare via fax al n. 0874 494210\n\nCORSO RSPP 48 ORE\n\nRagione sociale\nSede Via\nTelefono Fax\nP. IVA Cod. Fiscale\nE-mail Sito Internet\nDescrizione attività\n\nISCRITTO a Confcommercio ___: □ Si □ No □ Richiedo Informazioni\nTitolare Socio Dipendente Altro\n\nPARTECIPANTE\nCognome e Nome\nNato a Il\nResidente a Via\nCittadinanza Titolo di studio\nCod. Fiscale\nTel/Cell E-mail\n\n___ ___\ndata firma del partecipante\n\nLa ditta si impegna a versare la somma di €450,00 + IVA al 22% al momento della sottoscrizione della presente.\n\n___\nfirma e timbro ditta\n\n□ Si da il consenso per il trattamento dei dati personali ai sensi del D.lgs 196/2003 e all'art. 13 GDPR 679/16.\nTutte le informazioni contenute in questa scheda hanno carattere di estrema riservatezza e ASCOM SERVZI CAT MOLISE SRL, si riserva ogni diritto legale derivante da questa riservatezza. Le informazioni si intendono destinate esclusivamente all’uso delle persone o enti a cui sono indirizzate.",
+   "loop_cut": null,
+   "s": 14.93823790550232,
+   "prompt_tokens": 2910,
+   "gen_tokens": 454,
+   "prefill_tps": 327.44605269595996,
+   "gen_tps": 75.96868543801823,
+   "peak_gb": 2.214993854
+  },
+  "doc_45feac0d711c0307deea81b935166e5c7eec92ec_p00001": {
+   "text": "(Il presente modello può essere utilizzato per presentare la manifestazione d'interesse a partecipare)\n\nRichiesta da presentare su carta intestata del soggetto giuridico\n\nSpett. le\nCOMUNE DI\nCASTELNOVO NE’ MONTI\nPiazza Gramsci, 1\n42035 Castelnovo Ne’ Monti (RE)\n\nRICHIESTA DI PARTECIPAZIONE ALLA PROCEDURA NEGOZIATA PER L’AFFIDAMENTO IN CONCESSIONE DI USO E GESTIONE DELL’IMPIANTO SPORTIVO DENOMINATO CAMPO SPORTIVO COMUNALE DI FELINA CON ANNESSO CAMPO DA TENNIS, PER ANNI 4.\n\nII/La sottoscritto/a _____\n\nnato/a a _____ prov. _____ il _____\n\ncittadinanza _____\n\nresidente a _____\n\nc.a.p. _____ città _____\n\nC.F. _____\n\n(barrare il caso di interesse con una X):\n\n□ quale titolare della ditta individuale (costituita o costituenda);\n□ per conto di società ancora da costituire della quale sarà legale rappresentante;\n□ quale legale rappresentante della società già costituita (denominazione)\n□ Altro (da specificare): ....\n\ndella Ditta\n\nRagione sociale: ___\n\ncon sede in via ___n. ___\n\nlocalità/ comune ___\n\nc.a.p. ___ Provincia ___\n\nCodice Fiscale ___\n\nP. IVA ___\n\nTelefono ___\n\nFax ___",
+   "loop_cut": null,
+   "s": 13.26837706565857,
+   "prompt_tokens": 2784,
+   "gen_tokens": 379,
+   "prefill_tps": 335.0494572206808,
+   "gen_tps": 77.45521272532775,
+   "peak_gb": 2.101976974
+  },
+  "doc_702a3c1f8992dc32d9486460c8bebc59258b50b8_p00008": {
+   "text": "oppure\n□ di allegare copia autentica del contratto di rete, redatto per □ atto pubblico □ scrittura\nprivata autenticata □ atto firmato digitalmente a norma dell’art. 25 del D.lgs. 7 marzo 2005, n.\n82 con allegate le dichiarazioni, rese da ciascun concorrente aderente al contratto di\nrete, attestanti:\na) a quale concorrente, in caso di aggiudicazione, sarà conferito mandato speciale con\nrappresentanza o funzioni di capogruppo;\nb) l’impegno, in caso di aggiudicazione, ad uniformarsi alla disciplina vigente in materia con\nriguardo ai raggruppamenti temporanei;\nc) le parti della fornitura che saranno eseguite dai singoli operatori economici aggregati in rete;\nLL) di essere una □ piccola □ media □ grande impresa.\nMM) ai fini dell’applicazione delle riduzioni di cui all’art. 93, comma 7 del D.lgs. n. 50/2016\nsull’importo della garanzia provvisoria prevista dal punto 8 della lettera d’invito, di essere in\npossesso dei seguenti requisiti\n.",
+   "loop_cut": 1119,
+   "s": 12.924002647399902,
+   "prompt_tokens": 2784,
+   "gen_tokens": 352,
+   "prefill_tps": 334.37658534895075,
+   "gen_tps": 77.82716934812578,
+   "peak_gb": 2.101976974
+  },
+  "doc_2040b74ab6e61ea07e30a77b158ddce2c98628bd_p00001": {
+   "text": "ALLEGATO A\n\nAlla Dirigente Scolastica\ndell’IS Majorana di Palermo\n\nOggetto: Domanda di partecipazione alla selezione per l’attribuzione dell’incarico di Esperto da utilizzare nell’ambito del progetto PON - FSE - “Socialità, apprendimenti, accoglienza” codice 10.1.1A-FDRPOC-SI-2022-354 e 10.2.2A-FDRPOC-SI-2022-387\n\nIl/La sottoscritto/a .....nato/a a .....( ..... )\nil ..... e residente a .....( ..... ), c.a.p. ......\nVia ....., n. ......\nC.F. ....., tel. ....., cell. ......\nE mail.....@......\n\nritenendo di avere le capacità richieste, come viene dimostrato dal curriculum e dai titoli dichiarati ed autocertificati,\n\nCHIEDE\n\ndi partecipare alla selezione per l’attribuzione dell’incarico di Esperto da utilizzare nell’ambito del progetto PON - FSE - “Socialità, apprendimenti, accoglienza” codice 10.1.1A-FDRPOC-SI-2022-354 e 10.2.2A-FDRPOC-SI-2022-387\n\n(Apporre una X per scegliere il modulo/i moduli)*\n\nTitolo modulo ESPERTO ore Scelta modulo\nLaboratorio di serigrafia n.1 Esperto interno 30\nLaboratorio di grafica 3D n.1 Esperto interno 30\nLingua inglese corso 1 n.1 Esperto interno 30\nFocus sulle biotechnologie n.1 Esperto interno 30",
+   "loop_cut": null,
+   "s": 14.209073781967163,
+   "prompt_tokens": 2784,
+   "gen_tokens": 449,
+   "prefill_tps": 334.4517933551929,
+   "gen_tps": 77.17702098888716,
+   "peak_gb": 2.101976974
+  },
+  "doc_87807bcc9c84fbce8e850ec869a3d7bc5ef64867_p00001": {
+   "text": "AVVISO 33/ 2019\nFORMAZIONE PER LA CREAZIONE DI NUOVA OCCUPAZIONE\nALLEGATO 2\nAl Legale Rappresentante\ndell’Associazione ARCES\nVicolo Niscemi, 5\n90133 Palermo\nOGGETTO: PO FSE Sicilia 2014-2020\nTitolo dell’Avviso pubblico ed estremi: Avviso Pubblico 33/2019 Formazione per la Creazione di Nuova\nOccupazione\nTitolo Progetto: Informa 2020\nIl/la sottoscritto/a\nCOGNOME ___ NOME ___\nNATO/A A ___ IL ___/___/___\nCODICE FISCALE ___\nDICHIARA\n- di possedere adeguate e certificate competenze per svolgere le attività formative dei moduli\ncontrassegnati nell’allegato 1;\n- di aver cumulato n. ..... anni di esperienza professionale; le esperienze professionali, così come indicate\nnel Curriculum Vitae allegato alla presente, che contribuiscono a raggiungere il suddetto numero di anni\nsono le seguenti:\nEsperienza professionale | Durata (dal/al) | Durata (in n. mesi)\n| | | |\n| :--- | :--- | :--- |\n| | | |\n| | | |\n| | | |\n| | | |\n\nAssociazione ARCES\nSede legale: Vicolo Niscemi, 5 – 90133 Palermo\nFax 091 346377 e-mail: info@arces.it PEC: arces@altapec.it sito web: www.arces.it\nPartita IVA / Codice Fiscale 00615140829 / 00615140829\nARCES\nTel. 091 346629",
+   "loop_cut": null,
+   "s": 14.480401277542114,
+   "prompt_tokens": 2784,
+   "gen_tokens": 468,
+   "prefill_tps": 334.2241993343893,
+   "gen_tps": 77.08072880876954,
+   "peak_gb": 2.101976974
+  },
+  "doc_a13b789da9c68c17c998a311b5bc532df88eb5e7_p00003": {
+   "text": "di progettazione, sviluppo e realizzazione di sistemi e/o sottosistemi ottici, dimostrata attraverso almeno un sistema ottico qualificato e verificato in orbita - dimostrata attraverso allegazione di qualsiasi documento ritenuto utile (ad esempio: certificati rilasciati dall’amministrazione/ente aggiudicatore/committete privato, con l’indicazione dell’oggetto, dell’importo e del periodo di esecuzione, fatture dalle quali risulti chiaramente il servizio/fornitura reso/a, ove la causale non sia chiara il concorrente deve produrre anche copia dei contratti cui le fatture si riferiscono; ove si tratti di contratti con ASI, è sufficiente indicare il progetto o il numero del contratto) - è posseduta da.....;\n\n(società facente parte del RTI o consorziata);\n\n2. □ di aver stipulato almeno un contratto in corso o completato, svolto con diligenza negli ultimi 5 anni d’attività per servizi/attività analoghe o comparabili con quelle di cui al paragrafo 1 sopra, dimostrabile tramite presentazione di un elenco dettagliato contenente i seguenti elementi: a) Nome cliente; b) oggetto del servizio (tipologia, etc.) c) importo dell’appalto IVA esclusa e allegazione del contratto stipulato con l’Amministrazione pubblica/privato completo di copia delle fatture quietanzate ovvero dei documenti bancari attestanti il pagamento delle stesse\n\novvero\n□ (nel caso di RTI-Consorzio) che il contratto in corso o completato, svolto con diligenza negli ultimi 5 anni d’attività per servizi/attività analoghe o comparabili con quelle di cui al paragrafo 1 sopra, dimostrabile tramite presentazione di un elenco dettagliato contenente i seguenti elementi: a) Nome cliente; b) oggetto del servizio (tipologia, etc.) c) importo dell’appalto IVA esclusa allegazione del contratto stipulato con l’Amministrazione pubblica/privato completo di copia delle fatture quietanzate ovvero dei documenti bancari attestanti il pagamento delle stesse, è stato stipulato da_____\n(società facente parte del RTI o consorziata);\n\n3. □ di avere la disponibilità di un centro adeguato a svolgere le attività in parola secondo quanto sopra descritto (ovvero impegno a disporne entro massimo 5 giorni dalla stipula);\n\novvero\n□ (nel caso di RTI-Consorzio) che la disponibilità di un centro adeguato a svolgere le attività in parola secondo quanto sopra descritto (ovvero impegno a disporne entro massimo 5 giorni dalla stipula) è nella disponibilità di_____\n(società facente parte del RTI o consorziata);\n\n4. □ di possedere una struttura organizzativa e professionale che comprenda oltre ad un settore dedicato alla gestione dei programmi, anche un settore dedicato all’ingegneria di sistema e al controllo sistematico della pianificazione delle attività;",
+   "loop_cut": null,
+   "s": 18.678417921066284,
+   "prompt_tokens": 2784,
+   "gen_tokens": 777,
+   "prefill_tps": 335.2005452544657,
+   "gen_tps": 75.38142686711161,
+   "peak_gb": 2.101976974
+  },
+  "doc_73b3b6706399dd8d68ea708cb5b04cf136b47534_p00003": {
+   "text": "cofinanziato dal Fondo Sociale Europeo PO 2014-2020 Regione Emilia-Romagna”. Copia di tale materiale dovrà essere inviata al Comune.\n- di impegnarsi a rendicontare al Comune in cui ha sede il centro estivo l'effettiva frequenza del minore al Centro estivo ed il pagamento del servizio da parte delle famiglie richiedenti;\n- di impegnarsi a redigere fatture/ricevute/documenti contabili che attestino il pagamento del servizio del centro estivo con suddivisione settimanale e con indicazione del costo settimanale, esplicitando la quota pagata mediante contributi/agevolazioni pubbliche e/o private, di cui la famiglia benefici per il medesimo servizio.\n\nLe fatture/ricevute/documenti contabili emesse dovranno rispettare i seguenti criteri:\n- intestazione del soggetto che le rilascia (con indirizzo e P.IVA/CF)\n- intestazione al genitore richiedente il contributo (con indirizzo e CF)\n- indicazione del nome del bambino, il numero di settimane, il periodo frequentato e l'importo pagato.\n\n- Di essere edotto che il Comune a cui si presenta la domanda, sede del Centro Estivo e la Regione Emilia-Romagna si riservano la facoltà di effettuare controlli sulla veridicità delle dichiarazioni rese dai richiedenti relativamente alle condizioni che hanno dato luogo alla iscrizione in elenco;\n\n- Di essere informato che il trattamento dei dati personali da parte dei Comuni e dell’Unione Comuni Pianura Reggiana, per le finalità di cui al presente Avviso e per lo svolgimento delle eventuali altre funzioni istituzionali connesse e rispetto di obblighi di legge, è effettuato, in qualità di titolare del trattamento dei dati personali, in osservanza dei presupposti e nei limiti stabiliti dal Regolamento UE 2016/679, dal D.Lgs. 10 agosto 2018, n. 101 e dal D.Lgs. 30 giugno 2003, n. 196, così come modificato e integrato dal predetto D.Lgs. 10 agosto 2018, n. 101.\n\nIl trattamento dei dati personali avverrà mediante l’utilizzo di strumenti informatici, telematici e manuali, con logiche strettamente correlate alle finalità per le quali le informazioni sono raccolte in modo da garantirne la sicurezza e la riservatezza (artt. da 5 a 11 Regolamento UE) e sarà svolto da dipendenti del Comune e dell’Unione Comuni Pianura Reggiana, che operano sotto la sua autorità diretta, appositamente autorizzati ed istruiti. Solo eccezionalmente, i dati potranno essere conosciuti e trattati anche da altri soggetti che, nel fornire specifici servizi o svolgere attività strumentali per conto del Comune e dell’Unione Comuni Pianura Reggiana, operano in qualità di Persone autorizzate o Responsabili del trattamento designati dai rispettivi Enti, nel rispetto e con le garanzie a tale scopo indicate dal Regolamento UE sopracitato.\n\nSI ALLEGA:\n\n□ Copia del documento d’identità del dichiarante.\n□ Altro (specificare).\n\n_____, lì _____\n(luogo) (data)\n\nFirma del dichiarante",
+   "loop_cut": null,
+   "s": 19.655954122543335,
+   "prompt_tokens": 2784,
+   "gen_tokens": 846,
+   "prefill_tps": 336.9317821827348,
+   "gen_tps": 74.74640916876503,
+   "peak_gb": 2.101976974
+  }
+ }
+}
