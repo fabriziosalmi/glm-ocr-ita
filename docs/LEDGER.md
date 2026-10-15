@@ -307,3 +307,4 @@ Written on 2026-10-15, before any model or the text layer read a page of this se
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-10-15 | auto | note, before any score | Two faults of `glmocr/pdf.py` found by looking at the checks' verdicts on this set (no score computed, no test looked at): characters beyond the BMP came in two UTF-16 halves from pdfium and counted as broken (a Polish page with mathematical letters; Indra's code does the same), and the other-script check took µ (MICRO SIGN) for a foreign letter. Both fixed (`tests/test_pdf.py`) before any read was scored. After the fix: 29 of 80 pages pass the checks; to the model: 19 content order not a reading order, 18 no text layer, 5 runs with no ink, 5 an OCR layer, 4 a broken font map (control and private-use codes on French CERFA forms) |

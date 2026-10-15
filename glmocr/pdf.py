@@ -7,7 +7,8 @@ needed only for scans and for pages whose layer fails a check. Modes, per page:
   text  always the text layer, even when a check fails (and nothing for a page that has none)
 
 The checks and the run extraction are adapted from Indra OCR, datalab-to/indra, indra_ocr/textlayer.py (Apache-2.0,
-Datalab; NOTICE and licenses/), 2026-10-15. Changes: the order check is part of the verdict (Indra also asks an order model, which
+Datalab; NOTICE and licenses/), 2026-10-15. Changes: characters beyond the BMP are put together from pdfium's UTF-16 units (Indra counts their halves as broken
+characters); the order check is part of the verdict (Indra also asks an order model, which
 we do not have, so two columns written line by line across the gutter are not caught here); a run's character boxes are not kept;
 the text of a page is its runs in content order, one per line. A layer is not trusted when:
 - more than 5% of its text objects are drawn invisibly: an OCR layer laid over a scan, as good as the OCR that made it;
@@ -40,6 +41,15 @@ def bad_char_count(text):
                for c in text)
 
 
+# Scripts a font map broken into another script has been seen to land in, or could: every Unicode script with letters but Latin,
+# Greek and Cyrillic, named by the first word of its characters' names. A list, not "anything but Latin": letters such as µ
+# (MICRO SIGN) or the mathematical italic of a formula are named otherwise and are not a sign of a broken map.
+OTHER_SCRIPTS = set("""ARABIC HEBREW SYRIAC THAANA NKO SAMARITAN MANDAIC ARMENIAN GEORGIAN DEVANAGARI BENGALI GURMUKHI GUJARATI ORIYA TAMIL
+TELUGU KANNADA MALAYALAM SINHALA THAI LAO TIBETAN MYANMAR KHMER MONGOLIAN ETHIOPIC CHEROKEE CANADIAN OGHAM RUNIC HANGUL CJK
+HIRAGANA KATAKANA BOPOMOFO YI TIFINAGH VAI BAMUM JAVANESE BALINESE SUNDANESE BATAK BUGINESE TAI LIMBU LEPCHA OL SAURASHTRA
+KAYAH REJANG CHAM MEETEI TAGALOG HANUNOO BUHID TAGBANWA COPTIC GLAGOLITIC""".split())
+
+
 def _script(c):
     try:
         return unicodedata.name(c).split()[0]
@@ -48,11 +58,11 @@ def _script(c):
 
 
 def alien_letters(text):
-    """Letters of another script than Latin, Greek or Cyrillic, counted only when the text's letters are 90% Latin or more."""
+    """Letters of another script (OTHER_SCRIPTS), counted only when the text's letters are 90% Latin or more."""
     letters = [_script(c) for c in text if c.isalpha()]
     if not letters or letters.count("LATIN") < 0.9 * len(letters):
         return 0
-    return sum(s not in ("LATIN", "GREEK", "CYRILLIC") for s in letters)
+    return sum(s in OTHER_SCRIPTS for s in letters)
 
 
 def _device_affine(page):
@@ -81,8 +91,15 @@ def extract_runs(page):
         raw_tp = tp.raw; bl, br, bb, bt = (ctypes.c_double() for _ in range(4))
         upright, chars, boxes, breaks = {}, [], [], []
         n_chars = n_rot = n_bad = 0
+        high = None
         for i in range(tp.count_chars()):
-            c = chr(R.FPDFText_GetUnicode(raw_tp, i))
+            u = R.FPDFText_GetUnicode(raw_tp, i)
+            if 0xD800 <= u < 0xDC00:   # pdfium gives UTF-16 units: a character beyond the BMP (a mathematical letter) comes in two
+                high = u; continue
+            if 0xDC00 <= u < 0xE000 and high is not None:
+                u = 0x10000 + ((high - 0xD800) << 10) + (u - 0xDC00)
+            high = None
+            c = chr(u)
             if c in "\r\n":
                 breaks.append(len(chars)); continue
             if c == "\x02":   # pdfium's mark for a hyphen at a line break

@@ -27,6 +27,7 @@ def test_alien_letters():
     body = "Il Ministro dell'economia e delle finanze, visto il decreto legislativo " * 5
     assert pdf.alien_letters(body + "Gൺඓඓൾඍඍൺ Uൿൿංർංൺඅൾ") >= 3
     assert pdf.alien_letters(body + "con una concentrazione di 5 μg/l e un angolo α") == 0
+    assert pdf.alien_letters(body + "5 µm, 3 µg, 2 µs e la variabile 𝑥 di 𝑓(𝑥) = 𝑒") == 0   # MICRO SIGN, mathematical italic
     assert pdf.alien_letters("这是一份中文文件 " * 20) == 0
 
 
