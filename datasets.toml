@@ -219,3 +219,6 @@ role = "test"
 role = "train"
 [dataset."external/gu_train"]
 role = "train"
+# Omni Parse Bench (Datalab), a reduced subset: 80 real PDF pages from ten suites, built by generators/make_opb.py (docs/EXTERNAL.md).
+[dataset."external/opb_sub"]
+role = "test"

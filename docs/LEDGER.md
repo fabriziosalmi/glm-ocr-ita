@@ -293,3 +293,17 @@ Written on 2026-10-15, before the mode read any page of this set. A second read 
 | 2026-10-15 | auto vs v1.1 | 1 | 97.3 -> 100.0%, +2.7 [+0.9, +5.3] **better**; 38 pages gained, none lost. Character error 0.0005 against 0.0383 |
 | 2026-10-15 | auto | 2 | 100 of 100 pages pass the checks; 0.01 s a page against 27 s for v1.1. No model loaded |
 | 2026-10-15 | | note | The best case by construction: a clean PDF made by one renderer (ReportLab) from the same source as the ground truth, so a sound layer can only be exact. What this does not measure: real born-digital PDFs from many producers, where the checks decide. Those are checked so far on two kinds only: an image in a PDF goes to the model (`tests/test_pdf.py`; the receipts, adversarial and contracts sets), and the Gazzetta's broken small caps go to the model (a check added to Indra's, same tests) |
+
+## `external/opb_sub` (Omni Parse Bench, 80 real PDF pages) - open
+
+Written on 2026-10-15, before any model or the text layer read a page of this set. Scored with the benchmark's scorer, text tests only (`experiments/opb_score.py`); the unit of the bootstrap is the page (its share of text tests passed). 45 pages English, 8 French, the rest other European languages or mixed: the guard on English and European pages, and the first real PDFs for `glmocr/pdf.py`.
+
+**Configuration.** BASE `opb_bf16_1.0_op`; v1.1 `opb_v8d8e8op1_1.0_op_rp110` (one pass, retry 1.1); auto `opb_pdfauto`: the text layer where it passes the checks, else the v1.1 reading of the same render (`experiments/pdf_eval.py --fallback`). Same renders (long side 1754 px) for both models.
+
+**Questions and thresholds.**
+
+1. v1.1 against BASE, all text tests: not worse if the lower bound is above -1.5. English must not lose (the owner's rule): a "worse" here is a finding against v1.1.
+2. auto against v1.1: on all tests, and on the tests not taken from the PDF itself (independent): the same rule. How many pages pass the checks, and why the others do not.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
