@@ -163,7 +163,12 @@ role = "test"
 [dataset."external/xfund_it_val"]
 role = "test"
 # OmniDocBench v1.5, a fixed subset of 200 pages (docs/EXTERNAL.md), built by generators/make_omnidoc.py. Apache-2.0.
+# Read twice (v1.0.0, v1.1.0): spent since 2026-10-15. Two disjoint subsets in the benchmark's language proportions replace it.
 [dataset."external/omnidoc_200"]
+role = "spent"
+[dataset."external/omnidoc_dev"]
+role = "dev"
+[dataset."external/omnidoc_test2"]
 role = "test"
 [dataset."external/xfund_it_train"]
 role = "dev"
