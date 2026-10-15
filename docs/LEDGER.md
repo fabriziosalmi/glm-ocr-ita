@@ -276,3 +276,20 @@ Written on 2026-10-15, before any model read a page of either set. Two chatgpt s
 | 2026-10-15 | v1.1 vs BASE | 1, scientific | 96.3 -> 97.3%, +1.0 [-1.5, +3.7] **not shown**: the lower bound sits on the margin. 29 pages gained, 11 lost; one page decides most of it (`itdoc_14_scientific_0081_botanica_L5_it`, -37 words: v1.1 repeats a sentence, the guard cuts it at 624 characters, the retry loops at the same place, and the rest of the page is lost). Pages with a skipped block: 15 BASE, 7 v1.1 |
 | 2026-10-15 | both | 2, scientific by level | BASE 79.8 / 100 / 99.8 / 98.9 / 91.5, v1.1 96.8 / 99.8 / 99.7 / 98.7 / 93.5 (levels 1 to 5, 20 pages each). v1.1 is ahead on the shortest pages and on the densest |
 | 2026-10-15 | | note | `metrics.is_loop` is blind on this set: 23 of the 100 ground truths compress below 0.25 themselves (the pages repeat sentence patterns by design), so the loop count (28 on each side) and the retry it starts (28 pages re-read by v1.1, 18 kept) say nothing here; the retry makes v1.1 slower, 27.2 s a page against 18.7 |
+
+## `external/scientific_test`, second read: PDF text layer (`glmocr/pdf.py`, mode auto) - closed: better
+
+Written on 2026-10-15, before the mode read any page of this set. A second read of a set read once (BASE and v1.1, above), said as such: the first decision on it is closed, and this one is about another reader. `itdoc_14_scientific` is the only commissioned set whose PDFs carry a text layer (receipts, adversarial and contracts are images in a PDF: checked on 10 pages each, "no text layer"). Its ground truth was written from the HTML source, not taken from the PDF, so the layer is measured against an independent reference. The images v1.1 read are the same PDFs rasterised at 150 dpi.
+
+**Configuration.** `scientific_pdfauto`: `experiments/pdf_eval.py` with mode auto, v1.1 (`models/v8d8e8_op1`, retry 1.1) for any page whose layer fails a check. Against `scientific_v8d8e8op1_1.0_op_rp110` (v1.1 on the images, already read).
+
+**Questions.**
+
+1. Is auto not worse than v1.1 on all entities? Passes if the lower bound is above -1.5; "better" if above 0.
+2. How many pages pass the checks, and the time per page of each.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
+| 2026-10-15 | auto vs v1.1 | 1 | 97.3 -> 100.0%, +2.7 [+0.9, +5.3] **better**; 38 pages gained, none lost. Character error 0.0005 against 0.0383 |
+| 2026-10-15 | auto | 2 | 100 of 100 pages pass the checks; 0.01 s a page against 27 s for v1.1. No model loaded |
+| 2026-10-15 | | note | The best case by construction: a clean PDF made by one renderer (ReportLab) from the same source as the ground truth, so a sound layer can only be exact. What this does not measure: real born-digital PDFs from many producers, where the checks decide. Those are checked so far on two kinds only: an image in a PDF goes to the model (`tests/test_pdf.py`; the receipts, adversarial and contracts sets), and the Gazzetta's broken small caps go to the model (a check added to Indra's, same tests) |

@@ -11,7 +11,7 @@ would give. Cut before any model read a page of either set.
 Entities. itdoc_13_realistic has its own (meta.json). itdoc_14_scientific has none: they are drawn from the ground truth as for
 DocAtlas (generators/make_docatlas.py: every distinct word of 8 letters or more, and the Italian codes, dates and amounts), plus
 every number written with a decimal separator ("12,5", "0.031"), the values a scientific page is read for.
-Images and ground truth are copied unchanged (1240 x 1754, already A4 at 150 dpi)."""
+Images, PDFs and ground truth are copied unchanged (1240 x 1754, already A4 at 150 dpi)."""
 import json, os, pathlib, re, shutil, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent; os.chdir(ROOT); sys.path.insert(0, str(ROOT)); sys.path.insert(0, str(ROOT / "generators"))
@@ -35,6 +35,8 @@ if __name__ == "__main__":
             out = pathlib.Path("external") / f"{short}_{part}"; out.mkdir(exist_ok=True); meta = []
             for m in pages:
                 shutil.copy2(src / f"{m['id']}.png", out / f"{m['id']}.png"); shutil.copy2(src / f"{m['id']}.txt", out / f"{m['id']}.txt")
+                if m.get("pdf"):   # the source PDF too, for glmocr/pdf.py (experiments/pdf_eval.py)
+                    shutil.copy2(src / m["pdf"], out / m["pdf"])
                 if "entities" not in m:
                     m = {**m, "entities": scientific_entities(corpus.reference(name, m["id"]))}
                 meta.append({**m, "rot90": m.get("rot90", False)})
