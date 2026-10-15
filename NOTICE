@@ -1,0 +1,11 @@
+glm-ocr-ita
+Copyright (c) 2026 Fabrizio Salmi. MIT License (LICENSE).
+
+This repository includes code adapted from third parties:
+
+- glmocr/pdf.py: the text-layer checks and run extraction are adapted from Indra OCR,
+  https://github.com/datalab-to/indra, file indra_ocr/textlayer.py, by Datalab,
+  licensed under the Apache License, Version 2.0 (licenses/indra-ocr-LICENSE-Apache-2.0.txt).
+  Modified on 2026-10-15: see the docstring of glmocr/pdf.py for what was changed.
+  Only the code is used. Indra OCR's model weights, which are under a different license,
+  are neither included nor used.

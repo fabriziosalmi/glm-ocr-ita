@@ -20,13 +20,30 @@ def cmd_quant(a):
 
 def cmd_infer(a):
     from .engine import Reader
-    r = Reader(a.model, max_tokens=a.max_tokens, mem_gb=a.mem_gb, prompt_style=a.prompt, retry_penalty=a.retry_penalty).read(a.image, a.scale)
+    make = lambda: Reader(a.model, max_tokens=a.max_tokens, mem_gb=a.mem_gb, prompt_style=a.prompt, retry_penalty=a.retry_penalty)
+    if a.image.lower().endswith(".pdf"):
+        return infer_pdf(a, make)
+    r = make().read(a.image, a.scale)
     print(r["text"])
     print(f"{r['s']:.1f} s, {r['prompt_tokens']} prompt tokens, {r['gen_tokens']} generated"
           + (" - REPETITION LOOP, page not read" if r["looped"] else ""), file=sys.stderr)
     if a.output:
         json.dump(r, open(a.output, "w"), ensure_ascii=False, indent=1)
     return 2 if r["looped"] else 0
+
+
+def infer_pdf(a, make_reader):
+    """Every page of a PDF: the text layer where it passes the checks of glmocr/pdf.py (mode auto), the model elsewhere."""
+    from .pdf import read_pdf
+    pages, looped = [], False
+    for r in read_pdf(a.image, mode=a.mode, pages=a.pages, make_reader=make_reader):
+        print(("\f" if pages else "") + r["text"])
+        how = "text layer" if r["source"] == "text" else f"model ({r['reason']})" if r["reason"] != "mode ocr" else "model"
+        print(f"page {r['page']}: {how}, {r['s']:.1f} s" + (" - REPETITION LOOP, page not read" if r.get("looped") else ""), file=sys.stderr)
+        pages.append(r); looped |= bool(r.get("looped"))
+    if a.output:
+        json.dump(pages, open(a.output, "w"), ensure_ascii=False, indent=1)
+    return 2 if looped else 0
 
 
 def cmd_run(a):
@@ -203,8 +220,10 @@ def main(argv=None):
     p.add_argument("variant")
     p.add_argument("--src", help="model folder to quantize instead of the original, e.g. one with a fine-tuning adapter fused in")
     p.add_argument("--out", help="destination folder instead of models/VARIANT")
-    p = add("infer", cmd_infer, "OCR one page image; exit code 2 if the output is a repetition loop")
-    p.add_argument("image")
+    p = add("infer", cmd_infer, "OCR one page image or a PDF; exit code 2 if an output is a repetition loop")
+    p.add_argument("image", help="an image, or a PDF (pages separated by a form feed in the output)")
+    p.add_argument("--mode", choices=("auto", "ocr", "text"), default="auto", help="PDF only: auto = the text layer where it passes the checks, the model elsewhere; ocr = always the model; text = always the layer (glmocr/pdf.py)")
+    p.add_argument("--pages", help="PDF only: pages to read, counted from 1, e.g. 1-3,7")
     p.add_argument("--model", default=RELEASE, help=f"local model folder or a Hugging Face id (default the release, {RELEASE})")
     p.add_argument("--scale", type=float, default=1.0, help="resize factor before OCR; 1.0 = as is. Below 1 small print is lost (README)")
     p.add_argument("--max-tokens", type=int, default=metrics.MAX_TOKENS)
