@@ -1,0 +1,72 @@
+{
+ "tag": "gucut_v8d8e8op1_1.0_op_g2",
+ "model": "models/v8d8e8_op1",
+ "corpus": "external/gu_dev_cut",
+ "scale": 1.0,
+ "max_tokens": 3000,
+ "adapter": null,
+ "prompt": "official",
+ "env": {
+  "macos": "26.4.1",
+  "python": "3.12.13",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "load_s": 0.8002979755401611,
+ "pages": {
+  "gu_2019-12-28_303_p03": {
+   "text": "Rettifica all’estratto della determina IP n. 754 del 30 ottobre 2019, concernente l’autorizzazione all’importazione parallela del medicinale «Tobradex». (19A08053) ... Pag. 140\n\nModifica dell’autorizzazione all’immissione in commercio del medicinale per uso umano «Madopar» (19A08071) ... Pag. 145\n\nAutorizzazione all’immissione in commercio del medicinale per uso umano «Momentact» (19A08063) ... Pag. 140\n\nModifica dell’autorizzazione all’immissione in commercio del medicinale per uso umano «Voltaren» (19A08072) ... Pag. 145\n\nAutorizzazione all’immissione in commercio del medicinale per uso umano «Moment» (19A08064) ... Pag. 141\n\nRinnovo dell’autorizzazione all’immissione in commercio di taluni medicinali omeopati-ci (19A08074) ... Pag. 146\n\nAutorizzazione all’immissione in commercio del medicinale per uso umano «Demoleum» (19A08065) ... Pag. 142\n\nModifica dell’autorizzazione all’immissione in commercio del medicinale per uso umano «Suguan M» (19A08075) ... Pag. 157\n\nMinistero dello sviluppo economico\n\nModifica dell’autorizzazione all’immissione in commercio del medicinale per uso umano «Rocuronio Kabi» (19A08068) ... Pag. 144\n\nAggiornamento dell’elenco degli esplosivi, degli accessori detonanti e dei mezzi d’accensione riconosciuti idonei all’impiego nelle attività estrative ai sensi dell’articolo 9 del decreto 6 febbraio 2018. (19A08060) ... Pag. 157\n\nModifica dell’autorizzazione all’immissione in commercio del medicinale per uso umano «Frobenpret» (19A08069) ... Pag. 144\n\nRegione autonoma Friuli-Venezia Giulia\n\nModifica dell’autorizzazione all’immissione in commercio dei medicinali per uso umano «Spiolto Respimat» e «Yanimo Respimat». (19A08070) ... Pag. 144\n\nCancellazione dal registro delle imprese della «Edilizia Over Torque società cooperativa» (19A08066) ... Pag. 158",
+   "loop_cut": null,
+   "s": 17.27658987045288,
+   "prompt_tokens": 2784,
+   "gen_tokens": 688,
+   "prefill_tps": 342.2312765337319,
+   "gen_tps": 75.86379315586875,
+   "peak_gb": 2.101976974
+  },
+  "gu_2020-07-08_170_p25": {
+   "text": "Contenuto della capsula molle di dutasteride:\nmonocaprilato di propilene glicole, tipo II;\nbutilidrossitoluene (E321).\n\nRivestimento della capsula molle:\ngelatina;\nglicerolo;\ntitanio diossido (E171);\ntrigliceridi (a catena media);\nlecitina (può contenere olio di soia).\n\nGranuli di tamsulosina:\nacido metacrilico-etilacrilato copolimero (1:1) dispersione 30% (contiene sodio laurilsolfato, polisorbato 80);\ncellulosa microcristallina;\nsebacato di dibutile;\npolisorbato 80;\nsilice colloidale idrata;\ncalcio stearato.\n\nInchiostro nero:\ngommalacca (E904);\nferro ossido nero (E172);\npropilene glicole (E1520) ;\nsoluzione di ammoniaca concentrata (E527);\npotassio idrossido (E525).\n\nProduttore responsabile del rilascio dei lotti:\nGenericon Pharma Gesellschaft M.B.H, Hafnerstrasse 211, Graz 8054 Austria;\nLaboratorios LEÔN FARMA, SA C/La Vallina, s/n, Poligono Industrial Navatejera, Villaquilambre-24008 (León) Spagna.\nIndicazioni terapeutiche:\ntrattamento dei sintomi da moderati a gravi dell’iperplasia prostatica benigna (IPB);\nriduzione del rischio di ritenzione urinaria acuta (RUA) e di intervento chirurgico in pazienti con sintomi di IPB da moderati a gravi.\n\nClassificazione ai fini della rimborsabilità\nPer tutte le confezioni sopracitate è adottata la seguente classificazione ai fini della rimborsabilità:\nclasse di rimborsabilità: apposita sezione della classe di cui all’art. 8, comma 10, lettera c) della legge 24 dicembre 1993, n. 537 e successive modificazioni, dedicata ai farmaci non ancora valutati ai fini della rimborsabilità, denominata Classe C (nn).\n\nClassificazione ai fini della fornitura\nPer tutte le confezioni sopracitate è adottata la seguente classificazione ai fini della fornitura:\nclassificazione ai fini della fornitura: RR - Medicinale soggetto a prescrizione medica\n\nStampati\nLe confezioni del medicinale devono essere poste in commercio con etichetta e fogli illustrativi conformi al testo allegato alla determina, di cui al presente estratto.\nÈ approvato il riassunto delle caratteristiche del prodotto allegato alla determina, di cui al presente estratto.\nIn ottemperanza all’art. 80 commi 1 e 3 del decreto legislativo 24 aprile 2006, n. 219 e successive modificazioni ed integrazioni il foglio illustrativo e le etichetta devono essere redatti in lingua italiana e, limitatamente ai medicinali in commercio nella Provincia di Bolzano, anche in lingua tedesca. Il titolare dell’A.I.C. che intende avvalersi dell’uso complementare di lingue estere, deve darne preventiva comunicazione all’AIFA e tenere a disposizione la traduzione giurata dei testi in lingua tedesca e/o in altra lingua estera. In caso di inosservanza delle disposizioni sull’etichettatura e sul foglio illustrativo si applicano le sanzioni di cui all’art. 82 del suddetto decreto legislativo.\n\nTutela brevettuale\nIl titolare dell’A.I.C., nei casi applicabili, è esclusivo responsabile del piano rispetto dei diritti di proprietà industriale relativi al medicinale di riferimento e delle vigenti disposizioni normative in materia brevettuale.\nIl titolare dell’A.I.C. è altresi responsabile del piano rispetto di quanto disposto dall’art. 14 comma 2 del decreto legislativo 24 aprile 2006, n. 219 e successive modificazioni ed integrazioni, in virtù del quale non sono incluse negli stampati quelle parti del riassunto delle caratteristiche del prodotto del medicinale di riferimento che si riferiscono a indicazioni o a dosaggi ancora coperti da brevetto al momento dell’immissione in commercio del medicinale.\n\nRapporti periodici di aggiornamento sulla sicurezza - PSUR\nAl momento del rilascio dell’autorizzazione all’immissione in commercio, la presentazione dei rapporti periodici di aggiornamento sulla sicurezza non è richiesta per questo medicinale. Tuttavia, il titolare dell’autorizzazione all’immissione in commercio deve controllare periodicamente se l’elenco delle date di riferimento per l’Unione europea (elenco EURD), di cui all’art. 107-quater, paragrafo 7) della direttiva 2010/84/CE e pubblicato sul portale web dell’Agenzia europea dei medicinali, preveda la presentazione dei rapporti periodici di aggiornamento sulla sicurezza per questo medicinale. In tal caso il titolare dell’autorizzazione all’immissione in commercio deve presentare i rapporti periodici di aggiornamento sulla sicurezza per questo medicinale in accordo con l’elenco EURD\nDecorrenza di efficacia della determina dal giorno successivo a quello della sua pubblicazione, per estratto, nella Gazzetta Ufficiale della Repubblica italiana.\n\n20A03507\nAutorizzazione all’immissione in commercio del medicinale per uso umano «Musrelan»\n\nEstratto determina AAM/AIC n. 82 del 26 giugno 2020\nProcedura europea n. DE/H/5311/001/DC.\nDescrizione del medicinale e attribuzione n. A.I.C.: è autorizzata l’immissione in commercio del medicinale MUSRELAN, nella forma e confazioni alle condizioni e con le specificazioni di seguito indicate:\ntitolare A.I.C.: Laboratoire Aguettant, con sede legale e domicilio fiscale in 69007 Lione, 1 Rue Alexander Fleming, Francia (FR);\nconfezione: «10 mg/ml soluzione iniettabile in siruga preriempita» 1 siringa preriempita in pp da 10 ml senza ago - A.I.C. n. 046044018 (in base 10) 1CX4VL (in base 32);\nconfezione: «10 mg/ml soluzione iniettabile in siruga preriempita» 10 siringhe preriempite in pp da 10 ml senza ago - A.I.C. n. 046044020 (in base 10) 1CX4VN (in base 32).\nForma farmaceutica: soluzione iniettabile in siruga preriempita.\nValidità prodotto integro: ventiquattro mesi.\nDopo l’apertura, il medicinale deve essere usato immediatamente.\nQuesto medicinale può essere conservato per un breve periodo di tempo a temperature non maggiori di 25 °C. Ad ogni modo, una volta rimosso inizialmente dalla conservazione refrigerata, il medicinale deve essere smaltito dopo trenta giorni.\nCondizioni particolari per la conservazione.\nConservare in frigorifero (2 °C - 8 °C). Non congelare.\nConservare la siruga preriempita nel rispettivo blister chiuso fino all’uso.\nPer le condizioni di conservazione dopo la prima apertura del medicinale, vedere il paragrafo 6.3.\nComposizione:\nprincipio attivo: suxametonio cloruro.\nCiascun ml di soluzione per iniezione contiene 10 mg di suxametonio cloruro anidro (come 11 mg di suxametonio cloruro diuro dirato).\nCiascuna siringa preriempita da 10 ml contiene 100 mg di suxametonio cloruro anidro (come 110 mg di suxametonio cloruro diuro dirato);\neccipienti:\ncloruro di sodio;\nacido succinico;",
+   "loop_cut": null,
+   "s": 37.97609519958496,
+   "prompt_tokens": 2784,
+   "gen_tokens": 2103,
+   "prefill_tps": 338.28575115262424,
+   "gen_tps": 70.85767432051311,
+   "peak_gb": 2.101976974
+  },
+  "gu_2022-05-26_122_p03": {
+   "text": "Revoca, su rinuncia, dell’autorizzazione all’immissione in commercio del medicinale per uso umano «Algimesil» (22A03080) .",
+   "loop_cut": 998,
+   "s": 15.302757740020752,
+   "prompt_tokens": 2784,
+   "gen_tokens": 544,
+   "prefill_tps": 341.64650844678613,
+   "gen_tps": 76.7180191160438,
+   "peak_gb": 2.101976974
+  },
+  "gu_2022-11-04_258_p29": {
+   "text": "SCHEDA DI PRESCRIZIONE CARTACEA DI UPADACITINIB (Rinvoq®)\nNEL TRATTAMENTO DELLA SPONDILITE ANCHILOSANTE\n\nDa compilarsi ai fini della rimborsabilità SSN a cura di centri ospedalieri o specialisti reumatologo e internista.\n\nCentro prescritto___\nMedico prescritto (cognome, nome) ___\nTel. ___ e-mail ___\n\nPaziente (cognome, nome) ___\nData di nascita ___ sesso M □ F □ ___ peso (Kg) ___\nCodice fiscale |_|",
+   "loop_cut": 1030,
+   "s": 17.183750867843628,
+   "prompt_tokens": 2784,
+   "gen_tokens": 672,
+   "prefill_tps": 336.96894428580384,
+   "gen_tps": 75.86245743640222,
+   "peak_gb": 2.101976974
+  },
+  "gu_2024-02-16_039_p02": {
+   "text": "DETERMINA 6 febbraio 2024.\nRegime di rimborsabilità e prezzo, a seguito di nuove indicazioni terapeutiche, del medicinale per uso umano «Rinvoq». (Determina n. 67/2024). (24A00884) .",
+   "loop_cut": 1054,
+   "s": 16.314882040023804,
+   "prompt_tokens": 2784,
+   "gen_tokens": 608,
+   "prefill_tps": 336.3816324577233,
+   "gen_tps": 76.28066756477091,
+   "peak_gb": 2.101976974
+  }
+ }
+}
