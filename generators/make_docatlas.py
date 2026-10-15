@@ -15,7 +15,8 @@ Images: long side 1754 px (A4 at 150 dpi), as every other page set. Fixed before
 
 --train: training pages for the fine-tuning op3 (2026-10-15), from the documents NOT reserved for test, chosen for what v1.1
 reads badly: blanks drawn as rows of dots or underscores (it writes the row and stops), tick boxes (it repeats empty boxes), and
-amounts of a million or more. At most one page per document; every other page taken from the scanned version (level 2), the
+amounts of a million or more. Markdown escapes are removed from their ground truth (plain(unescape=True)). At most one page per
+document; every other page taken from the scanned version (level 2), the
 others clean (level 1). -> external/docatlas_train."""
 import argparse, json, os, pathlib, random, re
 from PIL import Image
@@ -29,8 +30,15 @@ PATTERNS = {"date": rf"\b\d{{1,2}}°?\s+(?:{MONTHS})\s+\d{{4}}\b|\b\d{{1,2}}[/.-
             "iban": r"\bIT\d{2}[A-Z]\d{10}[A-Z0-9]{12}\b", "cig": r"\bCIG:?\s*[A-Z0-9]{10}\b", "email": r"\b[\w.+-]+@[\w-]+(?:\.[\w-]+)+\b"}
 
 
-def plain(markdown):
+MD_ESCAPE = re.compile(r"\\([\\`*_{}\[\]()#+\-.!|>~<])")
+
+
+def plain(markdown, unescape=False):
+    """unescape: markdown escapes ("\\_" for every underscore of a blank) back to the characters printed on the page. Off for the
+    test sets, whose ground truth was fixed and read before this was found (2026-10-15); their entities hold no escape."""
     t = markdown.replace("<!-- image -->", "")
+    if unescape:
+        t = MD_ESCAPE.sub(r"\1", t)
     t = re.sub(r"</t[dh]>\s*", "\n", t); t = re.sub(r"<[^>]+>", "", t)
     return "\n".join(l.strip() for l in t.split("\n") if l.strip())
 
@@ -68,7 +76,7 @@ def train_set(clean, scan, rng, caps={"blank": 45, "box": 20, "million": 11}):
             taken += 1
             used.add(d); scanned = len(meta) % 2 == 1; r = (scan if scanned else clean)[i]
             img = Image.open(SRC / ("docatlas_it_scan" if scanned else "docatlas_it") / r["image"]).convert("RGB")
-            meta.append(save(img, out, i, plain(clean[i]["markdown"]), {"level": 2 if scanned else 1, "need": need, "document": d}))
+            meta.append(save(img, out, i, plain(clean[i]["markdown"], unescape=True), {"level": 2 if scanned else 1, "need": need, "document": d}))
     json.dump(meta, open(out / "meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(out, len(meta), "pages", {n: sum(m["need"] == n for m in meta) for n in caps}, "scanned", sum(m["level"] == 2 for m in meta))
 

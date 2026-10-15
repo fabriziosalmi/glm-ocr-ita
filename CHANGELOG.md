@@ -2,6 +2,11 @@
 
 Versions of the released model and of the `glmocr` package go together. Dates are those of the measurements.
 
+## Unreleased
+
+- **Training answers checked against the teacher's reading** (`experiments/ft_targets.py`, checks in `glmocr/metrics.py`): a page is left out when its ground truth lacks what the teacher reads, holds fewer tick boxes or blanks, is in another order, or flattens a form into one line. `--max-missing 2 --min-order 0` gives back the answers of op1 and op2 byte for byte.
+- **DocAtlas training pages** without markdown escapes (`make_docatlas.py --train`); the test sets are unchanged.
+
 ## v1.2.0 - 2026-10-15
 
 Same weights as v1.0.0 and v1.1.0 (same SHA-256); PDFs are read differently.

@@ -2,6 +2,8 @@
 
 Quality is three numbers (rule 5 of docs/ROADMAP.md): entity recall, pages with a skipped block, repetition loops.
 """
+import collections
+import difflib
 import random
 import re
 import unicodedata
@@ -80,6 +82,36 @@ def loop_start(text, max_period=400, min_repeats=4, min_span=160):
         if k >= min_repeats and k * p >= min_span:
             return n - k * p, p
     return None
+
+
+# Checks of a training answer against the teacher's reading of the same page (experiments/ft_targets.py). Letters and digits
+# only, so that spacing does not count: a code read box by box ("4 1 L 4 5") is the same text as "41L45".
+
+def text_missing(reference, reading, n=5):
+    """Share of the reading absent from the reference: runs of n letters and digits, each counted as often as it occurs.
+    It includes the reading's own misreads."""
+    g, h = alnum(reference), alnum(reading)
+    have = collections.Counter(g[i:i + n] for i in range(len(g) - n + 1)); gone = 0
+    for i in range(len(h) - n + 1):
+        if have[h[i:i + n]]:
+            have[h[i:i + n]] -= 1
+        else:
+            gone += 1
+    return gone / max(len(h) - n + 1, 1)
+
+
+def in_order(reference, reading):
+    """Share of the reading's letters and digits that the reference holds in the same order."""
+    g, h = alnum(reference), alnum(reading)
+    return sum(b.size for b in difflib.SequenceMatcher(None, g, h, autojunk=False).get_matching_blocks()) / max(len(h), 1)
+
+
+FORM_MARKS = {"box": r"[☐☒☑□■]", "blank": r"(?:\.\s?){5,}|_{5,}|…{3,}"}
+
+
+def form_gap(reference, reading):
+    """Tick boxes and blanks (rows of dots or underscores) the reading holds beyond the reference, by kind."""
+    return {k: len(re.findall(r, reading)) - len(re.findall(r, reference)) for k, r in FORM_MARKS.items()}
 
 
 def is_skipped(text, reference):

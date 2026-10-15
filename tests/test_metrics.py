@@ -110,3 +110,24 @@ def test_a_page_with_similar_rows_is_not_a_loop():
     assert metrics.loop_start("Totale 0,00 €\n" * 3) is None           # three equal lines, under the span
     assert metrics.loop_start("") is None
 
+
+
+def test_training_answer_checks():
+    """experiments/ft_targets.py: spacing never counts; a missing or moved block does."""
+    page = "Codice fiscale RSSMRA80A01H501U\nNome Mario\nCognome Rossi\nData di nascita 01/01/1980"
+    boxed = "Codice fiscale R S S M R A 8 0 A 0 1 H 5 0 1 U\nNome Mario\nCognome Rossi\nData di nascita 01/01/1980"
+    assert metrics.text_missing(page, boxed) == 0 and metrics.in_order(page, boxed) == 1
+    assert metrics.text_missing("Nome Mario\nCognome Rossi", page) > 0.5                 # the reference lacks most of the page
+    moved = "Data di nascita 01/01/1980\nCognome Rossi\nNome Mario\nCodice fiscale RSSMRA80A01H501U"
+    # all there, in another order: only the runs across block edges count as missing, under the 0.20 bar; the order check catches it
+    assert metrics.text_missing(moved, page) < 0.2 and metrics.in_order(moved, page) < 0.6
+    assert metrics.form_gap("Uso domestico", "☐ Uso domestico\n☐ Altro\nFirma ..........") == {"box": 2, "blank": 1}
+
+
+def test_docatlas_unescape():
+    import sys
+    sys.path.insert(0, str(__import__("glmocr.corpus", fromlist=["ROOT"]).ROOT / "generators"))
+    from make_docatlas import plain
+    md = r"Il sottoscritto \_\_\_ nato a \*Roma\* il 1\. marzo"
+    assert plain(md) == md                                                            # the test sets keep their ground truth
+    assert plain(md, unescape=True) == "Il sottoscritto ___ nato a *Roma* il 1. marzo"
