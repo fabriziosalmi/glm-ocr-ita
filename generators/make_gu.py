@@ -13,7 +13,11 @@ Ground truth. The text layer in its own order (column by column, as printed), wi
 Entities. Taken by pattern from the ground truth, running header and page number left out (entities() says why): dates written out ("6 settembre 2005") or in figures ("1-9-2023"), act numbers
 ("n. 206"), amounts with a decimal comma ("1.234,56"). Whitespace is ignored when they are matched, so a line break inside one
 does not matter. Fixed before any model read a page.
-Images: rendered from the PDF with the long side at 1754 px (A4 at 150 dpi), as every other page set."""
+Images: rendered from the PDF with the long side at 1754 px (A4 at 150 dpi), as every other page set.
+
+--train: training pages for the fine-tuning op3 (2026-10-15) -> external/gu_train. Other issues (seed + 1), never one of
+gu_dev or gu_test; from each, the pages with an amount of a million or more ("29.467.745,94", which v1.1 sometimes writes
+"29.467,745,94") or a row of dot leaders, else none. Level 1 (born digital)."""
 import argparse, json, pathlib, random, re, time, urllib.request
 import pypdfium2 as pdfium
 
@@ -69,7 +73,26 @@ def entities(text):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("--years", type=int, nargs="+", default=list(range(2019, 2026)))
     ap.add_argument("--issues-per-year", type=int, default=6); ap.add_argument("--pages", type=int, default=4)
-    ap.add_argument("--seed", type=int, default=20261014); a = ap.parse_args()
+    ap.add_argument("--seed", type=int, default=20261014); ap.add_argument("--train", type=int, default=0, help="pages for gu_train (0: build dev and test)")
+    a = ap.parse_args()
+    if a.train:
+        taken = {m["issue"] for r in ("dev", "test") for m in json.load(open(ROOT / f"external/gu_{r}/meta.json"))}
+        rng = random.Random(a.seed + 1); out = ROOT / "external/gu_train"; out.mkdir(exist_ok=True); meta = []
+        want = re.compile(r"\b\d{1,3}\.\d{3}\.\d{3},\d{2}\b|(?:\.\s?){12,}")
+        pool = [(y, *iss) for y in a.years for iss in issues(y) if f"{iss[0]} n. {iss[1]}" not in taken]
+        for year, date, number in rng.sample(pool, len(pool)):
+            if len(meta) >= a.train: break
+            pdf = pdfium.PdfDocument(str(issue_pdf(date, number)))
+            good = [i for i in range(1, len(pdf)) if want.search(page_text(pdf[i]))]
+            for i in rng.sample(good, min(2, len(good))):
+                page = pdf[i]; pid = f"gu_{date}_{int(number):03d}_p{i + 1:02d}"; text = page_text(page)
+                img = page.render(scale=1754 / max(page.get_size())).to_pil().convert("RGB")
+                img.save(out / f"{pid}.png"); (out / f"{pid}.txt").write_text(text, encoding="utf-8")
+                meta.append({"id": pid, "gt": "pdf_text_layer", "level": 1, "tpl": "gazzetta", "lang": "it", "rot90": False,
+                             "size": list(img.size), "issue": f"{date} n. {number}", "page": i + 1, "entities": entities(text)})
+            print(date, number, len(good), "pages wanted")
+        json.dump(meta, open(out / "meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print(out, len(meta), "pages,", sum(len(m["entities"]) for m in meta), "entities"); raise SystemExit
     SRC.mkdir(parents=True, exist_ok=True); rng = random.Random(a.seed)
     drawn = [(y, *iss) for y in a.years for iss in rng.sample(issues(y), a.issues_per_year)]
     sets = {"dev": [], "test": []}

@@ -11,7 +11,12 @@ Ground truth: the dataset's markdown with its HTML table tags removed (one cell 
 Entities, by pattern on the ground truth, as for the Gazzetta (generators/make_gu.py) plus the codes of Italian paperwork:
 dates, act numbers, amounts with a decimal comma, VAT numbers, tax codes, IBAN, CIG, e-mail and PEC addresses; and every
 distinct word of 8 letters or more (entities() says why).
-Images: long side 1754 px (A4 at 150 dpi), as every other page set. Fixed before any model read a page."""
+Images: long side 1754 px (A4 at 150 dpi), as every other page set. Fixed before any model read a page.
+
+--train: training pages for the fine-tuning op3 (2026-10-15), from the documents NOT reserved for test, chosen for what v1.1
+reads badly: blanks drawn as rows of dots or underscores (it writes the row and stops), tick boxes (it repeats empty boxes), and
+amounts of a million or more. At most one page per document; every other page taken from the scanned version (level 2), the
+others clean (level 1). -> external/docatlas_train."""
 import argparse, json, os, pathlib, random, re
 from PIL import Image
 
@@ -41,11 +46,40 @@ def entities(text):
     return out
 
 
+NEEDS = {"blank": r"\.{10,}|(?:\. ){8,}|_{10,}|…{4,}", "box": r"[☐☒☑□]", "million": r"\b\d{1,3}\.\d{3}\.\d{3},\d{2}\b"}
+
+
+def save(img, out, i, text, extra):
+    k = 1754 / max(img.size)
+    if k < 1: img = img.resize((round(img.width * k), round(img.height * k)), Image.LANCZOS)
+    img.save(out / f"{i}.png"); (out / f"{i}.txt").write_text(text, encoding="utf-8")
+    return {"id": i, "gt": "docx_render", "tpl": "docatlas", "lang": "it", "rot90": False, "size": list(img.size), **extra, "entities": entities(text)}
+
+
+def train_set(clean, scan, rng, caps={"blank": 45, "box": 20, "million": 11}):
+    test = set(json.load(open("external/docatlas_test_docs.json"))); used = set(); meta = []
+    out = pathlib.Path("external/docatlas_train"); out.mkdir(exist_ok=True)
+    for need, cap in caps.items():
+        pool = [i for i in sorted(clean) if i in scan and i.rsplit("_p", 1)[0] not in test | used and re.search(NEEDS[need], clean[i]["markdown"])]
+        rng.shuffle(pool); taken = 0
+        for i in pool:
+            d = i.rsplit("_p", 1)[0]
+            if d in used or taken == cap: continue
+            taken += 1
+            used.add(d); scanned = len(meta) % 2 == 1; r = (scan if scanned else clean)[i]
+            img = Image.open(SRC / ("docatlas_it_scan" if scanned else "docatlas_it") / r["image"]).convert("RGB")
+            meta.append(save(img, out, i, plain(clean[i]["markdown"]), {"level": 2 if scanned else 1, "need": need, "document": d}))
+    json.dump(meta, open(out / "meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(out, len(meta), "pages", {n: sum(m["need"] == n for m in meta) for n in caps}, "scanned", sum(m["level"] == 2 for m in meta))
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("--docs", type=int, default=40); ap.add_argument("--seed", type=int, default=20261014)
-    a = ap.parse_args(); rng = random.Random(a.seed)
+    ap.add_argument("--train", action="store_true"); a = ap.parse_args(); rng = random.Random(a.seed)
     clean = {r["id"]: r for r in map(json.loads, open(SRC / "docatlas_it/labels.jsonl"))}
     scan = {r["id"]: r for r in map(json.loads, open(SRC / "docatlas_it_scan/labels.jsonl"))}
+    if a.train:
+        train_set(clean, scan, random.Random(a.seed + 2)); raise SystemExit
     by_doc = {}
     for i in sorted(clean):
         if i in scan and len(plain(clean[i]["markdown"])) > 300: by_doc.setdefault(i.rsplit("_p", 1)[0], []).append(i)

@@ -212,3 +212,10 @@ role = "test"
 role = "train"
 [dataset."external/scientific_test"]
 role = "test"
+# Training pages for the fine-tuning op3 (2026-10-15), chosen for what v1.1 reads badly: blanks drawn as dots, tick boxes,
+# amounts of a million or more (generators/make_docatlas.py --train, from documents not reserved for test; make_gu.py --train,
+# from issues that are in neither gu_dev nor gu_test).
+[dataset."external/docatlas_train"]
+role = "train"
+[dataset."external/gu_train"]
+role = "train"
