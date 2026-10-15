@@ -8,6 +8,7 @@ from .corpus import WORK
 from .metrics import MAX_TOKENS, is_loop, loop_start
 
 PROMPT = "Text Recognition:"
+TASK_PROMPTS = {"text": PROMPT, "table": "Table Recognition:", "formula": "Formula Recognition:"}   # GLM-OCR's own, per region kind
 # mlx-vlm renders the chat template with thinking switched off, which for GLM-OCR appends "/nothink" to the request and
 # "<think></think>\n" after "<|assistant|>\n". The reference implementation (transformers) sends neither, and the model
 # reads differently: with the official prompt mlx-vlm returns the same text as the reference on 7 pages of 8, among them a
@@ -64,22 +65,27 @@ class Reader:
         t = time.time()
         self.model, self.proc = load(str(model), adapter_path=adapter)
         self.load_s = time.time() - t
-        self.prompt = apply_chat_template(self.proc, self.model.config, PROMPT, num_images=1)
         assert prompt_style in ("official", "mlx")
         self.prompt_style = prompt_style
-        if prompt_style == "official":
-            self.prompt = official_prompt(self.prompt)
-            assert self.prompt.endswith(PROMPT + "<|assistant|>\n"), repr(self.prompt[-80:])
+        self.prompts = {}
+        for task, text in TASK_PROMPTS.items():
+            pr = apply_chat_template(self.proc, self.model.config, text, num_images=1)
+            if prompt_style == "official":
+                pr = official_prompt(pr)
+                assert pr.endswith(text + "<|assistant|>\n"), repr(pr[-80:])
+            self.prompts[task] = pr
+        self.prompt = self.prompts["text"]
         self.max_tokens = max_tokens
         self.retry_penalty = retry_penalty
         eos = self.model.config.eos_token_id
         self.stop = LoopStop(self.proc.tokenizer, eos if isinstance(eos, (list, tuple)) else [eos]) if stop_loops else None
         self._tmp = tempfile.TemporaryDirectory(prefix="glmocr_")
 
-    def read(self, image, scale=1.0, penalty=None):
+    def read(self, image, scale=1.0, penalty=None, task="text"):
         """image: a path or a PIL image. scale: resize factor per side before OCR (Lanczos); 1.0 hands a file over untouched.
         penalty: a repetition penalty for this one read (mlx-vlm's, over its default context). With retry_penalty set on the
-        reader, a page that loops is read a second time with that penalty, and the second reading is kept by keep_retry()."""
+        reader, a page that loops is read a second time with that penalty, and the second reading is kept by keep_retry().
+        task: text, table or formula, the prompt GLM-OCR uses for that kind of region (TASK_PROMPTS); a whole page is "text"."""
         import mlx.core as mx
         from PIL import Image
         if isinstance(image, (str, pathlib.Path)) and scale == 1.0:
@@ -93,9 +99,9 @@ class Reader:
             path = str(pathlib.Path(self._tmp.name) / "page.png")
             im.save(path)
         mx.reset_peak_memory()
-        out = self._generate(path, penalty)
+        out = self._generate(path, penalty, task)
         if out["looped"] and penalty is None and self.retry_penalty:
-            second = self._generate(path, self.retry_penalty)
+            second = self._generate(path, self.retry_penalty, task)
             first, kept = out, keep_retry(out, second)
             out = dict(second if kept else first)
             out["retry"] = {"penalty": self.retry_penalty, "kept": kept,
@@ -107,14 +113,14 @@ class Reader:
         guard.watch(out["peak_gb"], self.ceiling)
         return out
 
-    def _generate(self, path, penalty):
+    def _generate(self, path, penalty, task="text"):
         import mlx.core as mx
         from mlx_vlm import generate
         t = time.time()
         extra = {"stopping_criteria": self.stop.start()} if self.stop else {}
         if penalty:
             extra["repetition_penalty"] = penalty
-        r = generate(self.model, self.proc, self.prompt, image=path, max_tokens=self.max_tokens, temperature=0.0, verbose=False, **extra)
+        r = generate(self.model, self.proc, self.prompts[task], image=path, max_tokens=self.max_tokens, temperature=0.0, verbose=False, **extra)
         text, cut = r.text, None
         if self.stop and self.stop.loop:   # keep what came before the repetition and one unit of it
             hit = loop_start(text)
