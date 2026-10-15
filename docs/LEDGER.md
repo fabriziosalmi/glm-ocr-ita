@@ -311,3 +311,17 @@ Written on 2026-10-15, before any model or the text layer read a page of this se
 | 2026-10-15 | v1.1 vs BASE | 1 | Text tests passed: BASE 56.0%, v1.1 62.5% of 184. Paired over pages: **+6.9 [+2.2, +12.4] better**; on the tests not taken from the PDF +10.5 [+3.4, +19.4]. Not the loops: on the 78 pages where neither run hit the token limit, +7.1 [+2.3, +13.1]. No page where v1.1 passes fewer tests than BASE. English pages alone (45): +4.0 [+0.0, +9.9] not worse. Ahead on multi-column (85 against 62), tables (62 against 46), tiny text (90 against 81) |
 | 2026-10-15 | auto vs v1.1 | 2 | 76.1% of tests; paired **+12.2 [+5.8, +19.6] better**, on independent tests +8.2 [+2.0, +16.3] better. 29 of 80 pages from the text layer, none of them worse than v1.1's reading; on filled forms 100 against 65, on multilingual PDFs 100 against 50, on tiny text 100 against 90. The other 51 pages are v1.1's own readings |
 | 2026-10-15 | | note | The absolute numbers are not comparable with the benchmark's table (GLM-OCR 71.0 on text there): its GLM-OCR runs the SDK, layout detection and a read per region at 200 dpi; here a page is read whole at 150 dpi. 80 pages and 184 tests: a hint at this scale, not a ranking |
+
+## `external/omnidoc_test2` (OmniDocBench v1.5, 200 pages) - open
+
+Written on 2026-10-15, before any model or the layout detector saw a page of this set. 92 pages English, 94 Chinese, 14 mixed, disjoint from `omnidoc_200` and `omnidoc_dev` (`docs/EXTERNAL.md`). Phase 3 of the OmniDocBench plan (`ROADMAP.md`): the region pipeline chosen on `omnidoc_dev` (Phase 1), read once here. Scored with `experiments/omnidoc_eval.py --full` (formulas by edit distance, said as such; `overall_edit` is not the official overall) and compared with `experiments/omnidoc_compare.py --corpus external/omnidoc_test2`: edit distance x100, paired over pages, bootstrap 2000, seed 0.
+
+**Configuration.** Regions: `experiments/layout_regions.py` (GLM-OCR SDK 0.1.5, default settings), `region_read.py` (penalty 1.1, 8192 tokens, the SDK's prompts), `region_format.py`. BASE `odbt2R_bf16`, v1.1 `odbt2R_v8d8e8op1`. Whole page, for question 2: v1.1 `odbt2_v8d8e8op1_1.0_op_rp110` (150 dpi, 3000 tokens, retry 1.1, as on dev).
+
+**Questions and thresholds.**
+
+1. v1.1 against BASE, both by regions, on text blocks: English and Chinese each not worse (lower bound above -1.5); a "worse" on English is a finding against v1.1, on Chinese an alert (in scope for OmniDocBench since 2026-10-15). Formulas, tables, reading order and mixed pages are reported, not decided.
+2. v1.1 by regions against v1.1 whole page: does the dev result hold? "Better" on text blocks (all pages) if the lower bound is above 0. Per language and per page type reported; magazines watched (on dev 4.1 -> 10.3 by regions, not shown).
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
