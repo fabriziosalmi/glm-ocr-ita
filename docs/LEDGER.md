@@ -241,7 +241,7 @@ Written on 2026-10-14, before any model read these pages (they arrived that even
 | 2026-10-15 | v1.1 vs BASE | 2, adversarial | 79.3 -> 74.0%, -5.3 [-11.3, -0.7] **worse** (10 pages, 150 entities). The pages repeat near-identical sentences by design: `is_loop` flags 8 of 10 outputs of each model, both run to the token limit on 4 to 6 pages. Losses: amounts of tens of millions written with a comma as thousands separator ("29.467,745,94", 5 of 40 against 1 of 40 for BASE), two PEC addresses misspelt, a CIG and a reference read wrong. The same amounts on the Gazzetta (`gu_dev`, 113 amounts of a million or more) are read better by v1.1, 108 against 105: an alert on this kind of page, not a general loss on Italian amounts |
 | 2026-10-15 | both | 3, contracts multilingual | 0 of 120 entities for both models: the pages are rendered so small and soft (1240 px, print a few pixels high) that the codes, dates and amounts cannot be read by either. The set measures nothing as made; not used |
 
-## `external/docatlas_it_test` and `external/docatlas_it_scan_test` - open
+## `external/docatlas_it_test` and `external/docatlas_it_scan_test` - closed: not worse
 
 Written on 2026-10-14, before any model read these pages. 40 real Italian documents of DocAtlas (one page each), clean and the same pages made to look scanned (`scan_fx.py` profiles: flatbed, feeder, photocopy, fax, phone, low-quality PDF; 10 of 40 left clean). Entities: long words (2538) and Italian codes, dates, amounts (118), `generators/make_docatlas.py`. Tags: `docatlas_bf16_1.0_op` `docatlas_v8d8e8op1_1.0_op_rp110` `docatlasscan_bf16_1.0_op` `docatlasscan_v8d8e8op1_1.0_op_rp110`. v1.1 in one pass with `--retry-penalty 1.1`, with the reader of that night (loop guard ignoring runs of punctuation) on both sides. Read on the Mac mini.
 
@@ -253,6 +253,10 @@ Written on 2026-10-14, before any model read these pages. 40 real Italian docume
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
 | 2026-10-15 | v1.1 vs BASE | 1, clean | 98.4 -> 98.3%, -0.1 [-0.8, +0.4] not worse (40 pages) |
+| 2026-10-15 | v1.1 vs BASE | 1, scanned | 98.4 -> 98.1%, -0.3 [-1.0, +0.2] not worse (40 pages) |
+| 2026-10-15 | both | 2, what the scan costs | BASE 0.0 points, v1.1 -0.2 points: the scan profiles of DocAtlas cost almost nothing to either model |
+| 2026-10-15 | | note | v1.1 loses the same page in both sets (6 words): it writes a row of dots for a blank to fill in and stops there, before the rest of the page. Dot leaders again, as on the Gazzetta and OmniDocBench: the next fine-tuning should hold pages with blanks drawn as dots, whole |
+| 2026-10-15 | | verdict | **v1.1 is not worse than the original on 40 real Italian documents, clean or scanned.** |
 
 ## `external/realistic_test` (20 pages) and `external/scientific_test` (100 pages) - open
 
@@ -267,3 +271,5 @@ Written on 2026-10-15, before any model read a page of either set. Two chatgpt s
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-10-15 | v1.1 vs BASE | 1, realistic | 99.1 -> 99.7%, +0.6 [+0.0, +2.0] not worse (20 pages, 320 entities); no loop on either side |
+| 2026-10-15 | both | 2, realistic by level | BASE 97.3 / 100 / 100 / 98.8, v1.1 100 / 100 / 100 / 98.8 (levels 1 to 4). Too easy for both: the set cannot tell two models apart |
