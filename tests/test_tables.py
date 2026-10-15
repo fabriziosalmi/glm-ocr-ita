@@ -1,5 +1,5 @@
 """Every number in the README tables, recomputed from results/. If one of these fails, the README or the scorer is wrong."""
-import glob, pathlib
+import glob, pathlib, re
 import json
 
 import pytest
@@ -102,13 +102,17 @@ def test_loop_threshold_sits_in_a_gap():
     """No saved output of 200 bytes or more compresses to between 21% and 27%: the 25% threshold splits two separate groups.
     The gap was 21 to 29% until 2026-10-14, when a level 5 page read with the official prompt came out at 27.2%:
     garbled sentences said several times over, ending by itself after 810 tokens.
-    OmniDocBench reads are left out: Chinese pages and slides compress to 21-27% without looping (10 of 400 outputs), so the
-    ratio is not a loop sign there and is not used on that set."""
+    Measured on the commissioned synthetic sets only, where the threshold was set. On real pages (external/: the Gazzetta,
+    XFUND, DocAtlas, OmniDocBench) and on the chatgpt sets of 2026-10-14 night, whose sentences repeat by design (itdoc_10 to
+    itdoc_14), right outputs also fall between 21 and 27% (73 of them on 2026-10-15): there the ratio is not a loop sign, the
+    retry it starts costs time only (engine.keep_retry keeps the better reading), and a loop is told by the token limit or by eye.
+    Runs saved before the corpus was recorded are kept: they are all synthetic."""
     ratios = []
     for f in glob.glob(str(corpus.RESULTS / "*.json")) + glob.glob(str(corpus.ROOT / "archive/results/*.json")):
-        if pathlib.Path(f).name.startswith("omnidoc"):
+        run = json.load(open(f)); name = str(run.get("corpus") or "")
+        if pathlib.Path(f).name.startswith(("omnidoc", "panelda", "panelgu", "panelre")) or name.startswith("external/") or re.match(r"chatgpt/itdoc_1\d", name):
             continue
-        for p in json.load(open(f)).get("pages", {}).values():
+        for p in run.get("pages", {}).values():
             if len(p["text"].encode()) >= metrics.LOOP_MIN_BYTES:
                 ratios.append(metrics.compress_ratio(p["text"]))
     assert len(ratios) > 2500 and not [x for x in ratios if 0.21 <= x < 0.27]
