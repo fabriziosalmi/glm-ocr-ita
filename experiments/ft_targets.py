@@ -24,7 +24,7 @@ text. Four checks against the teacher's reading:
 `--max-missing 2 --min-order 0` gives back the answers of op1 and of op2's comb-field pages, made before these checks.
 --tail-only (2026-10-16, for op5): keep only the pages where the teacher stops before the ground truth's last line
 (metrics.last_line_missing), the habit found on ocr-bench-v1; the answer holds that line, as every answer holds the ground truth's
-words. The summary counts those pages among the kept ones in any case (op1: 29 of 91). For sets whose ground truth is in reading
+words. The summary counts those pages among the kept ones in any case (op1: 28 of 91). For sets whose ground truth is in reading
 order only.
 """
 import argparse, collections, difflib, json, os, pathlib, re, unicodedata

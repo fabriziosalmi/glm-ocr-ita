@@ -138,5 +138,11 @@ def test_last_line_missing():
     ref = "REFERTO\nEmoglobina 13,5 g/dL\n\nREFERTO FIRMATO DIGITALMENTE DAL DIRIGENTE MEDICO: DOTT. PAOLO RAGGI\n"
     assert metrics.last_line_missing(ref, "REFERTO\nEmoglobina 13,5 g/dL")
     assert not metrics.last_line_missing(ref, "REFERTO\nEmoglobina 13,5 g/dL\nREFERTO FIRMATO DIGITALMENTE DAL DIRIGENTE MEDICO: DOTT. PAOLO RAGG1")
+    para = ("Intro\nLe tubazioni di processo sono realizzate in acciaio inossidabile AISI 316L. L'importo contrattuale ammonta a "
+            "complessivi 64.557,07 euro come da SAL approvato. Tutti i punti bassi sono provvisti di pendenze minime per lo svuotamento.")
+    wrapped = ("Intro\nLe tubazioni di processo sono realizzate in acciaio\ninossidabile AISI 316L. L'importo contrattuale ammonta a\n"
+               "complessivi 64.557,07 euro come da SAL approvato. Tutti\ni punti bassi sono provvisti di pendenze minime per lo svuotamento.")
+    assert not metrics.last_line_missing(para, wrapped)   # one line in the reference, four in the reading
+    assert metrics.last_line_missing(para, "Intro\nAltro testo della pagina, non la sua chiusura")
     assert not metrics.last_line_missing("", "anything")
     assert metrics.last_line_missing(ref, "")

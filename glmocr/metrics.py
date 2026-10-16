@@ -114,15 +114,27 @@ def form_gap(reference, reading):
     return {k: len(re.findall(r, reading)) - len(re.findall(r, reference)) for k, r in FORM_MARKS.items()}
 
 
-def last_line_missing(reference, reading, match=0.5):
-    """The reference's last line is not in the reading: no line of the reading is that close to it (difflib ratio of the squashed
-    lines). Where the model stops before a page's closing line, under a rule after blank space (ocr-bench-v1, docs/ROADMAP.md).
-    Meaningful only where the reference is in reading order: not XFUND's annotation order."""
+def last_line_missing(reference, reading, match=0.5, wrapped=0.8):
+    """The reference's last line is not in the reading: no line of the reading reaches `match` (difflib ratio of the squashed text)
+    and no run of two or more consecutive lines joined reaches `wrapped`. Runs, because a paragraph that is one line in the
+    reference is wrapped by the model (gemini itdoc_p_0346, 2026-10-16); a stricter bar for them, because joined header lines that
+    share a name with the closing line reach 0.53 to 0.55 (ocrbench_test doc_064, doc_076). Where the model stops before a page's
+    closing line, under a rule after blank space (ocr-bench-v1, docs/ROADMAP.md). A line read in part can still count as found:
+    what is measured is a closing line left out. Meaningful only where the reference is in reading order: not XFUND's annotation order."""
     ref = [l for l in reference.split("\n") if l.strip()]
     if not ref:
         return False
-    last = squash(ref[-1])
-    return max((difflib.SequenceMatcher(None, last, squash(l)).ratio() for l in reading.split("\n") if l.strip()), default=0) < match
+    last = squash(ref[-1]); lines = [squash(l) for l in reading.split("\n") if l.strip()]
+    for i in range(len(lines)):
+        run = ""
+        for n, l in enumerate(lines[i:]):
+            run += l
+            r = difflib.SequenceMatcher(None, last, run).ratio()
+            if r >= (wrapped if n else match):
+                return False
+            if len(run) >= len(last):
+                break
+    return True
 
 
 def is_skipped(text, reference):
