@@ -51,6 +51,8 @@ Commissioned with `DATASET_PROMPT.md`, each renderer written by a different mode
 | `gemini/itdoc_d`, `_e`, `_f` | 1500 each | 20636, 18929, 18650 | 12 each | see their README | **train** | pass |
 | `gemini/itdoc_g` to `_z` | 1500 each, 30000 in all | about 20000 each | 12 each | one kind of Italian document per set (deeds, vehicle papers, risk assessments, residence permits, waste forms, ...) | **train** | pass; the first run does not use them |
 
+`ocr-bench-v1` (2026-10-15, the owner's own stress set, generated elsewhere by its own Python renderer): 100 pages of 1654 x 2338 at 200 dpi, 10 kinds of 10 (dense financial tables, legal deeds with stamps and signatures, thermal receipts, archival gazettes, datasheets, tax forms, laboratory reports, shipping manifests, camera captures with keystone and page curl, scans with skew up to 15 degrees), 45 Italian, 45 English, 10 mixed. Cut by `generators/make_ocrbench.py` into `external/ocrbench_test` (50, **test**) and `external/ocrbench_train` (50, **train**), 5 pages of each kind on each side. Its PDFs are the same PNGs with no text layer. Its Italian has no accents, in the image and in the ground truth alike. Entities drawn from the ground truth as for `scientific_test`.
+
 Also there, with no role:
 
 - `spark/itdoc_b24`: a 24-page preview of `spark/itdoc_b`. It is the test set's renderer and seed, so it is treated as test: do not read it.

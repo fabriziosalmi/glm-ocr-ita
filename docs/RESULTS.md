@@ -2,6 +2,26 @@
 
 The full record of the measurements behind each release, newest first, moved here from the README on 2026-10-15 unchanged. Every number in these tables is recomputed from `results/` by the test suite (`tests/test_tables.py`, and `tests/test_release.py` where the page sets are on the machine). Each test-set read had its question and threshold written in `LEDGER.md` before it ran.
 
+## Since v1.2.0 (not released yet)
+
+Same weights. Two measurements and one new way of reading a page (`docs/LEDGER.md`).
+
+**Region mode** (`glmocr infer --regions`, `glmocr/regions.py`). A page read after GLM-OCR's own pipeline: the layout detector of its SDK ([github.com/zai-org/glm-ocr](https://github.com/zai-org/glm-ocr), package `glmocr` 0.1.5, Apache-2.0, PP-DocLayoutV3) finds the regions and their reading order, each region is read alone by the MLX reader with the prompt of its kind (text, table, formula), and the SDK's formatter puts them together; the SDK's settings are kept (repetition penalty 1.1, 8192 tokens per region). The SDK runs unmodified in its own PyTorch environment, not included here (`NOTICE`).
+
+| OmniDocBench v1.5, `omnidoc_test2` (200 pages: 92 English, 94 Chinese, 14 mixed) | Original, whole page | v1.1.0, whole page | Original, regions | **v1.1.0, regions** |
+|---|---|---|---|---|
+| Overall: (text + table TEDS + formulas) / 3, formulas by edit distance | - | 64.1 | 93.8 | **93.7** |
+| Text blocks, edit distance x100 (lower is better), the evaluator's page average | - | 9.9 | 3.9 | **3.9** |
+| Tables, TEDS | - | 18.0 | 93.4 | **92.6** |
+| Formulas, edit distance x100 | - | 15.6 | 8.0 | **7.8** |
+
+- **v1.1.0 against the original, both by regions:** text blocks English -0.0 [-0.1, +0.0], Chinese +0.2 [-0.1, +0.5], both not worse (positive = v1.1.0 better); tables by edit distance -0.5 [-1.1, -0.0], worse by a hair. Read whole, Chinese was worse (-4.8, release v1.1.0): by regions the two models read 84% of the regions identically (dev).
+- **Regions against the whole page, v1.1.0:** text blocks +6.9 [+4.1, +10.0] better (Chinese +12.5, mixed +10.1, English +0.8 not shown), reading order +7.3, formulas +7.4, tables +81.2. Newspapers 41.6 -> 3.9. Chosen on `omnidoc_dev` (Phase 1, `docs/ROADMAP.md`), read once on `omnidoc_test2`.
+- **Not the default.** On the Italian dev sets, with headers and footers read: XFUND Italian forms (149) 80.2 -> 74.4% of entities, -5.7 [-9.1, -2.7] worse, where the detector misses a form's body; Gazzetta Ufficiale (84 pages) 97.6 -> 97.3%, even. Faster by regions (13.8 against 22.3 s a form). The layout process adds 0.5 GB of memory.
+- **What the overall is not.** OmniDocBench's own overall scores formulas by CDM, which needs TeX Live: here formulas are scored by edit distance, and 200 pages are not its 1355. Not comparable with its leaderboard.
+
+**ocr-bench-v1** (50 synthetic stress pages, the test half of the owner's set; `docs/DATASETS.md`): v1.1.0 91.8% of entities against 83.7% for the original, **+8.1 [+4.2, +13.6] better**, no page worse. Italian +10.9 [+3.8, +19.9], English +3.7 [+1.5, +6.2], both better. Character error 12.9 -> 6.9%. Weakest kinds for v1.1.0: laboratory reports 84%, extreme scan degradation 82%, camera captures 87%.
+
 ## Release v1.2.0
 
 Same weights as v1.0.0 and v1.1.0. What is new is how a PDF is read: `glmocr infer file.pdf` takes each page's own text layer where it passes four checks, and reads the page with the model only where it does not (`glmocr/pdf.py`, mode `auto`; `--mode ocr` always uses the model). A layer is not trusted when it is an OCR layer laid invisibly over a scan, when its font map is broken, when its text has no ink under it, or when its content order is not a reading order.

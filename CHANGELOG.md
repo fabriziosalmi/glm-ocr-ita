@@ -4,6 +4,9 @@ Versions of the released model and of the `glmocr` package go together. Dates ar
 
 ## Unreleased
 
+- **Region mode.** `glmocr infer --regions` reads a page after GLM-OCR's own pipeline: its SDK's layout detector and formatter (Z.ai, Apache-2.0, unmodified, in their own PyTorch environment: `GLMOCR_LAYOUT_PYTHON` or `--layout-python`), each region read by the MLX reader with the prompt of its kind. Headers, footers, page numbers and footnotes are read unless `--drop-margins`. Not the default: worse on real Italian forms (docs/RESULTS.md, "Since v1.2.0").
+- **Measured.** OmniDocBench `omnidoc_test2` by regions: overall (formulas by edit distance) 93.7 against 64.1 read whole; v1.1.0 not worse than the original on English or Chinese text. ocr-bench-v1 test half: +8.1 [+4.2, +13.6] over the original.
+- **New.** `generators/make_ocrbench.py`; `experiments/omnidoc_compare.py` takes the set, its languages, formulas, tables and page types; `glmocr score` reads runs made by regions.
 - **Training answers checked against the teacher's reading** (`experiments/ft_targets.py`, checks in `glmocr/metrics.py`): a page is left out when its ground truth lacks what the teacher reads, holds fewer tick boxes or blanks, is in another order, or flattens a form into one line. `--max-missing 2 --min-order 0` gives back the answers of op1 and op2 byte for byte.
 - **DocAtlas training pages** without markdown escapes (`make_docatlas.py --train`); the test sets are unchanged.
 

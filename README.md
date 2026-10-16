@@ -20,7 +20,9 @@ Against the original model (`zai-org/GLM-OCR`, bf16), same pages, paired differe
 | Synthetic English business documents, same renderer | 25 | 86.8% | **93.9%** | **+7.1 [+4.1, +10.5]** |
 | DocAtlas, 40 real Italian documents, clean / scanned | 40 | 98.4 / 98.4% | 98.3 / 98.1% | -0.1 / -0.3, not worse |
 | SROIE, real scanned receipts (English) | 100 | 92.0% | 92.0% | +0.0 [-1.2, +1.5], not worse |
-| OmniDocBench, **Chinese** pages (edit distance x100, lower is better) | 45 | 14.8 | 19.7 | **-4.8 [-10.6, -0.9], worse** |
+| OmniDocBench, **Chinese** pages read whole (edit distance x100, lower is better) | 45 | 14.8 | 19.7 | **-4.8 [-10.6, -0.9], worse** |
+| OmniDocBench, 200 pages read by regions (`--regions`): overall, formulas by edit distance | 200 | 93.8 | 93.7 | -0.1; text not worse on English or Chinese |
+| ocr-bench-v1, synthetic stress pages (camera captures, degraded scans, stamps), Italian and English | 50 | 83.7% | **91.8%** | **+8.1 [+4.2, +13.6]** |
 
 Scores are the share of entities found exactly (amounts, dates, tax codes, IBAN, VAT numbers, PEC addresses; on XFUND its annotated fields), or the benchmark's own scorer where it has one. The synthetic and SROIE rows were read before the loop retry existed (v1.0.0, same weights); the retry changes only pages that loop. Size 1184 MB against 2651, peak memory 2.10 GB against 3.16, 72 generated tokens/s against 65. Every table, the per-type and per-level breakdowns and the full history are in [`docs/RESULTS.md`](docs/RESULTS.md).
 
@@ -45,10 +47,11 @@ With mlx-vlm alone, use the official prompt: `Text Recognition:` right after the
 2. **Compression.** Every layer at 8 bits: the original's accuracy at 45% of its size. Four bits in the decoder silently drop blocks of small print, so the release does not use them ([`docs/RESULTS.md`](docs/RESULTS.md), "Compression study").
 3. **Loops.** On comb fields (one character per box, as in tax codes) the decoder can repeat itself until it runs out of tokens. The reader stops a repetition as it starts and reads the page again with a repetition penalty of 1.1.
 4. **PDFs.** A page's own text layer is used when it passes four checks: not an invisible OCR layer, no broken font map, ink under its text, a content order that is a reading order. Otherwise the page goes to the model. The idea and the checks come from [Indra OCR](https://github.com/datalab-to/indra) by Datalab (Apache-2.0, see [`NOTICE`](NOTICE)).
+5. **Regions (optional).** `--regions` reads a page after GLM-OCR's own pipeline: the layout detector of its [SDK](https://github.com/zai-org/glm-ocr) (Apache-2.0, in a separate PyTorch environment) finds the regions, each is read with the prompt of its kind, and the SDK's formatter assembles them. On OmniDocBench it lifts the overall score from 64.1 to 93.7 (tables, newspapers, Chinese pages); on real Italian forms it reads less than the whole page (-5.7), so it is not the default ([`docs/HARNESS.md`](docs/HARNESS.md) has the setup).
 
 ## Limits
 
-- **Chinese is worse** than with the original (above). For Chinese documents, use the original.
+- **Chinese, read whole, is worse** than with the original (above); read with `--regions` it is not worse.
 - **Not faster per page** than the original: generation is faster, reading the image costs the same.
 - **Real Italian documents measured:** forms, 40 DocAtlas documents, Gazzetta Ufficiale pages (dev). Invoices and phone photos of documents are not measured yet.
 - **Large amounts on dense pages.** On 10 adversarial synthetic pages, amounts of tens of millions are sometimes written "29.467,745,94" (-5.3 [-11.3, -0.7]). On the Gazzetta's real amounts of a million or more it does better than the original.
@@ -68,4 +71,4 @@ With mlx-vlm alone, use the official prompt: `Text Recognition:` right after the
 
 ## License and attribution
 
-Code, page-set generators and results: MIT ([`LICENSE`](LICENSE)). The weights are a derivative of GLM-OCR by Z.ai (`zai-org/GLM-OCR`, MIT) and keep its license; if you use them, cite the GLM-OCR technical report (arXiv 2603.10910). The PDF text-layer checks in `glmocr/pdf.py` are adapted from Indra OCR by Datalab (Apache-2.0; [`NOTICE`](NOTICE), `licenses/`). Benchmarks used for evaluation only: XFUND (CC BY-NC-SA 4.0), Omni Parse Bench by Datalab (scorer Apache-2.0, tests CC BY 4.0), OmniDocBench (Apache-2.0), SROIE, DocAtlas (CC BY 4.0).
+Code, page-set generators and results: MIT ([`LICENSE`](LICENSE)). The weights are a derivative of GLM-OCR by Z.ai (`zai-org/GLM-OCR`, MIT) and keep its license; if you use them, cite the GLM-OCR technical report (arXiv 2603.10910). The PDF text-layer checks in `glmocr/pdf.py` are adapted from Indra OCR by Datalab (Apache-2.0; [`NOTICE`](NOTICE), `licenses/`). The region mode runs GLM-OCR's SDK by Z.ai (Apache-2.0), not included. Benchmarks used for evaluation only: XFUND (CC BY-NC-SA 4.0), Omni Parse Bench by Datalab (scorer Apache-2.0, tests CC BY 4.0), OmniDocBench (Apache-2.0), SROIE, DocAtlas (CC BY 4.0).

@@ -154,5 +154,45 @@ def test_omnidoc():
         pytest.skip("external/omnidoc_200 is not on this machine")
     out = subprocess.run([sys.executable, "experiments/omnidoc_compare.py", "omnidoc200_bf16_1.0_op", "omnidoc200_v8d8e8op1_1.0_op_rp110"],
                          cwd=corpus.ROOT, capture_output=True, text=True, check=True).stdout
-    assert "text_block     en  140 pages  A   7.6  B   7.9  diff -0.3 [-2.7, +1.7]  not shown" in out
-    assert "text_block     zh   45 pages  A  14.8  B  19.7  diff -4.8 [-10.6, -0.9]  worse" in out
+    assert "text_block      en             140 pages  A   7.6  B   7.9  diff  -0.3 [-2.7, +1.7]  not shown" in out
+    assert "text_block      zh              45 pages  A  14.8  B  19.7  diff  -4.8 [-10.6, -0.9]  worse" in out
+
+
+def test_omnidoc_regions():
+    """omnidoc_test2 read by regions (docs/LEDGER.md): v1.1.0 against the original, and v1.1.0 by regions against its whole page."""
+    import subprocess, sys
+    ev = corpus.WORK / "omnidoc_eval"
+    tags = ("odbt2R_bf16", "odbt2R_v8d8e8op1", "odbt2_v8d8e8op1_1.0_op_rp110")
+    if not all((ev / f"{t}.json").exists() for t in tags):
+        pytest.skip("OmniDocBench evaluations are not on this machine")
+    try:
+        corpus.corpus_dir("external/omnidoc_test2")
+    except corpus.Missing:
+        pytest.skip("external/omnidoc_test2 is not on this machine")
+    run = lambda a, b: subprocess.run([sys.executable, "experiments/omnidoc_compare.py", a, b, "--corpus", "external/omnidoc_test2"],
+                                      cwd=corpus.ROOT, capture_output=True, text=True, check=True).stdout
+    out = run("odbt2R_bf16", "odbt2R_v8d8e8op1")
+    assert "odbt2R_bf16: overall_edit 93.8, table TEDS 93.4, text 3.9, formula 8.0" in out
+    assert "odbt2R_v8d8e8op1: overall_edit 93.7, table TEDS 92.6, text 3.9, formula 7.8" in out
+    assert "text_block      en              88 pages  A   4.0  B   4.1  diff  -0.0 [-0.1, +0.0]  not worse" in out
+    assert "text_block      zh              89 pages  A   5.2  B   4.9  diff  +0.2 [-0.1, +0.5]  not worse" in out
+    out = run("odbt2_v8d8e8op1_1.0_op_rp110", "odbt2R_v8d8e8op1")
+    assert "odbt2_v8d8e8op1_1.0_op_rp110: overall_edit 64.1, table TEDS 18.0, text 9.9, formula 15.6" in out
+    assert "text_block      all            191 pages  A  11.4  B   4.5  diff  +6.9 [+4.1, +10.0]  better" in out
+
+
+def test_ocrbench():
+    """ocr-bench-v1, its test half (docs/LEDGER.md): v1.1.0 against the original, all entities and by language."""
+    name, a, b = "external/ocrbench_test", "ocrbt_" + BASE, "ocrbt_" + OURS + "_rp110"
+    try:
+        meta = corpus.load_meta(name)
+    except corpus.Missing:
+        pytest.skip(f"{name} is not on this machine")
+    if not (corpus.result_path(a).exists() and corpus.result_path(b).exists()):
+        pytest.skip(f"the runs on {name} are not in results/")
+    c = score.compare(name, a, b)
+    assert (r1(c["recall_a"]), r1(c["recall_b"]), r1(c["diff"]), (r1(c["ci"][0]), r1(c["ci"][1])), len(c["lost"])) == (83.7, 91.8, 8.1, (4.2, 13.6), 0)
+    ca, cb = (score._counts(meta, corpus.load_run(t)["pages"]) for t in (a, b))
+    for lang, want in {"it": (80.6, 91.4), "en": (87.5, 91.2)}.items():
+        ids = [m["id"] for m in meta if m["lang"] == lang]
+        assert (r1(metrics.recall(ca, ids)), r1(metrics.recall(cb, ids))) == want
