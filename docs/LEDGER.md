@@ -329,7 +329,7 @@ Written on 2026-10-15, before any model or the layout detector saw a page of thi
 | 2026-10-16 | v1.1, regions vs whole page | 2 | Text blocks, all pages: 11.4 -> 4.5, +6.9 [+4.1, +10.0] **better**: the dev result holds. Chinese +12.5 [+7.2, +17.8], mixed +10.1 [+1.5, +20.1], English +0.8 [-1.1, +2.7] not worse. Reading order +7.3 [+4.4, +10.2], formulas +7.4 [+1.6, +14.0], tables +81.2 (TEDS 18.0 -> 92.6). `overall_edit` 64.1 -> 93.7. Newspapers 41.6 -> 3.9; magazines 4.7 -> 6.9, -2.2 [-9.4, +3.5] not shown, as on dev |
 | 2026-10-16 | | note | The v1.1 region read stopped once at the memory floor (1.37 GB free, another process) and resumed from its saved pages. `overall_edit` scores formulas by edit distance: not the benchmark's official overall, and 200 pages are not its 1355 |
 
-## `external/ocrbench_test` (ocr-bench-v1, 50 synthetic stress pages) - open
+## `external/ocrbench_test` (ocr-bench-v1, 50 synthetic stress pages) - closed: better
 
 Written on 2026-10-15, before any model read a page of this set. The owner's own set, commissioned elsewhere: 100 pages drawn by its
 own generator (Python, procedural degradations: camera keystone and page curl, skew up to 15 degrees, stamps and signatures over text,
@@ -348,3 +348,5 @@ Its own Tesseract baseline (CER 24.9% on all 100) is another metric on other pag
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-10-16 | v1.1 vs BASE | 1 | All entities 83.7 -> 91.8%, **+8.1 [+4.2, +13.6] better**; 28 pages gained, none lost. Italian 80.6 -> 91.4, +10.9 [+3.8, +19.9] better; English 87.5 -> 91.2, +3.7 [+1.5, +6.2] better; mixed +11.0 [+7.5, +14.7]. Pages with a skipped block 30 -> 11 of 50, loops 0 and 0. Character error 12.9 -> 6.9% |
+| 2026-10-16 | both | 2 | Entities found (BASE / v1.1), 5 pages each: medical reports 76.5 / 84.4 (CER 26.5 / 17.3), extreme scan degradation 72.9 / 81.9, camera captures 77.1 / 86.7, government forms 90.5 / 91.1, gazettes 88.7 / 91.4; at 97% or more for v1.1: receipts, datasheets, legal acts, financial tables (73.2 -> 97.1). What to teach is to be looked for in `ocrbench_train`, not on these pages |
