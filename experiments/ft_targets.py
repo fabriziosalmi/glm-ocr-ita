@@ -22,14 +22,19 @@ text. Four checks against the teacher's reading:
   (one DocAtlas page of op3's data, 1313 against 403); long prose paragraphs, which the teacher writes on one line too, pass.
   Off with --min-order 0, as the order check.
 `--max-missing 2 --min-order 0` gives back the answers of op1 and of op2's comb-field pages, made before these checks.
+--tail-only (2026-10-16, for op5): keep only the pages where the teacher stops before the ground truth's last line
+(metrics.last_line_missing), the habit found on ocr-bench-v1; the answer holds that line, as every answer holds the ground truth's
+words. The summary counts those pages among the kept ones in any case (op1: 29 of 91). For sets whose ground truth is in reading
+order only.
 """
 import argparse, collections, difflib, json, os, pathlib, re, unicodedata
 from glmocr.corpus import ROOT; os.chdir(ROOT)   # every path below is relative to the repository
-from glmocr.metrics import form_gap, in_order, text_missing as missing
+from glmocr.metrics import form_gap, in_order, last_line_missing, text_missing as missing
 ap = argparse.ArgumentParser(); ap.add_argument("teacher", nargs="+", help="one or more teacher runs; the first that has a page is used"); ap.add_argument("--corpus", default="external/ft_tr"); ap.add_argument("--min-match", type=float, default=0.5)
 ap.add_argument("--errors-only", action="store_true", help="keep a page only if the teacher missed an entity on it or had under --err-match of its words")
 ap.add_argument("--min-order", type=float, default=0.80, help="smallest share of the teacher's letters and digits found in the same order in the ground truth")
 ap.add_argument("--max-missing", type=float, default=0.20, help="largest share of the teacher's text (5-character runs of letters and digits) absent from the ground truth")
+ap.add_argument("--tail-only", action="store_true", help="keep only pages where the teacher misses the ground truth's last line")
 ap.add_argument("--err-match", type=float, default=0.90); ap.add_argument("--max-per-set", type=int, default=None); ap.add_argument("--out", default="work/ft/train.jsonl")
 a = ap.parse_args(); corpus = pathlib.Path(a.corpus)
 teacher = {}
@@ -50,7 +55,7 @@ def build(gt, hyp):
         if j: out.append(hs[to_h[j]] if j in to_h and j - 1 in to_h and to_h[j] == to_h[j - 1] + 1 else gs[j])
         out.append(w)
     return "".join(out), same / max(len(gw), 1)
-out = pathlib.Path(a.out); out.parent.mkdir(parents=True, exist_ok=True); kept = dropped = fine = capped = incomplete = disordered = 0; ratios = []; per_set = {}
+out = pathlib.Path(a.out); out.parent.mkdir(parents=True, exist_ok=True); kept = dropped = fine = capped = incomplete = disordered = tails = untailed = 0; ratios = []; per_set = {}
 with open(out, "w", encoding="utf-8") as f:
     for m in meta:
         if m["id"] not in teacher: continue
@@ -64,10 +69,12 @@ with open(out, "w", encoding="utf-8") as f:
         if a.errors_only:   # the original already reads this page: training on it only moves weights that were right
             h = squash(teacher[m["id"]]["text"])
             if ratio >= a.err_match and all(squash(e["text"]) in h for e in m["entities"]): fine += 1; continue
+        tail = last_line_missing(gt, teacher[m["id"]]["text"])
+        if a.tail_only and not tail: untailed += 1; continue
         src = m.get("source", "")
         if a.max_per_set and per_set.get(src, 0) >= a.max_per_set: capped += 1; continue
-        per_set[src] = per_set.get(src, 0) + 1; kept += 1
+        per_set[src] = per_set.get(src, 0) + 1; kept += 1; tails += tail
         f.write(json.dumps({"id": m["id"], "images": [str((corpus / f"{m['id']}.png").resolve())], "messages": [
             {"role": "user", "content": [{"type": "image"}, {"type": "text", "text": "Text Recognition:"}]},
             {"role": "assistant", "content": [{"type": "text", "text": text}]}]}, ensure_ascii=False) + "\n")
-ratios.sort(); print(f"{kept} pages -> {out}, {dropped} left out, {incomplete} left out because their ground truth lacks what the teacher read, {disordered} because it is in another order or other lines than the teacher's reading, {fine} left out because the teacher already reads them, {capped} over the cap | per set {per_set} | share of ground-truth words the teacher had: median {ratios[len(ratios)//2]:.2f}, min {ratios[0]:.2f}")
+ratios.sort(); print(f"{kept} pages -> {out}, {dropped} left out, {incomplete} left out because their ground truth lacks what the teacher read, {disordered} because it is in another order or other lines than the teacher's reading, {fine} left out because the teacher already reads them, {capped} over the cap{f", {untailed} because the teacher reads their last line" if a.tail_only else ""} | {tails} of the kept pages teach a last line the teacher missed | per set {per_set} | share of ground-truth words the teacher had: median {ratios[len(ratios)//2]:.2f}, min {ratios[0]:.2f}")

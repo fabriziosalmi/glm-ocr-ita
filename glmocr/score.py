@@ -37,12 +37,13 @@ def summarize(corpus_name, tag, upright=False, with_cer=True):
         acc_found, acc_total = acc_found + f, acc_total + n
     langs = {l: metrics.recall(counts, [m["id"] for m in meta if m["lang"] == l]) for l in sorted({m["lang"] for m in meta})}
     skipped = [i for i in up if metrics.is_skipped(pages[i]["text"], corpus.reference(corpus_name, i))]
+    last_missing = [i for i in ids if metrics.last_line_missing(corpus.reference(corpus_name, i), pages[i]["text"])]
     # a loop the reader cut as it started is still a loop: the page was not read to the end
     loops = [i for i in ids if pages[i].get("loop_cut") is not None or metrics.is_loop(pages[i]["text"], pages[i]["gen_tokens"])]
     return {"tag": tag, "pages": len(ids), "entities": sum(c[1] for c in counts.values()),
             "recall": metrics.recall(counts, ids), "ci": (lo, hi), "recall_upright": metrics.recall(counts, up),
             "levels": levels, "types": {t: 100 * f / max(n, 1) for t, (f, n) in sorted(types.items())},
-            "skipped": skipped, "upright": len(up), "loops": loops, "langs": langs,
+            "skipped": skipped, "last_line_missing": last_missing, "upright": len(up), "loops": loops, "langs": langs,
             "notation_flips": flips, "notation_candidates": amounts, "accent_recall": 100 * acc_found / max(acc_total, 1), "accent_words": acc_total,
             "s_page": statistics.mean(pages[i]["s"] for i in ids),
             # runs read by regions (experiments/region_format.py) keep neither: nan, not a number made up

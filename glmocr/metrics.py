@@ -114,6 +114,17 @@ def form_gap(reference, reading):
     return {k: len(re.findall(r, reading)) - len(re.findall(r, reference)) for k, r in FORM_MARKS.items()}
 
 
+def last_line_missing(reference, reading, match=0.5):
+    """The reference's last line is not in the reading: no line of the reading is that close to it (difflib ratio of the squashed
+    lines). Where the model stops before a page's closing line, under a rule after blank space (ocr-bench-v1, docs/ROADMAP.md).
+    Meaningful only where the reference is in reading order: not XFUND's annotation order."""
+    ref = [l for l in reference.split("\n") if l.strip()]
+    if not ref:
+        return False
+    last = squash(ref[-1])
+    return max((difflib.SequenceMatcher(None, last, squash(l)).ratio() for l in reading.split("\n") if l.strip()), default=0) < match
+
+
 def is_skipped(text, reference):
     """The output holds less than 90% of the reference characters. Meaningful on upright pages only."""
     return len(squash(text)) < SKIP_RATIO * len(squash(reference))

@@ -131,3 +131,12 @@ def test_docatlas_unescape():
     md = r"Il sottoscritto \_\_\_ nato a \*Roma\* il 1\. marzo"
     assert plain(md) == md                                                            # the test sets keep their ground truth
     assert plain(md, unescape=True) == "Il sottoscritto ___ nato a *Roma* il 1. marzo"
+
+
+def test_last_line_missing():
+    """The closing line under a rule that the model leaves out (ocr-bench-v1): found with small misreads, missed when absent."""
+    ref = "REFERTO\nEmoglobina 13,5 g/dL\n\nREFERTO FIRMATO DIGITALMENTE DAL DIRIGENTE MEDICO: DOTT. PAOLO RAGGI\n"
+    assert metrics.last_line_missing(ref, "REFERTO\nEmoglobina 13,5 g/dL")
+    assert not metrics.last_line_missing(ref, "REFERTO\nEmoglobina 13,5 g/dL\nREFERTO FIRMATO DIGITALMENTE DAL DIRIGENTE MEDICO: DOTT. PAOLO RAGG1")
+    assert not metrics.last_line_missing("", "anything")
+    assert metrics.last_line_missing(ref, "")

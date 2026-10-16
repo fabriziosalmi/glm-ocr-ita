@@ -105,6 +105,9 @@ def cmd_score(a):
     for r in rows:
         print(f"{r['tag']:26s} " + " ".join(f"{r['langs'].get(l, 0):5.1f}%" for l in sorted({l for r in rows for l in r['langs']}))
               + f" {r['accent_recall']:5.1f}% of {r['accent_words']:<5d} {r['notation_flips']:4d}/{r['notation_candidates']}")
+    print("\npages whose last line is missing (meaningful where the ground truth is in reading order; not XFUND):")
+    for r in rows:
+        print(f"{r['tag']:26s} {len(r['last_line_missing']):4d}/{r['pages']}")
     if a.pages:
         for r in rows:
             print(f"\n{r['tag']}\n  skipped block: {', '.join(r['skipped']) or '-'}\n  loops: {', '.join(r['loops']) or '-'}")
