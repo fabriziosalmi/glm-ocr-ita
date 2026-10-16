@@ -312,7 +312,7 @@ Written on 2026-10-15, before any model or the text layer read a page of this se
 | 2026-10-15 | auto vs v1.1 | 2 | 76.1% of tests; paired **+12.2 [+5.8, +19.6] better**, on independent tests +8.2 [+2.0, +16.3] better. 29 of 80 pages from the text layer, none of them worse than v1.1's reading; on filled forms 100 against 65, on multilingual PDFs 100 against 50, on tiny text 100 against 90. The other 51 pages are v1.1's own readings |
 | 2026-10-15 | | note | The absolute numbers are not comparable with the benchmark's table (GLM-OCR 71.0 on text there): its GLM-OCR runs the SDK, layout detection and a read per region at 200 dpi; here a page is read whole at 150 dpi. 80 pages and 184 tests: a hint at this scale, not a ranking |
 
-## `external/omnidoc_test2` (OmniDocBench v1.5, 200 pages) - open
+## `external/omnidoc_test2` (OmniDocBench v1.5, 200 pages) - closed: not worse by regions; regions better than the whole page
 
 Written on 2026-10-15, before any model or the layout detector saw a page of this set. 92 pages English, 94 Chinese, 14 mixed, disjoint from `omnidoc_200` and `omnidoc_dev` (`docs/EXTERNAL.md`). Phase 3 of the OmniDocBench plan (`ROADMAP.md`): the region pipeline chosen on `omnidoc_dev` (Phase 1), read once here. Scored with `experiments/omnidoc_eval.py --full` (formulas by edit distance, said as such; `overall_edit` is not the official overall) and compared with `experiments/omnidoc_compare.py --corpus external/omnidoc_test2`: edit distance x100, paired over pages, bootstrap 2000, seed 0.
 
@@ -325,6 +325,9 @@ Written on 2026-10-15, before any model or the layout detector saw a page of thi
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-10-16 | v1.1 vs BASE, regions | 1 | Text blocks: English 4.0 -> 4.1, -0.0 [-0.1, +0.0] **not worse**; Chinese 5.2 -> 4.9, +0.2 [-0.1, +0.5] **not worse**; mixed -0.1 [-0.2, +0.0]. Reading order and formulas not worse everywhere. Tables (edit distance) -0.5 [-1.1, -0.0], worse by a hair, TEDS 93.4 against 92.6. `overall_edit` 93.8 against 93.7 |
+| 2026-10-16 | v1.1, regions vs whole page | 2 | Text blocks, all pages: 11.4 -> 4.5, +6.9 [+4.1, +10.0] **better**: the dev result holds. Chinese +12.5 [+7.2, +17.8], mixed +10.1 [+1.5, +20.1], English +0.8 [-1.1, +2.7] not worse. Reading order +7.3 [+4.4, +10.2], formulas +7.4 [+1.6, +14.0], tables +81.2 (TEDS 18.0 -> 92.6). `overall_edit` 64.1 -> 93.7. Newspapers 41.6 -> 3.9; magazines 4.7 -> 6.9, -2.2 [-9.4, +3.5] not shown, as on dev |
+| 2026-10-16 | | note | The v1.1 region read stopped once at the memory floor (1.37 GB free, another process) and resumed from its saved pages. `overall_edit` scores formulas by edit distance: not the benchmark's official overall, and 200 pages are not its 1355 |
 
 ## `external/ocrbench_test` (ocr-bench-v1, 50 synthetic stress pages) - open
 
