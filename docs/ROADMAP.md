@@ -304,6 +304,18 @@ What is known before it. op2's loss on XFUND Italian train is smaller than it lo
 
 **Step 1 started (owner's go, 2026-10-16), written before training.** op1 was trained on this MacBook (macOS 26.3), op2 to op4 on the Mac mini (26.4.1): the machine is a second difference. So on the mini, `op1m0` first: op1's recipe and seed 0, its adapter compared tensor by tensor with op1's step 90; then `op1s1`, seed 1. Data checked the same on both machines (train_op1.jsonl md5 2068f217..., its 91 images, the bf16 weights). If op1m0 equals op1, only op1s1 is read; if not, both are, as two samples of the noise. Prediction: op1s1 against op1, raw, on each of the four sets, within the noise rule (lower bound above -1.5), and on XFUND train a difference of the size of op2's (-0.9): if so, op2's loss is not shown to come from its data.
 
+**Outcome of step 1 (2026-10-16).** op1m0 is not op1: all 192 tensors differ (max abs 6.4e-3; relative norm 9% overall, 67% on `lora_b`), with the same data, seed and weights, so a training on the mini is not a copy of one on the MacBook. Both were read, raw, against op1 raw:
+
+| Set | Pages | op1 | op1s1 (seed 1) | op1m0 (seed 0, mini) |
+|---|---|---|---|---|
+| `xfund_it_train` | 149 | 78.5 | 77.9, -0.6 [-2.0, +0.7], 10 loops (op1 6) | 77.7, -0.8 [-2.1, +0.2], 10 loops |
+| `gu_dev` | 84 | 96.5 | 97.5, +1.0 [-1.0, +4.0] | running |
+| `spark/itdoc_a#60` | 60 | 90.0 | 89.3, -0.7 [-1.9, +0.0] (3 pages lost, none gained) | running |
+| `chatgpt/itdoc_a` | 24 | 94.7 | 94.7, +0.0 [-0.2, +0.2] | running |
+
+With the retry on both sides, beside it and not decided on: op1s1 on XFUND -0.5 [-0.9, -0.2] "worse", op1m0 -0.1 [-0.4, +0.3]; `gu_dev` -0.2 [-1.4, +0.9]; spark A and chatgpt A as raw (no page loops). The two adapters trained on the mini differ by +0.2 [-1.0, +1.6] on XFUND.
+Against the prediction: the size was right (-0.6 and -0.8 on XFUND, op2's -0.9), the rule was not met (lower bounds -2.0 on XFUND and -1.9 on spark A). Read: a seed or a machine alone moves an adapter by up to about 2 points on these sets, so op2's loss is not shown to come from its data, and one training per recipe cannot tell apart two recipes closer than that. Not separated: op1 was also *read* on the MacBook and every other adapter on the mini (`env.macos` in the results, 26.3 against 26.4.1), so part of the gap may be the reading machine; op1m0's loss is mostly two pages (it_train_57 -54, it_train_13 -47), where op1 on the MacBook writes 956 and 1228 tokens and op1m0 on the mini 480 and 576. Owner's choice: recorded as it is, without the control read of op1 on the mini. Step 2 as planned was conditional on the rule and is not run: a single `op2s` training could not answer its question.
+
 **GGUF track (agreed 2026-10-14, after the pilot).** llama.cpp supports GLM-OCR since PR #19677 (model + `mmproj`; `--flash-attn off` needed for now). The fused bf16 checkpoint (`work/ft/op1_90_merged`) has the upstream layout, so `convert_hf_to_gguf.py` should take it as is. A GGUF Q8_0 is a different model from the one measured (other quantization, other image preprocessing): it is read on the same sets with the official prompt and the same retry, and published only if Italian and English do not lose against the MLX release. Then, maybe, an application on top (a validated Italian entity extractor first; an app, or a paperless-ngx OCR backend, after).
 
 **Open.** The F24's reuse terms before publishing anything trained on it. Photos of the printed forms (X01, X02 as test). A JSON-extraction track (CORD for it). The old private repository to delete (needs `gh auth refresh -s delete_repo`).
