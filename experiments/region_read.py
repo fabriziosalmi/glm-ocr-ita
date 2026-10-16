@@ -1,10 +1,11 @@
-"""python experiments/region_read.py MODEL TAG --corpus NAME [--wait] : every region of every page read alone, with our MLX reader
+"""python experiments/region_read.py MODEL TAG --corpus NAME [--keep] [--wait] : every region of every page read alone, with our MLX reader
 -> results/TAG_regions.json; then experiments/region_format.py turns it into results/TAG.json, one markdown text per page.
 
 The regions come from experiments/layout_regions.py (GLM-OCR's SDK, PP-DocLayoutV3), work/layout/<set>/<id>.json. Each region the
 SDK reads is cropped from the page on its box (0-1000 grid, as the SDK's crop_image_region does for a box) and read with the
 prompt of its task (text, table, formula; engine.TASK_PROMPTS), as the SDK's default settings do: repetition penalty 1.1 on every
-read and 8192 tokens. Regions the SDK skips (figures, charts) or abandons (headers, footers, page numbers) are not read.
+read and 8192 tokens. Regions the SDK skips (figures, charts) or abandons (headers, footers, page numbers) are not read; with --keep,
+the regions of layout_regions.py --keep are read, those included.
 Refuses a test set unless TAG is in docs/LEDGER.md, as `glmocr run` does. Resumes a partial run."""
 import argparse, json, pathlib, time
 from PIL import Image
@@ -13,11 +14,11 @@ from glmocr.engine import Reader, environment
 
 PENALTY, MAX_TOKENS = 1.1, 8192   # the SDK's page_loader defaults
 ap = argparse.ArgumentParser(); ap.add_argument("model"); ap.add_argument("tag"); ap.add_argument("--corpus", required=True)
-ap.add_argument("--wait", action="store_true"); ap.add_argument("--mem-gb", type=float, default=None)
+ap.add_argument("--wait", action="store_true"); ap.add_argument("--keep", action="store_true"); ap.add_argument("--mem-gb", type=float, default=None)
 a = ap.parse_args()
 if corpus.role(a.corpus) == "test" and not corpus.ledger_has(a.tag):
     raise SystemExit(f"'{a.corpus}' is a test set: write the question and the tag `{a.tag}` in docs/LEDGER.md first.")
-src = corpus.corpus_dir(a.corpus); meta = corpus.load_meta(a.corpus); lay = corpus.WORK / "layout" / src.name
+src = corpus.corpus_dir(a.corpus); meta = corpus.load_meta(a.corpus); lay = corpus.WORK / "layout" / (src.name + ("_keep" if a.keep else ""))
 missing = [m["id"] for m in meta if not (lay / f"{m['id']}.json").exists()]
 if missing:
     raise SystemExit(f"{len(missing)} pages have no regions in {lay}: run experiments/layout_regions.py first")

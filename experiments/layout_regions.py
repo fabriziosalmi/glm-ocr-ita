@@ -1,4 +1,4 @@
-"""work/layout_venv/bin/python experiments/layout_regions.py --corpus NAME [--device mps] : the regions of every page of a page set, found by
+"""work/layout_venv/bin/python experiments/layout_regions.py --corpus NAME [--device mps] [--keep] : the regions of every page of a page set, found by
 GLM-OCR's own SDK (zai-org/GLM-OCR, package `glmocr` 0.1.5, Apache-2.0) with its default layout settings -> work/layout/<set>/<id>.json.
 
 Why the SDK itself. Its numbers on OmniDocBench come from this step: PP-DocLayoutV3 (PaddlePaddle/PP-DocLayoutV3_safetensors,
@@ -8,6 +8,9 @@ Only the regions are taken from it; the reading is done by glmocr/regions.py wit
 Settings: the SDK's default config.yaml (threshold 0.3, its NMS and box merging, its label-to-task mapping: headers, footers, page
 numbers and footnotes abandoned, figures and charts skipped). Each region: label, task, score, box on a 0-1000 grid, in the order
 the SDK gives them, which is its reading order.
+--keep (2026-10-16): the labels the SDK abandons are read as text instead (headers, footers, page numbers, footnotes, side text,
+references; header and footer images are skipped as images are) -> work/layout/<set>_keep/. Italian documents carry content there
+(a Gazzetta page's issue line and dates, a form's footer codes); OmniDocBench does not score it.
 
 Runs in its own environment (PyTorch, the SDK): work/layout_venv, built with `uv pip install "glmocr[layout]==0.1.5"`. The SDK's
 package is also called glmocr: this script checks that it imported the SDK and not this repository's package."""
@@ -24,12 +27,17 @@ assert "site-packages" in glmocr.__file__, f"imported {glmocr.__file__}, not GLM
 Image.MAX_IMAGE_PIXELS = None   # one OmniDocBench page is 145 megapixels
 
 ap = argparse.ArgumentParser(); ap.add_argument("--corpus", required=True); ap.add_argument("--device", default="mps")
+ap.add_argument("--keep", action="store_true", help="read headers, footers, page numbers and footnotes as text")
 a = ap.parse_args()
 src = pathlib.Path(a.corpus) if pathlib.Path(a.corpus).is_absolute() else ROOT / a.corpus
 meta = json.load(open(src / "meta.json", encoding="utf-8"))
-out = ROOT / "work/layout" / src.name; out.mkdir(parents=True, exist_ok=True)
+out = ROOT / "work/layout" / (src.name + ("_keep" if a.keep else "")); out.mkdir(parents=True, exist_ok=True)
 cfg = load_config().pipeline.layout
 cfg.device = a.device
+if a.keep:
+    keep = cfg.label_task_mapping.pop("abandon")
+    cfg.label_task_mapping["skip"] += [l for l in keep if l.endswith("_image")]
+    cfg.label_task_mapping["text"] += [l for l in keep if not l.endswith("_image")]
 det = PPDocLayoutDetector(cfg); det.start()
 version = __import__("importlib.metadata").metadata.version("glmocr")
 for m in meta:
