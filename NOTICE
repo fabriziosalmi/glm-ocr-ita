@@ -9,3 +9,13 @@ This repository includes code adapted from third parties:
   Modified on 2026-10-15: see the docstring of glmocr/pdf.py for what was changed.
   Only the code is used. Indra OCR's model weights, which are under a different license,
   are neither included nor used.
+
+Used at run time, not included:
+
+- glmocr/regions.py and glmocr/layout_worker.py (the region mode, glmocr infer --regions) run
+  GLM-OCR's SDK, https://github.com/zai-org/glm-ocr, package glmocr 0.1.5, by Z.ai (zai-org), licensed
+  under the Apache License, Version 2.0, unmodified, in an environment of its own that the user
+  installs: its layout detector (PP-DocLayoutV3, PaddlePaddle, Apache-2.0) and its result
+  formatter, with its default settings except one: unless --drop-margins is given, the labels it
+  abandons (headers, footers, page numbers, footnotes) are read as text. The region crop and the
+  prompt per kind of region follow the SDK's own.

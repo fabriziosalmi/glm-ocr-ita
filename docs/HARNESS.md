@@ -15,6 +15,18 @@ glmocr infer file.pdf          # each page from its text layer where it passes t
                                # a form feed; --mode ocr always uses the model, --pages 1-3,7 picks pages; -o out.json says which was which
 ```
 
+By regions, after GLM-OCR's own pipeline (`glmocr/regions.py`): the SDK's layout detector finds the regions of the page and their order, each region is read with the prompt of its kind (text, table, formula), and the SDK's formatter puts them together. The SDK needs PyTorch, so it runs in an environment of its own, one process for the whole job (`glmocr/layout_worker.py`); the main environment stays MLX only.
+
+```bash
+python3.12 -m venv .layout && .layout/bin/pip install "glmocr[layout]==0.1.5"   # GLM-OCR's SDK (Apache-2.0) with PyTorch
+export GLMOCR_LAYOUT_PYTHON=$PWD/.layout/bin/python                             # or --layout-python
+glmocr infer page.png --regions                # headers, footers, page numbers and footnotes are read too
+glmocr infer page.png --regions --drop-margins # left out, as the SDK does (and as OmniDocBench was measured)
+glmocr infer file.pdf --regions                # pages that fail the text-layer checks are read by regions
+```
+
+The SDK's settings are kept: repetition penalty 1.1 on every region (so no loop retry), 8192 tokens per region; figures and charts are not read. The measurements behind it are in `docs/LEDGER.md` (`omnidoc_test2`) and `docs/ROADMAP.md` (Phase 4).
+
 With mlx-vlm alone, the prompt must be the official one: `Text Recognition:` right after the image, and nothing else in the assistant turn. mlx-vlm's own chat template adds `/nothink` and an empty think block, which the model was not trained with (`docs/MODEL_CARD.md` has the snippet).
 
 To rebuild the release from the upstream checkpoint (the adapter is published next to the weights, in `adapter/`):

@@ -21,6 +21,12 @@ def cmd_quant(a):
 def cmd_infer(a):
     from .engine import Reader
     make = lambda: Reader(a.model, max_tokens=a.max_tokens, mem_gb=a.mem_gb, prompt_style=a.prompt, retry_penalty=a.retry_penalty)
+    if a.regions:   # the SDK's settings: its token budget per region and penalty on every read, no retry, the page as it is
+        from . import regions
+        if a.scale != 1.0:
+            raise SystemExit("--regions reads the page as it is: drop --scale")
+        make = lambda: regions.RegionReader(Reader(a.model, max_tokens=regions.MAX_TOKENS, mem_gb=a.mem_gb, prompt_style=a.prompt),
+                                            regions.Layout(a.layout_python, keep=not a.drop_margins))
     if a.image.lower().endswith(".pdf"):
         return infer_pdf(a, make)
     r = make().read(a.image, a.scale)
@@ -228,6 +234,9 @@ def main(argv=None):
     p.add_argument("--scale", type=float, default=1.0, help="resize factor before OCR; 1.0 = as is. Below 1 small print is lost (docs/RESULTS.md)")
     p.add_argument("--max-tokens", type=int, default=metrics.MAX_TOKENS)
     p.add_argument("-o", "--output", help="also save a JSON with text and timings")
+    p.add_argument("--regions", action="store_true", help="read the page by regions, after GLM-OCR's own pipeline: its layout detector in its own environment, each region read with the prompt of its kind (glmocr/regions.py)")
+    p.add_argument("--layout-python", help="--regions: the Python of an environment with glmocr[layout]==0.1.5 (default GLMOCR_LAYOUT_PYTHON)")
+    p.add_argument("--drop-margins", action="store_true", help="--regions: leave out headers, footers, page numbers and footnotes, as the SDK does")
     p = add("run", cmd_run, "OCR a page set and save results/<tag>.json; resumes a partial run")
     p.add_argument("model")
     p.add_argument("tag")
