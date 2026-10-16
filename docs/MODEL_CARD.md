@@ -22,7 +22,7 @@ tags:
 
 # GLM-OCR-ita-mlx-8bit (v1.2.0)
 
-[GLM-OCR](https://huggingface.co/zai-org/GLM-OCR), fine-tuned for Italian documents and quantized to 8 bits for Apple Silicon with [MLX](https://github.com/ml-explore/mlx). It reads Italian better than the original, on real forms and on synthetic documents, and real forms in German, Spanish, French and Portuguese as well, at 45% of the size. Read whole, it is worse on Chinese; read by regions with the `glmocr` harness (`--regions`), it is not.
+[GLM-OCR](https://huggingface.co/zai-org/GLM-OCR), fine-tuned for Italian documents and quantized to 8 bits for Apple Silicon with [MLX](https://github.com/ml-explore/mlx). It reads Italian better than the original, on real forms and on synthetic documents, and real forms in German, Spanish, French and Portuguese as well, at 45% of the size. Read whole, it is worse on Chinese; read by regions with the `glmocr` harness (`--regions`, on `main`), it is not.
 
 Code, test sets, raw outputs and the full measurement record: [github.com/fabriziosalmi/glm-ocr-ita](https://github.com/fabriziosalmi/glm-ocr-ita).
 
@@ -69,7 +69,7 @@ The weights are those of v1.0.0 (same SHA-256). On forms with comb fields (one c
 ## Limits
 
 - **Not faster than the original per page**: generation is faster, reading the image costs the same.
-- **Chinese, read whole, is worse** than with the original (OmniDocBench, above): no training page was Chinese. By regions (`glmocr infer --regions`, after GLM-OCR's own pipeline), on another 200 OmniDocBench pages, it is not worse than the original on Chinese or English text (+0.2 [-0.1, +0.5], -0.0 [-0.1, +0.0]).
+- **Chinese, read whole, is worse** than with the original (OmniDocBench, above): no training page was Chinese. By regions (`glmocr infer --regions`, after GLM-OCR's own pipeline; in the harness on `main`, not yet in a release), on another 200 OmniDocBench pages, it is not worse than the original on Chinese or English text (edit distance x100, positive = this model better: +0.2 [-0.1, +0.5] and -0.0 [-0.1, +0.0]).
 - **Real Italian documents measured**: forms (XFUND, 50 test and 149 dev), 40 documents of DocAtlas (clean and scanned), pages of the Gazzetta Ufficiale (dev only). Invoices and phone photos of documents are not measured.
 - **Amounts of tens of millions** on dense synthetic pages are sometimes written with a comma as thousands separator ("29.467,745,94"): worse than the original on 10 such pages, -5.3 [-11.3, -0.7]; on the Gazzetta's real amounts it reads more of them right than the original.
 - Repetition loops happen on comb fields and degraded pages. Stop generation when the output starts repeating itself and read the page again with `repetition_penalty=1.1`; the `glmocr` package does both. One XFUND dev form still loops at every penalty tried.
