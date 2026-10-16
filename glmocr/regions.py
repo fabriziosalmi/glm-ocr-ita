@@ -1,7 +1,9 @@
 """A page read by regions, after GLM-OCR's own pipeline: the regions and their order come from its SDK's layout detector, each
 region is read alone by the MLX reader with the prompt of its kind (text, table, formula; engine.TASK_PROMPTS), and the SDK's result
 formatter puts the readings together. Measured on OmniDocBench (docs/LEDGER.md, omnidoc_test2): overall_edit 64.1 for the whole
-page, 93.7 by regions, mostly tables, newspapers and Chinese pages.
+page, 93.7 by regions, mostly tables, newspapers and Chinese pages. Not the default: on real Italian forms (xfund_it_train) it
+finds fewer entities than the whole page, -5.7 [-9.1, -2.7], where the detector misses a form's body; on the Gazzetta it is even
+(docs/ROADMAP.md, Phase 4).
 
 The SDK needs PyTorch, so it runs in its own Python environment, as glmocr/layout_worker.py, one process for the whole job:
     python3.12 -m venv .layout && .layout/bin/pip install "glmocr[layout]==0.1.5"

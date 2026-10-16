@@ -44,8 +44,10 @@ def summarize(corpus_name, tag, upright=False, with_cer=True):
             "levels": levels, "types": {t: 100 * f / max(n, 1) for t, (f, n) in sorted(types.items())},
             "skipped": skipped, "upright": len(up), "loops": loops, "langs": langs,
             "notation_flips": flips, "notation_candidates": amounts, "accent_recall": 100 * acc_found / max(acc_total, 1), "accent_words": acc_total,
-            "s_page": statistics.mean(pages[i]["s"] for i in ids), "gen_tps": statistics.mean(pages[i]["gen_tps"] for i in ids),
-            "peak_gb": max(pages[i]["peak_gb"] for i in ids)}
+            "s_page": statistics.mean(pages[i]["s"] for i in ids),
+            # runs read by regions (experiments/region_format.py) keep neither: nan, not a number made up
+            "gen_tps": statistics.mean(pages[i].get("gen_tps", float("nan")) for i in ids),
+            "peak_gb": max((pages[i]["peak_gb"] for i in ids if "peak_gb" in pages[i]), default=float("nan"))}
 
 
 def compare(corpus_name, tag_a, tag_b, upright=False):
