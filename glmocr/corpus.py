@@ -15,11 +15,14 @@ import pathlib
 import random
 import tomllib
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-RESULTS = ROOT / "results"
-# work/: the lock, the server log, scratch files. In a checkout, next to the code; in an installed package (pip, Docker)
-# ROOT is site-packages, so a folder of the user's, or GLMOCR_WORK.
-WORK = pathlib.Path(os.environ.get("GLMOCR_WORK") or (ROOT / "work" if (ROOT / "pyproject.toml").exists() else "~/.cache/glmocr")).expanduser()
+# The repository: datasets.toml, the ledger, results/, hard/ and held/. In a checkout, where the code is; an installed package
+# (pip, Docker) has none beside it, so GLMOCR_REPO names a checkout to use (a test box mounts one), else there is none:
+# no registered sets, results/ in the current folder.
+ROOT = pathlib.Path(os.environ.get("GLMOCR_REPO") or pathlib.Path(__file__).resolve().parent.parent).expanduser()
+CHECKOUT = (ROOT / "pyproject.toml").exists()
+RESULTS = ROOT / "results" if CHECKOUT else pathlib.Path("results").resolve()
+# work/: the lock, the server log, scratch files. In a checkout, next to the code; else a folder of the user's, or GLMOCR_WORK.
+WORK = pathlib.Path(os.environ.get("GLMOCR_WORK") or (ROOT / "work" if CHECKOUT else "~/.cache/glmocr")).expanduser()
 MODELS = ROOT / "models"
 SOURCE = WORK / "glm-ocr-bf16"
 LEDGER = ROOT / "docs" / "LEDGER.md"
@@ -27,6 +30,8 @@ DATASETS = pathlib.Path(os.environ.get("GLMOCR_DATASETS", "~/Documents/git/datas
 
 
 def registry():
+    if not CHECKOUT:
+        return {}
     return tomllib.loads((ROOT / "datasets.toml").read_text(encoding="utf-8"))["dataset"]
 
 

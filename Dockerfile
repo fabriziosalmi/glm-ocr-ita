@@ -16,8 +16,10 @@ RUN UV_PROJECT_ENVIRONMENT=/opt/venv UV_PYTHON=/usr/bin/python3 UV_PYTHON_DOWNLO
     uv sync --frozen --no-dev --no-editable --compile-bytecode \
     && rm -rf /root/.cache/uv /opt/glmocr   # the code is now a copy in /opt/venv
 WORKDIR /data
+# llama-server finds its libraries (libllama-server-impl.so, libggml-*) from /app, its own working directory upstream
 ENV PATH=/opt/venv/bin:$PATH \
     GLMOCR_LLAMA_SERVER=/app/llama-server \
+    LD_LIBRARY_PATH=/app \
     GLMOCR_WORK=/tmp/glmocr \
     PYTHONUNBUFFERED=1
 HEALTHCHECK NONE

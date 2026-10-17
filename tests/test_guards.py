@@ -156,3 +156,14 @@ def test_keep_retry():
     assert keep_retry(first, {"text": "short", "looped": False})          # a second reading that does not loop wins
     assert keep_retry(first, {"text": "b" * 900, "looped": True})        # both loop: more text before the loop
     assert not keep_retry(first, {"text": "b" * 100, "looped": True})
+
+
+def test_an_installed_package_without_a_checkout(tmp_path):
+    """pip or Docker: no datasets.toml beside the code. No registered sets, results/ and work/ outside site-packages."""
+    import os, subprocess, sys
+    env = {**os.environ, "GLMOCR_REPO": str(tmp_path / "none"), "HOME": str(tmp_path)}
+    env.pop("GLMOCR_WORK", None)
+    out = subprocess.run([sys.executable, "-c", "from glmocr import corpus; print(corpus.CHECKOUT, corpus.registry(), corpus.RESULTS, corpus.WORK)"],
+                         cwd=tmp_path, env=env, capture_output=True, text=True, check=True).stdout.split()
+    assert out[:2] == ["False", "{}"]
+    assert out[2] == str((tmp_path / "results").resolve()) and out[3] == str(tmp_path / ".cache" / "glmocr")
