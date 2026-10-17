@@ -1,0 +1,122 @@
+{
+ "tag": "pp_ocrb_best_v8d8e8op1_1.0_op",
+ "model": "models/v8d8e8_op1",
+ "corpus": "external/pp_ocrb_best",
+ "scale": 1.0,
+ "max_tokens": 3000,
+ "adapter": null,
+ "prompt": "official",
+ "env": {
+  "macos": "26.4.1",
+  "python": "3.12.13",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "load_s": 0.2936739921569824,
+ "pages": {
+  "doc_082": {
+   "text": "CONRATTO DI LOCAZIONE ABITATIVA A CANONE CONCORDATO (L. 431/1998)\nREGISTRATO PRESSO L'AGENZIA DELLE ENTRATE DI GENOVA 1 - SERIE N. 084910\n\nCosa la presente scritto per su soluzione su cui coppia, il Sig. ENRICO CASAGRANDE, C.F. CSGNRC59H14D969L, residente a Genova in Via Montallegro 15 (Locatore'), e la Sig. Giulia VASSALLO, C.F. CSGNRC59H14D969B, residente a Genova in Via Montallegro 8 (Conduitore').\nSI CONVIENE E STIPULA QUANTO SIGNE\n\nART 1 (CONTRATA) 1. La locazione la junta di un tre con decotrenza dal 01/11/2024 al 31/10/2027. Alla prima scaduta al contratto sara prorogato di due anni (formale 3+2) alle medesime condizioni.\n\nART 2 (CONTRATA) 2. La locazione la junta di un tre con decotrenza dal 01/11/2024 al 31/10/2027. Alla prima scaduta al contratto sara prorogato di due anni (formale 3+2) alle medesime condizioni.\n\nART 3 (DEPOSITO CAUZZO) 3. A punzzi di tutta la obbligazione contrattuali, il Conduitore versa la somma di Euro 1 950.00 pari a tre mensalita di canone a mezzo bonifico bancario, fruttiera di interessi legali annuali.\n\nART 4 (REGIME FISCALE CENTRALI OCCA). Il Locatore dichura di avvalatura dell'opzione per l'appcazione della cedolare secona agevolata con abquota al 10% au sensi dell'art 3 del D.Lgs. 23/2011, rimociando espressamente per tutta delle fiche di valore aggiunti ISTAT del canone.\n\nCONSEGRE SPECIFICI DI LENTE VINCITO DI AMMUTRAZIONE E RICALDAMENTO CENTRALIZZATO SONO QUANTIFICATO IN ACCOUNT MENSALE DI Euro 95,00 salvo congugagho annuale su rendiconto approvato.\n\nLeno, approvato e sottoscritto a Genova in data 28 Ottobre 2024. Firma Locatore E. Casagrande | Firma Conduitore G. Vassallo",
+   "loop_cut": null,
+   "s": 38.207725048065186,
+   "prompt_tokens": 6132,
+   "gen_tokens": 689,
+   "prefill_tps": 213.9852617578022,
+   "gen_tps": 73.6185942282307,
+   "peak_gb": 2.666034498
+  },
+  "doc_084": {
+   "text": "VERBALE DI CONCILIAZIONE IN SEDE SINDACALE EX ART. 411 C.P.C. E ART. 2113 C.C.\nCOMMISSIONE DI CONCILIAZIONE UILM-UIL GENOVA | VERTENZA N. 849/2024\n\nIn data 29 Ottoboglio 2024, presso la sede sudacale di Genova Via Freeschia n. 14, sono presenti\nIl Sig. LUCA MORI, dipendente da massimo anno, assistito dal funzionario sudacale UILM Sig. Marco De Luca.\nLa società MECCANICA AUTOMATIZZATA S.R.L. assistita dall'Avv. FABIO REPETTO dell'Unione Industriali di Genova.\nI comparenti dichiarano di voler definite bonanamente ed a nolo transativo generale ogni reciproca pretesta derivante dal rapporto di lavoro subordinato intercorso dal 15/01/2018 al 30/09/2024 con inquadramento al Lvello 5 del CCNL\nMetaluminica Industria\nCONDIZIONI DELL'ACCORDO\n1. La società riconosce e corrisponde al Sig. Luca Mori, a titolo di incentivo all'esodo ed indennità risarcitore omnicomprensiva, la somma lorda di Euro 28 500,00 (ventottomilacanquecento 00), da liqudarsi entro il 15/11/2024.\n2. Il lavoratore accetta la predetta somma e dachiera di non aver null'altro a pretendere per differenze retributive, lavoro straordinario, festivita, indennita di trasferita, danno biologico o TFR integrativo.\n3. Le parti runcancono e egressamente all'impugnazione del presente verbale ai sensi dell'art 2113, quarto comma, del Codice Civile.\n\nCOPIA CONFORME\nALL'ORIGINALE\n\nLettto, confermato e sottoscritto in sede protetta Firma Lavoratore L Mort Firma Concilatore Sindacale M De Luca Firma Azenda Avv. F Repetto",
+   "loop_cut": null,
+   "s": 36.620288133621216,
+   "prompt_tokens": 6132,
+   "gen_tokens": 570,
+   "prefill_tps": 213.35577984031127,
+   "gen_tps": 73.87945125530553,
+   "peak_gb": 2.666038082
+  },
+  "doc_087": {
+   "text": "UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS\n\nAPOLLO DEFENSE TECHNOLOGIES CORP - DELAWARE GENERAL CORPORATION LAW SECTION 141(f)\n\nThe undersigned, being all the members of the Board of Directors of APOLLO DEFENSE TECHNOLOGIES CORP, a Delaware corporation (the 'Corporation'), hereby unanimously consent in writing to the adoption of the following resolutions pursuant to Section 141(f) of the DGCL.\n\nSERIES B PREFERRED STOCK FINANCING RESOLUTIONS.\n\nWHEREAS, the Board deems it to be in the best financial interests of the Corporation and its stockholders to issue and sell up to 12,500,000 shares of Series B Preferred Stock at a purchase price of $4.80 per share, for an aggregate gross proceeds of $60,000,000.00, pursuant to the Series B Stock Purchase Agreement presented to the Board.\n\nNOW, THEREFORE, BE IT RESOLVED, that the Certificate of Incorporation of the Corporation be amended and restated in its entirety (the 'Restated Certificate') to increase the authorized Common Stock to 120,000,000 shares and the authorized Preferred Stock to 35,000,000 shares, per value $0.0001 per share.\n\nFURTHER RESOLVED, that the Chief Executive Officer, the Chief Financial Officer, and the Secretary are each authorized to execute and deliver the Series B Purchase Agreement, the Investors' Rights Agreement, the Right of First Refusal and Co-Sale Agreement, and the Voting Agreement on behalf of the Corporation.\n\nFURTHER RESOLVED, that an aggregate of 3,500,000 shares of Common Stock be newly reserved for issuance under the 2024 Equity Incentive Plan for key engineering personnel.\n\nIN WITNESS WHEREOF, the undersigned have executed this Written Consent as of October 28, 2024. Signatures: Thomas H. Vance, Chairman, Victoria M. Starting, Director, Dr Raymond Chen, Director.",
+   "loop_cut": null,
+   "s": 35.75985622406006,
+   "prompt_tokens": 6132,
+   "gen_tokens": 506,
+   "prefill_tps": 213.185239041526,
+   "gen_tps": 74.0336460210908,
+   "peak_gb": 2.666038082
+  },
+  "doc_088": {
+   "text": "AUDIT WORK PAPER: REVENUE SUBSTANTIVE TESTING SCHEDULE\n\nCLIENT: PACIFIC PAYMENT ASSOCIATION INC. | AUDIT YEAR: FY2024 | PREPARED BY: K. JOEHN (SENIOR AUDITOR)\n\nOBJECTIVE: Verify recurrence, accuracy, and amount of sample sales transactions exceeding tolerable measurement threshold ($250,000.00).\n\nSAMPLE TESTING RESULTS\n\nSample 01: Inv # 849102 | Customer: Customers | Date: 2/28/2024 | Amount: $482,000.00 | Shipping Date: CMB 1000 | BOL signed: 05/29/2024 | Cut-off verified: OK.\n\nSample 02: Inv # 849108 | Customer: Amy Schweitz AO | Date: 12/31/2023 | Amount: $314,500.00 | Shipping Date: WB 057-8491 | Delivery confirmed: 01/03/2024 | EXCEPTION NOTED: Terms were DAP Zurich, title passed on delivery data management posted and adjustment AOAM deficient according to ASC 606.\n\nSample 03: Inv # 849109 | Customer: FANUC Robotics | Date: 12/31/2023 | Amount: $890,400.00 | Shipping Date: Ocean BOL MSC-984 | EOP Houston Shipping Point | Revenue recognition in FY2023 verified appropriate under ASC 606.\n\nCONCLUSION: AUDIT SKIP\n\nBased on the substantive procedures maintained and the adjustments recorded, revenues for the year ended December 31, 2023 were normally stated in all records in accordance with US GAAP.\n\nREVIEWED AND APPROVED BY AUDIT ENGAGEMENT PARTNER. DOUGLAS W. FAIRFAX, CPA (KPMG LLP) - SIGN-OFF DATE: MARCH 14, 2024",
+   "loop_cut": null,
+   "s": 36.034857988357544,
+   "prompt_tokens": 6132,
+   "gen_tokens": 523,
+   "prefill_tps": 212.98222371760565,
+   "gen_tps": 73.98466873164826,
+   "peak_gb": 2.666038082
+  },
+  "doc_089": {
+   "text": "FINAL MARITIME ARBITRATION AWARD / LODO ARBITRALE MARITTIMO DEFINITIVO\nLONDON MARITIME ARBITRATORS ASSOCIATION (LMAA) & CAMERA ARBITRALE DI GENOVA | ARB-2024-849\n\nBEFORE THE SOLE ARBITRATOR AVANTI ALL'ARBITRO UNICO SIR ARTHUR C HAMILTON, KC\nIN THE MATTER OF AN ARBITRATION UNDER CHARTER PARTY DATED 14 MARCH 2023 / INERENTE IL CONTRATTO DI NOLEGGIO A TEMPO\nBETWEEN / TRA MEDITERRANEAN CARRIERS CORP (OWNERS / ARMATORI) AND LIGURIA BULK SHIPPING S.R.L. (CHARTERERS / NOLEGGIATORI)\nDISPUTE SUMMARY OGGETTO DELLA CONTROVERSIA\nEN: Owners claim unpaid denurrage and detention charges of USD 412,850.00 incurred during cargo discharge operations at the Port of Genoa under Gencon 1994 charterparty terms.\nIT Gh Armaston richedono il pagamento di stalte e conzostabile non cornisposte per USD 412,850.00 maturate durante le operazioni di sbarco merci nel Porto di Genova.\nFINDINGS AND AWARD MOTIVAZIONI E DISPOSITIVO.\nEN 1. The notice of readiness (NOR) tendered on 18 October 2023 at 08:00 hours was legally valid notwithstanding that the vessel was anchored at pilot station outer roads.\nIT 1 L'avvuso di protrezza (NOR) notificato il 18 ottobre 2023 alle ore 08:00 deve rienerarsi penamente valido, trovandosi la nave all'ancora nella rada foranea di pilotaggio.\nEN 2. Charterers' defense of weather-working day exception fails due to insufficient logbook substitution. Charterers are ordered to pay Owners USD 385,000.00 plus 6.5% interest.\nIT 2 L'eccezione di gormi di makempo non lavorativi sollevata dai Noleggiatori e respunta per difetto probatorio sul giornale nautico. 1 Noleggiatori sono condannati a pagare USD 385,000.00 oltre interessi al 6.5%.\n\nRENDERED IN LONDON AND ENFORCEABLE IN GENOA\nPRONUNCIATO A LONDRA E DIRETTORE ESECUTIVO ARBITRATOR SIR ARTHUR HAMILTON, KC",
+   "loop_cut": null,
+   "s": 38.09864068031311,
+   "prompt_tokens": 6132,
+   "gen_tokens": 672,
+   "prefill_tps": 212.88746978701766,
+   "gen_tps": 73.5778748921914,
+   "peak_gb": 2.666038082
+  },
+  "doc_091": {
+   "text": "JALE DI ACCERTAMENTO INFRAZIONE AMMINISTRATIVA AMBIENTALE\nCOMANDO POLIZIA LOCALE GENOVA - NUCLEO TUTELA AMBIENTE E DEMANIO | ATTO N. 8491/2024\n\nIn data 18 Ottobre 2024 alle ore 10 15 in Genova, presso l'area portuale di Ponte Parodi, i sottoscritti Ufficiali di Polizia Giudiziaria Isp. Capo Mario Rossi e Ag. Scelto Luigi Bianchi hanno proceduto all'accertament cui all'art. 256 comma 1 lett. a) del D Lgs. 152/2006 (Testo Umco Ambiente)\n\nTRASGRESSORE IDENTIFICATO\n\nSig. STEFANO GAGGERO nato a Genova il 22/07/1971 C F GGGSFN71L22D969T in qualita di tutolare della ditta individuale AUTOTRASPORTI GAGGERO con sede in Genova, Via Canevan 42\n\nDESCRIZIONE DEL FATTO ACCERTATO\n\nIl trasgressore effettuava attività di gestione e stoccaggio provvisorio di rifiuti speciali non percolosi (costituit da rottami metallici ferrosi e scarti di carpenterna navale per circa 4,5 tonnellate) in assenza della prescritta uscizia Nazionale Gestor Amministrali di cui all'art. 212 D Lgs. 152/2006\n\nSANZIONE APPLICATA E MISURE CAUTELARI\n\nSi procede al sequestro amministrativo probatorio del cassone scarrabile matricola CS-8491 e del veicolo autocarro Iveco Stralis targa EZ-849-XK. E comminata la sanzione amministrativa pecuniana da Euro 3 000,00 ad Euro con pagamento in nusura redotta di Euro 6 000,00 entro 60 giorni\n\nAVVERTENZE Contro di presente verbale e ammesso ncorso al Prefetto di Genova ovvero al Giudice di Pace entro il termine perentono di trenta giorni dalla notifica",
+   "loop_cut": null,
+   "s": 36.64846110343933,
+   "prompt_tokens": 6032,
+   "gen_tokens": 575,
+   "prefill_tps": 210.86415816195228,
+   "gen_tps": 73.1397903972774,
+   "peak_gb": 2.641838914
+  },
+  "doc_094": {
+   "text": "ATTESTAZIONE DI CONVALIDA E DEPOSITO FORMALE BREVETTO INDUSTRIALE\nMINISTERO DELLO SVILUPPO ECONOMICO - UFFICIO ITALIANO BREVETTI E MARCHI (UIBM)\nDOMANDA DI BREVETTO PER INVENZIONE INDUSTRIALE N 102024000084910\nDATA DI DEPOSITO TELEMATICO 14 OTTOBRE 2024 ORE 16 42 18\nTITOLARE RICHIEDENTE II T ISTITUTO ITALIANO DI TECNOLOGIA VIA MOREGO 30 GENOVA C F 97329350583\nINVENTORI DESIGNATI DOTT MARCO BIANCHETTI, DOTT SSA ELENA FERRARI, ING. LUCA VIVALDI\nTITOLO DELL'INVENZIONE\nMETODO ED APPARATO PER IL CONTROLLO ATTUATIVO DI ATTUATORI POLIMERICI ELETTROATTIVI DIELETTRICI MEDIANTE RETE NEURALE ADATTIVA EMBEDDED\nCLASSIFICAZIONE INTERNAZIONALE DEI BREVETTI (IPC 2024)\nB25J 9:16 (Sistemi di controllo robotici) | H01L 41:09 (Trasduttori piezoelettri ed elettrosottivi) | G06N 3:063 (Hardware per reti neurali)\nDOCUMENTAZIONE ALLEGATA E VERIFICATA CONFORME\nN 1 Descrizione tecnica dattiloscritta di pagine 28 con n. 14 rivendicazioni indispensabili e dipendenti.\nN 1 Fascicolo disegni tecnici m scala comprendente n. 8 tavole con schemi a blocchi e di grammi temporali.\nQuietanza di versamento tasse di deposito e ricerca di antenonta Euro 480,00 eseguito a niezzo Modello F24 con codice tributo C101\nL'Ufficio attesta la regolanta formale della domanda e ne dispone l'assegnazione al settore e esame Elettronica e Robotica\nIL FUNZIONARIO DELEGATO UIBM DOLF GABRIELE SALVI TIMBRO AD UMIDO E FIRMA AUTOGRAFA DI CONVALIDA MINISTERIALE",
+   "loop_cut": null,
+   "s": 37.26557898521423,
+   "prompt_tokens": 6084,
+   "gen_tokens": 639,
+   "prefill_tps": 214.2541095063514,
+   "gen_tps": 73.30917872117377,
+   "peak_gb": 2.654421826
+  },
+  "doc_095": {
+   "text": "MINUTES OF THE SPECIAL MEETING OF THE AUDIT COMMITTEE\n\nGLOBAL CYBERNETICS HOLDINGS INC. - MINUTES ARCHIVE VOL. 48 | REF: AUD-2024-10-18\n\nAudit Committee of the Board of Directors of Global Cybernetics Holdings Inc. was held on Friday, October 18, 2024, at 10:00 a.m. Eastern Time at the corporate executive offices, 1200 Avenue of the\nNY 10036.\n\nance (Audit Committee Chair), Arthur Sterling, and Douglas M. Ward, comprising a quorum. Also present by invitation: Chief Financial Officer Harold Finch, Chief Accounting Officer Sarah Jenkins, and Lead\ner Marcus Ross of Ernst & Young LLP\n\nUSSED AND ACTIONS TAKEN\n\nQ3 2024 FORM 10-Q EARNINGS RELEASE: CFO Finch presented the preliminary third-quarter financial results, reporting consolidated revenue of $184,500,000,000 and adjusted EBITDA of $42,150,000,000\nation for three multi-element software licensing contracts (ASC 606) was reviewed without audit objection.\n\nAUDIT REMEDIATION STATUS: Vice President of Internal Audit reported successful remediation of the prior-year material weakness in IT general controls (ITGC) relating to privileged user access management in\nA ERP\n\nEBLOWER HOTLINE REPORT: General Counsel confirmed that two confidential complaints received during the quarter were thoroughly investigated and found to be without factual merit.\n\nMENT There being no further business, the meeting was adjourned at 12:45 p.m.",
+   "loop_cut": null,
+   "s": 34.891226053237915,
+   "prompt_tokens": 6118,
+   "gen_tokens": 400,
+   "prefill_tps": 208.88641522176252,
+   "gen_tps": 73.68151815758925,
+   "peak_gb": 2.662646594
+  },
+  "doc_096": {
+   "text": "SUB-TIER DEFENSE PROCUREMENT SPECIFICATION & STATEMENT OF WORK\n\nCONTRACT NO: N00019-24-C-8491 | DEFENSE LOGISTICS AGENCY (DLA) | CAGE: 18491\n\nSECTION C: STATEMENT OF WORK (SOW) - HIGH STRENGTH HY-80 STEEL PRESSURE HULL FABRICATION\n\n1. SCOPE: This specification establishes the minimum metallurgical, ultrasonic, and radiographic testing requirements for structural submarine hull penetration collars installed on Virginia-class submarines.\n\n2. APPLICABLE MILITARY SPECIFICATIONS: MIL. STD. 16216 (Steel Plate, Alloy Structural, High Shield Strength HY-80 and HY-100) NAVSEA Technical Publication T9074-AD-GIB-010-1688 (Requirements for Fabrication, Welding and Inspection of Submarine Structure). MIL. STD. 7035 (Ultrasonic Inspection Acceptance Criteria).\n\n3. QUALITY ASSURANCE PROVISIONS: Contractor shall maintain an ISO 9001 AS9100 certified quality management system. 100% of all full-penetration butt welds shall undergo magnetic particle testing (MTS) per ASTM E1444 and volumetric radiographical testing (RT) per ASTM E1742 Level 2-1T sensitivity.\n\n4. TRACEABILITY & MATERIAL TEST REPORTS: Certified Material Test Reports (CMTR) documenting chemical melt analysis (C: Mn, P, S, Si, Ni, Cr, Mo, V) and Charpy V-Notch impact energy (minimum: 60 ft-lbs at 170 deg F) shall accompany each delivery lot.",
+   "loop_cut": null,
+   "s": 34.61322593688965,
+   "prompt_tokens": 6084,
+   "gen_tokens": 444,
+   "prefill_tps": 214.06355323186835,
+   "gen_tps": 73.50438240556014,
+   "peak_gb": 2.654418694
+  },
+  "doc_099": {
+   "text": "ON JUDICIAL COOPERATION / TRATTATO DI COOPERAZIONE GIUDIZIARIA\nBILATERAL CONVENTION IT/US - RATIFIED BY ACT OF CONGRESS & PARLAMENTO ITALIANO\n\nARTICLE 14 (EXTRADITION AND MUTUAL LEGAL ASSISTANCE - ESTRADIZIONE ED ASSISTENZA GIUDIZIARIA)\n\nEN Each Contracting State undertakes to surrender to the other, in accordance with the provisions of this Treaty, any person who is found in its territory and is requested by the competent judicial authorities for prosecution, extraditable offense carrying a maximum penalty of deprivation of liberty exceeding one year.\n\nIT Ciascuno Stato contraente si obbliga ad estradare verso l'altro, in conformità alle norme del presente Trattato, le persone che si trovino sul suo territorio e siano perseguite dalle competenti autonta giudiziarie per reatti puniti restrittiva della libertà personale superiore ad un anno.\n\nARTICLE 15 (DOUBLE JEOPARDY AND NE BIS IN IDEM - DIVIETO DI DOPPIO GIUDIZIO)\n\nEN Extradition shall not be granted if the person sought has been tried and convicted or acquitted in the Requested State for the identical acts and offenses upon which the request for extradition is founded.\n\nIT Lestraduzione non sara concessa qualora la persona richesta sia gia stata giudicata con sentenza definitiva di condanna o proscriglamento nello Stato richesto per i medesimi fatti reato.\n\nARTICLE 16 (TRANSLATION AND AUTHENTICATION - TRADUZIONE ED AUTENTICAZIONE)\n\nEN IT All formal rogatory requests, affidavits, court warrants, and evidentary exhibits shall be accompanied by an official certified translation into the language of the Requested State.",
+   "loop_cut": null,
+   "s": 35.47941994667053,
+   "prompt_tokens": 6102,
+   "gen_tokens": 452,
+   "prefill_tps": 209.1107504013887,
+   "gen_tps": 73.8103344808471,
+   "peak_gb": 2.658763586
+  }
+ }
+}

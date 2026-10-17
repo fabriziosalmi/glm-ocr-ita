@@ -1,0 +1,122 @@
+{
+ "tag": "pp_spark_best_v8d8e8op1_1.0_op",
+ "model": "models/v8d8e8_op1",
+ "corpus": "external/pp_spark_best",
+ "scale": 1.0,
+ "max_tokens": 3000,
+ "adapter": null,
+ "prompt": "official",
+ "env": {
+  "macos": "26.4.1",
+  "python": "3.12.13",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "load_s": 0.2952859401702881,
+ "pages": {
+  "itdoc_a_0005_letter_L1_it": {
+   "text": "Tipografia Palazzolo S.p.A.\nVia Marconi 18 45745 Cremona\nVicenza, 04/05/2024\nF.lli Garbagnate S.r.l. — Via Cavour 111, 25268 Palermo\nOggetto: Fatt. n. 4012 del 2025\nEgregi signori,\nCon riferimento al DDT n. 17670/2020, trasmettiamo il\nriepilogo contabile aggiornato al 5 gennaio 2024 per un totale\ndi EUR 2.451.037,65, con decorrenza immediata.\nCon riferimento al DDT ORD-2023-9132, comunichiamo\nl’applicazione dell’aliquota 25% sull’imponibile di\nEUR 4.690,64, con addebito in fattura.\nIn riferimento all’ordine DDT n. 4657 del 2022, richiediamo\ncopia del documento di identita’ di Zaira Gallo ai fini della\nregistrazione, fino a esaurimento delle scorte disponibili.\nDistinti saluti.\nSimone Vitale — Il responsabile amministrativo\nAvvertenze e condizioni. Il committente dichiara che il codice fiscale GVZSMN80A47R361X e la partita IVA\n24025182494 comunicati sono corretti. Lo sconto di 4,5% sara’ riconosciuto a condizione che il pagamento avvenga\nentro il 12/02/2023. Il venditore si riserva la proprieta’ dei beni fino all’integrale pagamento del prezzo di\n9 853,01 €. Il responsabile del procedimento, dott. Elisa Valdorbia, ha approvato gli atti in data 16/12/2020\nTipografia Palazzolo S.p.A. — Via Marconi 18 45745 Cremona\nP IVA 08189289054 — C F. VLLGDU58B19V641I\nIBAN IT26 I789 2213 6993 8620 8660 966 — PEC segreteria a promocadelle example — Pa. 6",
+   "loop_cut": null,
+   "s": 36.516483783721924,
+   "prompt_tokens": 6084,
+   "gen_tokens": 617,
+   "prefill_tps": 217.58417728454006,
+   "gen_tps": 73.36971592282723,
+   "peak_gb": 2.654418194
+  },
+  "itdoc_a_0665_order_L1_it": {
+   "text": "Calzaturificio Roncadelle S.r.l.\nVia Garibaldi 46, 35909 Modena\nTel. 29 7944669 – ufficio acquisti@osiosrl.example\n\nORDINE DI ACQUISTO FAT/2025/23787\nFornitore: Torrefazione Albino S.r.l. — Via delle Betulle 89,\n90309 Treviso — Data: 15 ottobre 2021 — CIG: GGH7JOABGT\n\nDescrizione Q.tà Prezzo Importo\nVernici murali traspiranti — cod. 594443 59 pz 370,78 € EUR 21.876,02\nToner compatibile per stampanti — cod. 489278 195 pz 34,99 € EUR 6.823,05\nSigillanti siliconici — cod. 169145 5 pz 334,11 € 1.670,55 €\nScarpe antinfortunistiche — cod. 164640 429 pz 195,35 € € 83.805,15\nCassette in plastica impilabili — cod. 732433 150 pz EUR 723,55 108.532,50 €\nEstintori a polvere ricaricati — cod. 946057 440 pz 866,68 € EUR 381.339,20\n\nTotale ordine EUR 604.046,47\nAvvertenze e condizioni: I prezzi indicati si intendono al netto dell'IVA, con applicazione dell'aliquota 50% ai sensi della normativa vigente. La fatturazione elettronica sara’ trasmessa al codice destinatario collegato alla partita IVA 25272782431. La garanzia sui beni forniti ha durata di ventiquattro mesi dalla consegna del 23 gennaio 2019. Il trattamento dei dati personali e’ effettuato dal titolare Caseificio Stezzano S.r.l., contattabile alla PEC segreteria@travagliatospa.example.\n\nCalzaturificio o Roncadelle S.r.l — V a Garibaldi 46 35909 Modena\nP IVA 26534600007 — C F CRLI.NZ04R67B979M\nIBAN IT44 K249 2839 1711 7055 4862 332 — PEC ammin strazione@nembrosrl.example — Pag. 666",
+   "loop_cut": null,
+   "s": 38.05521035194397,
+   "prompt_tokens": 6084,
+   "gen_tokens": 706,
+   "prefill_tps": 215.05461482297562,
+   "gen_tps": 73.29283875134361,
+   "peak_gb": 2.654421826
+  },
+  "itdoc_a_0606_form_L2_it": {
+   "text": "Falegnameria Castegnate S.n.c.\nMODULO DI RICHIESTA – DET/2019/12428\n15% +39 91 3041739\nPastificio Brentegani\nS.n.c.\nIn relazione al contratto n. 4530/2026,\nconferiamo il ricevimento del\nIT50 J496 9879 4581 8681 4695 488\nL04D10762824332\npagamento di € 59,56 a\nmezzo bonifico del\n4WTQY7QA77\n9 luglio 2026, entro i\ntermini di legge.\nParma\n20546689264\nIT20 S174 2137 0763 6071 3457 679\n21/09/2026\nGLLDNI82E57S114L\nAvvertenze e condizioni Le spese di imballo e trasporto, pari a 5 595,95 €, restano a carico del destinatario salvo diverso accordo Il committente dichiara che il codice fiscale LNECHR61D04R936U e la partita IVA 63331156271 comunicati sono corretti Ognì modifica alle condizioni di fornitura dovia’ risultare da atto scritto richiamante il contratto DET/2025/12931 Il trattamento dei dati personali e’ effettuato dal titolare Flli Selvino S p A contattabile alla PEC ordinì@valdo1biasil example",
+   "loop_cut": null,
+   "s": 34.47406816482544,
+   "prompt_tokens": 6084,
+   "gen_tokens": 445,
+   "prefill_tps": 214.897403697718,
+   "gen_tps": 73.62672456774749,
+   "peak_gb": 2.654421826
+  },
+  "itdoc_a_0941_columns_L2_it": {
+   "text": "Ferriera Albino S.a.s.\nNOTIZIARIO AZIENDALE\nNumero DDT/2025/46092\nA fronte del sollecito ricevuto,\nrichiediamo l'invio della\ndocumentazione integrativa entro il\n06/03/2021 all'indirizzo\ngare@travagliato-cert.example,\nprevia autorizzazione del\nresponsabile.\nCon riferimento alla fattura\nORD/2021/52986, comunichiamo\nla sospensione temporanea delle\nconsegne fino al 3 giugno 2025 per\ninventario, come previsto dal\ncapitolato tecnico.\nFacciamo seguito alla Vostra\nrichiesta, richiediamo il ritiro della\nmerce entro il 08/01/2024 presso\nla sede di Via dell'Artigianato 76,\n29252 Firenze, senza pregiudizio\nper le scadenze future.\nA riscontro della Vostra nota,\ncomunichiamo che il saldo di\nEUR 5.409,27 dovra’ essere\ncorrisposto entro il 24/06/2025,\ncon imputazione al centro di costo\nindicato.\nIn merito alla fornitura in oggetto,\nsegnaliamo che il codice fiscale\nMTALDI02R43S104J e’ stato\nverificato in anagrafe tributaria,\ncome previsto dal capitolato\ntecnico.\nAvvertenze e condizioni La fatturazione elettronica sara trasmessa al codice destinatario collegato alla partita IVA 00163481864 In\ncaso di ritardato pagamento saranno applicati gli interessi di mora nella misura prevista dal D.Lgs. 231/2002 Lo sconto di 8.5% sara\nriconosciuto a condizione che il pagamento avvenga entro il 7 dicembre 2024.",
+   "loop_cut": null,
+   "s": 35.38955497741699,
+   "prompt_tokens": 6084,
+   "gen_tokens": 504,
+   "prefill_tps": 214.0315279721007,
+   "gen_tps": 73.65981384914663,
+   "peak_gb": 2.654421826
+  },
+  "itdoc_a_0832_delivery_L3_it": {
+   "text": "Torrefazione Trescore S.n.c.\nVia dei Tigh 109 40368 Modena\nTel. 39 827 9187 affari generali romano per example\n\nDOCUMENTO DI TRASPORTO Prot. n. 64705/2021\nDel 25/09/2019\nDestinatario: Oleificio Clusone S.p.A. — Via dell'Artigianato 98,\n63434 Vicenza — Vettore: Simone Farina — Causale: Vendita —\nColli: 19\n\nDescrizione Q.tà Valore\nCatene da neve omologate – cod. 582716 181 pz 9.977.10 €\nSanitari in ceramica bianca – cod. 73581 177 pz 1.293.78 €\nVasi in terracotta – cod. 152385 146 pz 7.384.03 €\nSerrature di sicurezza – cod. 596704 175 pz 6.358.50 €\nCerniere in acciaio inox – cod. 657851 104 pz EUR 3.105.68\nCassette in plastica impilabili – cod. 231428 190 pz € 13.071.24\nSedie ergonomiche con braccioli – cod. 437555 114 pz 15.634.24 €\nCavi elettrici multipolari – cod. 587652 149 pz 4.217.98 €\nVasi in terracotta – cod. 869590 152 pz 12.228.86 €\nLampade LED da scrivania – cod. 303140 48 pz 4.611.06 €\n\nAvvertenze e condizioni: Il venditore si riserva la proprieta' dei beni fino all'integrale pagamento del prezzo di\n1.041 589.05 € Il trattamento dei dati personali e' effettuato dal titolare Sartoria Albino S.p.A., contattabile alla\nPEC protocollo@travagliato pec.example Il recesso anticipato comporta l'addebito di una penale pari a € 8.75\noltre agli oneri maturati. La merce viaggia a rischio e pericolo del committente anche quando il trasporto e' curato\ndal formitore.\n\nOK 05/03/2020 — 8.841.476,92 €\n\nTorrefazione Trescore S.n.c. Via dei Tigh 109 40368 Modena\nPVA 21281990545 C.F. MRTVNDOM56P914B\nIRAN 112815898823621871570212503 PEC affari general romano certe example Page 21",
+   "loop_cut": null,
+   "s": 39.445655822753906,
+   "prompt_tokens": 6084,
+   "gen_tokens": 798,
+   "prefill_tps": 214.0699660889614,
+   "gen_tps": 73.18624278868411,
+   "peak_gb": 2.654421826
+  },
+  "itdoc_a_0147_order_L3_it": {
+   "text": "Profumeria Olgiate S.n.c.\nVia dei Tugli 54, 94172 veneta\nTel. 01 79347 - fax 01 79347 - mail info@profumeriaolgiate.com\n\nORDINE DI ACQUISTO n. 60972/2019\nFornitore: Ditta Azzano S.r.l. — Via delle Betulle 79, 28566 Palermo — Data:\n15 gennaio 2025 — CIG: 8WOTTME3QL\n\nDescrizione | QL | Prezzo | Importo\n--- | --- | --- | ---\nCassette in plastica impilata - cod. 372495 | 437 pz | 1.412,79 € | EUR 617,389,23\nSaldatino invertor - cod. 233526 | 86 pz | EUR 346,05 | 29,760,30 €\nDipenser per sapone liquido - cod. 340781 | 353 pz | 1.402,71 € | EUR 495,156,63\nMole angusti professional - cod. 673048 | 17 pz | € 1,438,20 | 24,449,40 €\nGubbotti ad alta webMA' - cod. 206283 | 406 pz | 566,61 € | EUR 230,043,66\nVas in terracotta - cod. 767257 | 22 pz | EUR 1,435,33 | € 31,577,26\nMaschera litrante certificate - cod. 256001 | 152 pz | EUR 500,70 | € 89,784,40\nStucche e rasante in polvere - cod. 191548 | 181 pz | 1,301,45 € | 235,562,45 €\nToner compatibile per stampante - cod. 582144 | 189 pz | 1,102,35 € | 208,344,15 €\nVerno mural trasparente - cod. 489977 | 154 pz | EUR 350,54 | 53,983,16 €\nCaldee a condensazione - cod. 156157 | 174 pz | 1,256,72 € | 218,660,28 €\n\nTotale ordine € 2,234,721,92\n\nAvertenze e condizioni il recensso antibato comporta l'addetto di una penale pan a 570,68 € oltre agli onen maturati. I prezzi indicati si intendono al netto dell'VA, con applicazione dell'alquota 8,5% e senza della normativa vigente A serne dell'art 13 del Regolamento UE 2016/679. Dati uranno trattati per le finanzia' contrattuali indicate Le spese di emballo e trasporto, pan a € 20,25, restano a calco del dirittoiano salvo diverso accordo.\n\nPagato N 3 dicembre 2020 — EUR 1.261.730,22",
+   "loop_cut": null,
+   "s": 40.80247902870178,
+   "prompt_tokens": 6084,
+   "gen_tokens": 894,
+   "prefill_tps": 214.32393640678657,
+   "gen_tps": 72.73069306109011,
+   "peak_gb": 2.654421826
+  },
+  "itdoc_a_1163_footnotes_L4_it": {
+   "text": "Vetreria Osio S.p.A.\nV. D. Marto Grappa 27 42144 Ancora\nTel. 98 283 010 protocolo membrospa esercizio\n\nNOTA INFORMATIVA – DDT/2025/22011\nA integrazione della documentazione trasmessa,\ntrasmettiamo il riepilogo contabile aggiornato al\n01/05/2025 per un totale di 14.178.728,77 €, ai fini\ndella rendicontazione periodica.\n\nA conferma di quanto condorato, segnaliamo una\ndifferenza inventariale di 60 unita' rilevata il\n20.03.2021, con addebito in fattura.\n\nNote\n(1) Lo sconto di 64 sara' riconosciuto a condizione che il pagamento avvenga entro il\n16 marzo 2020.\n(2) La quietanza dell'importo di 118.71 € e' subordinata al buon fine dell'accredito sul\nconto IT60 U561 5275 8348 7031 7801 137\n(3) Il pagamento dovra' essere effettuato entro trenta giorni dalla data della fattura\nProt. n 7315/2021 mediante bonifico sul conto IT20 R634 0204 0018 9513 8824 012\n\nAvvertenze e condizioni Il trattamento dei dati personali e' effettuato dal titolare\nLibreria Albino S.r.l contattabile alla PEC administrazione@nembro-pec example Il recesso\nanticipato comporta l'addebito di una penale pari a 58 885,61 € oltre agli oneri maturati\nOgni modifica alle condizioni di forniture dovra' risultare da atto scritto richiamante il\ncontratto DDT n 3884 del 2023 Al sensi dell'art 13 del Regolamento UE 2016/679 i dati\nsaranno trattati per le finalita' contrattuali indicate\n\nPagato il 08.12.2020 — 764,24 €",
+   "loop_cut": null,
+   "s": 36.406188011169434,
+   "prompt_tokens": 6084,
+   "gen_tokens": 584,
+   "prefill_tps": 214.73383401839845,
+   "gen_tps": 73.4202175583841,
+   "peak_gb": 2.654421826
+  },
+  "itdoc_a_0683_minutes_L4_it": {
+   "text": "Pastificio Palazzolo 8.n.c.\nVERBALE DI RIUMIONE\nRiunione del 25 dicembre 2023 presso Pastificio Palazzolo S.n.c. – Presenti: Ivano Pertini, Luca Gallo, Fausto Fontana, Elisa Valdorbia, Paola Gavazzi.\n\nPunto 1 – Delibera\nCon riferimento al preventivo approvato,\nrichiediamo conferma scritta dell'ordine\nORD-2019-0570 per un valore complessivo di\nEUR 153,23, salvo improvisti operativi.\n\nCOPIA CONFORME\n\nPoggio 12/12/2023 – 17 913.99 €",
+   "loop_cut": null,
+   "s": 31.127578258514404,
+   "prompt_tokens": 6084,
+   "gen_tokens": 189,
+   "prefill_tps": 214.100394257088,
+   "gen_tps": 72.97275695771943,
+   "peak_gb": 2.654421826
+  },
+  "itdoc_a_0869_footnotes_L5_it": {
+   "text": "Torrefazione Brentegani S.n.c.\nVia delle Rose 90, 87551 Ancona\nTel. 37 5260585 – protocollo@castegnate.example\n\nMEMORIA — Prot. n. 55566/2024\nCon riferimento alla fattura Prot. n. 57999/2020, comunichiamo che il pagamento di € 118.444,60 e' stato eseguito in data 08/05/2019, come previsto dal capitolato tecnico.\n\nIn occasione del controllo periodico, trasmettiamo le coordinate IBAN IT78 Q086 9174 5845 2820 6813 375 per l'accredito dell'importo di EUR 2.528,70, previa autorizzazione del responsabile.\n\nCon riferimento al DDT CONV-2024-5826, comunichiamo che la pratica ORD/2020/14798 e' stata istruita presso gli uffici di Treviso, ai sensi delle condizioni generali allegate.\n\nNote\n(1) I prezzi indicati si intendono al netto dell'IVA, con applicazione dell'alquota 5% ai sensi della normativa vigente.\n(2) Le consegne parziali sono ammesse e saranno fatturate separatamente con documento DDT/2023/57254.\n(3) Il pagamento dovra' assera affettuato entro trenta giorni dalla data della fattura n. 5523/2019 mediante bonifico sul conto IT72 P670 1715 6033 5910 2309 632.\n\nAvvertenze e condizioni: Il presente documento e' stato emesso con riferimento al CIG GPZHNFYTVR e al CUP K24R09124099358 nportati in fattura. Le consegne parziali sono ammesse e saranno fatturate separatamente con documento ORD-2021-9158. Il recesso anticipato comporta l'addebrio di una penale pan a € 170,37 oltre agli oneri maturati. Eventuali contestazioni dovranno pervenire per scrrittto entro otto giorni dal ncevimento della merce.\n\nVictoria, 13 agosto 2023\n\nTorrefazione Brentegani S.n.c. Via delle Rose 90, 87551 Ancona\nP IVA 30006212895 C F NB 14 65056A2700\nIBAN IT04 7191 5424 4699 176 1017 104 PEC tatture/damme per s. sample - Pag. 870",
+   "loop_cut": null,
+   "s": 38.60316300392151,
+   "prompt_tokens": 6084,
+   "gen_tokens": 731,
+   "prefill_tps": 213.4730085244846,
+   "gen_tps": 73.25307512001973,
+   "peak_gb": 2.654421826
+  },
+  "itdoc_a_0839_banknote_L5_it": {
+   "text": "Vetreria Trescore S.n.c.\nVia della Pace 59, 81171 Lacce\nTel. 85 9809933 - info@oigiate.example\n\nCOMUNICAZIONE BANCARIA — Prot. n. 51699/2019\nA riscontro della Vostra nota, trasmettiamo l'estratto conto\nrelativo al periodo chiuso il 10 agosto 2024 con saldo di\n€ 1.265.481,42, come da accordi intercorsi.\n\nNel rispetto delle scadenze convenute, segnaliamo l'addebito di\n€ 47.779,11 per spese di trasporto e imballo del 25.05.2021,\nprevia autorizzazione del responsabile.\n\nData Importo\n7 gugno 2019 1.283,80 €\n01 04.2025 EUR 12 993,73\n5 gugno 2021 7.218,17 €\n02.08.2020 12.074,37 €\n26 settembre 2019 15.331,02 €\n23 novembre 2026 EUR 15.209,80\n\nSpese di gestione € 289,16 addebitate sul conto\nIT95 F452 5430 3674 3364 5117 633.\n\nAvvertenze e condizioni: La spese di imballo e trasporto, pari a € 751.814,71, restano a carico del destinatario salvo diverso accordo. Ai sensi dell'art. 13 del Regolamento UE 2016/679 i dati saranno trattati per le finalità' contrattuali indicate. Ogni modifica alle condizioni di forniture dovra' risultare da atto scritto richiamante il contratto CTR-2026-2116.\n\nPogato il 23 agosto 2024 — € 1.940.962,57",
+   "loop_cut": null,
+   "s": 36.01224613189697,
+   "prompt_tokens": 6084,
+   "gen_tokens": 551,
+   "prefill_tps": 214.17067009620231,
+   "gen_tps": 73.61738353806784,
+   "peak_gb": 2.654421826
+  }
+ }
+}

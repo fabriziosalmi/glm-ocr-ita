@@ -1,0 +1,122 @@
+{
+ "tag": "pp_ocrb_otsu_v8d8e8op1_1.0_op",
+ "model": "models/v8d8e8_op1",
+ "corpus": "external/pp_ocrb_otsu",
+ "scale": 1.0,
+ "max_tokens": 3000,
+ "adapter": null,
+ "prompt": "official",
+ "env": {
+  "macos": "26.4.1",
+  "python": "3.12.13",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "load_s": 0.2984142303466797,
+ "pages": {
+  "doc_082": {
+   "text": "Letto, approvato e sottoscritto a Genova in data 28 Ottobre 2024. Firma Locatore: E. Casagrande | Firma Conduttore: G. Vassollo",
+   "loop_cut": null,
+   "s": 21.43773603439331,
+   "prompt_tokens": 4968,
+   "gen_tokens": 51,
+   "prefill_tps": 241.04282315653006,
+   "gen_tps": 72.00904349345419,
+   "peak_gb": 2.635477174
+  },
+  "doc_084": {
+   "text": "2024/2024 con iniquadramento al Livello 5 del CCNL\nL'azione di inquadramento di un livello di 5 del CCNL è stata approvata in conformità con la normativa italiana (RG 11/2024) ed il Regolamento Nazionale di Comercio (RG 11/2024), da liquidarsi entro il 15/11/2024;\nil CCNL è stato modificato per la necessità di un livello di 5 del CCNL integrativo;\nL'azione di inquadramento di un liv",
+   "loop_cut": 897,
+   "s": 27.74903893470764,
+   "prompt_tokens": 4968,
+   "gen_tokens": 480,
+   "prefill_tps": 238.25479037321807,
+   "gen_tps": 70.7392731796035,
+   "peak_gb": 2.627863362
+  },
+  "doc_087": {
+   "text": "UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS\n\nAPOLLO DEFENSE TECHNOLOGIES CORP., - DELAWARE GENERAL CORPORATION LAW SECTION 141(f)\n\nWith unanimous consent, being all the members of the Board of Directors of APOLLO DEFENSE TECHNOLOGIES CORP., a Delaware corporation (the 'Corporation'), hereby unanimously consent in writing by the Board of Directors to the following payment to Section 141(f) of the DGCL:\n\nSERIES B PREFERRED STOCK FINANCING RESOLUTIONS:\n\nTHEREAS, the Board deems it to be in the best financial interests of the Corporation and its stockholders to issue and sell up to 12,500,000 shares of Series B Preferred Stock at a purchase price of $ 4.80 per share, for an aggregate proceeds of $ 60,000,000.00, pursuant to the Series B Stock Purchase Agreement presented to the Board;\n\nNOW THEREFORE, BE IT RESOLVED, that the Certificate of Incorporation of the Corporation be amended and restated in its entirety (the 'Restated Certificate') to increase the authorized Common Stock to 120,000,000 shares into the authorized Preferred Stock to 35,000,000 shares, par value $0.0001 per share;\n\nFURTHER RESOLVED, that the Chief Executive Officer, the Chief Financial Officer, and the Secretary are each authorized to execute and deliver the Series B Purchase Agreement, the Investors' Rights Agreement, the Right of First Resale and Co-Sale Agreement, and the Voting Agreement on behalf of the Corporation;\n\nFURTHER RESOLVED, that an aggregate of 3,500,000 shares of Common Stock be newly reserved for issuance under the 2024 Equity Incentive Plan for key engineering personnel.",
+   "loop_cut": null,
+   "s": 27.29681706428528,
+   "prompt_tokens": 4968,
+   "gen_tokens": 453,
+   "prefill_tps": 239.106872774135,
+   "gen_tps": 70.57699622570989,
+   "peak_gb": 2.635481922
+  },
+  "doc_088": {
+   "text": "REVIEWED AND APPROVED BY AUDIT ENGAGEMENT PARTNER: DOUGLAS W. FAIRFAX, CPA (KPMG LLP) - SIGN-OFF DATE: MARCH 14, 2024",
+   "loop_cut": null,
+   "s": 21.664690732955933,
+   "prompt_tokens": 4968,
+   "gen_tokens": 60,
+   "prefill_tps": 239.59089325168156,
+   "gen_tps": 72.39973708575575,
+   "peak_gb": 2.635481922
+  },
+  "doc_089": {
+   "text": "TRIBUNALE DI GENOVA\n15 OTT 2026\nN. 4821/A\nRENDERED IN LONDON AND ENFORCEABLE IN GENOA / PRONUNCIATO A LONDRA E DIRETTORE ESECUTIVO. ARBITRATOR: SIR ARTHUR HAMILTON, KC",
+   "loop_cut": null,
+   "s": 22.18585705757141,
+   "prompt_tokens": 4968,
+   "gen_tokens": 86,
+   "prefill_tps": 237.8523009738219,
+   "gen_tps": 71.77051710079982,
+   "peak_gb": 2.635481922
+  },
+  "doc_091": {
+   "text": "INFRAZIONE AMMINISTRATIVA AMBIENTALE\nCOMANDO POLIZIA LOCALE GENOVA - NUCLEO TUTELA AMBIENTE E DEMANIO | ATTO N. 8491/2024\n\nIn data 18 Ottobre 2024 alle ore 10:15 in Genova, presso l'area portuale di Ponte Parodi, i sottoscritti Ufficiali di Polizia Giudiziaria Isp. Capo Mario Rossi e Ag. Scelto Luigi Bianchi hanno proceduto all'accertamenti\ncui all'art. 256 comma 1 lett. a) del D. Lgs. 152/2006 (Testo Unico Ambiente).\n\nTRASGRESSORE IDENTIFICATO:\nSig. STEFANO GAGGERO, nato a Genova il 22/07/1971. C.F. GGGSFN71L22D969T, in qualita di titolare della ditta individuale AUTOTRASPORTI GAGGERO con sede in Genova. Via Canevari 42.\nDESCRIZIONE DEL FATTO ACCERTATO:\nIl trasgressore effettuato a attività di gestione e stoccaggio provvisorio di rifiuti speciali non pericolosi (costituit da rottami metallici ferrosi e scarti di carpenteria navale per circa 4.5 tonnellate) in assenza della prescritta iscrizione\nNazionale Gestori Ambientali di cui all'art. 212 D. Lgs. 152/2006.\nSANZIONE APPLICATA E MISURE CAUTELARI:\nSi procede al sequestro amministrativo probatorio del cassone scarrabile matricola CS-8491 e del veicolo autocarro Iveco Stralis targa EZ-849-XK. E communata la sanzione amministrativa pecuniaria da Euro 3.000.00 ad Euro\ncon pagamento in nuisura redotta di Euto 6.000.00 entro 60 giorni.\nAVVERTENZE: Contro il presente verbale e ammesso ricorso al Prefetto di Genova ovvero al Giudice di Pace entro il termine perentorio di trenta giorni dalla notifica.",
+   "loop_cut": null,
+   "s": 29.11335515975952,
+   "prompt_tokens": 4968,
+   "gen_tokens": 577,
+   "prefill_tps": 238.0379986333625,
+   "gen_tps": 70.87928040763693,
+   "peak_gb": 2.627863362
+  },
+  "doc_094": {
+   "text": "ATTESTAZIONE DI CONVALIDA E DEPOSITO FORMALE BREVETTO INDUSTRIALE\nMINISTERO DELLO SVILUPPO ECONOMICO - UFFICIO ITALIANO BREVETTI E MARCHI (UIBM)\n\nDOMANDA DI BREVETTO PER INVENZIONE INDUSTRIALE N. 102024000084910\nDATA DI DEPOSITO TELEMATICO: 14 OTTOBRE 2024 ORE 16:42:18\nTITOLARE RICHIEDENTE: I.L.T. - ISTITUTO ITALIANO DI TECNOLOGIA - VIA MOREGO 30, GENOVA - C.F. 97329350583\nINVENTORI DESIGNATI: DOTT. MARCO BIANCHETTI, DOTT.SSA ELENA FERRARI, ING. LUCA VIVALDI\nTITOLO DELL'INVENZIONE:\n'METODO ED APPARATO PER IL CONTROLLO ATTUATIVO DI ATTUATORI POLIMERICI ELETTROATTIVI DIELETTRICI MEDIANTE RETE NEURALE ADATTIVA EMBEDDED'\nCLASSIFICAZIONE INTERNAZIONALE DEI BREVETTI (IPC 2024):\nB25J 9/16 (Sistemi di controllo robotici) | H01L 41/09 (Trasduttori piezoelettrici ed elettrostrittivi) | G06N 3/063 (Hardware per reti neurali)\nDOCUMENTAZIONE ALLEGATA E VERIFICATA CONFORME:\n- N. 1 Descrizione tecnica dattiloscritta di pagine 28 con n. 14 rivendicazioni indipendenti e dipendenti:\n- N. 1 Fascicolo disegni tecnici in scala comprendente n. 8 tavole con schemi a blocchi e diagrammi temporali:\n- Quietanza di versamento tasse di deposito e ricerca di anteriorita Euro 480,00 eseguito a mezzo Modello F24 con codice tributo C101.\nL'Ufficio attesta la regolarita formale della domanda e ne dispone l'assegnazione al settore d'esame Elettronica e Robotica.\n\nIL FUNZIONARIO DELEGATO UIBM: DOTV. GABRIELE SALVI - TIMBRO AD UMIDO E FIRMA AUTOGRAFA DI CONVALIDA MINISTERIALE",
+   "loop_cut": null,
+   "s": 30.102975845336914,
+   "prompt_tokens": 4968,
+   "gen_tokens": 661,
+   "prefill_tps": 240.14317570458618,
+   "gen_tps": 70.93467229205723,
+   "peak_gb": 2.627863362
+  },
+  "doc_095": {
+   "text": "MINUTES OF THE SPECIAL MEETING OF THE AUDIT COMMITTEE\nGLOBAL CYBERNETICS HOLDINGS INC. - MINUTES ARCHIVE VOL. 48 | REF: AUD-2024-10-18\n\nAudit Committee of the Board of Directors of Global Cybernetics Holdings Inc. was held on Friday, October 18, 2024, at 10:00 a.m. Eastern Time at the corporate executive offices, 1200 Avenue of the\nYork Y 10036.\nAudit Committee Chair). Arthur Sterling, and Douglas M. Ward, comprising a quorum. Also present by invitation: Chief Financial Officer Harold Finch, Chief Accounting Officer Sarah Jenkins, and Lead\nVice President Marcus Ross of Ernst & Young LLP.\nQ3 2024 FORM 10-Q EARNINGS RELEASE: CFO Finch presented the preliminary third-quarter financial results, reporting consolidated revenue of $ 184,500,000.00 and adjusted EBITDA of $ 42,150,000.00.\nACTIONS TAKEN:\nACTIONS FOR ACTIONS",
+   "loop_cut": 189,
+   "s": 25.7233829498291,
+   "prompt_tokens": 4968,
+   "gen_tokens": 352,
+   "prefill_tps": 241.02510821802187,
+   "gen_tps": 70.25617038774107,
+   "peak_gb": 2.635481922
+  },
+  "doc_096": {
+   "text": "SECTION C: STATEMENT OF WORK (SOW) - HIGH STRENGTH HY-80 STEEL PRESSURE HULL FABRICATION\n\n1. SCOPE: This specification establishes the minimum metallurgical, ultrasonic, and radiographic testing requirements for structural submarine hull penetration collars installed on Virginia-class submarines.\n\n2. APPLICABLE MILITARY SPECIFICATIONS: MIL-S-16216 (Steel Plate, Alloy, Structural, High Yield Strength HY-80 and HY-100): NAVSEA Technical Publication T9074-AD-GIB-010/1688 (Requirements for Fabrication, Welding and Inspection of Submarine Structure); MIL-STD-2035 (Ultrasonic Inspection Acceptance Criteria).\n\n3. QUALITY ASSURANCE PROVISIONS: Contractor shall maintain an ISO 9001 / AS9100 certified quality management system. 100% of all full-penetration butt welds shall undergo magnetic particle testing (MT) per ASTM E1444 and volumetric radiographical testing (RT) per ASTM E1742 Level 2-1T sensitivity.\n\n4. TRACEABILITY & MATERIAL TEST REPORTS: Certified Material Test Reports (CMTR) documenting chemical melt analysis (C, Mn, P, S, Si, Ni, Cr, Mo, V) and Charpy V-Notch impact energy (minimum 60 ft-lbs at -120 deg F) shall accompany each delivery lot.",
+   "loop_cut": null,
+   "s": 26.201449871063232,
+   "prompt_tokens": 4968,
+   "gen_tokens": 373,
+   "prefill_tps": 239.00482107264054,
+   "gen_tps": 70.17848414307745,
+   "peak_gb": 2.627863362
+  },
+  "doc_099": {
+   "text": "ARTICLE 14 (EXTRADITION AND MUTUAL LEGAL ASSISTANCE / ESTRADIZIONE ED ASSISTENZA GIUDIZIARIA):\n\nEN: Each Contracting State undertakes to surrender to the other, in accordance with the provisions of this Treaty, any person who is found in its territory and is requested by the competent judicial authorities for prosecution, extraditable offense carrying a maximum penalty of deprivation of liberty exceeding one year.\n\nIT: Ciascuno Stato contraente si obbliga ad estradare verso l'altro, in conformità alle norme del presente Trattato, le persone che si trovino sul suo territorio e siano perseguite dalle competenti autorita giudiziarie per reati puniti restritiva della libertà personale superiore ad un anno.\n\nARTICLE 15 (DOUBLE JEOPARDY AND NE BIS IN IDEM / DIVIETO DI DOPPIO GIUDIZIO):\n\nEN: Extradition shall not be granted if the person sought has been tried and convicted or acquitted in the Requested State for the identical acts and offenses upon which the request for extradition is founded.\n\nIT: L'estradizione non sara concessa qualora la persona richiesta sia gia stata giudicata con sentenza definitiva di condanna o proscioglimento nello Stato richiesto per i medesimi fatti reato.\n\nARTICLE 16 (TRANSLATION AND AUTHENTICATION / TRADUZIONE ED AUTENTICAZIONE):\n\nEN/IT: All formal rogatory requests, affidavits, court warrants, and evidentiary exhibits shall be accompanied by an official certified translation into the language of the Requested State.",
+   "loop_cut": null,
+   "s": 26.528295040130615,
+   "prompt_tokens": 4968,
+   "gen_tokens": 398,
+   "prefill_tps": 239.46906315638816,
+   "gen_tps": 70.05852049477976,
+   "peak_gb": 2.635481922
+  }
+ }
+}
