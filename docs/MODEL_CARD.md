@@ -26,6 +26,8 @@ tags:
 
 Code, test sets, raw outputs and the full measurement record: [github.com/fabriziosalmi/glm-ocr-ita](https://github.com/fabriziosalmi/glm-ocr-ita).
 
+A GGUF of the same fine-tuned weights, for llama.cpp: [GLM-OCR-ita-GGUF](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-GGUF). It is measured on its own and not shown equivalent to this model; on Apple Silicon this model remains the reference.
+
 ## Results
 
 Entity recall: share of the entities of a page (amounts, dates, IBAN, VAT numbers, tax codes, CIG and CUP codes, PEC addresses, contract numbers) that come back exactly, whitespace aside; on XFUND, its annotated segments of 2 characters or more; on DocAtlas, words of 8 letters or more and the same codes. Intervals are a 95% bootstrap over pages; differences are paired on the same pages. M4 with 16 GB, greedy decoding.
