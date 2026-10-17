@@ -79,7 +79,7 @@ def cmd_run(a):
     reader = Reader(a.model, adapter=a.adapter, max_tokens=a.max_tokens, mem_gb=a.mem_gb, wait=a.wait, prompt_style=a.prompt, retry_penalty=a.retry_penalty)
     setup = {"model": a.model, "corpus": corpus.split_name(a.corpus)[0], "scale": a.scale, "max_tokens": a.max_tokens, "adapter": a.adapter, "prompt": a.prompt, **({"retry_penalty": a.retry_penalty} if a.retry_penalty else {}), **({"deskew": a.deskew, "trim": a.trim} if a.deskew is not None else {}), "env": environment()}
     if getattr(reader, "build_info", None):   # llama.cpp: its build is what the run was produced with
-        setup["backend"] = "llama.cpp"; setup["env"]["llama.cpp"] = reader.build_info
+        setup["backend"] = "llama.cpp"; setup["server_args"] = reader.server_args; setup["env"]["llama.cpp"] = reader.build_info
     res = json.load(open(out)) if out.exists() else {"tag": a.tag, **setup, "load_s": reader.load_s, "pages": {}}
     res.setdefault("prompt", "mlx")   # files written before 2026-10-14 used mlx-vlm's prompt and do not say so
     for k, v in setup.items():   # a resumed run must be the same run; older files carry only the model

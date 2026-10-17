@@ -56,8 +56,11 @@ class LlamaReader:
             s.bind(("127.0.0.1", 0)); self.port = s.getsockname()[1]
         log = open(WORK / "llama-server.log", "w")
         t = time.time()
-        self.proc = subprocess.Popen([server_binary(), "-m", self.model, "--mmproj", str(mmproj_for(model)), "-fa", "on", "-c", str(ctx),
-                                      "-np", "1", "--host", "127.0.0.1", "--port", str(self.port)], stdout=log, stderr=subprocess.STDOUT)
+        # --cache-ram 0: the server's prompt cache in RAM (8 GB by default) grew by 0.3 GB a page and stopped a run at 8.3 GB
+        # (2026-10-17); every page here is a request of its own, so it caches nothing worth having
+        self.server_args = ["-fa", "on", "-c", str(ctx), "-np", "1", "--cache-ram", "0"]
+        self.proc = subprocess.Popen([server_binary(), "-m", self.model, "--mmproj", str(mmproj_for(model)), *self.server_args,
+                                      "--host", "127.0.0.1", "--port", str(self.port)], stdout=log, stderr=subprocess.STDOUT)
         atexit.register(self.close)
         while True:
             if self.proc.poll() is not None:
