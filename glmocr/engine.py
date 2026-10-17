@@ -81,13 +81,21 @@ class Reader:
         self.stop = LoopStop(self.proc.tokenizer, eos if isinstance(eos, (list, tuple)) else [eos]) if stop_loops else None
         self._tmp = tempfile.TemporaryDirectory(prefix="glmocr_")
 
-    def read(self, image, scale=1.0, penalty=None, task="text"):
+    def read(self, image, scale=1.0, penalty=None, task="text", deskew=None, trim=False):
         """image: a path or a PIL image. scale: resize factor per side before OCR (Lanczos); 1.0 hands a file over untouched.
         penalty: a repetition penalty for this one read (mlx-vlm's, over its default context). With retry_penalty set on the
         reader, a page that loops is read a second time with that penalty, and the second reading is kept by keep_retry().
-        task: text, table or formula, the prompt GLM-OCR uses for that kind of region (TASK_PROMPTS); a whole page is "text"."""
+        task: text, table or formula, the prompt GLM-OCR uses for that kind of region (TASK_PROMPTS); a whole page is "text".
+        deskew: straighten the page first when its angle is at least this many degrees (glmocr/deskew.py), trim: then crop to the ink."""
         import mlx.core as mx
         from PIL import Image
+        skew = None
+        if deskew is not None:
+            from . import deskew as dk
+            im = Image.open(image) if isinstance(image, (str, pathlib.Path)) else image
+            out_im, skew = dk.straighten(im, deskew, trim)
+            if out_im is not im:
+                image = out_im
         if isinstance(image, (str, pathlib.Path)) and scale == 1.0:
             path = str(image)
         else:
@@ -109,6 +117,8 @@ class Reader:
                             "second": {k: second[k] for k in ("text", "loop_cut", "s", "gen_tokens", "looped")}}
             out["s"] = first["s"] + second["s"]
         out["peak_gb"] = mx.get_peak_memory() / 1e9
+        if skew is not None:
+            out["skew_deg"], out["deskewed"] = skew, abs(skew) >= deskew
         self.last = out   # the caller can save it before the watch stops the job
         guard.watch(out["peak_gb"], self.ceiling)
         return out

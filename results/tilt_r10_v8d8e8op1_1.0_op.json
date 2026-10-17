@@ -1,0 +1,142 @@
+{
+ "tag": "tilt_r10_v8d8e8op1_1.0_op",
+ "model": "models/v8d8e8_op1",
+ "corpus": "external/tilt_c_r10",
+ "scale": 1.0,
+ "max_tokens": 3000,
+ "adapter": null,
+ "prompt": "official",
+ "env": {
+  "macos": "26.4.1",
+  "python": "3.12.13",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "load_s": 0.341839075088501,
+ "pages": {
+  "itdoc_c_0820_creditnote_L1_it": {
+   "text": "Profumeria Nembro S.a.s.\nVia del Commercio 22, 26701 Lecce\nTel. 62 8441005 – ufficio.acquisti@martinengo-cert.example\n\nNOTA DI CREDITO ORD-2024-957\nA storno parziale della fattura Ord. n. 513 del 2025 per reso\nmerce.\n\nDescrizione | Importo\n--- | ---\nKit di primo soccorso – cod. 455896 | € 15.525,35\nMole angolari professionali – cod. 100654 | € 19.218,99 €\nValvole a sfera in ottone – cod. 621717 | € 18.594,52 €\nDetergente concentrato multisuperficie – cod. 577515 | € 7.162,63\nViti e bulloneria assortita – cod. 965329 | € 18.470,21\nMonitor da ventiquattro pollici – cod. 290720 | € 197,25 €\nCuoio e pellami conciati – cod. 823516 | € 3.392,77 €\nSaldatrici inverter – cod. 970320 | € 2.735,92\nTrapani a colonna – cod. 491141 | € 18.834,21\nInterruttori magnetotermici – cod. 634233 | EUR 685,34\nBox doccia con cristalli temperati – cod. 826943 | € 10.269,93\nCaschi di protezione regolabili – cod. 837466 | € 6.279,75\nPennelli e rulli professionali – cod. 505263 | € 4.382,46\nPannelli isolanti in lana di roccia – cod. 370933 | € 17.192,53 €\n\nTotale accredito EUR 142.941,86\nAvvertenze e condizioni: La durata della locazione e’ stabilita in 24 anni dal 25.11.2021, con tacito rinnovo salvo disdetta. Il trattamento dei dati personali e’ effettuato dal titolare Tipografia Cernusco S.n.c., contattabile alla PEC contabilita@selvino-cert.example. Il recesso anticipato comporta l’addebito di una penale pari a 934,80 € oltre agli oneri maturati. Ogni modifica alle condizioni di fornitura dovra’ risultare da atto scritto richiamante il contratto CTR-2026-757.\n\nProfumeria Nembro S.a.s. – Via del Commercio 22, 26701 Lecce\nP.IVA 5651954898 – C.F. GRSGDU88D24N868X\nIBAN IT21 N211 5096 8725 4283 0797 491 – PEC fatture@romanosrl.example – Pag. 821",
+   "loop_cut": null,
+   "s": 25.462217092514038,
+   "prompt_tokens": 3738,
+   "gen_tokens": 852,
+   "prefill_tps": 290.23109633600916,
+   "gen_tps": 68.28084001706381,
+   "peak_gb": 2.275355624
+  },
+  "itdoc_c_0760_creditnote_L1_it": {
+   "text": "Caseificio Chiari S.a.s.\nVia dell'Artigianato 96, 38274 Venezia\nTel. 75 4677248 – amministrazione@albinospa.example\n\nNOTA DI CREDITO CTR/2023/28172\nA storno parziale della fattura n. 41466/2022 per reso merce.\n\nDescrizione | Importo\n--- | ---\nLastre in cartongesso – cod. 974725 | 1.239,15 €\nTermostati programmabili – cod. 319693 | € 18.121,85\nOli lubrificanti per motori – cod. 320485 | 205,60 €\nPompe sommerse per pozzi – cod. 900603 | € 8.857,34\nProfili metallici per pareti – cod. 17428 | € 16.913,91\nEstintori a polvere ricaricati – cod. 291767 | € 7.644,56\nRadiatori in alluminio – cod. 192416 | € 850,72\nCondizionatori monosplit inverter – cod. 337733 | 19.828,86 €\nMangimi complementari in sacchi – cod. 993987 | 9.783,31 €\nTranspallet manuale – cod. 472944 | 10.558,48 €\nCaschi di protezione regolabili – cod. 330205 | 8.988,60 €\nMole angolari professionali – cod. 771255 | € 909,59\nRubinetteria cromata per bagni – cod. 159230 | EUR 4.274,77\nCompressori coassiali – cod. 119011 | EUR 4.523,08\n\nTotale accredito € 112.699,82\n\nAvvertenze e condizioni: La fatturazione elettronica sara’ trasmessa al codice destinatario collegato alla partita IVA 45938276313.\nLa penale per ritardata consegna e’ fissata in EUR 16.590,84 per ogni giorno di ritardo oltre il 26 febbraio 2025. La merce viaggia a rischio e pericolo del committente anche quando il trasporto e’ curato dal fornitore. Ai sensi dell’art. 13 del Regolamento UE\n2016/679 i dati saranno trattati per le finalita’ contrattuali indicate.\n\nCaseificio Chiari S.a.s. – Via dell'Artigianato 96, 38274 Venezia\nP.IVA 86648047602 – C.F. GRSNTR65R24R075J\nIBAN IT06 N655 7116 1293 5942 3499 631 – PEC ufficio.acquisti@trivulziospa.example – Pag. 761",
+   "loop_cut": null,
+   "s": 25.296172857284546,
+   "prompt_tokens": 3738,
+   "gen_tokens": 840,
+   "prefill_tps": 289.9425030745944,
+   "gen_tps": 68.23717457683101,
+   "peak_gb": 2.275356658
+  },
+  "itdoc_c_0360_invoice_L1_it": {
+   "text": "Oleificio Selvino S.p.A.\nVia Santa Caterina 19, 75186 Parma\nTel. 43 8050736 — affari.generali@selvino.example\n\nFATTURA n. 48609/2024\nDel 01/08/2023 — Cliente:\nVetreria Roncadelle S.n.c. — Via Marconi 42, 17219 Cremona\n\nDescrizione Q.tà Prezzo Importo\nSerrature di sicurezza — cod. 420240 3 pz EUR 2.436,88 7.310,63 €\nInterruttori magnetotermici — cod. 130721 5 pz 3.361,07 € € 16.805,34\nValvole a sfera in ottone — cod. 23833 50 pz 1.552,28 € 77.614,10 €\nLampade LED da scrivania — cod. 285933 15 pz 3.437,40 € 51.561,01 €\nToner compatibile per stampanti — cod. 592312 100 pz 169,51 € 16.951,48 €\nPrese industriali stagne — cod. 45620 24 pz 2.681,65 € EUR 64.359,49\nCaschi di protezione regolabili — cod. 157726 20 pz EUR 1.462,77 EUR 29.255,40\nTubi in rame per impianti — cod. 827127 1 pz € 1.477,51 1.477,51 €\nViti e bulloneria assortita — cod. 276686 8 pz 3.688,52 € € 29.508,17\nPorte interne tamburate — cod. 543933 3 pz EUR 2.000,37 EUR 6.001,11\nSigillanti siliconici — cod. 423019 1 pz 3.226,13 € € 3.226,13\nCarta in risme da ufficio — cod. 249038 3 pz 2.228,94 € 6.686,81 €\n\nImponibile 310.757,18 €\nIVA 4% — EUR 12.430,29\nTOTALE € 323.187,47\n\nAvvertenze e condizioni: Il presente atto richiama il contratto CTR-2020-4946 e il CIG WTI4IACY6B riportati in preessa.\nIl responsabile del procedimento, dott. Teresa Rinaldi, ha approvato gli atti in data 19/12/2021. Il venditore si riserva la\nproprieta' dei beni fino all'integrale pagamento del prezzo di 1.035,68 €. Ogni modifica alle condizioni di fornitura dovra'\nrisultare da atto scritto richiamante il contratto CTR-2019-4839.\n\nOleificio Selvino S.p.A. — Via Santa Caterina 19, 75186 Parma\nP.IVA 36034485593 — C.F. LNEMRO03L63C931D\nIBAN IT82 W237 2192 7688 9651 0628 092 — PEC protocollo@clusone-cert.example — Pag. 361",
+   "loop_cut": null,
+   "s": 27.524938106536865,
+   "prompt_tokens": 3738,
+   "gen_tokens": 989,
+   "prefill_tps": 288.74157549428463,
+   "gen_tps": 68.25012280833671,
+   "peak_gb": 2.269622258
+  },
+  "itdoc_c_0170_lease_L1_it": {
+   "text": "Ferriera Garbagnate S.a.s.\nCONTRATTO DI LOCAZIONE — ORD/2022/53388\nVoce Dettaglio\nImmobile Via Roma 79, 48082 Milano\nCanone annuo 87.150,21 €\nDecorrenza 2 marzo 2025\nDeposito cauzionale EUR 25.106,06\nDati catastali Foglio 56, particella 2872, sub. 19\n\nArt. 1 — Canone\nIl canone annuo di € 399,51 sara’ corrisposto in rate trimestrali anticipate entro il 8 marzo 2025.\n\nArt. 2 — Durata\nLa locazione avra’ durata di 36 anni con decorrenza dal 03/04/2019.\n\nArt. 3 — Spese\nLe spese di gestione, pari a 823,06 €, restano a carico del conduttore dal 04/08/2026.\n\nIl locatore: Simone Longhi — Il conduttore: Tipografia Albino S.r.l.\nAvvertenze e condizioni: Il responsabile del procedimento, dott. Maria Farina, ha approvato gli atti in data 21.10.2025.\nLa quietanza dell’importo di EUR 582.477,66 e’ subordinata al buon fine dell’accredito sul conto\nIT48 I221 7181 7342 9927 6975 852. Ai sensi dell’art. 13 del Regolamento UE 2016/679 i dati saranno trattati per le finalita’ contrattuali indicate. Ogni modifica alle condizioni di fornitura dovra’ risultare da atto scritto richiamante il contratto Prot. n. 69339/2021.\n\nFerriera Garbagnate S.a.s. — Viale della Stazione 113, 56670 Udine\nP.IVA 18569847439 — C.F. GVZMRA60M57G090V\nIBAN IT32 T970 3283 4048 0492 0243 410 — PEC protocollo@caravaggio-pec.example — Pag. 171",
+   "loop_cut": null,
+   "s": 22.035146951675415,
+   "prompt_tokens": 3738,
+   "gen_tokens": 615,
+   "prefill_tps": 288.87906781525976,
+   "gen_tps": 68.29175598514962,
+   "peak_gb": 2.275356658
+  },
+  "itdoc_c_1000_creditnote_L1_en": {
+   "text": "Bramwell Goods LLP\n118 Market Place, Hereford\nTel. 88 2628078 – segreteria@gromospa.example\n\nCREDIT NOTE Ref. no. 2169 of 2026\nPartial reversal of invoice Order no. 711 of 2023 for returned goods.\n\nDescription | Amount\n--- | ---\nPowder fillers and skim coats – cod. 378827 | $ 10,353.22\nWeatherproof industrial sockets – cod. 473963 | EUR 11,105.07\nCertified filtering masks – cod. 239066 | $ 7,962.07\nCopper piping for installations – cod. 919780 | $ 13,430.52\nSafety footwear – cod. 174213 | $ 13,648.91\nCompatible printer toner cartridges – cod. 247923 | EUR 10,794.44\nCopper piping for installations – cod. 178507 | EUR 18,007.93\nRock-wool insulation panels – cod. 20953 | EUR 1,017.66\nCorrugated cardboard boxes – cod. 580063 | EUR 1,017.66\nFlush interior doors – cod. 152493 | EUR 1,017.66\nCorrugated cardboard boxes – cod. 539349 | GBP 14,341.19\nErgonomic chairs with armrests – cod. 398851 | GBP 14,341.19\nWeatherproof industrial sockets – cod. 160708 | GBP 11,480.41\nPaper hand-towel rolls – cod. 553856 | GBP 6,652.10\n\nTotal credit GBP 141,571.32\n\nTerms and notices: Packing and carriage, amounting to EUR 912.86, are charged to the consignee unless agreed otherwise. The courts of Wakefield shall have exclusive jurisdiction over any dispute. This document was issued with reference to procurement code IZX8KQPK72 and project code F39T30454254656. A discount of 2.5% applies provided payment is received by October 4, 2024.\n\nBramwell Goods LLP – 118 Market Place, Hereford\nVAT 44987500392 – Tax code CLMLVI87L05O877H\nIBAN IT80 R350 4190 7897 1028 3907 792 – PEC info@clusonesrl.example – Page 1001",
+   "loop_cut": null,
+   "s": 23.745673894882202,
+   "prompt_tokens": 3738,
+   "gen_tokens": 727,
+   "prefill_tps": 287.49785153853486,
+   "gen_tps": 68.2374685833097,
+   "peak_gb": 2.269622258
+  },
+  "itdoc_c_0695_letter_L1_it": {
+   "text": "Caseificio Travagliato S.r.l.\nVia Monte Grappa 36, 15332 Varese\nRoma, 18.08.2022\nVetreria Caravaggio S.a.s. – Via delle Betulle 95,\n90423 Como\nOggetto: Ord. n. 2796 del 2026\nEgregi signori,\nIn riferimento all’ordine Fatt. n. 2869 del 2021, a\ngaranzia delle obbligazioni e’ versato un deposito\ncauzionale di 2.809,25 €, previa autorizzazione del\nresponsabile.\nCon riferimento al DDT DET/2024/40185, confermiamo\nl’ordine ORD-2023-1714 per 25 pezzi con consegna\nprevista il 6 ottobre 2019, con imputazione al\ncentro di costo indicato.\nDistinti saluti.\nFederico Santoro – L’ufficio acquisti\nAvvertenze e condizioni: Il canone annuo di € 87.247,90 sara’ aggiornato\nannualmente nella misura del 8% a decorrere dal 21 settembre 2025. Lo sconto di\n1,5% sara’ riconosciuto a condizione che il pagamento avvenga entro il\n11.03.2024. Ai sensi dell’art. 13 del Regolamento UE 2016/679 i dati saranno\ntrattati per le finalita’ contrattuali indicate. La merce viaggia a rischio e\npericolo del committente anche quando il trasporto e’ curato dal fornitore.\nCaseificio Travagliato S.r.l. – Via Monte Grappa 36, 15332 Varese\nP.IVA 18420891121 – C.F. CNTNZE82A53T183K\nIBAN IT96 H642 8154 2404 7079 4114 462 – PEC info@dalmine.example – Pag. 696",
+   "loop_cut": null,
+   "s": 21.283481121063232,
+   "prompt_tokens": 3738,
+   "gen_tokens": 561,
+   "prefill_tps": 287.88159795918284,
+   "gen_tps": 68.35086293482887,
+   "peak_gb": 2.275356658
+  },
+  "itdoc_c_0610_creditnote_L1_it": {
+   "text": "Sartoria Olgiate S.n.c.\nVia Garibaldi 17, 90857 Vicenza\nTel. 81 5281795 - ufficio.acquisti@garbagnate-pec.example\n\nNOTA DI CREDITO FAT/2021/00007\nA storno parziale della fattura\nDDT n. 4197 del 2021 per reso merce.\n\nDescrizione Importo\nMascherine filtranti certificate - cod. 530387 106,14 €\nPneumatici quattro stagioni - cod. 877283 EUR 12.272,16\nVernici murali traspiranti - cod. 111827 € 18.659,95\nEstintori a polvere ricaricati - cod. 12300 € 18.730,02\nTastiere e mouse wireless - cod. 555716 € 8.040,74\nSaldatrici inverter - cod. 405941 € 6.661,68\nTubi in rame per impianti - cod. 74451 € 3.852,27\nBatterie per automezzi - cod. 363089 € 2.466,31\nEstintori a polvere ricaricati - cod. 368846 € 11.727,07\nMole angolari professionali - cod. 232912 € 6.596,64\nMonitor da ventiquattro pollici - cod. 490811 € 15.210,76\n\nTotale accredito 104.323,74 €\n\nAvvertenze e condizioni: Le consegne parziali sono ammesse e saranno fatturate separatamente con documento\nCTR/2022/54646. La merce viaggia a rischio e pericolo del committente anche quando il trasporto e’ curato dal\nfornitore. Il responsabile del procedimento, dott. Elio Gatti, ha approvato gli atti in data 23 febbraio 2021.\nEventuali contestazioni dovranno pervenire per iscritto entro otto giorni dal ricevimento della merce.\n\nSartoria Olgiate S.n.c. - Via Garibaldi 17, 90857 Vicenza\nP.IVA 22190849293 - C.F. PRTMTT55A50F409J\nIBAN IT42 H624 8317 5182 3609 2600 692 - PEC amministrazione@caravaggio-pec.example - Pag. 611",
+   "loop_cut": null,
+   "s": 23.66858696937561,
+   "prompt_tokens": 3738,
+   "gen_tokens": 719,
+   "prefill_tps": 286.3828434282156,
+   "gen_tps": 68.29513222119043,
+   "peak_gb": 2.269622258
+  },
+  "itdoc_c_0105_nda_L1_it": {
+   "text": "Officine Scandolara S.r.l.\nACCORDO DI RISERVATEZZA — FAT/2022/45635\nTra Officine Scandolara S.r.l. e Caseificio Travagliato S.p.A., in vigore dal 2 dicembre 2020.\n\nDefinizioni\n(a) per Documentazione si intendono gli elaborati scambiati fino al 23.03.2022.\n(b) per Recapiti si intendono la PEC fatture@osio-cert.example e il conto IT19 V536 9725 6733 4580 2065 267.\n(c) per Informazioni riservate si intendono i dati relativi al contratto DDT n. 3473 del 2023.\n(d) per Penale si intende l'importo di 8.964,22 € per ogni violazione.\n(e) per Corrispettivo si intende l'importo di € 101.811,76 oltre IVA.\n\nArt. 1\nIl ricevente manterra’ riservate le informazioni relative al contratto\nProt. n. 70248/2019 fino al 11.07.2019.\n\nArt. 2\nOgni divulgazione non autorizzata comportera’ una penale di 434,95 € ai sensi del presente accordo.\n\nArt. 3\nGli obblighi di riservatezza decorrono dal 7 agosto 2024 e durano 12 anni dalla sottoscricione.\n\nLetto e sottoscritto — Marta Villa\nAvvertenze e condizioni: La quietanza dell’importo di EUR 2.907,35 e’ subordinata al buon fine dell’accredito sul conto IT88 R464 6084 3387 6756 2349 044. Le consegne parziali sono ammesse e saranno fatturate separatamente con documento CONV-2025-6353. Eventuali contestazioni dovranno pervenire per iscritto entro otto giorni dal ricevimento della merce. La merce viaggia a rischio e pericolo del committente anche quando il trasporto e’ curato dal fornitore.\n\nOfficine Scandolara S.r.l. — Via Matteotti 29, 94795 Bologna\nP.IVA 05321583501 — C.F. PRTLGO90D08P432X\nIBAN IT80 Z482 7386 3290 2083 4703 968 — PEC info@stezzanospa.example — Pag. 106",
+   "loop_cut": null,
+   "s": 23.1143958568573,
+   "prompt_tokens": 3738,
+   "gen_tokens": 683,
+   "prefill_tps": 286.94887358234547,
+   "gen_tps": 68.31835173744005,
+   "peak_gb": 2.269622258
+  },
+  "itdoc_c_0205_protocol_L1_it": {
+   "text": "Azienda Sanitaria Locale di Trescore\nProt. n. Prot. n. 99081/2025 del 2 novembre 2023\nClassifica 7.1\nDa: Azienda Sanitaria Locale di Trescore — Settore Lavori Pubblici — A:\nTessitura Stezzano S.r.l., Via delle Betulle 85, 24804 Napoli\nOggetto: convocazione commissione\nCon riferimento al DDT ORD-2024-6782, richiediamo copia del\ndocumento di identita’ di Davide Gavazzi ai fini della registrazione, con\nimputazione al centro di costo indicato. A seguito della riunione\noperativa, confermiamo che la PEC gare@roncadelle-cert.example e’ il\nrecapito eletto per le comunicazioni ufficiali, con preghiera di pronto\nriscontro.\nA conclusione delle verifiche contabili, confermiamo l’awvenuta\nconsegna presso Caseificio Romano S.n.c. in data 17.10.2022, con\npreghiera di pronto riscontro.\nAllegati:\n1. Capitolato speciale d'appalto (CIG JLDP4GPUH6).\n2. Disciplinare di gara del 9 giugno 2019.\n3. Elenco elaborati trasmessi il 19 novembre 2024.\nIl funzionario Omar Lombardi\nAvvertenze e condizioni: La penale per ritardata consegna e’ fissata in 1.596,13 € per ogni giorno di ritardo\noltre il 27/10/2026. Le consegne parziali sono ammesse e saranno fatturate separatamente con documento\nn. 19903/2020. Il recesso anticipato comporta l’addebito di una penale pari a 648.389,81 € oltre agli oneri\nmaturati. Il foro competente per ogni controversia e’ esclusivamente quello di Bologna, con esclusione di ogni\naltro.\nAzienda Sanitaria Locale di Trescore — Via del Commercio 27, 14406 Parma\nP.IVA 39736145515 — C.F. RVILEI97C59Y022L\nIBAN IT94 E936 7996 1796 2842 9702 726 — PEC ordini@trivulziosrl.example — Pag. 206",
+   "loop_cut": null,
+   "s": 22.649770975112915,
+   "prompt_tokens": 3738,
+   "gen_tokens": 651,
+   "prefill_tps": 287.0692385830502,
+   "gen_tps": 68.23495731192695,
+   "peak_gb": 2.275356658
+  },
+  "itdoc_c_0600_invoice_L1_en": {
+   "text": "Ironside Supplies plc\n148 Forge Way, Derby\nTel. 96 5702392 — affari.generali@cernusco-cert.example\n\nINVOICE CTR-2019-3768\nDated 2025-04-12 — Bill to:\nTrelawney Goods Ltd. — 149 Willow Drive, Oxford\n\nDescription | Qty | Price | Amount\n--- | --- | --- | ---\nPaper hand-towel rolls — cod. 299469 | 4 pcs | GBP 67.39 | GBP 269.54\nPacking tape in cartons — cod. 50614 | 4 pcs | EUR 3,196.96 | GBP 12,787.84\nLED desk lamps — cod. 860001 | 100 pcs | EUR 3,152.69 | $ 315,268.98\nLiquid-soap dispensers — cod. 561527 | 5 pcs | EUR 3,064.04 | EUR 15,320.21\nRock-wool insulation panels — cod. 846554 | 40 pcs | GBP 599.43 | EUR 23,977.01\nOffice copy paper in reams — cod. 462640 | 24 pcs | GBP 160.19 | $ 3,844.50\nOffice desks with drawer units — cod. 645236 | 100 pcs | GBP 3,627.76 | GBP 362,776.07\nHeavy-duty refuse sacks — cod. 840050 | 12 pcs | $ 2,323.46 | GBP 362,776.07\nWeatherproof industrial sockets — cod. 662263 | 6 pcs | GBP 721.38 | EUR 27,881.58\nStackable plastic crates — cod. 640749 | 30 pcs | EUR 859.70 | GBP 25,791.01\nCertified filtering masks — cod. 974133 | 100 pcs | $ 2,237.42 | EUR 223,742.19\nDisposable nitrile gloves — cod. 75019 | 40 pcs | $ 263.81 | GBP 10,552.52\nWeatherproof industrial sockets — cod. 329981 | 5 pcs | $ 726.22 | $ 3,631.10\nRing binders in assorted colours — cod. 321859 | 5 pcs | EUR 777.65 | EUR 3,888.24\nDisposable nitrile gloves — cod. 794762 | 5 pcs | GBP 71.55 | $ 357.73\nMulti-core electric cable — cod. 225100 | 30 pcs | GBP 323.93 | EUR 9,717.78\n\nSubtotal GBP 1,044,134.57\nVAT 22% — EUR 229,709.61\nTOTAL GBP 1,273,844.18\n\nTerms and notices: This deed refers to contract Ref. no. 3763 of 2021 and procurement code WG99YFET58 recited above.\nPayment shall be made within thirty days of invoice Inv. no. 2986 of 2023 by transfer to account.\nIT59 E048 5868 1765 6796 5349 071. Any complaint must reach us in writing within eight days of receipt of the goods.\nGoods are warranted for twenty-four months from delivery on 2023-08-03.\n\nIronside Supplies plc — 148 Forge Way, Derby\nVAT 69345285634 — Tax code FRNTRS85L54S163M\nIBAN IT47 T929 2675 1581 9080 4165 594 — PEC info@vimodrone.example — Page 601",
+   "loop_cut": null,
+   "s": 29.738508701324463,
+   "prompt_tokens": 3738,
+   "gen_tokens": 1135,
+   "prefill_tps": 287.43360907780647,
+   "gen_tps": 68.20280123042386,
+   "peak_gb": 2.275356658
+  },
+  "itdoc_c_0705_nda_L1_it": {
+   "text": "Libreria Palazzolo S.n.c.\nACCORDO DI RISERVATEZZA — n. 8210/2022\nTra Libreria Palazzolo S.n.c. e Panificio Romano S.a.s., in vigore dal 23 giugno 2019.\n\nDefinizioni\n(a) per Recapiti si intendono la PEC affari.generali@valdorbiasrl.example e il conto IT10 W484 5769 1977 5128 7246 384.\n(b) per Corrispettivo si intende l'importo di EUR 31,11 oltre IVA.\n(c) per Penale si intende l'importo di 344,38 € per ogni violazione.\n\nArt. 1\nIl ricevente manterra’ riservate le informazioni relative al contratto Prot. n. 9098/2024 fino al 21/02/2019.\n\nArt. 2\nOgni divulgazione non autorizzata comportera’ una penale di € 328,85 ai sensi del presente accordo.\n\nLetto e sottoscritto — Elio Mancini\nAvvertenze e condizioni: Il recesso anticipato comporta l’addebito di una penale pari a 1.717,96 € oltre agli oneri maturati. La quietanza dell’importo di EUR 4.667.436,91 e’ subordinata al buon fine dell’accredito sul conto IT31 M020 1541 3211 6396 3369 813. Ai sensi dell’art. 13 del Regolamento UE 2016/679 i dati saranno trattati per le finalita’ contrattuali indicate. Lo sconto di 1,5% sara’ riconosciuto a condizione che il pagamento avvenga entro il 8 marzo 2021.\n\nLibreria Palazzolo S.n.c. — Via Cavour 33, 20919 Lecce\nP.IVA 88005939264 — C.F. RSSSLV64B16R874M\nIBAN IT33 V683 9123 9967 5248 3149 129 — PEC ordini@olgiatespa.example — Pag. 706",
+   "loop_cut": null,
+   "s": 21.861554384231567,
+   "prompt_tokens": 3738,
+   "gen_tokens": 602,
+   "prefill_tps": 288.36829676503834,
+   "gen_tps": 68.33732087373753,
+   "peak_gb": 2.275356658
+  },
+  "itdoc_c_1360_creditnote_L1_it": {
+   "text": "Ferriera Castegnate S.a.s.\nVia Don Minzoni 52, 95942 Varese\nNOTA DI CREDITO DDT n. 3113 del 2026\nA storno parziale della fattura ORD-2021-7606 per reso merce.\nImporto\nDescrizione\n€ 12.365,08\nEtichette termiche in bobina – cod. 119475\n7.532,22 €\nFiltri per impianti di irrigazione – cod. 166124\n41,09 €\nEtichette termiche in bobina – cod. 467572\nEUR 5.504,36\nRecinzioni metalliche modulari – cod. 44435\n1.451,05 €\nSigillanti siliconici – cod. 683772\n6.759,49 €\nDivise da lavoro personalizzate – cod. 121239\nEUR 11.689,12\nBox doccia con cristalli temperati – cod. 128362\nEUR 2.513,65\nCondizionatori monosplit inverter – cod. 981349\n7.651,56 €\nRaccoglitori ad anelli – cod. 833638\nTotale accredito 55.507,62 €\nAvvertenze e condizioni: Il pagamento dovra’ essere effettuato entro trenta giorni dalla data della\nfattura DDT/2021/00265 mediante bonifico sul conto IT09 U338 9657 0097 6676 3206 879. La\nfattura garanzia sui beni forniti ha durata di ventiquattro mesi dalla consegna del 01/06/2024. La fatturazione\nelettronica sara’ trasmessa al codice destinatario collegato alla partita IVA 05909278136. Il foro\ncompetente per ogni controversia e’ esclusivamente quello di Perugia, con esclusione di ogni altro.\nFerriera Castegnate S.a.s. – Via Don Minzoni 52, 95942 Varese\nP.IVA 06591799645 – C.F. RVIWLM01P63G192U\nIBAN IT64 I613 3311 8759 1138 5642 187 – PEC contabilita@brentegani.example – Pag. 1361",
+   "loop_cut": null,
+   "s": 23.196688175201416,
+   "prompt_tokens": 3738,
+   "gen_tokens": 692,
+   "prefill_tps": 286.8150533063682,
+   "gen_tps": 68.24044018407665,
+   "peak_gb": 2.275356658
+  }
+ }
+}

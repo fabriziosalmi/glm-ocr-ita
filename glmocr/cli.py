@@ -27,9 +27,11 @@ def cmd_infer(a):
             raise SystemExit("--regions reads the page as it is: drop --scale")
         make = lambda: regions.RegionReader(Reader(a.model, max_tokens=regions.MAX_TOKENS, mem_gb=a.mem_gb, prompt_style=a.prompt),
                                             regions.Layout(a.layout_python, keep=not a.drop_margins))
+    if a.deskew is not None and (a.regions or a.image.lower().endswith(".pdf")):
+        raise SystemExit("--deskew is measured on whole page images only: drop it for --regions and PDFs")
     if a.image.lower().endswith(".pdf"):
         return infer_pdf(a, make)
-    r = make().read(a.image, a.scale)
+    r = make().read(a.image, a.scale, deskew=a.deskew, trim=a.trim)
     print(r["text"])
     print(f"{r['s']:.1f} s, {r['prompt_tokens']} prompt tokens, {r['gen_tokens']} generated"
           + (" - REPETITION LOOP, page not read" if r["looped"] else ""), file=sys.stderr)
@@ -63,7 +65,7 @@ def cmd_run(a):
     out = corpus.result_path(a.tag)
     out.parent.mkdir(exist_ok=True)
     reader = Reader(a.model, adapter=a.adapter, max_tokens=a.max_tokens, mem_gb=a.mem_gb, wait=a.wait, prompt_style=a.prompt, retry_penalty=a.retry_penalty)
-    setup = {"model": a.model, "corpus": corpus.split_name(a.corpus)[0], "scale": a.scale, "max_tokens": a.max_tokens, "adapter": a.adapter, "prompt": a.prompt, **({"retry_penalty": a.retry_penalty} if a.retry_penalty else {}), "env": environment()}
+    setup = {"model": a.model, "corpus": corpus.split_name(a.corpus)[0], "scale": a.scale, "max_tokens": a.max_tokens, "adapter": a.adapter, "prompt": a.prompt, **({"retry_penalty": a.retry_penalty} if a.retry_penalty else {}), **({"deskew": a.deskew, "trim": a.trim} if a.deskew is not None else {}), "env": environment()}
     res = json.load(open(out)) if out.exists() else {"tag": a.tag, **setup, "load_s": reader.load_s, "pages": {}}
     res.setdefault("prompt", "mlx")   # files written before 2026-10-14 used mlx-vlm's prompt and do not say so
     for k, v in setup.items():   # a resumed run must be the same run; older files carry only the model
@@ -74,7 +76,7 @@ def cmd_run(a):
             continue
         stop = None
         try:
-            p = reader.read(d / f"{m['id']}.png", a.scale)
+            p = reader.read(d / f"{m['id']}.png", a.scale, deskew=a.deskew, trim=a.trim)
         except guard.MemoryStop as e:   # the page itself was read: keep it, then stop
             p, stop = reader.last, e
         p = {k: v for k, v in p.items() if k != "looped"}
@@ -271,6 +273,9 @@ def main(argv=None):
     p.add_argument("corpus", nargs="*")
     for name, default in (("infer", 1.1), ("run", None)):   # infer reads as release v1.1.0; run measures only what it is told
         sub.choices[name].add_argument("--retry-penalty", type=float, default=default, help=f"read a page that loops a second time with this repetition penalty, 0 for never (default {default}); see engine.keep_retry")
+    for name in ("infer", "run"):
+        sub.choices[name].add_argument("--deskew", type=float, default=None, metavar="DEG", help="straighten a page turned by at least DEG degrees before reading it (glmocr/deskew.py); off by default")
+        sub.choices[name].add_argument("--trim", action="store_true", help="--deskew: crop the straightened page to its ink, so the larger canvas costs no image tokens")
     for name in ("infer", "run", "smoke"):
         sub.choices[name].add_argument("--prompt", choices=["official", "mlx"], default="official", help="official: as the reference implementation; mlx: with /nothink and <think></think>, as every run before 2026-10-14")
     a = ap.parse_args(argv)
