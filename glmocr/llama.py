@@ -26,6 +26,22 @@ from .metrics import MAX_TOKENS, is_loop, loop_start
 PROMPT = "[gMASK]<sop><|user|>\n{media}{task}<|assistant|>\n"   # engine's official prompt, the image between its markers by mtmd
 REPEAT_LAST_N = 20
 EVERY = 32
+RELEASE_GGUF = "fabriziosalmi/GLM-OCR-ita-GGUF"                    # the same weights as models.RELEASE, in llama.cpp's Q8_0
+FILES = ("glm-ocr-ita-Q8_0.gguf", "mmproj-glm-ocr-ita-f16.gguf")
+
+
+def is_gguf(model):
+    """A .gguf file, or a Hugging Face repository of GGUF files (its name ends in -GGUF, as llama.cpp's convention)."""
+    return str(model).endswith(".gguf") or str(model).upper().endswith("-GGUF")
+
+
+def fetch(model):
+    """A local .gguf as it is; a Hugging Face id: the model and its projector downloaded side by side, the model's path returned."""
+    if str(model).endswith(".gguf"):
+        return pathlib.Path(model)
+    from huggingface_hub import hf_hub_download
+    paths = [pathlib.Path(hf_hub_download(str(model), f)) for f in FILES]
+    return paths[0]
 
 
 def server_binary():
@@ -50,6 +66,8 @@ class LlamaReader:
             raise SystemExit("the GGUF reader writes the official prompt only")
         self.ceiling = mem_gb or guard.CEILING_GB
         self._lock = guard.lock(WORK / ".model.lock", wait)
+        binary = server_binary()   # before a download of 1.8 GB, not after
+        model = fetch(model)
         guard.preflight(model, self.ceiling)
         self.model, self.max_tokens, self.stop_loops, self.retry_penalty = str(model), max_tokens, stop_loops, retry_penalty
         self.prompt_style = prompt_style
@@ -60,7 +78,7 @@ class LlamaReader:
         # --cache-ram 0: the server's prompt cache in RAM (8 GB by default) grew by 0.3 GB a page and stopped a run at 8.3 GB
         # (2026-10-17); every page here is a request of its own, so it caches nothing worth having
         self.server_args = ["-fa", "on", "-c", str(ctx), "-np", "1", "--cache-ram", "0"]
-        self.proc = subprocess.Popen([server_binary(), "-m", self.model, "--mmproj", str(mmproj_for(model)), *self.server_args,
+        self.proc = subprocess.Popen([binary, "-m", self.model, "--mmproj", str(mmproj_for(model)), *self.server_args,
                                       "--host", "127.0.0.1", "--port", str(self.port)], stdout=log, stderr=subprocess.STDOUT)
         atexit.register(self.close)
         while True:

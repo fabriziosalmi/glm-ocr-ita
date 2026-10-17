@@ -18,14 +18,25 @@ def cmd_quant(a):
     print(f"done {a.variant} -> {dst}  {mb:.0f} MB")
 
 
+def apple_silicon():
+    import platform
+    return (sys.platform, platform.machine()) == ("darwin", "arm64")
+
+
+def default_model():
+    """The release: MLX on Apple Silicon, its GGUF elsewhere (llama.cpp)."""
+    from .llama import RELEASE_GGUF
+    return RELEASE if apple_silicon() else RELEASE_GGUF
+
+
 def reader_class(model):
     """engine.Reader (MLX), or llama.LlamaReader for a .gguf (llama.cpp's llama-server)."""
-    if str(model).endswith(".gguf"):
+    from .llama import is_gguf
+    if is_gguf(model):
         from .llama import LlamaReader
         return LlamaReader
-    import platform
-    if (sys.platform, platform.machine()) != ("darwin", "arm64"):
-        raise SystemExit(f"{model} is an MLX model, and MLX runs on Apple Silicon only: pass --model with a .gguf (llama.cpp)")
+    if not apple_silicon():
+        raise SystemExit(f"{model} is an MLX model, and MLX runs on Apple Silicon only: pass --model with a .gguf or a -GGUF repository (llama.cpp)")
     from .engine import Reader
     return Reader
 
@@ -250,7 +261,7 @@ def main(argv=None):
     p.add_argument("image", help="an image, or a PDF (pages separated by a form feed in the output)")
     p.add_argument("--mode", choices=("auto", "ocr", "text"), default="auto", help="PDF only: auto = the text layer where it passes the checks, the model elsewhere; ocr = always the model; text = always the layer (glmocr/pdf.py)")
     p.add_argument("--pages", help="PDF only: pages to read, counted from 1, e.g. 1-3,7")
-    p.add_argument("--model", default=RELEASE, help=f"local model folder or a Hugging Face id (default the release, {RELEASE})")
+    p.add_argument("--model", default=default_model(), help=f"local model folder, .gguf, or a Hugging Face id (default the release: {RELEASE} on Apple Silicon, its GGUF elsewhere)")
     p.add_argument("--scale", type=float, default=1.0, help="resize factor before OCR; 1.0 = as is. Below 1 small print is lost (docs/RESULTS.md)")
     p.add_argument("--max-tokens", type=int, default=metrics.MAX_TOKENS)
     p.add_argument("-o", "--output", help="also save a JSON with text and timings")

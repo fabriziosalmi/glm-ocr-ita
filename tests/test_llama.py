@@ -32,3 +32,18 @@ def test_one_projector_next_to_the_model(tmp_path):
     (tmp_path / "mmproj-b.gguf").touch()
     with pytest.raises(SystemExit):
         llama.mmproj_for(m)
+
+
+def test_the_gguf_release_is_recognized_and_is_the_default_off_apple_silicon(monkeypatch):
+    assert llama.is_gguf(llama.RELEASE_GGUF) and llama.is_gguf("x/y.gguf")
+    assert not llama.is_gguf("fabriziosalmi/GLM-OCR-ita-mlx-8bit") and not llama.is_gguf("models/v8d8e8_op1")
+    assert cli.reader_class(llama.RELEASE_GGUF) is llama.LlamaReader
+    monkeypatch.setattr(cli, "apple_silicon", lambda: False)
+    assert cli.default_model() == llama.RELEASE_GGUF
+    monkeypatch.setattr(cli, "apple_silicon", lambda: True)
+    assert cli.default_model() == cli.RELEASE
+
+
+def test_a_local_gguf_is_not_downloaded(tmp_path):
+    m = tmp_path / "m.gguf"
+    assert llama.fetch(m) == m
