@@ -1,0 +1,9 @@
+# The image holds the code only: no pages, results, models or work files.
+*
+!pyproject.toml
+!uv.lock
+!README.md
+!LICENSE
+!NOTICE
+!glmocr/
+glmocr/__pycache__/

@@ -55,6 +55,24 @@ glmocr check                                                           # validat
 glmocr smoke spark/itdoc_a                                             # a new page set in 3 minutes: check, then 20 pages read
 ```
 
+## The GGUF reader: Linux, Windows, Docker
+
+A model path ending in `.gguf` is read through llama.cpp's `llama-server` (`glmocr/llama.py`), with the same prompt, loop stop and retry as the MLX reader, and the vision projector `mmproj-*.gguf` next to it. MLX is installed on Apple Silicon only; elsewhere `glmocr` installs without it, and an MLX model is refused with a message. The server is `GLMOCR_LLAMA_SERVER`, or `llama-server` on PATH. Not published yet: the GGUF is being compared with the MLX release (`docs/ROADMAP.md`, "Comparison with the MLX release").
+
+```bash
+pip install -e .                                                     # Linux or Windows: no MLX
+glmocr infer page.png --model work/gguf/glm-ocr-ita-Q8_0.gguf        # mmproj-glm-ocr-ita-f16.gguf in the same folder
+```
+
+Docker, `linux/amd64` and `linux/arm64`: llama.cpp's own server image (CPU), glmocr installed from `uv.lock`, both bases pinned by digest; the models are mounted, not copied in.
+
+```bash
+docker build -t glmocr .
+docker run --rm -m 6g -v "$PWD/work/gguf:/models:ro" -v "$PWD:/data" glmocr infer page.png --model /models/glm-ocr-ita-Q8_0.gguf
+```
+
+Status, 2026-10-17: the image builds on `linux/arm64` and the portable tests pass in it (61); the memory fences read `/proc/meminfo` and, in a container, the cgroup limit. Not yet done: a page read in the image, `linux/amd64`, Windows.
+
 ## Memory
 
 Two model jobs together run out of memory on 16 GB, and the first one dies. `glmocr/guard.py` puts four fences around every job that loads a model (`quant`, `infer`, `run`, `experiments/crops.py`):

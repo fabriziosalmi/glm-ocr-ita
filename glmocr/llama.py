@@ -50,6 +50,7 @@ class LlamaReader:
             raise SystemExit("the GGUF reader writes the official prompt only")
         self.ceiling = mem_gb or guard.CEILING_GB
         self._lock = guard.lock(WORK / ".model.lock", wait)
+        guard.preflight(model, self.ceiling)
         self.model, self.max_tokens, self.stop_loops, self.retry_penalty = str(model), max_tokens, stop_loops, retry_penalty
         self.prompt_style = prompt_style
         with socket.socket() as s:
@@ -89,8 +90,7 @@ class LlamaReader:
             pass
 
     def rss_gb(self):
-        out = subprocess.run(["ps", "-o", "rss=", "-p", str(self.proc.pid)], capture_output=True, text=True).stdout.strip()
-        return int(out) * 1024 / 1e9 if out else 0.0
+        return guard.rss_gb(self.proc.pid)
 
     def read(self, image, scale=1.0, penalty=None, task="text", deskew=None, trim=False):
         """As engine.Reader.read. peak_gb is the server's resident memory after the read, not a GPU peak."""

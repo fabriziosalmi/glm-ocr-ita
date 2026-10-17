@@ -17,7 +17,9 @@ import tomllib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RESULTS = ROOT / "results"
-WORK = ROOT / "work"
+# work/: the lock, the server log, scratch files. In a checkout, next to the code; in an installed package (pip, Docker)
+# ROOT is site-packages, so a folder of the user's, or GLMOCR_WORK.
+WORK = pathlib.Path(os.environ.get("GLMOCR_WORK") or (ROOT / "work" if (ROOT / "pyproject.toml").exists() else "~/.cache/glmocr")).expanduser()
 MODELS = ROOT / "models"
 SOURCE = WORK / "glm-ocr-bf16"
 LEDGER = ROOT / "docs" / "LEDGER.md"

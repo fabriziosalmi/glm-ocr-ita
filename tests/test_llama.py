@@ -1,4 +1,7 @@
 """glmocr/llama.py without a server: which reader a model path selects, and the prompt it writes."""
+import platform
+import sys
+
 import pytest
 
 from glmocr import cli, llama
@@ -7,7 +10,11 @@ from glmocr.engine import Reader
 
 def test_a_gguf_path_selects_llama_cpp():
     assert cli.reader_class("work/gguf/glm-ocr-ita-Q8_0.gguf") is llama.LlamaReader
-    assert cli.reader_class("models/v8d8e8_op1") is Reader
+    if (sys.platform, platform.machine()) == ("darwin", "arm64"):
+        assert cli.reader_class("models/v8d8e8_op1") is Reader
+    else:   # Linux, Windows, an Intel Mac: no MLX, a clear refusal instead of an ImportError
+        with pytest.raises(SystemExit, match="Apple Silicon only"):
+            cli.reader_class("models/v8d8e8_op1")
 
 
 def test_the_prompt_is_the_official_one_with_its_prefix():

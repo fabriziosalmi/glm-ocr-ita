@@ -7,11 +7,13 @@ Four fences, from the outside in:
   4. a watch per page     after every page: stop if the job went over the ceiling or the system is nearly out of memory
 MLX treats its memory limit as a guideline, not a wall: fence 4 is the one that actually stops a job. A stopped run has saved
 every page it read; the same command resumes it.
+The GGUF reader runs on Linux and Windows too: there fence 3 is llama.cpp's own (it holds what the model and its context need),
+and fences 2 and 4 read the system's gauge for available memory, a container's limit included.
 """
-import fcntl
 import os
 import pathlib
 import subprocess
+import sys
 
 GB = 1e9
 CEILING_GB = float(os.environ.get("GLMOCR_MEM_GB", 6))   # most a job may use; the bf16 model peaks at 3.2 GB
@@ -27,10 +29,77 @@ class MemoryStop(SystemExit):
 
 
 def available_gb():
-    """Memory the kernel counts as available: its own gauge (kern.memorystatus_level, a percentage of RAM), the one
-    macOS acts on when memory runs short. It counts what can be reclaimed, which a sum of free pages does not."""
-    q = lambda name: int(subprocess.run(["sysctl", "-n", name], capture_output=True, text=True, check=True).stdout)
-    return q("kern.memorystatus_level") / 100 * q("hw.memsize") / GB
+    """Memory the kernel counts as available. macOS: its own gauge (kern.memorystatus_level, a percentage of RAM), the one
+    it acts on when memory runs short; it counts what can be reclaimed, which a sum of free pages does not. Linux:
+    MemAvailable, and under a cgroup limit (Docker, LXC) what is left of the limit, whichever is less. Windows: ullAvailPhys."""
+    if sys.platform == "darwin":
+        q = lambda name: int(subprocess.run(["sysctl", "-n", name], capture_output=True, text=True, check=True).stdout)
+        return q("kern.memorystatus_level") / 100 * q("hw.memsize") / GB
+    if sys.platform == "win32":
+        return _windows_available() / GB
+    have = linux_available(pathlib.Path("/proc/meminfo").read_text())
+    left = cgroup_left(pathlib.Path("/sys/fs/cgroup"))
+    return min(have, left if left is not None else have) / GB
+
+
+def linux_available(meminfo):
+    """Bytes of MemAvailable in the text of /proc/meminfo."""
+    for line in meminfo.splitlines():
+        if line.startswith("MemAvailable:"):
+            return int(line.split()[1]) * 1024
+    raise SystemExit("no MemAvailable in /proc/meminfo: kernel older than 3.14")
+
+
+def cgroup_left(root):
+    """Bytes a cgroup v2 limit leaves (memory.max minus memory.current), or None without a limit. In a container
+    /proc/meminfo is the host's, so the limit is the number that decides whether the job is killed."""
+    limit, used = root / "memory.max", root / "memory.current"
+    if not (limit.exists() and used.exists()):
+        return None
+    top = limit.read_text().strip()
+    return None if top == "max" else int(top) - int(used.read_text())
+
+
+def _windows_available():
+    import ctypes
+    class Status(ctypes.Structure):
+        _fields_ = [("dwLength", ctypes.c_ulong), ("dwMemoryLoad", ctypes.c_ulong)] + \
+                   [(n, ctypes.c_ulonglong) for n in ("ullTotalPhys", "ullAvailPhys", "ullTotalPageFile", "ullAvailPageFile",
+                                                       "ullTotalVirtual", "ullAvailVirtual", "ullAvailExtendedVirtual")]
+    s = Status(); s.dwLength = ctypes.sizeof(Status)
+    if not ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(s)):
+        raise OSError("GlobalMemoryStatusEx failed")
+    return s.ullAvailPhys
+
+
+def rss_gb(pid):
+    """Resident memory of another process (the llama-server): ps on macOS, /proc on Linux, the process's working set on Windows."""
+    if sys.platform == "win32":
+        return _windows_rss(pid) / GB
+    status = pathlib.Path(f"/proc/{pid}/status")
+    if status.exists():
+        line = next((l for l in status.read_text().splitlines() if l.startswith("VmRSS:")), None)
+        return int(line.split()[1]) * 1024 / GB if line else 0.0
+    out = subprocess.run(["ps", "-o", "rss=", "-p", str(pid)], capture_output=True, text=True).stdout.strip()
+    return int(out) * 1024 / GB if out else 0.0
+
+
+def _windows_rss(pid):
+    import ctypes
+    from ctypes import wintypes
+    class Counters(ctypes.Structure):
+        _fields_ = [("cb", wintypes.DWORD), ("PageFaultCount", wintypes.DWORD)] + \
+                   [(n, ctypes.c_size_t) for n in ("PeakWorkingSetSize", "WorkingSetSize", "QuotaPeakPagedPoolUsage",
+                                                    "QuotaPagedPoolUsage", "QuotaPeakNonPagedPoolUsage", "QuotaNonPagedPoolUsage",
+                                                    "PagefileUsage", "PeakPagefileUsage")]
+    h = ctypes.windll.kernel32.OpenProcess(0x1000, False, pid)   # PROCESS_QUERY_LIMITED_INFORMATION
+    if not h:
+        return 0
+    try:
+        c = Counters(); c.cb = ctypes.sizeof(Counters)
+        return c.WorkingSetSize if ctypes.windll.psapi.GetProcessMemoryInfo(h, ctypes.byref(c), c.cb) else 0
+    finally:
+        ctypes.windll.kernel32.CloseHandle(h)
 
 
 def swap_used_gb():
@@ -40,12 +109,35 @@ def swap_used_gb():
 
 
 def weights_gb(model):
+    """An MLX folder: its safetensors. A .gguf: the file and the mmproj-*.gguf beside it (Q8_0 950 MB + 869 MB; the
+    server then holds 2.59 GB resident, 2026-10-17)."""
     d = pathlib.Path(model)
+    if d.suffix == ".gguf" and d.is_file():
+        return sum(f.stat().st_size for f in {d, *d.parent.glob("mmproj-*.gguf")}) / GB
     return sum(f.stat().st_size for f in d.glob("*.safetensors")) / GB if d.is_dir() else 0.0
 
 
 def needed_gb(model):
     return weights_gb(model) + HEADROOM_GB
+
+
+def _hold(f, wait):
+    """An exclusive lock on the open file, released when the process ends; BlockingIOError if it is held and wait is False."""
+    if sys.platform != "win32":
+        import fcntl
+        fcntl.flock(f, fcntl.LOCK_EX | (0 if wait else fcntl.LOCK_NB))
+        return
+    import msvcrt
+    import time
+    while True:   # msvcrt locks a byte range: the first byte stands for the whole file
+        f.seek(0)
+        try:
+            msvcrt.locking(f.fileno(), msvcrt.LK_NBLCK, 1)
+            return
+        except OSError:
+            if not wait:
+                raise BlockingIOError from None
+            time.sleep(1)
 
 
 def lock(path, wait=False):
@@ -54,10 +146,14 @@ def lock(path, wait=False):
     path.parent.mkdir(parents=True, exist_ok=True)
     f = open(path, "a+")
     try:
-        fcntl.flock(f, fcntl.LOCK_EX | (0 if wait else fcntl.LOCK_NB))
+        _hold(f, wait)
     except BlockingIOError:
         f.seek(0)
-        raise SystemExit(f"another model job is running (pid {f.read().strip() or '?'}): one at a time on this machine") from None
+        try:
+            who = f.read().strip()
+        except OSError:   # Windows: the locked byte cannot be read by another process
+            who = ""
+        raise SystemExit(f"another model job is running (pid {who or '?'}): one at a time on this machine") from None
     f.seek(0)
     f.truncate()
     f.write(str(os.getpid()))

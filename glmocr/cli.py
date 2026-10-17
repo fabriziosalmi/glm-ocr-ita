@@ -23,14 +23,15 @@ def reader_class(model):
     if str(model).endswith(".gguf"):
         from .llama import LlamaReader
         return LlamaReader
+    import platform
+    if (sys.platform, platform.machine()) != ("darwin", "arm64"):
+        raise SystemExit(f"{model} is an MLX model, and MLX runs on Apple Silicon only: pass --model with a .gguf (llama.cpp)")
     from .engine import Reader
     return Reader
 
 
 def cmd_infer(a):
-    from .engine import Reader
-    if str(a.model).endswith(".gguf"):
-        Reader = reader_class(a.model)
+    Reader = reader_class(a.model)
     make = lambda: Reader(a.model, max_tokens=a.max_tokens, mem_gb=a.mem_gb, prompt_style=a.prompt, retry_penalty=a.retry_penalty)
     if a.regions:   # the SDK's settings: its token budget per region and penalty on every read, no retry, the page as it is
         from . import regions

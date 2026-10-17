@@ -103,6 +103,27 @@ def test_available_memory_is_read_from_the_system():
     assert 0 < guard.available_gb() < 1024
 
 
+def test_linux_memory_and_a_container_limit(tmp_path):
+    assert guard.linux_available("MemTotal: 16000000 kB\nMemAvailable:    8000000 kB\n") == 8000000 * 1024
+    assert guard.cgroup_left(tmp_path) is None                       # no cgroup v2 files: no limit
+    (tmp_path / "memory.max").write_text("max\n"); (tmp_path / "memory.current").write_text("1000\n")
+    assert guard.cgroup_left(tmp_path) is None                       # a cgroup without a limit
+    (tmp_path / "memory.max").write_text("6000000000\n")
+    assert guard.cgroup_left(tmp_path) == 6000000000 - 1000
+
+
+def test_a_gguf_is_weighed_with_its_projector(tmp_path):
+    for name, gb in (("m.gguf", 0.95), ("mmproj-m.gguf", 0.87)):
+        with open(tmp_path / name, "wb") as f:
+            f.truncate(int(gb * guard.GB))
+    assert guard.weights_gb(tmp_path / "m.gguf") == pytest.approx(1.82)
+
+
+def test_resident_memory_of_a_process():
+    import os
+    assert 0.001 < guard.rss_gb(os.getpid()) < 64
+
+
 # ---------------------------------------------------------------- NAME#N: a prefix of the sampling order
 def fake_meta(n=300):
     return [{"id": f"p{i:04d}", "level": i % 5 + 1, "lang": "en" if i % 5 == 0 and i % 2 else "it" if i % 10 else "en"} for i in range(n)]

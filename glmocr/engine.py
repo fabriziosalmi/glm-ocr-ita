@@ -25,9 +25,17 @@ def official_prompt(prompt):
 def environment():
     """What a run was produced with. Outputs are identical byte for byte only within one environment (docs/RESULTS.md, Reproducibility)."""
     import platform
-    from importlib.metadata import version
-    return {"macos": platform.mac_ver()[0], "python": platform.python_version(),
-            **{p: version(p) for p in ("mlx", "mlx-vlm", "transformers", "tokenizers", "pillow", "numpy")}}
+    from importlib.metadata import PackageNotFoundError, version
+    def have(p):
+        try:
+            return version(p)
+        except PackageNotFoundError:   # the GGUF reader on Linux or Windows: no MLX
+            return None
+    env = {"macos": platform.mac_ver()[0], "python": platform.python_version(),
+           **{p: have(p) for p in ("mlx", "mlx-vlm", "transformers", "tokenizers", "pillow", "numpy")}}
+    if not env["macos"]:
+        env = {"system": platform.system(), "machine": platform.machine(), **{k: v for k, v in env.items() if v}}
+    return env
 
 
 def open_page(image):
