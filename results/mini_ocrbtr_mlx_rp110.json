@@ -1,0 +1,523 @@
+{
+ "tag": "mini_ocrbtr_mlx_rp110",
+ "model": "models/v8d8e8_op1",
+ "corpus": "external/ocrbench_train",
+ "scale": 1.0,
+ "max_tokens": 3000,
+ "adapter": null,
+ "prompt": "official",
+ "retry_penalty": 1.1,
+ "env": {
+  "macos": "26.4.1",
+  "python": "3.12.13",
+  "mlx": "0.32.3",
+  "mlx-vlm": "0.7.6",
+  "transformers": "5.19.0",
+  "tokenizers": "0.23.3",
+  "pillow": "12.3.0",
+  "numpy": "2.5.3"
+ },
+ "load_s": 0.29022908210754395,
+ "pages": {
+  "doc_001": {
+   "text": "BILANCIO D'ESERCIZIO CEE - STATO PATRIMONIALE\n\nSTATO PATRIMONIALE ATTIVO 2024 (EUR) 2023 (EUR) VAR. ASSOLUTA VAR. %\nA) CREDITI VERSO SOCI PER VERSAMENTI ANCORA DOVUTI 150.000,00 200.000,00 (50.000,00) -25,00%\nB) IMMOBILIZZAZIONI\nI. Immobilizzazioni immateriali (brevetti e marchi) 1.482.350,80 1.210.400,00 271.950,80 +22,47%\nII. Immobilizzazioni materiali (impianti e macchinari) 4.890.120,45 5.120.300,10 (230.179,65) -4,50%\nIII. Immobilizzazioni finanziarie (partecipazioni collegate) 750.000,00 650.000,00 100.000,00 +15,38%\nTOTALE IMMOBILIZZAZIONI (B) 7.122.471,25 6.980.700,10 141.771,15 +2,03%\nC) ATTIVO CIRCOLANTE\nI. Rimanenze di magazzino (materie prime e finiti) 2.140.890,00 1.980.450,00 160.440,00 +8,10%\nII. Crediti commerciali entro 12 mesi 3.840.120,50 3.410.900,20 429.220,30 +12,58%\nIII. Attivita finanziarie che non costituiscono immob. 520.000,00 310.000,00 210.000,00 +67,74%\nIV. Disponibilita liquide (cassa e c/c bancari) 1.890.432,18 2.450.120,00 (559.687,82) -22,84%\nTOTALE ATTIVO CIRCOLANTE (C) 8.391.442,68 8.151.470,20 239.972,48 +2,94%\nD) RATEI E RISCONTI ATTIVI 118.450,00 94.200,00 24.250,00 +25,74%\nTOTALE ATTIVO PATRIMONIALE (A+B+C+D) 15.782.363,93 15.426.370,30 355.993,63 +2,31%\n\n(*) Nota integrativa ex art. 2427 c.c., par. 4: I crediti commerciali comprendono il fondo svalutazione di EUR 180.000,00.\n(**) Ammortamenti calcolati con aliquote ordinarie: fabbricati 3%, macchinari 12,5%, hardware 20%.",
+   "loop_cut": null,
+   "s": 33.044963121414185,
+   "prompt_tokens": 4968,
+   "gen_tokens": 897,
+   "prefill_tps": 244.2421308504265,
+   "gen_tps": 71.42027801932878,
+   "peak_gb": 2.635477174
+  },
+  "doc_003": {
+   "text": "RENDICONTO FINANZIARIO DEI FLUSSI DI CASSA OIC 10\n\nFLUSSI FINANZIARI DELL'ATTIVITA OPERATIVA ESERCIZIO 2024 ESERCIZIO 2023\nUtile (perdita) dell'esercizio prima delle imposte 2.674.250,00 2.353.900,00\nRettifiche per elementi non monetari:\nAccantonamenti ai fondi quiescenza e simili 312.400,00 289.100,00\nAmmortamenti delle immobilizzazioni 1.560.500,00 1.470.600,00\nSvalutazioni per perdite durevoli di valore 45.000,00 0,00\nFlusso finanziario prima delle variazioni del CCN 4.592.150,00 4.113.600,00\nVariazioni del capitale circolante netto:\nDecremento (incremento) delle rimanenze (160.440,00) 85.200,00\nDecremento (incremento) dei crediti verso clienti (429.220,30) (310.400,00)\nIncremento (decremento) dei debiti verso foritori 285.400,00 (142.100,00)\nVariazione altri crediti e altri debiti operativi (94.200,00) 61.300,00\nFlusso generato dalla gestione reddituale (A) 4.193.689,70 3.807.600,00\nFlusso finanziario dell'attività di investimento (B) (1.840.500,00) (2.120.400,00)\nFlusso finanziario dell'attività di finanziamento (C) (2.912.877,52) (840.200,00)\nINCREMENTO (DECREMENTO) DISPONIBILITA LIQUIDE (A+B+C) (559.687,82) 847.000,00\nDisponibilita liquide all'inizio dell'esercizio 2.450.120,00 1.603.120,00\nDisponibilita liquide alla chiusura dell'esercizio 1.890.432,18 2.450.120,00",
+   "loop_cut": null,
+   "s": 29.851683139801025,
+   "prompt_tokens": 4968,
+   "gen_tokens": 677,
+   "prefill_tps": 245.47200986104437,
+   "gen_tps": 71.37084805292882,
+   "peak_gb": 2.627863362
+  },
+  "doc_005": {
+   "text": "SEC FORM 10-K CONSOLIDATED STATEMENTS OF OPERATIONS\n\nCONSOLIDATED STATEMENTS OF OPERATIONS\nYEAR ENDED DEC 31, 2024\nYEAR ENDED DEC 31, 2023\nYEAR ENDED DEC 31, 2022\n\n(In millions, except per share data)\nRevenues: Product sales $ 42,891.4 $ 38,124.9 $ 34,902.1\nRevenues: Services and subscriptions 18,452.1 14,892.3 11,240.5\nTotal net revenues $ 61,343.5 $ 53,017.2 $ 46,142.6\nCost of sales: Products (26,120.8) (23,410.5) (21,890.2)\nCost of sales: Services (7,890.4) (6,540.1) (5,120.4)\nGross margin 27,332.3 23,066.6 19,132.0\nResearch and development expenses (8,940.2) (7,650.4) (6,420.1)\nSelling, general and administrative expenses (6,120.5) (5,410.2) (4,890.3)\nAmortization of acquired intangible assets (410.8) (380.2) (340.5)\nRestructuring and integration charges (125.4) (89.0) (210.4)\nOperating income (EBIT) 11,735.4 9,536.8 7,270.7\nInterest income and other, net 384.2 210.5 142.1\nInterest expense on senior notes (452.1) (410.8) (389.2)\nIncome before provision for income taxes 11,667.5 9,336.5 7,023.6\nProvision for income taxes (effective rate 17.4%) (2,030.1) (1,633.9) (1,229.1)\nNet income attributable to common shareholders $ 9,637.4 $ 7,702.6 $ 5,794.5\nEarnings per share - Basic $ 4.82 $ 3.84 $ 2.88\nEarnings per share - Diluted $ 4.76 $ 3.79 $ 2.84\nWeighted-average shares outstanding - Diluted 2,024.6 M 2,032.1 M 2,040.5 M",
+   "loop_cut": null,
+   "s": 30.382391929626465,
+   "prompt_tokens": 4968,
+   "gen_tokens": 708,
+   "prefill_tps": 243.94365409718856,
+   "gen_tps": 71.62577354392866,
+   "peak_gb": 2.635481922
+  },
+  "doc_007": {
+   "text": "GEOGRAPHIC SEGMENT REPORTING AND CAPITAL EXPENDITURES\n\n| GEOGRAPHIC SEGMENT | NET SALES 2024 | NET SALES 2023 | OPERATING PROFIT | CAPITAL EXPENDITURES |\n| :--- | :--- | :--- | :--- | :--- |\n| North America: United States | $ 28,490,120 | $ 24,910,400 | $ 7,450,200 | $ 1,890,400 |\n| North America: Canada & Mexico | 4,120,400 | 3,650,200 | 980,400 | 240,100 |\n| Europe: Germany & DACH | 8,940,250 | 8,120,400 | 2,140,500 | 510,200 |\n| Europe: United Kingdom & Ireland | 5,410,800 | 4,890,200 | 1,290,400 | 320,400 |\n| Europe: France, Italy & Southern EU | 4,890,150 | 4,310,900 | 1,080,200 | 280,100 |\n| Asia Pacific: Greater China | 7,120,300 | 6,890,400 | 1,840,100 | 490,300 |\n| Asia Pacific: Japan & South Korea | 4,250,900 | 3,980,100 | 1,110,400 | 290,400 |\n| Rest of World / Latin America | 2,840,300 | 2,410,800 | 610,200 | 145,000 |\n| Corporate & Unallocated eliminations | (4,729,720) | (6,145,200) | (2,767,000) | (316,900) |\n| CONSOLIDATED TOTALS | $ 61,343,500 | $ 53,017,200 | $ 11,735,400 | $ 3,850,000 |\n\nNote 14: Corporate unallocated reflects intercompany transfer eliminations. All foreign entity revenues translated at average monthly spot exchange rates.",
+   "loop_cut": null,
+   "s": 29.541444063186646,
+   "prompt_tokens": 4968,
+   "gen_tokens": 639,
+   "prefill_tps": 242.99761673140776,
+   "gen_tps": 71.28002091562875,
+   "peak_gb": 2.635481922
+  },
+  "doc_010": {
+   "text": "CROSS-BORDER DIVIDEND & WITHHOLDING TAX TREATY SCHEDULE\n\n| SHAREHOLDER / AZIONISTA | COUNTRY / STATO | GROSS DIVIDEND | WHT % (RITENUTA) | TREATY RELIENET PAYABLE / NETTO |\n| :--- | :--- | :--- | :--- | :--- |\n| Milan HoldCo S.p.A. | Italy (IT) | EUR 1,500,000,00 | 1.20% (P-S Dir.) | EUR 0,00 | EUR 1,482,000,00 |\n| Delaware Ventures LLC | United States (US) | $ 1,200,000,00 | 15.00% (US-IT Art.10) | $ 180,000,00 | $ 1,020,000,00 |\n| London Global Fund PLC | United Kingdom (GB) | GBP 850,000,00 | 10.00% (UK-IT Treaty) | GBP 85,000,00 | GBP 765,000,00 |\n| Zurich Private Equity AG | Switzerland (CH) | CHF 920,000,00 | 15.00% (CH-IT Art.10) | CHF 138,000,00 | CHF 782,000,00 |\n| Tokyo Asset Trust Corp. | Japan (JP) | JPY 140,000,000 | 10.00% (JP-IT Treaty) | JPY 14,000,000 | JPY 126,000,000 |\n| Luxembourg SICAV Sub-Fund 3 | Luxembourg (LU) | EUR 640,000,00 | 0.00% (Parent-Sub) | EUR 0,00 | EUR 640,000,00 |\n\nTOTAL CROSS-BORDER DISTRIBUTIONS MULTIPLE (6) — — — EUR EQUIV: 4.819.450,00\n\nWithholding tax exemption applied under EU Directive 2011/96/EU.\nCodice identificazione fiscale del sostituto d'imposta: IT04918230104.",
+   "loop_cut": null,
+   "s": 29.153337001800537,
+   "prompt_tokens": 4968,
+   "gen_tokens": 605,
+   "prefill_tps": 241.8253432538583,
+   "gen_tps": 71.37071613320266,
+   "peak_gb": 2.635481922
+  },
+  "doc_011": {
+   "text": "REPUBBLICA ITALIANA - ATTO PUBBLICO NOTARILE\nRepertorio n. 48.912/2024 | Raccolta n. 14.280 | Imposte di Registro e Ipotecarie assolute\n\nL'anno duemilaventiquattro, addi diciotto del mese di novembre (18/11/2024), in Genova, presso il mio studio notarile in Piazza De Ferrari n. 4/interno 6, avanti a me Dott. ALBERTO BIANCHI, Notatio iscritto al Collegio Notarile dei Distretti Riuniti di Genova e Chiavari.\n\nSONO PRESENTI E COMPARSI:\n\nDa una parte: il Sig. GIOVANNI BATTISTA PARODI, nato a Genova il 14/05/1965, residente in Genova, Via Garibaldi n. 12, C.F. PRDGNN65E14D969K, conugato in regime di separazione dei beni, in prosieguo denominato 'PARTE VENDITRICE'.\n\nDall'altra parte: la societa IMMOBILIARE LIGURE S.R.L., con sede legale in Genova, Via XX Settembre n. 38, capitale sociale Euro 100.000,00 i.v., C.F. e P.IVA 02481920108, R.E.A. GE-348910, rappresentata dall'Amministratore Unico Dott.ssa ELENA FERRARI, in prosieguo denominata 'PARTE ACQUIRENTE'.\n\nI comparenti, della cui identita personale e capacita giuridica io Notaio sono certo, convengono e stipulano quanto segue:\n\nART. 1 (OGGETTO). La Parte Venditrice vende e trasferisce alla Parte Acquirente, che acquista con ogni garanzia di legge per evizione e vizi occulti, la piena proprieta dell'unita immobiliare sita nel Comune di Genova, Via Balbi n. 28/A, piano terzo con ascensore, censita al Catasto Fabbricati del predetto Comune al Foglio 112, Particella 408, Subalterno 14, Zona Censuaria 1, Categoria A/2, Classe 3, Consistenza vani 6,5, Rendita Catastale Euro 1.242,50.\n\nART. 2 (PREZZO E QUIETANZA). Il prezzo della compravendita e pattuito a corpo nella somma complessiva di Euro 345.000,00 (trecentoquarantacinquemila virgola zero zero), integralmente corrisposto mediante assegni circolari non trasferibili emessi da Banca Carige S.p.A. numerati da 00412891 a 00412894, di cui la Venditrice rilascia con il presente atto piena e liberatoria quietanza.\n\nART. 3 (DICHIARAZIONI URBANISTICHE). Ai sensi dell'art. 46 del D.P.R. 6 giugno 2001 n. 380, la Parte Venditrice dichiara sotto la propria responsabilità penale che i lavori di costruzione del fabbricato sono iniziati in data antecedente al 1 settembre 1967.\n\nART. 4 (CERTIFICAZIONE ENERGETICA). Si allega al presente atto sotto la lettera 'A' l'Attestato di Prestazione Energetica (APE) codice identificativo 07-2024-8491 rilasciato in data 10/10/2024 con classe energetica 'C', indice EPgl,nren 84,20 kWh/mq anno.",
+   "loop_cut": null,
+   "s": 34.30508518218994,
+   "prompt_tokens": 4968,
+   "gen_tokens": 973,
+   "prefill_tps": 241.83411117242875,
+   "gen_tps": 71.39258316827411,
+   "peak_gb": 2.635481922
+  },
+  "doc_012": {
+   "text": "TRIBUNALE ORDINARIO DI GENOVA - ATTO DI CITAZIONE EX ART. 163 C.P.C.\nRuolo Generale Civile | Sezione II Civile e Commerciale | Valore della causa: Euro 218.450,00\n\nPer il Sig. ROBERTO VILLA, C.F. VLLRRT72C15D969W, elettivamente domiciliato in Genova, Via Cairoli n. 8/4, presso e nello studio dell'Avv. ANDREA MORETTI (C.F. MRTNDR68M10D969L, PEC: avv.moretti@ordineavvocatigenova.it, fax 010-849102), che lo rappresenta e difende per procura speciale in calce al presente atto;\n\nCONTRO\nLa societa COSTRUZIONI NAVALI TIRRENO S.P.A., in persona del legale rappresentante pro tempore, C.F. e P.IVA 01928370104, con sede in Genova, Calata Gadda snc, convenuta contumace in re ipsa;\n\nPREMESSO IN FATTO CHE:\n1. Con contratto d'appalto sottoscritto in data 12 aprile 2022, la convenuta assumeva l'obbligazione di consegnare lo scafo metallico matricola SN-481 entro e non oltre il termine essenziale del 30 settembre 2023;\n2. Nonostante reiterati solleciti a mezzo raccomandata A/R n. 14892019 e PEC del 15/11/2023, la convenuta ometteva ingiustificatamente di provvedere alla consegna del manufatto, accumulando un ritardo colpevole superiore a 380 giorni;\n3. L'art. 9 del contratto prevede espressamente una penale risarcitoria forfettaria di Euro 500,00 per ciascun giorno solare di ritardo, per un ammontare maturato al 15/10/2024 pari a Euro 190.000,00 oltre Iva ove applicabile.\n\nTUTTO CIO PREMESSO, L'ATTORE CITA\nLa societa Costruzioni Navali Tirreno S.p.A. a comparire dinanzi al Tribunale Ordinario di Genova, nota sede di Piazza Portoria n. 1, all'udienza del giorno 26 MARZO 2025, ore di rito, con l'espresso advertimento che la costituzione oltre i termini di cui all'art. 166 c.p.c. implica le decadenze ex artt. 38 e 167 c.p.c.",
+   "loop_cut": null,
+   "s": 30.41947889328003,
+   "prompt_tokens": 4968,
+   "gen_tokens": 702,
+   "prefill_tps": 242.57688083335748,
+   "gen_tps": 71.58772566802692,
+   "peak_gb": 2.635481922
+  },
+  "doc_016": {
+   "text": "CONFIDENTIAL DISCLOSURE & PROPRIETARY INVENTIONS ASSIGNMENT\n\nAgreement Ref: NDA-IP-8419 | Strictly Confidential - Restricted Circulation\n\nThis Proprietary Information, Inventions Assignment, and Non-Disclosure Agreement ('Agreement') is made as of November 10, 2024, by and between QUANTUM OPTICS CORP., a California corporation ('Company'), and DR. MARCUS A. AUSTIN, an individual residing at 412 University Ave, Palo Alto, CA 94301 ('Consultant').\n\n1. RECOGNITION OF COMPANY PROPRIETARY RIGHTS. Consultant acknowledges that all technical designs, photonic waveguide schematics, semiconductor mask layouts, proprietary algorithms, training datasets, and trade secrets developed during the engagement shall remain the sole and exclusive property of the Company.\n\n2. ASSIGNMENT OF INVENTIONS. Consultant hereby unconditionally and irrevocably assigns, transfers, and conveys to Company all right, title, and interest worldwide in and to any and all Inventions, patents, copyrights, and mask works conceived, reduced to practice, or authored during the term of consultancy.\n\n3. NON-SOLICITATION AND COVENANTS. During the term and for a period of twenty-four (24) months following termination of services for any reason, Consultant shall not directly or indirectly induce, recruit, or solicit any employee, software architect, or researcher of the Company to leave employment.\n\n4. INJUNCTIVE RELIEF. Consultant agrees that monetary damages would be inadequate to remedy any breach of Sections 1 or 2, and that the Company shall be entitled to seek temporary and permanent injunctive relief in any court of competent jurisdiction without the requirement of posting a bond.\n\nEXECUTED AND DELIVERED as a sealed instrument under Delaware General Corporation Law. Signature of Consultant: Dr. Marcus Austin. Approved: Jennifer Ross, General Counsel.",
+   "loop_cut": null,
+   "s": 27.13246512413025,
+   "prompt_tokens": 4968,
+   "gen_tokens": 457,
+   "prefill_tps": 241.77291768604977,
+   "gen_tps": 70.84088210969549,
+   "peak_gb": 2.635481922
+  },
+  "doc_018": {
+   "text": "INDEMNIFICATION, ESCROW AND HOLDBACK RELEASE DEED\n\nM&A Transaction Holdback Facility | Escrow Account No. 8940-1920-410 | Governed by Delaware Law\n\nThis Escrow and Indemnification Release Agreement ('Release') is dated as of December 05, 2024, among BLUESTAR THERAPEUTICS INC. ('Buyer'), GENOMIC BIOLABS CORP. ('Seller Representative'), and JPMORGAN CHASE BANK, NATIONAL ASSOCIATION, as Escrow Agent ('Escrow Agent').\n\nWHEREAS, pursuant to the Agreement and Plan of Merger dated December 15, 2023, Buyer deposited an aggregate indemnity holdback amount of USD 15,000,000.00 ('Escrow Fund') into segregated escrow;\n\nWHEREAS, Buyer submitted formal Notice of Indemnification Claim Ref. CL-2024-04 alleging breach of Section 3.14 (Tax Representations) in the liquidated amount of USD 2,450,120.00;\n\nNOW THEREFORE, in compromise of said dispute, the parties hereby issue joint written instructions to Escrow Agent to release funds as follows:\n\n1. DISBURSEMENT TO BUYER: Escrow Agent shall disburse the sum of USD 1,850,000.00 by Fedwire to Buyer's designated operating account, in full and final settlement of Claim CL-2024-04;\n\n2. RELEASE TO SELLERS: Escrow Agent shall distribute the remaining balance of USD 13,150,000.00, together with accrued interest of USD 314,920.18, pro rata to the former equityholders listed on Exhibit A;\n\n3. MUTUAL RELEASE: Buyer and Seller Representative unconditionally release and discharge each other and their respective affiliates from all further liability under Article VIII of the Merger Agreement.",
+   "loop_cut": null,
+   "s": 27.52155327796936,
+   "prompt_tokens": 4968,
+   "gen_tokens": 480,
+   "prefill_tps": 240.86510035240147,
+   "gen_tps": 70.99005991161852,
+   "peak_gb": 2.635481922
+  },
+  "doc_019": {
+   "text": "INTERNATIONAL TECHNOLOGY SUPPLY AGREEMENT / CONTRATTO INTERNAZIONALE DI FORNITURA\n\nProtocol Ref: ITA-USA-2024-819 | ICC Arbitration Rules, Geneva seat / Arbitrato Camera di Commercio Internazionale\n\nCLAUSE 1 (SCOPE OF SUPPLY / OGGETTO DELLA FORNITURA):\n\nEN: Supplier agrees to manufacture and deliver 50,000 units of Optical Sensor Modules (Part No. OPT-9840-X) compliant with ISO-9001 standards, DDP Milan Logistics Hub (Incoterms 2020).\n\nIT: Il Fornitore si impegna a produrre e consegnare n. 50,000 unita di Moduli Sensori Ottici (Cod. OPT-9840-X) conformi agli standard ISO-9001, con resa DDP Hub Logistico di Milano (Incoterms 2020).\n\nCLAUSE 2 (PRICING AND PAYMENT TERMS / PREZZI E TERMINI DI PAGAMENTO):\n\nEN: The total unit purchase price is EUR 48.50 (forty-eight euros and fifty cents), payable by Irrevocable Confirmed Letter of Credit at 60 days sight issued by BNP Paribas.\n\nIT: Il prezzo unitario pattuito e pari ad EUR 48,50 (quarantotto euro e cinquanta centesimi), regolabile a mezzo Lettera di Credito Irrevocabile Confermata a 60 giorni vista emessa da BNP Paribas.\n\nCLAUSE 3 (WARRANTY AND DEFECT LIABILITY / GARANZIA E RESPONSABILITA PER VIZI):\n\nEN: Supplier warrants defect-free operation for a period of twenty-four (24) months from installation date. Defective units shall be replaced within 14 calendar days at Supplier's sole cost.\n\nIT: Il Fornitore garantisce il regolare funzionamento esente da vizi per un periodo di 24 (ventiquattro) mesi dalla data di installazione. I pezzi difettosi saranno sostituiti entro 14 giorni solari a cura e spese esclusive del Fornitore.\n\nCLAUSE 4 (GOVERNING LANGUAGE / LINGUA PREVALENTE):\n\nEN/IT: Both Italian and English versions are executed as legally binding. In case of semantic divergence, the English version shall prevail for technical terminology.\n\nSigned in duplicate original in Genoa and Boston. For Supplier: Ing. Marco Vivaldi. For Buyer: Robert K. Hastings, VP Procurement.",
+   "loop_cut": null,
+   "s": 29.83043909072876,
+   "prompt_tokens": 4968,
+   "gen_tokens": 639,
+   "prefill_tps": 239.78083318066462,
+   "gen_tps": 71.18518231682691,
+   "peak_gb": 2.635481922
+  },
+  "doc_021": {
+   "text": "GRAN CAFFE E PASTICCERIA DEL PORTO\nDI ROSSI MARCO & C. S.A.S.\nVIA SAN LORENZO 14/R - 16123 GENOVA (GE)\nPARTITA IVA: 03819200104 - COD. FISC.: 03819200104\nTEL: 010-2478910 - REG. IMPRESE GE N. 481920\n\nDOCUMENTO COMMERCIALE\ndi vendita o prestazione\nRT 99MEY048192 - ESERCENTE 01\nDATA 15/10/2024 ORA 08:42:19 DOC. N. 0184-0021\n\n2 CAFFE ESPRESSO 2,60\n1 CAPPUCCINO SOIA 1,80\n2 BRIOCHE PISTACCHIO 3,60\n1 FOCACCIA GENOVESE 150G 2,70\n1 SPREMUTA D'ARANCIA 3,50\n1 BOTTIGLIA ACQUA 0.50L 1,20\n\nTOTALE COMPLESSIVO EUR 15,40\nDI CUI IVA 10% EUR 0,91\nDI CUI IVA 22% EUR 0,69\nPAGAMENTO ELETTRONICO (POS) EUR 15,40\nRESTO EUR 0,00\n\nIVA 10% LORDO 10,00 NETTO 9,09 IMPOSTA 0,91\nIVA 22% LORDO 5,40 NETTO 4,43 IMPOSTA 0,97\n\nLOTTERIA SCONTRINI: 8B9K-4819-2041\nARRIVEDERCI E GRAZIE\nCONSERVARE IL PRESENTE DOCUMENTO FINO ALL'USCITA",
+   "loop_cut": null,
+   "s": 12.364791870117188,
+   "prompt_tokens": 2303,
+   "gen_tokens": 510,
+   "prefill_tps": 372.85346424062845,
+   "gen_tps": 83.36194587720676,
+   "peak_gb": 2.091441966
+  },
+  "doc_023": {
+   "text": "IPERMERCATO ALTA TOSCANA S.P.A.\nPUNTO VENDITA DI LIVORNO - VIA AURELIA 240\nP.IVA: 01481920491 - REA LI-84910\nCASSA 08 SCONTRINO N. 0819-2024\nDATA: 20/10/2024 ORA: 19:42:33 RT 08849102\n\nPASTA BARILLA SPAGHETTI 1KG 1,89\nPASSATA POMODORO MUTTI 700G 1,45\nOLIO EXTRA VERG. OLIVA 1L 8,99\nSCONTO CARTA FEDELTA -20% -1,80\nPARMIGIANO REGGIANO 300G 6,40\nLATTE FRESCO INTERO 1L 1,65\nDETERSIVO DASH LIQUIDO 40L 9,90\nSCONTO PROMO VOLANTINO -30% -2,97\nACQUA NATURALE 6X1.5L 2,10\nSACCHETTO BIODEGRADABILE CEE 0,15\n\nTOTALE LORDO ACQUISTI EUR 32,53\nTOTALE SCONTI APPLICATI EUR -4,77\nTOTALE PAGATO NETTO EUR 27,76\nPAGAMENTO BANCOMAT / MAESTRO EUR 27,76\nPUNTI FEDELTA SPESA PRECEDENTI 1.420\nPUNTI ACCREDITATI CON QUESTA SPESA 28\nNUOVO SALDO PUNTI CLUB 1.448\n\nESPLOSIONE IMPOSTE:\nALIQUOTA 4%: IMPONIBILE EUR 17,87  IMPOSTA EUR 0,71\nALIQUOTA 22%: IMPONIBILE EUR 7,52  IMPOSTA EUR 1,66\n\nBUONO SCONTO SPENDIBILE DAL 01/11 AL 15/11\nCODICE PROMO BARCODE: 8004128910482\nGRAZIE PER LA VISITA!",
+   "loop_cut": null,
+   "s": 13.503919124603271,
+   "prompt_tokens": 2303,
+   "gen_tokens": 596,
+   "prefill_tps": 371.4400503323566,
+   "gen_tps": 82.37931930973436,
+   "peak_gb": 2.091441966
+  },
+  "doc_025": {
+   "text": "BANCA SELLA S.P.A. - ESERCENTE CONVENZIONATO\nRISTORANTE DA VITTORIO - GENOVA\nTID: 84910294  MID: 004128910248\nTERMINALE INGENICO TETRA ICT250\nSCONTRINO NON FISCALE - RICEVUTA CLIENTE\nDATA: 25/10/2024  ORA: 22:38:15\nOPERAZIONE: VENDITA CARTA DI CREDITO\nPAN: *********4819\nAPPLICAZIONE: VISA CREDIT DEBIT\nAID: A0000000031010\nATC: 0048  AC: 8F4B91E049281C30\nIMPORTO TRANSAZIONE EUR 142,50\nESITO: TRANSAZIONE APPROVATA\nCODICE AUTORIZZAZIONE: 048192\nNUMERO RIFERIMENTO RRN: 429810481920\nFIRMA NON RICHIESTA - OPERAZIONE PIN BYPASS\nVERIFICATO CON PROTOCOLLO EMV CHIP & CONTACTLESS\nCOPIA PER IL CLIENTE\nGRAZIE PER LA TRANSAZIONE",
+   "loop_cut": null,
+   "s": 10.558285236358643,
+   "prompt_tokens": 2303,
+   "gen_tokens": 363,
+   "prefill_tps": 373.232057763216,
+   "gen_tps": 84.05986531380837,
+   "peak_gb": 2.091441966
+  },
+  "doc_028": {
+   "text": "CHEVRON HIGH DESERT TRAVEL PLAZA # 984\nINTERSTATE 15 EXIT 184 - BARSTOW, CA 92311\nSTATION ID: 094819  EPA REG: CA-48192\nTERMINAL: PUMP 12 DUAL NOZZLE\n\nAUTOMATED FUELING SYSTEM RECEIPT\nDATE: 10/28/2024  TIME: 14:02:18  SEQ # 049182\n\nPREMIUM UNLEADED 91 OCTANE\nPRICE / GALLON: $ 5.299\nVOLUME: 18.420 GALLONS\nFUEL SUB-TOTAL $ 97.61\nENERGY DRINK 16OZ 2-FOR-$5 $ 5.00\nBAGEL SANDWICH DELI $ 6.50\n\nSUBTOTAL MERCHANDISE $ 11.50\nCA SALES TAX (7.75% ON $5.00) $ 0.39\nTOTAL TENDERED AMOUNT $ 109.50\nPAYMENT METHOD: DISCOVER *9102 $ 109.50\nAPPROVAL CODE: 049182 - RRN: 89410294\n\nSTATE AND FEDERAL FUEL EXCISE TAXES INCLUDED IN FUEL PUMP PRICE\nFED: 18.4c/GAL  CA STATE: 57.9c/GAL  LUST: 0.1c/GAL\n\nFUEL RECEIPT FOR FLEET IRS REIMBURSEMENT RECORDS\nTHANK YOU FOR SHOPPING AT CHEVRON",
+   "loop_cut": null,
+   "s": 11.640339136123657,
+   "prompt_tokens": 2303,
+   "gen_tokens": 448,
+   "prefill_tps": 370.75459176458617,
+   "gen_tps": 83.58787781162,
+   "peak_gb": 2.091441966
+  },
+  "doc_030": {
+   "text": "WORLD DUTY FREE - TERMINAL 5 HEATHROW\nLONDON HEATHROW AIRPORT, HOUNSLOW TW6 2GA\nVAT REGISTRATION NO: GB 481 9204 89\nT5 NORTH SATELLITE STORE # 012\n\nEXPORT TAX-FREE SALES TICKET\nDATE: 30/10/2024  TIME: 18:04:19  POS 14\nBOARDING PASS SCAN: BA 0148 TO GENOA GOA\n\n1 GLENFIDDICH 18YR SINGLE MALT 1L\nGBP 89.00\n1 JO MALONE LIME BASIL COLOGNE 100ML\nGBP 110.00\n2 TOBLERONE GOLDEN JUMBO BAR 360G\nGBP 18.00\n1 SOUVENIR UNION JACK BAG\nGBP 1.50\n\nDUTY FREE GOODS TOTAL\nGBP 217.00\nDOMESTIC TAXABLE GOODS\nGBP 1.50\nUK VAT 20% ON DOMESTIC GOODS\nGBP 0.25\nTOTAL AMOUNT DUE GBP\nGBP 218.50\nEUR EQUIVALENT CONVERTED\nEUR 257.83\nDYNAMIC CURRENCY FX RATE: 1.1800\nPAID BY APPLE PAY (MASTERCARD *8912)\nEUR 257.83\n\nCUSTOMS EXPORT DECLARATION: CERTIFIED GOODS REMOVED FROM UK CUSTOMS TERRITORY\n\nPASSENGER DECLARATION: GOODS FOR PERSONAL USE ONLY\nKEEP THIS RECEIPT FOR CUSTOMS VERIFICATION AT DESTINATION",
+   "loop_cut": null,
+   "s": 11.975527286529541,
+   "prompt_tokens": 2303,
+   "gen_tokens": 475,
+   "prefill_tps": 371.19404962674105,
+   "gen_tps": 83.30396076635985,
+   "peak_gb": 2.091441966
+  },
+  "doc_032": {
+   "text": "BOLLETTINO UFFICIALE DEI NOTAI DELLA LIGURIA\n\nGenova - Fascicolo IX - Settembre 1898 - Volume XXVI\n\nTRASCRIZIONI E RINNOVAZIONI IPOTECARIE\nUfficio delle Ipoteche di Genova - Registro d'ordine n. 3491.\nAddi 14 agosto 1898 e stata trascritta la nota di trascrizione rogata dal notaio Agostino Bixio in data 2 agosto, rep. 8412, con cui la nobil donna Francesca Spinola vedova Doria ha alienato al signor marchese Giacomo Balbi l'intero palazzo nobiliare con parco adiacente sito in San Pier d'Arena, strada regia per Cornigliano n. 18, pel prezzo convenuto di lire italiane trecentocinquantamila.\n\nSURROGAZIONI ED AFFRANCAZIONI DI CENSI\nIn virtu di decreto emesso dal Regio Tribunale di Genova in data 28 luglio decorso, e stata ordinata la cancellazione dell'iscrizione ipotecaria volume 482 n. 112 gravante sul fondo rustico denominato 'La Vigna' in Apparizione, a favore della Paia Opera dei Poveri Vergognosi, per avvenuta estinzione del debito capitale mediante versamento del canone di lire milleottocento in titoli del Debito Pubblico consolidato al 5 per cento.\n\nDISPOSIZIONI DISCIPLINARI DEL CONSIGLIO\nIl Consiglio Notarile Distrettuale, nella seduta del 10 corrente mese, udita la relazione del Presidente commendator avv. Carlo Cambiaso, ha deliberato di richiamare l'attenzione di tutti i collegi sulla rigorosa osservanza dell'articolo 51 della Legge 25 luglio 1875 n. 2786 per quanto concerne l'indicazione precisa dei confini confmari e dei numeri di mappa censuaria degli stabili venduti.\n\nGenova, Stabilimento Tipografico Fratelli Pagano, Piazza delle Vigne 14.",
+   "loop_cut": null,
+   "s": 28.47272300720215,
+   "prompt_tokens": 4968,
+   "gen_tokens": 541,
+   "prefill_tps": 239.53089312104214,
+   "gen_tps": 71.22562603519263,
+   "peak_gb": 2.635481922
+  },
+  "doc_035": {
+   "text": "GIORNALE DELLA CRONACA GIUDIZIARIA LIGURE\n\nGenova - Edizione Straordinaria - Mercoledi 14 Marzo 1934 - Anno XII E.F.\n\nCORTE DI ASSISE STRAORDINARIA DI GENOVA\nIl processo per il clamoroso ammanco di cassa alla Banca di Sconto Mercantile.\nIeri mattina, nell'aula magna del Palazzo Ducale, dinanzi alla Corte presieduta dal consigliere comm. Guido Calvi, ha avuto inizio il dibattimento penale contro il cassiere capo Vittorio Canepa e il contabile anziano Silvio Pastorino, imputati di peculato continuato e falso in scritture private per una somma accertata di dire 850.000.\n\nL'ESCURSIONE DEI TESTIMONI E DELLA PERIZIA\nIl perito d'ufficio rag. comm. Bartolomeo Odicini ha esposto i risultati del riscontro contabile eseguito sui mastri e sui giornali di cassa degli anni 1931-1933.\nDalle verifiche, e emerso che le registrazioni fittizie venivano coperte mediante finti depositi in conto corrente di clienti deceduti o residenti all'estero, stormando le partite all'inizio di ciascun trimestre solare con abile maestria grafica.\n\nLE RICHIESTE DEL PUBBLICO MINISTERO\nIl Procuratore Generale del Re, cav. uff. avv. Emilio De Paoli, al termine di una vibrante requisitoria durata oltre tre ore, ha chiesto la condanna degli imputati rispettivamente ad anni sette e mesi sei di reclusione per il Canepa, e ad anni quattro e mesi due per il Pastorino, oltre alla interdizione perpetua dai pubblici uffici ed alla rifusione del danno erariale.",
+   "loop_cut": null,
+   "s": 27.72933006286621,
+   "prompt_tokens": 4968,
+   "gen_tokens": 482,
+   "prefill_tps": 239.24044722243846,
+   "gen_tps": 70.58500065003655,
+   "peak_gb": 2.635481922
+  },
+  "doc_036": {
+   "text": "THE LONDON GAZETTE - BY AUTHORITY\n\nTuesday, November 13, 1894 - Number 26570 - Price One Shilling\n\nBANKRUPTS RECEIVING ORDERS - UNDER THE ACT OF 1883\nHigh Court of Justice in Bankruptcy - No. 1482 of 1894.\n\nRe Arthur Wellesley Finch, residing at 42 Queen's Gate, Kensington, and carrying on business at 18 Leadenhall Street, City of London, colonial merchant and underwriter. Date of Filing Petition: November 9, 1894. Date of Receiving Order: November 12, 1894. Whether Debtor's or Creditor's Petition: Creditor's. Act of Bankruptcy proved: Failure to comply with Bankruptcy Notice issued under Section 4.\n\nADMIRALTY NAVAL APPOINTMENTS - WHITEHALL\nThe Lords Commissioners of the Admiralty have made the following appointments in the Royal Navy:\nCommander John R. Jellicoe, to HMS 'Ramillies', additional for service in the Mediterranean Fleet, to date November 15.\nLieutenant David Beatty, to HMS 'Trafalgar', as navigating officer, to date November 20.\nStaff Surgeon William M. Craig, M.B., to the Royal Naval Hospital at Haslar, Gosport, vice Surgeon-General Turnbull.\n\nTREASURY CHAMBERS - COLONIAL DEBENTURE REDEMPTION\nThe Lords Commissioners of Her Majesty's Treasury hereby give notice that on the 1st day of January next, debentures of the Government of New South Wales 4 per cent loan of 1874, bearing numbers 4810 to 5200 inclusive, will be paid off and redeemed at par at the Bank of England, after which date all interest on the said debentures will cease and determine.",
+   "loop_cut": null,
+   "s": 27.425976037979126,
+   "prompt_tokens": 4968,
+   "gen_tokens": 464,
+   "prefill_tps": 239.48834866461752,
+   "gen_tps": 70.88661510247822,
+   "peak_gb": 2.635481922
+  },
+  "doc_038": {
+   "text": "PROCLAMATION UNDER THE WAR PRECAUTIONS ACT 1914-1915\nBy His Excellency the Right Honorable Sir Ronald Craufurd Munro\nFerguson, Governor-General and Commander-in-Chief of the Commonwealth.\n\nWHEREAS by the War Precautions Act it is enacted that the Governor-General may make regulations for securing the public safety and defense of the Commonwealth.\n\nNOW THEREFORE I do hereby prohibit the export from Australia of all wool, greasy or scoured, except under permit issued by the Comptroller-General of Customs.\n\nMILITARY ORDERS - CASUALTY DISPATCHES GALLIPOLI\nThe Minister for Defense has received the following cablegram from the Officer Commanding Base Records, Alexandria, Egypt:\nKilled in Action at the Dardanelles:\n- Major C. H. Brand, 3rd Infantry Brigade;\n- Captain L. E. Leane, 11th Battalion;\n- Lieutenant K. A. Brock, 10th Battalion.\nWounded and admitted to No. 1 Australian General Hospital, Heliopolis:\n- Captain J. W. B. Bean, Medical Corps;\n- Lieutenant H. R. Carter, 9th Battalion.\n\nP RIZE COURT NOTICES - SUPREME COURT OF VICTORIA\nIn the matter of the German steamship 'Pfalz' (captured in Port Phillip Bay). Notice is hereby given that a claim has been filed on behalf of the Crown for the condemnation of the said ship and her cargo as lawful prize of war. All persons claiming an interest must enter an appearance at the Registry within eight days from this date.",
+   "loop_cut": null,
+   "s": 26.503293991088867,
+   "prompt_tokens": 4968,
+   "gen_tokens": 394,
+   "prefill_tps": 239.30208183612666,
+   "gen_tps": 70.26935478659028,
+   "peak_gb": 2.635481922
+  },
+  "doc_039": {
+   "text": "APPLICATIONS FOR PATENTS (JUNE 6 TO JUNE 11)\n12,481. Nikola Tesla, 45 Southampton Buildings, Chancery Lane, London.\nImprovements in methods of and apparatus for electrical transmission of power across long distances without intervening conducting wires.\n\n12,482. Rudolf Diesel, 323 High Holborn. Improvements in internal combustion oil engines and fuel injection valves operating under compressed air atomization.\n\n12,485. Charles Parsons, Heaton Works, Newcastle-on-Tyne. Reversible multi-stage steam turbine blades with radial clearance shrouding.\n\nCOMPLETE SPECIFICATIONS ACCEPTED AND OPEN TO INSPECTION\n9,412 of 1897. Guglielmo Marconi. Improvements in transmitting electrical impulses and signals, and in apparatus thereof, utilizing elevated aerial conductors and coherers with decoiler mechanism.\n\nNotice is hereby given that any person may at any time within two months from this date give notice at the Patent Office of opposition to the grant of a patent on any grounds specified in Section 11 of the Patents Act 1883.\n\nDESIGNS REGISTERED - CLASS 3 (TEXTILE FABRICS)\nNo. 314,892. John Crossley & Sons Limited, Dean Clough Mills, Halifax.\nSurface pattern for Brussels and Wilton carpets representing stylized acanthus scrolls.\nNo. 314,895. Arthur Sanderson & Sons, 52 Berners Street, London.\nOrnamental embossed wallpaper pattern in high relief with heraldic Tudor rose borders.",
+   "loop_cut": null,
+   "s": 26.65288782119751,
+   "prompt_tokens": 4968,
+   "gen_tokens": 400,
+   "prefill_tps": 238.49455877960966,
+   "gen_tps": 70.17888239792346,
+   "peak_gb": 2.635481922
+  },
+  "doc_042": {
+   "text": "SPECIFICA TECNICA VALVOLA PROPORZIONALE ELETTROIDRAULICA\nCODICE COMPONENTE: 4WREE-10-E50-2X/G24K31/A1V | SERIE 2X\n\nCARATTERISTICA FUNZIONALE | SPECIFICA COLLAUDO | LIMITE AMMISSIBILE | UNITA | CONDIZIONE PROVA\nPortata nominale per cassetto (Delta | 50,0 | +/- 5% | 1/min | Olio minerale HLP46\nPressione max bocche P, A, B | 315 | Max limite | bar (31,5 MPa) | Ciclo continuo\nPressione max bocca di scarico T | 210 | Max | bar | Senza contropressione\nIsteresi del segnale comando | 0,15 | < 0,20 | % del fondo scala | Pilotaggio PWM 100 Hz\nRipetibilita posizionamento spola | 0,08 | < 0,10 | % FS | LVDT integrato 24V\nFrequenza di taglio (-3 dB) | 65 | > 55 | Hz | Ampiezza segnale +/- 10%\nTempo di risposta al gradino 0-100% | 14,5 | < 18,0 | ms (millisecondi) | Pressione 100 bar\nTrafilamento interno a cassetto centr | 38 | < 50 | cm3/min | Viscosita 32 mm2/s a 40G\nSégnale di pilotaggio analogico | +/- 10 | +/- 0,05 | V_DC (Differenziale) | Impedenza Ri = 100 kOhm\nTensione di alimentazione bobina | 24 | 18 ... 32 | V_DC (Ripple < 5%) | Assorbimento P_max 35W\nGrado di filtrazione raccomandato | ISO 4406 18/16/13 | Classe NAS 7 | -- | Filtro a monte beta_10 >= 200\nCampo temperatura guarnizioni FKM (Vi | -20 ... +80 | -- | gradi C | Compatibilita esteri fosforici\n\nConnetto elettrico a norma EN 175201-804 a 7 poli maschio (6 + PE) con schérmatura ÉMI/RFI.\nElettronica integrata di bordo tarata con zero cassetto pre-calibrato in fabbrica a laser.",
+   "loop_cut": null,
+   "s": 30.02436399459839,
+   "prompt_tokens": 4968,
+   "gen_tokens": 654,
+   "prefill_tps": 239.72445440307035,
+   "gen_tps": 71.34584986653908,
+   "peak_gb": 2.635477674
+  },
+  "doc_043": {
+   "text": "CERTIFICATO DI ESAME UE DEL TIPO - DIRETTIVA ATEX 2014/34/UE\nNUMERO CERTIFICATO: INERIS 24 ATEX 0481X | ORGANISMO NOTIFICATO N. 0080\n\nPARAMETRO DI MARCATURA | DATO DI OMOLOGAZIONE | NORMA ARMONIZZATA DI RIFERIMENTO\nApparecchio o Sistema di Protezione | Contenitore antideflagrante Serie EJB-88 | EN IEC 60079-0:2018\nModo di protezione contro le esplosioni | Ex db IIC T6...T4 Gb / Ex tb IIIC T85C...T135C Db | EN 60079-1:2014 / EN 60079-31:2014\nGruppo e Categoria di appartenenza | II 2 G (Gas zona 1, 2) e II 2 D (Polveri zona 21, 22) | Allegato I Direttiva 2014/34/UE\nTemperatura ambiente di servizio (T_amb) | -50 gradi C <= T_amb <= +60 gradi C | Valutazione Rischio Criogenico\nMassima tensione nominale applicabile | 1000 V AC / 1500 V DC | Rigidita dielettrica 2Un + 1000V\nMassima corrente di cortocircuito presunta | 50 kA per t = 0,2 s | Tenuta alle sollecitazioni elettrodinamiche\nPressione di riferimento d'esplosione (p_k) | 11,8 bar (misurata con miscela 14% metano) | Prova sovrapressione 4x = 47,2 bar\nInterstizio massimo sperimentale di sicurezza (MESG) | 0,15 mm su giunto flangiato 1 = 25 mm | EN 60079-1 Tabella 2 Giunti Piani\nCoppia di serraggio viti in acciaio inox A4-80 | 45 N*m (viti M10. a passo grosso) | Frenafiletti anaerobico ad alta resistenza\n\nCONDIZIONI SPECIALI PER L'USO SICURO (X): I giunti antideflagranti non devono essere riparati mediante asportazione di truciolo.\nL'ingresso cavi deve avvenire esclusivamente tramite pressacavi certificati Ex db/tb conformi alla marcatura dell'involucro.",
+   "loop_cut": null,
+   "s": 30.164336919784546,
+   "prompt_tokens": 4968,
+   "gen_tokens": 664,
+   "prefill_tps": 239.83596050675752,
+   "gen_tps": 71.28987851925518,
+   "peak_gb": 2.635481922
+  },
+  "doc_047": {
+   "text": "BROADBAND RF GaN-ON-SiC HIGH POWER AMPLIFIER SPECIFICATION\nPART NUMBER: QPA-8840-X | FREQUENCY: 2.7 GHz TO 3.5 GHz | S-BAND RADAR\n\nELECTRICAL SPECIFICATION | TYPICAL VALUE | MIN / MAX RATING | UNIT OF MEASURE | TEST CONDITIONS\nOperational Frequency Band (f) | 2.7 - 3.5 | Bandwidth S-Band | GHz (Gigahertz) | CW / Pulsed Mode\nSaturated Output Power (P_SAT) | 54.8 | Min 54.0 (> 250W) | dBm (Decibels mW) | V_DS = 48V, I_DQ = 800mA\nPower Added Efficiency (PAE) | 62.4 | Min 58.0 | % (Efficiency) | Pulse width 100us, Duty 10%\nSmall Signal Gain (S21) | 14.2 | 13.5 ... 15.0 | dB (Decibels) | Pin = 0 dBm, f = 3.1 GHz\nInput Return Loss (S11) | -16.5 | Max -12.0 | dB (Impedance Match) | 50 Ohm System Z0\nOutput Return Loss (S22) | -14.8 | Max -10.0 | dB | 50 Ohm Internal Pre-matched\nDrain Bias Voltage (V_DS) | 48.0 | Max 55.0 V | V DC (Volts) | Pulsed Power Rail\nGate Quiescent Voltage (V_GS) | -2.85 | -3.5 ... -2.2 | V DC (Pinch-off V_p) | Adjusted for I_DQ target\nNoise Figure (NF) | 2.8 | Max 3.4 | dB | Ambient Temp 25 deg C\nThermal Resistance Junction to Case (C) | 0.85 | Max 0.95 | deg C/W | Infrared Thermal Imaging\nRuggedness Load Mismatch (VSWR) | 10:1 | Survives all phases | Ratio VSWR | No Degradation or Burnout\n\nFlange package thermally enhanced metal-ceramic hermetic cavity with gold-tin (AuSn) solder preform.\nITAR / Export Control: Dual-use military radar transceiver subject to US EAR ECCN 3A001.b.2.",
+   "loop_cut": null,
+   "s": 29.672054767608643,
+   "prompt_tokens": 4968,
+   "gen_tokens": 630,
+   "prefill_tps": 240.0638541777411,
+   "gen_tps": 71.24158313483186,
+   "peak_gb": 2.635481922
+  },
+  "doc_048": {
+   "text": "PRECISION HELICAL PLANETARY GEARBOX MECHANICAL SCHEDULE\nSERIES: APX-140-025-P1 | REDUCTION RATIO i = 25:1 | BACKLASH CLASS P1\n\nMECHANICAL PARAMETER | CATALOG VALUE | SERVICE LIMIT | UNIT | TEST BENCH STANDARD\n--- | --- | --- | --- | --- |\nNominal Output Torque (T_2N) | 480 | Continuous rated | N*m (Newton-meters) | DIN 3990 Method B\nMaximum Acceleration Torque (T_2B) | 720 | Max 1000 cycles/hr | N*m (Emergency stop) | Cyclic fatigue limit\nEmergency Stop Torque (T_2NOT) | 1200 | Max 1000 lifetime | N*m (Destructive limit) | Shear pin verification\nTorsional Backlash (j_t) | 1.8 | < 2.0 | arcmin (Arcminutes) | At 2% T_2N load\nTorsional Rigidity (C_t21) | 42.0 | +/- 5% | N*m/arcmin | Static deflection\nMax Input Speed (n_lmax) | 6000 | Peak allowable | RPM (Input shaft) | Synthetic oil ISO VG 22Q\nNominal Input Speed (n_lN) | 3200 | Thermal continuous | RPM at 20 deg C amb. | DIN ISO 14179 Thermal Cap.\nMechanical Efficiency (eta_full) | 94.5 | >= 93.0 | % (2-Stage reduction) | Full torque at 2000 RPM\nPermissible Radial Force (F_r2max) | 7800 | At output shaft middle | N (Newtons) | Bearing L10h life > 20000h\nPermissible Axial Force (F_a2max) | 5400 | Thrust capacity | N (Tapered roller) | Simultaneous combined load\nService Lifetime (L_10h) | > 20,000 | Industrial duty | Hours | ISO 281 Bearing Life\n\nInput clamping hub balanced to G 2.5 per ISO 1940 with flexible elastomer coupling insert.\nCase-hardened carburized 18CrNiMo7-6 steel gears with micro-finished helical tooth profile.",
+   "loop_cut": null,
+   "s": 29.374462127685547,
+   "prompt_tokens": 4968,
+   "gen_tokens": 610,
+   "prefill_tps": 240.20773036846595,
+   "gen_tps": 71.27105287198673,
+   "peak_gb": 2.635481922
+  },
+  "doc_050": {
+   "text": "AEROSPACE HARDWARE SPECIFICATION - TITANIUM 6AI-4V BOLTS\nPART STANDARD: NAS6704-12 | PROCUREMENT SPEC: NAS4002 | CAGE CODE: 84910\n\nFASTENER SPECIFICATION | REQUIREMENT VALUE | MINIMUM LIMIT | UNIT | VERIFICATION CODE\n--- | --- | --- | --- | ---\n\nNominal Thread Size & Pitch | 1/4-28 UNJF-3A | Controlled root radius | Inches - TPI | MIL-5-8879 Thread Form\nUltimate Tensile Strength (F_tu) | 160,000 | Min 160.0 ksi | psi (1103 MPa) | ASTM E8 Tensile Machine\nTensile Yield Strength (F_ty) | 145,000 | Min 145.0 ksi | psi (1000 MPa) | 0.2% Offset Method\nDouble Shear Strength Ultimate | 95,000 | Min 95.0 ksi | psi (655 MPa) | MIL-STD-1812 Test 20\nMinimum Tensile Breaking Load | 5,760 | Full shank proof | lbs (Pounds-force) | Wedge tensile 10 deg head\nDouble Shear Breaking Load | 9,320 | Min load capacity | lbs (41.45 kN) | Hardened shear bushings\nRecommended Installation Torque | 85 - 95 | Dry / unlubricated | in-lbs (Inch-pounds) | Calibrated digital wrench\nInstallation Torque with Cetyl Alcoho | 55 - 65 | Anti-seize lube | in-lbs (6.2 - 7.3 N*m) | Hi-Lok collar preload target\nFatigue Life at Stress 90 ksi | > 65,000 | R = 0.1 ratio | Cycles without failure | High-frequency resonant rig\nSurface Coating / Treatment | Alodine 1200 / Solid film | MIL-PRF-46010 | -- | Thickness 0.0003 - 0.0005 in\nHydrogen Embrittlement Concentration | < 125 | Max permissible | ppm (Parts per million) | Vacuum hot extraction gas\n\nGrain flow: Continuously flowing through head-to-shank radius with zero unrecrystallized zones.\nMagnetic particle / fluorescent penetrant inspection per AMS 2644 Type 1 Method A Level 4.",
+   "loop_cut": null,
+   "s": 29.926381826400757,
+   "prompt_tokens": 4968,
+   "gen_tokens": 647,
+   "prefill_tps": 239.7513279778876,
+   "gen_tps": 71.31233690131042,
+   "peak_gb": 2.635481922
+  },
+  "doc_052": {
+   "text": "CERTIFICAZIONE UNICA (CU 2024) - REDDITI 2023\n\nDATI DATORE DI LAVORO (SOSTITUTO D'IMPOSTA): C.F. 01849200109 - LIGURIA DIGITAL SOLUTIONS S.P.A.\nDATI DEL DIPENDENTE: C.F. BNCFRC84M22D969P - BIANCHI FEDERICO\n\nDATI FISCALI - REDDITI DI LAVORO DIPENDENTE E ASSIMILATI\n\nPUNTO / CASELLA DESCRIZIONE VOCE FISCALE IMPORTO MATURATO (EUR)\nPunto 1 Redditi di lavoro dipendente a tempo indeterminato 38.450,80\nPunto 2 Redditi a tempo determinato o part-time 0,00\nPunto 6 Numero di giorni di lavoro dipendente nel periodo 365\nPunto 21 Ritenute IRPEF totali operate dal sostituto 8.924,50\nPunto 22 Addizionale regionale all'IRPEF (Regione Liguria 2,33%) 895,90\nPunto 26 Addizionale comunale acconto 2023 76,90\nPunto 27 Addizionale comunale saldo 2023 (Comune Genova 0,80%) 230,70\nPunto 29 Addizionale comunale acconto 2024 92,28\nPunto 390 Trattamento integrativo erogato (ex Bonus Renzi) 1.200,00\nPunto 411 Previdenza complementare dedotta in busta paga 2.400,00\n\nIMPOSTA LORDA CALCOLATA: EUR 10.450,20\nDETRAZIONI PER LAVORO DIPENDENTE EX ART. 13: EUR 1.525,70\nIMPOSTA NETTA DOVUTA: EUR 8.924,50",
+   "loop_cut": null,
+   "s": 28.2965030670166,
+   "prompt_tokens": 4968,
+   "gen_tokens": 528,
+   "prefill_tps": 239.57532717734708,
+   "gen_tps": 71.09789416055823,
+   "peak_gb": 2.635481922
+  },
+  "doc_053": {
+   "text": "MODELLO REDDITI PERSONE FISICHE - QUADRO RB (FABBRICATI)\nCODICE FISCALE CONTRIBUENTE: MLNPLA68L14D969A | PERIODO D'IMPOSTA: 2023\n\nSEZIONE I - REDDITI DEI FABBRICATI E CEDOLARE SECCA\nRIGO RENDITA CATASTALE UTILIZZO GIORNI POSSESSO % CANONE LOCAZIONE CEDOLARE SECCA STATO\nRB1 842,50 01 (Abitaz. principale) 365 100% -- [.] Ordinario\nRB2 125,00 05 (Pertinenza box) 365 100% -- [.] Ordinario\nRB3 1.150,00 03 (Locazione canone li) 365 50% 9.600,00 [X] 21% Cod. 1\nRB4 620,00 08 (Locazione concordat) 240 100% 4.800,00 [X] 10% Cod. 3\nRB5 340,00 02 (A disposizione seco) 365 100% -- [.] IMU dovuta\n\nTOTALE RENDITA FABBRICATI ASSOGGETTATA AD IRPEF: EUR 1.307,50\nIMPONIBILE CEDOLARE SECCA ALIQUOTA 21%: EUR 4.800,00 (Imposta: 1.008,00)\nIMPONIBILE CEDOLARE SECCA ALIQUOTA 10%: EUR 4.800,00 (Imposta: 480,00)\nTOTALE IMPOSTA CEDOLARE SECCA DOVUTA (RIGO RB11): EUR 1.488,00",
+   "loop_cut": null,
+   "s": 28.01830816268921,
+   "prompt_tokens": 4968,
+   "gen_tokens": 506,
+   "prefill_tps": 239.25858061679526,
+   "gen_tps": 71.07258106002124,
+   "peak_gb": 2.627863362
+  },
+  "doc_055": {
+   "text": "AGENZIA DELLE DOGANE E DEI MONOPOLI - DOCUMENTO AMMINISTRATIVO UNICO (DAU)\n\nUFFICIO DOGANALE: GENOVA 1 - CODICE: 041100 | MRN: 24IT04110084910291 | REGIME: 4000 (IMMISSIONE IN LIBERA PRATICA)\n\nCASELLE DAU 31-47: DETTAGLIO MERCI, CODICE TARIC E TRIBUTI DOGANALI\n\nCAS. DESCRIZIONE MERCEOLOGICA E CODICE TARIC HS MASSA NETTA (KG) VALORE IN DOGANA (EUR) DAZIO % IVA %\n31 Circuiti integrati elettror 8542.31.90.00 450,00 84.500,00 0,00% (Esenzione) 22,00%\n31 Condensatori ceramici a str 8532.24.00.00 120,00 12.400,00 0,00% (Sospensione) 22,00%\n31 Connettori coassiali per fr 8536.69.10.90 85,00 18.900,00 2,50% (Terzi päesi) 22,00%\n31 Cavi ottici con fibre scher 8544.70.00.00 340,00 15.200,00 3,00% (Regolamento UE) 22,00%\n\nTOTALE VALORE STATISTICO CIF GENOVA: EUR 131.000,00\nTOTALE DAZI DOGANALI LIQUIDATI (COD. 405): EUR 928,50\nTOTALE IVA DOGANALE LIQUIDATA (COD. 411): EUR 29.024,27\nDIRITTI AMMINISTRATIVI DI SANITA MARITTIMA: EUR 45,00\nTOTALE COMPLESSIVO DA VERSARE IN DOGANA: EUR 29.997,77\n\nCOPIA CONFORME\nALL'ORIGINALE\nFIRMATO ITALY 15.07.2024\nSVINCOLO DOGANALE CONCESSO - ATTESTAZIONE DEL VERIFICATORE DOGANALE: MATR. D-8491",
+   "loop_cut": null,
+   "s": 30.20832324028015,
+   "prompt_tokens": 4968,
+   "gen_tokens": 662,
+   "prefill_tps": 239.01707355788355,
+   "gen_tps": 71.28145248375452,
+   "peak_gb": 2.635481922
+  },
+  "doc_059": {
+   "text": "CALIFORNIA FORM 540 SCHEDULE CA (540) - CALIFORNIA ADJUSTMENTS\n\nTAXPAYER NAME: GREGORY E. PALMER | SSN: 481-92-0491 | TAXABLE YEAR: 2023\n\nPART I - INCOME ADJUSTMENT SCHEDULE (SECTION A & B)\n\nLINE | FEDERAL AMOUNT (COL A) | SUBTRACTIONS (COL B) | ADDITIONS (COL C) | CA AMOUNT (COL D)\n--- | --- | --- | --- | --- |\nLine 1 (Wages & compensation) | $ 142,500.00 | $ 0.00 | $ 0.00 | $ 142,500.00\nLine 2a (Tax-exempt municipal bonds) | $ 4,800.00 | $ 0.00 | $ 3,200.00 (Out-of-state) | $ 8,000.00\nLine 3b (Ordinary dividends) | $ 6,400.00 | $ 0.00 | $ 0.00 | $ 6,400.00\nLine 4b (IRA taxable distributions) | $ 12,000.00 | $ 1,500.00 (CA basis diff) | $ 0.00 | $ 10,500.00\nLine 7 (Capital gains federal) | $ 28,400.00 | $ 0.00 | $ 0.00 | $ 28,400.00 (No pref rate)\nLine 8a (Net operating loss carryover) | $ (8,500.00) | $ 0.00 | $ 8,500.00 (CA suspension) | $ 0.00\n\nTOTAL CALIFORNIA ADJUSTMENTS COL B (SUBTRACTIONS): $ 1,500.00\nTOTAL CALIFORNIA ADJUSTMENTS COL C (ADDITIONS): $ 11,700.00\nCALIFORNIA ADJUSTED GROSS INCOME (AGI): $ 195,800.00",
+   "loop_cut": null,
+   "s": 28.86972999572754,
+   "prompt_tokens": 4968,
+   "gen_tokens": 572,
+   "prefill_tps": 239.91532408684867,
+   "gen_tps": 71.24184478344456,
+   "peak_gb": 2.635481922
+  },
+  "doc_060": {
+   "text": "U.S. CUSTOMS AND BORDER PROTECTION - CUSTOMS DECLARATION\n\nFORM 6059B | OMB CONTROL NO. 1651-0009 | FLIGHT NO: AZ 0604 FROM ROME FCO TO JFK NY\n\nDECLARATION OF RETURNING PASSENGER OR VISITOR\n\nITEM NO. DESCRIPTION OF ARTICLES ACQUIRED ABROAD VALUE IN USD\nItem 1 Italian Leather Handbags (Florence, Italy) - 2 units $ 1,450.00\nItem 2 Bottled Extra Virgin Olive Oil & Aged Balsamic - 4 units $ 180.00\nItem 3 Parmigiano Reggiano Vacuum-Sealed Cheese 2kg $ 75.00\nItem 4 Swiss Chronograph Mechanical Wristwatch $ 3,200.00\nItem 5 Duty-Free Perfume & Cosmetics (Rome Airport) $ 240.90\n\nTOTAL VALUE OF ALL ARTICLES DECLARED: $ 5,145.00\n\nDUTY-FREE EXEMPTION ALLOWANCE PER TRAVELER: $ 800.00\n\nNET VALUE SUBJECT TO U.S. CUSTOMS DUTY ASSESSMENT: $ 4,345.00\n\nDUTY CALCULATED @ FLAT 3% FIRST $1,000 + TARIFF RATES: $ 178.50\n\nAGRICULTURAL / FOOD / SOIL INSPECTION: [X] YES [ ] NO: --\n\nI HAVE READ THE IMPORTANT INFORMATION ON THE REVERSE SIDE AND MADE A TRUTHFUL DECLARATION. SIGNATURE: G. ROSSI",
+   "loop_cut": null,
+   "s": 27.044069051742554,
+   "prompt_tokens": 4968,
+   "gen_tokens": 438,
+   "prefill_tps": 239.90304787726515,
+   "gen_tps": 70.62378714617138,
+   "peak_gb": 2.635481922
+  },
+  "doc_061": {
+   "text": "OSPEDALE POLICLINICO SAN MARTINO - GENOVA\nLABORATORIO CENTRALE DI ANALISI CHIMICO-CLINICHE E MICROBIOLOGIA\nDIRETTORE RESPONSABILE: PROF. DOTT. MASSIMO VERDI\n\nPAZIENTE: BIANCHI ANDREA | NATO IL: 14/08/1982 | SESSO: M | C.F.: BNÇNDR82M14D969W\nCODICE SANITARIO: 07-849102 | DATA PRELIEVO: 18/10/2024 07:45 | DATA REFERTO: 18/10/2024 14:20\n\nESAME EMOCROMOCITOMETRICO COMPLETO CON FORMULA LEUCOCITARIA AUTOMATICA\n\nPARAMETRO EMATOLOGICO RISULTATO FLAG UNITA INTERVALLO DI RIFERIMENTO\nLeucociti (WBC) 12,45 *H* 10^3 / mcL [4,00 - 10,00]\nEritrociti (RBC) 4,82 10^6 / mcL [4,50 - 5,90]\nEmoglobina (Hgb) 15,1 g / dL [13,5 - 17,5]\nEmatocrito (Hct) 44,8 % [41,0 - 50,0]\nVolume Corpuscolare Medio (MCV) 92,9 fL [80,0 - 96,0]\nContenuto Medio Emoglobina (MCH) 31,3 pg [27,0 - 33,0]\nConcentrazione Media Hgb (MCHC) 33,7 g / dL [32,0 - 36,0]\nIndice Anisocitosi Eritrocitaria (RDW) 13,2 % [11,5 - 14,5]\nPiastrine (PLT) 385 10^3 / mcL [150 - 400]\nVolume Piastrinico Medio (MPV) 10,4 fL [7,2 - 11,1]\n\nFORMULA LEUCOCITARIA (DIFFERENTIAL):\nNeutrofili % 78,4 *H* % [40,0 - 70,0]\nLinfociti % 14,2 *L* % [20,0 - 45,0]\nMonociti % 5,8 % [2,0 - 10,0]\nEosinofili % 1,2 % [0,5 - 5,0]\nBasofili % 0,4 % [0,0 - 1,5]\nNeutrofili valore assoluto 9,76 *H* 10^3 / mcL [1,80 - 7,00]\nLinfociti valore assoluto 1,77 10^3 / mcL [1,00 - 3,50]\n\nNOTE AL REFERTO: Marcata neutrofilia con leucocitosi reattiva compatibile con focolaio flogistico batterico in atto.\nMetodo: Citometria a flusso con fluorescenza semiconductore laser Sysmex XN-9000.",
+   "loop_cut": null,
+   "s": 32.62145280838013,
+   "prompt_tokens": 4968,
+   "gen_tokens": 836,
+   "prefill_tps": 239.0147847075306,
+   "gen_tps": 71.4481111979621,
+   "peak_gb": 2.635481922
+  },
+  "doc_062": {
+   "text": "ISTITUTO CLINICO LIGURE DI DIAGNOSTICA SPECIALISTICA\nACCREDITATO SSN REGIONE LIGURIA N. 0819/2020\nLABORATORIO DI BIOCHIMICA CLINICA E PROTEOMICA\n\nPAZIENTE: PERRANDO LAURA | NATA IL: 29/03/1961 | ETA: 63 | C.F.: FRNLRA61C69D969Q\nMEDICO CURANTE: DOTT: SSA C. MANZI | DATA ACCETTAZIONE: 22/10/2024 | CODICE BARCODE: 849102941\n\nPROFILO METABOLICO LIPIDICO ED ELETTROFORESI SIEROPROTEICA SU CAPILLARE\n\nANALITA DOSATO VALORE TROVATO FLAG UNITA VALORI NORMALI DESIDERABILI\nColesterolo Totale 248 *H* mg / dL [< 200 Desiderabile; > 240 Alto]\nColesterolo HDL 42 *L* mg / dL [> 50 Fatore protettivo]\nColesterolo LDL (formula Friedewald) 168 *H* mg / dL [< 116 Rischio cardiovasc. moderato]\nTrigliceridi ematici 190 *H* mg / dL [< 150. Normale; 150-199 Borderline]\nIndice di Rischio Cardiovascolare (Tot/HDL) 5,90 *H* Ratio [< 4,50 Uomo; < 4,00 Donna]\nGlicemia a digiuno (Metodo Esocinasi) 108 *H* mg / dL [70 - 99 Normale; 100-125 IFG]\nEmoglobina Glicata (HbA1c IFCC) 41,0 mmol / mol [20,0 - 42,0 Normale]\n\nELETTROFORESI PROTEICA CAPILLARE:\nProteine.Totali 7,4 g / dL [6,4 - 8,3]\nAlbumina % 58,2 % [55,8 - 66,1] (3,8 - 4,8 g/dL]\nAlfa 1 Globuline % 3,8 % [2,9 - 4,9] (0,2 - 0,4 g/dL]\nAlfa 2 Globuline % 9,1 % [7,1 - 11,8] (0,5 - 0,9 g/dL]\nBeta 1 Globuline % 6,5 % [4,7 - 7,2] (0,3 - 0,6 g/dL]\nBeta 2 Globuline % 4,8 % [3,2 - 6,5] (0,2 - 0,5 g/dL]\nGamma Globuline % 17,6 % [11,1 - 18,8] (0,8 - 1,5 g/dL]\nRapporto Albumina / Globuline (A/G) 1,39 Ratio [1,10 - 2,00]\n\nTracciato elettroforetico: assenza di componenti monoclonali evidenti nel settore gamma.\nCampione di siero limpido non emolizzato. Prelievo eseguito dopo 12 ore di digiuno assoluto.",
+   "loop_cut": null,
+   "s": 33.04652404785156,
+   "prompt_tokens": 4968,
+   "gen_tokens": 871,
+   "prefill_tps": 239.99027141327082,
+   "gen_tps": 71.31817734758951,
+   "peak_gb": 2.635481922
+  },
+  "doc_065": {
+   "text": "ISTITUTO NAZIONALE PER LA RICERCA SUL CANCRO - IST GENOVA\nU. O.C. ANATOMIA PATOLOGICA E CITODIAGNOSTICA ONCOLOGICA\nDIRETTORE: PROF. DOTT. GABRIELE TORTORA\n\nPAZIENTE: CASÁZZA PAOLO | ANNI: 58 | SESSO: M | C.F.: CSZPLA66D18D969M\nREGISTRO ISTOLOGIA N.: 24-B-84910 | DATA BIOPSIA: 25/10/2024 | DATA DIAGNOSI: 30/10/2024\nREPARTO PRÓVENIENZA: GASTROENTEROLOGIA ED ENDQSCOPIA DIGESTIVA\n\nESAME ISTOLOGICO SU BIOPSIE ENDOSCOPICHE GASTRICHE MULTIPLE\n\nCAMPIONE BIOPTICO | NOTIZIE CLINICHE | DESCRIZIONE MACROSCOPICA\nA) Antro Gastrico (n. 3 frammenti) | Sospetta gastrite atrofica | Tre frammenti biancastri del diametro max compreso tra 2 e 4 mm. Inclusione totale A1.\nB) Angulus Gastrico (n. 2 frammenti) | Erosione mucosa rilevata | Due minuti frammenti congiunti del diametro di 2 mm. Inclusione totale B1.\nC) Corpo Gastrico (n. 3 frammenti) | Controllo discromie mucose | Tre frammenti polipoidi bruni del diametro di 3 mm. Inclusione totale C1.\nQUADRO MICROSCOPICO ED IMMUNOISTOCHIMICA:\nColorazione Giemsa per Helicobacter pylori | NEGATIVA | Assenza di microrganismi spiraliformi sulla superficie foveolare\nColorazione Alcian-Blu pH 2.5 | POSITIVA | Evidenzia aree focali di metaplasia intestinale completa (tipo I)\nInfiltrato 'flogistico linfo-plasmacellulare | GRADO MODERATO | Score secondo classificazione OLGA System: Stadio II\nAttivita neutrofilica intracriptica | LIEVE | Discreta granulocitosi della lamina propria\nAtrofia ghiandolare mucosa antrale | PRESENTE (Score 1) | Lieve perdita delle ghiandole native gastriche\n\nDIAGNOSI CONCLUSIVA: Gastrite cronica atrofica dell'antro e dell'angulus a moderata attività flogistica, con metaplasia intestinale focale completa. Negativa la ricerca di H. pylori sul materiale in esame. Assenza di displasia epiteliale.\nSNOMED CODES: T-63000 (Stomach) | M-43000 (Atrophic Gastritis) | M-73320 (Intestinal Metaplasia).\nIL PATOLOGO.REFERTANTE: DOTT.SSA CHIARA BERNARDI - FIRMATO IN ÓRIGINALE CON TIMBRO PROFESSIONALE",
+   "loop_cut": null,
+   "s": 31.979100942611694,
+   "prompt_tokens": 4968,
+   "gen_tokens": 801,
+   "prefill_tps": 240.54669562452662,
+   "gen_tps": 71.54531745020742,
+   "peak_gb": 2.635481922
+  },
+  "doc_068": {
+   "text": "LABCORP OCCUPATIONAL TOXICOLOGY & FORENSIC TESTING\n1904 TW ALEXANDER DR, RESEARCH TRIANGLE PARK, NC 27709\nSAMHSA CERTIFIED LABORATORY | CAP-FDT ACCREDITATION # 1849102\n\nDONOR: HAYES, MARCUS L. | DONOR ID: EMP-849102 | REASON FOR TEST: RANDOM WORKPLACE\nCHAIN OF CUSTODY SPECIMEN ID: CC-94810294 | COLLECTION DATE: 10/25/2024 09:15 EST\nSPECIMEN TYPE: SPLIT URINE | TEMPERATURE AT COLLECTION: 96.4 F (NORMAL: 90.0 - 100.0 F)\n\n10-PANEL URINE DRUG SCREEN WITH IMMUNOASSAY AND GC/MS CONFIRMATION\n\nDRUG CLASS / METABOLITE TARGET INITIAL SCREEN CUTOFF INITIAL RESULT CONFIRMATION METHOD QUANTITATIVE LEVEL\nAmphetamines / Methamphetamine 500 ng / mL NEGATIVE N/A Below Detection Limit\nBarbiturates (Secobarbital) 200 ng / mL NEGATIVE N/A Below Cutoff\nBenzodiazepines (Oxazepam) 200 ng / mL NEGATIVE N/A Below Cutoff\nCocaine Metabolite (Benzoylecgonine) 150 ng / mL NEGATIVE N/A Below Cutoff\nMarijuana Metabolite (THC-COOH) 50 ng / mL PRESUMPTIVE POS GC-MS Confirmation 84 ng / mL (CONFIRMED POS)\nMethadone Metabolite (EDDP) 300 ng / mL NEGATIVE N/A Below Cutoff\nOpiates (Morphine / Codeine) 2000 ng / mL NEGATIVE N/A Below Cutoff\nOxycodones (Oxycodone / Oxymorphone) 100 ng / mL NEGATIVE N/A Below Cutoff\nPhencyclidine (PCP) 25 ng / mL NEGATIVE N/A Below Cutoff\nPropoxyphene 300 ng / mL NEGATIVE N/A Below Cutoff\n\nSPECIMEN VALIDITY TESTING (ADULTERATION):\n• Creatinine Concentration 20.0 mg / dL (Min) NORMAL (78.4 mg/dL) Colorimetric Jaffé Dilute: NO\n• Specific Gravity Refractometer 1.0030 (Min) NORMAL (1.0185) Digital Refractometer Normal\n• pH Acidity / Alkalinity [4.5 - 9.0] NORMAL (pH 6.2) pH Electrode Adulterated: NO\n• General Oxidants / Bleach / Nitrites 200 mcg / mL NEGATIVE (< 50) Diphenylamine Assay Normal\n\nCERTIFIED MEDICAL REVIEW OFFICER (MRO) DETERMINATION: POSITIVE for Marijuana.Metabolite (THC-COOH). Donor verified valid prescription status: NO.\nChain of Custody Form federal tamper-evident seal intact upon laboratory receipt:",
+   "loop_cut": null,
+   "s": 32.45066499710083,
+   "prompt_tokens": 4968,
+   "gen_tokens": 831,
+   "prefill_tps": 241.09892482573417,
+   "gen_tps": 70.95107265907532,
+   "peak_gb": 2.635481922
+  },
+  "doc_069": {
+   "text": "THYROID FUNCTION CASCADE & THYROID AUTOANTIBODY PROFILE\n\nHORMONE / ANTIBODY ASSAY | CONCENTRATION | ALERT | UNIT | REFERENCE POPULATION RANGE\n----------------------- | ----------------------- | ----------- | ----------- | -----------\nThyroid Stimulating Hormone (TSH 3rd Gen) | 8.92 | *ELEVATED* | uIU / mL (mIU/L) | [0.45 - 4.50]\nFree Thyroxine (Free T4 / FT4 Dialysis) | 0.72 | *LOW* | ng / dL | [0.82 - 1.77]\nFree Triiodothyronine (Free T3 / FT3) | 2.1 | *LOW* | pg / dL | [2.3 - 4.2]\nTotal Thyroxine (Total T4) | 4.8 | *LOW* | mcg / dL | [5.1 - 11.9]\nThyroid Peroxidase Antibodies (TPOAb) | 485 | *HIGH ABNORMAL* | IU / mL | [< 9.0 Negative; >= 9.0 Positive]\nThyroglobulin Antibodies (TgAb) | 142 | *HIGH* | IU / mL | [< 4.0 Negative]\nThyrotropin Receptor Antibodies (TRAb) | < 1.0 | NEGATIVE | IU / L | [< 1.75 Negative]\nThyroglobulin Mass (Tg Beckman) | 18.4 | | ng / dL | [1.4 - 29.2 eutyroid]\nTg Recovery Rate Assay | 96 | | % | [80 - 120 % (No Interference)]\n\nCLINICAL SUMMARY: Primary autoimmune hypothyroidism (Hashimoto's Thyroiditis) characterized by marked elevation of TPO antibodies and elevated TSH with subnormal Free T4.\nTesting performed using electrochemiluminescence immunoassay (ECLIA) on Roche Elecsys e801.",
+   "loop_cut": null,
+   "s": 28.185909748077393,
+   "prompt_tokens": 4968,
+   "gen_tokens": 524,
+   "prefill_tps": 240.2406100596309,
+   "gen_tps": 71.04799751080733,
+   "peak_gb": 2.635481922
+  },
+  "doc_071": {
+   "text": "CONVENTION RELATIVE AU CONTRAT DE TRANSPORT INTERNATIONAL DE MARCHANDISES PAR ROUTE (CMR)\nCMR N. 2024-IT-849102 | LETTERA DI VETTURA STRADALE INTERNAZIONALE\n\nCASELLA 1: MITTENTE (EXPEDITEUR)\nLIGURIA EXPORT INDUSTRIAL S.P.A. - VIA LUNGA 14, 16152 GENOVA (ITALIA) - P.IVA 03819200104\n\nCASELLA 2: DESTINATARIO (DESTINATAIRE)\nRHINE-RUHR LOGISTIK GMBH - HAFENSTRASSE 48; D-47119 DUISBURG (DEUTSCHLAND) - USt-IdNr.DE4819204\n\nCASELLA 3: LUOGO DI PRESA IN CARICO\nINTERPORTO DI GENOVA RIVALTA SCRIVIA - DATA: 24/10/2024 ORE.08:30\n\nCASELLA 4: LUOGO DI RICONSEGNA\nDUISBURG LOGISTICS TERMINAL GATE 4 - TERMINE DI CONSEGNA: 26/10/2024\n\nCASELLA 6-12: CONTRASSEGNI E MERCI\nN. 18 COLLI (PALLET EUR-EPAL) CONTENENTI VALVOLE INDUSTRIALI IN GHISA: PESO LORDO: 8.450 KG - PESO NETTO: 7.920 KG - VOLUME: 28,5 M3\n\nCASELLA 13: ISTRUZIONI DEL MITTENTE\nDOCUMENTI DOGANALI T1 ALLEGATI N. 24IT04110084910...RESA TRASPORTO: DAP DUISBURG (INCOTERMS 2020)\n\nCASELLA 16: VETTORE (TRANSPORTEUR)\nEUROPEAN TRANS-ROAD SERVICES S.R.L. - CORSO ITALIA 10, VERONA - ALBO AUTOTRASPORTATORI VR/849102\n\nCASELLA 18: RISERVE DEL VETTORE\nVERIFICATO CARICO: PALLET 03 E 07 PRESENTANO IMBALLO ESTERNO LEGGERMENTE UMIDO. TELONE CAMION INTEGRO E SIGILLATO.",
+   "loop_cut": null,
+   "s": 30.223732948303223,
+   "prompt_tokens": 4968,
+   "gen_tokens": 663,
+   "prefill_tps": 238.98867525858896,
+   "gen_tps": 71.28381665354831,
+   "peak_gb": 2.635481922
+  },
+  "doc_072": {
+   "text": "DOCUMENTO DI TRASPORTO MERCI PERICOLOSE - ACCORDO ADR 2023\nDDT TRASPORTO ADR N. ADR-2024-04819 | MODELLO OBBLIGATORIO CAPITOLO 5.4 ADR\n\nSPEDITORE MERCI PERICOLOSE\nPETROLCHIMICA LIGURE S.P.A. - STABILIMENTO NORD, VIA DECORATI 8, VADO LIGURE (SV) - TEL EMERGENZA: 019-849100\n\nDESTINATARIO CONSEGNATARIO\nCOLORIFICIO REGIONALE S.R.L. - ZONA INDUSTRIALE CORNIGLIANO, VIA DELLA CHIMICA 14, GENOVA\n\nDESCRIZIONE MERCE ADR (CASELLA 5.4.1.1)\nUN 1263, PITTURE (AVENTI PUNTO DI INFIAMMABILITA INFERIORE A 23 C), 3, GE II, (D/E)\n\nCOLLI E IMBALLAGGI OMOLOGATI\nN. 24 FUSTI IN ACCIAIO A CIMA CHIUSA 1Al (OMOLOGATI UN 1Al/Y1.8/250/24) DA 200 LITRI CIASCUNO\n\nQUANTITA TOTALE E PESO\nQUANTITA NETTA TOTALE SOSTANZA: 4.800 LITRI (PESO NETTO 4.320 KG) - PESO LORDO COLLI: 4.960 KG\n\nVALUTAZIONE ESENZIONE 1.1.3.6\nCATEGORIA DI TRASPORTO 2 - COEFFICIENTE MOLTIPLICATORE 3: TOTALE PUNTI = 4.320 x 3 = 12.960 (> 1.000 PUNTI: TRASPORTO IN REGIME ADR COMPLETO)\n\nCONDUCENTE E VEICOLO AUTORIZZATO\nAUTOCARRO CON PANNELLI RETTANGOLARI ARANCIONI 33 / 1263 (NUMERO KEMLER 33) - CONDUCENTE: C.P.P. AD 13.10.1991 AL 2023\nCOPIA CONFORME\nALL'ORIGINALE\nDICHIARAZIONE DEL MITTENTE: LE MERCI SONO AMMESSE AL TRASPORTO SU STRADA IN CONFORMITA ALL'ADR. FIRMA RESPONSABILE SICUREZZA: DOTT. ING. FABIO TESTA",
+   "loop_cut": null,
+   "s": 30.373549222946167,
+   "prompt_tokens": 4968,
+   "gen_tokens": 680,
+   "prefill_tps": 239.73935487719854,
+   "gen_tps": 71.43853243112471,
+   "peak_gb": 2.635481922
+  },
+  "doc_075": {
+   "text": "INTERNATIONAL AIR TRANSPORT ASSOCIATION (IATA) - AIR WAYBILL\nAWB NO: 057-84910294 | AIR FRANCE CARGO / KLM CARGO | NON-NEGOTIABLE AIR WAYBILL\n\nSHIPPER'S NAME AND ADDRESS\nADVANCED PHOTONICS INC - 100 INNOVATION WAY, BOSTON, MA 02110 (USA) - PHONE: 617-555-0481\n\nCONSIGNEE'S NAME AND ADDRESS\nGENOVA QUANTUM OPTICS LABS - VIA OBERDAN 18, 16167 GENOVA (ITALY) - ATTN: DR. L. MORI\n\nISSUING CARRIER'S AGENT & CITY\nGLOBAL EXPEDITORS INTERNATIONAL - LOGAN AIRPORT CARGO BLDG 62, BOSTON - IATA CODE: 01-4-8192\n\nROUTING: AIRPORT OF DEPARTURE\nBOSTON LOGAN INT'L (BOS) -> ROUTING TRANSIT: PARIS CHARLES DE GAULLE (CDG) -> DESTINATION: MILAN MALPENSA (MXP)\n\nFLIGHT / DATE\nFLIGHT AF 0333 / 28 OCT 2024 -> CONNECTING FLIGHT AF 1114 / 29 OCT 2024\n\nHANDLING INFORMATION\nHANDLE WITH EXTREME CARE. SCIENTIFIC OPTICAL CRYSTALS. TEMPERATURE CONTROLLED +15C TO +25C. DO NOT DROP.\n\nPIECES, WEIGHT & RATE CLASS\n3 CRATES | GROSS WEIGHT: 420.0 KG | CHARGEABLE WEIGHT: 580.0 KG (VOLUMETRIC FACTOR 1:6000) | RATE: $ 4.85 / KG | TOTAL WEIGHT CHARGE: $ 2,813.00\n\nOTHER CHARGES & DECLARATIONS\nSECURITY SURCHARGE (MYC): $ 65.00 | FUEL SURCHARGE (FSC): $ 348.00 | DECLARED VALUE FOR CARRIAGE: $ 85,000.00 | DECLARED VALUE FOR CUSTOMS: EUR 78,500.00\n\nSHIPPER CERTIFIES PARTICULARS ARE CORRECT. SIGNATURE OF ISSUING CARRIER OR AGENT: J. REYNOLDS (BOSTON CARGO OFFICE)",
+   "loop_cut": null,
+   "s": 30.030586004257202,
+   "prompt_tokens": 4968,
+   "gen_tokens": 655,
+   "prefill_tps": 239.78343038514282,
+   "gen_tps": 71.36265338752968,
+   "peak_gb": 2.635481922
+  },
+  "doc_078": {
+   "text": "US DOT HAZARDOUS MATERIALS SHIPPING PAPER - 49 CFR PART 172\nBILL OF LADING NO: HAZ-2024-84910 | 24-HOUR EMERGENCY RESPONSE PHONE: 1-800-535-5053 (INFOTRAC)\n\nCARRIER NAME & TRACTOR ID\nINTERSTATE CHEMICAL TRANSPORT, LLC - DOT NO: 1849102 - TRACTOR NO: 8419 / TRAILER NO: T-904\n\nSHIPPER & POINT OF ORIGIN\nSOLVENT SPECIALTIES CHEMICAL CORP - 800 BATTERY LANE, CHARLESTON, WV 25301\n\nCONSIGNEE & DESTINATION\nMIDWEST INDUSTRIAL COATINGS - 2400 RAILROAD AVE, GARY, IN 46401\n\nPROPER SHIPPING NAME (DOT)\nUN 1993, FLAMMABLE LIQUIDS, N.O.S. (CONTAINS ETHANOL, TOLUENE), 3, PG II, ERG GUIDE 128\n\nPACKAGING & TOTAL QUANTITY\n16 COMPOSITE DRUMS (6HA1) TOTALING 880 GALLONS (GROSS WEIGHT 7,480 LBS / 3,392 KG)\n\nPLACARDING REQUIRED & APPLIED\nFLAMMABLE PLACARD CLASS 3 DISPLAYED ON ALL FOUR SIDES OF TRANSPORT VEHICLE\n\nEMERGENCY RESPONSE INFORMATION\nHEALTH HAZARD: VAPORS HARMFUL, IRRITATING TO SKIN/EYES. FIRE: FLASH POINT 55 F (12.8 C). USE FOAM OR DRY CHEMICAL.\n\nTHIS IS TO CERTIFY THAT THE NAMED MATERIALS ARE PROPERLY CLASSIFIED, PACKAGED, MARKED, AND LABELED. SIGNATURE: T. HARPER",
+   "loop_cut": null,
+   "s": 28.393961906433105,
+   "prompt_tokens": 4968,
+   "gen_tokens": 537,
+   "prefill_tps": 239.80975719495444,
+   "gen_tps": 71.18990462120624,
+   "peak_gb": 2.635481922
+  },
+  "doc_080": {
+   "text": "UNIFORM RULES CONCERNING THE CONTRACT OF INTERNATIONAL CARRIAGE OF GOODS BY RAIL (CIM)\nRAIL CONSIGNMENT NOTE CIM N. 24-CIM-84910 | LETTERA DI VETTURA FERROVIARIA INTERNAZIONALE\n\nSENDER / MITTENTE\nACCIAIERIE D'ITALIA S.P.A. - TERMINAL FERROVIARIO DI TARANTO / GENOVA CAMPASSO (ITALIA)\n\nCONSIGNEE / DESTINATARIO\nDEUTSCHE BAHN CARGO AG / THYSSENKRUPP. STEEL EUROPE - KAISER-WILHELM-STR 100, DUISBURG (DE)\n\nRAILWAY WAGON / VAGONE FERROVIARIO\nWAGON NUMBER: 31 83 4819 204-8 RIV F5 (TYPE: RES FOUR-AXLE FLAT WAGON WITH STANCHIONS)\n\nROUTING ITINERARY / ITINERARIO\nGENOVA CAMPASSO -> DOMODOSSOLA II (DOGANA CONFINE CH) -> BRIG -> BASEL BAD BF -> DUISBURG RUHRORT\n\nGOODS / MERCI FERROVIARIE\nEN: 4 HEAVY STEEL WIRE COILS (ROD IN COILS) SECURED WITH STEEL STRAPS. NHM CODE: 72I3.91.00\nIT: N. 4 ROTOLI VERGELLE D'ACCIAIO LEGATO LEGATE CON REGGE. CODICE DOGANALE MERCI NHM 72I3.91.00\n\nNET AND TARE MASS / MASSA NETTA E TARA\nNET WEIGHT / PESO NETTO: 52,400 KG | WAGON TARE /. TARA VAGONE: 22,100 KG | TOTAL LOAD: 74,500 KG\n\nCUSTOMS / FORMALITA DOGANALI\nTRANSIT FORM NCTS T1 AT DOMODOSSOLA RAIL GATE. EXEMPTION ART. 95 REG. 2015/2447",
+   "loop_cut": null,
+   "s": 28.884603023529053,
+   "prompt_tokens": 4968,
+   "gen_tokens": 567,
+   "prefill_tps": 238.98448383226142,
+   "gen_tps": 71.22216651265954,
+   "peak_gb": 2.635481922
+  },
+  "doc_082": {
+   "text": "CONTRATTO DI LOCAZIONE ABITATIVA A CANONE CONCORDATO (L. 431/1998)\nREGISTRATO PRESSO L'AGENZIA DELLE ENTRATE DI GENOVA 1 - SERIE 3T N. 084910\n\nCot la presente scritta per la redata un tipo copia, tra il Sig. ENRICO CASAGRANDE, C.F. CSGNRC59H14D969L, residente a Genova in Via Montallegro 15 ('Locatore'), e la Sigra GIULIA VASSALLO, C.F. VSSLGL92A51D969B, residente a Genova in Caco Magenta 8 ('Conduttore').\n\nSI CONVIENE E STIPULA QUANTO SEGUE\n\nART. 1 (DURATA) La locazione la durata di una tre con decotrenza dal 01/11/2024 al 31/10/2027. Alla prima scadenza-il contratto sara prorogato di due anni (formula 3+2) alle medesime condizioni.\n\nART. 2 (CANONE) Il canone ranno di locazione concordato nella somma di Euro 7.800,00 (settemilaottocento/00), pari ad Euroc 650,00 mensili, determinato in base all'accordo territoriale del Comune di Genova del 24/02/2023 per la Zona B1, con attestazione di responsabilità prot. UPI-GE-8491.\n\nART. 3 (DEPOSITO CAUZIONALE) A garage di tutte le obbligazioni contrattuali, il Conduttore versa la somma di Euro 1.950,00 pari a tre mensilita di canone a mezzo bonifico bancario, fittifera di interessi legali anni.\n\nART. 4 (REGIME FISCALE CEDOLARE SECCA). Il Locatore dichiara di avvalersi dell'opzione per l'applicazione della cedolare secca agevolata con aliquota al 10% ai sensi dell'art. 3 del D.Lgs. 23/2011, rinunciando espressamente per tutta la durata alla ficoata di richiesta aggiormenti ISTAT del canone.\n\nART. 5 (SPESE CONDOMINIALI) Le queste ordinarie di amministrazione e riscaldamento centralizzato sono quantificate in acconto mensile di Euro 95,00 salvo conguglio annuale su rendiconto approvato.",
+   "loop_cut": null,
+   "s": 30.042024850845337,
+   "prompt_tokens": 4968,
+   "gen_tokens": 651,
+   "prefill_tps": 239.00463614096975,
+   "gen_tps": 71.361744178848,
+   "peak_gb": 2.635481922
+  },
+  "doc_084": {
+   "text": "VERBALE DI CONCILIAZIONE IN SEDE SINDACALE EX ART. 411 C.P.C. E ART. 2113 C.C.\nCOMMISSIONE DI CONCILIAZIONE UILM-UIL GENOVA | VERTENZA N. 849/2024\n\nIn data 29 Ottobre 2024, presso la sede sindacale di Genova, Via Frieschi n. 14, sono presenti:\n\n- Il Sig. LUCA MORI, dipendente dimissionario, assistito dal funzionario sindacale UILM Sig. Marco De Luca;\n- La societa MECCANICA AUTOMATIZZATA S.R.L., assistita dall'Avv. FABIO REPETTO dell'Unione Industriali di Genova;\nI comparenti dichiarano di voler definire bonariamente ed a titolo transativo generale ogni reciproca pretesa derivante dal rapporto di lavoro subordinato intercorso dal 15/01/2018 al 30/09/2024 con inquadramento al Livello 5 del CCNL Metalneccanica Industria.\n\nCONDIZIONI DELL'ACCORDO:\n\n1. La societa riconosce e corrisponde al Sig. Luca Mori, a titolo di incentivo all'esodo ed indeninita risarcitoria omnicomprensiva, la somma lorda di Euro 28.500.00 (ventottomilacinquecento.00), da liquidarsi entro il 15/11/2024;\n2. Il lavoratore accetta la predetta somma e dichiara di non aver null'altrò a pretendere per differenze retributive, lavoro straordinario, festivita, indennita di trasferta, danno biologico o TFR integrativo;\n3. Le parti rinunciano espressamente all'impugnazione del presente verbale ai sensi dell'art. 2113, quarto comma, del Codice Civile.",
+   "loop_cut": null,
+   "s": 27.93170690536499,
+   "prompt_tokens": 4968,
+   "gen_tokens": 504,
+   "prefill_tps": 239.93550670253077,
+   "gen_tps": 71.08466936649322,
+   "peak_gb": 2.627863362
+  },
+  "doc_087": {
+   "text": "UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS\n\nAPOLLO DEFENSE TECHNOLOGIES CORP., - DELAWARE GENERAL CORPORATION LAW SECTION 141(f)\n\nThe undersigned, being all the members of the Board of Directors of APOLLO DEFENSE TECHNOLOGIES CORP., a Delaware corporation (the 'Corporation'), hereby unanimously consent in writing to the adoption of the following resolutions pursuant to Section 141(f) of the DGCL:\n\nSERIES B PREFERRED STOCK FINANCING RESOLUTIONS:\n\nWHEREAS, the Board deems it to be in the best financial interests of the Corporation and its stockholders to issue and sell up to 12,500,000 shares of Series B Preferred Stock at a purchase price of $4.80 per share, for an aggregate gross proceeds of $60,000,000.00, pursuant to the Series B Stock Purchase Agreement presented to the Board;\n\nNOW, THEREFORE, BE IT RESOLVED, that the Certificate of Incorporation of the Corporation be amended and restated in its entirety (the 'Restated Certificate') to increase the authorized Common Stock to 120,000,000 shares and the authorized Preferred Stock to 35,000,000 shares, par value $0.0001 per share;\n\nFURTHER RESOLVED, that the Chief Executive Officer, the Chief Financial Officer, and the Secretary are each authorized to execute and deliver the Series B Purchase Agreement, the Investors' Rights Agreement, the Right of First Refusal and Co-Sale Agreement, and the Voting Agreement on behalf of the Corporation;\n\nFURTHER RESOLVED, that an aggregate of 3,500,000 shares of Common Stock be newly reserved for issuance under the 2024 Equity Incentive Plan for key engineering personnel.\n\nIN WITNESS WHEREOF, the undersigned have executed this Written Consent as of October 28, 2024. Signatures: Thomas H. Vance, Chairman; Victoria M. Sterling, Director; Dr. Raymond Chen, Director.",
+   "loop_cut": null,
+   "s": 28.05979609489441,
+   "prompt_tokens": 4968,
+   "gen_tokens": 509,
+   "prefill_tps": 239.41626863467835,
+   "gen_tps": 70.98030860648916,
+   "peak_gb": 2.635481922
+  },
+  "doc_088": {
+   "text": "AUDIT WORKPAPER: REVENUE SUBSTANTIVE TESTING SCHEDULE\n\nCLIENT: PACIFIC INDUSTRIAL AUTOMATION INC. | AUDIT YEAR: FY2024 | PREPARED BY: K. JOSHI (SENIOR AUDITOR)\n\nAUDIT OBJECTIVE: Verify occurrence, accuracy, and cut-off of sample sales transactions exceeding tolerable misstatement threshold ($ 250,000.00).\n\nSAMPLE TESTING RESULTS:\n\nSample 01: Inv # 849102 | Customer: Siemens AG | Date: 12/28/2023 | Amount: $ 482,100.00 | Shipping Doc: CMR 8419 | BOL signed: 12/29/2023 | Cut-off verified OK.\n\nSample 02: Inv # 849108 | Customer: ABB Schweiz AG | Date: 12/30/2023 | Amount: $ 314,500.00 | Shipping Doc: AWB 057-8491 | Delivery confirmed 01/03/2024. EXCEPTION NOTED: Terms were DAP Zurich, title passed on delivery date. Management posted audit adjustment AJE-04 deferring revenue to Q1.2024.\n\nSample 03: Inv # 849115 | Customer: FANUC Robotics | Date: 12/31/2023 | Amount: $ 890,400.00 | Shipping Doc: Ocean BOL MSC-984 | FOB Houston Shipping Point | Revenue recognition in FY2023 verified appropriate under ASC 606.\n\nCONCLUSION & AUDIT SIGN-OFF:\n\nBased on the substantive procedures performed and audit adjustments recorded, revenues for the year ended December 31, 2023 are materially stated in all respects in accordance with US GAAP.",
+   "loop_cut": null,
+   "s": 27.72597885131836,
+   "prompt_tokens": 4968,
+   "gen_tokens": 483,
+   "prefill_tps": 239.15701340940072,
+   "gen_tps": 70.85342132849986,
+   "peak_gb": 2.635481922
+  },
+  "doc_089": {
+   "text": "FINAL MARITIME ARBITRATION AWARD / LODO ARBITRALE MARITTIMO DEFINITIVO\nLONDON MARITIME ARBITRATORS ASSOCIATION (LMAA) & CAMERA ARBITRALE DI GENOVA | ARB-2024-849\n\nBEFORE THE SOLE ARBITRATOR / AVANTI ALL'ARBITRO UNICO: SIR'ARTHUR C. HAMILTON, KC\nIN THE MATTER OF AN ARBITRATION UNDER CHARTER PARTY DATED 14 MARCH 2023 / INERENTE IL CONTRATTO DI NOLEGGIO A TEMPO:\nBETWEEN / TRA: MEDITERRANEAN CARRIERS CORP. (OWNERS / ARMATORI) AND LIGURIA BULK SHIPPING S.R.L. (CHARTERERS / NOLEGGIATORI)\nDISPUTE SUMMARY / OGGETTO DELLA CONTROVERSIA:\nEN: Owners claim unpaid demurrage and detention charges of USD 412,850.00 incurred during cargo discharge operations at the Port of Genoa under Gencon 1994 charterparty terms.\nIT: Gli Armatori richiedono il pagamento di stallie e controstallie non corrisposte per USD 412,850.00 maturate durante le operazioni di sbarco merci nel Porto di Genova.\nFINDINGS AND AWARD / MOTIVAZIONI E DISPOSITIVO:\nEN: 1. The notice of readiness (NOR) tendered on 18 October 2023 at 08:00 hours was legally valid notwithstanding that the vessel was anchored at pilot station outer roads;\nIT: 1. L'avviso di prontezza (NOR) notificato il 18 ottobre 2023 alle ore 08:00 deve ritenersi pienamente valido, trovandosi la nave all'ancora nella rada foranea di pilotaggio;\nEN: 2. Charterers' defense of weather-working day exception fails due to insufficient logbook substantiation. Charterers are ordered to pay Owners USD 385,000.00 plus 6.5% interest;\nIT: 2. L'eccezione di giorni di maltempo non lavorativi sollevata dai Noleggiatori e respinta per difetto probatorio sul giornale nautico. I Noleggiatori sono condannati a pagare USD 385,000.00 oltre interessi al 6.5%.\n\nRENDERED IN LONDON AND ENFORCEABLE IN GENOA / PRONUNCIATO A LONDRA E DIRETTORE ESECUTIVO. ARBITRATOR: SIR ARTHUR HAMILTON, KC",
+   "loop_cut": null,
+   "s": 30.54854679107666,
+   "prompt_tokens": 4968,
+   "gen_tokens": 685,
+   "prefill_tps": 238.58772825974896,
+   "gen_tps": 71.42862232435283,
+   "peak_gb": 2.635481922
+  },
+  "doc_091": {
+   "text": "COMANDO POLIZIA LOCALE GENOVA - NUCLEO TUTELA AMBIENTE È DEMANIO | ATTO N. 8491/2024\n\nIn data 18 Ottobre 2024 alle ore 10:15 in Genova, presso l'area portuale di Ponte Parodi, i sottoscritti Ufficiali di Polizia Giudiziaria Isp. Capo Mario Rossi e Ag. Scelto Luigi Bianchi hanno proceduto all'accertamenti cui all'art. 256 comma 1 lett. a) del D. Lgs. 152/2006 (Testo Unico Ambiente).\n\nTRASGRESSORE IDENTIFICATO:\n\nSig. STEFANO GAGGERO, nato a Genova il 22/07/1971, C.F. GGGSFN71L22D969T, in qualita di titolare della ditta individuale AUTOTRASPORTI GAGGERO con sede in Genova, Via Canevari 42.\n\nDESCRIZIONE DEL FATTO ACCERTATO:\n\nIl trasgressore effettuava attività di gestione e stoccaggio provvisorio di rifiuti speciali non pericolosi (costiniti da rottami metallici ferrosi e scarti di carpenteria navale per circa 4,5 tonnellate) in assenza della prescritta iscrizione Nazionale Gestori Ambientali di cui all'art. 212 D. Lgs. 152/2006.\n\nSANZIONE APPLICATA E MISURE CAUTELARI:\n\nSi procede al sequestro amministrativo probatorio del cassone scarrabile matricola CS-8491 e del veicolo autocarro Iveco Stralis targa EZ-849-XK. E comminata la sanzione amministrativa pecuniaria da Euro 3.000,00 ad Euro con pagamento in misura ridotta di Euro 6.000,00 entro 60 giorni.\n\nAVVERTENZE: Contro il presente verbale e animesso ricorso al Prefetto di Genova ovvero al Giudice di Pace entro il termine perentorio di trenta giorni dalla notifica.",
+   "loop_cut": null,
+   "s": 28.58994698524475,
+   "prompt_tokens": 4968,
+   "gen_tokens": 550,
+   "prefill_tps": 239.72409098174919,
+   "gen_tps": 71.02851370424514,
+   "peak_gb": 2.635481922
+  },
+  "doc_094": {
+   "text": "ATTESTAZIONE DI CONVALIDA E DEPOSITO FORMALE BREVETTO INDUSTRIALE\nMINISTERO DELLO SVILUPPO ECONOMICO - UFFICIO ITALIANO BREVETTI E MARCHI (UIBM)\n\nDOMANDA DI BREVETTO PER INVENZIONE INDUSTRIALE N. 102024000084910\nDATA DI DEPOSITO TELEMATICO: 14 OTTOBRE 2024 ORE 16:42:18\nTITOLARE RICHIEDENTE: I.T.T. - ISTITUTO ITALIANO DI TECNOLOGIA - VIA MOREGO 30, GENOVA - C.F. 97329350583\nINVENTORI DESIGNATI: DOTT. MARCO BIANCHETTI, DOTT.SSA ELENA FERRARI, ING. LUCA VIVALDI\nTITOLO DELL'INVENZIONE:\n'METODO ED APPARATO PER IL CONTROLLO ATTUATIVO DI ATTUATORI POLIMERICI ELETTROATTIVI DIELETTTRICI MEDIANTE RETE NEURALE ADATTIVA EMBEDDED'\nCLASSIFICAZIONE INTERNAZIONALE DEI BREVETTI (IPC 2024):\nB25J 9/16 (Sistemi di controllo robotici) | H01L 41/09 (Trasduttori piezoelettrici ed elettroscritti) | G06N 3/063 (Hardware per reti neurali)\nDOCUMENTAZIONE ALLEGATA E VERIFICATA CONFORME:\n- N. 1 Descrizione tecnica dattiloscritta di pagine 28 con n. 14 rivendicazioni indispensenti e dipendenti;\n- N. 1 Fascicolo disegni tecnici in scala comprendente n. 8 tavole con schemi a blocchi e diagrammi temporali;\n- Quietanza di versamento tasse di deposito e ricerca di anteriorita Euro 480,00 eseguito a mezzo Modello F24 con codice tributo C101.\nL'Ufficio attesta la regolarita formale della domanda e ne dispone l'assegnazione al settore d'esame Elettronica e Robotica.",
+   "loop_cut": null,
+   "s": 29.43035888671875,
+   "prompt_tokens": 4968,
+   "gen_tokens": 607,
+   "prefill_tps": 239.323067858834,
+   "gen_tps": 71.1097841058319,
+   "peak_gb": 2.635477674
+  },
+  "doc_095": {
+   "text": "MINUTES OF THE SPECIAL MEETING OF THE AUDIT COMMITTEE\nGLOBAL CYBERNETICS HOLDINGS INC. - MINUTES: ARCHIVE VOL. 48 | REF: AUD-2024-10-18\n\nAudit Committee of the Board of Directors of Global Cybernetics Holdings Inc. was held on Friday, October 18, 2024, at 10:00 a.m. Eastern Time at the corporate executive offices, 1200 Avenue of the\nWavance (Audit Committee Chair), Arthur Sterling, and Douglas M. Ward, comprising a quorum. Also present by invitation: Chief Financial Officer Harold Finch, Chief Accounting Officer Sarah Jenkins, and Lead\nManager Marcus Ross of Ernst & Young LLP.\n\nQ3 2024 FORM 10-Q EARNINGS RELEASE: CFO Finch presented the preliminary third-quarter financial results, reporting consolidated revenue of $ 184,500,000.00 and adjusted EBITDA of $ 42,150,000.00.\n\nAUDIT REMEDIATION: STATUS: Vice President of Internal Audit reported successful remediation of the prior-year material weakness in IT general controls (ITGC) relating to privileged user access management in\nITA ERP.\n\nEBLOWER HOTLINE REPORT: General Counsel confirmed that two confidential complaints received during the quarter were thoroughly investigated and found to be without factual merit.\n\nMENT: There being no further business, the meeting was adjourned at 12:45 p.m.\n\nApproved by the Audit Committee. Eleanor Vance, Committee Chair. Marcus Ross, EY Lead Audit Partner.",
+   "loop_cut": null,
+   "s": 26.48240303993225,
+   "prompt_tokens": 4968,
+   "gen_tokens": 395,
+   "prefill_tps": 239.56759254517019,
+   "gen_tps": 70.41739943459864,
+   "peak_gb": 2.635481922
+  },
+  "doc_096": {
+   "text": "SECTION C: STATEMENT OF WORK (SOW) - HIGH STRENGTH HY-80 STEEL PRESSURE HULL FABRICATION\n\n1. SCOPE: This specification establishes the minimum metallurgical, ultrasonic, and radiographic testing requirements for structural submarine hull penetration collars installed on Virginia-class submarines.\n\n2. APPLICABLE MILITARY SPECIFICATIONS: MIL-S-16216 (Steel Plate, Alloy, Structural, High Yield Strength HY-80 and HY-100): NAVSEA Technical Publication T9074-AD-GIB-010/1688 (Requirements for Fabrication, Welding and Inspection of Submarine Structure), MIL-STD-2035 (Ultrasonic Inspection Acceptance Criteria).\n\n3. QUALITY ASSURANCE PROVISIONS: Contractor shall maintain an ISO 9001 / AS9100 certified quality management system. 100% of all full-penetration butt welds shall undergo magnetic particle testing (MT) per ASTM E1444 and volumetric radiographical testing (RT) per ASTM E1742 Level 2-1T sensitivity.\n\n4. TRACEABILITY & MATERIAL TEST REPORTS: Certified Material Test Reports (CMTR) documenting chemical melt analysis (C, Mn, P, S, Si, Ni, Cr, Mo, V) and Charpy V-Notch impact energy (minimum 60 ft-lbs at -120 deg F) shall accompany each delivery lot.",
+   "loop_cut": null,
+   "s": 26.263282775878906,
+   "prompt_tokens": 4968,
+   "gen_tokens": 373,
+   "prefill_tps": 238.5093678281534,
+   "gen_tps": 70.46816215472973,
+   "peak_gb": 2.635481922
+  },
+  "doc_099": {
+   "text": "ARTICLE 14 (EXTRADITION AND MUTUAL LEGAL ASSISTANCE / ESTRADIZIONE ED ASSISTENZA GIUDIZIARIA)\n\nEN: Each Contracting State undertakes to surrender to the other, in accordance with the provisions of this Treaty, any person who is found in its territory and is requested by the competent judicial authorities for prosecution or extraditable offense carrying a maximum penalty of deprivation of liberty exceeding one year.\n\nIT: Ciascuno Stato contraente si obbliga ad estradare verso l'altro, in conformità alle norme del presente Trattato, le persone che si trovino sul suo territorio e siano perseguite dalle competenti autorita giudiziarie per reati puniti.\n\nARTICLE 15 (DOUBLE JEOPARDY AND NE BIS IN IDEM / DIVIETO DI DOPPIO GIUDIZIO):\n\nEN: Extradition shall not be granted if the person sought has been tried and convicted or acquitted in the Requested State for the identical acts and offenses upon which the request for extradition is founded.\n\nIT: L'estradizione non sara concessa qualora la persona richiesta sia gia stata giudicata con sentenza definitiva di condanna o proscioglimento nello Stato richiesto per i medesimi fatti reato.\n\nARTICLE 16 (TRANSLATION AND AUTHENTICATION / TRADUZIONE ED AUTENTICAZIONE):\n\nCERTIFICATE OF INCORPORATION - FILED IN THE OFFICE OF SECRETARY OF STATE\n\nThe Board of Directors must confirm the authenticity of the documents and the signature of the person requesting the approval.\n\nARTICLE 17 (TRANSLATION AND AUTHENTICATION / TRADUZIONE ED AUTENTICAZIONE):\n\nAll formal rogatory requests, affidavits, court warrants, and evidentiary exhibits shall be accompanied by an official certified translation into the language of the Requested State.",
+   "loop_cut": null,
+   "s": 27.51425814628601,
+   "prompt_tokens": 4968,
+   "gen_tokens": 461,
+   "prefill_tps": 238.19612891915486,
+   "gen_tps": 70.69096585434907,
+   "peak_gb": 2.635481922
+  }
+ }
+}

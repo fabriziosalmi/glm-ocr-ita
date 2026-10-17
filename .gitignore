@@ -16,6 +16,8 @@ held/*.png
 external/
 results/sroie*
 results/xfund*
+results/mini_xfund*
+results/pp_xfund*
 results/smoke_*
 .mypy_cache/
 .ruff_cache/
