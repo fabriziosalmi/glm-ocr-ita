@@ -20,7 +20,7 @@ import urllib.request
 
 from . import guard
 from .corpus import WORK
-from .engine import TASK_PROMPTS, keep_retry
+from .engine import TASK_PROMPTS, keep_retry, open_page, turned_on_disk
 from .metrics import MAX_TOKENS, is_loop, loop_start
 
 PROMPT = "[gMASK]<sop><|user|>\n{media}{task}<|assistant|>\n"   # engine's official prompt, the image between its markers by mtmd
@@ -95,14 +95,14 @@ class LlamaReader:
         skew = None
         if deskew is not None:
             from . import deskew as dk
-            im = Image.open(image) if isinstance(image, (str, pathlib.Path)) else image
+            im = open_page(image)
             out_im, skew = dk.straighten(im, deskew, trim)
             if out_im is not im:
                 image = out_im
-        if isinstance(image, (str, pathlib.Path)) and scale == 1.0:
-            data = pathlib.Path(image).read_bytes()   # the file as it is, as engine.Reader hands it over
+        if isinstance(image, (str, pathlib.Path)) and scale == 1.0 and not turned_on_disk(image):
+            data = pathlib.Path(image).read_bytes()   # the file as it is; llama.cpp's decoder does not apply an EXIF orientation
         else:
-            im = (Image.open(image) if isinstance(image, (str, pathlib.Path)) else image).convert("RGB")
+            im = open_page(image).convert("RGB")
             if scale != 1.0:
                 im = im.resize((round(im.width * scale), round(im.height * scale)), Image.LANCZOS)
             buf = io.BytesIO(); im.save(buf, format="PNG"); data = buf.getvalue()

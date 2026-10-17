@@ -78,7 +78,8 @@ class RegionReader:
         from PIL import Image
         assert scale == 1.0 and penalty is None and task == "text", "a page read by regions takes the SDK's settings"
         Image.MAX_IMAGE_PIXELS = None
-        img = (Image.open(image) if isinstance(image, (str, pathlib.Path)) else image).convert("RGB")
+        from .engine import open_page
+        img = open_page(image).convert("RGB")
         path = pathlib.Path(self._tmp.name) / "page.png"; img.save(path)
         t = time.time(); found = self.layout.regions(path); read = []
         for r in found["regions"]:

@@ -30,6 +30,21 @@ def environment():
             **{p: version(p) for p in ("mlx", "mlx-vlm", "transformers", "tokenizers", "pillow", "numpy")}}
 
 
+def open_page(image):
+    """A path or a PIL image, upright as its EXIF orientation says: a phone photo is stored turned, with a tag that says so
+    (a receipt photographed upright came as 4032 x 3024 with orientation 6, 2026-10-17). mlx-vlm applies the tag to a path it
+    opens; an image opened here and handed over as pixels has to be turned first, or the model reads it on its side."""
+    from PIL import Image, ImageOps
+    im = Image.open(image) if isinstance(image, (str, pathlib.Path)) else image
+    return ImageOps.exif_transpose(im)
+
+
+def turned_on_disk(path):
+    """The file carries an EXIF orientation other than upright: a reader that hands over the file's bytes must not."""
+    from PIL import Image
+    return Image.open(path).getexif().get(0x0112, 1) != 1
+
+
 class LoopStop:
     """Stopping criterion for generation: the end tokens, or a repetition the text ends with (metrics.loop_start).
     The text is checked every `every` tokens; a page that ends normally is not touched."""
@@ -92,14 +107,14 @@ class Reader:
         skew = None
         if deskew is not None:
             from . import deskew as dk
-            im = Image.open(image) if isinstance(image, (str, pathlib.Path)) else image
+            im = open_page(image)
             out_im, skew = dk.straighten(im, deskew, trim)
             if out_im is not im:
                 image = out_im
         if isinstance(image, (str, pathlib.Path)) and scale == 1.0:
             path = str(image)
         else:
-            im = Image.open(image) if isinstance(image, (str, pathlib.Path)) else image
+            im = open_page(image)
             if im.mode != "RGB":
                 im = im.convert("RGB")
             if scale != 1.0:
