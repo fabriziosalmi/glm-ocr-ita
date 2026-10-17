@@ -2,7 +2,9 @@
 
 Versions of the released model and of the `glmocr` package go together. Dates are those of the measurements.
 
-## Unreleased
+## v1.3.0 - 2026-10-17
+
+Same MLX weights as v1.0.0 (same SHA-256). New: a GGUF of the same fine-tuned weights, and a harness that runs off Apple Silicon.
 
 - **GGUF, a portable variant.** The release's weights in llama.cpp's GGUF (Q8_0 language model, f16 vision projector, 1819 MB), built with llama.cpp b11707 from the same fine-tuned bf16 checkpoint: `fabriziosalmi/GLM-OCR-ita-GGUF`. `glmocr infer|run` reads a `.gguf` or a `-GGUF` repository through `llama-server` (`glmocr/llama.py`) with the same prompt, loop stop and retry; off Apple Silicon it is the default model. Not shown equivalent to the MLX release on development sets (docs/ROADMAP.md, "Comparison with the MLX release"): better on synthetic Italian, +1.8 [+0.7, +3.0]; not worse on XFUND Italian train and ocr-bench; not shown on chatgpt A (-0.2 [-1.6, +0.9]), the Gazzetta (-1.1 [-4.0, +1.0]) and synthetic English (-1.2 [-3.1, +0.9]), each loss one page. 5 to 20% faster on a Mac mini.
 - **Linux, Windows, Docker.** MLX is installed on Apple Silicon only. The memory fences read `/proc/meminfo` and a container's cgroup limit on Linux, and the Windows API on Windows (written, not tested). `Dockerfile`: llama.cpp's server image and uv, pinned by digest, glmocr from `uv.lock`; built and read on linux/amd64 and linux/arm64. `GLMOCR_WORK`, `GLMOCR_REPO`: where an installed package keeps its files.

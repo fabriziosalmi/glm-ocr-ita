@@ -1,6 +1,6 @@
 [project]
 name = "glmocr"
-version = "1.2.0"
+version = "1.3.0"
 description = "GLM-OCR fine-tuned for Italian documents and quantized to 8 bits for MLX on Apple Silicon, with the harness that measures it"
 readme = "README.md"
 license = "MIT"
