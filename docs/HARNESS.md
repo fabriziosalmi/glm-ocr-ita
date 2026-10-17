@@ -71,7 +71,7 @@ docker build -t glmocr .
 docker run --rm -m 6g -v "$PWD/work/gguf:/models:ro" -v "$PWD:/data" glmocr infer page.png --model /models/glm-ocr-ita-Q8_0.gguf
 ```
 
-Status, 2026-10-17: the image builds on `linux/arm64` and the portable tests pass in it (61); the memory fences read `/proc/meminfo` and, in a container, the cgroup limit. Not yet done: a page read in the image, `linux/amd64`, Windows.
+Status, 2026-10-17: the image builds on `linux/arm64` and `linux/amd64`, the portable tests pass in it (61); the memory fences read `/proc/meminfo` and, in a container, the cgroup limit. On `linux/amd64` (4 cores of an i7-6700, shared) it reads 10 pages of `spark/itdoc_a` with the same entities as the GGUF on the Mac mini, text identical on 6, at about 260 s a page on the CPU against 16 with Metal (`docs/ROADMAP.md`). Not yet done: Windows.
 
 ## Memory
 
