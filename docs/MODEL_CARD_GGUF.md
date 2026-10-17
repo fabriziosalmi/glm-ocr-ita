@@ -17,7 +17,7 @@ tags:
 
 # GLM-OCR-ita-GGUF
 
-The weights of [GLM-OCR-ita-mlx-8bit](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-mlx-8bit) ([GLM-OCR](https://huggingface.co/zai-org/GLM-OCR) fine-tuned for Italian documents) in GGUF, for [llama.cpp](https://github.com/ggml-org/llama.cpp): Linux, Windows and macOS, CPU or GPU. A portable variant, measured on its own: it is not shown equivalent to the MLX release (Results). On Apple Silicon the MLX release remains the reference.
+The weights of [GLM-OCR-ita-mlx-8bit](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-mlx-8bit) ([GLM-OCR](https://huggingface.co/zai-org/GLM-OCR) fine-tuned for Italian documents) in GGUF, for [llama.cpp](https://github.com/ggml-org/llama.cpp) and the platforms it runs on; measured here on macOS with Metal and on Linux on the CPU. A portable variant, measured on its own: it is not shown equivalent to the MLX release (Results). On Apple Silicon the MLX release remains the reference.
 
 Code, page sets, raw outputs and the full measurement record: [github.com/fabriziosalmi/glm-ocr-ita](https://github.com/fabriziosalmi/glm-ocr-ita).
 
@@ -90,7 +90,7 @@ docker run --rm -m 6g -v "$PWD/models:/models:ro" -v "$PWD:/data" glmocr infer p
 ## Limits
 
 - **Not shown equivalent to the MLX release** (Results). Measured on development sets only.
-- **Slow on a CPU**: about 260 seconds a page on 4 shared cores of an i7-6700. A GPU build of llama.cpp is what makes it practical.
+- **Slow on a CPU**: about 260 seconds a page on 4 shared cores of an i7-6700, against 16 to 30 with Metal on an M4. Other GPU builds of llama.cpp (CUDA, Vulkan) are not measured.
 - **Images over 4096 image tokens are resized by llama.cpp** for this projector (the MLX release reads up to 4968 on A4 pages at 200 dpi): on 50 such pages, -0.4 [-1.1, +0.4].
 - **Repetition loops**, on comb fields and degraded pages, as for the MLX release; the second reading with the penalty rescues fewer of them here (5 of 9 against 7 of 11).
 - **Amounts of tens of millions** on degraded pages are sometimes written with a comma as thousands separator.
