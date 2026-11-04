@@ -196,3 +196,17 @@ def test_ocrbench():
     for lang, want in {"it": (80.6, 91.4), "en": (87.5, 91.2)}.items():
         ids = [m["id"] for m in meta if m["lang"] == lang]
         assert (r1(metrics.recall(ca, ids)), r1(metrics.recall(cb, ids))) == want
+
+
+def test_six_bit_decoder_on_dev():
+    """2026-11-04 (docs/ROADMAP.md): v8d6e8_op1 (1061.5 MB) at full resolution has no skipped-block defect and is not worse than v8d8e8_op1 on dev."""
+    c_hard = score.compare("hard", "dev_hard_v8d8e8op1_1.0_op_rp110", "dev_hard_v8d6e8op1_1.0_op_rp110", upright=True)
+    assert (r1(c_hard["recall_a"]), r1(c_hard["recall_b"]), r1(c_hard["diff"]), score.verdict(c_hard["ci"])) == (90.9, 90.5, -0.5, "not worse")
+    s_hard = score.summarize("hard", "dev_hard_v8d6e8op1_1.0_op_rp110", with_cer=False)
+    assert len(s_hard["skipped"]) == 0 and len(s_hard["loops"]) == 0
+    try:
+        corpus.corpus_dir("external/ocrbench_train")
+    except corpus.Missing:
+        return
+    c_ocrb = score.compare("external/ocrbench_train", "ocrbtr_v8d8e8op1_1.0_op_rp110", "dev_ocrbtr_v8d6e8op1_1.0_op_rp110")
+    assert (r1(c_ocrb["recall_a"]), r1(c_ocrb["recall_b"]), r1(c_ocrb["diff"]), score.verdict(c_ocrb["ci"])) == (94.0, 94.1, 0.2, "not worse")
