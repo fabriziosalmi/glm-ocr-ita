@@ -5,7 +5,7 @@ Decoding is greedy and deterministic, so this gives what `glmocr run --retry-pen
 price of the looping pages only. Refuses a test set unless NEW_TAG is in docs/LEDGER.md, as `glmocr run` does."""
 import argparse, json
 from glmocr import corpus
-from glmocr.engine import Reader, environment, keep_retry
+from glmocr.engine import WIDE_CTX, WIDE_PENALTY, Reader, environment, keep_retry
 from glmocr.metrics import is_loop
 
 ap = argparse.ArgumentParser(); ap.add_argument("model"); ap.add_argument("base"); ap.add_argument("tag")
@@ -29,12 +29,23 @@ for i in todo:
     second = reader.read(d / f"{i}.png", base.get("scale", 1.0), penalty=a.penalty)
     first_l = dict(first, looped=True)
     kept = keep_retry(first_l, second)
-    page = {k: v for k, v in (second if kept else first).items() if k not in ("looped", "retry")}
-    page["retry"] = {"penalty": a.penalty, "kept": kept,
-                     "second": {k: second[k] for k in ("text", "loop_cut", "s", "gen_tokens", "looped")}}
-    page["s"] = first["s"] + second["s"]
+    best = second if kept else first
+    total_s = first["s"] + second["s"]
+    fields = ("text", "loop_cut", "s", "gen_tokens", "looped")
+    rec = {"penalty": a.penalty, "kept": kept, "second": {k: second[k] for k in fields}}
+    if second["loop_cut"] is not None:
+        third = reader.read(d / f"{i}.png", base.get("scale", 1.0), penalty=max(a.penalty, WIDE_PENALTY), context=WIDE_CTX)
+        total_s += third["s"]
+        if keep_retry( dict(best, looped=True), third):
+            best, rec["kept"] = third, "third"
+        rec["third"] = {k: third[k] for k in fields}
+        rec["wide"] = {"penalty": max(a.penalty, WIDE_PENALTY), "context": WIDE_CTX}
+    page = {k: v for k, v in best.items() if k not in ("looped", "retry")}
+    page["retry"] = rec
+    page["s"] = total_s
     res["pages"][i] = page
-    print(f"{i:28s} second {'loops' if second['looped'] else 'ends'} after {second['gen_tokens']} tokens; kept {'second' if kept else 'first'}", flush=True)
+    end = rec.get("third", second)
+    print(f"{i:28s} retry {'loops' if end['looped'] else 'ends'} after {end['gen_tokens']} tokens; kept {rec['kept']}", flush=True)
     json.dump(res, open(out, "w"), ensure_ascii=False, indent=1)
 json.dump(res, open(out, "w"), ensure_ascii=False, indent=1)
 print("->", out)

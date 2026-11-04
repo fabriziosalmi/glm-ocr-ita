@@ -20,7 +20,7 @@ import urllib.request
 
 from . import guard
 from .corpus import WORK
-from .engine import TASK_PROMPTS, keep_retry, open_page, turned_on_disk
+from .engine import TASK_PROMPTS, WIDE_CTX, WIDE_PENALTY, keep_retry, open_page, turned_on_disk
 from .metrics import MAX_TOKENS, is_loop, loop_start
 
 PROMPT = "[gMASK]<sop><|user|>\n{media}{task}<|assistant|>\n"   # engine's official prompt, the image between its markers by mtmd
@@ -110,7 +110,7 @@ class LlamaReader:
     def rss_gb(self):
         return guard.rss_gb(self.proc.pid)
 
-    def read(self, image, scale=1.0, penalty=None, task="text", deskew=None, trim=False):
+    def read(self, image, scale=1.0, penalty=None, task="text", deskew=None, trim=False, context=None):
         """As engine.Reader.read. peak_gb is the server's resident memory after the read, not a GPU peak."""
         from PIL import Image
         skew = None
@@ -127,15 +127,26 @@ class LlamaReader:
             if scale != 1.0:
                 im = im.resize((round(im.width * scale), round(im.height * scale)), Image.LANCZOS)
             buf = io.BytesIO(); im.save(buf, format="PNG"); data = buf.getvalue()
-        out = self._generate(data, penalty, task)
+        out = self._generate(data, penalty, task, context)
         if out["looped"] and penalty is None and self.retry_penalty:
+            first = out
             second = self._generate(data, self.retry_penalty, task)
-            first, kept = out, keep_retry(out, second)
-            out = dict(second if kept else first)
-            out["retry"] = {"penalty": self.retry_penalty, "kept": kept,
-                            "first": {k: first[k] for k in ("text", "loop_cut", "s", "gen_tokens", "looped")},
-                            "second": {k: second[k] for k in ("text", "loop_cut", "s", "gen_tokens", "looped")}}
-            out["s"] = first["s"] + second["s"]
+            kept = keep_retry(first, second)
+            best = second if kept else first
+            total_s = first["s"] + second["s"]
+            fields = ("text", "loop_cut", "s", "gen_tokens", "looped")
+            rec = {"penalty": self.retry_penalty, "kept": kept,
+                   "first": {k: first[k] for k in fields}, "second": {k: second[k] for k in fields}}
+            if second["loop_cut"] is not None:
+                third = self._generate(data, max(self.retry_penalty, WIDE_PENALTY), task, WIDE_CTX)
+                total_s += third["s"]
+                if keep_retry(best, third):
+                    best, rec["kept"] = third, "third"
+                rec["third"] = {k: third[k] for k in fields}
+                rec["wide"] = {"penalty": max(self.retry_penalty, WIDE_PENALTY), "context": WIDE_CTX}
+            out = dict(best)
+            out["retry"] = rec
+            out["s"] = total_s
         out["peak_gb"] = self.rss_gb()
         if skew is not None:
             out["skew_deg"], out["deskewed"] = skew, abs(skew) >= deskew
@@ -143,12 +154,12 @@ class LlamaReader:
         guard.watch(out["peak_gb"], self.ceiling)
         return out
 
-    def _generate(self, data, penalty, task="text"):
+    def _generate(self, data, penalty, task="text", context=None):
         body = {"prompt": {"prompt_string": PROMPT.format(media=self.marker, task=TASK_PROMPTS[task]),
                            "multimodal_data": [base64.b64encode(data).decode()]},
                 "n_predict": self.max_tokens, "temperature": 0, "top_k": 1, "cache_prompt": False, "stream": True}
         if penalty:
-            body.update(repeat_penalty=penalty, repeat_last_n=REPEAT_LAST_N)
+            body.update(repeat_penalty=penalty, repeat_last_n=context or REPEAT_LAST_N)
         t = time.time(); first = None; text = ""; n = 0; ptok = 0; timings = {}; stopped = False
         req = urllib.request.Request(self._url("/completion"), json.dumps(body).encode(), {"Content-Type": "application/json"})
         with urllib.request.urlopen(req) as r:

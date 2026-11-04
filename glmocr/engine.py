@@ -9,6 +9,7 @@ from .metrics import MAX_TOKENS, is_loop, loop_start
 
 PROMPT = "Text Recognition:"
 TASK_PROMPTS = {"text": PROMPT, "table": "Table Recognition:", "formula": "Formula Recognition:"}   # GLM-OCR's own, per region kind
+WIDE_PENALTY, WIDE_CTX = 1.3, 256   # second-stage retry when a 20-token window at 1.1 still cuts a verbatim loop (2026-11-04)
 # mlx-vlm renders the chat template with thinking switched off, which for GLM-OCR appends "/nothink" to the request and
 # "<think></think>\n" after "<|assistant|>\n". The reference implementation (transformers) sends neither, and the model
 # reads differently: with the official prompt mlx-vlm returns the same text as the reference on 7 pages of 8, among them a
@@ -104,10 +105,11 @@ class Reader:
         self.stop = LoopStop(self.proc.tokenizer, eos if isinstance(eos, (list, tuple)) else [eos]) if stop_loops else None
         self._tmp = tempfile.TemporaryDirectory(prefix="glmocr_")
 
-    def read(self, image, scale=1.0, penalty=None, task="text", deskew=None, trim=False):
+    def read(self, image, scale=1.0, penalty=None, task="text", deskew=None, trim=False, context=None):
         """image: a path or a PIL image. scale: resize factor per side before OCR (Lanczos); 1.0 hands a file over untouched.
-        penalty: a repetition penalty for this one read (mlx-vlm's, over its default context). With retry_penalty set on the
-        reader, a page that loops is read a second time with that penalty, and the second reading is kept by keep_retry().
+        penalty: a repetition penalty for this one read (mlx-vlm's, over context tokens or its default 20). With retry_penalty
+        set on the reader, a page that loops is read a second time with that penalty; if that second reading is still cut by
+        loop_start (a loop longer than 20 tokens, or a dot leader), a third read uses WIDE_PENALTY over WIDE_CTX tokens.
         task: text, table or formula, the prompt GLM-OCR uses for that kind of region (TASK_PROMPTS); a whole page is "text".
         deskew: straighten the page first when its angle is at least this many degrees (glmocr/deskew.py), trim: then crop to the ink."""
         import mlx.core as mx
@@ -130,15 +132,26 @@ class Reader:
             path = str(pathlib.Path(self._tmp.name) / "page.png")
             im.save(path)
         mx.reset_peak_memory()
-        out = self._generate(path, penalty, task)
+        out = self._generate(path, penalty, task, context)
         if out["looped"] and penalty is None and self.retry_penalty:
+            first = out
             second = self._generate(path, self.retry_penalty, task)
-            first, kept = out, keep_retry(out, second)
-            out = dict(second if kept else first)
-            out["retry"] = {"penalty": self.retry_penalty, "kept": kept,
-                            "first": {k: first[k] for k in ("text", "loop_cut", "s", "gen_tokens", "looped")},
-                            "second": {k: second[k] for k in ("text", "loop_cut", "s", "gen_tokens", "looped")}}
-            out["s"] = first["s"] + second["s"]
+            kept = keep_retry(first, second)
+            best = second if kept else first
+            total_s = first["s"] + second["s"]
+            fields = ("text", "loop_cut", "s", "gen_tokens", "looped")
+            rec = {"penalty": self.retry_penalty, "kept": kept,
+                   "first": {k: first[k] for k in fields}, "second": {k: second[k] for k in fields}}
+            if second["loop_cut"] is not None:
+                third = self._generate(path, max(self.retry_penalty, WIDE_PENALTY), task, WIDE_CTX)
+                total_s += third["s"]
+                if keep_retry(best, third):
+                    best, rec["kept"] = third, "third"
+                rec["third"] = {k: third[k] for k in fields}
+                rec["wide"] = {"penalty": max(self.retry_penalty, WIDE_PENALTY), "context": WIDE_CTX}
+            out = dict(best)
+            out["retry"] = rec
+            out["s"] = total_s
         out["peak_gb"] = mx.get_peak_memory() / 1e9
         if skew is not None:
             out["skew_deg"], out["deskewed"] = skew, abs(skew) >= deskew
@@ -146,13 +159,15 @@ class Reader:
         guard.watch(out["peak_gb"], self.ceiling)
         return out
 
-    def _generate(self, path, penalty, task="text"):
+    def _generate(self, path, penalty, task="text", context=None):
         import mlx.core as mx
         from mlx_vlm import generate
         t = time.time()
         extra = {"stopping_criteria": self.stop.start()} if self.stop else {}
         if penalty:
             extra["repetition_penalty"] = penalty
+        if context:
+            extra["repetition_context_size"] = context
         r = generate(self.model, self.proc, self.prompts[task], image=path, max_tokens=self.max_tokens, temperature=0.0, verbose=False, **extra)
         text, cut = r.text, None
         if self.stop and self.stop.loop:   # keep what came before the repetition and one unit of it

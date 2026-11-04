@@ -47,3 +47,39 @@ def test_the_gguf_release_is_recognized_and_is_the_default_off_apple_silicon(mon
 def test_a_local_gguf_is_not_downloaded(tmp_path):
     m = tmp_path / "m.gguf"
     assert llama.fetch(m) == m
+
+
+def test_wide_retry_runs_only_when_first_retry_cuts_a_loop(tmp_path, monkeypatch):
+    """A page whose 1.1 retry still cuts a verbatim loop gets one wide-context retry (1.3, 256); a page whose 1.1 retry
+    clears the loop, or only hit the token limit with loop_cut=None, stops after two reads."""
+    from PIL import Image
+    from glmocr import engine, guard
+    img = tmp_path / "p.png"; Image.new("RGB", (32, 32), "white").save(img)
+    monkeypatch.setattr(guard, "watch", lambda *a: None)
+
+    for cls in (engine.Reader, llama.LlamaReader):
+        r = object.__new__(cls)
+        r.retry_penalty, r.ceiling, r._tmp = 1.1, 6.0, type("T", (), {"name": str(tmp_path)})()
+        if cls is llama.LlamaReader:
+            r.rss_gb = lambda: 1.0
+        calls = []
+        def fake_gen(path, penalty, task="text", context=None):
+            calls.append((penalty, context))
+            if penalty is None:
+                return {"text": "a" * 50, "loop_cut": 318, "s": 1.0, "gen_tokens": 928, "looped": True, "peak_gb": 1.0}
+            if context is None:
+                return {"text": "a" * 40, "loop_cut": 318, "s": 1.0, "gen_tokens": 928, "looped": True, "peak_gb": 1.0}
+            return {"text": "full form text", "loop_cut": None, "s": 2.0, "gen_tokens": 2072, "looped": False, "peak_gb": 1.0}
+        r._generate = fake_gen
+        out = r.read(img)
+        assert calls == [(None, None), (1.1, None), (engine.WIDE_PENALTY, engine.WIDE_CTX)]
+        assert out["text"] == "full form text" and out["retry"]["kept"] == "third" and out["s"] == 4.0
+
+        # When the 1.1 retry has loop_cut=None (even if looped=True by token budget), no third read is made
+        calls.clear()
+        def fake_gen_nocut(path, penalty, task="text", context=None):
+            calls.append((penalty, context))
+            return {"text": "table", "loop_cut": None, "s": 1.0, "gen_tokens": 3000, "looped": True, "peak_gb": 1.0}
+        r._generate = fake_gen_nocut
+        r.read(img)
+        assert calls == [(None, None), (1.1, None)]
