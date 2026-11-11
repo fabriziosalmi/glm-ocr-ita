@@ -410,3 +410,23 @@ Set: `external/mdp_it_test`, 20 Italian documents of MDPBench's public set, each
 | 2026-11-11 | | 3 | Digital pages 93.42 -> 95.34% (9 of the 10 pages gained); photographs 75.05 -> 75.17% (1). Time 34.6 -> 39.1 s a page (+13%) |
 | 2026-11-11 | | note | Against the prediction: right on recall (+0.57 inside +0.3 to +1.5, lower bound above 0), pages lost (0), excess and time; wrong on CER. Decision by the rule written above: `bands guarded` is not adopted as it is. What a next round would change, designed on `dev` and confirmed on a set it was not written on (`itdoc_15_correspondence`, or a fresh draw): a band whose crop holds no text is not read, or its reading is not merged when it describes the image rather than transcribing it. On photographs the gain the bands could bring is small anyway (+0.12 here, +0.82 on `dev`): there the misses are skipped blocks and loops on dense pages, not closing lines |
 
+
+## Bands, round 2, on `blind/itdoc_15_correspondence` (a set no model has read)
+
+Written on 2026-11-12, before any page of this set was read by any model. **Decision:** whether `bands clean` (`experiments/pieces.py`: `bands guarded` with the band lines that are not text of the page dropped before the merge, `not_text`; `docs/ROADMAP.md`, "After v1.3.0", item 8) holds on a set neither the merge, nor the guard, nor the filter was written on. If it does, the bands become a candidate reading option for the next release; whether it is on by default (it costs time on every page) is the owner's decision, not this entry's.
+
+Set: `blind/itdoc_15_correspondence`, 200 Italian and English letters commissioned from a model that knew nothing of this project (40 per level, 10 pages turned by 90 degrees, 10454 entities; frozen by digest, `docs/DATASETS.md`). Read on the second Mac mini, release `models/v8d8e8_op1` with retry 1.1 and stage 2. Tags: `itdoc15_v8d8e8op1_1.0_op_rp110` (the whole page) and `itdoc15_v8d8e8op1_1.0_op_rp110_pieces` (the bands, `--only top,bottom`).
+
+**Questions and thresholds.**
+
+1. `bands clean` against the whole page, all entities, paired 95% bootstrap over pages (rule 4): **not worse** if the lower bound is above -1.5, "better" if above 0. Pages lost no more than pages gained.
+2. Text that is not on the page: excess at most 1.02, CER not worse than the whole page's by more than 1 point.
+3. The guard: how many of the 10 turned pages it catches, and how many upright pages it takes for turned. Reported, not a criterion.
+4. Time per page, and the whole page's own recall by level: reported, no claim (there is no other reading of this set to compare it with).
+
+**Prediction.** (1) +0.5 to +3.0, lower bound above 0; 0 to 3 pages lost. Letters carry a letterhead and a closing, and some have a blank space before the closing (`blank_before_closing`), the case where the whole page stops early. (2) Excess about 1.00, CER within +0.5. (3) 10 of 10 turned pages caught, at most 5 upright pages taken for turned. (4) +10 to 25% time.
+
+**Secondary, not a confirmation.** `external/mdp_it_test`'s existing readings (`mdptest_v8d8e8op1_1.0_op_rp110_pieces`, 2026-11-11) scored again with `bands clean`, no new read. Its failures were read on 2026-11-11, before the filter was written, so what it shows is whether the filter removes what was seen there, not whether it generalises. Prediction: recall as `bands guarded` (+0.57), CER from 24.5% to within +1 of the whole page's 22.8%.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|

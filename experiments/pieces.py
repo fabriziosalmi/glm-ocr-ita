@@ -49,16 +49,37 @@ def words(t):
     return set(re.findall(r"\w{4,}", unicodedata.normalize("NFKC", t).lower()))
 
 
-def merge(whole, pieces, replace=False, use=("top", "half1", "half2", "bottom"), v2=True):
+# Round 2 (2026-11-12, written on the dev sets' band readings; docs/ROADMAP.md, "After v1.3.0", item 8): what a band returns that is
+# not text of the page. A band that frames no text is described, not read ("This image is too blurry to recognize any text."), a
+# band is sometimes wrapped in a markdown fence, and once a blank band came back as a count ("1. 2. 3. ... 30.").
+FENCE = re.compile(r"^\s*```")
+DESCRIBES = re.compile(r"(?i)^\s*(?:(?:this|the)\s+(?:image|picture|photo(?:graph)?)\b|this is an? (?:sample|image|picture|photo)\b"
+                       r"|i'?m sorry|i can(?:not|'t)\b|unable to\b|there is no (?:visible |readable )?text"
+                       r"|l'immagine\b|questa immagine\b|non è possibile\b|non c'è (?:alcun )?testo)")
+
+
+def counting(l):
+    """a line that is nothing but 1. 2. 3. ... : five numbers or more, each one more than the last"""
+    n = [int(x) for x in re.findall(r"\d+", l)]
+    return bool(re.fullmatch(r"[\d.)\s]+", l)) and len(n) >= 5 and all(b == a + 1 for a, b in zip(n, n[1:]))
+
+
+def not_text(l):
+    """a line of a piece's reading that is not text of the page: a fence, a description of the image, a count"""
+    return bool(FENCE.match(l) or DESCRIBES.match(l) or counting(l))
+
+
+def merge(whole, pieces, replace=False, use=("top", "half1", "half2", "bottom"), v2=True, clean=False):
     """v2 (2026-11-11, chosen on the four dev sets after v1 duplicated lines there): lines are compared on letters and digits only
     (a markdown table and its plain reading match), and a piece line is not added when it is a variant of a line of the page
     (ratio >= VARIANT: a degraded band reads the same line worse), when COVER of its words of 4 letters or more are on the page
-    (a band across two columns joins two lines; a line the page wraps), or when it is nearly inside the page's text."""
+    (a band across two columns joins two lines; a line the page wraps), or when it is nearly inside the page's text.
+    clean (round 2): the piece's lines that are not text of the page (not_text) are dropped before anything else."""
     if not v2:
         return merge_v1(whole, pieces, replace, use)
     out = lines(whole); keys = [metrics.alnum(l) for l in out]
     for name in use:
-        pl = lines(pieces[name]["text"])
+        pl = [l for l in lines(pieces[name]["text"]) if not (clean and not_text(l))]
         edge = {"top": {len(pl) - 1}, "half1": {len(pl) - 1}, "half2": {0}, "bottom": {0}}[name]
         other = [metrics.alnum(l) for l in lines(pieces[OVERLAP[name]]["text"])] if OVERLAP[name] in use else []
         prev = -1 if name in ("top", "half1") else None
@@ -152,12 +173,14 @@ def cmd_score(a):
            "replace": lambda i: merge(base[i]["text"], pcs[i], replace=True),
            "insert bands": lambda i: merge(base[i]["text"], pcs[i], use=("top", "bottom")),
            "replace halves": lambda i: merge(base[i]["text"], pcs[i], replace=True, use=("half1", "half2")),
-           "bands guarded": lambda i: base[i]["text"] if turned[i] else merge(base[i]["text"], pcs[i], use=("top", "bottom"))}
+           "bands guarded": lambda i: base[i]["text"] if turned[i] else merge(base[i]["text"], pcs[i], use=("top", "bottom")),
+           "bands clean": lambda i: base[i]["text"] if turned[i] else merge(base[i]["text"], pcs[i], use=("top", "bottom"), clean=True)}
     secs = {"whole": lambda i: base[i]["s"],
-            "bands guarded": lambda i: base[i]["s"] + (0 if turned[i] else pcs[i]["top"]["s"] + pcs[i]["bottom"]["s"]), "insert bands": lambda i: base[i]["s"] + pcs[i]["top"]["s"] + pcs[i]["bottom"]["s"],
+            "bands guarded": lambda i: base[i]["s"] + (0 if turned[i] else pcs[i]["top"]["s"] + pcs[i]["bottom"]["s"]),
+            "bands clean": lambda i: base[i]["s"] + (0 if turned[i] else pcs[i]["top"]["s"] + pcs[i]["bottom"]["s"]), "insert bands": lambda i: base[i]["s"] + pcs[i]["top"]["s"] + pcs[i]["bottom"]["s"],
             "replace halves": lambda i: base[i]["s"] + pcs[i]["half1"]["s"] + pcs[i]["half2"]["s"]}
     full = lambda i: base[i]["s"] + sum(pcs[i][k]["s"] for k in allp if k in pcs[i])
-    need = {"bands guarded": {"top", "bottom"}, "union": set(allp), "insert": set(allp), "replace": set(allp), "insert bands": {"top", "bottom"}, "replace halves": {"half1", "half2"}}
+    need = {"bands guarded": {"top", "bottom"}, "bands clean": {"top", "bottom"}, "union": set(allp), "insert": set(allp), "replace": set(allp), "insert bands": {"top", "bottom"}, "replace halves": {"half1", "half2"}}
     pol = {p: f for p, f in pol.items() if need.get(p, set()) <= have}
     texts = {p: {i: f(i) for i in ids} for p, f in pol.items()}
     counts = {p: {m["id"]: (metrics.found(m["entities"], texts[p][m["id"]]), len(m["entities"])) for m in meta} for p in pol}
@@ -177,12 +200,13 @@ def cmd_score(a):
         print(f"{p:15s} {r:6.2f}% {r - metrics.recall(w, ids):+6.2f} [{lo:+6.2f}, {hi:+6.2f}] {lost:5d}/{gained:<5d} {miss:7d} {cer:5.1f}% {exc:7.3f} {s:7.1f}")
 
 
-ap = argparse.ArgumentParser()
-ap.add_argument("cmd", choices=["read", "score"]); ap.add_argument("base"); ap.add_argument("--corpus", required=True)
-ap.add_argument("--only", type=lambda v: v.split(","), default=list(PIECES), help="read only these pieces, e.g. top,bottom")
-ap.add_argument("--exclude", default=None, help="score: a file of page ids to leave out (pages a choice was made on)")
-ap.add_argument("--wait", action="store_true"); ap.add_argument("--limit", type=int, default=None); ap.add_argument("--mem-gb", type=float, default=None)
-a = ap.parse_args()
-if corpus.role(a.corpus) == "test" and not corpus.ledger_has(f"{a.base}_pieces"):
-    sys.exit(f"'{a.corpus}' is a test set: write the question and the tag `{a.base}_pieces` in docs/LEDGER.md first.")
-{"read": cmd_read, "score": cmd_score}[a.cmd](a)
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser()
+    ap.add_argument("cmd", choices=["read", "score"]); ap.add_argument("base"); ap.add_argument("--corpus", required=True)
+    ap.add_argument("--only", type=lambda v: v.split(","), default=list(PIECES), help="read only these pieces, e.g. top,bottom")
+    ap.add_argument("--exclude", default=None, help="score: a file of page ids to leave out (pages a choice was made on)")
+    ap.add_argument("--wait", action="store_true"); ap.add_argument("--limit", type=int, default=None); ap.add_argument("--mem-gb", type=float, default=None)
+    a = ap.parse_args()
+    if corpus.role(a.corpus) == "test" and not corpus.ledger_has(f"{a.base}_pieces"):
+        sys.exit(f"'{a.corpus}' is a test set: write the question and the tag `{a.base}_pieces` in docs/LEDGER.md first.")
+    {"read": cmd_read, "score": cmd_score}[a.cmd](a)
