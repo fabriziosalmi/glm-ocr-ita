@@ -2,6 +2,21 @@
 
 The full record of the measurements behind each release, newest first, moved here from the README on 2026-10-15 unchanged. Every number in these tables is recomputed from `results/` by the test suite (`tests/test_tables.py`, and `tests/test_release.py` where the page sets are on the machine). Each test-set read had its question and threshold written in `LEDGER.md` before it ran.
 
+## Release v1.4.0
+
+Same weights as v1.3.0. What is new is a third reading for a page whose loop the second reading does not break: penalty 1.3 over the last 256 tokens, after penalty 1.1 over 20 (`glmocr/engine.py`, `glmocr/llama.py`). A page that does not loop is read exactly as before.
+
+| Test set (MLX, release with its retry) | Pages read again | Before -> after (all entities) | Difference |
+|---|---|---|---|
+| XFUND German (val) | 1 of 50 | 87.27 -> 87.53% | +0.25 [+0.00, +0.82] |
+| Synthetic scientific pages | 2 of 100 | 97.29 -> 98.77% | +1.47 [+0.00, +3.76] |
+| DocAtlas Italian, clean / scanned | 2 of 40 each | 98.27 -> 98.68% / 98.08 -> 98.46% | +0.41 [+0.00, +1.13] / +0.38 [+0.00, +1.03] |
+| Omni Parse Bench subset (benchmark tests) | 4 of 80 | 62.5 -> 62.0% of 184 tests | -0.1 [-0.2, +0.0] |
+| Adversarial synthetic pages | 2 of 10 | 74.0 -> 72.7% | -1.3 [-4.0, +0.0] |
+| Multilingual contracts | 5 of 10 | no entity readable on either side | - |
+
+Over the 16 distinct pages: 5 gained, 2 lost, 9 unchanged, net +84 entities; no page lost 10 entities or more and no page that did not loop ends in one. The two losses are the risk the prediction named: a higher penalty on a page whose repetition is its content (an IBAN and a code on a page of near-identical sentences; one test of a rate table). Time added on a page read again: median 20 s. The GGUF runs the same logic and is measured on development pages only. Every read had its question written first (`LEDGER.md`).
+
 ## Since v1.2.0 (not released yet)
 
 Same weights. Two measurements and one new way of reading a page (`docs/LEDGER.md`).

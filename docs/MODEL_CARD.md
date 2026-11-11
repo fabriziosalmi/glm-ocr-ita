@@ -64,6 +64,10 @@ Every test read had its question and threshold written down before the read ([LE
 
 The weights are those of v1.0.0 (same SHA-256). The `glmocr` harness now reads PDFs: each page from its own text layer where the layer passes four checks (not an invisible OCR layer, no broken font map, ink under its text, content order a reading order), and with this model only where it does not. The idea and the checks come from [Indra OCR](https://github.com/datalab-to/indra) by Datalab (`indra_ocr/textlayer.py`, Apache-2.0), adapted. On the Omni Parse Bench subset above this reads 76.1% of the text tests against 62.5% for the model alone, +12.2 [+5.8, +19.6] (+8.2 [+2.0, +16.3] on the tests not derived from the PDF itself); 29 of the 80 pages pass the checks, and none of them is read worse than by the model. With mlx-vlm alone there is no PDF mode: render the page and read the image.
 
+## What changed in v1.4.0
+
+Same weights. The harness reads a looping page a third time when the second reading (penalty 1.1, which looks back 20 tokens) is still cut by a loop: penalty 1.3 over the last 256 tokens. On seven test sets this changed 16 pages: 5 gained, 2 lost, net +84 entities, median 20 s added on a page read again; pages that do not loop are read as before ([LEDGER.md](https://github.com/fabriziosalmi/glm-ocr-ita/blob/main/docs/LEDGER.md), "Stage-2 loop retry on seven test sets"). With mlx-vlm alone, see Use.
+
 ## What changed in v1.1.0
 
 The weights are those of v1.0.0 (same SHA-256). On forms with comb fields (one character per box, as in tax codes) the model can fall into a repetition loop and lose the rest of the page. v1.1.0 reads such a page a second time with `repetition_penalty=1.1` and keeps the second reading unless it loops too and returns less text. On XFUND val this closes every loop (original 2, v1.0.0 3, v1.1.0 0) at about 1 second per form on average. The `glmocr` harness does it by default; with mlx-vlm alone, see Use.
@@ -74,7 +78,7 @@ The weights are those of v1.0.0 (same SHA-256). On forms with comb fields (one c
 - **Chinese, read whole, is worse** than with the original (OmniDocBench, above): no training page was Chinese. By regions (`glmocr infer --regions`, after GLM-OCR's own pipeline; in the harness on `main`, not yet in a release), on another 200 OmniDocBench pages, it is not worse than the original on Chinese or English text (edit distance x100, positive = this model better: +0.2 [-0.1, +0.5] and -0.0 [-0.1, +0.0]).
 - **Real Italian documents measured**: forms (XFUND, 50 test and 149 dev), 40 documents of DocAtlas (clean and scanned), pages of the Gazzetta Ufficiale (dev only). Invoices and phone photos of documents are not measured.
 - **Amounts of tens of millions** on dense synthetic pages are sometimes written with a comma as thousands separator ("29.467,745,94"): worse than the original on 10 such pages, -5.3 [-11.3, -0.7]; on the Gazzetta's real amounts it reads more of them right than the original.
-- Repetition loops happen on comb fields and degraded pages. Stop generation when the output starts repeating itself and read the page again with `repetition_penalty=1.1`; the `glmocr` package does both. One XFUND dev form still loops at every penalty tried.
+- Repetition loops happen on comb fields, dot leaders and degraded pages. Stop generation when the output starts repeating itself and read the page again with `repetition_penalty=1.1`; if it still loops, once more with 1.3 over 256 tokens; the `glmocr` package does all three. A page whose repetition is its content (a long table of near-identical rows) can lose a figure in the third reading.
 - Pages rotated by 90 degrees are unreadable, as for the original: straighten them first.
 
 ## Use
@@ -89,7 +93,8 @@ model, processor = load("fabriziosalmi/GLM-OCR-ita-mlx-8bit")
 prompt = apply_chat_template(processor, model.config, "Text Recognition:", num_images=1)
 prompt = prompt.replace("/nothink", "").replace("<think></think>\n", "")   # the official prompt
 text = generate(model, processor, prompt, image="page.png", max_tokens=3000, temperature=0.0).text
-# if the text ends in a repetition loop, read again with repetition_penalty=1.1 (v1.1.0) and keep that reading
+# if the text ends in a repetition loop, read again with repetition_penalty=1.1 (v1.1.0) and keep that reading;
+# if that one still loops, read again with repetition_penalty=1.3, repetition_context_size=256 (v1.4.0)
 ```
 
 Or with the harness, which also guards memory and stops loops: `pip install -r requirements.lock -e .` in the repository, then `glmocr infer page.png` (the retry is on by default), or `glmocr infer file.pdf` (each page from its text layer where it can be trusted, else with the model).

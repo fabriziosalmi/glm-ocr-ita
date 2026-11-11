@@ -2,6 +2,18 @@
 
 Versions of the released model and of the `glmocr` package go together. Dates are those of the measurements.
 
+## v1.4.0 - 2026-11-11
+
+Same MLX and GGUF weights as v1.3.0 (same SHA-256). New: a third reading for the pages whose loop the second reading does not break.
+
+- **Stage-2 loop retry.** When a page loops, the reader reads it again with `repetition_penalty` 1.1, as since v1.1.0. That penalty only looks back 20 tokens, so a repeated paragraph or clause longer than that, or a dot leader, can survive it. Now, when the second reading is still cut by the loop stop, a third reading uses penalty 1.3 over the last 256 tokens, and the reading kept is chosen as before (`engine.keep_retry`). The loop stop also catches repetitions of up to 600 characters (400 before). A page that does not loop, or whose loop the second reading breaks, is read exactly as in v1.3.0. First measured on development sets (2026-11-04), then confirmed on test sets (2026-11-11).
+- **Measured, MLX** (docs/LEDGER.md, "Stage-2 loop retry on seven test sets", question and thresholds written before the reads). On seven test sets, 16 distinct pages could change: 5 gained (a German form +7 entities, two scientific pages +38 and +30, two Italian documents +6 and +5), 2 lost (an Italian page that repeats near-identical sentences by design, -2 entities, an IBAN and a code; a US rate-filing table, -1 benchmark test), 9 unchanged; net +84 entities. Time added on a page read again: 10 to 71 s, median 20 s. On the development sets: XFUND Italian forms +0.28 [+0.00, +0.87], Gazzetta Ufficiale +0.95 [+0.00, +2.80].
+- **GGUF.** The same logic runs in the llama.cpp reader (`glmocr/llama.py`). It was measured on development sets only (on the Gazzetta, one dot-leader page from 0 to 3 of 3 entities; one page still cut), not on the test sets: no test-set claim is made for it.
+- **Fixed: the documented install.** Since 2026-11-03 `pyproject.toml` and `uv.lock` pinned Pillow 13.0.0 while `requirements.lock` pinned 12.3.0, so `pip install -r requirements.lock -e .` could not resolve. Back to Pillow 12.3.0 everywhere: every number of this repository was measured with it, and Pillow 13 changes what the model is given on images the processor resizes (a phone photograph read with 13.0.0 differs from the 22nd character on, while its decoded pixels are the same; 19 of 20 pages read alike). Moving to Pillow 13 is a change of its own, to be measured. certifi and filelock keep their updates.
+- **Fixed.** The stage-2 test ran the MLX reader, so it failed where MLX is not installed (Linux, Docker); it now checks the llama.cpp reader everywhere and the MLX reader on Apple Silicon.
+- **Measured, not released** (docs/ROADMAP.md, "After v1.3.0"): reading the top and bottom bands of a page apart and merging them halves the misses where a page loses its letterhead or closing lines (ocr-bench training half, 151 to 80 misses at +23% time), but on real phone photographs a band that frames no text is described rather than read, which raises the character error rate: not adopted. The whole page at 1.33x: not worth twice the time. A 6-bit decoder: not worse, 123 MB lighter, not released (size is the last priority).
+- **New page sets.** The Italian pages of MDPBench's public set (real phone photographs, Apache-2.0, `generators/make_mdpbench.py`), split into a dev and a test set by document; a blind correspondence set commissioned from a model that knew nothing of the project.
+
 ## v1.3.0 - 2026-10-17
 
 Same MLX weights as v1.0.0 (same SHA-256). New: a GGUF of the same fine-tuned weights, and a harness that runs off Apple Silicon.
