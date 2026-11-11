@@ -57,7 +57,9 @@ def test_wide_retry_runs_only_when_first_retry_cuts_a_loop(tmp_path, monkeypatch
     img = tmp_path / "p.png"; Image.new("RGB", (32, 32), "white").save(img)
     monkeypatch.setattr(guard, "watch", lambda *a: None)
 
-    for cls in (engine.Reader, llama.LlamaReader):
+    import importlib.util
+    readers = [llama.LlamaReader] + ([engine.Reader] if importlib.util.find_spec("mlx") else [])   # MLX: Apple Silicon only
+    for cls in readers:
         r = object.__new__(cls)
         r.retry_penalty, r.ceiling, r._tmp = 1.1, 6.0, type("T", (), {"name": str(tmp_path)})()
         if cls is llama.LlamaReader:
