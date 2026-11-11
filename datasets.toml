@@ -233,3 +233,9 @@ role = "test"
 role = "test"
 [dataset."external/ocrbench_train"]
 role = "train"
+# MDPBench, public set, Italian (Delores-Lin/MDPBench, revision 252df132, Apache-2.0; docs/EXTERNAL.md): 40 real documents, each as a
+# digital image and three phone photographs, split by document by generators/make_mdpbench.py (2026-11-11, before any read).
+[dataset."external/mdp_it_dev"]
+role = "dev"
+[dataset."external/mdp_it_test"]
+role = "test"
