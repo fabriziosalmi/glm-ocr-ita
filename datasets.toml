@@ -239,3 +239,8 @@ role = "train"
 role = "dev"
 [dataset."external/mdp_it_test"]
 role = "test"
+# Commissioned on 2026-11-11 from a model that knew nothing of the project, with docs/DATASET_PROMPT.md adapted (letterhead and
+# closing block on every page, a blank space before the closing block on half, 10 pages turned by 90 degrees): the blind set
+# for the bands of experiments/pieces.py. Never read before its question is in docs/LEDGER.md. docs/DATASETS.md.
+[dataset."blind/itdoc_15_correspondence"]
+role = "test"
