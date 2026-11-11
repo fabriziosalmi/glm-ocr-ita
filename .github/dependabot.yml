@@ -1,0 +1,12 @@
+# Security updates only (open-pull-requests-limit 0 turns version updates off, as in GitHub's own example for
+# customizing security PRs). Pillow is held at 12.3.0: every measurement of this repository was made with it, and
+# Pillow 13 changes the model's input on resized photographs (CHANGELOG.md, v1.4.0). A move to 13 is a measured change.
+version: 2
+updates:
+  - package-ecosystem: "uv"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 0
+    ignore:
+      - dependency-name: "pillow"
