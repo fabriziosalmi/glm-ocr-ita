@@ -34,6 +34,17 @@ def angle(image):
     return -round(float(best), 2)
 
 
+def turn_ratio(image):
+    """How much sharper the ink's profile is across columns than across rows: below 1 on a page whose lines run across it,
+    above 1 on a page turned by 90 degrees, whose lines run down it. The same measure as angle(), at 0 and at 90 degrees."""
+    g = image.convert("L")
+    if max(g.size) > WIDTH:
+        k = WIDTH / max(g.size); g = g.resize((round(g.width * k), round(g.height * k)), Image.BILINEAR)
+    mask = Image.fromarray((_ink(np.asarray(g)) * 255).astype(np.uint8))
+    rows = _sharpness(mask, 0)
+    return _sharpness(mask.transpose(Image.Transpose.ROTATE_90), 0) / max(rows, 1.0)
+
+
 def straighten(image, min_deg=1.0, trim=False):
     """(image, detected angle). Rotated only when the angle is at least min_deg, otherwise the same object comes back.
     The canvas grows to keep every corner, filled with the page's border colour. trim: crop to the ink plus a 2% margin

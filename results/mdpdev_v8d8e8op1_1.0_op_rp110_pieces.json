@@ -1,0 +1,1468 @@
+{
+ "base": "mdpdev_v8d8e8op1_1.0_op_rp110",
+ "corpus": "external/mdp_it_dev",
+ "pieces": {
+  "top": [
+   0.0,
+   0.16,
+   1.0
+  ],
+  "half1": [
+   0.0,
+   0.56,
+   1.4
+  ],
+  "half2": [
+   0.44,
+   1.0,
+   1.4
+  ],
+  "bottom": [
+   0.86,
+   1.0,
+   1.0
+  ]
+ },
+ "pages": {
+  "it_academicpaper_37": {
+   "top": {
+    "text": "I costrutti che incidono sulle competenze in matematica in Svizzera e in Cantone Ticino secondo l'indagine PISA 2022 / Silvia Sbaragli,\nMiriam Salvisberg, Michele Canducci, Alice Ambrosetti e Francesca Crotta\n\nriferiti a situazioni matematiche del XXI secolo sono invece “Codificare/programmare un computer”\no “Lavorare con sistemi matematici informatici (ad es. fogli di calcolo, software di programmazione,\ncalcolatrici grafiche)”.",
+    "s": 2.7604880332946777,
+    "prompt_tokens": 779,
+    "gen_tokens": 141,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "13. Da un punto di vista statistico, la frequenza dell'uso delle TIC nelle lezioni delle materie (p = 0,46) e la frequenza delle attività relative alle TIC nel weekend (p = 0,25) non correlano significativamente con le prestazioni in matematica nel contesto del Cantone Ticino.\n\nDdM 2025 (17), 36 - 65 51",
+    "s": 2.2289578914642334,
+    "prompt_tokens": 720,
+    "gen_tokens": 103,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_academicpaper_37_indoor_light_oblique_wrinkle_bend-out": {
+   "top": {
+    "text": "I costrutti che incidono sulle competenze in matematica in Svizzera e in Cantone Ticino secondo Pindagine PISA 2022 / Silvia Sharagi,\nMitiam Salvisberg, Michele Canducci, Alice Ambrosetti e Francesca Crotta\n\nriferiti a situazioni matematiche del XXI secolo sono invece “Codificare/programmare un computer”\no “Lavorare con sistemi matematici informatici (ad es. fogli di calcolo, software di programmazione,\ncalcolatrici grafiche)”.\n\ndell'analisi di correlazione\nanalizzati) risultati significativi per la Svizzera,\nficatività almeno",
+    "s": 2.6641499996185303,
+    "prompt_tokens": 672,
+    "gen_tokens": 169,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "---",
+    "s": 1.0480971336364746,
+    "prompt_tokens": 562,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_academicpaper_37_indoor_light_top_bend-in": {
+   "top": {
+    "text": "This image is too blurry to recognize any text.",
+    "s": 1.3745388984680176,
+    "prompt_tokens": 672,
+    "gen_tokens": 12,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.105360984802246,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_academicpaper_37_outdoor_light_top_bend-in_wrinkle": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.3663029670715332,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.121244192123413,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_academicpaper_38": {
+   "top": {
+    "text": "Un'esperienza di Universal Design for Learning in ambito geometrico nella scuola media / Stefano Bellini\n\nNegli anni Novanta, il Center for Applied Space Technology (CAST) estese il concetto di Universal Design all'apprendimento, trasferendolo e applicandolo al mondo della scuola (Hitchock et al., 2002, citato in Agliati, 2023). L'UDL suggerisce di ideare percorsi flessibili e personalizzabili che possano essere efficaci per tutti gli studenti. L'incini dell'UDL permettono di passare da una differenziazione",
+    "s": 2.804949998855591,
+    "prompt_tokens": 779,
+    "gen_tokens": 147,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "4. Immagini tratte da: https://www.cast.org/impact/universal-design-for-learning-udl.\n\nDdM 2025 (17), 89 - 113 91",
+    "s": 1.832813024520874,
+    "prompt_tokens": 720,
+    "gen_tokens": 54,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_academicpaper_38_indoor_light_top_bend-in_crease_blur": {
+   "top": {
+    "text": "Un impersonato di Uni",
+    "s": 1.3485040664672852,
+    "prompt_tokens": 672,
+    "gen_tokens": 8,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "The image provided is too blurry to accurately recognize any text. It appears to be a close-up of a textured surface, possibly fabric or a wall. The details are not clearly visible, and no discernible text can be made out.",
+    "s": 1.4715242385864258,
+    "prompt_tokens": 562,
+    "gen_tokens": 51,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_academicpaper_38_indoor_light_top_crease_bend-in": {
+   "top": {
+    "text": "100%",
+    "s": 1.3285322189331055,
+    "prompt_tokens": 672,
+    "gen_tokens": 5,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "DdM 2025 (17), 89 - 113\n91",
+    "s": 1.257660150527954,
+    "prompt_tokens": 562,
+    "gen_tokens": 24,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_academicpaper_38_outdoor_light_shadow_left_crease": {
+   "top": {
+    "text": "100%",
+    "s": 1.3359949588775635,
+    "prompt_tokens": 669,
+    "gen_tokens": 5,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "图",
+    "s": 1.1507720947265625,
+    "prompt_tokens": 596,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_book_0": {
+   "top": {
+    "text": "IL PADRONE SONO ME!",
+    "s": 0.8059020042419434,
+    "prompt_tokens": 390,
+    "gen_tokens": 11,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "mucchina, come dice lei, mangia le patate e l'erba spa- 2",
+    "s": 0.7989151477813721,
+    "prompt_tokens": 348,
+    "gen_tokens": 24,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_book_0_indoor_light_right_bend-out_wrinkle": {
+   "top": {
+    "text": "g\np\nd\nc\nv\nl\nc",
+    "s": 1.4148199558258057,
+    "prompt_tokens": 669,
+    "gen_tokens": 14,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "1",
+    "s": 1.147547960281372,
+    "prompt_tokens": 596,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_book_0_indoor_light_top_bend-in": {
+   "top": {
+    "text": "100%",
+    "s": 1.351923942565918,
+    "prompt_tokens": 672,
+    "gen_tokens": 5,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "器材 严禁挪用",
+    "s": 1.1246299743652344,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_book_0_outdoor_light_top_wrinkle": {
+   "top": {
+    "text": "Lawn Care",
+    "s": 1.3478240966796875,
+    "prompt_tokens": 672,
+    "gen_tokens": 4,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1313591003417969,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_exampaper_25": {
+   "top": {
+    "text": "7. Sia $ \\mathbb{R}^{k,h} $ lo spazio vettoriale reale delle matrici con $ k $ righe ed $ h $ colonne. Sia $ n > 1 $ e\n$ X \\in \\mathbb{R}^{n,1} $ non nullo.\nQuale delle seguenti affermazioni è vera?",
+    "s": 2.2652201652526855,
+    "prompt_tokens": 779,
+    "gen_tokens": 81,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "4",
+    "s": 1.4287710189819336,
+    "prompt_tokens": 720,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_exampaper_25_indoor_light_top_bend-in_crease": {
+   "top": {
+    "text": "1. 什么是激光切割机？\n2. 激光切割机的工作原理是什么？\n3. 激光切割机有哪些特点？\n4. 激光切割机在建筑装饰中的应用？\n5. 激光切割机在家具装饰中的应用？\n6. 激光切割机在汽车装饰中的应用？\n7. 激光切割机在家居装饰中的应用？\n8. 激光切割机在广告装饰中的应用？\n9. 激光切割机在装饰材料中的应用？\n10. 激光切割机在建筑装饰中的应用？\n11. 激光切割机在家具装饰中的应用？\n12. 激光切割机在汽车装饰中的应用？\n13. 激光切割机在家居装饰中的应用？\n14. 激光切割机在装饰材料中的应用？\n15. 激光切割机在建筑装饰中的应用？\n16. 激光切割机在家具装饰中的应用？\n17. 激光切割机在汽车装饰中的应用？\n18. 激光切割机在家居装饰中的应用？\n19. 激光切割机在装饰材料中的应用？\n20. 激光切割机在建筑装饰中的应用？\n21. 激光切割机在家具装饰中的应用？\n22. 激光切割机在汽车装饰中的应用？\n23. 激光切割机在家居装饰中的应用？\n24. 激光切割机在装饰材料中的应用？\n25. 激光切割机在建筑装饰中的应用？\n26. 激光切割机在家具装饰中的应用？\n27. 激光切割机在汽车装饰中的应用？\n28. 激光切割机在家居装饰中的应用？\n29. 激光切割机在装饰材料中的应用？\n30. 激光切割机在建筑装饰中的应用？\n31. 激光切割机在家具装饰中的应用？\n32. 激光切割机在汽车装饰中的应用？\n33. 激光切割机在家居装饰中的应用？\n34. 激光切割机在装饰材料中的应用？\n35. 激光切割机在建筑装饰中的应用？\n36. 激光切割机在家具装饰中的应用？\n37. 激光切割机在汽车装饰中的应用？\n38. 激光切割机在家居装饰中的应用？\n39. 激光切割机在装饰材料中的应用？\n40. 激光切割机在建筑装饰中的应用？\n41. 激光切割机在家具装饰中的应用？\n42. 激光切割机在汽车装饰中的应用？\n43. 激光切割机在家居装饰中的应用？\n44. 激光切割机在装饰材料中的应用？\n45. 激光切割机在建筑装饰中的应用？\n46. 激光切割机在家具装饰中的应用？\n47. 激光切割机在汽车装饰中的应用？\n48. 激光切割机在家居装饰中的应用？\n49. 激光切割机在装饰材料中的应用？\n50. 激光切割机在建筑装饰中的应用？\n51. 激光切割机在家具装饰中的应用？\n52. 激光切割机在汽车装饰中的应用？\n53. 激光切割机在家居装饰中的应用？\n54. 激光切割机在装饰材料中的应用？\n55. 激光切割机在建筑装饰中的应用？\n56. 激光切割机在家具装饰中的应用？\n57. 激光切割机在汽车装饰中的应用？\n58. 激光切割机在家居装饰中的应用？\n59. 激光切割机在装饰材料中的应用？\n60. 激光切割机在建筑装饰中的应用？\n61. 激光切割机在家具装饰中的应用？\n62. 激光切割机在汽车装饰中的应用？\n63. 激光切割机在家居装饰中的应用？\n64. 激光切割机在装饰材料中的应用？\n65. 激光切割机在建筑装饰中的应用？\n66. 激光切割机在家具装饰中的应用？\n67. 激光切割机在汽车装饰中的应用？\n68. 激光切割机在家居装饰中的应用？\n69. 激光切割机在装饰材料中的应用？\n70. 激光切割机在建筑装饰中的应用？\n71. 激光切割机在家具装饰中的应用？\n72. 激光切割机在汽车装饰中的应用？\n73. 激光切割机在家居装饰中的应用？\n74. 激光切割机在装饰材料中的应用？\n75. 激光切割机在建筑装饰中的应用？\n76. 激光切割机在家具装饰中的应用？\n77. 激光切割机在汽车装饰中的应用？\n78. 激光切割机在家居装饰中的应用？\n79. 激光切割机在装饰材料中的应用？\n80. 激光切割机在建筑装饰中的应用？\n81. 激光切割机在家具装饰中的应用？\n82. 激光切割机在汽车装饰中的应用？\n83. 激光切割机在家居装饰中的应用？\n84. 激光切割机在装饰材料中的应用？\n85. 激光切割机在建筑装饰中的应用？\n86. 激光切割机在家具装饰中的应用？\n87. 激光切割机在汽车装饰中的应用？\n88. 激光切割机在家居装饰中的应用？\n89. 激光切割机在装饰材料中的应用？\n90. 激光切割机在建筑装饰中的应用？\n91. 激光切割机在家具装饰中的应用？\n92. 激光切割机在汽车装饰中的应用？\n93. 激光切割机在家居装饰中的应用？\n94. 激光切割机在装饰材料中的应用？\n95. 激光切割机在建筑装饰中的应用？\n96. 激光切割机在家具装饰中的应用？\n97. 激光切割机在汽车装饰中的应用？\n98. 激光切割机在家居装饰中的应用？\n99. 激光切割机在装饰材料中的应用？\n100. 激光切割机在建筑装饰中的应用？\n101. 激光切割机在家具装饰中的应用？\n102. 激光切割机在汽车装饰中的应用？\n103. 激光切割机在家居装饰中的应用？\n104. 激光切割机在装饰材料中的应用？\n105. 激光切割机在建筑装饰中的应用？\n106. 激光切割机在家具装饰中的应用？\n107. 激光切割机在汽车装饰中的应用？\n108. 激光切割机在家居装饰中的应用？\n109. 激光切割机在装饰材料中的应用？\n110. 激光切割机在建筑装饰中的应用？\n111. 激光切割机在家具装饰中的应用？\n112. 激光切割机在汽车装饰中的应用？\n113. 激光切割机在家居装饰中的应用？\n114. 激光切割机在装饰材料中的应用？\n115. 激光切割机在建筑装饰中的应用？\n116. 激光切割机在家具装饰中的应用？\n117. 激光切割机在汽车装饰中的应用？\n118. 激光切割机在家居装饰中的应用？\n119. 激光切割机在装饰材料中的应用？\n120. 激光切割机在建筑装饰中的应用？\n121. 激光切割机在家具装饰中的应用？\n122. 激光切割机在汽车装饰中的应用？\n123. 激光切割机在家居装饰中的应用？\n124. 激光切割机在装饰材料中的应用？\n125. 激光切割机在建筑装饰中的应用？\n126. 激光切割机在家具装饰中的应用？\n127. 激光切割机在汽车装饰中的应用？\n128. 激光切割机在家居装饰中的应用？\n129. 激光切割机在装饰材料中的应用？\n130. 激光切割机在建筑装饰中的应用？\n131. 激光切割机在家具装饰中的应用？\n132. 激光切割机在汽车装饰中的应用？\n133. 激光切割机在家居装饰中的应用？\n134. 激光切割机在装饰材料中的应用？\n135. 激光切割机在建筑装饰中的应用？\n136. 激光切割机在家具装饰中的应用？\n137. 激光切割机在汽车装饰中的应用？\n138. 激光切割机在家居装饰中的应用？\n139. 激光切割机在装饰材料中的应用？\n140. 激光切割机在建筑装饰中的应用？\n141. 激光切割机在家具装饰中的应用？\n142. 激光切割机在汽车装饰中的应用？\n143. 激光切割机在家居装饰中的应用？\n144. 激光切割机在装饰材料中的应用？\n145. 激光切割机在建筑装饰中的应用？\n146. 激光切割机在家具装饰中的应用？\n147. 激光切割机在汽车装饰中的应用？\n148. 激光切割机在家居装饰中的应用？\n149. 激光切割机在装饰材料中的应用？\n150. 激光切割机在建筑装饰中的应用？\n151. 激光切割机在家具装饰中的应用？\n152. 激光切割机在汽车装饰中的应用？\n153. 激光切割机在家居装饰中的应用？\n154. 激光切割机在装饰材料中的应用？\n155. 激光切割机在建筑装饰中的应用？\n156. 激光切割机在家具装饰中的应用？\n157. 激光切割机在汽车装饰中的应用？\n158. 激光切割机在家居装饰中的应用？\n159. 激光切割机在装饰材料中的应用？\n160. 激光切割机在建筑装饰中的应用？\n161. 激光切割机在家具装饰中的应用？\n162. 激光切割机在汽车装饰中的应用？\n163. 激光切割机在家居装饰中的应用？\n164. 激光切割机在装饰材料中的应用？\n165. 激光切割机在建筑装饰中的应用？\n166. 激光切割机在家具装饰中的应用？\n167. 激光切割机在汽车装饰中的应用？\n168. 激光切割机在家居装饰中的应用？\n169. 激光切割机在装饰材料中的应用？\n170. 激光切割机在建筑装饰中的应用？\n171. 激光切割机在家具装饰中的应用？\n172. 激光切割机在汽车装饰中的应用？\n173. 激光切割机在家居装饰中的应用？\n174. 激光切割机在装饰材料中的应用？\n175. 激光切割机在建筑装饰中的应用？\n176. 激光切割机在家具装饰中的应用？\n177. 激光切割机在汽车装饰中的应用？\n178. 激光切割机在家居装饰中的应用？\n179. 激光切割机在装饰材料中的应用？\n180. 激光切割机在建筑装饰中的应用？\n181. 激光切割机在家具装饰中的应用？\n182. 激光切割机在汽车装饰中的应用？\n183. 激光切割机在家居装饰中的应用？\n184. 激光切割机在装饰材料中的应用？\n185. 激光切割机在建筑装饰中的应用？\n186. 激光切割机在家具装饰中的应用？\n187. 激光切割机在汽车装饰中的应用？\n188. 激光切割机在家居装饰中的应用？\n189. 激光切割机在装饰材料中的应用？\n190. 激光切割机在建筑装饰中的应用？\n191. 激光切割机在家具装饰中的应用？\n192. 激光切割机在汽车装饰中的应用？\n193. 激光切割机在家居装饰中的应用？\n194. 激光切割机在装饰材料中的应用？\n195. 激光切割机在建筑装饰中的应用？\n196. 激光切割机在家具装饰中的应用？\n197. 激光切割机在汽车装饰中的应用？\n198. 激光切割机在家居装饰中的应用？\n199. 激光切割机在装饰材料中的应用？\n200. 激光切割机在建筑装饰中的应用？\n201. 激光切割机在家具装饰中的应用？\n202. 激光切割机在汽车装饰中的应用？\n203. 激光切割机在家居装饰中的应用？\n204. 激光切割机在装饰材料中的应用？\n205. 激光切割机在建筑装饰中的应用？\n206. 激光切割机在家具装饰中的应用？\n207. 激光切割机在汽车装饰中的应用？\n208. 激光切割机在家居装饰中的应用？\n209. 激光切割机在装饰材料中的应用？\n210. 激光切割机在建筑装饰中的应用？\n211. 激光切割机在家具装饰中的应用？\n212. 激光切割机在汽车装饰中的应用？\n213. 激光切割机在家居装饰中的应用？\n214. 激光切割机在装饰材料中的应用？\n215. 激光切割机在建筑装饰中的应用？\n216. 激光切割机在家具装饰中的应用？\n217. 激光切割机在汽车装饰中的应用？\n218. 激光切割机在家居装饰中的应用？\n219. 激光切割机在装饰材料中的应用？\n220. 激光切割机在建筑装饰中的应用？\n221. 激光切割机在家具装饰中的应用？\n222. 激光切割机在汽车装饰中的应用？\n223. 激光切割机在家居装饰中的应用？\n224. 激光切割机在装饰材料中的应用？\n225. 激光切割机在建筑装饰中的应用？\n226. 激光切割机在家具装饰中的应用？\n227. 激光切割机在汽车装饰中的应用？\n228. 激光切割机在家居装饰中的应用？\n229. 激光切割机在装饰材料中的应用？\n230. 激光切割机在建筑装饰中的应用？\n231. 激光切割机在家具装饰中的应用？\n232. 激光切割机在汽车装饰中的应用？\n233. 激光切割机在家居装饰中的应用？\n234. 激光切割机在装饰材料中的应用？\n235. 激光切割机在建筑装饰中的应用？\n236. 激光切割机在家具装饰中的应用？\n237. 激光切割机在汽车装饰中的应用？\n238. 激光切割机在家居装饰中的应用？\n239. 激光切割机在装饰材料中的应用？\n240. 激光切割",
+    "s": 68.68556308746338,
+    "prompt_tokens": 672,
+    "gen_tokens": 3000,
+    "loop_cut": null,
+    "retry": true
+   },
+   "bottom": {
+    "text": "可告人的和堂而皇之讲出来的\n都是人生里必不可少的东西",
+    "s": 1.1751759052276611,
+    "prompt_tokens": 562,
+    "gen_tokens": 18,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_exampaper_25_indoor_light_top_crease_hold": {
+   "top": {
+    "text": "1. 什么是区块链？\n区块链是一种基于区块链技术的数字货币系统，它利用区块链技术来保证交易的安全性和不可追溯性。区块链技术可以实现去中心化、去信任化、去匿名化等特点，使得交易更加透明、公正和高效。",
+    "s": 1.7024321556091309,
+    "prompt_tokens": 672,
+    "gen_tokens": 55,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.0799682140350342,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_exampaper_25_outdoor_light_top_bend-out_wrinkle": {
+   "top": {
+    "text": "The image provided does not contain any text. It appears to be a close-up of a tree trunk with a blurred background of green foliage.",
+    "s": 1.5273761749267578,
+    "prompt_tokens": 672,
+    "gen_tokens": 33,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "100%",
+    "s": 1.0752382278442383,
+    "prompt_tokens": 562,
+    "gen_tokens": 5,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_exampaper_26": {
+   "top": {
+    "text": "Liceo Scientifico Rodolico\nSIMULAZIONE ESAME DI STATO - 23 Maggio 2011\nCORSO DI ORDINAMENTO\nTema di: MATEMATICA",
+    "s": 1.9580307006835938,
+    "prompt_tokens": 779,
+    "gen_tokens": 52,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "4. Detto A il punto di intersezione della curva $ y = f(x) $ con l'asse delle ordinate, determinare l'area di piano delimitata da $ y = f(x) $ , dal suo asintoto verticale e dalla retta orizzontale passante per A.",
+    "s": 1.9517438411712646,
+    "prompt_tokens": 720,
+    "gen_tokens": 69,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_exampaper_26_indoor_light_top_bend-in_crease": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.319093942642212,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.0956079959869385,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_exampaper_26_indoor_light_top_crease": {
+   "top": {
+    "text": "1.",
+    "s": 1.3095459938049316,
+    "prompt_tokens": 672,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1053519248962402,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_exampaper_26_outdoor_light_right_crease_bend-in": {
+   "top": {
+    "text": "1.",
+    "s": 1.313655138015747,
+    "prompt_tokens": 669,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "100%",
+    "s": 1.1635451316833496,
+    "prompt_tokens": 596,
+    "gen_tokens": 5,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_financialreport_11": {
+   "top": {
+    "text": "CREDITO E BANCHE\n31 – Patrimonializzazione delle banche\n(numeri indice e valori percentuali)\n170\n160\n150\n15",
+    "s": 1.9373512268066406,
+    "prompt_tokens": 779,
+    "gen_tokens": 46,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Banca d'Italia, L'economia italiana in breve, Numero 9/2025 15",
+    "s": 1.6369028091430664,
+    "prompt_tokens": 720,
+    "gen_tokens": 29,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_financialreport_11_indoor_light_shadow_top_bend-in": {
+   "top": {
+    "text": "---",
+    "s": 1.307042121887207,
+    "prompt_tokens": 672,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Banca d'Italia,",
+    "s": 1.1219031810760498,
+    "prompt_tokens": 562,
+    "gen_tokens": 7,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_financialreport_11_indoor_light_top_bend-out_wrinkle": {
+   "top": {
+    "text": "CREDITO E BANCHE\n31 – Patrimonializzazione delle banche\n(numeri indice e valori percentuali)",
+    "s": 1.5585711002349854,
+    "prompt_tokens": 672,
+    "gen_tokens": 32,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1055591106414795,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_financialreport_11_outdoor_light_top_bend-in_wrinkle_blur": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.352247714996338,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Banca d'Italia, L'economia italiana in breve, Numero 9/2025\n15",
+    "s": 1.30234694480896,
+    "prompt_tokens": 562,
+    "gen_tokens": 29,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_financialreport_12": {
+   "top": {
+    "text": "PROIEZIONI MACROECONOMICHE\n40 – Previsioni su crescita e inflazione\n(variazioni percentuali sul periodo precedente)\nItalia\nCrescita\nInflazione (1)",
+    "s": 1.9765889644622803,
+    "prompt_tokens": 779,
+    "gen_tokens": 50,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Banca d'Italia, L'economia italiana in breve, Numero 9/2025 20",
+    "s": 1.6458690166473389,
+    "prompt_tokens": 720,
+    "gen_tokens": 29,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_financialreport_12_indoor_light_shadow_top_bend-in": {
+   "top": {
+    "text": "100%",
+    "s": 1.3394927978515625,
+    "prompt_tokens": 672,
+    "gen_tokens": 5,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 13. 14. 15. 16. 17. 18. 19. 20. 21. 22. 23. 24. 25. 26. 27. 28. 29. 30. 31. 32. 33. 34. 35. 36. 37. 38. 39. 40. 41. 42. 43. 44. 45. 46. 47. 48. 49. 50. 51. 52. 53. 54. 55. 56. 57. 58. 59. 60. 61. 62. 63. 64. 65. 66. 67. 68. 69. 70. 71. 72. 73. 74. 75. 76. 77. 78. 79. 80. 81. 82. 83. 84. 85. 86. 87. 88. 89. 90. 91. 92. 93. 94. 95. 96. 97. 98. 99. 100.",
+    "s": 4.370604991912842,
+    "prompt_tokens": 562,
+    "gen_tokens": 392,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_financialreport_12_indoor_light_top_screen": {
+   "top": {
+    "text": "PROIEZIONI MACROECONOMICHE",
+    "s": 1.3812329769134521,
+    "prompt_tokens": 672,
+    "gen_tokens": 13,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Banca d'Italia, L'economia italiana in breve, Numero 9/2025 20",
+    "s": 1.291830062866211,
+    "prompt_tokens": 562,
+    "gen_tokens": 29,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_financialreport_12_outdoor_light_top_wrinkle_bend-out": {
+   "top": {
+    "text": "...",
+    "s": 1.3186028003692627,
+    "prompt_tokens": 672,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Banca d'Italia, L'economia italiana in breve, Numero 9/2025 20",
+    "s": 1.3070988655090332,
+    "prompt_tokens": 562,
+    "gen_tokens": 29,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_magazine_19": {
+   "top": {
+    "text": "GENTE Sanremo 2026\nI FESTIVALIERI\n▶ NON SI SONO SENTITI TUTELATI\n«I big non vanno a Sanremo perché si sentono poco tutelati», dice Andrea Lafranchi, critico musicale del Corriere del\nhanno chiesto più soldi, ma la Rai ha detto no. La risposta? Hanno tenuto a casa i big». Aggiunge Andrea Parrella, giornalista di Fannage it: «La Rai ha an-",
+    "s": 1.8536770343780518,
+    "prompt_tokens": 452,
+    "gen_tokens": 130,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "MARIA",
+    "s": 0.675361156463623,
+    "prompt_tokens": 364,
+    "gen_tokens": 4,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_magazine_19_indoor_light_oblique": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.3519301414489746,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1208689212799072,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_magazine_19_indoor_light_top_bend-in": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.361617088317871,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1278672218322754,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_magazine_19_outdoor_light_shadow_right": {
+   "top": {
+    "text": "1000",
+    "s": 1.3606390953063965,
+    "prompt_tokens": 669,
+    "gen_tokens": 5,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1945788860321045,
+    "prompt_tokens": 596,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_magazine_24": {
+   "top": {
+    "text": "VITA QUOTIDIANA\nIl giardino.",
+    "s": 0.8592000007629395,
+    "prompt_tokens": 399,
+    "gen_tokens": 15,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "giunto tino ai nostri giorni costituito da una leva\ncon un contrappeso impiegato per attingere\nacqua da pozzi, fiumi o canali.\nDue uomini innaffiano un rigoglioso giardino con uno shaduf.\nALAMY / CORDON PRESS\npiante e ricoperto da ninfee.\nD'altra parte è possibile che an-\nche le classi più umili disponesse-\nro di giardini, seppur decisamente\npiù modesti. Secondo la ricercatrice\n20 STORICA NATIONAL GEOGRAPHIC",
+    "s": 1.7358298301696777,
+    "prompt_tokens": 356,
+    "gen_tokens": 141,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_magazine_24_indoor_light_oblique_crease": {
+   "top": {
+    "text": "[ ]",
+    "s": 1.3169240951538086,
+    "prompt_tokens": 672,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.123734712600708,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_magazine_24_indoor_light_top_crease_bend-in": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.3625218868255615,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1302669048309326,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_magazine_24_outdoor_underexposure_flashlight-off_right_crease": {
+   "top": {
+    "text": "I\nC\nge",
+    "s": 4.519743919372559,
+    "prompt_tokens": 669,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": true
+   },
+   "bottom": {
+    "text": "---",
+    "s": 1.1517257690429688,
+    "prompt_tokens": 596,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_magazine_28": {
+   "top": {
+    "text": "Modulo 2 Il giornale\nenzina re\nSalari S",
+    "s": 1.8137791156768799,
+    "prompt_tokens": 805,
+    "gen_tokens": 17,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "lare del romani (una pagina incisa in legno, in un pezzo solo, non scomponibile, di lunga e costosa fabbricazione che permetteva di riprodurre più volte lo scritto o il disegno inciso). Successivamente in ambito orien-\ntamo e dente sue conoscenze di orale, Gutenberg in venta un sistema semplice e geniale per riprodurre i caratteri scritti: crea una serie di stampi singoli, uno per ogni carattere, che combinati in parole rendono\n24",
+    "s": 2.434504985809326,
+    "prompt_tokens": 683,
+    "gen_tokens": 131,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_magazine_28_indoor_light_top": {
+   "top": {
+    "text": "Napoli. Sco. Modulo 2 = Il giornale",
+    "s": 1.4362008571624756,
+    "prompt_tokens": 672,
+    "gen_tokens": 17,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1202778816223145,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_magazine_28_indoor_light_top_screen": {
+   "top": {
+    "text": "Modulo 2 Il giornale",
+    "s": 1.3927538394927979,
+    "prompt_tokens": 672,
+    "gen_tokens": 9,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Zione che permetteva di riprodure più volte lo scritto\no il disegno inciso). Successivamente in ambito orien-\ncaratteri scritti: crea una serie di stampi singoli, uno\nper ogni carattere, che combinati in parole rendono\n24",
+    "s": 1.6313409805297852,
+    "prompt_tokens": 562,
+    "gen_tokens": 68,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_magazine_28_outdoor_light_top_crease": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.3549139499664307,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1363351345062256,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_44": {
+   "top": {
+    "text": "LUNEDÌ 3 FEBBRAIO 2025\nATTUALITÀ 5\nIL PICCOLO\nLo scenario internazionale\nIL FUTURO DEL MEDIO ORIENTE\nMESSAGGIO AL TYCOON\nL'incontro di Netanvahu e Trump\nLa richiesta\ndi Zelensky",
+    "s": 5.349459886550903,
+    "prompt_tokens": 1752,
+    "gen_tokens": 85,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "La settima missione in Libano della Brigata “Pozzuolo del Friuli” è ufficialmente iniziata ieri mattina con il passaggio di consegne tra il comandante della Brigata “Sassari” e quello della grande unità militare con sede a Gorizia. Il generale di brigata Nicola Mandolesi, oltre alla guida dell’operazione italiana “Leonte”, ha formalmente asciatore Onu che dal 2006, sulla base della Risoluzione 1701 del Consiglio di sicurezza delle Nazioni Unite, è chiamata a garantire il cessate il fuoco tra Libano e Israele lungo la Blue Line.\nLa cerimonia alla Base “Millevoi” di Shama è stata presieduta dal tenente generale spagnolo Aroldo Lázaro Sáenz, capo missione e co-sciatore d’Italia in Libano, Fabrizio Marcelli, del capo di Stato Maggiore della Difesa, generale Luciano Portolano, e di diverse autorità civili e militari libanesi.\nNel settore Ovest di Unifil operano 3.800 caschi blu provenienti da 17 dei 48 Paesi presenti nella missione. Del contingente multinazionale fanno parte 1.000 mili-tari italiani, 700 dei quali appartenenti alla “Pozzuolo”. E proprio la brigata gorizia-na aveva aperto l’Operazione “Leonte” all’indomani della crisi scoppiata tra luglio e agosto del 2006 tra i governi\ndi Beirut e Gerusalemme. Dopo anni in cui la situazione si era stabilizzata, oggi l’equilibrio è quanto mai precario.\nNel passare le consegne, il generale di Divisione Stefano Messina, comandante del-\n\n«Durante questo difficile periodo i caschi blu italiani e del settore Ovest di Unifil sono rimasti saldi nelle loro posizioni, mostrando incrollabile dedizione e una ferrea volontà di rispettare il mandato della Risoluzione 1701 del Consiglio di Sicurezza dell’Onu», ha assicurato il generale Messina. —\n© RIPRODUZIONE RISERVATA",
+    "s": 9.758181095123291,
+    "prompt_tokens": 1578,
+    "gen_tokens": 558,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_44_indoor_light_top_screen": {
+   "top": {
+    "text": "LUNEDÌ 3 FEBBRAIO 2025\nIL PICCOLO\nATTUALITÀ 5\nLo scenario internazionale\nIL FUTURO DEL MEDIO ORIENTE\nMESSAGGIO AL TYCOON\nLo richiesta",
+    "s": 1.838170051574707,
+    "prompt_tokens": 672,
+    "gen_tokens": 67,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Stefano Bizzi\nLa settima missione in Libano della Brigata “Pozzuolo del Friuli” è ufficialmente iniziata ieri mattina con il passaggio di consegne tra il commandante della Brigata “Sassari” e quello della grande unità militare con sede a Gorizia. Il generale di brigata Nicola Mandolesi, oltre alla guida dell’operazione italiana “Leonte”, ha formalmente assounto il comando del Settore Ovest di Unifil, la forza di interposizione Onu che dal 2006, sulla base della Risoluzione 1701 del Consiglio di sicurezza delle Nazioni Unite, è chiamata a garantire il cessate il fuoco tra Libano e Israele lungo la Blue Line.\nLa cerimonia alla Base “Millevol” di Shama è stata presieduta dal tenente generale spagnolo Aroldo Lázaro Sáenz, capo missione e co-\nLa cerimonia del passaggio di consegne alla Base di Shama\ntari italiani, 700 dei quali appartenenti alla “Pozzuolo”. È proprio la brigata gorizia-na aveva aperto l’Operazione “Leonte” all’indomani dela crisi scoppiata tra luglio e agosto del 2006 tra i governi\ndi Beirut e Gerusalemme. Do po anni in cui la situazione si erasa stabilizzata, oggi l’equilibrio è quanto mal precario.\nNel passare le consegne, il generale di Divisione Stefano Messina, comandante del\nDurante questo testo, il caschi blu italiani e del settore Ovest di Unifil so no rimasti sald in nelle loro posizioni, mostrando incrollabile dedizione e una ferrea volontà di rispettere il mandato della Risoluzione 1701 del Consiglio di Sicurezza dell’Onu, ha assicurato il generale Messina. —",
+    "s": 5.0677330493927,
+    "prompt_tokens": 562,
+    "gen_tokens": 479,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_44_indoor_light_top_wrinkle_hold": {
+   "top": {
+    "text": "SUNFEDI 3 FEBBRAIO 2025\nIL PICCOLO\nATTUALITÀ 5\nLo scenario internazionale",
+    "s": 1.5827739238739014,
+    "prompt_tokens": 672,
+    "gen_tokens": 38,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1033978462219238,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_44_outdoor_light_oblique_wrinkle": {
+   "top": {
+    "text": "ATTUALITA 5",
+    "s": 1.3658041954040527,
+    "prompt_tokens": 672,
+    "gen_tokens": 7,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1282589435577393,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_45": {
+   "top": {
+    "text": "LUNEDì 3 FEBBRAIO 2025\nIL PICCOLO\nATTUALITÀ 7\nIL RISIKO DELLA FINANZA\nUniCredit: «Generali è solo un investimento»\nLa banca di Andrea Orcel conferma di avere il 4,1% del Leone, una quota che può essere decisiva per gli assetti di vertice",
+    "s": 5.3715808391571045,
+    "prompt_tokens": 1752,
+    "gen_tokens": 92,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "giudici che finora hanno sem-\npre bocciato le richieste di\nconvalida dei trattenimenti\nin Albania. La novità è tale\nche non sarebbe ancora arrivata alcuna richiesta agli uffici competenti, ma non si può escludere che a breve possa arrivare la richiesta da parte di Palazzo Chigi di formulare una bozza. L'intervento punterebbe a garantire più effica- parte dal Bundestag per raggiungere la Adenauer Haus e sfidare Friedrich Merz, il leader della Cdu che ha messo a rischio la tenuta del muro politico che isola l'ultradestra di Afd in Germania, in questa tupu-tuosa settimana, che po-trebbe aver segnato irreparabilmente la corsa dell'eterno avversario della Merkel al volto di febbraio. «Ciao a tutti sia-sul Reno.\nLA REAZIONE\nIn questo scenario, un candidato Kanzler sempre più insicuro, visitando la sala in cui domani si terrà un difficilissimo congresso di partito a Berlino, ha provato a sminuire: «È uno sviluppo normale che vi siano delle controversie».\nEd è tornato ad assicurare del, con la mozione approvata mercoledì al Bundestag sulla stretta sui migranti con i voti di Afd e il fiasco dovuto alla sconfitta sulla proposta di legge venerdì, si vedono anche nella dialettica fra i partiti: con Spd e Verdi sempre più distanti dai conservatori. Ed è Robert Habeck a dire alla Welt che, violando la sua parola due volte, «Merz si è squalifi-tico. Invece Afd è il partito dell'odio», ha detto prenden-\ndo la parola Michel Friedmann, un celebre giornalista, tesserato, che ha annunciato di voler uscire dalla Cdu. «Il partito dell'odio è uno dei problemi fondamentali di questo Paese. Non sta sul terreno della democrazia. Noi siamo la maggioranza, dobbiamo agi-re». —",
+    "s": 9.2743239402771,
+    "prompt_tokens": 1578,
+    "gen_tokens": 525,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_45_indoor_light_top_bend-in": {
+   "top": {
+    "text": "LUNEDÌ 3 FEBBRAIO 2025\nATTUALITÀ 7",
+    "s": 1.4799728393554688,
+    "prompt_tokens": 672,
+    "gen_tokens": 25,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "---",
+    "s": 1.0748209953308105,
+    "prompt_tokens": 562,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_45_indoor_light_top_hold": {
+   "top": {
+    "text": "LUNEDÌ 3 FEBBRAJO 2025\nIL PICCOLO\nATTUALITÀ 7\nIL RISIKO DELLA FINANZA\nUniCredit: «Generali è solo un investimento»",
+    "s": 1.763521671295166,
+    "prompt_tokens": 672,
+    "gen_tokens": 56,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "ci competenti, ma non si può escludere che a breve possa arrivare la richiesta da parte di Palazzo Chigi di formulare una bozza. L'intervento punterebbe a garantire più effica-ché la premier venga a riter-re in Aula sul rilascio del capo della polizia giudiziaria libica Nijeem Osama Almasri, e il suo rimpatrio con un volo di Stato. —\nAld in Germania, in questura multuosa settimana, che potrebbe aver segnato irreparabilemente la corsa dell'eterno avversario della Merkel al voto di febbraio. «Ciao a tuttisia-Ed è tornato ad assicurare\nmo congresso di partito a Berlino, ha provato a sminuire: «È uno sviluppo normale che vi siano delle controversie». Ed è tornato ad assicurare\ncon Spde Verdi sempre più distanti dai conservatori. Ed è Robert Habeck a dire alla Weltche, violando la sua parola due volte, «Merz si è称赞i-\nblemi fondamentali di questo Paese. Non sta sul terreno della democrazia. Nol siamo la maggioranza, dobbiamo agire. —",
+    "s": 3.5508029460906982,
+    "prompt_tokens": 562,
+    "gen_tokens": 302,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_45_outdoor_underexposure_flashlight-on_top": {
+   "top": {
+    "text": "1.",
+    "s": 1.310439109802246,
+    "prompt_tokens": 672,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "la due volte, «Merzsi è qualifi- re». —",
+    "s": 1.195962905883789,
+    "prompt_tokens": 562,
+    "gen_tokens": 16,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_46": {
+   "top": {
+    "text": "14 TRIESTE\nLUNEDì 11 AGOSTO 2025\nIL PICCOLO\nLE DINAMICHE IN MUNICIPIO\nAumenta lo stipendio\ndel direttore generale\nti (M5s), Riccardo Laterza (At)\ne Paolo Altin (Pf): «Ci aspettia-\nmo – così il centrosinistra – che\ngli assessori Bertoli e Avian va-\ndano a battere i pugni in Regio-\nne perché vengano stanziateri-\nsorse che consentano un pari\naumento a tutti i dipendenti\ndel Comparto unico, peraltro\nin una fase in cui gli enti pubbli-\nci hanno difficoltà ad attrarre",
+    "s": 6.321904897689819,
+    "prompt_tokens": 1752,
+    "gen_tokens": 183,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "grande appassionato di musica classica e già presidente dell’Associazione Chamber Music Trieste. Originario di Ferrara, dove era nato nel 1936, fin dal gennaio 1970 Campailla ha abitato e operato a Trieste, dove le sue attività di consulenza e chirurgiche gli portarono grande notorietà e una certa popolarità. Nella sua carriera ha condotto oltre set-\npatologie sia dell’ortopedia che della traumatologia; ma il suo sapere non si limitava alle sale operatoria. Tra i premi ricevuti in vita, anche la vittoria al Concorso nazionale di Professore universitario “ordinario”, a lodare il suo ruolo di insegnante sulle cattedre delle università di Parma, di Trieste e infine di Udine, dove per circa vent’anni fu peraltro direttto\ncializzazione di Ortopedia e Traumatologia. Anni di servizio che la facoltà medica riconobbe con la nomina di direttore di Dipartimento del Policlinico universitario di Udine.\nNon solo medicina e scienza. Campailla ha pubblicato 26 libri, principalmente di argomento artistico (di cui quattro su Trieste) ed è stato per oltre quarant’anni socio (e presi-\ntura di quella città che l’aveva adottato per esplicare la professione ai massimi livelli, estimolato ad avvicinarsi anche maggiormente alla musica classica. Mancherà la sua forza, in grado di combattere negli ultimi dieci anni contro una serie di problemi di salute», lo ricorda così Fedra Florit, direttore artistico e fondatrice dell’associazione.\nETTORE CAMPAILLA\nMEDICO ORTOPEDICO, INSEGNÒ ANCHE\nALL’UNIVERSITÀ DI TRIESTE\nI funerali di Campailla si terranno mercoledì alle 12 nella chiesa di Nostra Signora di Sion. Le ceneri verranno poi traslate nella cappella di famiglia della Certosa di Ferrara.—",
+    "s": 9.268579006195068,
+    "prompt_tokens": 1578,
+    "gen_tokens": 511,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_46_indoor_light_top_crease": {
+   "top": {
+    "text": "14 TRIESTE",
+    "s": 1.3395261764526367,
+    "prompt_tokens": 672,
+    "gen_tokens": 7,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Portarono grande notori\nuna cera popolarita. Nella sua\ncarriera ha condotto oltre set-\ne infine di utile\nca vent'anni fu peraltro diretto\nfrequentemente",
+    "s": 1.4773740768432617,
+    "prompt_tokens": 562,
+    "gen_tokens": 51,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_46_indoor_light_top_screen": {
+   "top": {
+    "text": "14 TRIESTE\nLUNEDÌ 11 AGOSTO 2025\nILPICCOLO\nLE DINAMICHE IN MUNICIPIO\nti (M5s), Riccardo Laterza (At)\ne Paolo Altin (Pf): «Ci aspettia-\nmo – così il centrosinistra – che\ngli assessori Bertoli e Avian va-\ndano a battere i pugni in Regio-\nnoscobé venerano stanziati\nAumenta lo stipendio",
+    "s": 2.3372061252593994,
+    "prompt_tokens": 672,
+    "gen_tokens": 126,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "ca Lassicci e gli presidente dell'Associazione Chamber Music Trieste. Originario di Ferrara, dove era nato nel 1936, fin dal gennaio 1970\nCampailla ha abitato e operato a Trieste, dove le sue attività di consulenza e chirurgiche gli portarono grande notorietà e una certa popolarità. Nella carriera ha condotto oltre set-\nche della traumatologia; ma il suo sapere non si limitava alle sale operatoria. Tra i premi ricevuti in vita, anche la vittoria al Concorso nazionale di Prossore universitario \"ordina-rio\", a lodore il suo ruolo di insegnante sulle cattedre delle università di Parma, di Trieste e infine di Udine, dove per circa vent'anni fu peraltro direttore\nTraumatologia. Anni di servizio che la facoltà medica riconobbe con la nomina di direttore di Dipartimento del Policlinico universitario di Udine.\nNon solo medicina e scienza. Campailla ha pubblicato 26 libri, principalmente di argomento artistico (di cui quattro su Trieste) ed è stato per oltre quarant'anni socio (e presi-\nadottato per esplicare la professione al massimi livelli, esti molato ad avvicinarsi anche maggiore alla musica classica. Mancherà la sua forza, in grado di combattere negli ultimi dieci anni contro una serie di problemi di salute, lo ricorda così Fedra Florit, direttore artistico e fondatrice dell'associazione.\nETTORE CAMPAILLA\nMEDICO DORTOPEDICO, INSEGNO ANCHE\nALLUNIVERSITÀ DI TRIESTE\nI funerali di Campailla si ter-\nranno mercoledi alle 12 nella chiesa di Nostra Signora di Sion. Le ceneri verranno poi traslase nella cappella di famiglia della Certosa di Ferrara. —",
+    "s": 5.164062976837158,
+    "prompt_tokens": 562,
+    "gen_tokens": 489,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_46_outdoor_underexposure_flashlight-on_top_blur": {
+   "top": {
+    "text": "14 TRIESTE\nLUNEDI 11 ACIORTO 2023\nIL PICCOLO\nLE DINAMICHE IN MUNICIPIO\nAumenta lo stipendio\nti (M5s), Riccardo Laterza (At)\ne Paolo Altin (PI) - sCl aspetta-\nmo - così il centrosinistra - che\ngli assessori Bertoli e Avian va-\ndano a batterel i pugni in Regio-\nne perché vengano stanziateri-\nsorse che consentano un pari\nnuri i dipendenti",
+    "s": 2.4521851539611816,
+    "prompt_tokens": 672,
+    "gen_tokens": 142,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "---",
+    "s": 1.065500020980835,
+    "prompt_tokens": 562,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_47": {
+   "top": {
+    "text": "LUNEDì 11 AGOSTO 2025\nIL PICCOLO\nTRIESTE 15\nLA CORSA PER LA GUIDA DEL TEATRO LIRICO\nVerdi e nomina del sovrintendente\nDuello Roma-Trieste sui numeri\nGLI AMICI DELLA LIRICA\nIn difesa\ndi Polo:\n«Deciso salto\ndi qualità»",
+    "s": 5.436812877655029,
+    "prompt_tokens": 1752,
+    "gen_tokens": 96,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "zione Marittima.\nIl 10 agosto 1916, a Pola, il tenente di vascello originario di Capodistria veniva impiccato dalla Marina austro-ungarica dopo essere stato catturato in mare: un sacrificio che, per chi proviene da queste terre, è simbolo di coraggio, identità e amore per la patria. La cerimonia si è aperta con l'arrivo in Bacino San Giusto degli atleti e to – non rifiuto l'estrema unzione, ma ricevette assistenza spirituale da un frate francescano di lingua italiana nei giorni precedenti all’esecuzione». Il capitano Diego Guerin ha quindi letto il testamento spirituale di Sauro, parole destinate ai figli contenenti profonda fede e dedizione alla causa irredentista.\nA seguire, l'intervento del presidente del Comitato Ono- siamo qui oggi, perché un popolo che non ricorda il proprio passato non ha futuro».\nIl sindaco Roberto Dipiazza ha poi ribadito l’importanza di trasmettere alle nuove generazioni l’amore per la Patria. «Non dobbiamo dimenticare – ha detto – che la libertà si difende anche con il sacrificio».\nAlla cerimonia erano presenti anche il prefetto di Trieste\nne delle Comunità Istriane, Piero Sardos Albertini per la Fameia Capodistria e, infine, la Lega Nazionale.\nConvinto mazziniano, Nazario Sauro allo scoppio della Prima guerra mondiale si arruolò nella Regia Marina Italiana: catturato il 31 luglio 1916 fu processato a Pola, dove fu impiccato il 10 agosto 1916. —\n© RIPRODUZIONE RISERVATA\nDue momenti della cerimonia dedicata a Nazario Sauro FOTO LASORTE",
+    "s": 8.679346799850464,
+    "prompt_tokens": 1578,
+    "gen_tokens": 467,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_47_indoor_light_top_bend-in": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.3304250240325928,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "alore per la paria. La cerimonia\ntua si è aperticon l'arrivo in Ba-\ncino San Giusto degli atleti e\ndizione alla causa irredentista.\nA seguire, l'intervento del\npresidente del Comitato Ono-\nde anche conil sacrificio».\nAlla cerimonia erano presen-\nti anche il prefetto di Trieste\nprocessato a Ponta Dove il im-\npicato il 10 agosto 1916. —\nDue momenti della cerimonia dedicata a Nazario Sauro FOTO LASCORTE",
+    "s": 2.1713709831237793,
+    "prompt_tokens": 562,
+    "gen_tokens": 137,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_47_indoor_light_top_wrinkle": {
+   "top": {
+    "text": "LUNEDI 11 AGCSTO 2025\nIL PICCOLO\nTRIESTE 15\nLA CORSA PER LA GUIDA DEL TEATRO LUCCO\nVerdi e nomina del sovrintendente\nGLI AMICI DELLA LIRICA\nIn difesa\ndi Polo:\n«Deciso salto\ndi qualità»",
+    "s": 2.0109848976135254,
+    "prompt_tokens": 672,
+    "gen_tokens": 88,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "niasi se aperta con l'arrivo in Bacino San Giusto degli atleti e\ndizione alla corte\nA seguire, l'intervento del presidente del Comitato Ono-\nAlla cerimonia\nti anche il preferto",
+    "s": 1.5273549556732178,
+    "prompt_tokens": 562,
+    "gen_tokens": 58,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_newspaper_47_outdoor_underexposure_flashlight-on_top_blur": {
+   "top": {
+    "text": "100%",
+    "s": 1.364004135131836,
+    "prompt_tokens": 672,
+    "gen_tokens": 5,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "cino San Giusto degli atleti e presidente del Comitato Ono- ti anche il prefetto di Trieste Due momenti della cerimonia dedicata a Nazario Sauro",
+    "s": 1.4663007259368896,
+    "prompt_tokens": 562,
+    "gen_tokens": 43,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_note_41": {
+   "top": {
+    "text": "CASI PARTICOLARI\nRETTA PASSANTE PER 2 PUNTI AVENTI STESSA ASCISSA O\nSTESSA ORDINATA\nDeterminare l'equazione della cetta passante per i\npunti A(3;2) B(3;-3)",
+    "s": 1.2404301166534424,
+    "prompt_tokens": 363,
+    "gen_tokens": 71,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "$\\frac{3}{-4+4} = \\frac{3}{5-2} \\rightarrow \\frac{3}{0} = \\frac{3}{3}$\n$y + 4 = 0 \\rightarrow y = -4$",
+    "s": 1.0104010105133057,
+    "prompt_tokens": 324,
+    "gen_tokens": 56,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_note_41_indoor_light_oblique_crease": {
+   "top": {
+    "text": "100",
+    "s": 1.335758924484253,
+    "prompt_tokens": 672,
+    "gen_tokens": 4,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "100",
+    "s": 1.115445852279663,
+    "prompt_tokens": 562,
+    "gen_tokens": 4,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_note_41_indoor_light_top_screen": {
+   "top": {
+    "text": "CASI PARTICOLARI\nRETTA PASSANTE PER 2 PUNTI AVENTI STESSA ASCISSA 0\nSTESSA ORDINATA\nDeterminare l'equazione della retta passante per i",
+    "s": 1.76979398727417,
+    "prompt_tokens": 672,
+    "gen_tokens": 55,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "y+4=0 → y=-4",
+    "s": 1.1581218242645264,
+    "prompt_tokens": 562,
+    "gen_tokens": 10,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_note_41_outdoor_underexposure_flashlight-off_top": {
+   "top": {
+    "text": "CASI PARTICOLARI\nRETTA PASSANTE PER 2 PUNTI AVENTI STESSA ASCISSA 0\nSTESSA ORDINATO",
+    "s": 1.6386520862579346,
+    "prompt_tokens": 672,
+    "gen_tokens": 39,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "y + 4 = 0 → y = -4",
+    "s": 1.1842689514160156,
+    "prompt_tokens": 562,
+    "gen_tokens": 13,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_slide_5": {
+   "top": {
+    "text": "COSA NON FARE",
+    "s": 1.857051134109497,
+    "prompt_tokens": 867,
+    "gen_tokens": 7,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "rendono poco leggibile.",
+    "s": 1.6129179000854492,
+    "prompt_tokens": 772,
+    "gen_tokens": 7,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_slide_5_indoor_light_top_hold": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.3733439445495605,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "100%",
+    "s": 1.1262967586517334,
+    "prompt_tokens": 562,
+    "gen_tokens": 5,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_slide_5_indoor_light_top_screen": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.3737008571624756,
+    "prompt_tokens": 669,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1990420818328857,
+    "prompt_tokens": 596,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_slide_5_outdoor_underexposure_flashlight-off_right_bend-out": {
+   "top": {
+    "text": "---",
+    "s": 1.3451159000396729,
+    "prompt_tokens": 672,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "1400",
+    "s": 3.7409918308258057,
+    "prompt_tokens": 562,
+    "gen_tokens": 5,
+    "loop_cut": null,
+    "retry": true
+   }
+  },
+  "it_slide_9": {
+   "top": {
+    "text": "1. LINGUA FLESSIVA",
+    "s": 1.3790550231933594,
+    "prompt_tokens": 651,
+    "gen_tokens": 11,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "radice",
+    "s": 1.1545910835266113,
+    "prompt_tokens": 580,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_slide_9_indoor_light_right_crease_bend-in": {
+   "top": {
+    "text": "1",
+    "s": 1.367764949798584,
+    "prompt_tokens": 672,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "3\nDaniela Notarba",
+    "s": 1.1663451194763184,
+    "prompt_tokens": 562,
+    "gen_tokens": 9,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_slide_9_indoor_light_top_crease": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.3784501552581787,
+    "prompt_tokens": 669,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "I",
+    "s": 1.1641180515289307,
+    "prompt_tokens": 596,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_slide_9_outdoor_underexposure_flashlight-on_right_bend-out": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.379084825515747,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1367299556732178,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_textbook_20": {
+   "top": {
+    "text": "13 GENNAIO 532\nLa rivolta di Nika: gli ultras dell'ippodromo infiammano Costantinopoli\nLe fazioni rivali si coalizzano contro l'imperatore Giustiniano",
+    "s": 1.2764899730682373,
+    "prompt_tokens": 452,
+    "gen_tokens": 56,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Sul campo i Packers dominarono la gara, vincendo 35-10\ne ribadendo la superiorità tecnica della NFL. Per la prima\nvolta lo sport americano si metteva in scena come grande\nspettacolo di massa: telecamere, spot pubblicitari, cheer-\ngia oggettica e spettacolo pop, capace di rac-\ncontare l'identità stessa degli Stati Uniti. ●\nBBC HISTORY ITALIA [5]",
+    "s": 1.6057908535003662,
+    "prompt_tokens": 364,
+    "gen_tokens": 122,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_textbook_20_indoor_light_oblique_crease": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.3647911548614502,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1360528469085693,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_textbook_20_indoor_light_top_bend-in": {
+   "top": {
+    "text": "# 1. 什么是区块链？\n区块链是一种基于区块链技术的数字货币系统，它利用区块链技术来保证交易的安全性和不可追溯性。区块链技术可以实现去中心化、去信任化、去重复化等特点，使得交易更加透明、公正、快速。区块链技术可以应用于金融、证券、期货、保险、物流等领域，为各行业带来巨大的变革。",
+    "s": 1.9496898651123047,
+    "prompt_tokens": 672,
+    "gen_tokens": 77,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "BBC HISTORY ITALIA [5]",
+    "s": 1.1793630123138428,
+    "prompt_tokens": 562,
+    "gen_tokens": 12,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_textbook_20_outdoor_light_right_crease_bend-in": {
+   "top": {
+    "text": "e\nv\nsp",
+    "s": 1.3725240230560303,
+    "prompt_tokens": 669,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "12",
+    "s": 1.1738166809082031,
+    "prompt_tokens": 596,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_textbook_21": {
+   "top": {
+    "text": "Alle soglie del Rinascimento\nPico della\nMittalina",
+    "s": 0.9828708171844482,
+    "prompt_tokens": 452,
+    "gen_tokens": 18,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "ligenza eccezionale, ambiva a un traguardo forse impossibile:\nunire tutte le verità del mondo in un'unica visione armoniosa.\nMa morì a soli trentun anni, lasciando un'eredità immensa: quella dell'uomo rinascimentale che osa pensare senza confini. ►\n[52] BBC HISTORY ITALIA",
+    "s": 1.3951799869537354,
+    "prompt_tokens": 364,
+    "gen_tokens": 95,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_textbook_21_indoor_light_oblique_bend-out": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.3688011169433594,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.132702112197876,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_textbook_21_indoor_light_top": {
+   "top": {
+    "text": "Alle soglie del Rinascimento",
+    "s": 1.399393081665039,
+    "prompt_tokens": 672,
+    "gen_tokens": 9,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1348631381988525,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_textbook_21_outdoor_light_top": {
+   "top": {
+    "text": "P",
+    "s": 1.3431010246276855,
+    "prompt_tokens": 672,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "[52] BBQ HISTORY ITALIA",
+    "s": 1.1936891078948975,
+    "prompt_tokens": 562,
+    "gen_tokens": 13,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_textbook_3": {
+   "top": {
+    "text": "Alle soglie del Rinascimento\nFiglio di Gianfrancesco I Pico, signore di\nMirandola e Concordia, e di Giulia Boiardo,\nGiovanni mostrò fin da bambino un ingegno\nprecoce e una curiosità insaziabile. Le cro-\nnache del tempo sostengono che a dieci anni\nL'UOMQ E LA SUA\nDIGNITÀ",
+    "s": 1.6630439758300781,
+    "prompt_tokens": 452,
+    "gen_tokens": 99,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "è considerato una sorta di manifesto del\nmovimento culturale che preparò il terre-\nno per l'avvento del Rinascimento.\n[54] BBC HISTORY ITALIA",
+    "s": 1.0399119853973389,
+    "prompt_tokens": 364,
+    "gen_tokens": 45,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_textbook_3_indoor_light_top_bend-in": {
+   "top": {
+    "text": "This is a sample image of a text document. The text is not clearly visible due to the blurry background. It appears to be a plain white sheet with a slight texture. The image is too blurry to accurately recognize any text.",
+    "s": 1.7332427501678467,
+    "prompt_tokens": 672,
+    "gen_tokens": 49,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "[34] BBC HISTORY ITALIA",
+    "s": 1.1809170246124268,
+    "prompt_tokens": 562,
+    "gen_tokens": 12,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_textbook_3_indoor_light_top_wrinkle_hold": {
+   "top": {
+    "text": "```markdown\n\n```",
+    "s": 1.3748650550842285,
+    "prompt_tokens": 672,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.1348259449005127,
+    "prompt_tokens": 562,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "it_textbook_3_outdoor_light_shadow_right_wrinkle_blur": {
+   "top": {
+    "text": "100%",
+    "s": 1.3667449951171875,
+    "prompt_tokens": 669,
+    "gen_tokens": 5,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 1.196763038635254,
+    "prompt_tokens": 596,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  }
+ }
+}

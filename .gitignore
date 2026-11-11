@@ -30,3 +30,5 @@ augraphy_cache/
 results/omnidoc*
 results/odb*
 results/opb*
+results/*xfund*
+results/*opb*

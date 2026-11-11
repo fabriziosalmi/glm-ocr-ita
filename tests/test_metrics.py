@@ -99,6 +99,12 @@ def test_a_repetition_at_the_end_is_found_where_it_starts():
     unit = "Il Fornitore garantisce la conformità dei beni.\n"
     start, period = metrics.loop_start(page + unit * 6)
     assert (start, period) == (len(page), len(unit))
+    para = ("Visto il decreto legislativo 4 marzo 2010, n. 28, recante «Attuazione della legge 26 novembre 2021, n. 206, "
+            "recante delega al Governo per l'efficienza del processo civile e per la revisione della disciplina degli "
+            "strumenti di risoluzione alternativa delle controversie e misure urgenti di razionalizzazione dei procedimenti "
+            "in materia di diritti delle persone e delle famiglie nonché in materia di esecuzione forzata»;\n\n")
+    assert 400 < len(para) <= 600
+    assert metrics.loop_start(page + para * 4) == (len(page), len(para))   # a 420-char paragraph loop (gu_dev, 2026-11-04)
     assert metrics.loop_start(page + "0" * 200) == (len(page), 1)
     assert metrics.loop_start(page + unit * 6 + "Fine.") is None      # the repetition must reach the end
     assert metrics.loop_start(page + unit * 2) is None                 # twice is not a loop

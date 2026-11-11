@@ -70,7 +70,7 @@ With `llama-server` and its `/completion` endpoint, write the prompt in full, `[
 <media_marker>Text Recognition:<|assistant|>
 ```
 
-If the text ends in a repetition loop, read the page again with `repeat_penalty` 1.1 and `repeat_last_n` 20, and keep that reading unless it loops too and is shorter.
+If the text ends in a repetition loop, read the page again with `repeat_penalty` 1.1 and `repeat_last_n` 20, and keep that reading unless it loops too and is shorter. Since v1.4.0 the harness reads it a third time, with `repeat_penalty` 1.3 and `repeat_last_n` 256, when the second reading is still cut by a loop; for this file that step is measured on development pages only.
 
 With the `glmocr` harness, which starts and stops `llama-server`, stops loops, reads again with the penalty and guards memory (`llama-server` from llama.cpp on PATH, or `GLMOCR_LLAMA_SERVER`):
 

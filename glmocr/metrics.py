@@ -65,12 +65,14 @@ def is_loop(text, gen_tokens, max_tokens=MAX_TOKENS):
     return gen_tokens >= max_tokens or (len(text.encode()) >= LOOP_MIN_BYTES and compress_ratio(text) < LOOP_RATIO)
 
 
-def loop_start(text, max_period=400, min_repeats=4, min_span=160):
+def loop_start(text, max_period=600, min_repeats=4, min_span=160):
     """(index, period) of a repetition the text ends with, or None: one unit of at most max_period characters, repeated
     at least min_repeats times in a row over at least min_span characters, right up to the last character.
     Used while a page is being read, to stop a loop as it starts instead of paying the whole token budget for it.
     On the 4201 outputs saved by 2026-10-14, checked every 200 characters: 68 of 75 loops caught, after a fifth of
-    their length in the median; it fired on one output that is_loop does not flag, a sentence written five times."""
+    their length in the median; it fired on one output that is_loop does not flag, a sentence written five times.
+    max_period raised from 400 to 600 on 2026-11-04 (a repeated Gazzetta paragraph is 420 characters): 12 more
+    3000-token loops caught across the 322 saved runs, 0 false positives."""
     n = len(text)
     for p in range(1, min(max_period, n // min_repeats) + 1):
         unit = text[n - p:]

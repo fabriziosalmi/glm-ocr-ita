@@ -2,6 +2,21 @@
 
 The full record of the measurements behind each release, newest first, moved here from the README on 2026-10-15 unchanged. Every number in these tables is recomputed from `results/` by the test suite (`tests/test_tables.py`, and `tests/test_release.py` where the page sets are on the machine). Each test-set read had its question and threshold written in `LEDGER.md` before it ran.
 
+## Release v1.4.0
+
+Same weights as v1.3.0. What is new is a third reading for a page whose loop the second reading does not break: penalty 1.3 over the last 256 tokens, after penalty 1.1 over 20 (`glmocr/engine.py`, `glmocr/llama.py`). A page that does not loop is read exactly as before.
+
+| Test set (MLX, release with its retry) | Pages read again | Before -> after (all entities) | Difference |
+|---|---|---|---|
+| XFUND German (val) | 1 of 50 | 87.27 -> 87.53% | +0.25 [+0.00, +0.82] |
+| Synthetic scientific pages | 2 of 100 | 97.29 -> 98.77% | +1.47 [+0.00, +3.76] |
+| DocAtlas Italian, clean / scanned | 2 of 40 each | 98.27 -> 98.68% / 98.08 -> 98.46% | +0.41 [+0.00, +1.13] / +0.38 [+0.00, +1.03] |
+| Omni Parse Bench subset (benchmark tests) | 4 of 80 | 62.5 -> 62.0% of 184 tests | -0.1 [-0.2, +0.0] |
+| Adversarial synthetic pages | 2 of 10 | 74.0 -> 72.7% | -1.3 [-4.0, +0.0] |
+| Multilingual contracts | 5 of 10 | no entity readable on either side | - |
+
+Over the 16 distinct pages: 5 gained, 2 lost, 9 unchanged, net +84 entities; no page lost 10 entities or more and no page that did not loop ends in one. The two losses are the risk the prediction named: a higher penalty on a page whose repetition is its content (an IBAN and a code on a page of near-identical sentences; one test of a rate table). Time added on a page read again: median 20 s. The GGUF runs the same logic and is measured on development pages only. Every read had its question written first (`LEDGER.md`).
+
 ## Since v1.2.0 (not released yet)
 
 Same weights. Two measurements and one new way of reading a page (`docs/LEDGER.md`).
@@ -254,6 +269,6 @@ Limits: page images are not in the repository. `make_hard.py` draws them with ma
 - **Real Italian invoices and photographs of documents.** Real Italian pages measured are forms (XFUND), 40 documents of DocAtlas and pages of the Gazzetta Ufficiale (dev); invoices and phone photos are not. SROIE (real receipts, English) was read on a subset of 100.
 - **Comb fields, blanks and tick boxes in training.** Three fine-tuning runs (op2 to op4, `docs/ROADMAP.md`) were worse than v1.1.0 on XFUND Italian train once both are read with the retry; the cause is in what op2 adds to the release's data, and is not isolated yet. The release avoids comb-field loops at reading time only.
 - **Speed.** The release is as fast as the original. Fewer visual tokens per page is where time is saved (0.7x halves it), but it loses small print; reading a page in pieces (`docs/ROADMAP.md`) is a separate line of work, not started.
-- **Smaller than 1184 MB with fine-tuning.** The 4-bit decoder skips small print; widths between 4 and 8 bits were not measured.
+- **Smaller than 1184 MB with fine-tuning.** Measured on `dev` on 2026-11-04 (`docs/ROADMAP.md`): with the decoder at 6 bits and the encoder and embeddings at 8 (`v8d6e8_op1`, 1061.5 MB, -123 MB), the 4-bit skipped-block defect does not appear (0 of 36 upright pages on `hard/` at 1.0x, 11 against 11 on `ocrbench_train`), and entity recall is not worse than `v8d8e8_op1` on either set (`-0.45% [-1.37, +0.00]` on `hard/` upright, `+0.17% [-0.39, +0.76]` on `ocrbench_train`). `v8d8e8_op1` remains the published model.
 - **Vocabulary pruning** to Italian and English: tried, about 70 MB to gain, abandoned because the renumbered tokenizer did not load.
 - **GGUF / ONNX packaging.**
