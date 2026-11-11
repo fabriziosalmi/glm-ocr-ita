@@ -5,8 +5,9 @@ import statistics
 from . import corpus, metrics
 
 
-def _counts(meta, pages):
-    return {m["id"]: (metrics.found(m["entities"], pages[m["id"]]["text"]), len(m["entities"])) for m in meta if m["id"] in pages}
+def _counts(meta, pages, loose=False):
+    f = metrics.found_loose if loose else metrics.found
+    return {m["id"]: (f(m["entities"], pages[m["id"]]["text"]), len(m["entities"])) for m in meta if m["id"] in pages}
 
 
 def summarize(corpus_name, tag, upright=False, with_cer=True):
@@ -41,7 +42,8 @@ def summarize(corpus_name, tag, upright=False, with_cer=True):
     # a loop the reader cut as it started is still a loop: the page was not read to the end
     loops = [i for i in ids if pages[i].get("loop_cut") is not None or metrics.is_loop(pages[i]["text"], pages[i]["gen_tokens"])]
     return {"tag": tag, "pages": len(ids), "entities": sum(c[1] for c in counts.values()),
-            "recall": metrics.recall(counts, ids), "ci": (lo, hi), "recall_upright": metrics.recall(counts, up),
+            "recall": metrics.recall(counts, ids), "ci": (lo, hi), "recall_loose": metrics.recall(_counts(meta, pages, loose=True), ids),
+            "recall_upright": metrics.recall(counts, up),
             "levels": levels, "types": {t: 100 * f / max(n, 1) for t, (f, n) in sorted(types.items())},
             "skipped": skipped, "last_line_missing": last_missing, "upright": len(up), "loops": loops, "langs": langs,
             "notation_flips": flips, "notation_candidates": amounts, "accent_recall": 100 * acc_found / max(acc_total, 1), "accent_words": acc_total,
@@ -59,8 +61,11 @@ def compare(corpus_name, tag_a, tag_b, upright=False):
     diff = lambda s: metrics.recall(b, s) - metrics.recall(a, s)
     lo, hi = metrics.bootstrap(diff, ids)
     lost = sorted((b[i][0] - a[i][0], i) for i in ids if b[i][0] < a[i][0])
+    la, lb = _counts(meta, corpus.load_run(tag_a)["pages"], loose=True), _counts(meta, corpus.load_run(tag_b)["pages"], loose=True)
+    loose = lambda s: metrics.recall(lb, s) - metrics.recall(la, s)
     return {"a": tag_a, "b": tag_b, "pages": len(ids), "recall_a": metrics.recall(a, ids), "recall_b": metrics.recall(b, ids),
-            "diff": diff(ids), "ci": (lo, hi), "lost": lost, "gained": sum(b[i][0] > a[i][0] for i in ids)}
+            "diff": diff(ids), "ci": (lo, hi), "lost": lost, "gained": sum(b[i][0] > a[i][0] for i in ids),
+            "diff_loose": loose(ids), "ci_loose": metrics.bootstrap(loose, ids)}
 
 
 def verdict(ci, margin=-1.5):

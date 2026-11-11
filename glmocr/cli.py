@@ -118,11 +118,11 @@ def cmd_score(a):
     rows = [score.summarize(a.corpus, t, a.upright) for t in a.tags]
     levels = sorted({l for r in rows for l in r["levels"]})
     print(f"corpus = {a.corpus}" + (", upright pages only" if a.upright else ""))
-    print(f"{'tag':26s} {'ent%':>6s} {'95% CI':>13s} {'upright':>7s} {'skipped':>8s} {'loops':>5s} | "
+    print(f"{'tag':26s} {'ent%':>6s} {'95% CI':>13s} {'loose':>6s} {'upright':>7s} {'skipped':>8s} {'loops':>5s} | "
           + " ".join(f"L{l}:ent/cer".rjust(13) for l in levels) + f" | {'s/pg':>5s} {'tok/s':>5s} {'peakGB':>6s} {'n':>4s}")
     for r in rows:
         cells = " ".join((f"{r['levels'][l]['recall']:4.0f}%/{r['levels'][l]['cer']:4.1f}%" if l in r["levels"] else "-").rjust(13) for l in levels)
-        print(f"{r['tag']:26s} {r['recall']:5.1f}% [{r['ci'][0]:4.1f}, {r['ci'][1]:4.1f}] {r['recall_upright']:6.1f}% "
+        print(f"{r['tag']:26s} {r['recall']:5.1f}% [{r['ci'][0]:4.1f}, {r['ci'][1]:4.1f}] {r['recall_loose']:5.1f}% {r['recall_upright']:6.1f}% "
               f"{len(r['skipped']):4d}/{r['upright']:<3d} {len(r['loops']):5d} | {cells} | {r['s_page']:5.1f} {r['gen_tps']:5.0f} {r['peak_gb']:6.2f} {r['pages']:4d}")
     types = sorted({t for r in rows for t in r["types"]})
     print("\nentity recall by type:\n" + f"{'tag':26s} " + " ".join(f"{t:>9s}" for t in types))
@@ -143,12 +143,12 @@ def cmd_score(a):
 
 def cmd_compare(a):
     from . import score
-    print(f"B - A, A = {a.base}, corpus = {a.corpus}; verdict by rule 4 (margin -1.5)")
-    print(f"{'B':26s} {'A':>6s} {'B':>6s} {'diff':>6s} {'95% CI':>15s}  {'verdict':10s} {'n':>4s}  pages lost/gained, worst")
+    print(f"B - A, A = {a.base}, corpus = {a.corpus}; verdict by rule 4 (margin -1.5), on the exact check; loose: typography folded")
+    print(f"{'B':26s} {'A':>6s} {'B':>6s} {'diff':>6s} {'95% CI':>15s}  {'verdict':10s} {'loose diff [95% CI]':>22s} {'n':>4s}  pages lost/gained, worst")
     for t in a.tags:
         c = score.compare(a.corpus, a.base, t, a.upright)
         print(f"{t:26s} {c['recall_a']:5.1f}% {c['recall_b']:5.1f}% {c['diff']:+5.1f}  [{c['ci'][0]:+5.1f}, {c['ci'][1]:+5.1f}]  "
-              f"{score.verdict(c['ci']):10s} {c['pages']:4d}  {len(c['lost'])}/{c['gained']}  " + ", ".join(f"{i} {n}" for n, i in c["lost"][:4]))
+              f"{score.verdict(c['ci']):10s} {c['diff_loose']:+5.1f} [{c['ci_loose'][0]:+5.1f}, {c['ci_loose'][1]:+5.1f}] {c['pages']:4d}  {len(c['lost'])}/{c['gained']}  " + ", ".join(f"{i} {n}" for n, i in c["lost"][:4]))
 
 
 def cmd_adaptive(a):

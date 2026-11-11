@@ -20,6 +20,16 @@ def test_one_wrong_digit_is_a_miss():
     assert metrics.found(ENT[1:], "IT60 X054 2811 1010 0000 0123 457") == 0
 
 
+def test_loose_check_forgives_typography_and_nothing_else():
+    forgiven = [("l'area riservata", "l’area riservata"), ("☒ Conducente", "Conducente"), ("pagamenti - mancata", "pagamenti – mancata"),
+                ('particolare "Determinazione', "particolare “Determinazione"), ("Il sottoscritto_", "Il sottoscritto")]
+    for ref, reading in forgiven:
+        assert metrics.found([{"text": ref}], reading) == 0 and metrics.found_loose([{"text": ref}], reading) == 1, ref
+    strict = [("celibe/nubile", "celibe/nobile"), ("età inferiore", "eta inferiore"), ("2.100,00", "2,100.00"), ("Indirizzo", "Indizzo")]
+    for ref, reading in strict:
+        assert metrics.found_loose([{"text": ref}], reading) == 0, ref
+
+
 def test_fullwidth_digits_are_normalised():
     assert metrics.found([{"text": "123,45"}], "１２３,４５") == 1
 
