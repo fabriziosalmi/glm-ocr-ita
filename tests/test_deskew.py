@@ -56,3 +56,12 @@ def test_a_photo_shadow_is_not_a_line():
     """A photographed page with a dark shadow down one side: a global threshold found 2.6 degrees, the edge of the shadow;
     the owner's harness finds 5.65 by both its methods."""
     assert deskew.angle(Image.open(PHOTO)) == pytest.approx(5.65, abs=0.3)
+
+
+@pytest.mark.parametrize("turn", [0, 90, 270])
+def test_turn_ratio_tells_a_page_on_its_side(turn):
+    """Lines across the page: below 1. The same page turned by 90 degrees either way: above 1 (experiments/pieces.py
+    skips the bands of such a page, whose strips are read as text that is not there)."""
+    im = page().rotate(turn, expand=True, fillcolor="white")
+    r = deskew.turn_ratio(im)
+    assert (r > 1.0) if turn else (r < 1.0), r
