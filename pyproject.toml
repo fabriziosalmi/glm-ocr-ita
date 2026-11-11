@@ -13,7 +13,7 @@ dependencies = [
     "mlx-vlm==0.7.6; sys_platform == 'darwin' and platform_machine == 'arm64'",
     "transformers==5.19.0; sys_platform == 'darwin' and platform_machine == 'arm64'",
     "huggingface-hub==2.2.0",
-    "pillow==12.3.0",
+    "pillow==13.0.0",
     "numpy==2.5.3",
     "jiwer==4.0.0",
     "pypdfium2==5.14.0",
