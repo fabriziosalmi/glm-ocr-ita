@@ -112,6 +112,8 @@ def test_loop_threshold_sits_in_a_gap():
         run = json.load(open(f)); name = str(run.get("corpus") or "")
         if pathlib.Path(f).name.startswith(("omnidoc", "panelda", "panelgu", "panelre")) or name.startswith("external/") or re.match(r"chatgpt/itdoc_1\d", name):
             continue
+        if f.endswith("_pieces.json"):   # experiments/pieces.py: bands and halves of a page, not whole-page readings
+            continue
         for p in run.get("pages", {}).values():
             if len(p["text"].encode()) >= metrics.LOOP_MIN_BYTES:
                 ratios.append(metrics.compress_ratio(p["text"]))

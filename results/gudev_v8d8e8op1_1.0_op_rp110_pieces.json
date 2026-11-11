@@ -1,0 +1,1540 @@
+{
+ "base": "gudev_v8d8e8op1_1.0_op_rp110",
+ "corpus": "external/gu_dev",
+ "pieces": {
+  "top": [
+   0.0,
+   0.16,
+   1.0
+  ],
+  "half1": [
+   0.0,
+   0.56,
+   1.4
+  ],
+  "half2": [
+   0.44,
+   1.0,
+   1.4
+  ],
+  "bottom": [
+   0.86,
+   1.0,
+   1.0
+  ]
+ },
+ "pages": {
+  "gu_2019-11-29_280_p05": {
+   "top": {
+    "text": "29-11-2019 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 280\nDECRETI, DELIBERE E ORDINANZE MINISTERIALI\nMINISTERO DELL'ECONOMIA Vista la determinazione n. 73155 del 6 settembre",
+    "s": 1.522439956665039,
+    "prompt_tokens": 452,
+    "gen_tokens": 90,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "mento di entrambi, siano disposte da altro dirigente generale delegato a firmare gli atti in sostituzione del direttore generale del Tesoro;\nle premesse, e in deroga all art. 348 del regolamento di contabilità generale dello Stato, è disposta per il 29 novembre 2019 l'emissione dei Buoni ordinari del Tesoro\n— 1 —",
+    "s": 1.493340015411377,
+    "prompt_tokens": 408,
+    "gen_tokens": 101,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2019-11-29_280_p15": {
+   "top": {
+    "text": "29-11-2019 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 280\nArt. 2.\nCon successivo provvedimento sarà definito il trattamento economico del commissario liquidatore ai sensi della legislazione vigente\ndella Repubblica italiana del 18 agosto 2017, n. 192, che provvede a ridefinire le procedure per la concessione ed erogazione delle agevolazioni, previste dal decreto del Ministro dello sviluppo economico 1° aprile 2015, a fa-",
+    "s": 2.040482997894287,
+    "prompt_tokens": 452,
+    "gen_tokens": 156,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "progetti di ricerca, sviluppo e innovazione;\n\nVisto il decreto del Ministro dello sviluppo economico 24 maggio 2017, pubblicato nella Gazzetta Ufficiale\ne euro 72 milioni per il settore applicativo «Fabrica intelligente», di cui 20 milioni riservati ai territori delle regioni «ex obiettivo convergenza»;\n\n— 11 —\n| | | | |\n| :--- | :--- | :--- | :--- |\n| | | | |",
+    "s": 1.6868607997894287,
+    "prompt_tokens": 408,
+    "gen_tokens": 125,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2019-11-29_280_p16": {
+   "top": {
+    "text": "29-11-2019 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 280\neuro 42 milioni per il settore applicativo «Agrifood», di cui 12 milioni riservati ai territori delle regioni «ex obiettivo convergenza»;\neuro 52 milioni per il settore applicativo «Scienze\nrende necessario comunicare l'avvenuto esaurimento delle risorse finanziarie disponibili per le proposte progettuali afferenti i settori applicativi «Agrifood», «Fabbrica intelligente» e «Scienze della vita» realizzate nell'intero territorio nazionale,",
+    "s": 2.203336000442505,
+    "prompt_tokens": 452,
+    "gen_tokens": 177,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "territorio nazionale.\nConsiderato che, tenuto conto di quanto previsto dall'art. 3,\ncomma 4, del predetto decreto direttoriale 2 ottobre 2019, si\n19A07454\n— 12 —",
+    "s": 1.2242507934570312,
+    "prompt_tokens": 408,
+    "gen_tokens": 66,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2019-11-29_280_p31": {
+   "top": {
+    "text": "29-11-2019 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 280\nISTITUTO NAZIONALE DI STATISTICA\nIndice dei prezzi al consumo per le famiglie di operai e impiegati relativi al mese di ottobre 2019 che si pubblicano ai sensi dell'art. 81 della legge 27 luglio 1978, n. 392 (Disciplina delle locazioni di immobili urbani), ed ai sensi dell'art. 54 della legge del 27 dicembre 1997, n. 449 (Misure per la stabilizzazione della finanza pubblica).",
+    "s": 2.223857879638672,
+    "prompt_tokens": 452,
+    "gen_tokens": 179,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "(WI-GU-2019-GU1-280) Roma, 2019 - Istituto Poligrafico e Zecca dello Stato S.p.A.\n\n— 27 —\n[ ] [ ] [ ]",
+    "s": 1.1406381130218506,
+    "prompt_tokens": 408,
+    "gen_tokens": 55,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2019-04-01_077_p05": {
+   "top": {
+    "text": "1-4-2019 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 77\n2. Ferme restando le competenze dell’autorità giudiziaria, per le audizioni a testimonianza davanti alla Commissione si applicano le disposizioni degli articoli 366 e 372 del codice penale.\n2. Salvo che il fatto costituisca più grave reato, la violazione del segreto è punita ai sensi dell’articolo 326 del codice penale.\n3. Salvo che il fatto costituisca più grave reato, le stesse",
+    "s": 2.064328193664551,
+    "prompt_tokens": 452,
+    "gen_tokens": 159,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "to, anche dopo la cessazione dell'incarico, per tutto quanto riguarda gli atti e i documenti acquisiti al procedimento di inchiesta, di cui all'articolo 5, comma 2.\nsiglio dei ministri\nVisto, il Guardasigilli: BONAFEDE\n— 3 —",
+    "s": 1.294374942779541,
+    "prompt_tokens": 408,
+    "gen_tokens": 75,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2019-04-01_077_p10": {
+   "top": {
+    "text": "1-4-2019 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 77\ncontribuzione possono essere adottate dall’Autorità medesima con proprio deliberazione, nel limite massimo dello 0,5 per mille del faturato risultante dal bilancio approvato precedentemente all’adozione della delibera, ferma restando la soglia massima di contribuzione di cui al comma 7 tar\nDelibera:\na) di approvare il documento recante «Modalità di contribuzione agli oneri di funzionamento dell’Autorità garantte della concorrenza e del mercato per l’anno 2019»",
+    "s": 2.1781389713287354,
+    "prompt_tokens": 452,
+    "gen_tokens": 173,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "zionamento dell'Autorita garantie della concorrenza e del\nmercato» per l'anno 2019, al fine di fornire indicazioni\nalle società tenute al pagamento;\nlegge n. 287/90.\n2. La soglia massima di contribuzione a carico di ciascuna impresa\nnon può essere superiore a cento volte la misura minima.\n— 8 —",
+    "s": 1.4946119785308838,
+    "prompt_tokens": 408,
+    "gen_tokens": 101,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2019-04-01_077_p19": {
+   "top": {
+    "text": "1-4-2019 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 77\nALLEGATO 1",
+    "s": 1.1669399738311768,
+    "prompt_tokens": 452,
+    "gen_tokens": 47,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "— 17 —",
+    "s": 0.7705180644989014,
+    "prompt_tokens": 408,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2019-04-01_077_p25": {
+   "top": {
+    "text": "1-4-2019 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 77\nALLEGATO 2\nCAMERA DI COMMERCIO, INDUSTRIA, ARTIGIANATO E AGRICOLTURA DI GENOVA",
+    "s": 1.4500572681427002,
+    "prompt_tokens": 452,
+    "gen_tokens": 81,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "23",
+    "s": 0.7499001026153564,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2019-12-28_303_p02": {
+   "top": {
+    "text": "28-12-2019 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 303\nMinistero delle politiche agricole\nalimentari e forestali\nDECRETI E DELIBERE DI ALTRE AUTORITÀ\nComitato interministeriale\nDECRETO 11 dicembre 2019",
+    "s": 1.5818159580230713,
+    "prompt_tokens": 452,
+    "gen_tokens": 97,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "potabile nel territorio della medesima regione.\nProroga della contabilità speciale n. 6072. (Ordinanza n. 623). (19A08055) ... Pag. 20\ndel 12 giugno 2019, concernente l'autorizzazione all'importazione parallela del medicinale «Centrac». (19A08052) ... Pag. 140\n\n— II —\nPag. 140",
+    "s": 1.6411840915679932,
+    "prompt_tokens": 408,
+    "gen_tokens": 118,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2019-12-28_303_p03": {
+   "top": {
+    "text": "28-12-2019 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 303\n\nRettifica all’estratto della determina IP n. 754 del 30 ottobre 2019, concernente l’autorizzazione all’importazione parallela del medicinale «Tobradex». (19A08053) ... Pag. 140 Modifica dell’autorizzzione all’immissione in commercio del medicinale per uso umano «Mado-par» (19A08071) ..... Pag. 145",
+    "s": 6.739474296569824,
+    "prompt_tokens": 452,
+    "gen_tokens": 160,
+    "loop_cut": null,
+    "retry": true
+   },
+   "bottom": {
+    "text": "— III —",
+    "s": 0.7513091564178467,
+    "prompt_tokens": 408,
+    "gen_tokens": 4,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2019-12-28_303_p138": {
+   "top": {
+    "text": "28-12-2019 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 303\n17-novies. Le disposizioni di cui ai commi 3 e 3-bis dell’articolo 399 del testo unico di cui al decreto legislativo 16 aprile 1994, n. 297, come modificato dal comma 17-octies del presente articolo, non sono derogabili dai contratti collottivi nazionali di lavoro. Sono fatti salvi utile per la nomina rispetto ai predetti posti. La predetta nomina ha decorrenza giuridica dal 1°settembre 2019 e decorrenza economica dalla presa di servizio, che aviene nell’anno scolastico 2020/2021. I soggetti di cui al presente comma scelgono la provincia a la sede di assa",
+    "s": 2.6735217571258545,
+    "prompt_tokens": 452,
+    "gen_tokens": 233,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "sono nominati in ruolo i soggetti inseriti a pieno titolo presente articolo, continuano a essere effettuate le immissioni in ruolo mediante scorrimento delle graduatorie nelle graduatorie valide per la stipulazione di contratti di lavoro a tempo indeterminato, che siano in posizione generali di merito di cui all'articolo 9, comma 1, del de-\n— 134 —",
+    "s": 1.5092628002166748,
+    "prompt_tokens": 408,
+    "gen_tokens": 102,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2019-12-28_303_p148": {
+   "top": {
+    "text": "28-12-2019 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 303\nSmaltimento scorte\nSia i lotti già prodotti alla data di pubblicazione nella Gazzetta\nUfficiale della Repubblica italiana della presente determina che i lotti\nprodotti nel periodo di cui all'art. 2, comma 1, della presente determina,\nche non riportino le modifiche autorizzate, possono essere mantenuti in\nmina, i farmacisti sono tenuti a consegnare il foglio illustrativo aggiornato agli utenti, che scelgono la modalità di ritiro in formato cartaceo o analogico o mediante l'utilizzo di metodi digitali alternativi. Il titolare\nA.I.C. rende accessibile al farmacista il foglio illustrativo aggiornato\nentro il medesimo termine.",
+    "s": 2.575024127960205,
+    "prompt_tokens": 452,
+    "gen_tokens": 222,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "che non riportino te modifiche datorizzate, possono essere mantenuti in commercio fino alla data di scadenza del medicinale indicata in etichetta. A decorriere dal termine di trenta giorni dalla data di pubblicazione nella Gazzetta Ufficiale della Repubblica italiana della presente deter-\nTitolare A.I.C.: Boehringer Ingelheim International Gmbh, con sede legale e domicilio fiscale in Ingelheim Am Rhein, Binger Strasse 173, Cap D55216, Germania (DE).\n— 144 —",
+    "s": 1.7910058498382568,
+    "prompt_tokens": 408,
+    "gen_tokens": 137,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2020-07-08_170_p05": {
+   "top": {
+    "text": "8-7-2020 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 170\nVisto l’art. 3 del citato Testo unico nel quale si prevede che il Ministro dell’economia e delle finanze è autorizzato, in ogni anno finanziario, ad emanare decreti cornice che consentano al Dipartimento del Tesoro, tra l’altro, di procedere ai fini della ristrutturazione del debito pubbli\n2. In data 15 giugno 2020, giorno fissato per il regolamento dell’operazione di cui al precedente comma, la consistenza del debito è ridotta dell’ammontare di euro 717.000.000,00 a valere sulle disponibilità del Fondo per l’ammortamento dei titoli di Stato. Al capitolo di spesa",
+    "s": 2.637148857116699,
+    "prompt_tokens": 452,
+    "gen_tokens": 230,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "poliennali 18 aprile 2017 - 15 giugno 2020 - codice titolo IT0005250946 - in scadenza per un totale di euro 15.882.720.000,00.\ndell ingrediente primario di un alimento,\nVisto il decreto del Ministro delle politiche agricole alimentari e forestali e del Ministro dello sviluppo econo-\n— 3 —",
+    "s": 1.6164779663085938,
+    "prompt_tokens": 408,
+    "gen_tokens": 116,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2020-07-08_170_p13": {
+   "top": {
+    "text": "8-7-2020 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 170\nAl momento dell’immissione al consumo i frutti devono essere interi, di aspetto fresco e sano, puliti, privi di sostanze ed odori estranei e devono presentare la forma e la colorazione tipica di seguito elencata:\nFORMA COLORE\nGOLDEN DELICIOUS De retendendo a tronco certo Del vordo al ciello con possibili freccette",
+    "s": 1.9208922386169434,
+    "prompt_tokens": 452,
+    "gen_tokens": 141,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "La zona di produzione della I.G.P. Mele del Trentino corrisponde all'estensione territoriale di tutti i comuni amministrativi della Provincia autonoma di Trento.\n\n— 11 —\n[Grid layout with three rows of squares, each row containing four squares]",
+    "s": 1.2415719032287598,
+    "prompt_tokens": 408,
+    "gen_tokens": 68,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2020-07-08_170_p25": {
+   "top": {
+    "text": "8-7-2020 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 170\nContenuto della capsula molle di dutasteride:\nmonocaprilato di propilene glicole, tipo II;\nbutilidrossitoluene (E321).\nRivestimento della capsula molle:\nTutela brevettuale\nIl titolare dell'A.I.C., nei casi applicabili, è esclusivo responsabile\ndel pieno rispetto dei diritti di proprietà industriale relativi al medicinale di\nriferimento e delle vigenti disposizioni normative in materia brevettuale.",
+    "s": 2.0878589153289795,
+    "prompt_tokens": 452,
+    "gen_tokens": 161,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "mezionale anl Ai Ae tenere a disposizione la traduzione giurata del test\nin lingua tedesca e/o in altra lingua estera. In caso di inosservanza delle\ndisposizioni sull’etichettatura e sul foglio illustrativo si applicano le\nsanzioni di cui all’art. 82 del suddetto decreto legislativo.\n\necipienti:\ncloruro di sodio;\nacido succinico;\n— 23 —",
+    "s": 1.6039910316467285,
+    "prompt_tokens": 408,
+    "gen_tokens": 114,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2020-07-08_170_p27": {
+   "top": {
+    "text": "8-7-2020 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 170\nSmaltimento scorte\nIotti già prodotti alla data di pubblicazione nella Gazzetta Ufficiale della Repubblica italiana della presente determina possono essere mantenuti in commercio fino alla data di scadenza del medicinale indicata in etichetta, ai\nquale il titolare AIP effettua il confezionamento secondario. Sono fatti salvi i diritti di proprietà industriale e commerciale del titolare del marchio e del titolare dell’autorizzazione all’immissione in commercio.\nFarmacovigilanza e gestione delle segnalazioni",
+    "s": 2.1957898139953613,
+    "prompt_tokens": 452,
+    "gen_tokens": 175,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "commercio con etichette e foglio illustrativo conformi al testo in italiano\nallegato e con le sole modifiche di cui alla presente determina. L'imbal-\nlaggio esterno deve indicare in modo inequivocabile l'officina presso la\nConfezione: «Riaction» 250 microgrammi compresse 20 compresse.\nCodice A.I.C. : 044935056.\nRR - medicinale soggetto a prescrizione medica.\n\n— 25 —\n—\n—\n—",
+    "s": 1.7550740242004395,
+    "prompt_tokens": 408,
+    "gen_tokens": 133,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2020-07-01_164_p03": {
+   "top": {
+    "text": "1-7-2020 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 164\nLEGGI ED ALTRI ATTI NORMATIVI\nMINISTERO DELL'ECONOMIA dell'università e della ricerca, con il Ministro dell'inter-",
+    "s": 1.4398510456085205,
+    "prompt_tokens": 452,
+    "gen_tokens": 81,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "n. 205, articolo 1, comma 280, rinvia ad un regolamento da adottare con decreto del Ministro dell'economia e delle finanze, di concerto con il Ministro dell'istruzione,\nVista la comunicazione del 18 maggio 2020 alla Presidenza del Consiglio dei Ministri, ai sensi dell'articolo 17,\ncomma 3, della legge 23 agosto 1988, n. 400;\n— 1 —\nVista la comunicazione del 18 maggio 2020 alla Presidenza del Consiglio dei Ministri, ai sensi dell'articolo 17,\ncomma 3, della legge 23 agosto 1988, n. 400;",
+    "s": 34.34804105758667,
+    "prompt_tokens": 408,
+    "gen_tokens": 188,
+    "loop_cut": null,
+    "retry": true
+   }
+  },
+  "gu_2020-07-01_164_p32": {
+   "top": {
+    "text": "1-7-2020 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 164\nMagazzinaggio e attività di\nsupporto ai trasporti, con\nIntera divisione\n52",
+    "s": 1.310009241104126,
+    "prompt_tokens": 452,
+    "gen_tokens": 66,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "30",
+    "s": 0.7400660514831543,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2020-07-01_164_p38": {
+   "top": {
+    "text": "1-7-2020 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 164\ncazione sul proprio sito istituzionale è stato dato avviso\nnella Gazzetta Ufficiale della Repubblica italiana - Serie\ngenerale, n. 140 del 17 giugno 2016;\nDetermina:\nArt. 1.\nVisto il decreto legislativo 30 marzo 2001, n. 165, re-",
+    "s": 1.864515781402588,
+    "prompt_tokens": 452,
+    "gen_tokens": 135,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Visto il parere espresso dal Comitato prezzi e rimborso nella seduta del 7 maggio 2020;\n\na prescrizione medica ripetibile limitativa, vendibile al pubblico su prescrizione di centri ospedalieri o di specialisti - internista, pediatra, neurologo (RRL).\n\n— 36 —",
+    "s": 1.3543431758880615,
+    "prompt_tokens": 408,
+    "gen_tokens": 83,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2020-07-01_164_p47": {
+   "top": {
+    "text": "GAZZETTA UFFICIALE\nDELLA REPUBBLICA ITALIANA\nCANONI DI ABBONAMENTO (salvo conguglio)",
+    "s": 1.1311640739440918,
+    "prompt_tokens": 452,
+    "gen_tokens": 43,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "* tariffe postali di cui alla Legge 27 febbraio 2004, n. 46 (G.U. n. 48/2004) per soggetti iscritti al R.O.C.",
+    "s": 1.147449016571045,
+    "prompt_tokens": 408,
+    "gen_tokens": 56,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2020-07-21_182_p32": {
+   "top": {
+    "text": "21-7-2020 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 182\nIl decreto legge n. 34/2020 prevede, poi, interventi di ristoro specifici per IMU (74,9 mln), imposta\ndi soggiorno (100 mln) e tassa di occupazione del suolo pubblico (140 mln)$^1$, per un ammontare\ncomplessivo di 314,9 milioni. Di questi ristori, come richiamato in premessa, ed ai soli fini del riparto,",
+    "s": 2.0905990600585938,
+    "prompt_tokens": 452,
+    "gen_tokens": 162,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "28",
+    "s": 0.7410731315612793,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2020-07-21_182_p39": {
+   "top": {
+    "text": "21-7-2020 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 182\nPer il complesso del comparto la riduzione di spesa stimata ammonta a 53,58 milioni di euro di minori\nspese relative al personale, 54,27 milioni di euro per effetto della contrazione delle utenze relative\nall’acqua, 81,25 milioni di euro per il gas e 50,67 milioni di euro per le “altre utenze n.a.c.”. Di seguito",
+    "s": 1.9783048629760742,
+    "prompt_tokens": 452,
+    "gen_tokens": 148,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "35",
+    "s": 0.7406871318817139,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2020-07-21_182_p43": {
+   "top": {
+    "text": "21-7-2020 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 182\n_____ 1.01.01.99.002 - Altre imposte, tasse e proventi assimilati n.a.c. riscosse a seguito di attività' di verifica e controllo\n199_3 - Altri tributi 1.01.01.70.001 - Proventi dei Casino' riscossi a seguito dell'attività' ordinaria di gestione\n1.01.01.70.002 - Proventi dei Casino' riscossi a seguito di attività' di verifica e controllo",
+    "s": 2.238585948944092,
+    "prompt_tokens": 452,
+    "gen_tokens": 180,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "39",
+    "s": 0.7414462566375732,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2020-07-21_182_p50": {
+   "top": {
+    "text": "21-7-2020 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 182\nAmbiente\nNell’ambito di questa funzione le province e le città metropolitane hanno il compito di tutelare e",
+    "s": 1.390106201171875,
+    "prompt_tokens": 452,
+    "gen_tokens": 74,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "46",
+    "s": 0.7461671829223633,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2021-11-24_280_p29": {
+   "top": {
+    "text": "24-11-2021 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 280\n3. I contributi al bilancio dell'EMGF sono ripartiti su base paritaria tra tutti i Membri dopo aver preso in considerazione le sottoscrizioni annuali degli osservatori.",
+    "s": 1.5304813385009766,
+    "prompt_tokens": 452,
+    "gen_tokens": 91,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "— 25 —",
+    "s": 0.7728800773620605,
+    "prompt_tokens": 408,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2021-11-24_280_p31": {
+   "top": {
+    "text": "24-11-2021 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 280\nMembro abbia al momento di detta notifica adempiuto a tutti gli obblighi finanziari derivanti dalla sua adesione.\nFatto al Cairo, questo 22 settembre 2020, in sotto originali in lingue",
+    "s": 1.613095998764038,
+    "prompt_tokens": 452,
+    "gen_tokens": 101,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "27",
+    "s": 0.7464361190795898,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2021-11-24_280_p64": {
+   "top": {
+    "text": "24-11-2021 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 280\nArt. 2.\nL'autorizzazione ha validità fino al 9 dicembre 2023\ndata di scadenza dell'accreditamento.\nVisto il regolamento (UE) n. 1151/2012 del Parlamento\neuropeo e del Consiglio del 21 novembre 2012 sui regimi\ndi qualità dei prodotti agricoli e alimentari, e in particolare l'art. 58 che abroga il regolamento (CE) n. 510/2006;",
+    "s": 2.1452829837799072,
+    "prompt_tokens": 452,
+    "gen_tokens": 167,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "cante norme generali sull'ordinamento del lavoro alle dipendenze delle amministrazioni pubbliche, ed in particolare l'art. 16, lettera d);\n\nn. 12/E, e autorizzato al rilascio dei certificati di analisi nel settore oleicolo limitatamente alle prove elencate in allegato al presente decreto.\n\n— 60 —\n—\n—\n—",
+    "s": 1.4395699501037598,
+    "prompt_tokens": 408,
+    "gen_tokens": 93,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2021-11-24_280_p73": {
+   "top": {
+    "text": "24-11-2021 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 280\nVisto il parere della Commissione consultiva tecnicoscientifica dell'AIFA espresso nella sua seduta 4-6 ottobre 2021;\nVisti gli atti d'ufficio;\nrecante norme sull'organizzazione ed il funzionamento dell'Agenzia italiana del farmaco, a norma dell'art. 48, comma 13, del decreto-legge 30 settembre 2003, n. 269, convertito, con modificazioni, dalla legge 24 novembre 2003, n. 326» così come modificato dal decreto 29 mar-",
+    "s": 2.3479201793670654,
+    "prompt_tokens": 452,
+    "gen_tokens": 193,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Visto il decreto 20 settembre 2004, n. 245 del Ministro della salute, di concerto con i Ministri della funzione pubblica e dell'economia e delle finanze: «Regolamento 20 aprile 2015, che sanciscono, nell'ambito del sistema di farmacovigilanza, che qualsiasi titolare di autorizzazione all'immissione in commercio (AIC) debba nominare a\n\n— 69 —",
+    "s": 1.6730451583862305,
+    "prompt_tokens": 408,
+    "gen_tokens": 122,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2021-07-05_159_p12": {
+   "top": {
+    "text": "5-7-2021 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 159\nVista la legge 15 luglio 2002, n. 145, recante «Disposizioni per il riordino della dirigenza statale e per favorire lo scambio di esperienze e l'interazione tra pubblico e privato»;\nDETERMINA 22 giugno 2021.\nRettifica ed integrazione della determina n. 747/2012 del 17 dicembre 2012, concernente la riclassificazione, ai fini del regime di fornitura, del medicinale per uso umano «Prola-",
+    "s": 2.285961866378784,
+    "prompt_tokens": 452,
+    "gen_tokens": 186,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Il airettore generale: MAGRINI\ndirettore generale dell' Agenzia italiana del farmaco ed il\nrelativo contratto individuale di lavoro sottoscritto in data\n2 marzo 2020 e con decorrenza in pari data;\n21A03901\n— 8 —\n— 8 —\n— 8 —\n— 8 —",
+    "s": 1.4456441402435303,
+    "prompt_tokens": 408,
+    "gen_tokens": 94,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2021-07-05_159_p19": {
+   "top": {
+    "text": "5-7-2021 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 159\nl'accordo, in deroga a quanto previsto dalla normativa vi-\ngente. Ai fini della determina dell'importo dell'eventua-\nle sfondamento il calcolo dello stesso verrà determinato\nsui consumi e in base al fatturato (al netto di eventuale\npayback del 5% e al netto del Payback dell'1 83% e dei\nDETERMINA 1° luglio 2021.\nRegime di rimborsabilità e prezzo, a seguito di nuove\nindicazioni terapeutiche, del medicinale per uso umano\n«Kalydeco». (Determina n. DG/785/2021).",
+    "s": 2.4579641819000244,
+    "prompt_tokens": 452,
+    "gen_tokens": 207,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "direttore generale dell Agenzia italiana del farmaco ed il\nrelativo contratto individuale di lavoro sottoscritto in data\n2 marzo 2020 e con decorrenza in pari data;\n\n21A04033\n— 15 —\n[ ] [ ] [ ] [ ]",
+    "s": 1.2899980545043945,
+    "prompt_tokens": 408,
+    "gen_tokens": 74,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2021-07-05_159_p35": {
+   "top": {
+    "text": "5-7-2021 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 159\n\nleggasi:\nA.I.C. n. 033656543 «25 mg granulato in bustina» 100 bustine monodose in PET/AL/PE;\nClassificazione ai fini della forniture: RNR - Medicinale soggetto a prescrizione medica da rinnovare volta per volta;\ntutto o in parte, le somme depositate sul proprio Libretto Smart per la durata di trecentosessanta giorni, ad un tasso di interesse nominale annuo lordo pari allo 0,40%.\nLe somme depositate sul Libretto Smart che non formano oggetto di accantonamento, sono remunerate al tasso d'interesse pro tempore",
+    "s": 2.497459888458252,
+    "prompt_tokens": 452,
+    "gen_tokens": 212,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "nattana il 241 del 15 ottobre 2004, successivamente modificato e integrato, la Cassa depositi e prestiti società per azioni (CDP S.p.a.), rende disponibile – a partire dal 5 luglio 2021 – una nuova Offerta supersmart, destinata ai titolari del Libretto Smart, che consente di accantonare, in\n21A03993\n— 31 —\n—\n—\n—",
+    "s": 1.6490659713745117,
+    "prompt_tokens": 408,
+    "gen_tokens": 120,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2021-07-05_159_p38": {
+   "top": {
+    "text": "5-7-2021 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 159\nComunicazione della Commissione europea relativa all'approvazione della «modifica ordinaria»\ndel disciplinare di produzione della denominazione di origine protetta dei vini «Morellino di Scansano».\nSi rende noto che sulla G.U.U.E. n. 2021/C248/09 del 25 giugno 2021 è stata pubblicata la comunicazione della Commissione UE relativa all'approvazione della «modifica ordinaria». che modifica il documento unico. del disciplinare di produzione della DOP (DOCG) dei vini «Mo-",
+    "s": 2.2710940837860107,
+    "prompt_tokens": 452,
+    "gen_tokens": 184,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "34",
+    "s": 0.7439250946044922,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2021-09-16_222_p03": {
+   "top": {
+    "text": "16-9-2021 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 222\nLEGGI ED ALTRI ATTI NORMATIVI\nMINISTERO DELLA GIUSTIZIA\n3. A valere sugli stanziamenti previsti per i singo-",
+    "s": 1.4833061695098877,
+    "prompt_tokens": 452,
+    "gen_tokens": 85,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "2. Ai fini del presente regolamento si applicano le definizioni contenute nel decreto legislativo 18 aprile 2016, n. 50 (di seguito denominato «decreto legislativo»).\n\nprimo periodo nell'ipotesi in cui l'avvalimento della centrale di committenza avviene previo riconoscimento convenzionale di un corrispettivo.\n\n— 1 —\n[Image of a grid with four squares]",
+    "s": 33.761032819747925,
+    "prompt_tokens": 408,
+    "gen_tokens": 112,
+    "loop_cut": null,
+    "retry": true
+   }
+  },
+  "gu_2021-09-16_222_p31": {
+   "top": {
+    "text": "16-9-2021 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 222\nI sesti d'impianto, le forme d'allevamento ed i sistemi di potatura,\ndevono essere comunque atti a non modificare le caratteristiche delle\nuve e del vino.\nÈ vietata ogni pratica di forzatura; è tuttavia consentita l'irrigazione\ndi soccorso.\nLa vinificazione delle uve destinate alla produzione del «Monti\nLessini» passito può avvenire solo dopo che le stesse siano state sot-\ntoposte ad appassimento naturale, per un periodo non inferiore ai due\nmesi, avvalendosi anche di sistemi e/o tecnologie che comunque non au-\nmentino la temperatura dell'appassimento rispetto al processo naturale.",
+    "s": 2.464123249053955,
+    "prompt_tokens": 452,
+    "gen_tokens": 209,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Per lo spumante la resa massima dell'uva in vino finito, a eccezione della tipologia «cremant», non deve essere superiore al 70%, calcolata al netto dei prodotti aggiunti alla presa di spuma.\ntitolo alcolometrico volumico totale minimo: 12,5% vol;\nacidità totale minima: 4,5 g/l;\nestratto non riduttore minimo: 24,0 g/l.\n— 29 —",
+    "s": 1.6708590984344482,
+    "prompt_tokens": 408,
+    "gen_tokens": 123,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2021-09-16_222_p35": {
+   "top": {
+    "text": "16-9-2021 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 222\nspuma: fine, intensa;\ncolore: dal giallo paglierino più o meno intenso, fino al giallo\ndorato;\nodore: note complesse ed evolute proprie di un lungo affinamento\nin bottiglia;\n16000 chilogrammi di uve per ettaro\n6. «Monti Lessini» vino spumante di qualità «cremant»\n16000 chilogrammi di uve per ettaro\n6. ZONA GEOGRAFICA DELIMITATA",
+    "s": 2.1254687309265137,
+    "prompt_tokens": 452,
+    "gen_tokens": 167,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "4. «Monti Lessini» vino spumante di qualità\n16000 chilogrammi di uve per ettaro\n5. «Monti Lessini» vino spumante di qualità riserva\n\nSette seconi di storia per la vinicoltura del Monti Lessini sono di\ntraguardo che sottolinea con forza quanto l'uomo da sempre sia attento\nalle sorti della vigna in questa zona alto collinare, a cavallo tra le Provincia di Verona e di Vicenza nell'area dei Monti Lessini.\n\n— 33 —",
+    "s": 1.7998178005218506,
+    "prompt_tokens": 408,
+    "gen_tokens": 139,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2021-09-16_222_p39": {
+   "top": {
+    "text": "16-9-2021 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 222\nALLEGATO\nTabella 1: Ripartizione del Fondo per la prevenzione del rischio sismico annualità 2019-2020-2021\nREGIONE N. COMUNI (*) FINANZIAMENTO LETTERA A FINANZIAMENTO LETTERA B/C TOTALE",
+    "s": 1.7949888706207275,
+    "prompt_tokens": 452,
+    "gen_tokens": 126,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "37",
+    "s": 0.7421729564666748,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2022-05-26_122_p03": {
+   "top": {
+    "text": "26-5-2022 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 122\nRevoca, su rinuncia, dell’autorizzazione all’immissione in commercio del medicinale per uso umano «Algimesil» (22A03080) . . . . . . . . . . . . . . . . . . . . . . . . Pag. 30\nMinistero\ndello sviluppo economico\nIntegrazione al decreto direttoriale 2 maggio",
+    "s": 4.257273197174072,
+    "prompt_tokens": 452,
+    "gen_tokens": 142,
+    "loop_cut": null,
+    "retry": true
+   },
+   "bottom": {
+    "text": "— III —",
+    "s": 0.7510826587677002,
+    "prompt_tokens": 408,
+    "gen_tokens": 4,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2022-05-26_122_p41": {
+   "top": {
+    "text": "26-5-2022 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 122\nArt. 39. Articolazione della prestazione in modalità agile e\ndiritto alla disconnessione\nArt. 40. Formazione\nCapo II Altre forme di lavoro a distanza\nArt. 41. Lavoro da remoto\nTabella G – indicazioni per la rideterminazione dei valori\ndell’indennità di amministrazione e dell’indennità di ente\nTabella H – Stipendi tabellari delle nuove Aree\nTabella I – Incremento mensile indennità bilinguismo\nDichiarazione congjunta n. 1",
+    "s": 2.289208173751831,
+    "prompt_tokens": 452,
+    "gen_tokens": 185,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "sposizioni di legge che incrementano l'indennità di amministrazione destinatarie dei precedenti CCNL del comparto dei Ministeri.\nTabella F – Ulteriori incrementi mensili della retribuzione tabellare\n9. Con «ENAC» si intendono le amministrazioni di cui all’art. 3, comma 1, punto IV del CCNQ 3 agosto 2021.\n\n— 37 —",
+    "s": 1.500762939453125,
+    "prompt_tokens": 408,
+    "gen_tokens": 101,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2022-05-26_122_p61": {
+   "top": {
+    "text": "26-5-2022 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 122\nTITOLO VIII\nDISPOSIZIONI SPECIALI\nArt. 56.\nc) l'indennità di guardiaparco di cui all'art. 37 del CCNL 1° ottobre 2007, nei valori e secondo la disciplina previgente;\nd) l'indennità di cui all'art. 25, comma 6 del CCNL 9 ottobre 2003.\n2. In materia di trattamento economico, gli enti pubblici non eco-",
+    "s": 2.1146669387817383,
+    "prompt_tokens": 452,
+    "gen_tokens": 165,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "stema di classificazione professionale);\nb) l'indennità di bilinguismo di cui art. 39 del CCNL 14 febbraio\n2001, nei valori e secondo la disciplina previgente;\n1. Al personale dell’AGID il titolo III del presente contratto e le\ncorrelate norme del trattamento economico si applicano a decorrere\ndalla sottoscrizione di una specifica sequenza negoziale - da attivarsi\n\n— 57 —",
+    "s": 1.667349100112915,
+    "prompt_tokens": 408,
+    "gen_tokens": 122,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2022-05-26_122_p63": {
+   "top": {
+    "text": "26-5-2022 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 122\nTabella 1\nMisura annua lorda e numero massimo dei differenziali stipendiali",
+    "s": 1.327354907989502,
+    "prompt_tokens": 452,
+    "gen_tokens": 67,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "59",
+    "s": 0.7449169158935547,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2022-10-01_230_p04": {
+   "top": {
+    "text": "1-10-2022 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 230\nArt. 2.\nLe offerte degli operatori relative alla tranche di cui all'art. 1 del presente decreto dovranno pervenire entro le ore 11,00 del giorno 27 settembre 2022, con l'osservanza\nL'onere per il rimborso del capitale relativo all'anno finanziario 2024 farà carico al capitolo che verrà iscritto nello stato di previsione della spesa del Ministero dell'economia e delle finanze per l'anno stesso, corrispondente al capitolo 9502 (unità di voto parlamentare",
+    "s": 2.3277111053466797,
+    "prompt_tokens": 452,
+    "gen_tokens": 189,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "re 21.1) dello stato di previsione della spesa del Ministero dell'economia e delle finanze, per l'anno stesso, ed a quelli corrispondenti, per gli anni successivi.\n2021, emanato in attuazione dell'art. 3 del «Testo unico» (di seguito «decreto cornice»), ove si definiscono per l'anno finanziario 2022 gli obiettivi, i limiti e le modalità\n— 2 —",
+    "s": 1.6655941009521484,
+    "prompt_tokens": 408,
+    "gen_tokens": 121,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2022-10-01_230_p11": {
+   "top": {
+    "text": "1-10-2022 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 230\n\nLa coltivazione del vitigno «Tintilia» in Molise ha origini antichissime, testimonianze della sua presenza ci portano alla fine del 700, in epoca borbonica, ed è sancita, dall’agronomo Raffaele Pepe di Civita-campomarano, nel suo manoscritto del 1810.\n\nLa introduzione e la diffusione del vitigno, documentata e traman-\nla scelta ed il perfezionamento di idonei sesti e sistemi di allevamento;\n\nl’individuazione delle migliori aree vocate per la coltivazione del vitigno «Tintilia», al fine dell’esaltazione delle caratteristiche organo- nolettiche delle uve e dei vini da esse ottenuti.",
+    "s": 2.6605348587036133,
+    "prompt_tokens": 452,
+    "gen_tokens": 232,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "considerate dai viticoltori, hanno consentito, nel corso degli anni, il ragi-\ngiungimento di:\nuna corretta tecnica colturale;\n\nin particolare, dare verme e especità nel rispetto di un predeter-\nnato piano dei controlli, approvato dal Ministero, conforme al modello\napprovato con il decreto ministeriale 2 agosto 2018, pubblicato nella\nGazzetta Ufficiale n. 253 del 30 ottobre 2018.\n\n— 9 —\n— 4 —\n— 3 —\n— 2 —",
+    "s": 34.00084471702576,
+    "prompt_tokens": 408,
+    "gen_tokens": 141,
+    "loop_cut": null,
+    "retry": true
+   }
+  },
+  "gu_2022-10-01_230_p14": {
+   "top": {
+    "text": "1-10-2022 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 230\nTenore massimo di anidride solforosa totale\n(in milligrammi per litro)",
+    "s": 1.311486005783081,
+    "prompt_tokens": 452,
+    "gen_tokens": 66,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "— 12 —\nassociate alla diversa natura del suon ed an esposizione, infuenzano significativamente la",
+    "s": 0.9577758312225342,
+    "prompt_tokens": 408,
+    "gen_tokens": 31,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2022-10-01_230_p17": {
+   "top": {
+    "text": "1-10-2022 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 230\nprezzo al pubblico (IVA inclusa): euro 86,19;\n«400 mcg pastiglie», 15 pastiglie in blister con applicatore incorporato per mucosa orale - A.I.C. n. 045975075 (in base 10);\nArt. 3.\nTutela brevettuale\nIl titolare dell'A.I.C. del farmaco generico/biosimila-",
+    "s": 1.9756696224212646,
+    "prompt_tokens": 452,
+    "gen_tokens": 148,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "La classificazione ai fini della fornitura del medicinale\n«Ifyltan» (fentanil) è la seguente: medicinale soggetto a\nprescrizione medica da rinnovare volta per volta (RNR).\ndel Ministero della salute di concerto con l'Ministri per la\npubblica amministrazione e la simplificazione e dell’economia e delle finanze del 29 marzo 2012;\n— 15 —",
+    "s": 1.5999679565429688,
+    "prompt_tokens": 408,
+    "gen_tokens": 114,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2022-11-04_258_p20": {
+   "top": {
+    "text": "4-11-2022 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 258\nVisto il decreto dipartimentale del 6 novembre 2012 recante la procedura per il riconoscimento degli agenti vigilatori dei consorzi di tutela di cui alla legge 21 dicembre 1999, n. 526 e al decreto legislativo 8 aprile 2010, n. 61;\nchino (SR) - via Milano snc - a svolgere le funzioni di cui all'art. 53 della legge 24 aprile 1998, n. 128, come modificato dall'art. 14, comma 15, della legge 21 dicembre 1999, n. 526 per la IGP «Pomodoro di Pachino».",
+    "s": 2.563228130340576,
+    "prompt_tokens": 452,
+    "gen_tokens": 221,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "1. E confermato per un triennio l'incarico concesso con il decreto ministeriale 27 luglio 2006, al Consorzio di tutela IGP Pomodoro di Pachino con sede legale in Pa-\nVisto il decreto ministeriale 12 aprile 2000, n. 61413 e successive modificazioni ed integrazioni, pubblicato nella Gazzetta Ufficiale della Repubblica italiana - Serie genera-\n— 18 —",
+    "s": 1.6903488636016846,
+    "prompt_tokens": 408,
+    "gen_tokens": 125,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2022-11-04_258_p28": {
+   "top": {
+    "text": "4-11-2022 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 258\n\nDETERMINA 24 ottobre 2022.\n\nSostituzione dell’allegato alla determina AIFA n. 545/2022 del 3 agosto 2022, concernente il regime di rimborsabilità e prezzo, a seguito di nuove indicazioni terapeutiche, del medicinale per uso umano «Rinvoq». (Determina n. 769/2022).",
+    "s": 2.0018997192382812,
+    "prompt_tokens": 452,
+    "gen_tokens": 151,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Il dirigente: TROTTA\n— 26 —\nRoma, 24 ottobre 2022",
+    "s": 0.9507930278778076,
+    "prompt_tokens": 408,
+    "gen_tokens": 30,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2022-11-04_258_p29": {
+   "top": {
+    "text": "4-11-2022 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 258\nALLEGATO\nSCHEDA DI PRESCRIZIONE CARTACEA DI UPADACITINIB (Rinvoq®)\nNEL TRATTAMENTO DELLA SPONDILITE ANCHILOSANTE",
+    "s": 1.5618910789489746,
+    "prompt_tokens": 452,
+    "gen_tokens": 96,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "— 27 —",
+    "s": 0.7702620029449463,
+    "prompt_tokens": 408,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2022-11-04_258_p33": {
+   "top": {
+    "text": "4-11-2022 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 258\nRilevato che dall'esame della richiesta di accreditamento\ne della documentazione ad essa allegata, emerge che l'isti-\ntuendo Odm rispetto i requisiti previsti dall'art. 41, par. 2 del\nregolamento e dal provvedimento, essendo stato comprova-\nto in particolare: un adequato livello di congetenza per lo\nArticolo 5 Modalità di raccolta e registrazione dei dati\nArticolo 6 Base giuridica e Informazione agli interessati\nArticolo 7 Tempi di conservazione dei dati\nArticolo 8 Utilizzazione dei dati\nArticolo 9 Accesso ed esercizio di altri diritti degli interessati",
+    "s": 2.412611961364746,
+    "prompt_tokens": 452,
+    "gen_tokens": 200,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Articolo 2 Definizioni\nArticolo 3 Finalità del trattamento\nArticolo 4 Requisiti e categorie dei dati\n4. Con nota del Garante per la protezione dei dati personali dell'11 ottobre 2018 i soggetti che professionalmente gestiscono i sistemi di informazioni creditizie sono stati esortati a predisporre una bozza\n— 31 —",
+    "s": 1.4651648998260498,
+    "prompt_tokens": 408,
+    "gen_tokens": 96,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2023-09-05_207_p42": {
+   "top": {
+    "text": "5-9-2023 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 207\n6. CRONOPROGRAMMA\nLa realizzazione e l'implementazione delle attività del PNHTA 2023-2025 avverrà per fasi",
+    "s": 1.4541497230529785,
+    "prompt_tokens": 452,
+    "gen_tokens": 82,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "40",
+    "s": 0.7524750232696533,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2023-09-05_207_p48": {
+   "top": {
+    "text": "5-9-2023 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 207\nDECRETO 1° agosto 2023.\nProgramma di autosufficienza nazionale del sangue e dei suoi prodotti per l'anno 2023.\nCE che stabilisce norme di qualità e di sicurezza per la raccolta, il controllo, la lavorazione, la conservazione e la distribuzione del sangue umano e dei suoi componenti>;\nVisto il decreto del Ministro della salute 21 dicembre",
+    "s": 1.9501640796661377,
+    "prompt_tokens": 452,
+    "gen_tokens": 142,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Visto il decreto legislativo 20 dicembre 2007, n. 261, recante «Revisione del decreto legislativo 19 agosto 2005, n. 191, recante attuazione della direttiva 2002/98/ nente per i rapporti tra lo Stato, le regioni e le Province autonome di Trento e di Bolzano nella seduta del 17 giugno 2021 (Rep. atti n. 90/CSR);\n\n— 46 —\n— 47 —\n— 48 —\n— 49 —",
+    "s": 1.9220638275146484,
+    "prompt_tokens": 408,
+    "gen_tokens": 152,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2023-09-05_207_p54": {
+   "top": {
+    "text": "5-9-2023 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 207\nle regioni Valle d'Aosta (1,9%), Liguria (1,8%),\nFriuli Venezia Giulia ed Emilia Romagna (1,1%),\nPuglia (0,9%) e Lazio (0,7%). Di contro, si\nosserva una riduzione della produzione GR,\n1.000 unità di popolazione/anno trasfuse nel 2022\nsi confrontano solamente con il medesimo tasso\ntrasfusionale registrato in Germania nel 2019\n(ultimo dato disponibile), mentre gli altri Paesi di",
+    "s": 2.2679660320281982,
+    "prompt_tokens": 452,
+    "gen_tokens": 180,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "52",
+    "s": 0.7521350383758545,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2023-09-05_207_p59": {
+   "top": {
+    "text": "5-9-2023 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 207\npianificato in raccolta e quanto stimato necessario\na coprire la domanda di CE.\nLe regioni del II gruppo dovranno modulare la\ndiretta a predisporre «metodi e strumenti\ninnovativi e più efficaci per garantire\nl'appropriatezza della gestione, organizzativa e\nclinica, della risorsa sangue», affrontando tutti i",
+    "s": 1.8897440433502197,
+    "prompt_tokens": 452,
+    "gen_tokens": 135,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "57",
+    "s": 0.7543520927429199,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2023-06-12_135_p08": {
+   "top": {
+    "text": "12-6-2023 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 135\nrenza, da un impiegato di settima qualifica. Per gli enti locali territoriali la presidenza delle commissioni di concorsi può essere assunta anche da un dirigente della stessa amministrazione o di altro ente territoriale;\nb) per i concorsi per la quinta e la sesta qualifica o categoria: da un dirigente o equiparato, con funzioni di presidente, e da due esperti\nprolungata e di volontari specializzati delle tre Forze armate congedati senza demerito al termine della ferma o raffferma contrattuale nel limite del 20 per cento delle vacanze annuali dei posti messi a concorso;\n3) riserva del 2 per cento dei posti destinati a ciascun concorso, ai sensi dell'articolo 40, secondo comma, della legge 20 settembre",
+    "s": 2.794097900390625,
+    "prompt_tokens": 452,
+    "gen_tokens": 246,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "computare gli appartenenti alle categorie stesse vincitori del concorso;\n2) riserva di posti ai sensi dell'articolo 3, comma 65, della legge 24 dicembre 1993, n. 537, a favore dei militari in ferma di leva\nlegislativo 13 ottobre 2005, n. 217.»\n23G00076\n— 6 —\n— 6 —\n— 6 —",
+    "s": 1.6748528480529785,
+    "prompt_tokens": 408,
+    "gen_tokens": 122,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2023-06-12_135_p69": {
+   "top": {
+    "text": "12-6-2023 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 135\nagli interventi dalle stesse finanziati o rientranti nei programmi di investimento dei quali risultano titolari, sulla base delle domande delle stazioni appaltanti validate dalle medesime amministrazioni a seguito della positiva verifica del contenuto;\ncienti a soddisfare la totalità del fabbisogno finanziario e che, pertanto, non risulta necessario provvedere alla determinazione di una graduatoria degli interventi;",
+    "s": 1.9802720546722412,
+    "prompt_tokens": 452,
+    "gen_tokens": 147,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Tenuto conto che le risorse costituenti la dotazione del predetto Fondo, a seguito della chiusura della procedura di presentazione delle istanze di accesso, risultano suffi-\nRoma, 19 maggio 2023\nIl Ragioniere generale dello Stato: MAZZOTTA\n— 67 —",
+    "s": 1.3602187633514404,
+    "prompt_tokens": 408,
+    "gen_tokens": 82,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2023-06-12_135_p103": {
+   "top": {
+    "text": "12-6-2023 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 135\n«Hyrimoz» è indicato per il trattamento della psoriasi cronica a\nplacche di grado da moderato a severo, in pazienti adulti candidati alla\nterapia sistemica.\nPsoriasi a placche pediatrica.\n«Hyrimoz» è indicato per il trattamento della psoriasi cronica a\nEU/1/18/1286/009 – A.I.C.: 046889097/E in base 32: 1DQY49\n- 80 mg - soluzione iniettabile - uso sottocutaneo - siringa preriempita\n(vetro) 0,8 ml (80 mg/0,8 ml) - 2 siringhe preriempite con dispositivo di\nsicurezza dell’ago;\nEU/1/18/1286/010 – A.I.C.: 046889109/E in base 32: 1DQY4P\n80 mg - soluzione iniettabile - uso sottocutaneo - siringa preriempita\n(vectro) 0,8 ml (80 mg/0,8 ml) - 2 siringhe preriempite con dispositivo di\nsicurezza dell’ago;",
+    "s": 3.6729609966278076,
+    "prompt_tokens": 452,
+    "gen_tokens": 353,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "- 80 mg - soluzione iniettabile - uso sottocutaneo - siringa preriempita\n(vetro) 0,8 ml (80 mg/0,8 ml) - 1 siringa preriempita con dispositivo di\nsicurezza dell'ago;\ncancro;\nproblemi del sistema nervoso;\nvaccinazioni.\n— 101 —",
+    "s": 1.4428608417510986,
+    "prompt_tokens": 408,
+    "gen_tokens": 93,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2023-06-12_135_p126": {
+   "top": {
+    "text": "12-6-2023 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 135\nBILANCIO DI\nPREVISIONE 2025\n62.000,00\n62.000,00\n5.011.304,00\n0,00\n0,00\n0,00\n459.272,00",
+    "s": 1.7359559535980225,
+    "prompt_tokens": 452,
+    "gen_tokens": 117,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "— 124 —",
+    "s": 0.784977912902832,
+    "prompt_tokens": 408,
+    "gen_tokens": 7,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2023-12-15_292_p32": {
+   "top": {
+    "text": "15-12-2023 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 292\n6. Il contraente può proporre al responsabile del procedimento di introdurre varianti migliorative alla prestazione senza aggravi di spesa per il committente.\n2. La sospensione e la ripresa dell'esecuzione devono risultare da apposito verbale sottoscritto in contraddittorio dalle parti. Dell’avvenuta sottoscritione del verbale è data formale comunicazione all’appaltatore.\n7. Eventuali modifiche non autorizzate apportate alla",
+    "s": 2.1088032722473145,
+    "prompt_tokens": 452,
+    "gen_tokens": 161,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "ne temporanea dell'esecuzione della prestazione o di una\nparte di essa. In tal caso all'esecutore non spetta alcun\ncompenso o indennizzo.\nlita di iscrivere riserve per ritardi, un programma di esecuzione dei lavori che preveda la realizzazione prioritaria delle lavorazioni sulle aree e sugli immobili disponibili.\n— 30 —",
+    "s": 1.4513401985168457,
+    "prompt_tokens": 408,
+    "gen_tokens": 93,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2023-12-15_292_p50": {
+   "top": {
+    "text": "15-12-2023 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 292\nla necessità di portare sempre con sé la scheda per il paziente;\nDETERMINA 4 dicembre 2023.\nun promemoria per i pazienti riguardo alla necessità di mostrare\nla scheda per il paziente a tutti gli operatori sanitari, anche in condizioni\ndi emergenza, e un messaggio per gli operatori sanitari che li informa\nche il paziente è in trattamento con «Brevanzi».\nClassificazione, ai sensi dell'articolo 12, comma 5, della\nlegge 8 novembre 2012, n. 189, del medicinale per uso umano, a base di Degarelix acetato, «Degarelix Accord». (Deter-",
+    "s": 2.556023120880127,
+    "prompt_tokens": 452,
+    "gen_tokens": 217,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "n. 189, recante «Disposizioni urgenti per promuovere lo sviluppo del Paese mediante un più alto livello di tutela della salute» e, in particolare, l'art. 12, comma 5;\n\n— 48 —\n— 48 —\n— 48 —",
+    "s": 1.2998127937316895,
+    "prompt_tokens": 408,
+    "gen_tokens": 74,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2023-12-15_292_p57": {
+   "top": {
+    "text": "15-12-2023 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 292\nto con «Litfulo». Inoltre, segnalare l'importanza di informare immediatamente il proprio medico in caso di gravidanza sospetta o confermata.\nIl pacchetto informativo per il paziente contiene:\nfoglio illustrativo;\nscheda paziente\nVisto il decreto del Ministro della salute di concerto con i Ministri della funzione pubblica e dell'economia e finanze in data 20 settembre 2004, n. 245 recante norme sull'organizzazione ed il funzionamento dell'Agenzia ita-\nliano",
+    "s": 2.2583751678466797,
+    "prompt_tokens": 452,
+    "gen_tokens": 181,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Vista la legge 24 dicembre 1993, n. 537 e successive modificazioni con particolare riferimento all'art. 8, comma 10, lettera c);\n\n2023, con il quale la dott.ssa Anna Rosa Marra, a decorrere dal 25 gennaio 2023, è stata nominata sostituto del direttore generale dell'Agenzia italiana del farmaco, nelle\n\n— 55 —",
+    "s": 1.6161940097808838,
+    "prompt_tokens": 408,
+    "gen_tokens": 114,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2023-12-15_292_p97": {
+   "top": {
+    "text": "15-12-2023 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 292\nSALERNO SAN MAURO LA BRUCA I032 SONDRIO BIANZONE A848\nSALERNO SAN PIETRO AL TANAGRO I089 SONDRIO BORMIO B049\nSALERNO SAN RUFO I143 SONDRIO BUGLIO IN MONTE B255\nSALERNO SANTA MARINA I253 SONDRIO CAIOLO B366\nSALERNO SANTOMENNA I360 SONDRIO SAMPODOLCINO B528",
+    "s": 2.3133130073547363,
+    "prompt_tokens": 452,
+    "gen_tokens": 187,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "95",
+    "s": 0.7594575881958008,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2024-02-16_039_p02": {
+   "top": {
+    "text": "16-2-2024 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 39\n\nDETERMINA 6 febbraio 2024.\nModifica dell’autorizzazione all’immissione in commercio del medicinale per uso umano, a base di flucitosina, «Ancotil». (24A00807). . . . . . . . . Pag. 27\nRegime di rimborsabilità e prezzo, a seguito di nuove indicazioni terapeutiche, del medicinale per uso umano «Rinvoq».\n(Determina",
+    "s": 6.821141004562378,
+    "prompt_tokens": 452,
+    "gen_tokens": 163,
+    "loop_cut": null,
+    "retry": true
+   },
+   "bottom": {
+    "text": "commercio del medicinale per uso umano, a base di nitrofurantoina, «Nitrofurantoina Mylan Pharma». (24A00806) ..... Pag. 27\npubblicato ai sensi dell'articolo 9, comma 1, decreto del Presidente della Repubblica 6 ottobre 1998, n. 392. (24A00816) ..... Pag. 31\n\n— II —\n[Image of a grid with four squares]",
+    "s": 1.747642993927002,
+    "prompt_tokens": 408,
+    "gen_tokens": 130,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2024-02-16_039_p05": {
+   "top": {
+    "text": "16-2-2024 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 39\npersonale, di un incaricato per la cybersicurezza (quale punto di contatto cyber ai fini delle comunicazioni e del necessario raccordo con l'ACN) e di un referente tecnico per la cybersicurezza (da identificarsi tra il personale re-\ndovranno intervenire fin da subito intese speditive per la provvisionale definizione delle misure prioritarie e urgenti volte alla mitigazione del rischio cibernetico, in primis tra l'ACN e le amministrazioni rappresentate nel Comita-",
+    "s": 2.1930370330810547,
+    "prompt_tokens": 452,
+    "gen_tokens": 172,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "ordinamento del Sistema sanitario nazionale, di concerto con il Ministero dell'economia e delle finanze per tutti i profili di carattere finanziario, di sanità veterinaria, di tuttavia 2006/100/CE che adegua determinate direttive sulla libera circolazione delle persone a seguito dell’adesione di Bulgaria e Romania»;\n\n— 3 —\n[Image of a grid of squares with a black-and-white pattern]",
+    "s": 1.5958788394927979,
+    "prompt_tokens": 408,
+    "gen_tokens": 111,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2024-02-16_039_p26": {
+   "top": {
+    "text": "16-2-2024 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 39\nArt. 19.\nTitolo III\nComitato partecipativo studentesco\nSTRUTTURE DIDATTICHE, DI RICERCA, DI SERVIZIO\nE ORGANIZZAZIONE DELLA DIDATTICA",
+    "s": 1.5929548740386963,
+    "prompt_tokens": 452,
+    "gen_tokens": 98,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "he di contratto finanziari.\n\nLa partecipazione al comitato non dà luogo ad alcuna forma di\ncompenso, emolumento e indennità.\n\nrappresentante di dottorande e dottorandi nonché da un o una rappresentante di specializzazione e specializzandi. È previsto, altresi, un o una rappresentante del personale tecnico-amministrativo; l'elettorato attivo\n\n— 24 —",
+    "s": 1.5554490089416504,
+    "prompt_tokens": 408,
+    "gen_tokens": 106,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2024-02-16_039_p34": {
+   "top": {
+    "text": "16-2-2024 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 39\n28 20/01/2023 Ecolab S.r.l. SKINSAN 2% FOAM 21223 X\n29 20/01/2023 PROCTER & GAMBLE S.r.l. VIAKAL DETERGENTE DISINFETTANTE PER WC 21224 X",
+    "s": 1.8529529571533203,
+    "prompt_tokens": 452,
+    "gen_tokens": 130,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "32",
+    "s": 0.7581777572631836,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2024-05-14_111_p21": {
+   "top": {
+    "text": "14-5-2024 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 111\n3) prevedere che la valutazione multidimensionale sia svolta tenendo conto delle indicazioni dell'ICF e dell'ICD e che definisce un profilo di funzionamento della persona, necessario alla predisposizione del progetto di vita individuale, personalizzato e partecipato e al monitoraggio dei suoi effetti nel tempo, tenendo conto delle differenti disabilità nell'ambito della valutazione;\ntino la vita indipendente delle persone con disabilità in età adulta, favore rendone la deistituzionalizzazione e prevenendone l'istituzionalizzazione, come previsto dall'articolo 8 della legge 5 febbraio 1992, n. 104, e dall'articolo 19 della Convenzione delle Nazioni Unite sui diritti delle persone con disabilità, anche mediante l'attuazione coordinata dei progetti delle missioni 5 e 6 del PNRR e attraverso le misure previste della",
+    "s": 2.9736239910125732,
+    "prompt_tokens": 452,
+    "gen_tokens": 267,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "dualite, personalizzato e partecipato direttamente ad assistenza e la partecipazione sociale, compreso l'esercizio dei diritti all'affettività e alla socialità, possano essere individuati sostegni e servizi per l'abitare in autonomia e modelli di assistenza personale autogestita che suppor-\n— 19 —\nmediante prà alla successiva, per uno o pa degli oggetti predetto. In reazione al termine finale stabilito dalla legge di delegazione, il Governo informa periodicamente le Camere sui criteri che segue nell'organizzazione dell'esercizio della delega.",
+    "s": 1.942605972290039,
+    "prompt_tokens": 408,
+    "gen_tokens": 145,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2024-05-14_111_p48": {
+   "top": {
+    "text": "14-5-2024 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 111\n\nDECRETO 9 maggio 2024.\n\nEmissione, corso legale, contingente e modalità di cessione della moneta d'argento ettagonale da 3 euro celebrativa della «Presidenza italiana del G7», in versione fior di conio, millesimo 2024.",
+    "s": 1.7714779376983643,
+    "prompt_tokens": 452,
+    "gen_tokens": 118,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "E autorizzata l'emissione della moneta d'argento ettagonale da 3 euro celebrativa della «Presidenza italiana del G7», in versione fior di conio, millesimo 2024, da cedere in apposite confezioni ad enti, associazioni e privati italiani o stranieri.\n\n— 46 —\n— 46 —\n— 46 —",
+    "s": 1.5074968338012695,
+    "prompt_tokens": 408,
+    "gen_tokens": 99,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2024-05-14_111_p57": {
+   "top": {
+    "text": "14-5-2024 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 111\nDollaro USA ..... 1,0718 Lira Sterlina ..... 0,85538\nYen ..... 168,27 Fiorino ungherese ..... 388,98\nLev bulgaro ..... 1,9558 Zloty polacco ..... 4,3278\nCroatia ..... 25,14 N. 4,8763",
+    "s": 2.0135879516601562,
+    "prompt_tokens": 452,
+    "gen_tokens": 149,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Corona ceca ..... 25,09\nZloty polacco ..... 4,329\nCorona danese ..... 7,4589\nNuovo leu romeno ..... 4,9761\n\n— 55 —\n[Grid layout with three rows of squares]",
+    "s": 1.3104169368743896,
+    "prompt_tokens": 408,
+    "gen_tokens": 74,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2024-05-14_111_p61": {
+   "top": {
+    "text": "MODALITÀ PER LA VENDITA\nLa «Gazzetta Ufficiale» e tutte le altre pubblicazioni dell'Istituto sono in vendita al pubblico:",
+    "s": 1.13720703125,
+    "prompt_tokens": 452,
+    "gen_tokens": 40,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 0.7904250621795654,
+    "prompt_tokens": 408,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2024-08-22_196_p09": {
+   "top": {
+    "text": "22-8-2024 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 196\n\nDecreta:\n\nArt. 1.",
+    "s": 1.240225076675415,
+    "prompt_tokens": 452,
+    "gen_tokens": 52,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "energetica, reg. n. 3135\n\n24A04405\n\n— 7 —",
+    "s": 0.9651138782501221,
+    "prompt_tokens": 408,
+    "gen_tokens": 28,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2024-08-22_196_p11": {
+   "top": {
+    "text": "22-8-2024 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 196\nDecreta:\necologica e che i restanti allegati sono aggiornati con le modalità ordinarie di cui all'art. 36, comma 1, della legge 24 dicembre 2012, n. 234»;\nArt. 1.\nVisto il decreto-legge 1° marzo 2021, n. 22, conver-",
+    "s": 1.9154911041259766,
+    "prompt_tokens": 452,
+    "gen_tokens": 134,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "del presente decreto, e modificato per il recepimento\ndegli aggiornamenti all’allegato IX della direttiva (UE)\n2018/2001 con decreto del Ministro della transizione\ntroducendo, nella parte A, le materie prime riportate alle\nlettere r), s), t), u) e v) e nella parte B le materie prime\nriportate alle lettere c), d), e) e f);\n\n— 9 —\n[ ] [ ] [ ] [ ]",
+    "s": 1.7078919410705566,
+    "prompt_tokens": 408,
+    "gen_tokens": 122,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2024-08-22_196_p13": {
+   "top": {
+    "text": "22-8-2024 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 196\nDECRETI E DELIBERE DI ALTRE AUTORITÀ\nAGENZIA ITALIANA DEL FARMACO Vista la legge 14 dicembre 2000, n. 376, recante «Di-",
+    "s": 1.6153697967529297,
+    "prompt_tokens": 452,
+    "gen_tokens": 99,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "re riferimento all'art. 8, comma 10, che prevede la classificazione dei medicinali erogabili a carico del Servizio sanitario nazionale;\n\nmetrivarb>, pubblicata nella Gazzetta Ufficiale della Repubblica italiana - Serie generale - n. 10 del 27 gennaio 2022;\n\n— 11 —\n— 11 —\n— 11 —",
+    "s": 1.5508739948272705,
+    "prompt_tokens": 408,
+    "gen_tokens": 104,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2024-08-22_196_p16": {
+   "top": {
+    "text": "22-8-2024 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 196\nte «Classificazione, ai sensi dell’art. 12, comma 5, della legge 8 novembre 2012, n. 189, del medicinale per uso umano, a base di ustekinumab, “Uzpruvo”»;\nVista la domanda presentata in data 12 marzo 2024 con\nprezzo al pubblico (IVA inclusa): euro 3.119,26.\n«90 mg- soluzione iniettabile - uso sottocutaneo - siringa pre-riempita (vetro) 1,0 ml (90 mg/ml)» 1 siringa pre-riempita - A.I.C. n. 051057026/E (in base 10);",
+    "s": 2.6871790885925293,
+    "prompt_tokens": 452,
+    "gen_tokens": 232,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "classe di rimborsabilità: H;\nprezzo ex factory (IVA esclusa): euro 1.890,00.\nluppo e per la correzione dell andamento dei conti pubblici», convertito, con modificazioni, nella legge 24 novembre 2003, n. 326, che ha istituito l'Agenzia italiana\n— 14 —",
+    "s": 1.4670109748840332,
+    "prompt_tokens": 408,
+    "gen_tokens": 94,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2025-01-10_007_p03": {
+   "top": {
+    "text": "10-1-2025 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 7\nLEGGI ED ALTRI ATTI NORMATIVI\nDECRETO LEGISLATIVO 27 dicembre 2024, n. 216.\nEMANA",
+    "s": 1.4938180446624756,
+    "prompt_tokens": 452,
+    "gen_tokens": 85,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "data nena riuone del 9 dicembre 2024;\nSulla proposta del Ministro della giustizia, di concerto\ncon il Ministro dell’economia e delle finanze;\n«4-bis. La delega per la partecipazione all’incon-\ntro ai sensi del comma 4 è conferita con atto sottoscritto\ncon firma non autenticata e contiene gli estremi del docu-\n— 1 —",
+    "s": 1.5821681022644043,
+    "prompt_tokens": 408,
+    "gen_tokens": 108,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2025-01-10_007_p09": {
+   "top": {
+    "text": "10-1-2025 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 7\n3. Per assolvere alla condizione di procedibilità le parti possono anche esperire, per le materie e nei limiti iivi regolamentati, le procedure previste:\na) dall’articolo 128-bis del decreto legislativo 1° settembre 1993, n. 385;\n2. Dal momento in cui la comunicazione di cui al comma 1 perviene a conoscenza delle parti, la domanda di mediazione produce sulla prescrizione gli effetti della domanda giudiziale e impedisce la decadenza per una sola volta. La parte può a tal fine comunicare all’altra parte la domanda di mediazione già presentata all’organismo di mediazione, fermo l’obbligo dell’organismo di procedere ai sensi del comma 1",
+    "s": 2.6548540592193604,
+    "prompt_tokens": 452,
+    "gen_tokens": 228,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "informazione utile sono comunicate alle parti, a cui diritto organismo,\ncon ogni mezzo idoneo ad assicurare la ricezione. Nelle controversie\nche richiedono specifiche competenze tecniche, l'organismo può nomi-\nnare uno o più mediatori ausiliari.\n\n5. Saivo quanto previsto dall articolo 8-01s, il verbale informato\nanalogico e l'eventuale accordo aesso allegato sono redatti in tanti\noriginali quante sono le parti che partecipano alla mediazione, oltre a\nun originale per il deposito presso l'organismo.\n\n— 7 —",
+    "s": 1.9127068519592285,
+    "prompt_tokens": 408,
+    "gen_tokens": 150,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2025-01-10_007_p14": {
+   "top": {
+    "text": "10-1-2025 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 7\n3) procedimenti per l'applicazione di misure di prevenzione o nei quali sono disposte misure di prevenzione;\nc) procedimenti che presentano carattere di urgenza, per la necessità di assumere prove indifferibili, nei casi di cui all'articolo 392 del codice di procedura penale. La dichiarazione di urgenza è fatta dal collegamento. All'udienza il giudice da atto a verbale delle modalità con cui si accerta dell'identità dei soggetti partecipanti e, ove trattasi di parti, della loro libera volontà. Di tutte le ulteriori operazioni è dato atto nel processo verbale;\ng) la previsione del rinvio delle udienze a data successiva al",
+    "s": 2.5406229496002197,
+    "prompt_tokens": 452,
+    "gen_tokens": 215,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "considerato aula d'udienza a tutti gli effetti di legge. Prima dell'udienza il giudice fa comunicare ai procuratori delle parti e al pubblico ministero, se è prevista la sua partecipazione, giorno, ora e modalità di unitàamente alla funzionalità dei servizi di comunicazione dei documenti informatici. Gli obblighi di pagamento del contributo unificato di cui all'articolo 14 del testo unico di cui al decreto del Presidente\n— 12 —",
+    "s": 1.6539561748504639,
+    "prompt_tokens": 408,
+    "gen_tokens": 118,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2025-01-10_007_p35": {
+   "top": {
+    "text": "10-1-2025 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 7\nAi sensi dell'art. 8, comma 3, della legge 27 ottobre 2023, n. 160,\nil testo integrale della direttiva è consultabile dalla data del 30 dicembre 2024 nel sito del Ministero delle imprese e del made in Italy:\nwww.mimit.gov.it\nIl nuovo regime di aiuti è volto a sostenere la realizzazione di piani di investimento di importo non inferiore a 5 milioni di euro e fino a 20 milioni di euro, realizzati dalle imprese, anche di grandi dimensioni, nelle aree territoriali previste dal Programma nazionale «Ricerca, innovazione e competitività per la transizione verde e digitale 2021-2027»,",
+    "s": 2.601011037826538,
+    "prompt_tokens": 452,
+    "gen_tokens": 222,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "33",
+    "s": 0.7618827819824219,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2025-08-18_190_p24": {
+   "top": {
+    "text": "18-8-2025 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 190\nCZ399 CZ400 CZ395 TOTALE\nCOMPLESSIVO\n2026 - 50.000.000,00 25.443.743,84 75.443.743,84\n2027 60.000.000,00 110.000.000,00 170.000.000,00",
+    "s": 2.144139051437378,
+    "prompt_tokens": 452,
+    "gen_tokens": 164,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "4. Nota MIT U.5281 dei 19 marzo 2023,\n5. Integrazione dei cronoprogrammi dei tre interventi, con il dettaglio della quota di avanzamento finanziario\nriferita alle risorse FSC 2021-2027, oggetto della richiesta di assegnazione CIPESS;\n— 22 —\n— 22 —\n— 22 —",
+    "s": 1.5644521713256836,
+    "prompt_tokens": 408,
+    "gen_tokens": 106,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2025-08-18_190_p63": {
+   "top": {
+    "text": "18-8-2025 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 190\nIn continuità con l’iniziativa promossa sul PON “R&C” 2007-2013, l'azione non si configurerà come\nun semplice aiuto rivolto a strutture pubbliche, ma sarà finalizzato anche a promuovere lo sviluppo\ncompetitivo delle Regioni ed, in particolare, delle imprese minori.",
+    "s": 1.8503339290618896,
+    "prompt_tokens": 452,
+    "gen_tokens": 129,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "61",
+    "s": 0.7639331817626953,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2025-08-18_190_p72": {
+   "top": {
+    "text": "18-8-2025 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 190\n• ridurre il gap di sviluppo che caratterizza le Regioni in ritardo di sviluppo.\nSi specifica, altresì, che detto intervento verrà implementato in sinergia con quanto previsto dal Piano",
+    "s": 1.5702099800109863,
+    "prompt_tokens": 452,
+    "gen_tokens": 93,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "14 Social Investment Finance Intermediaries in UK, la c.d. “finanza buona” di J.P. Morgan\n\n— 70 —",
+    "s": 1.004242181777954,
+    "prompt_tokens": 408,
+    "gen_tokens": 33,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2025-08-18_190_p79": {
+   "top": {
+    "text": "18-8-2025 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 190\n\nINDICE",
+    "s": 1.1831870079040527,
+    "prompt_tokens": 452,
+    "gen_tokens": 45,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "77",
+    "s": 0.7727839946746826,
+    "prompt_tokens": 408,
+    "gen_tokens": 3,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2025-08-30_201_p03": {
+   "top": {
+    "text": "30-8-2025 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 201\nDECRETI, DELIBERE E ORDINANZE MINISTERIALI\nMINISTERO DELLE IMPRESE\ngilanza del Ministero delle imprese e del made in Italy,",
+    "s": 1.5177862644195557,
+    "prompt_tokens": 452,
+    "gen_tokens": 86,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "della Corte dei conti il 31 gennaio 2024 n. 203, con il\nquale è stato conferito l’incarico di funzione dirigenziale\ndi livello generale della Direzione generale servizi di vi-\nnuta pubblicazione dell’istanza di composizione della crisi sul portale della CCIAA di Bari e, in data 7 agosto 2025, della richiesta di applicazione delle misure protettive del\n— 1 —",
+    "s": 1.675468921661377,
+    "prompt_tokens": 408,
+    "gen_tokens": 119,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2025-08-30_201_p05": {
+   "top": {
+    "text": "30-8-2025 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 201\nVisto l’art. 1, comma 990, della legge 30 dicembre 2018, n. 145, come modificato, da ultimo, dall’art. 1, comma 653, della citata legge n. 207 del 2024, con il quale, allo scopo di assicurare il proseguimento e l’acce-\nmore dell’attivazione delle Convenzioni di cui all’art. 8, ultimo capovoso, dell’ordinanza n. 110 del 2020, possa- no essere individuate dal sub Commissario:\na) mediante affidamento diretto dei servizi di sup-",
+    "s": 2.5077009201049805,
+    "prompt_tokens": 452,
+    "gen_tokens": 210,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "al comma 2 prevede che le professionalità qualifica\nte che compongono la struttura di monitoraggio e supporto\nto al complesso degli interventi di cui al comma 1, nelle\nn. 340 e successive modificazioni, in base ai quali i prov\nvedimenti commissariali divengono efficaci decorso\nil termine di trenta giorni per l'esercizio del controllo\n\n— 3 —",
+    "s": 1.5312838554382324,
+    "prompt_tokens": 408,
+    "gen_tokens": 102,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2025-08-30_201_p06": {
+   "top": {
+    "text": "30-8-2025 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 201\npreventivo di legittimità da parte della Corte dei conti e\npossono essere dichiarati provvisoriamente efficaci con\nmotivazione espressa dell’organo emanante;\nConsiderata l’urgenza e la indifferibilità di provvedere\n4. Per il monitoraggio e la gestione delle attività di ric-\ncostruzione pubblica e privata, il sub Commissario può\nstipulare appositi accordi o convenzioni con enti o società\npubbliche o a controllo pubblico, anche al fine di dotare\ni soggetti attuatori di servizi e strumenti gestionali e one",
+    "s": 2.363102912902832,
+    "prompt_tokens": 452,
+    "gen_tokens": 192,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "del decreto legislativo n. 165 del 2001. I relativi oneri sono posti a carico dei quadri economici degli interventi da realizzare.\n25A04778\n— 4 —\n— 4 —\n— 4 —",
+    "s": 1.2583632469177246,
+    "prompt_tokens": 408,
+    "gen_tokens": 67,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "gu_2025-08-30_201_p11": {
+   "top": {
+    "text": "30-8-2025 GAZZETTA UFFICIALE DELLA REPUBBLICA ITALIANA Serie generale - n. 201\n«10000 ui (100 mg)/ml soluzione iniettabile in siringa pre-\nriempita» - 10 siringhe preriempite in vetro graduate da 1 ml con ago\n- A.I.C. n. 051269165 (in base 10) 1JWMKF (in base 32);\n«10000 ui (100 mg)/ml soluzione iniettabile in siringa pre-\nriempita» - 10 siringhe preriempite in vetro graduate da 1 ml con ago\n«8000 ui (80 mg)/0.8 ml soluzione iniettabile in siringa pre-\nriempita» - 24 siringhe preriempite in vetro graduate da 0,8 ml con ago\ncon sistema di sicurezza - A.I.C. n. 051269379 (in base 10) 1JWMS3\n(in base 32);\n«8000 ui (80 mg)/0.8 ml soluzione iniettabile in siringa pre-",
+    "s": 3.301542282104492,
+    "prompt_tokens": 452,
+    "gen_tokens": 308,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "«8000 ui (80 mg)/0.8 ml soluzione iniettabile in siringa pre-\nriempita» - 24 siringhe preriempite in vetro graduate da 0,8 ml con ago\n- A.I.C. n. 051269367 (in base 10) 1JWMRR (in base 32);\n\n«6000 ui (60 mg)/0.6 ml soluzione iniettabile in siringa pre-\nriempita» - 50 siringhe preriempite in vetro graduate da 0,6 ml con ago\n- A.I.C. n. 051269569 (in base 10) 1JWMY1 (in base 32);\n\n— 9 —\n| | | | |\n| :--- | :--- | :--- | :--- |\n| | | | |",
+    "s": 34.68584394454956,
+    "prompt_tokens": 408,
+    "gen_tokens": 213,
+    "loop_cut": null,
+    "retry": true
+   }
+  }
+ }
+}
