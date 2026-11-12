@@ -2,6 +2,10 @@
 
 **OCR for Italian documents on a Mac.** [GLM-OCR](https://huggingface.co/zai-org/GLM-OCR) fine-tuned for Italian, compressed to 8 bits, run locally on Apple Silicon with MLX. Born-digital PDFs are read from their own text layer, and the model reads only the pages that need it.
 
+![From the original model to v1.5.0 on the same test pages: real Italian forms 74.6% to 79.9%, stress pages 83.7% to 96.6%, real PDFs 56.0% to 77.2%](docs/img/steps-v1.5.0.png)
+
+The whole story in six pages: [overview (English)](docs/overview-v1.5.0-en.pdf), [panoramica (italiano)](docs/overview-v1.5.0-it.pdf).
+
 - **Better than the original** on real Italian forms, on real forms in four other European languages, and on real PDFs, at **45% of the size** (1.2 GB instead of 2.7) and a third less memory.
 - **Measured the hard way.** Every test read is decided before it runs, in [`docs/LEDGER.md`](docs/LEDGER.md), with paired 95% intervals, and every number below is recomputed from the raw outputs by `pytest`. Losses are reported next to gains.
 - **Weights:** [`fabriziosalmi/GLM-OCR-ita-mlx-8bit`](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-mlx-8bit) on Hugging Face. A GGUF of the same fine-tuned weights, for llama.cpp on Linux, Windows and in Docker: [`fabriziosalmi/GLM-OCR-ita-GGUF`](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-GGUF), measured on its own and not shown equivalent ([`docs/HARNESS.md`](docs/HARNESS.md)). **Current release: v1.5.0** ([`CHANGELOG.md`](CHANGELOG.md)).
