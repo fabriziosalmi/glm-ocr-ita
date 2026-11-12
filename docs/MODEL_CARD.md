@@ -64,6 +64,10 @@ Every test read had its question and threshold written down before the read ([LE
 
 The weights are those of v1.0.0 (same SHA-256). The `glmocr` harness now reads PDFs: each page from its own text layer where the layer passes four checks (not an invisible OCR layer, no broken font map, ink under its text, content order a reading order), and with this model only where it does not. The idea and the checks come from [Indra OCR](https://github.com/datalab-to/indra) by Datalab (`indra_ocr/textlayer.py`, Apache-2.0), adapted. On the Omni Parse Bench subset above this reads 76.1% of the text tests against 62.5% for the model alone, +12.2 [+5.8, +19.6] (+8.2 [+2.0, +16.3] on the tests not derived from the PDF itself); 29 of the 80 pages pass the checks, and none of them is read worse than by the model. With mlx-vlm alone there is no PDF mode: render the page and read the image.
 
+## What changed in v1.5.0
+
+Same weights. The `glmocr` harness reads a page's top 16% and bottom 14% again on their own after the whole page, and merges in the lines the whole page lacks: letterheads, and closing lines under blank space. No band is read on a page that PP-LCNet_x1_0_doc_ori (PaddlePaddle, Apache-2.0, run in numpy) is sure is turned. Against the whole page, on test sets: XFUND Italian forms +2.20 [+0.89, +4.02], ocr-bench-v1 +4.78 [+3.10, +6.59], 200 unseen letters +3.69 [+2.67, +4.83], no page lost, about 20% more time ([LEDGER.md](https://github.com/fabriziosalmi/glm-ocr-ita/blob/main/docs/LEDGER.md), 2026-11-12). With mlx-vlm alone: crop the bands, read each with the same prompt, and add the lines the page lacks; the harness does it by default (`--no-bands` to skip).
+
 ## What changed in v1.4.0
 
 Same weights. The harness reads a looping page a third time when the second reading (penalty 1.1, which looks back 20 tokens) is still cut by a loop: penalty 1.3 over the last 256 tokens. On seven test sets this changed 16 pages: 5 gained, 2 lost, net +84 entities, median 20 s added on a page read again; pages that do not loop are read as before ([LEDGER.md](https://github.com/fabriziosalmi/glm-ocr-ita/blob/main/docs/LEDGER.md), "Stage-2 loop retry on seven test sets"). With mlx-vlm alone, see Use.
@@ -97,7 +101,7 @@ text = generate(model, processor, prompt, image="page.png", max_tokens=3000, tem
 # if that one still loops, read again with repetition_penalty=1.3, repetition_context_size=256 (v1.4.0)
 ```
 
-Or with the harness, which also guards memory and stops loops: `pip install -r requirements.lock -e .` in the repository, then `glmocr infer page.png` (the retry is on by default), or `glmocr infer file.pdf` (each page from its text layer where it can be trusted, else with the model).
+Or with the harness, which also guards memory and stops loops: `pip install -r requirements.lock -e .` in the repository, then `glmocr infer page.png` (the retry and the bands are on by default), or `glmocr infer file.pdf` (each page from its text layer where it can be trusted, else with the model).
 
 Tested with mlx 0.32.3 and mlx-vlm 0.7.6 (`requirements.lock` in the repository). `model.safetensors` SHA-256: `f98e8f0c4e26903f71cccd2c115add8000a150141963da6f7b51ed0624d61ccd`.
 

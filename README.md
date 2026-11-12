@@ -4,7 +4,7 @@
 
 - **Better than the original** on real Italian forms, on real forms in four other European languages, and on real PDFs, at **45% of the size** (1.2 GB instead of 2.7) and a third less memory.
 - **Measured the hard way.** Every test read is decided before it runs, in [`docs/LEDGER.md`](docs/LEDGER.md), with paired 95% intervals, and every number below is recomputed from the raw outputs by `pytest`. Losses are reported next to gains.
-- **Weights:** [`fabriziosalmi/GLM-OCR-ita-mlx-8bit`](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-mlx-8bit) on Hugging Face. A GGUF of the same fine-tuned weights, for llama.cpp on Linux, Windows and in Docker: [`fabriziosalmi/GLM-OCR-ita-GGUF`](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-GGUF), measured on its own and not shown equivalent ([`docs/HARNESS.md`](docs/HARNESS.md)). **Current release: v1.3.0** ([`CHANGELOG.md`](CHANGELOG.md)).
+- **Weights:** [`fabriziosalmi/GLM-OCR-ita-mlx-8bit`](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-mlx-8bit) on Hugging Face. A GGUF of the same fine-tuned weights, for llama.cpp on Linux, Windows and in Docker: [`fabriziosalmi/GLM-OCR-ita-GGUF`](https://huggingface.co/fabriziosalmi/GLM-OCR-ita-GGUF), measured on its own and not shown equivalent ([`docs/HARNESS.md`](docs/HARNESS.md)). **Current release: v1.5.0** ([`CHANGELOG.md`](CHANGELOG.md)).
 
 ## Results
 
@@ -23,6 +23,8 @@ Against the original model (`zai-org/GLM-OCR`, bf16), same pages, paired differe
 | OmniDocBench, **Chinese** pages read whole (edit distance x100, lower is better) | 45 | 14.8 | 19.7 | **-4.8 [-10.6, -0.9], worse** |
 | OmniDocBench, 200 pages read by regions (`--regions`): overall, formulas by edit distance | 200 | 93.8 | 93.7 | -0.1; text not worse on English or Chinese |
 | ocr-bench-v1, synthetic stress pages (camera captures, degraded scans, stamps), Italian and English | 50 | 83.7% | **91.8%** | **+8.1 [+4.2, +13.6]** |
+
+**v1.5.0, the bands** (below, How it works, 6), on the same test sets, against the release's whole page: XFUND Italian forms 77.7% to **79.9%** (+2.2 [+0.9, +4.0]), ocr-bench-v1 91.8% to **96.6%** (+4.8 [+3.1, +6.6]), Omni Parse Bench with the text layer 75.5% to **77.2%** (+3.1 [+0.0, +6.9] per page, not worse), 200 unseen Italian and English letters 92.4% to **96.1%** (+3.7 [+2.7, +4.8]); no page lost on any, about 20% more time.
 
 Scores are the share of entities found exactly (amounts, dates, tax codes, IBAN, VAT numbers, PEC addresses; on XFUND its annotated fields), or the benchmark's own scorer where it has one. The synthetic and SROIE rows were read before the loop retry existed (v1.0.0, same weights); the retry changes only pages that loop. Size 1184 MB against 2651, peak memory 2.10 GB against 3.16, 72 generated tokens/s against 65. Every table, the per-type and per-level breakdowns and the full history are in [`docs/RESULTS.md`](docs/RESULTS.md).
 
@@ -49,13 +51,16 @@ With mlx-vlm alone, use the official prompt: `Text Recognition:` right after the
 4. **PDFs.** A page's own text layer is used when it passes four checks: not an invisible OCR layer, no broken font map, ink under its text, a content order that is a reading order. Otherwise the page goes to the model. The idea and the checks come from [Indra OCR](https://github.com/datalab-to/indra) by Datalab (Apache-2.0, see [`NOTICE`](NOTICE)).
 5. **Regions (optional).** `--regions` reads a page after GLM-OCR's own pipeline: the layout detector of its [SDK](https://github.com/zai-org/glm-ocr) (Apache-2.0, in a separate PyTorch environment) finds the regions, each is read with the prompt of its kind, and the SDK's formatter assembles them. On OmniDocBench it lifts the overall score from 64.1 to 93.7 (tables, newspapers, Chinese pages); on real Italian forms it reads less than the whole page (-5.7), so it is not the default ([`docs/HARNESS.md`](docs/HARNESS.md) has the setup).
 
+6. **Bands.** After the whole page, its top 16% and bottom 14% are read on their own and the lines the whole page missed are put in: letterheads and closing lines under blank space. +3.7 points of entity recall on 200 unseen letters, no page worse, for 20% more time; `--no-bands` turns it off. No band is read on a page that an orientation classifier (PP-LCNet, PaddlePaddle, in numpy) is sure is turned.
+
 ## Limits
 
 - **Chinese, read whole, is worse** than with the original (above); read with `--regions` it is not worse.
 - **Not faster per page** than the original: generation is faster, reading the image costs the same.
 - **Real Italian documents measured:** forms, 40 DocAtlas documents, Gazzetta Ufficiale pages (dev). Invoices and phone photos of documents are not measured yet.
 - **Large amounts on dense pages.** On 10 adversarial synthetic pages, amounts of tens of millions are sometimes written "29.467,745,94" (-5.3 [-11.3, -0.7]). On the Gazzetta's real amounts of a million or more it does better than the original.
-- **Pages rotated by 90 degrees** are unreadable, as for the original: straighten them first.
+- **Pages rotated by 90 degrees** are unreadable, as for the original: straighten them first. The orientation classifier only keeps the bands off them.
+- **Bands with the GGUF:** they run, they are not measured there.
 - **PDF text layer:** text drawn as paths or inside images is not in a layer, so it is lost on a page read from its layer.
 
 ## Documentation

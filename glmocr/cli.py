@@ -52,6 +52,9 @@ def cmd_infer(a):
                                             regions.Layout(a.layout_python, keep=not a.drop_margins))
     if a.deskew is not None and (a.regions or a.image.lower().endswith(".pdf")):
         raise SystemExit("--deskew is measured on whole page images only: drop it for --regions and PDFs")
+    if not a.no_bands and not a.regions and a.deskew is None:   # the page, then its top and bottom bands (glmocr/bands.py)
+        from .bands import BandReader
+        plain = make; make = lambda: BandReader(plain())
     if a.image.lower().endswith(".pdf"):
         return infer_pdf(a, make)
     r = make().read(a.image, a.scale, deskew=a.deskew, trim=a.trim)
@@ -88,8 +91,13 @@ def cmd_run(a):
     d = corpus.corpus_dir(a.corpus)
     out = corpus.result_path(a.tag)
     out.parent.mkdir(exist_ok=True)
+    if a.bands and a.deskew is not None:
+        raise SystemExit("--bands and --deskew are not measured together: drop one")
     reader = Reader(a.model, adapter=a.adapter, max_tokens=a.max_tokens, mem_gb=a.mem_gb, wait=a.wait, prompt_style=a.prompt, retry_penalty=a.retry_penalty)
-    setup = {"model": a.model, "corpus": corpus.split_name(a.corpus)[0], "scale": a.scale, "max_tokens": a.max_tokens, "adapter": a.adapter, "prompt": a.prompt, **({"retry_penalty": a.retry_penalty} if a.retry_penalty else {}), **({"deskew": a.deskew, "trim": a.trim} if a.deskew is not None else {}), "env": environment()}
+    if a.bands:
+        from .bands import BandReader
+        reader = BandReader(reader)
+    setup = {"model": a.model, "corpus": corpus.split_name(a.corpus)[0], "scale": a.scale, "max_tokens": a.max_tokens, "adapter": a.adapter, "prompt": a.prompt, **({"retry_penalty": a.retry_penalty} if a.retry_penalty else {}), **({"deskew": a.deskew, "trim": a.trim} if a.deskew is not None else {}), **({"bands": True} if a.bands else {}), "env": environment()}
     if getattr(reader, "build_info", None):   # llama.cpp: its build is what the run was produced with
         setup["backend"] = "llama.cpp"; setup["server_args"] = reader.server_args; setup["env"]["llama.cpp"] = reader.build_info
     res = json.load(open(out)) if out.exists() else {"tag": a.tag, **setup, "load_s": reader.load_s, "pages": {}}
@@ -118,11 +126,11 @@ def cmd_score(a):
     rows = [score.summarize(a.corpus, t, a.upright) for t in a.tags]
     levels = sorted({l for r in rows for l in r["levels"]})
     print(f"corpus = {a.corpus}" + (", upright pages only" if a.upright else ""))
-    print(f"{'tag':26s} {'ent%':>6s} {'95% CI':>13s} {'upright':>7s} {'skipped':>8s} {'loops':>5s} | "
+    print(f"{'tag':26s} {'ent%':>6s} {'95% CI':>13s} {'loose':>6s} {'upright':>7s} {'skipped':>8s} {'loops':>5s} | "
           + " ".join(f"L{l}:ent/cer".rjust(13) for l in levels) + f" | {'s/pg':>5s} {'tok/s':>5s} {'peakGB':>6s} {'n':>4s}")
     for r in rows:
         cells = " ".join((f"{r['levels'][l]['recall']:4.0f}%/{r['levels'][l]['cer']:4.1f}%" if l in r["levels"] else "-").rjust(13) for l in levels)
-        print(f"{r['tag']:26s} {r['recall']:5.1f}% [{r['ci'][0]:4.1f}, {r['ci'][1]:4.1f}] {r['recall_upright']:6.1f}% "
+        print(f"{r['tag']:26s} {r['recall']:5.1f}% [{r['ci'][0]:4.1f}, {r['ci'][1]:4.1f}] {r['recall_loose']:5.1f}% {r['recall_upright']:6.1f}% "
               f"{len(r['skipped']):4d}/{r['upright']:<3d} {len(r['loops']):5d} | {cells} | {r['s_page']:5.1f} {r['gen_tps']:5.0f} {r['peak_gb']:6.2f} {r['pages']:4d}")
     types = sorted({t for r in rows for t in r["types"]})
     print("\nentity recall by type:\n" + f"{'tag':26s} " + " ".join(f"{t:>9s}" for t in types))
@@ -143,12 +151,12 @@ def cmd_score(a):
 
 def cmd_compare(a):
     from . import score
-    print(f"B - A, A = {a.base}, corpus = {a.corpus}; verdict by rule 4 (margin -1.5)")
-    print(f"{'B':26s} {'A':>6s} {'B':>6s} {'diff':>6s} {'95% CI':>15s}  {'verdict':10s} {'n':>4s}  pages lost/gained, worst")
+    print(f"B - A, A = {a.base}, corpus = {a.corpus}; verdict by rule 4 (margin -1.5), on the exact check; loose: typography folded")
+    print(f"{'B':26s} {'A':>6s} {'B':>6s} {'diff':>6s} {'95% CI':>15s}  {'verdict':10s} {'loose diff [95% CI]':>22s} {'n':>4s}  pages lost/gained, worst")
     for t in a.tags:
         c = score.compare(a.corpus, a.base, t, a.upright)
         print(f"{t:26s} {c['recall_a']:5.1f}% {c['recall_b']:5.1f}% {c['diff']:+5.1f}  [{c['ci'][0]:+5.1f}, {c['ci'][1]:+5.1f}]  "
-              f"{score.verdict(c['ci']):10s} {c['pages']:4d}  {len(c['lost'])}/{c['gained']}  " + ", ".join(f"{i} {n}" for n, i in c["lost"][:4]))
+              f"{score.verdict(c['ci']):10s} {c['diff_loose']:+5.1f} [{c['ci_loose'][0]:+5.1f}, {c['ci_loose'][1]:+5.1f}] {c['pages']:4d}  {len(c['lost'])}/{c['gained']}  " + ", ".join(f"{i} {n}" for n, i in c["lost"][:4]))
 
 
 def cmd_adaptive(a):
@@ -268,6 +276,7 @@ def main(argv=None):
     p.add_argument("--regions", action="store_true", help="read the page by regions, after GLM-OCR's own pipeline: its layout detector in its own environment, each region read with the prompt of its kind (glmocr/regions.py)")
     p.add_argument("--layout-python", help="--regions: the Python of an environment with glmocr[layout]==0.1.5 (default GLMOCR_LAYOUT_PYTHON)")
     p.add_argument("--drop-margins", action="store_true", help="--regions: leave out headers, footers, page numbers and footnotes, as the SDK does")
+    p.add_argument("--no-bands", action="store_true", help="read the whole page only: no second reading of its top and bottom bands (glmocr/bands.py): the bands add about 20%% to the time of a page, and gave 3.7 points of entity recall on letters (docs/LEDGER.md)")
     p = add("run", cmd_run, "OCR a page set and save results/<tag>.json; resumes a partial run")
     p.add_argument("model")
     p.add_argument("tag")
@@ -276,6 +285,7 @@ def main(argv=None):
     p.add_argument("--max-tokens", type=int, default=metrics.MAX_TOKENS)
     p.add_argument("--adapter", default=None, help="LoRA adapter folder from a fine-tuning run")
     p.add_argument("--wait", action="store_true", help="queue behind a running model job instead of refusing")
+    p.add_argument("--bands", action="store_true", help="also read each page's top and bottom bands and merge them in, as infer does by default (glmocr/bands.py)")
     p = add("score", cmd_score, "entity recall with 95%% CI, skipped blocks, loops, by level and type, speed")
     p.add_argument("tags", nargs="+")
     p.add_argument("--pages", action="store_true", help="also list the pages with a skipped block or a loop")

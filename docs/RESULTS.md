@@ -2,6 +2,19 @@
 
 The full record of the measurements behind each release, newest first, moved here from the README on 2026-10-15 unchanged. Every number in these tables is recomputed from `results/` by the test suite (`tests/test_tables.py`, and `tests/test_release.py` where the page sets are on the machine). Each test-set read had its question and threshold written in `LEDGER.md` before it ran.
 
+## Release v1.5.0
+
+Same weights as v1.3.0. What is new is the bands: after the whole page, its top 16% and bottom 14% are read on their own and the lines the whole page lacks are merged in, unless an orientation classifier is sure the page is turned (`glmocr/bands.py`, `glmocr/orient.py`). On by default in `glmocr infer`. Each step from the original model to today, on the same pages of three test sets (MLX; `LEDGER.md`, 2026-11-12, every question written before its read):
+
+| Test set | Original | Fine-tuned alone | Release, with its harness | With the bands | Bands against the release |
+|---|---|---|---|---|---|
+| XFUND Italian forms (val), entities | 74.6% | 74.9% | 77.7% | **79.9%** | +2.20 [+0.89, +4.02], 0 lost, 19 gained |
+| ocr-bench-v1 (test half), entities | 83.7% | 91.8% | 91.8% | **96.6%** | +4.78 [+3.10, +6.59], 0 lost, 28 gained |
+| Omni Parse Bench subset, text tests | 56.0% | 58.2% | 75.5% | **77.2%** | +3.1 [+0.0, +6.9] per page, 0 lost, 3 gained |
+| Correspondence, 200 letters no model had read, entities | - | - | 92.4% | **96.1%** | +3.69 [+2.67, +4.83], 0 lost, 65 gained |
+
+On ocr-bench-v1 no page loops, so the fine-tuned model alone and the release read every page the same, byte for byte. On Omni Parse Bench the release's harness reads 29 of the 80 pages from their PDF text layer, which the bands do not touch, and is the v1.4.0 harness (75.5%; 76.1% with v1.2.0's single retry). CER with the bands: XFUND 17.5% to 17.9%, ocr-bench-v1 6.9% to 2.9%, letters 3.0% to 3.3%; on MDPBench's phone photographs (test, a set whose failures were seen first, so a check rather than a confirmation) 22.8% to 23.8% for +0.57 [+0.19, +1.10]. The orientation classifier took no upright page for turned on any test set, and was sure of all 10 turned letters. Time: +14% on XFUND, +20% on the letters. `tests/test_release.py` recomputes the band rows where the sets and the readings are on the machine.
+
 ## Release v1.4.0
 
 Same weights as v1.3.0. What is new is a third reading for a page whose loop the second reading does not break: penalty 1.3 over the last 256 tokens, after penalty 1.1 over 20 (`glmocr/engine.py`, `glmocr/llama.py`). A page that does not loop is read exactly as before.

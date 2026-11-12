@@ -1,0 +1,928 @@
+{
+ "base": "ocrbt_v8d8e8op1_1.0_op_rp110",
+ "corpus": "external/ocrbench_test",
+ "pieces": {
+  "top": [
+   0.0,
+   0.16,
+   1.0
+  ],
+  "half1": [
+   0.0,
+   0.56,
+   1.4
+  ],
+  "half2": [
+   0.44,
+   1.0,
+   1.4
+  ],
+  "bottom": [
+   0.86,
+   1.0,
+   1.0
+  ]
+ },
+ "pages": {
+  "doc_002": {
+   "top": {
+    "text": "CONTO ECONOMICO RICLASSIFICATO A VALORE AGGIUNTO\nCONTO ECONOMICO A VALORE AGGIUNTO\nESERCIZIO 2024\n% RICAVI\nESERCIZIO 2023\n% RICAVI\nRicavi delle vendite e prestazioni\n24.580.400,00\n100,00%\n21.940.200,00\n100,00%\nVariazione rimanenze prodotti in corso\n(180.400,00)\n-0,73%\n320.100,00\n+1,46%\nAltri ricavi e proventi operativi\n410.250,00\n1,67%\n290.400,00\n1,32%\nVALORE DELLA PRODUZIONE\n24.810.250,00\n100,94%\n22.550.700,00\n102,78%\nCosti per materie prime, sussidiarie e consumo\n(9.450.200,00)\n-38,45%\n(8.640.100,00)\n-39,38%\nCosti per servizi e lavorazioni esterne\n(4.120.300,00)\n-16,76%\n(3.890.400,00)\n-17,73%\nCosti per godimento beni di terzi (locazioni/leasing)\n(680.450,00)\n-2,77%\n(640.200,00)\n-2,92%\nVALORE AGGIUNTO CARATTERISTICO\n10.559.300,00\n42,96%\n9.380.000,00\n42,75%",
+    "s": 5.888395071029663,
+    "prompt_tokens": 779,
+    "gen_tokens": 474,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "_____\nCertificazione del Collegio Sindacale rilasciata in data 12 Aprile 2025 senza riltevi.",
+    "s": 1.7009851932525635,
+    "prompt_tokens": 720,
+    "gen_tokens": 37,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_004": {
+   "top": {
+    "text": "PROSPETTO LIQUIDAZIONI PERIODICHE IVA ANNUALE\nPERIODO FISCALE IMPONIBILE 4% IMPONIBILE 10% IMPONIBILE 22% IVA ESIGIBILE IVA DETRATTÀ/DEBITO/(CREDITO)\nGennaio 2024 12.450,00 48.200,00 412.300,00 96.024,00 78.410,00 17.614,00\nFebbraio 2024 9.800,00 51.100,00 389.400,00 91.170,00 84.230,00 6.940,00\nMarzo 2024 14.200,00 62.400,00 478.100,00 111.990,00 120.450,00 (8.460,00)\nAprile 2024 11.100,00 44.900,00 395.200,00 91.878,00 71.300,00 20.578,00\nMaggio 2024 15.400,00 58.700,00 440.600,00 103.418,00 89.420,00 13.998,00\nGiugno 2024 18.900,00 69.100,00 510.300,00 119.932,00 102.150,00 17.782,00\nLuglio 2024 13.200,00 49.800,00 425.000,00 99.008,00 91.400,00 7.608,00\nAgosto 2024 6.400,00 28.400,00 240.100,00 55.918,00 62.100,00 (6.182,00)",
+    "s": 7.352585077285767,
+    "prompt_tokens": 779,
+    "gen_tokens": 630,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Codice Fiscale: 01849200109 - Liquidazione trimestrale non applicabile.",
+    "s": 1.6397490501403809,
+    "prompt_tokens": 720,
+    "gen_tokens": 30,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_006": {
+   "top": {
+    "text": "SEC FORM 10-K CONSOLIDATED BALANCE SHEETS\n\nCONSOLIDATED BALANCE SHEETS AS OF DEC 31, 2024 AS OF DEC 31, 2023\n(In thousands of US Dollars)\nASSETS: Current Assets\nCash and cash equivalents $ 14,285,120 $ 11,892,400\nShort-term marketable securities 8,940,300 7,450,200\nAccounts receivable, net of allowance of $142,000 12,410,550 10,850,300\nInventories (FIFO method) 6,120,400 5,420,100\nPrepaid expenses and other current assets 1,890,200 1,450,800\nTotal Current Assets $ 43,646,570 $ 37,063,800",
+    "s": 3.853419065475464,
+    "prompt_tokens": 779,
+    "gen_tokens": 262,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Common stock par value $0.001; 5,000,000,000 shares authorized.",
+    "s": 1.6295249462127686,
+    "prompt_tokens": 720,
+    "gen_tokens": 29,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_008": {
+   "top": {
+    "text": "DEBT SCHEDULE & FAIR VALUE MEASUREMENT MATRIX\n\nDEBT FACILITY PRINCIPAL STATED RATE MATURITY CARRYING VAIIR VALUE HIERARCHY\n3.250% Senior Notes due 2026 $ 1,500,000 3.250% Feb 15, 2026 $ 1,496,250 Level 1 Quoted Market\n4.125% Senior Notes due 2028 2,000,000 4.125% May 01, 2028 1,988,400 Level 1 Quoted Market\n5.375% Senior Notes due 2033 1,250,000 5.375% Nov 15, 2033 1,241,100 Level 1 Quoted Market\nSOFR + 1.15% Revolving Credit Facility 850,000 6.450% (Var) Jun 30, 2027 850,000 Level 2 Observable Inputs\nCommercial Paper Tranche A (30-day) 450,000 5.280% Jan 18, 2025 449,120 Level 2 Observable Inputs\nCommercial Paper Tranche B (60-day) 300,000 5.310% Feb 14, 2025 298,900 Level 2 Observable Inputs\nEquipment Finance Capital Leases 184,500 4.850% Oct 31, 2029 181,200 Level 3 DCF Valuation\nTOTAL LONG-TERM & SHORT-TERM DEBT $ 6,534,500 -- -- $ 6,504,970 $ 6,482,100",
+    "s": 5.925656080245972,
+    "prompt_tokens": 779,
+    "gen_tokens": 485,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Interest rate swap agreements hedge $1.2B of variable rate exposure through 2027.",
+    "s": 1.5903050899505615,
+    "prompt_tokens": 720,
+    "gen_tokens": 24,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_009": {
+   "top": {
+    "text": "BILINGUAL CONSOLIDATED STATEMENT IT/EN (IFRS)\nVOCE / LINE ITEM DESCRIZIONE BILINGUE / BILINGUAL DESCRIPTION 2024 (EUR) 2024 (USD equiv) 2023 (EUR)\nATTIVO IMMOBILIZZATO Non-Current Assets / Fixed Assets 14.890.400,00 $ 16,081,632 13.410.200,00\nBrevetti e license software Patents and software licenses 2.450.000,00 $ 2,646,000 1.980.000,00\nImpianti industriali Genova Industrial plant Genoa facilities 8.940.400,00 $ 9,655,632 8.520.200,00\nPartecipazioni estere USA Equity investments in US subsidiaries 3.500.000,00 $ 3,780,000 2.910.000,00\nATTIVO CIRCOLANTE Current Assets 22.410.800,00 $ 24,203,664 19.850.400,00\nRimanenze prodotti finiti Finished goods inventory 6.120.300,00 $ 6,609,924 5.410.000,00\nCrediti vs clienti UE/USA Trade receivables EU/US clients 11.450.200,00 $ 12,366,216 9.890.200,00\nDisponibilita bancarie liquide Cash and cash equivalents at banks 4.840.300,00 $ 5,227,524 4.550.200,00",
+    "s": 5.979683876037598,
+    "prompt_tokens": 779,
+    "gen_tokens": 491,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Tasso di cambio applicato / Applied EUR/USD closing rate: 1.0800 USD/EUR.\nRedatto in conformita agli standard contabili IFRS / Compliant with IFRS standards.",
+    "s": 1.7654383182525635,
+    "prompt_tokens": 720,
+    "gen_tokens": 45,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_013": {
+   "top": {
+    "text": "VERBALE DI ASSEMBLEA STRAORDINARIA DEI SOCI\nNEXUS LOGISTICS S.R.L. - REA MI-2194820 | Capitale Sociale Euro 150.000,00 i.v. | Milano, Via Monte Napoleone n. 8\nIn data 24 Settembre 2024 alle ore 10:30 si e riunita in Milano l'assemblea straordinaria della societa NEXUS LOGISTICS S.R.L. Assume la presidenza a norma di statuto il Sig. MARCO LEONI, il quale constata e fa constatare:\n- che l'intero capitale sociale di Euro 150.000,00 e regolamente rappresentato in proprio o per delega conferita ai sensi di legge;\n- che sono presenti tutti i membri del Consiglio di Amministrazione e il Sindaco Unico Dott. PAOLO MANCINI;\n- che l'assemblea e pertanto validamente costituita in forma totalitaria per discutere e deliberare sul seguente\nORDINE DEL GIORNO:\n1. Aumento del capitale sociale a titolo oneroso da Euro 150.000,00 ad Euro 500.000,00 con emissione di nuove quote senza sovrapprezzo;",
+    "s": 4.485228776931763,
+    "prompt_tokens": 779,
+    "gen_tokens": 330,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Null'altro essendovi da deliberare, la seduta e tolta alle ore 12:15. Il Presidente: f.to Marco Leoni. Il Segretario: f.to Dott. Paolo Mancini.",
+    "s": 1.833693027496338,
+    "prompt_tokens": 720,
+    "gen_tokens": 53,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_014": {
+   "top": {
+    "text": "PROCURA SPECIALE AD LITEM EX ART. 83 C.P.C.\nDelega di poteri processuali e sostanziali | Autentica di firma notarile o difensiva\nIo sottoscritto Dott. MATTEO RINALDI, nato a Savona il 29/08/1981, residente a Genova in Corso Pagano n. 14, C.F. RNLMTT81M29I480P,\nin qualita di Legale Rappresentante e Amministratore Delegato della societa LIGURIA SHIPPING SERVICES S.R.L., con sede legale in Genova, Via delle Casaccie n. 1, P.IVA e C.F. 03819200101.\nNOMINO E COSTITUISCO MIO PROCURATORE SPECIALE\nl'Avv. FILIPPO DE MARCHI del Foro di Genova, con studio in Genova, Via Roma n. 10/2, C.F. DMRFPP74A18D969Z, affinche rappresenti e difenda la predetta societa in ogni stato e grado del giudizio promosso nei confronti dell'Autorita Portuale del Mar Ligure Occidentale,\nconferendogli all'uopo ogni piu ampia facolta di legge, ivi compresa quella di transigere, conciliare, rinunciare agli atti e accettare rinunc, incassare somme e rilasciare quietanze liberatorie, chiamare terzi in causa, spiegare domande\nriconvenzioni, propono scalpi, conallia e ricerci per Cossizio, nono nomine costituti processuali in udizione ai socii dell'art. 102 a p.",
+    "s": 5.477219820022583,
+    "prompt_tokens": 779,
+    "gen_tokens": 437,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Genova, li 22 Novembre 2024. Il Mandante: f to Matteo Rinaldi. Per autentica della firma: Avv. Filippo De Marchi.",
+    "s": 1.7746410369873047,
+    "prompt_tokens": 720,
+    "gen_tokens": 46,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_015": {
+   "top": {
+    "text": "MASTER CLOUD SERVICES & LEVEL AGREEMENT (MSA-2024-V4)\n\nContract ID: MSA-US-EU-94819 | Effective Date: October 01, 2024 | Governing Law: State of Delaware / GDPR Art. 28\n\nThis Master Services Agreement ('Agreement') is entered into by and between AETHER CLOUD INFRASTRUCTURE INC., a Delaware corporation having its principal place of business at 100 Montgomery St, Suite 1800, San Francisco, CA 94104. ('Provider'), and ATLANTIC LOGISTICS PLC, a company registered in England and Wales under company number 04819201, having its registered office at 25 Bank Street, Canary Wharf, London E14 5JP ('Customer').\n\nNOW, THEREFORE, in consideration of the mutual covenants contained herein, the parties agree as follows:\n\nSECTION 1 (DEFINITIONS & SCOPE). 'Service Availability' means that the target multi-region database endpoints are capable of receiving and responding to valid REST/gRPC API requests with latency under 120ms, excluding scheduled maintenance windows notified at least 72 hours in advance via status dashboard.\n\nSECTION 2 (SERVICE LEVEL COMMITMENT & CREDITS). Provider guarantees a monthly Service Availability of not less than 99.995% ('Uptime SLA'). If monthly availability falls below 99.99%, Customer",
+    "s": 4.693920135498047,
+    "prompt_tokens": 779,
+    "gen_tokens": 353,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "IN WITNESS WHEREOF, the duly authorized representatives have executed this Master Agreement. Provider: David Vance, Chief Executive Officer. Customer: Claire Thornton, Chief Operating Officer.",
+    "s": 1.762145757675171,
+    "prompt_tokens": 720,
+    "gen_tokens": 42,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_017": {
+   "top": {
+    "text": "GENERAL IRREVOCABLE POWER OF ATTORNEY & COMMERCIAL DEED\n\nNotarial Reference: NY-2024-POA-7140 | State of New York, County of New York, ss.\n\nKNOW ALL MEN BY THESE PRESENTS, that VANGUARD MARITIME ASSETS LLC, a limited liability company duly organized under the laws of the State of Delaware, having its executive offices at 375 Park Avenue, New York, NY 10152 ('Principal').\n\nhereby irrevocably makes, constitutes, and appoints CAPTAIN ARTHUR W. STERLING, holder of US Coast Guard Master License No. 4918204, residing at 14 Harbor View Road, Newport, RI 02840, as its true and lawful Attorney-in-Fact ('Agent').\n\nTO ACT IN ITS NAME, PLACE, AND STEAD for the following specific purposes:\n\n(a) To execute, endorse, deliver, and negotiate any and all Ocean Bills of Lading, Charter Party Agreements (BIMCO Gencon 1994 form), Customs Cleared Manifests, and Bunker Supply Invoices relating to M/V ATLANTIC RUNNER (IMO No. 9841204):",
+    "s": 4.255682945251465,
+    "prompt_tokens": 779,
+    "gen_tokens": 306,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Witness my hand and official seal this 14th day of October 2024. Notary Public: Jonathan E. Vance, State of New York, No. 02VA6391024, Qualified in New York County. Commission Expires 09/30/2026.",
+    "s": 2.0105979442596436,
+    "prompt_tokens": 720,
+    "gen_tokens": 73,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_020": {
+   "top": {
+    "text": "JOINT VENTURE ACCORD & ARBITRATION PROTOCOL / PROTOCOLLO D'INTESA PARITETICO\nBilingual Legal Document / Documento Legale Bilingue | Rome - London Corporate Registry Protocol 2024-91\n\nSECTION 1 (GOVERNANCE STRUCTURE / STRUTTURA DI GOVERNANCE):\nEN: The Board of Directors of the JV HoldCo shall comprise six (6) directors, three (3) appointed by Italian Partner and three (3) appointed by UK Partner. Decisions require a 75% supermajority.\nIT: Il Consiglio di Amministrazione della HoldCo sara composto da 6 (sei) consiglieri, di cui 3 (tre) nominati dal Partner Italiano e 3 (tre) nominati dal Partner Britannico. Le delibere richiedono la maggioranza qualificata del 75%.\n\nSECTION 2 (DEADLOCK & RUSSIAN ROULETTE CLAUSE / CLAUSOLA DI STALLO E ROULETTE RUSSA):\nEN: In the event of unresolved corporate deadlock continuing for forty-five (45) business days, either Party may trigger the shotgun buy-sell clause at fair market valuation audited by KPMG.\nIT: Nell'ipotesi di stallo decisionale protratto per oltre 45 (quarantacinque) giorni lavorativi, ciascuna Parte potra attivare la clausola di riscatto paritetico con perizia estimativa asseverata da KPMG.",
+    "s": 4.767965078353882,
+    "prompt_tokens": 779,
+    "gen_tokens": 361,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "In fede / Signed and sealed. Partner Italiano: Dott. Federico Rossi. Partner Britannico: Sir Julian Sterling, KBE.",
+    "s": 1.6878547668457031,
+    "prompt_tokens": 720,
+    "gen_tokens": 36,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_022": {
+   "top": {
+    "text": "FARMACIA CENTRALE DR. FILIPPO GHIONE\nCORSO BUENOS AIRES 82 - 20124 MILANO (MI)\nP.IVA: 08912400159 - COD. UNIVOCO: M5UXCR1\nAUTORIZZAZIONE MIN. SALUTE N. 10482/MI\nSCONTRINO PARLANTE - DOCUMENTO FISCALE DEDUCIBILE\nDATA 18/10/2024 ORA 17:15:04 REG. 02 CASSA 01\nTRANSAZIONE N. 04829-0112 OP. 14 SILVIA\nTACHIPIRINA 1000MG 16CPR 5,90\nA AIG 034938014 FARMACO DETR",
+    "s": 2.589125156402588,
+    "prompt_tokens": 389,
+    "gen_tokens": 231,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "---",
+    "s": 0.5954532623291016,
+    "prompt_tokens": 331,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_024": {
+   "top": {
+    "text": "STAZIONE DI SERVIZIO AUTOSTRADALE N. 104\nRACCORDO A10 KM 12+400 - NORD\nGESTIONE RÈTE PETROLI S.R.L. - P.IVA 041920401Q2\nTERMINALE AUTOMATICO DI PIAZZALE N. 03\nSCONTRINO RIFORNIMENTO CARBURANTI\nDATA: 22/10/2024 ORA: 23:14:09 POMPA N. 04\nPRODOTTO: SENZAPIOMBO 95 OTTANI\nPREZZO AL LITRO EUR 1,789 / L\nLITRI PROCATI 44,72 LITRI",
+    "s": 2.319420099258423,
+    "prompt_tokens": 389,
+    "gen_tokens": 199,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "This is a sample of the text content from the image. The text is:\nThe image contains a blank space with no visible text. It is likely a placeholder or a decorative element.",
+    "s": 0.8916721343994141,
+    "prompt_tokens": 331,
+    "gen_tokens": 39,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_026": {
+   "top": {
+    "text": "SUNRISE METROPOLITAN DINER & GRILL\n428 8TH AVENUE, NEW YORK, NY 10001\nTEL: (212) 555-0194 EIN: 13-4819204\nSERVER: 07 CHLOE TABLE: 14 GUESTS: 3\n\nGUEST CHECK / CASH REGISTER RECEIPT\nDATE: 10/24/2024 TIME: 09:14 AM CHECK # 48192\n\n2 ALL-AMERICAN EGGS ANY STYLE $ 29.90\nSUBSTITUTE TURKEY BACON $ 3.00",
+    "s": 2.1353909969329834,
+    "prompt_tokens": 389,
+    "gen_tokens": 177,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "---",
+    "s": 0.5956108570098877,
+    "prompt_tokens": 331,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_027": {
+   "top": {
+    "text": "ORGANIC HARVEST WHOLE FOODS MARKET\nSTORE # 0492 - 120 MARKET STREET, SEATTLE, WA 98101\nPHONE: 206-555-8910  MANAGER: BRAD T.\nREGISTER 04  TRIP # 89410-02  MEMBER ID: 8841920\n\nREGISTER TRANSACTION RECEIPT\n10/26/2024  16:50:22  CASHIER: JESSICA M.\n\nORGANIC BABY SPINACH 16OZ $ 5.99\nHASS AVOCADOS 4-PACK $ 4.99",
+    "s": 2.244673013687134,
+    "prompt_tokens": 389,
+    "gen_tokens": 190,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Copyright © 2015 by The University of Chicago Press. All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of the publisher.",
+    "s": 1.128235101699829,
+    "prompt_tokens": 331,
+    "gen_tokens": 69,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_029": {
+   "top": {
+    "text": "PROBUILD INDUSTRIAL SUPPLY & HARDWARE\n1800 COMMERCIAL BLVD, AUSTIN, TX 78704\nPHONE: (512) 585-0481. TAX ID: 74-8192049\nCONTRACTOR ACCOUNT: # 4819 - VORTEX BUILDERS\n\nCOMMERCIAL CASH REGISTER INVOICE # INV-89410\nDATE: 10/29/2024 11:22:45 AM CLERK: MIKE R.\n\n3 2X4X8 PRESSURE TREATED LUMBER $ 23.94\n1 50LB BAG QUICK-SET CONCRETE $ 6.45\n2 50LB BAG TOTAL $ 29.39",
+    "s": 2.4497108459472656,
+    "prompt_tokens": 389,
+    "gen_tokens": 214,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "---",
+    "s": 0.5952651500701904,
+    "prompt_tokens": 331,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_031": {
+   "top": {
+    "text": "GAZZETTA UFFICIALE DEL REGNO D'ITALIA\nRoma - Sabato, 18 Maggio 1912 - Anno LIII - Num. 118\nREGIO DECRETO 4 Maggio 1912, n. 482.\nChe approva il regolamento per l'esecuzione della legge sui consorzi marittimi e portuali nel Compartimento di Genova.\nVITTORIO EMANUELE III.\nPer grazia di Dio e per volonta della Nazione\nRE D'ITALIA\nVeduta la legge 14 luglio 1907 n. 521\nArt. 2. La tariffa per l'assistenza alle navi mercantili a vapore e stabilita nella misura di centesimi 12 per ogni tonnellata di stazza netta fino a 1000 tonnellate, e di centesimi 6 per ciascuna tonnellata eccedente.\nArt. 3. Le navi estere godono dello stesso trattamento riservato alla bandiera nazionale, purche sussista reciprocita diplomatica stabilita da formali convenzioni intermazionali.\nOrdiniamo che il presente decreto, munito del sigillo dello Stato, sia inserito\nAVVISI GIUDIZIARI ED AMMINISTRATIVI\nTribunale Civile di Chiavari - Con sentenza 12 aprile 1912 è stato dichiarato il fallimento della Ditta Fratelli Ghiglione fu Domenico, esercenti il comimercio di legnami in Rapallo. Giudice delegato il cav. avv. Emilio Repetto, curatore il rag. Luigi Solari. E fissata l'adunanza dei creditori per l'esame dello stato passivo al giorno 28 giugno prossimo, ore 10 antimeridiane, dinanzi al predetto giudice nella sala delle pubbliche udienze.",
+    "s": 5.8103086948394775,
+    "prompt_tokens": 779,
+    "gen_tokens": 473,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Roma, tipografia delle Mantellate - Prezzo del fascicolo separato Cent. 15",
+    "s": 1.6054761409759521,
+    "prompt_tokens": 720,
+    "gen_tokens": 26,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_033": {
+   "top": {
+    "text": "RASSEGNA DI DIRITTO COMMERCIALE E MARITTIMO\nDiretta dal Prof. Cesare Vivante - Milano/Roma - Anno XXIII, Fasc. IV - 1925\nS ULLA CLAUSOLA 'SENZA RESPONSABILITA PER DANNI DA MARE'\nNota a sentenza della Corte di Cassazione del Regno, Sezioni Unite Civili, 15 Gennaio 1925.\nPres. D'Amelio - Est. Marghieri - Ditta Schiaffino c. Societa Lloyd Sabaudo.\nLa validita delle clausole d'esonero inserite nelle polizze di carico per navigazione d'oltremare costituisce argumento di incessante disputa dottrinale. La sentenza in esame affronta risolutamente il'nodo dei danni\nL'art. 498 del Codice di Commercio vigente sancisce la responsabilità del vettore per le perdite ed avarie sofferte.dalle cose caricate, salvo che provi esser derivate da caso fortuito o forza maggiore.\nLa giurisprudenza della Suprema Corte ha costantemente statuito che la clausola di franchigia o di esonero non può estendersi fino a coprire il dolo o la colpa grave dell'armatore o dei suoi preposti, poiche altrimenti verrebbe meno la causa stessa dell'obbligazione sinallagmatica.\nMASSIMA GIURISPRUDENZIALE:\nIn tema di trasporto marittimo di merci con nave a vapore, la prova del mare tempestoso non basta ad esonerare l'armatore dall'obbligo del risarcimento. ove non sia dimostrato che la nave fosse in perfetto stato di navigabilita (seaworthiness) alla partenza e che i portelli di carico fossero stati convenientemente ermetizzati contro l'invasione dell'acqua marina.",
+    "s": 5.925027847290039,
+    "prompt_tokens": 779,
+    "gen_tokens": 485,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Casa Editrice Dottor Francesco Vallardi, Milano - Corso di Porta Romana 42",
+    "s": 1.6032178401947021,
+    "prompt_tokens": 720,
+    "gen_tokens": 26,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_034": {
+   "top": {
+    "text": "BOLLETTINO UFFICIALE DEL MINISTERO DELLA MARINA\nRoma - Dispensa 24a - 12 Novembre 1904 - Anno XXXI\nMOVIMENTO DELLA FLOTTA E DISLOCAZIONI NAVALI\nCon Regio Decreto del 28 ottobre decorso, la regia nave corazzata\n'Benedetto Brin' e stata destinata alla 1a Divisione della Squadra Attiva nel\nMediterraneo Occidentale sotto il comando del capitano di vascello conte\nCarlo Mirabello.\nLa regia nave idrografica 'Scilla' ha terminato la campagna di\nscandagliamento dei bassifondi della secca delle formiche di Grosseto ed e\nN OMINE E PROMOZIONI NEL CORPO DI STATO MAGGIORE\nSono promossi al grado di Tenente di Vascello con anzianita dal 16 ottobre:\n- Sottotenente di Vascello De Courten Raffaele;\n- Sottotenente di Vascello Thaon di Revel Paolo;\n- Sottotenente di Vascello Acton Alfredo.\nAVVISI AI NAVIGANTI - MAR LIGURE E TIRRENO\nN. 342 - Fanale di Capo Mele (Liguria). Si rende noto ai naviganti che a\npartire dalla notte del 15 dicembre il fanale a luce fissa bianca sara sostituito\nda un nuovo apparecchio ottico lenticolare rotante a 4 eclissi al minuto con\nportata luminosa di miglia 28 nautiche.\nN. 343 - Boa luminosa del molo Foraneo di Genova ripristinata a luce\nintermittente verde.",
+    "s": 5.522141933441162,
+    "prompt_tokens": 779,
+    "gen_tokens": 442,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Roma, Officina Poligrafica Italiana, Via della Stelletta.21.",
+    "s": 1.5710504055023193,
+    "prompt_tokens": 720,
+    "gen_tokens": 22,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_037": {
+   "top": {
+    "text": "LLOYD'S REGISTER OF BRITISH AND FOREIGN SHIPPING\n\nLondon - Register of Steamers - October 1901 - Supplement No. 4\n\nPARTICULARS OF STEAMSHIPS CLASSIFIED 100A1\nSS ORIENTAL MONARCH - Official No. 104819. Steel Screw Steamer. 3 Decks, Shelter Deck. Rig: Schooner. Built: Glasgow, 1898, by Barclay, Curle & Co. Ltd. Port of Registry: Liverpool. Gross Tonnage: 5,420 tons; Net Register: 3,480 tons. Dimensions: Length 420.5 ft, Breadth 52.2 ft, Depth 29.8 ft. Triple expansion engines by builders: Cylinders 28 in, 46 in, 75 in; Stroke 54 in. 4 boilers, working pressure 180 lbs/sq.in. 680 Nominal Horse Power.\n\nCASUALTIES AND STRANDINGS - NORTH ATLANTIC\nSS BRITISH EMPIRE - From Montreal for Avonmouth, general cargo and cattle. Experienced severe hurricane on October 14th in Lat. 51 N, Long. 38 W. Steering gear carried away; star-board lifeboat smashed by sea; 42 bullocks washed overboard. Vessel put into Queenstown on October 19th for temporary repairs to rudder quadrant and pumps. Lloyd's Agent reports hull sound.\n\nNOTICES TO MARINERS - BRISTOL CHANNEL\nNotice is hereby given that the Breaksea Lightvessel has been shifted 2 cables West-South-West of her chartered position in consequence of dredging operations. The fog siren now gives two blasts every 45 seconds during thick or foggy weather. Mariners are cautioned to navigate with extreme vigilance.",
+    "s": 5.792656898498535,
+    "prompt_tokens": 779,
+    "gen_tokens": 471,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Printed by Lloyd's Register, 71 Fenchurch Street, London, E.C. - Entered at Stationers' Hall.",
+    "s": 1.6605968475341797,
+    "prompt_tokens": 720,
+    "gen_tokens": 32,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_040": {
+   "top": {
+    "text": "THE COLONIAL TRADE & COMMODITIES REVIEW\n\nLiverpool & London - Friday, October 11, 1907 - Vol. XVIII, No. 918\n\nLIVERPOOL COTTON MARKET - FUTURES & SPOT REPORT\nMiddling American cotton closed steady at 6,42d per lb. Sales of the week reached 48,000 bales, including 39,200 American and 5,400 Egyptian Sakellaridis.\nReceipts at US Gulf ports for the week totaled 310,000 bales, against 285,000 bales for the corresponding period last season. Manchester spinners report moderate demand for 32s twist and 40s weft, with yarn prices holding\n\nSINGAPORE & PENANG TIN AND RUBBER AUCTIONS\nStraits tin advanced to £168 10s per ton for three months prompt, following active buying by American sheet metal syndicates. Shipments from Penang for the first half of October are estimated at 2,400 tons.\nPlantation Para rubber (smoked sheet) sold at auction at 3s 8d per lb, with crepe grades realizing 3s 10d. Heavy arrivals from Ceylon and Federated Malay States.\n\nBALTIC TIMBER & PITPROP FREIGHTS.\nFreights from Kronstadt and Archangel to East Coast coal ports are quoted at 28s per standard for deals and battens. White Sea navigation will close earlier than usual owing to early frost in the Dvina river.\nCoal export fixtures from Cardiff to Genoa: 8s 6d for 4,500-ton steamers; Cardiff to Port Said: 7s 9d; Tyne to Kronstadt: 5s 3d.",
+    "s": 5.492102146148682,
+    "prompt_tokens": 779,
+    "gen_tokens": 437,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Liverpool, Printed by Turner & Dunnett, 17-19 Fenwick Street - Subscription 20s per annum.",
+    "s": 1.6703288555145264,
+    "prompt_tokens": 720,
+    "gen_tokens": 34,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_041": {
+   "top": {
+    "text": "SCHEDA TECNICA DI COLLAUDO - ELETTROPOMPA INDUSTRIALE\nSPEC-TEC-2024-EP94 | REV. 3.2 | MATRICOLA: EP-8492019-B\nPARAMETRO NOMINALE VALORE DI PROGETTO TOLLERANZA UNITA DI MISURA METODO PROVA\nPortata nominale (Q_nom) 145,50 +/- 2,5% m3/h ISO 9906 Gr. 1B\nPrevalenza manometrica (H) 182,40 +/- 1,8% m c.1. Manometro Differenziale\nPotenza assorbita all'asse (P2) 92,40 +/- 3,0% kW Wattmetro Digitale\nRendimento idraulico (eta_hyd) 81,65 > 80,0% % Calcolo. Calorimetrico\nVelocita angolare rotore (omega) 2950 +/- 15 giri/min (RPM) Tachimetro Ottico\nTensione di alimentazione (V_n) 400 / 690 +/- 5,0% V (Trifase 50Hz) Norma. CEI EN 60034\nCustodia (E) 162,0 +/- 4,00 1 / 400W",
+    "s": 4.694185972213745,
+    "prompt_tokens": 779,
+    "gen_tokens": 353,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "---",
+    "s": 1.4002721309661865,
+    "prompt_tokens": 720,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_044": {
+   "top": {
+    "text": "SCHEDA DATI DI SICUREZZA (SDS) - REGOLAMENTO (UE) 2020/878\nNOME COMMERCIALE: SOLVESSO-150 ND | CAS: 64742-94-5 | CE: 918-811-1\nSEZIONE 9: PROPRIETA CHIMICO-FISICHE VALORE SPERIMENTALE UNITA METODO NORMATIVO\nStato fisico e colore Liquido limpido incolore -- Ispezione visiva\nPunto di infiammabilità (Flash Point) 65,0 gradi C ASTM D93 Vaso Chiuso\nPunto di ebollizione iniziale 182,0 gradi C a 1013 hPa ASTM D86 Distillazione\nPressione di vapore a 20 gradi C 0,09 kPa (0,9 mbar) Metodo isoteniscopio\nDensita relativa a 15 gradi C 0,895 g/cm3 (kg/dm3) ISO 12185 Densimetro\nViscosita cinematica a 20 gradi C 1,24 mm2/s (cSt) ASTM D445 Capillare\nSoldato 25 gradi C 0,030 (1,000 ml) OSTM D105 Classe E\nSoldato 25 gradi C 0,030 (1,000 ml) OSTM D105 Classe E",
+    "s": 4.999906778335571,
+    "prompt_tokens": 779,
+    "gen_tokens": 386,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "---",
+    "s": 1.4027750492095947,
+    "prompt_tokens": 720,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_045": {
+   "top": {
+    "text": "VERBALE DI COLLAUDO STATICO E VERIFICA SERRAGGIO BULLONI\nCOMMESSA: PONTE STRALLATO N. 84-BIS | EN 1090-2 CLASSE ESECUZIONE EXC3\nNODO STRUTTURALE CLASSE BULLONERIA DIAMETRO N. BULLONI COPPIA PRECARICO (N*m) VERIFICA TORSIONALE\nGiuntó N1 - Trave Principale Ca 10.9 HVP zincato caldo M27 x 110 48 1250 +/- 5% Conforme (Coppia OK)\nGiunto N2 - Fazzolettto Controve 10.9 HVP zincato caldo M24 x 95 32 880 +/- 5% Conforme (Coppia OK)\nAttacco Strallo S3 - Piastra An 12.9 Bonificato speciale M30 x 140 24 1950 +/- 3% Conforme (Ultrasuoni OK)\nFascia Inferiore Cassone Metall 8.8 Strutturale EN 14399 M20 x 80 64 450 +/- 6% Conforme (Calibratura OK)\nPiastra d'Appoggio su Sella Pul 10.9 HVP. M36 x 180 16 3200 +/- 4% Conforme (Controllo 100%)\nControlli non distruttivi (CND) eseguiti secondo UNI EN ISO 17638 (Magnetoscopia MT 100%-cordoni di saldatura d'angolo).",
+    "s": 5.3607940673828125,
+    "prompt_tokens": 779,
+    "gen_tokens": 425,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "---",
+    "s": 1.4013721942901611,
+    "prompt_tokens": 720,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_046": {
+   "top": {
+    "text": "INDUSTRIAL THREE-PHASE ASYNCHRONOUS MOTOR DATASHEET\nFRAME SIZE: IEC 315M-4 | MODEL: IND-315M4-160kW | EFFICIENCY: IE4 SUPER PREMIUM\n\nOPERATING PARAMETER RATED VALUE TOLERANCE / LIMIT ENGINEERING UNIT TEST CODE\nRated Mechanical Output (P_N) 160.0 Nominal kW (214.5 HP) IEC 60034-1\nRated Supply Voltage (U_N) 400 Delta / 690 Y +/- 10% V AC at 50 Hz EN 50160 Power Quality\nFull Load Current (I_N) 278.4 +/- 5% A (Amperes at 400V) Current Transducer CT\nShaft Synchronous Speed (n_s) 1500 -- RPM (4 Poles) Theoretical f = 50Hz\nFull Load Shaft Speed (n_N) 1488 +/- 2 RPM RPM (Slip s = 0.80%) Stroboscopic Tach\nRated Full Load Torque (T_N) 1027.0 -- N*m (Newton-meters) Inline Torquemeter",
+    "s": 4.42490291595459,
+    "prompt_tokens": 779,
+    "gen_tokens": 325,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "---",
+    "s": 1.4008491039276123,
+    "prompt_tokens": 720,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_049": {
+   "top": {
+    "text": "32-BIT DUAL-CORE RISC-V EMBEDDED SYSTEM-ON-CHIP TIMING SPEC\nDEVICE ID: RV32-AX4819 | PACKAGE: QFN-68.8x8mm.0.4mm PITCH | REV: E\n\nBUS TIMING SYMBOL DESCRIPTION PARAMETER MIN TYP MAX UNIT CONDITIONS\nt_CLK Master Core Clock Cycle Tim 4.16 -- -- ns f_SYS = 240 MHz PLL locked\nt_SU_SPI SPI Peripheral Input Setup 1.25 -- -- ns C_L = 15 pF, VDD = 3.3V\nt_HD_SPI SPI Peripheral Input Hold 0.85 -- -- ns V_IH = 2.0V, V_IL = 0.8V\nt_VAL_SPI SPI Output Data Valid Delay -- 2.10 3.45 ns Master mode mode 0/3\nt_BUF_I2C I2C Fast-Mode Plus Bus Free 500 -- -- ns Between STOP and START cond.\nt_LOW_I2C I2C Clock SCL Low Period 500 -- -- ns f_SCL = 1.0 MHz Fm+ mode",
+    "s": 4.14055609703064,
+    "prompt_tokens": 779,
+    "gen_tokens": 294,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "---",
+    "s": 1.4018099308013916,
+    "prompt_tokens": 720,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_051": {
+   "top": {
+    "text": "MODELLO DI PAGAMENTO UNIFICATO F24 - AGENZIA DELLE ENTRATE\nCODICE FISCALE: RSSGNN75T12D969Y | COGNOME: ROSSI | NOME: GIOVANNI | DATA NASCITA: 12/12/1975 | COMUNE: GENOVA (GE)\nSEZIONE ERARIO - IMPOSTE DIRETTE, IVA, RITENUTE ALLA FONTE\nCODICE TRIBUTO RATEAZIONE ANNO RIF. IMPORTI A DEBITO VERSATI IMPORTI A CREDITO COMPENSATI\n1040 (Ritenute lav. autonomo) 0101 2024 1.450,00 0,00\n6099 (Versamento saldo IVA) 0104 2023 4.890,20 0,00\n4001 (Saldo IRPEF persone fisiche) 0205 2023 3.120,00 0,00",
+    "s": 3.9867122173309326,
+    "prompt_tokens": 779,
+    "gen_tokens": 277,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "ESTRÈMI DEL VERSAMENTO: DELEGA BANCARIA QUIETANZATA IL 16/06/2024 | BANCA INTESA SANPAOLO AG. 0481 | CODICE CRO: 049182049182",
+    "s": 2.0469582080841064,
+    "prompt_tokens": 720,
+    "gen_tokens": 77,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_054": {
+   "top": {
+    "text": "DICHIARAZIONE IMU / IMPI (IMPOSTA MUNICIPALE PROPRIA)\nCOMUNE DI GENOVA - CODICE CATASTALE D969 | DICHIARANTE: VLLMRA70R10D969Z\nQUADRO A - IDENTIFICAZIONE DEGLI IMMOBILI OGGETTO DI VARIAZIONE\nN. IMM. FOGLIO NUMERO SUB ZONA CATEGORIA CLASSE VALORE CATASTALE RI QUOTA % DETRAZIONE\n01 104 842 12 01 A/3 (Economica) 04 118.420,00 100% EUR 200,00\n02 104 842 18 01 C/6 (Autorimessa) 02 18.900,00 100% EUR 0,00\n03 089 312 04 02 A/2 (Civile) 03 185.400,00 50% Locato a canone conc.",
+    "s": 4.134437084197998,
+    "prompt_tokens": 779,
+    "gen_tokens": 293,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "PRESENTATA PRESSO L'UFFICIO TRIBUTI DEL COMUNE DI GENOVA - PROTOCOLLO TRIB-2024-84912",
+    "s": 1.7750298976898193,
+    "prompt_tokens": 720,
+    "gen_tokens": 46,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_056": {
+   "top": {
+    "text": "SCHEDULE C (FORM 1040) - PROFIT OR LOSS FROM BUSINESS\n\nNAME OF PROPRIETOR: ROBERT T. STERLING | SSN: 148-92-0491 | BUSINESS NAME: STERLING CLOUD CONSULTING | EIN: 84-1920491\n\nPART I - GROSS INCOME & PART II - DEDUCTIBLE EXPENSES\n\nLINE NO. INCOME / EXPENSE LINE DESCRIPTION REPORTED AMOUNT (USD)\nLine 1 Gross receipts or sales from 1099-NEC forms $ 248,900.00\nLine 2 Returns and allowances plus refunds $ (1,450.00)\nLine 3 Balance (Subtract line 2 from line 1) $ 247,450.00",
+    "s": 3.4378840923309326,
+    "prompt_tokens": 779,
+    "gen_tokens": 217,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "FOR PAPERWORK REDUCTION ACT NOTICE, SEE SEPARATE INSTRUCTIONS | OMB NO. 1545-0074",
+    "s": 1.713690996170044,
+    "prompt_tokens": 720,
+    "gen_tokens": 39,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_057": {
+   "top": {
+    "text": "FORM W-2 WAGE AND TAX STATEMENT - COPY B FOR FEDERAL TAX RETURN\n\nEMPLOYEE SSN: 248-19-2041 | EMPLOYER EIN: 13-8491029\nEMPLOYER: QUANTUM ALGORITHM LABS INC - 500 BROADWAY, NEW YORK, NY 10012\nEMPLOYEE: ALEXANDER M. CHEN - 42 PINE ST, BROOKLYN, NY 11201\n\nBOXES 1-20: FEDERAL, SOCIAL SECURITY, MEDICARE AND STATE WITHHOLDING\n\nBOX NUMBER BOX TITLE / DESCRIPTION AMOUNT (USD)\nBox 1 Wages, tips, other compensation $ 164,850.00\nBox 2 Federal income tax withheld $ 32,410.50\nBox 3 Social security wages (Subject to $160,200.cap) $ 160,200.00",
+    "s": 3.954319953918457,
+    "prompt_tokens": 779,
+    "gen_tokens": 262,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "DEPARTMENT OF THE TREASURY - INTERNAL REVENUE SERVICE | OMB NO. 1545-0008",
+    "s": 1.6972618103027344,
+    "prompt_tokens": 720,
+    "gen_tokens": 36,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_058": {
+   "top": {
+    "text": "HM REVENUE & CUSTOMS (HMRC) - SELF ASSESSMENT SA100 TAX CALCULATION\n\nUNIQUE TAXPAYER REFERENCE (UTR): 84910 29481 | NATIONAL INSURANCE NUMBER: QQ 12 34 56 A | TAX YEAR: 2023/24\n\nTAX CALCULATION SUMMARY SHEET - RESIDENT INDIVIDUAL\n\nBOX REF INCOME & TAX BREAKDOWN CALCULATED VALUE (GBP)\nBox INC1 Total employment income (from P60 certificates) GBP 88,400.00\nBox INC2 UK property rental profit after finance costs GBP 14,250.00\nBox INC3 UK dividends received from trading company shares GBP 22,000.00",
+    "s": 3.4952030181884766,
+    "prompt_tokens": 779,
+    "gen_tokens": 223,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "HMRC TAX RETURN RECEIPT CONFIRMATION - SUBMITTED ONLINE WITH GATEWAY ID: GW-8491024",
+    "s": 1.705031156539917,
+    "prompt_tokens": 720,
+    "gen_tokens": 38,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_063": {
+   "top": {
+    "text": "CENTRO DIAGNOSTICO MEDICO LIGURE S.R.L.\nLABORATORIO ANALISI CLINICHE SPECIALISTICHE - ISO 9001:2015\nSETTORE CHIMICA CLINICA E MICROSCOPIA OTTICA\nPAZIENTE: GRASSO MATTEO | DATA NASCITA: 05/11/1990 | SESSO: M | ID: 948192\nDATA ACCETTAZIONE: 24/10/2024 08:30 | DATA REFERTAZIONE: 24/10/2024 12:15\nESAME CHIMICO-FISICO E MICROSCOPICO DELLE URINE (COMPLETO)\nESAME FISICO-CHIMICO RISULTATQ FLAG UNITA VALORI NORMALI\nColore Giallo paglierino -- Giallo paglierino\nAspetto Lievemente torbido *H* -- Limpido\nDensita relativa (Peso specifico) 1.022 -- [1.015 - 1.028]",
+    "s": 4.057019948959351,
+    "prompt_tokens": 779,
+    "gen_tokens": 285,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "IL BIOLOGO ANALISTA: DOTT. FABIO COSTA - O.N.B. N. AA_043192",
+    "s": 1.686467170715332,
+    "prompt_tokens": 720,
+    "gen_tokens": 36,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_064": {
+   "top": {
+    "text": "AZIENDA SANITARIA LOCALE ASL 3 GENOVESE\nLABORATORIO DI MICROBIOLOGIA CLINICA E VIROLOGIA\nRESPONSABILE MICROBIOLOGO: DOTT.SSA MARTA VECCHIO\nPAZIENTE: MORI GIUSEPPE | ETA: 71 | SESSO: M | COD. SAN.: GE-0348192\nMATERIALE: LIQUIDO BRONCOASPIRATO (BAL) | ISOLAMENTO BATTERICO: CEPPO N: 01\nMICRORGANISMO IDENTIFICATO: Pseudomonas aeruginosa (Carica: > 100.000 UFC/mL)\nANTIBIOGRAMMA (TEST DI SENSIBILITA AI CHEMIOTERAPICI) - METODO EUCAST 2024\nMOLECOLA ANTIBIOTICA MIC (mg / L) INTERPRETAZIONE CLINIBREAKPOINT RESISTENZA (R >)\nPiperacillina / Tazobactam <= 8 / 4 S (Sensibile dose standard) 16 mg/L\nCeftazidime 2,0 S (Sensibile) > 8,0 mg/L\nCefepime 4,0 S (Sensibile a dosaqqio aurantiato)",
+    "s": 4.608120918273926,
+    "prompt_tokens": 779,
+    "gen_tokens": 344,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "DATA DI VALIDAZIONE CLINICA: 26/10/2024 ORE 16:30 - FIRMA MEDICO MICROBIOLOGO: DOTT.SSA M. VECCHIO",
+    "s": 1.8698081970214844,
+    "prompt_tokens": 720,
+    "gen_tokens": 57,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_066": {
+   "top": {
+    "text": "MASSACHUSETTS GENERAL BRIGHAM - DEPARTMENT OF PATHOLOGY\nCLINICAL HEMATOLOGY CORE LABORATORY - CAP ACCREDITED # 1481920\nMEDICAL DIRECTOR: DR. JONATHAN M. REED, MD, FCAP\n\nPATIENT: STERLING, EVELYN R. | MRN: 948-192-04 | DOB: 06/12/1974 | AGE: 50 | SEX: F\nORDERING PHYSICIAN: DR. K. PATEL, MD | COLLECTION DATE: 10/22/2024 06:30 AM | ACCESSION: H-24-819204\n\nCOMPLETE BLOOD COUNT (CBC) WITH AUTOMATED 5-PART DIFFERENTIAL\n\nTEST COMPONENT OBSERVED VALUE ALERT FLAG STANDARD UNITS ADULT REFERENCE INTERVAL\nWhite Blood Cell Count (WBC) 3.12 *LOW* x10^3 / uL [4.50 - 11.00]\nRed Blood Cell Count (RBC) 3.84 *LOW* x10^6 / uL [4.00 - 5.20]\nHemoglobin (HGB) 11.2 *LOW* q / dL [12.0 - 16.0]",
+    "s": 4.666695833206177,
+    "prompt_tokens": 779,
+    "gen_tokens": 350,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "REVIEWED AND DIGITALLY CERTIFIED BY: RACHEL E. MORRIS, LEAD, MEDICAL LABORATORY SCIENTIST, MLS(ASCP)CM",
+    "s": 1.8089993000030518,
+    "prompt_tokens": 720,
+    "gen_tokens": 50,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_067": {
+   "top": {
+    "text": "QUEST DIAGNOSTICS NATIONAL REFERENCE LABORATORY\n33608 ORTEGA HWY, SAN JUAN CAPISTRANO, CA 92675\nCLIA ID NO: 05D0648192 | CAP NO: 2248192\n\nPATIENT: THORNE, RICHARD D. | SSN: XXX-XX-4819 | DOB: 11/04/1958 | AGE: 65 | SEX: M\nCLIENT: PACIFIC COAST INTERNAL MEDICINE | PHYSICIAN: DR. H. VANCE, MD | SPECIMEN ID: QD-894102941\n\nCOMPREHENSIVE METABOLIC PANEL (CMP-14) - FASTING SERUM\n\nANALYTE TEST NAME VALUE STATUS CONVENTIONAL UNITS NORMAL ADULT REFERENCE INTERVAL\nGlucose (Fasting Hexokinase) 128 HIGH mg / dL [65 - 99 Normal; 100-125 Impaired]\nBlood Urea Nitrogen (BUN) 26 HIGH mg / dL [7 - 20]\nCreatinine (Enzymatic IDMS) 1.52 HIGH mg / dL [0.70 - 1.30]",
+    "s": 4.5571980476379395,
+    "prompt_tokens": 779,
+    "gen_tokens": 339,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "ELECTRONICALLY REPORTED: 10/24/2024 11:45 EST | MEDICAL DIRECTOR: STEPHEN W. CROSS, MD",
+    "s": 1.7910809516906738,
+    "prompt_tokens": 720,
+    "gen_tokens": 48,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_070": {
+   "top": {
+    "text": "JOHNS HOPKINS MEDICINE - DEPARTMENT OF PATHOLOGY\nSURGICAL PATHOLOGY DIVISION - WEINBERG BUILDING, BALTIMORE, MD 21287\nPATHOLOGIST IN CHIEF: DR. RALPH H. HRUBAN, MD\n\nPATIENT: STANFORD, GORDON W. | RECORD NO: JH-8491024 | DOB: 09/24/1952 | AGE: 72 | SEX: M\nSURGEON: DR. W. TUCKER, FACS | SPECIMEN RECEIPT: 10/26/2024 | SURGICAL PATHOLOGY NO: SP-24-94819\n\nFINAL SURGICAL PATHOLOGY DIAGNOSTIC REPORT\n\nSPECIMEN PART CLINICAL INDICATION GROSS EXAMINATION\nPart A: Prostate Needle Core Biopsies (12 Cores) Elevated PSA 8.4 ng/mL, nodule in 12 cassettes labeled A1 through A12. Aggregate length 18.5 cm cores.\nMICROSCOPIC DIAGNOSIS AND GLEASON SCORE:\nCore A1 (Right Base Lateral) Prostatic Adenocarcinoma Gleason Score: 4 + 3 = 7 (Grade Group 3). Involving 65% of core length.",
+    "s": 4.736737966537476,
+    "prompt_tokens": 779,
+    "gen_tokens": 358,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "PATHOLOGIST SIGNATURE: DR. ELEANOR M. WINSLOW, MD, ASSOCIATE PROFESSOR OF PATHOLOGY",
+    "s": 1.6813099384307861,
+    "prompt_tokens": 720,
+    "gen_tokens": 35,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_073": {
+   "top": {
+    "text": "POLIZZA DI CARICO MARITTIMA (OCEAN BILL OF LADING) - PORTO DI GENOVA\nB/L NUMBER: MED-GEN-2024-84910 | ORIGINAL NEGOTIABLE | LINEA MARITTIMA MEDITERRANEO-AMERICA\n\nCARICATORE / SHIPPER\nMECCANICA DI PRECISIONE LIGURE S.R.L. - VIA AL MOLO 4, GENOVA. (ITALIA)\n\nDESTINATARIO / CONSIGNEE\nTO THE ORDER OF: JPMORGAN CHASE BANK N.A. - NEW YORK, NY (FOR ACCOUNT OF HUDSON TOOLS CORP)\n\nNOTIFY PARTY",
+    "s": 3.1461219787597656,
+    "prompt_tokens": 779,
+    "gen_tokens": 184,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "RILASCIATO IN TRE ORIGINALI (3/3) - NOLI PAGABILI A DESTINAZIONE (FREIGHT COLLECT). FIRMA COMANDANTE O RACCOMANDATARIO: GENOVA MARITTIMA S.P.A.",
+    "s": 2.0016989707946777,
+    "prompt_tokens": 720,
+    "gen_tokens": 72,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_074": {
+   "top": {
+    "text": "DOCUMENTO DI TRASPORTO (D.D.T.) - D.P.R. 472/1996\nDDT N. 2024/08491 - DATA: 28/10/2024 - ORA TRASPORTO: 09:15 | PROGRESSIVO COLLI: 12\nCEDENTE / MITTENTE\nELETTROTECNICA GENOVESE S.P.A. - VIA REX 12, 16149 GENOVA - P.IVA 01928370104 - REA GE-281940\nCESSIONARIO / DESTINATARIO\nAEROSPACE COMPONENTI TORINO S.R.L. - STRADA DEL FRANCESE 45, 10156 TORINO - P.IVA 04819200018\nLUOGO DI DESTINAZIONE MERCI",
+    "s": 3.6462228298187256,
+    "prompt_tokens": 779,
+    "gen_tokens": 240,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "FIRMA DEL MITTENTE: F.TO ELETTROTECNICA | FIRMA DEL VETTORE: F.TO SUBALPINA | FIRMA PER RICEVUTA DESTINATARIO:",
+    "s": 1.855226755142212,
+    "prompt_tokens": 720,
+    "gen_tokens": 55,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_076": {
+   "top": {
+    "text": "INTERMODAL MULTIMODAL TRANSPORT BILL OF LADING\nB/L NO: MSCU-GEN-9481920 | CARRIER: MEDITERRANEAN SHIPPING COMPANY S.A. | GENEVA, SWITZERLAND\n\nSHIPPER\nTEXAS PETROCHEMICAL SPECIALTIES LLC - 4500 INDUSTRIAL CANAL RD, HOUSTON, TX 77015 (USA)\n\nCONSIGNEE\nRAFFINERIA DI GENOVA S.P.A. - VIA DEI DOCK 8, 16126 GENOVA (ITALY) - TAX ID IT04819200108\n\nPRE-CARRIAGE BY / PLACE OF RECEIPT",
+    "s": 3.229918956756592,
+    "prompt_tokens": 779,
+    "gen_tokens": 193,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "IN WITNESS WHEREOF THREE (3) ORIGINAL BILLS OF LADING SIGNED. FOR MSC MEDITERRANEAN SHIPPING CO AS AGENTS: CAPT. H. LARSEN",
+    "s": 1.8442480564117432,
+    "prompt_tokens": 720,
+    "gen_tokens": 54,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_077": {
+   "top": {
+    "text": "GLOBAL EXPRESS WORLDWIDE CONSIGNMENT NOTE & CUSTOMS INVOICE\nTRACKING NO: 8491 0294 8192 | SERVICE: EXPRESS WORLDWIDE DOCS / PARCEL | ACCOUNT: 9481-0294\n\nFROM (SHIPPER ACCOUNT 9481-0294)\nSYNTHETIC BIOLOGY INC - ATTN: DR. SARAH CONNOR - 450 KENDALL ST, CAMBRIDGE, MA 02142 (USA) - TEL: 617-555-8910\n\nTO (CONSIGNEE DELIVERY ADDRESS)\nUNIVERSITA DEGLI STUDI DI GENOVA - DIPARTIMENTO FARMACIA - VIA BRIGATA SALERNO 13, 16147 GENOVA (ITALIA)\n\nPRODUCT / PACKAGING TYPE",
+    "s": 3.6429738998413086,
+    "prompt_tokens": 779,
+    "gen_tokens": 240,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "I. DECLARE THAT THE CONTENTS ARE FULLY AND ACCURATELY DESCRIBED. SIGNATURE: S. CONNOR | PICKUP DATE: 29 OCT 2024",
+    "s": 1.8489890098571777,
+    "prompt_tokens": 720,
+    "gen_tokens": 53,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_079": {
+   "top": {
+    "text": "INTERNATIONAL CONSIGNMENT NOTE CMR / LETTERA DI VETTURA INTERNAZIONALE\nCMR N. BILINGUAL-2024-9481 | IT/EN ROAD TRANSPORTATION PROTOCOL\n\n1. SENDER / MITTENTE\nLIGURIA AUTOMAZIONE S.P.A. - VIA POLONIA 8, GENOVA (ITALIA) - VAT / P.IVA IT02948100105\n\n2. CONSIGNEE / DESTINATARIO\nBRITISH. ROBOTICS INTEGRATION LTD - DOCKLANDS BUSINESS PARK, LONDON E16 2QX (UK) - GB 481 9204 89\n\n3. PLACE OF DELIVERY / LUOGO DI RICONSEGNA",
+    "s": 3.449629068374634,
+    "prompt_tokens": 779,
+    "gen_tokens": 217,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "EXECUTED IN GENOA AND CONFIRMED BY ALL PARTIES / SOTTOSCRITTO DALLE PARTI. SIGNATURES: MITTENTE: M. BIANCHI | VETTORE: P. DUBOIS",
+    "s": 1.9082012176513672,
+    "prompt_tokens": 720,
+    "gen_tokens": 61,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_081": {
+   "top": {
+    "text": "TRIBUNALE AMMINISTRATIVO REGIONALE PER LA LIGURIA - SEZIONE PRIMA\nREGISTRO RICORSI N. 849/2024 REG. RIC. | SENTENZA N. 0148/2024 PUBBLICATA IL 14/10/2024\nREPUBBLICA ITALIANA - INNOME DEL POPOLÔ ITALIANO\nIl Tribunaale Amministrativo Regionale per la Liguria (Sezione Prima), composto dai magistrati Dott. Roberto Politi (Presidente), Dott. Paolo Peruggia (Consigliere), Dott. Luca Morbelli (Primo Referendario, Estensore), ha pronunciato la presente SENTENZA sul ricorso generale di regione generale 849 del 2024.\nproposto dal Consorzio Cannestro del Pensate Sca a r J., rappresentato e difeso dagli avvocati Luigi Danovi e Stefano Betti, con domicilio eletto in Genova, Via XII Ottobre 2/8;\nCONTRO\ndal Presidente pro tempore, rappresentata per legge dall'Avvocatura Distrettuale dello Stato di Genova, con sede in Viale Brigatè Partigiane 2;",
+    "s": 4.434667110443115,
+    "prompt_tokens": 779,
+    "gen_tokens": 325,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Ordinata l'esecuzione della presente sentenza da parte dell'autorità amministrativa. Genova, 14 Ottobre 2024.",
+    "s": 1.7076380252838135,
+    "prompt_tokens": 720,
+    "gen_tokens": 38,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_083": {
+   "top": {
+    "text": "PROSPETTO LIQUIDAZIONE PROVVIGIONI E CONTRIBUTI ENASARCO\nAGENZIA GENERALE RAPPRESENTANZE LIGURIA | TRIMESTRE Q3 2024 | CODICE AGENTE: AG-8491'\nAGENTE DI COMMERCIO: DOTT. PAOLO GHIGLIONE - C.F. GHGPLA76R18D969M - P.IVA 03481920108\nMANDANTE: ELETTROFORNITURE INDUSTRIALI S.P.A. - MILANO - CONTRATTO MONOMANDATARIO ENASARCO\nRIASSUNTO DEL FATTURATO INTERMEDIATO ED EMESSO:\n- Fatturato zona Genova Levante (Chienti industriali): Euro 148.920.00 @ aliquota 6.5% = Euro 9.679.80 provvigioni lorde;\n- Fatturato zona Golfo dei Poeti: Euro 92.400.00 @ aliquota 5.0% = Euro 4.620.00 provvigioni lorde;\n- Fatturato zona Golfo dei Poeti: Euro 4.487.00 provvigioni lorde;",
+    "s": 4.502943992614746,
+    "prompt_tokens": 779,
+    "gen_tokens": 332,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "DOCUMENTO INTERNO DI RICONCILIAZIONE CONTABILE - VERIFICATO DALL'UFFICIO AMMINISTRAZIONE IN DATA 25/10/2024",
+    "s": 1.8279540538787842,
+    "prompt_tokens": 720,
+    "gen_tokens": 52,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_085": {
+   "top": {
+    "text": "TRIPLE NET (NNN) COMMERCIAL REAL ESTATE LEASE AGREEMENT\n\nBUILDING: FINANCIAL SQUARE 400 CALIFORNIA ST, SAN FRANCISCO, CA 94104 | SUITE 1800\n\nThis Commercial Real Estate Lease Agreement made as of October 15, 2024, by and between FINANCIAL SQUARE INVESTORS LLC, a California limited liability company ('Landlord'), and NEXUS QUANTUM COMPUTING INC, a Delaware corporation ('Tenant').\n\nWITNESSETH THAT\n\n1. PREMISES: Landlord hereby leases to Tenant and Tenant leases from Landlord, approximately 14,250 rentable, square feet (RSF) located on the 18th floor of the Building, commonly known as Suite 1800.\n\n2. LEASE TERM: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n3. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n4. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n5. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n6. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n7. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n8. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n9. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n10. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n11. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n12. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n13. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n14. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n15. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n16. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n17. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n18. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n19. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n20. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n21. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n22. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n23. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n24. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n25. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n26. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n27. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n28. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n29. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n30. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n31. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n32. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n33. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n34. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n35. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n36. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n37. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n38. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n39. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n40. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n41. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n42. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n43. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n44. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n45. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n46. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n47. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n48. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January 01, 2025 ('Commencement Date') and expiring on December 31, 2029.\n\n49. RENTAL FUND: The initial term shall be for at least (60) full calendar months, commencing on January",
+    "s": 69.82657194137573,
+    "prompt_tokens": 779,
+    "gen_tokens": 3000,
+    "loop_cut": null,
+    "retry": true
+   },
+   "bottom": {
+    "text": "IN WILLIES WHEREOF, the parties hereto have executed this Lease under seal. Landlord: Gerald R. Baxter, Managing Member. Tenant: Dr. Alan S. Turing, Chief Executive Officer.",
+    "s": 1.8201520442962646,
+    "prompt_tokens": 720,
+    "gen_tokens": 50,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_086": {
+   "top": {
+    "text": "PRINCIPLES OF QUANTUM DYNAMICS - CHAPTER 14: PERTURBATION THEORY\n\nOXFORD UNIVERSITY PRESS | SECTION 14.3: DEGENERATE TIME-INDEPENDENT PERTURBATIONS\n\nConsider an unperturbed Hamiltonian $H_0$ possessing an N-fold degenerate eigenvalue $E_n^0$ (0), such that $H_0$ |psi_n,alpha^(0)> = $E_n^0$ |psi_n,alpha^(0)> for alpha = 1, 2, ..., N. In the presence of a weak hermitian perturbation lambda*V, the total Hamiltonian becomes $H = E_0 + lambda^*V$.\n\nTo remove the degeneracy in first order, we expand the perturbed eigenstate as |psi_n> = sum_{beta=1}^N c_beta |psi_n,beta^(0)> + lambda |psi_n^(1)>.\n\nSubstituting this ansatz into the stochastic Schrodinger equation ($H_0 + lambda^*V - E_n$)|psi_n> = 0 and projecting onto the unperturbed subspace <psi_n,alpha^(0)| yields the secular determinant equation:\n\n$$\\det |V \\{alpha,beta\\} - E_n^(1) * delta_{\\alpha,beta}| = 0,$$\n\nwhere the matrix elements are defined by $V_{\\{alpha,beta\\}} = <psi_n,alpha^(0)| V |psi_n,beta^(0)>$.\n\nTo the first-order energy shifts. If all roots are distinct, the perturbation completely lifts the degeneracy.",
+    "s": 5.026643991470337,
+    "prompt_tokens": 779,
+    "gen_tokens": 389,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Footnote 4: For relativistic fine-structure corrections and Dirac-Darwin spin-orbit interaction, see Chapter 16, pp. 412-428.",
+    "s": 1.7390069961547852,
+    "prompt_tokens": 720,
+    "gen_tokens": 42,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_090": {
+   "top": {
+    "text": "CROSS-BORDER COMMERCIAL DISTRIBUTION ACCORD / ACCORDO INTERNAZIONALE DI DISTRIBUZIONE\nMILAN & NEW YORK REGISTRATION PROTOCOL 2024-849 | GOVERNED BY CISG (VIENNA CONVENTION 1980).\nSECTION 4 MINIMUM SALES TARGETS & PENALTIES / OBIETTIVI MINIMI DI VENDITA E PENALI:\nEN. Distributor shall achieve a minimum annual nover of EUR 2.500,000.00 in the North American territory. Failure to achieve at least 80% of said threshold grants Principal the unconditional right to terminate territorial exclusivity upon thirty (30) days written notice.\nIT. Il Distributore si impegna a realizzare un fatticcio minimum anno di EUR 2.500,000.00 nel territorio notdamericano. Il mancato raggiungimento di almeno 180% di tale soglia attribuisce al Concedente la facolta incondizionata di revocare l'exclusive territorio e con prelevi d. 30 gormi.\nPROPRIETA INTELLETTUALE E MARCHI:\nDistributor is granted a revocable, non-transferable royalty-free license strictly limited to promotional marketing",
+    "s": 4.468337297439575,
+    "prompt_tokens": 779,
+    "gen_tokens": 329,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "EXECUTED IN TWO COUNTERPARTS / SOTTOSCRITTO IN DUE ORIGINALI. PRINCIPAL: ING. M. FERRARI | DISTRIBUTOR: JOHN D. ROCKEFELLER III",
+    "s": 1.9326460361480713,
+    "prompt_tokens": 720,
+    "gen_tokens": 64,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_092": {
+   "top": {
+    "text": "SCHEMA DI RIPARTO SPESE STRAORDINARIE CONDOMINIALI\nCONDOMINIO RESIDENZIALE VILLA ROSAZZA - VIA AL FORTE 18, GENOVA | GESTIONE 2024\nAMMINISTRATORE DELLO STABILE: STUDIO RAG. CARLO BALBI - TEL 010-8491204 - EMAIL: AMM.BALBI@STUDIOCARLOBALBI.T\nOGGETTO: Lavori urgenti di rifacimento intonaci e messa in sicurezza cornicioni pericolanti prospetto sud.\nDELIBERA ASSEMBLEARE DEL 12/09/2024 - IMPORTO TOTALE APPALTO: Euro 84.500,00 (Iva 10% inclusa).\nTABELLA MILLESIMALE GENERALE DI PROPRIETA (TABELLA A):\n1. Interno 1 (Sig. Parodi): 84,50 millesimi -> Quota lavori: Euro 7.140,25 | Rata 1: Euro 2.380,08 | Rata 2: Euro 2.380,08 | Rata 3: Euro 2.380,09;\n2. Interno 2 (Sig. ra Doria): 92,10 millesimi -> Quota lavori: Euro 7.782,45 | Rata 1: Euro 2.594,15 | Rata 2: Euro 2.594,15 | Rata 3: Euro 2.594,15;",
+    "s": 5.192868232727051,
+    "prompt_tokens": 779,
+    "gen_tokens": 407,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Sollecito di pagamento formale con diffida ad adempiere ex art. 63 Disp. Att: c.c.",
+    "s": 1.6531717777252197,
+    "prompt_tokens": 720,
+    "gen_tokens": 32,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_093": {
+   "top": {
+    "text": "CONVENZIONE URBANISTICA PER OPERE DI URBANIZZAZIONE PRIMARIA\nCOMINE DI GENOVA - DIPEZIONE URBANISTICA ED EDILIZIA PRIVATA | ATTO NOTARILE REP. 14280\nTRA IL COMUNE DI GENOVA, rappresentato dal Duetto del Settuo Urbanica Dox. Arch. MARCO MORANDI e la società SVILUPPO PONTE PARODI S P.A., rappresentato dal Presidente lug. ANDREA D'ANGELO\nPREMESSO CHE con delibera di Cavourho Commune n. 48 del 14/05/2019 e attuo approvato d'Piano Particolleggrato di puzzativa privata relativo al compatto residentiale e irrattanto ex scale ferroviario.\nSI CONVIENE E STIPULA QUANTO SEGUE:\nArt. 1. La socita lotzazzane si obbliga irrevocabilmente a realizzare a propria tonde cura e spese le seguenti opere di urbanizzazione primaria.\na) Nuova viabilità di collegamento con corva ciclabile per una superficie non infrazione amq S 430.\nb) Rete figurata acqua bonachie e nive con collettore principale DN 800 man per uno sviluppo lusore di metri 1 200.",
+    "s": 4.653434991836548,
+    "prompt_tokens": 779,
+    "gen_tokens": 349,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Registro e Gennaio 417/2019 Atm. Pubblico di 28/06/2019 al n. 5419 Saria IT. Tembro di attuazione conforme dell'Officiale Tecnico.",
+    "s": 1.9320588111877441,
+    "prompt_tokens": 720,
+    "gen_tokens": 64,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_097": {
+   "top": {
+    "text": "INTEROFFICE MEMORANDUM - STRATEGIC ALLOCATION COMMITTEE\n\nDATE: OCTOBER 24, 2024 | TO: EXECUTIVE LEADERSHIP TEAM | FROM: DR. J. STERLING, CTO\n\nSUBJECT: QUANTUM ACCELERATOR CLUSTER INFRASTRUCTURE INVESTMENT (PROJECT OMEGA)\n\n1. EXECUTIVE SUMMARY: Over the past eight months our computational biology models simulating protein-ligand binding kinetics have exhausted available on-prem GPU cluster bandwidth. We recommend deploying a dedicated 512-node NVIDIA H100/H200 NVLink cluster with InfiniBand Quantum-2 networking.\n\n2. CAPITAL EXPENDITURE (CAPEX) BREAKDOWN:\n\n- 64x HGX H200 8-GPU Server Nodes @ $ 345,000.00/unit = $ 22,080,000.00;\n\n- InfiniBand 800 Gbps Quantum-2 Spine-Leaf Switching Architecture = $ 3,450,000.00;",
+    "s": 3.981964111328125,
+    "prompt_tokens": 779,
+    "gen_tokens": 279,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "CONFIDENTIAL - PROPRIETARY ENGINEERING DOCUMENT. STAMPED: APPROVED BY INVESTMENT BOARD 10/25/2024.",
+    "s": 1.793349027633667,
+    "prompt_tokens": 720,
+    "gen_tokens": 47,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_098": {
+   "top": {
+    "text": "FIELD SERVICE DISPATCH & EMERGENCY EQUIPMENT REPAIR LOG\n\nNATIONAL ELECTRIC GRID SERVICES | LOG ID: EMR-2024-8491 | FIELD TECH: G. MORRISON\n\nSUBSTATION LOCATION: SUB-42 WEST VALLEY 345 kV INTERCONNECT | TIME OF DISPATCH: 03:40 AM\n\nEQUIPMENT INVOLVED: 345 kV SF6 GAS-INSULATED CIRCUIT BREAKER (ABB TYPE PMG-345) MATRICOLA: 840102-X\n\nINCIDENT DESCRIPTION & FAILURE ANALYSIS:\n\nPhase B pole experienced catastrophic SF6 low-gasure lockout alarm (pressure dropped below 62.0 psig at 20 deg C). Circuit breaker tap code disabled by protective interlock relay 61GL. Substation emergency diesel generator started automatically upon 125V DC bus battery voltage drop to 118.2V.\n\nACTIONS TAKEN AND CORRECTIVE WORK PERFORMED:",
+    "s": 3.9312798976898193,
+    "prompt_tokens": 779,
+    "gen_tokens": 271,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "FIELD DISPATCH COMPLETED - SIGNATURE OF LEAD RELAT SPECIALIST 'GREGORY MORRISON' (IBEW LOCAL 1243)",
+    "s": 1.7662360668182373,
+    "prompt_tokens": 720,
+    "gen_tokens": 45,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_100": {
+   "top": {
+    "text": "MULTILINGUAL TRANSIT CUSTOMS DECLARATION / DICHIARAZIONE DOGANALE DI TRANSIT\nCUSTOMS TERRITORY OF THE EUROPEAN UNION / TERRITORIO DOGANALE 'DELL'UNIONE EUROPEA | MRN: 24IT00084910294819\nDECLARATION TYPE / TIPO DI DICHIARAZIONE: T1 (EXTERNAL UNION TRANSIT NON-COMMUNITY GOODS)\nCONSIGNOR / SPEDITORE: GENOVA MARITIME LOGISTICS HUB S.P.A. - CALATA SANITA 1, GENOVA (IT)\nCONSIGNEE / DESTINATARIO: ANGLO-SWISS INDUSTRIAL METALS PLC - LONDON CANARY WHARF E14 (GB)\nDISPATCH / PAESE DI SPEDIZIONE: ITALY (IT) > COUNTRY OF DESTINATION: UNITED KINGDOM (GB)\nDEL COLLIE DELLE MERCI\nMERCIAL NOS: TR-8491 TO TR-8498\nTR-8491/8498",
+    "s": 4.20357608795166,
+    "prompt_tokens": 779,
+    "gen_tokens": 300,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "CUSTOMS CONTROL VERIFICATION. RELEASED FOR TRANSIT UNDER CUSTOMS SEALS IT-84919-C. DOGANA DI GENOVA: ATTESTAZIONE CONFORME.",
+    "s": 1.8264601230621338,
+    "prompt_tokens": 720,
+    "gen_tokens": 52,
+    "loop_cut": null,
+    "retry": false
+   }
+  }
+ }
+}

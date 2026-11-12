@@ -32,6 +32,25 @@ def found(entities, text):
     return sum(squash(e["text"]) in h for e in entities)
 
 
+# Typography the exact check is strict about and a reading is not wrong for (docs/ROADMAP.md, "After v1.3.0", item 7: on
+# xfund_it_train 61% of the entities missed by 1 or 2 edits were these): one apostrophe, one quote sign, one dash; tick boxes and
+# fill-in underscores dropped. Accents, digits, letters and the decimal notation stay strict.
+_TYPO = str.maketrans({**{c: "'" for c in "’‘‛`´′"}, **{c: '"' for c in "“”„‟«»″"}, **{c: "-" for c in "‐‑‒–—―−"},
+                       **{c: None for c in "□☐☑☒■▪◻◼✓✔✗✘_"}})
+
+
+def typo(s):
+    """squash() with typography folded: the form the loose check matches in."""
+    return squash(s).translate(_TYPO)
+
+
+def found_loose(entities, text):
+    """How many entities come back once typography is folded (typo()). Reported beside found(), never instead of it.
+    An entity that is nothing but typography (a tick box) counts as found() would count it."""
+    h, hs = typo(text), squash(text)
+    return sum((typo(e["text"]) in h) if typo(e["text"]) else (squash(e["text"]) in hs) for e in entities)
+
+
 def flip_notation(s):
     """2.100.000,00 <-> 2,100,000.00"""
     return s.translate(str.maketrans(".,", ",."))

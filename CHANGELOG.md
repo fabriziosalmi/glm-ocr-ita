@@ -2,6 +2,18 @@
 
 Versions of the released model and of the `glmocr` package go together. Dates are those of the measurements.
 
+## v1.5.0 - 2026-11-12
+
+Same MLX and GGUF weights as v1.4.0. New: `glmocr infer` reads the top and bottom bands of a page as well, unless the page is turned.
+
+- **Bands, on by default in `infer`.** After the whole page, the top 16% and the bottom 14% are read on their own, and the lines of theirs that the whole page lacks are put into it (`glmocr/bands.py`): the letterhead and the closing lines a whole-page reading loses. Lines a band returns that are not text of the page (a markdown fence, a description of the image, a bare count) are dropped. `--no-bands` reads the whole page only. `glmocr run --bands` measures it. With `--deskew` or `--regions` no band is read.
+- **The guard: an orientation classifier.** No band is read on a page that PP-LCNet_x1_0_doc_ori (PaddlePaddle, Apache-2.0) is sure, at 0.8 or more, is turned (`glmocr/orient.py`). It runs in numpy, 26 ms a page on a CPU, with no new dependency; its answers match the PyTorch implementation on 1243 of 1243 images, and Phase 1's PaddleX numbers (159/160 rotations of `hard`, 475/480 of `held`). The page is not straightened: a turned page is still read on its side (README, Limits).
+- **Measured on test sets, MLX** (docs/LEDGER.md, 2026-11-12, every question written before its read), against the release's whole page: XFUND Italian forms 77.7% to 79.9%, +2.20 [+0.89, +4.02]; ocr-bench-v1 91.8% to 96.6%, +4.78 [+3.10, +6.59], CER 6.9% to 2.9%; Omni Parse Bench with the text layer (bands on the 51 pages the model reads) 75.5% to 77.2% of 184 tests, +3.1 [+0.0, +6.9] per page, not worse; no page lost on any. The two steps never measured there were read too: the fine-tuned model alone gives 91.8% on ocr-bench-v1 (no page loops, so the retry changes nothing) and 58.2% on Omni Parse Bench.
+- **Measured, MLX.** On 200 letters no model had read (`itdoc_15`), against the whole page: +3.69 [+2.67, +4.83] entity recall, 0 pages lost, 65 gained, pages whose last line is lost 16 to 1, CER 3.03% to 3.26%, time +20%. On the dev sets never worse: ocr-bench training half +3.44 [+2.29, +4.75], XFUND Italian forms +1.09 [+0.72, +1.55], phone photographs (MDPBench) +0.82 [+0.27, +1.57], Gazzetta +0.17, `hard` +0.21. On MDPBench's test photographs the CER rises by 1.0 point (22.8% to 23.8%), recall +0.57 [+0.19, +1.10]. `glmocr run --bands` on `hard` reproduces the merge measured from the saved readings byte for byte (40 of 40 pages, 76 of 76 bands).
+- **GGUF.** The bands run with the llama.cpp reader too, and in the Docker image on linux/amd64 (one page read with both bands and the classifier, 15% more time on a CPU); they are not measured there.
+- **A loose entity check, beside the exact one.** `glmocr score` and `compare` also report entity recall with typography folded (one apostrophe, one quote sign, one dash; tick boxes and fill-in underscores dropped), never instead of the exact check, which the verdicts stay on. On XFUND Italian forms 61% of the entities missed by one or two characters were typography (curly apostrophes, tick boxes); accents, digits, letters and the decimal notation stay strict (`metrics.found_loose`).
+- `rapidfuzz` is declared (it came with jiwer, same version).
+
 ## v1.4.0 - 2026-11-11
 
 Same MLX and GGUF weights as v1.3.0 (same SHA-256). New: a third reading for the pages whose loop the second reading does not break.

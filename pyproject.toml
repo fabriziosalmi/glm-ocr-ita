@@ -1,6 +1,6 @@
 [project]
 name = "glmocr"
-version = "1.4.0"
+version = "1.5.0"
 description = "GLM-OCR fine-tuned for Italian documents and quantized to 8 bits for MLX on Apple Silicon, with the harness that measures it"
 readme = "README.md"
 license = "MIT"
@@ -16,6 +16,7 @@ dependencies = [
     "pillow==12.3.0",
     "numpy==2.5.3",
     "jiwer==4.0.0",
+    "rapidfuzz==3.14.6",
     "pypdfium2==5.14.0",
 ]
 

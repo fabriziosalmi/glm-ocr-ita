@@ -210,3 +210,36 @@ def test_six_bit_decoder_on_dev():
         return
     c_ocrb = score.compare("external/ocrbench_train", "ocrbtr_v8d8e8op1_1.0_op_rp110", "dev_ocrbtr_v8d6e8op1_1.0_op_rp110")
     assert (r1(c_ocrb["recall_a"]), r1(c_ocrb["recall_b"]), r1(c_ocrb["diff"]), score.verdict(c_ocrb["ci"])) == (94.0, 94.1, 0.2, "not worse")
+
+
+# v1.5.0: the bands, as glmocr infer reads (glmocr/bands.py, orientation guard at orient.SURE), against the release's whole page.
+# corpus, base tag: recall whole, recall with the bands, difference, CI, pages lost, pages gained
+BANDS = {"external/ocrbench_test": ("ocrbt_v8d8e8op1_1.0_op_rp110", 91.8, 96.6, 4.8, (3.1, 6.6), 0, 28),
+         "external/xfund_it_val": ("xfund_it_v8d8e8op1_1.0_op_rp110", 77.7, 79.9, 2.2, (0.9, 4.0), 0, 19),
+         "blind/itdoc_15_correspondence": ("itdoc15_v8d8e8op1_1.0_op_rp110", 92.4, 96.1, 3.7, (2.7, 4.8), 0, 65)}
+
+
+@pytest.mark.parametrize("name", list(BANDS))
+def test_v1_5_bands(name):
+    from PIL import Image
+    from huggingface_hub import try_to_load_from_cache
+    from glmocr import bands, orient
+    tag, whole, banded, diff, ci, lost, gained = BANDS[name]
+    try:
+        d = corpus.corpus_dir(name)
+    except corpus.Missing:
+        pytest.skip(f"{name} is not on this machine")
+    if not (corpus.result_path(tag).exists() and corpus.result_path(tag + "_pieces").exists()):
+        pytest.skip(f"the runs on {name} are not in results/")
+    if not isinstance(try_to_load_from_cache(orient.REPO, "model.safetensors", revision=orient.REVISION), str):
+        pytest.skip("the orientation classifier's weights are not in the Hugging Face cache")
+    base, pcs = corpus.load_run(tag)["pages"], corpus.load_run(tag + "_pieces")["pages"]
+    meta = corpus.load_meta(name); ids = [m["id"] for m in meta]
+    text = {i: base[i]["text"] if orient.turned(Image.open(d / f"{i}.png")) else bands.merge_bands(base[i]["text"], pcs[i]) for i in ids}
+    a = {m["id"]: (metrics.found(m["entities"], base[m["id"]]["text"]), len(m["entities"])) for m in meta}
+    b = {m["id"]: (metrics.found(m["entities"], text[m["id"]]), len(m["entities"])) for m in meta}
+    assert r1(metrics.recall(a, ids)) == whole and r1(metrics.recall(b, ids)) == banded
+    assert r1(metrics.recall(b, ids) - metrics.recall(a, ids)) == diff
+    lo, hi = metrics.bootstrap(lambda s: metrics.recall(b, s) - metrics.recall(a, s), ids)
+    assert (r1(lo), r1(hi)) == ci
+    assert sum(b[i][0] < a[i][0] for i in ids) == lost and sum(b[i][0] > a[i][0] for i in ids) == gained
