@@ -57,7 +57,7 @@ With mlx-vlm alone, use the official prompt: `Text Recognition:` right after the
 
 - **Chinese, read whole, is worse** than with the original (above); read with `--regions` it is not worse.
 - **Not faster per page** than the original: generation is faster, reading the image costs the same.
-- **Real Italian documents measured:** forms, 40 DocAtlas documents, Gazzetta Ufficiale pages (dev). Invoices and phone photos of documents are not measured yet.
+- **Real Italian documents measured:** forms, 40 DocAtlas documents, Gazzetta Ufficiale pages (dev). Phone photographs of documents only through MDPBench's Italian pages, read by the release and not yet against the original; invoices are not measured yet.
 - **Large amounts on dense pages.** On 10 adversarial synthetic pages, amounts of tens of millions are sometimes written "29.467,745,94" (-5.3 [-11.3, -0.7]). On the Gazzetta's real amounts of a million or more it does better than the original.
 - **Pages rotated by 90 degrees** are unreadable, as for the original: straighten them first. The orientation classifier only keeps the bands off them.
 - **Bands with the GGUF:** they run, they are not measured there.
