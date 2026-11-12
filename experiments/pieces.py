@@ -167,6 +167,13 @@ def cmd_score(a):
     turned = {i: deskew.turn_ratio(Image.open(d / f"{i}.png")) > TURNED for i in ids}   # no bands on a page that may be on its side
     print(f"pages taken as turned (turn ratio above {TURNED}): {sum(turned.values())} of {len(ids)}, of them labelled rot90: "
           f"{sum(turned[m['id']] and bool(m.get('rot90')) for m in meta)}; labelled rot90 in all: {sum(bool(m.get('rot90')) for m in meta)}")
+    ori = json.load(open(a.orient)) if a.orient else {}   # experiments/orient_lcnet.py: id -> clockwise degrees and score
+    if ori and set(ids) - set(ori):
+        sys.exit(f"{a.orient} has no answer for {len(set(ids) - set(ori))} pages")
+    sure = {i: ori[i]["pred"] != 0 and ori[i]["score"] >= a.orient_min for i in ori}   # turned, by the classifier, and sure of it
+    if ori:
+        print(f"pages the classifier is sure are turned (score {a.orient_min} or more): {sum(sure[i] for i in ids)} of {len(ids)}, "
+              f"of them labelled rot90: {sum(sure[m['id']] and bool(m.get('rot90')) for m in meta)}")
     pol = {"whole": lambda i: base[i]["text"],
            "union": lambda i: "\n".join([base[i]["text"]] + [pcs[i][k]["text"] for k in allp if k in pcs[i]]),
            "insert": lambda i: merge(base[i]["text"], pcs[i]),
@@ -174,14 +181,16 @@ def cmd_score(a):
            "insert bands": lambda i: merge(base[i]["text"], pcs[i], use=("top", "bottom")),
            "replace halves": lambda i: merge(base[i]["text"], pcs[i], replace=True, use=("half1", "half2")),
            "bands guarded": lambda i: base[i]["text"] if turned[i] else merge(base[i]["text"], pcs[i], use=("top", "bottom")),
-           "bands clean": lambda i: base[i]["text"] if turned[i] else merge(base[i]["text"], pcs[i], use=("top", "bottom"), clean=True)}
+           "bands clean": lambda i: base[i]["text"] if turned[i] else merge(base[i]["text"], pcs[i], use=("top", "bottom"), clean=True),
+           "bands lcnet": lambda i: base[i]["text"] if sure[i] else merge(base[i]["text"], pcs[i], use=("top", "bottom"), clean=True)}
     secs = {"whole": lambda i: base[i]["s"],
             "bands guarded": lambda i: base[i]["s"] + (0 if turned[i] else pcs[i]["top"]["s"] + pcs[i]["bottom"]["s"]),
-            "bands clean": lambda i: base[i]["s"] + (0 if turned[i] else pcs[i]["top"]["s"] + pcs[i]["bottom"]["s"]), "insert bands": lambda i: base[i]["s"] + pcs[i]["top"]["s"] + pcs[i]["bottom"]["s"],
+            "bands clean": lambda i: base[i]["s"] + (0 if turned[i] else pcs[i]["top"]["s"] + pcs[i]["bottom"]["s"]),
+            "bands lcnet": lambda i: base[i]["s"] + (0 if sure[i] else pcs[i]["top"]["s"] + pcs[i]["bottom"]["s"]), "insert bands": lambda i: base[i]["s"] + pcs[i]["top"]["s"] + pcs[i]["bottom"]["s"],
             "replace halves": lambda i: base[i]["s"] + pcs[i]["half1"]["s"] + pcs[i]["half2"]["s"]}
     full = lambda i: base[i]["s"] + sum(pcs[i][k]["s"] for k in allp if k in pcs[i])
-    need = {"bands guarded": {"top", "bottom"}, "bands clean": {"top", "bottom"}, "union": set(allp), "insert": set(allp), "replace": set(allp), "insert bands": {"top", "bottom"}, "replace halves": {"half1", "half2"}}
-    pol = {p: f for p, f in pol.items() if need.get(p, set()) <= have}
+    need = {"bands guarded": {"top", "bottom"}, "bands clean": {"top", "bottom"}, "bands lcnet": {"top", "bottom"}, "union": set(allp), "insert": set(allp), "replace": set(allp), "insert bands": {"top", "bottom"}, "replace halves": {"half1", "half2"}}
+    pol = {p: f for p, f in pol.items() if need.get(p, set()) <= have and (p != "bands lcnet" or ori)}
     texts = {p: {i: f(i) for i in ids} for p, f in pol.items()}
     counts = {p: {m["id"]: (metrics.found(m["entities"], texts[p][m["id"]]), len(m["entities"])) for m in meta} for p in pol}
     refs = {i: corpus.reference(a.corpus, i) for i in ids}
@@ -205,6 +214,8 @@ if __name__ == "__main__":
     ap.add_argument("cmd", choices=["read", "score"]); ap.add_argument("base"); ap.add_argument("--corpus", required=True)
     ap.add_argument("--only", type=lambda v: v.split(","), default=list(PIECES), help="read only these pieces, e.g. top,bottom")
     ap.add_argument("--exclude", default=None, help="score: a file of page ids to leave out (pages a choice was made on)")
+    ap.add_argument("--orient", default=None, help="score: experiments/orient_lcnet.py's answers for the set, for the policy bands lcnet")
+    ap.add_argument("--orient-min", type=float, default=0.8, help="score: bands lcnet takes a page for turned at this score or more")
     ap.add_argument("--wait", action="store_true"); ap.add_argument("--limit", type=int, default=None); ap.add_argument("--mem-gb", type=float, default=None)
     a = ap.parse_args()
     if corpus.role(a.corpus) == "test" and not corpus.ledger_has(f"{a.base}_pieces"):
