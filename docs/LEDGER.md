@@ -479,3 +479,6 @@ Written on 2026-11-12, before any of these reads. **Decision:** none; these fill
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-11-12 | fine-tuned alone, `ocrbench_test` | 1 | **As predicted.** 91.83%, all 50 texts identical byte for byte to the release's (read on the MacBook): no page loops there, so the harness changes nothing on this set. Steps: original 83.7%, fine-tuned 91.8%, release 91.8%, with the bands 96.6% |
+| 2026-11-12 | fine-tuned alone, `opb_sub` | 2 | **As predicted.** 58.2% of 184 tests, all 80 texts identical byte for byte to the first readings kept in the release's run. Against the original +5.5 [+0.0, +11.6], not worse (the release's retry makes it +6.9 [+2.2, +12.4], better) |
+| 2026-11-12 | bands vs harness as released, `opb_sub` | 3 | **Not worse, 0 pages lost.** 75.5% to 77.2% of 184 tests (139 to 142 passed), 3 pages gained, 0 lost; per-page pass rate **+3.1 [+0.0, +6.9]**, lower bound at 0, so not shown better; independent tests +3.1 [+0.0, +8.2]. Above the predicted +0 to +2 on the per-page rate (+1.6 pooled); no order or repeat test lost. No model page taken for turned. Steps: original 56.0%, fine-tuned 58.2%, harness as released 75.5%, with the bands 77.2% |
