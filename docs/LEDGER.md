@@ -453,3 +453,16 @@ Written on 2026-11-12, before the classifier was run on any page of this set. **
 | 2026-11-12 | `bands lcnet` vs whole page and `bands clean`, `itdoc_15` (secondary) | 3 | **As predicted, at the top of the range.** The classifier is right on 200 of 200 pages and sure (0.92 or more) of all 10 turned pages, `0197` among them; no upright page taken, `0108` read upright at 0.92. 69 ms a page on the MacBook's CPU |
 | 2026-11-12 | same | 1 | **As predicted.** 96.10%, **+3.69 [+2.67, +4.83]** against the whole page, 0 lost, 65 gained (`bands clean` +3.57, 64 gained): `0108`'s 13 entities. Equal to banding every page (`insert bands` +3.70) less one entity |
 | 2026-11-12 | same | 2 | CER 3.26%, under `bands clean`'s 3.28% and so 0.02 below the predicted range: no turned page banded, and `0108` banded lowers its own CER (7.1% to 3.8%) |
+
+## Bands with the orientation guard, on `external/xfund_it_val` and `external/ocrbench_test`
+
+Written on 2026-11-12, before any band of these sets was read. **Decision:** none to take (the bands are on by default in `infer` since `dcefa9f`); this measures them on two test sets that have every earlier stage read (the original, v1.0.0 where it exists, the release), so that the steps from the original to today can be shown on the same pages. Reported whatever comes out.
+
+Sets: `external/xfund_it_val` (50 real Italian forms, XFUND) and `external/ocrbench_test` (50 synthetic stress pages, the test half of ocr-bench-v1), copied to the first Mac mini and checked by digest against the MacBook's copies. The whole pages are the release's saved readings (`xfund_it_v8d8e8op1_1.0_op_rp110`, `ocrbt_v8d8e8op1_1.0_op_rp110`, retry 1.1 and stage 2 as released); only the bands are read now, on the first Mac mini (`experiments/pieces.py read --only top,bottom`). Tags: `xfund_it_v8d8e8op1_1.0_op_rp110_pieces`, `ocrbt_v8d8e8op1_1.0_op_rp110_pieces`. Policy scored: `bands lcnet`, as `glmocr infer` reads (`glmocr/orient.py`, 0.8).
+
+**Questions.** (1) `bands lcnet` against the whole page, paired 95% bootstrap over pages, rule 4 (not worse above -1.5, better above 0); pages lost and gained. (2) CER and excess. (3) Pages the classifier is sure are turned. (4) Time.
+
+**Prediction.** XFUND: +0.5 to +2.0, lower bound above 0, 0 to 2 pages lost; CER within 0.5 of the whole page's; no page taken for turned (0 of 149 on the train split). ocr-bench test: +2.0 to +5.0, lower bound above 0, 0 to 2 pages lost; CER lower than the whole page's (6.8% to 4.0% on the train half); 0 to 2 pages taken for turned. Time +15 to 25% on both.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
