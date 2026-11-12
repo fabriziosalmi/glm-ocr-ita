@@ -20,9 +20,9 @@ tags:
 - 8-bit
 ---
 
-# GLM-OCR-ita-mlx-8bit (v1.2.0)
+# GLM-OCR-ita-mlx-8bit (v1.5.0)
 
-[GLM-OCR](https://huggingface.co/zai-org/GLM-OCR), fine-tuned for Italian documents and quantized to 8 bits for Apple Silicon with [MLX](https://github.com/ml-explore/mlx). It reads Italian better than the original, on real forms and on synthetic documents, and real forms in German, Spanish, French and Portuguese as well, at 45% of the size. Read whole, it is worse on Chinese; read by regions with the `glmocr` harness (`--regions`, on `main`), it is not.
+[GLM-OCR](https://huggingface.co/zai-org/GLM-OCR), fine-tuned for Italian documents and quantized to 8 bits for Apple Silicon with [MLX](https://github.com/ml-explore/mlx). It reads Italian better than the original, on real forms and on synthetic documents, and real forms in German, Spanish, French and Portuguese as well, at 45% of the size. Read whole, it is worse on Chinese; read by regions with the `glmocr` harness (`--regions`), it is not.
 
 Code, test sets, raw outputs and the full measurement record: [github.com/fabriziosalmi/glm-ocr-ita](https://github.com/fabriziosalmi/glm-ocr-ita).
 
@@ -60,10 +60,6 @@ On `spark/itdoc_b` most of the gain is text the original leaves out: letterheads
 
 Every test read had its question and threshold written down before the read ([LEDGER.md](https://github.com/fabriziosalmi/glm-ocr-ita/blob/main/docs/LEDGER.md)). XFUND val was read twice: once for v1.0.0, where the model was not shown better (+0.3 [-3.0, +2.9]) because it looped on 2 forms, then for v1.1.0, with the retry chosen on the XFUND training split (149 forms, never trained on: +2.9 [+1.1, +4.2] there).
 
-## What changed in v1.2.0
-
-The weights are those of v1.0.0 (same SHA-256). The `glmocr` harness now reads PDFs: each page from its own text layer where the layer passes four checks (not an invisible OCR layer, no broken font map, ink under its text, content order a reading order), and with this model only where it does not. The idea and the checks come from [Indra OCR](https://github.com/datalab-to/indra) by Datalab (`indra_ocr/textlayer.py`, Apache-2.0), adapted. On the Omni Parse Bench subset above this reads 76.1% of the text tests against 62.5% for the model alone, +12.2 [+5.8, +19.6] (+8.2 [+2.0, +16.3] on the tests not derived from the PDF itself); 29 of the 80 pages pass the checks, and none of them is read worse than by the model. With mlx-vlm alone there is no PDF mode: render the page and read the image.
-
 ## What changed in v1.5.0
 
 Same weights. The `glmocr` harness reads a page's top 16% and bottom 14% again on their own after the whole page, and merges in the lines the whole page lacks: letterheads, and closing lines under blank space. No band is read on a page that PP-LCNet_x1_0_doc_ori (PaddlePaddle, Apache-2.0, run in numpy) is sure is turned. Against the whole page, on test sets: XFUND Italian forms +2.20 [+0.89, +4.02], ocr-bench-v1 +4.78 [+3.10, +6.59], 200 unseen letters +3.69 [+2.67, +4.83], no page lost, about 20% more time ([LEDGER.md](https://github.com/fabriziosalmi/glm-ocr-ita/blob/main/docs/LEDGER.md), 2026-11-12). With mlx-vlm alone: crop the bands, read each with the same prompt, and add the lines the page lacks; the harness does it by default (`--no-bands` to skip).
@@ -72,6 +68,10 @@ Same weights. The `glmocr` harness reads a page's top 16% and bottom 14% again o
 
 Same weights. The harness reads a looping page a third time when the second reading (penalty 1.1, which looks back 20 tokens) is still cut by a loop: penalty 1.3 over the last 256 tokens. On seven test sets this changed 16 pages: 5 gained, 2 lost, net +84 entities, median 20 s added on a page read again; pages that do not loop are read as before ([LEDGER.md](https://github.com/fabriziosalmi/glm-ocr-ita/blob/main/docs/LEDGER.md), "Stage-2 loop retry on seven test sets"). With mlx-vlm alone, see Use.
 
+## What changed in v1.2.0
+
+The weights are those of v1.0.0 (same SHA-256). The `glmocr` harness now reads PDFs: each page from its own text layer where the layer passes four checks (not an invisible OCR layer, no broken font map, ink under its text, content order a reading order), and with this model only where it does not. The idea and the checks come from [Indra OCR](https://github.com/datalab-to/indra) by Datalab (`indra_ocr/textlayer.py`, Apache-2.0), adapted. On the Omni Parse Bench subset above this reads 76.1% of the text tests against 62.5% for the model alone, +12.2 [+5.8, +19.6] (+8.2 [+2.0, +16.3] on the tests not derived from the PDF itself); 29 of the 80 pages pass the checks, and none of them is read worse than by the model. With mlx-vlm alone there is no PDF mode: render the page and read the image.
+
 ## What changed in v1.1.0
 
 The weights are those of v1.0.0 (same SHA-256). On forms with comb fields (one character per box, as in tax codes) the model can fall into a repetition loop and lose the rest of the page. v1.1.0 reads such a page a second time with `repetition_penalty=1.1` and keeps the second reading unless it loops too and returns less text. On XFUND val this closes every loop (original 2, v1.0.0 3, v1.1.0 0) at about 1 second per form on average. The `glmocr` harness does it by default; with mlx-vlm alone, see Use.
@@ -79,8 +79,8 @@ The weights are those of v1.0.0 (same SHA-256). On forms with comb fields (one c
 ## Limits
 
 - **Not faster than the original per page**: generation is faster, reading the image costs the same.
-- **Chinese, read whole, is worse** than with the original (OmniDocBench, above): no training page was Chinese. By regions (`glmocr infer --regions`, after GLM-OCR's own pipeline; in the harness on `main`, not yet in a release), on another 200 OmniDocBench pages, it is not worse than the original on Chinese or English text (edit distance x100, positive = this model better: +0.2 [-0.1, +0.5] and -0.0 [-0.1, +0.0]).
-- **Real Italian documents measured**: forms (XFUND, 50 test and 149 dev), 40 documents of DocAtlas (clean and scanned), pages of the Gazzetta Ufficiale (dev only). Invoices and phone photos of documents are not measured.
+- **Chinese, read whole, is worse** than with the original (OmniDocBench, above): no training page was Chinese. By regions (`glmocr infer --regions`, after GLM-OCR's own pipeline, in the harness since v1.3.0), on another 200 OmniDocBench pages, it is not worse than the original on Chinese or English text (edit distance x100, positive = this model better: +0.2 [-0.1, +0.5] and -0.0 [-0.1, +0.0]).
+- **Real Italian documents measured**: forms (XFUND, 50 test and 149 dev), 40 documents of DocAtlas (clean and scanned), pages of the Gazzetta Ufficiale (dev only). Phone photographs of documents only through MDPBench's Italian pages, read by this model and not yet against the original; invoices are not measured.
 - **Amounts of tens of millions** on dense synthetic pages are sometimes written with a comma as thousands separator ("29.467,745,94"): worse than the original on 10 such pages, -5.3 [-11.3, -0.7]; on the Gazzetta's real amounts it reads more of them right than the original.
 - Repetition loops happen on comb fields, dot leaders and degraded pages. Stop generation when the output starts repeating itself and read the page again with `repetition_penalty=1.1`; if it still loops, once more with 1.3 over 256 tokens; the `glmocr` package does all three. A page whose repetition is its content (a long table of near-identical rows) can lose a figure in the third reading.
 - Pages rotated by 90 degrees are unreadable, as for the original: straighten them first.
