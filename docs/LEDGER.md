@@ -450,3 +450,6 @@ Written on 2026-11-12, before the classifier was run on any page of this set. **
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-11-12 | `bands lcnet` vs whole page and `bands clean`, `itdoc_15` (secondary) | 3 | **As predicted, at the top of the range.** The classifier is right on 200 of 200 pages and sure (0.92 or more) of all 10 turned pages, `0197` among them; no upright page taken, `0108` read upright at 0.92. 69 ms a page on the MacBook's CPU |
+| 2026-11-12 | same | 1 | **As predicted.** 96.10%, **+3.69 [+2.67, +4.83]** against the whole page, 0 lost, 65 gained (`bands clean` +3.57, 64 gained): `0108`'s 13 entities. Equal to banding every page (`insert bands` +3.70) less one entity |
+| 2026-11-12 | same | 2 | CER 3.26%, under `bands clean`'s 3.28% and so 0.02 below the predicted range: no turned page banded, and `0108` banded lowers its own CER (7.1% to 3.8%) |
