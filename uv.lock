@@ -167,6 +167,7 @@ dependencies = [
     { name = "numpy" },
     { name = "pillow" },
     { name = "pypdfium2" },
+    { name = "rapidfuzz" },
     { name = "transformers", marker = "platform_machine == 'arm64' and sys_platform == 'darwin'" },
 ]
 
@@ -185,6 +186,7 @@ requires-dist = [
     { name = "pillow", specifier = "==12.3.0" },
     { name = "pypdfium2", specifier = "==5.14.0" },
     { name = "pytest", marker = "extra == 'dev'" },
+    { name = "rapidfuzz", specifier = "==3.14.6" },
     { name = "transformers", marker = "platform_machine == 'arm64' and sys_platform == 'darwin'", specifier = "==5.19.0" },
 ]
 provides-extras = ["dev"]

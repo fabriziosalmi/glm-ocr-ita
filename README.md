@@ -49,13 +49,16 @@ With mlx-vlm alone, use the official prompt: `Text Recognition:` right after the
 4. **PDFs.** A page's own text layer is used when it passes four checks: not an invisible OCR layer, no broken font map, ink under its text, a content order that is a reading order. Otherwise the page goes to the model. The idea and the checks come from [Indra OCR](https://github.com/datalab-to/indra) by Datalab (Apache-2.0, see [`NOTICE`](NOTICE)).
 5. **Regions (optional).** `--regions` reads a page after GLM-OCR's own pipeline: the layout detector of its [SDK](https://github.com/zai-org/glm-ocr) (Apache-2.0, in a separate PyTorch environment) finds the regions, each is read with the prompt of its kind, and the SDK's formatter assembles them. On OmniDocBench it lifts the overall score from 64.1 to 93.7 (tables, newspapers, Chinese pages); on real Italian forms it reads less than the whole page (-5.7), so it is not the default ([`docs/HARNESS.md`](docs/HARNESS.md) has the setup).
 
+6. **Bands.** After the whole page, its top 16% and bottom 14% are read on their own and the lines the whole page missed are put in: letterheads and closing lines under blank space. +3.7 points of entity recall on 200 unseen letters, no page worse, for 20% more time; `--no-bands` turns it off. No band is read on a page that an orientation classifier (PP-LCNet, PaddlePaddle, in numpy) is sure is turned.
+
 ## Limits
 
 - **Chinese, read whole, is worse** than with the original (above); read with `--regions` it is not worse.
 - **Not faster per page** than the original: generation is faster, reading the image costs the same.
 - **Real Italian documents measured:** forms, 40 DocAtlas documents, Gazzetta Ufficiale pages (dev). Invoices and phone photos of documents are not measured yet.
 - **Large amounts on dense pages.** On 10 adversarial synthetic pages, amounts of tens of millions are sometimes written "29.467,745,94" (-5.3 [-11.3, -0.7]). On the Gazzetta's real amounts of a million or more it does better than the original.
-- **Pages rotated by 90 degrees** are unreadable, as for the original: straighten them first.
+- **Pages rotated by 90 degrees** are unreadable, as for the original: straighten them first. The orientation classifier only keeps the bands off them.
+- **Bands with the GGUF:** they run, they are not measured there.
 - **PDF text layer:** text drawn as paths or inside images is not in a layer, so it is lost on a page read from its layer.
 
 ## Documentation

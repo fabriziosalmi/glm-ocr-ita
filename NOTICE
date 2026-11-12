@@ -12,6 +12,12 @@ This repository includes code adapted from third parties:
 
 Used at run time, not included:
 
+- glmocr/orient.py downloads and runs PP-LCNet_x1_0_doc_ori, PaddleOCR's document orientation
+  classifier, by PaddlePaddle, licensed under the Apache License, Version 2.0, as converted to
+  safetensors at https://huggingface.co/PaddlePaddle/PP-LCNet_x1_0_doc_ori_safetensors (revision
+  b2716954). The forward pass is written in numpy after the architecture of transformers' pp_lcnet
+  (Hugging Face, Apache-2.0); no code of either is included.
+
 - glmocr/regions.py and glmocr/layout_worker.py (the region mode, glmocr infer --regions) run
   GLM-OCR's SDK, https://github.com/zai-org/glm-ocr, package glmocr 0.1.5, by Z.ai (zai-org), licensed
   under the Apache License, Version 2.0, unmodified, in an environment of its own that the user

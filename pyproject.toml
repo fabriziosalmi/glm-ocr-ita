@@ -16,6 +16,7 @@ dependencies = [
     "pillow==12.3.0",
     "numpy==2.5.3",
     "jiwer==4.0.0",
+    "rapidfuzz==3.14.6",
     "pypdfium2==5.14.0",
 ]
 

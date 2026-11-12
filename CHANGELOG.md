@@ -2,6 +2,16 @@
 
 Versions of the released model and of the `glmocr` package go together. Dates are those of the measurements.
 
+## Unreleased
+
+Same MLX and GGUF weights as v1.4.0. New: `glmocr infer` reads the top and bottom bands of a page as well, unless the page is turned.
+
+- **Bands, on by default in `infer`.** After the whole page, the top 16% and the bottom 14% are read on their own, and the lines of theirs that the whole page lacks are put into it (`glmocr/bands.py`): the letterhead and the closing lines a whole-page reading loses. Lines a band returns that are not text of the page (a markdown fence, a description of the image, a bare count) are dropped. `--no-bands` reads the whole page only. `glmocr run --bands` measures it. With `--deskew` or `--regions` no band is read.
+- **The guard: an orientation classifier.** No band is read on a page that PP-LCNet_x1_0_doc_ori (PaddlePaddle, Apache-2.0) is sure, at 0.8 or more, is turned (`glmocr/orient.py`). It runs in numpy, 26 ms a page on a CPU, with no new dependency; its answers match the PyTorch implementation on 1243 of 1243 images, and Phase 1's PaddleX numbers (159/160 rotations of `hard`, 475/480 of `held`). The page is not straightened: a turned page is still read on its side (Limits).
+- **Measured, MLX** (docs/LEDGER.md, 2026-11-12). On 200 letters no model had read (`itdoc_15`), against the whole page: +3.69 [+2.67, +4.83] entity recall, 0 pages lost, 65 gained, pages whose last line is lost 16 to 1, CER 3.03% to 3.26%, time +20%. On the dev sets never worse: ocr-bench training half +3.44 [+2.29, +4.75], XFUND Italian forms +1.09 [+0.72, +1.55], phone photographs (MDPBench) +0.82 [+0.27, +1.57], Gazzetta +0.17, `hard` +0.21. On MDPBench's test photographs the CER rises by 1.0 point (22.8% to 23.8%), recall +0.57 [+0.19, +1.10]. `glmocr run --bands` on `hard` reproduces the merge measured from the saved readings byte for byte (40 of 40 pages, 76 of 76 bands).
+- **GGUF.** The bands run with the llama.cpp reader too; they are not measured there.
+- `rapidfuzz` is declared (it came with jiwer, same version).
+
 ## v1.4.0 - 2026-11-11
 
 Same MLX and GGUF weights as v1.3.0 (same SHA-256). New: a third reading for the pages whose loop the second reading does not break.
