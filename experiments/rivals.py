@@ -17,7 +17,14 @@ SETS = {"external/xfund_it_val": ("xfund_it_v8d8e8op1_1.0_op_rp110", 34), "exter
         "blind/itdoc_15_correspondence": ("itdoc15_v8d8e8op1_1.0_op_rp110", 33)}
 SEED, MAX_NEW = 20261114, 3000
 RIVALS = {
-    "xiaomi_ocr0": {"backend": "transformers", "repo": "SeerRay-Lab/Xiaomi-OCR-0", "revision": "bbd8cf8d21f256b3644b44cb860f3a7cecb93c30",
+    # Read first in transformers 5.23.0 bf16 on MPS (kept as results/rival_xiaomi_ocr0_hf.json): 29 of the 33 ocr-bench pages came back
+    # NaN from the first token ("!" repeated); eager attention gave "no discernible text"; float32 does not fit in MPS memory, and on the
+    # CPU it reads them right (doc_009) at 10 minutes for 200 tokens. So, as the two others, on llama.cpp: the community BF16 GGUF its
+    # authors list (not evaluated by them), thinking off as their Ollama backend renders it, pages fitted within 2048 px as before.
+    "xiaomi_ocr0": {"backend": "llama.cpp", "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF", "revision": "7bbfa072e0f3d70ac722e26fbccef5b9f64b7121",
+                    "files": ("Xiaomi-OCR-0.BF16.gguf", "Xiaomi-OCR-0.mmproj-bf16.gguf"), "prompt": "Extract the text in the image.",
+                    "server": "work/llama-b12377/llama-b12377/llama-server", "template": {"enable_thinking": False}, "fit": 2048},
+    "xiaomi_ocr0_hf": {"backend": "transformers", "repo": "SeerRay-Lab/Xiaomi-OCR-0", "revision": "bbd8cf8d21f256b3644b44cb860f3a7cecb93c30",
                     "prompt": "Extract the text in the image.", "chat": {"enable_thinking": False},   # its "text" prompt, evaluation_pipeline
                     "fit": 2048},   # its evaluation fits every image within 2048 x 2048 (evaluation_pipeline/cropping.py, LANCZOS)
     # transformers' PaddleOCR-VL generates about 2 tokens a second on MPS (8.5 s prefill, 32 tokens in 17 s, 2026-11-14): 13 minutes
@@ -39,11 +46,11 @@ def sample():
     p = corpus.result_path("rivals_sample"); p.write_text(json.dumps(out, indent=0)); print(len(out), "pages ->", p)
 
 
-def transformers_reader(cfg):
+def transformers_reader(cfg, dtype="bfloat16"):
     import torch
     from transformers import AutoModelForImageTextToText, AutoProcessor
     proc = AutoProcessor.from_pretrained(cfg["repo"], revision=cfg["revision"])
-    model = AutoModelForImageTextToText.from_pretrained(cfg["repo"], revision=cfg["revision"], dtype=torch.bfloat16).to("mps").eval()
+    model = AutoModelForImageTextToText.from_pretrained(cfg["repo"], revision=cfg["revision"], dtype=getattr(torch, dtype)).to("mps").eval()
 
     def read(image):
         msgs = [{"role": "user", "content": [{"type": "image", "image": image}, {"type": "text", "text": cfg["prompt"]}]}]
@@ -75,12 +82,31 @@ def llama_reader(cfg):
         buf = io.BytesIO(); image.save(buf, "PNG")
         body = {"messages": [{"role": "user", "content": [
             {"type": "image_url", "image_url": {"url": "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()}},
-            {"type": "text", "text": cfg["prompt"]}]}], "temperature": 0, "max_tokens": MAX_NEW}
+            {"type": "text", "text": cfg["prompt"]}]}], "temperature": 0, "max_tokens": MAX_NEW, **({"chat_template_kwargs": cfg["template"]} if cfg.get("template") else {})}
         req = urllib.request.Request(f"http://127.0.0.1:{port}/v1/chat/completions", json.dumps(body).encode(), {"Content-Type": "application/json"})
         r = json.load(local.open(req, timeout=1800))
         return {"text": r["choices"][0]["message"]["content"], "prompt_tokens": r["usage"]["prompt_tokens"], "gen_tokens": r["usage"]["completion_tokens"]}
     read.server = srv
     return read
+
+
+NAN = "!" * 20   # Qwen-family models write token 0, "!", once their logits are NaN
+
+
+def rescue(name):
+    """Pages whose reading is NaN from its first token (bf16 on MPS, 2026-11-14) read again in float32; nothing else changes."""
+    from PIL import Image
+    from glmocr.engine import open_page
+    cfg = RIVALS[name]; out = corpus.result_path(f"rival_{name}"); res = json.load(open(out))
+    todo = [k for k, r in res["pages"].items() if r["text"].startswith(NAN)]
+    print(len(todo), "pages read as NaN"); reader = transformers_reader(cfg, "float32")
+    for k in todo:
+        c, i = k.split("|"); im = open_page(corpus.corpus_dir(c) / f"{i}.png").convert("RGB")
+        if cfg.get("fit"):
+            im.thumbnail((cfg["fit"], cfg["fit"]), Image.Resampling.LANCZOS)
+        t = time.time(); r = reader(im); r["s"] = time.time() - t; r["dtype"] = "float32"; r["bf16_text"] = res["pages"][k]["text"][:40]
+        res["pages"][k] = r; json.dump(res, open(out, "w"), ensure_ascii=False, indent=1)
+        print(f"{name} {i:48s} {r['s']:6.1f}s gen={r['gen_tokens']} float32", flush=True)
 
 
 def read(name, limit=None):
@@ -148,8 +174,8 @@ def score(names):
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["sample", "read", "score"]); ap.add_argument("name", nargs="?")
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["sample", "read", "rescue", "score"]); ap.add_argument("name", nargs="?")
     ap.add_argument("--limit", type=int, default=None); a = ap.parse_args()
     if a.cmd != "sample" and not corpus.ledger_has("rivals_sample"):
         sys.exit("write the question and `rivals_sample` in docs/LEDGER.md first")
-    {"sample": sample, "read": lambda: read(a.name, a.limit), "score": lambda: score(list(RIVALS))}[a.cmd]()
+    {"sample": sample, "read": lambda: read(a.name, a.limit), "rescue": lambda: rescue(a.name), "score": lambda: score([n for n in RIVALS if n != "xiaomi_ocr0_hf"])}[a.cmd]()
