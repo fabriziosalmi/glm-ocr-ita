@@ -532,3 +532,4 @@ Sets: `external/docatlas_it_test` and `external/docatlas_it_scan_test`, 40 real 
 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
+| 2026-11-14 | `bands lcnet` vs whole page, `docatlas_it_test` and `docatlas_it_scan_test` | 1, 2, 3 | **Not worse, and next to nothing.** Clean 98.68% to 98.72%, scanned 98.46% to 98.49%: **+0.04 [+0.00, +0.13]** on each, 1 entity gained, 0 pages lost; within the predicted +0.0 to +0.5. CER 11.13% to 11.75% (+0.62) and 11.27% to 11.68% (+0.41): **against the prediction** (within 0.3). Excess 0.992 to 0.996, 0.990 to 0.993. No page taken for turned. The 14 and 17 entities absent from the reading are not in a letterhead or a footer: the bands do not reach them, and DocAtlas stays at its ceiling (the original reads 98.4% on both). No fine-tuning for it: half its misses would be +0.7 at most |

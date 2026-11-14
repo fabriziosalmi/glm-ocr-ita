@@ -1,0 +1,748 @@
+{
+ "base": "s2_docatlas_v8d8e8op1_rp110",
+ "corpus": "external/docatlas_it_test",
+ "pieces": {
+  "top": [
+   0.0,
+   0.16,
+   1.0
+  ],
+  "half1": [
+   0.0,
+   0.56,
+   1.4
+  ],
+  "half2": [
+   0.44,
+   1.0,
+   1.4
+  ],
+  "bottom": [
+   0.86,
+   1.0,
+   1.0
+  ]
+ },
+ "pages": {
+  "doc_68ffe9918c54eb950518f7d154cbdcac6ac7d03b_p00001": {
+   "top": {
+    "text": "Le 5 giornate di Milano\na.l.e.\nAssociazione Lombardia Economi\ne Prevveditori della Banita\nScuola\nNazionale\nServizi\nCULTURA DEL LANDO\nTITOLO\nDEL SEMINARIO\nLinea guida sugli acquisti sotto soglia.\nMisurare le innovazioni in fase di gara",
+    "s": 1.5758588314056396,
+    "prompt_tokens": 452,
+    "gen_tokens": 90,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Le 5 Giornate di Milano sono promosse da:\nCAMST\nLA RISTORAZIONE ITALIANA\nÈCOSì\nINNOVATIVE HYGIENE SYSTEMS\nrandstad\nSoGeSi\nUnipolSai\nASSICURAZIONI\nMedia partner\nGSA News\nteme",
+    "s": 1.357943058013916,
+    "prompt_tokens": 408,
+    "gen_tokens": 80,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_5805adb777a5f7ca21baf5dd47d8369be621b71c_p00005": {
+   "top": {
+    "text": "10 ► 17 ottobre 2022 Consigli di classe componente docente: programmazione OdG:\nAnalisi risultati test di ingresso (solo per le classi",
+    "s": 1.1913890838623047,
+    "prompt_tokens": 453,
+    "gen_tokens": 47,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "7.Varie ed eventuali.",
+    "s": 0.7652778625488281,
+    "prompt_tokens": 390,
+    "gen_tokens": 9,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_f801e054e038ddd9cb84e80a806e537322bd4ec8_p00019": {
+   "top": {
+    "text": "ERVET\nVIVACITA' COMMERCIALE\nIl fenomeno vivacità commerciale è dato dalla combinazione della",
+    "s": 1.0754129886627197,
+    "prompt_tokens": 453,
+    "gen_tokens": 32,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "rispetto alle chiusure.",
+    "s": 0.7665021419525146,
+    "prompt_tokens": 390,
+    "gen_tokens": 9,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_out_eo_docx_batch_1_53.docx__eo__25_p00001": {
+   "top": {
+    "text": "PRIVACY & COOKIES POLICY\nINFORMATIVA\nIn questa pagina si descrivono le modalità di gestione del presente sito web, in riferimento al trattamento dei dati personali degli utenti che lo consultano. Si tratta di un'informativa che è resa ai sensi del Regolamento Europeo 2016/679 dettato in materia di protezione delle persone fisiche con riguardo al trattamento dei dati personali, nonché alla libera circolazione di tali dati (di seguito anche Regolamento) per gli utenti dei servizi",
+    "s": 1.9243698120117188,
+    "prompt_tokens": 452,
+    "gen_tokens": 137,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "della richiesta, il metodo utilizzato nel sottoporre la richiesta al server, la dimensione del file ottenuto in risposta, il codice numerico indicante lo stato della risposta data dal server (buon fine, errore, ecc.) ed altri parametri relativi al sistema operativo e all'ambiente informatico dell'utente.",
+    "s": 1.3904109001159668,
+    "prompt_tokens": 408,
+    "gen_tokens": 84,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_b1d570d847e77eaeb6a0d303382cfd1aa8c25878_p00001": {
+   "top": {
+    "text": "Consorzio Sociale\nAgorà S10\nAzienda Speciale Consortile\nAmbito Territoriale S3 ex S10 “Alto Sele-Tanagro”",
+    "s": 1.172273874282837,
+    "prompt_tokens": 452,
+    "gen_tokens": 46,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "(a cura di entrambi i Settori)\nEstremi del provvedimento di iscrizione all’Albo regionale delle Cooperative Sociali\nSI\nNO\nNON\nPREVISTA\nCopia del documento di riconoscimento del richiedente\nSI\nNO\nNON\nConsorzio Sociale AGORA’ S10 - Palomonte (SA) - Località Valle, C.A.P. 84020\nconsorzioagoras10@gmail.com - consorzioagoras10@pec.it",
+    "s": 1.7430791854858398,
+    "prompt_tokens": 408,
+    "gen_tokens": 127,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_c21b1878a502a50bc633a7aecae0fad32277eec4_p00001": {
+   "top": {
+    "text": "reclamo avverso la graduatoria interna\n(da compilare avverso la graduatoria redatta dal Dirigente Scolastico per l'individuazione dei soprannumerari)",
+    "s": 1.1607611179351807,
+    "prompt_tokens": 452,
+    "gen_tokens": 45,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Firma\nLi, _____\n_____",
+    "s": 0.8006608486175537,
+    "prompt_tokens": 408,
+    "gen_tokens": 10,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_ac55ab7bc757fe31e9bd9db5185a397703be7513_p00001": {
+   "top": {
+    "text": "Trascrizione del telegramma del Presidente della Repubblica Italiana Sergio Mattarella\nindirizzato al Presidente dell'Acri Giuseppe Guzzetti\nin occasione della 91ª Giornata Mondiale del Risparmio",
+    "s": 1.299454927444458,
+    "prompt_tokens": 452,
+    "gen_tokens": 62,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 0.768963098526001,
+    "prompt_tokens": 408,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_bf47b2d44b4de35db507c0e34e44df6aff1a9799_p00002": {
+   "top": {
+    "text": "iRSVe\nInstituto Zooprofilattico\nSperimentale delle Venezie\nOFFERTA ECONOMICA",
+    "s": 1.056748867034912,
+    "prompt_tokens": 453,
+    "gen_tokens": 30,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Pagina 2 di 2",
+    "s": 0.7664108276367188,
+    "prompt_tokens": 390,
+    "gen_tokens": 9,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_58e8107215f6ad1ab5e82fee81244ff38a0db32a_p00001": {
+   "top": {
+    "text": "II DOMENICA DI PASQUA C\nTESTI PER CELEBRARE\nINTRODUZIONE\nCelebriamo oggi la Seconda Domenica di Pasqua.\n«Otto giorni dopo... venne Gesù»: è il giorno in cui il Risorto si rende presente.\nDa questa Liturgia impariamo a vivere il mistero della Domenica ed a tradurlo nella vita comunitaria",
+    "s": 1.6177897453308105,
+    "prompt_tokens": 452,
+    "gen_tokens": 100,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 0.7690842151641846,
+    "prompt_tokens": 408,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_e7f00e742454bd3e67ba3bdc08b585154c1997d4_p00002": {
+   "top": {
+    "text": "tra i Consigli dell'Ordine degli Avvocati di Novara, Alessandria, Verbania e Vercelli e il\nDipartimento di Giurisprudenza dell'Università degli Studi del Piemonte Orientale;\n□ di essere in possesso dei requisiti di cui all'art.41 co.1,2,3,4,6 lett. a), 8,10 ed 11 della L.\nn.247/2012;",
+    "s": 1.7152791023254395,
+    "prompt_tokens": 452,
+    "gen_tokens": 112,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 0.7695980072021484,
+    "prompt_tokens": 408,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_a72ad0f4008e1e95f0165330d81a5a585f0c1ad7_p00007": {
+   "top": {
+    "text": "D) USO DI\nLINGUAGGI\nALTERNATIVI\nE/O INTEGRATIVI",
+    "s": 1.017899990081787,
+    "prompt_tokens": 452,
+    "gen_tokens": 27,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "SINTESI PROFILO DINAMICO FUNZIONALE\nL'alunno presenta lieve iperattività motoria; difficoltà di coordinazione\nmotoria, difficoltà di attenzione; memorizzazione labile; livello cognitivo ai\nlimiti inferi",
+    "s": 1.2378311157226562,
+    "prompt_tokens": 408,
+    "gen_tokens": 65,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_ea66de1aaf27fdae1bfd1476f0e8c8e7bc5ec3af_p00005": {
+   "top": {
+    "text": "Nel caso non si raggiunga l'adesione dei 2/3 degli alunni l'anticipo versato verrà recuperato per un'ulteriore uscita didattica o in assenza di quest'ultima restituito.\nLe spese di realizzazione di visite didattiche e delle uscite didattiche sono a carico dei partecipanti. I rappresentanti di classe provvederanno a raccogliere le quote di partecipazione,\nso provisto a versarle sul canto corrente postale delle scuole e a consignare el docente di classe",
+    "s": 1.8568670749664307,
+    "prompt_tokens": 452,
+    "gen_tokens": 129,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "contrarie al Regolamento d'Istituto o alla legge vigente.",
+    "s": 0.8557288646697998,
+    "prompt_tokens": 408,
+    "gen_tokens": 17,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_e5d33abc3713a95bb6504458c48b9d1446e5979b_p00002": {
+   "top": {
+    "text": "- Al fine di prevenire la formazione di rigidi pattern comportamentali è importante proporre molteplici attività che stimolino la creatività, in una varietà di ambienti diversi: ad esempio è possibile disegnare in classe come in biblioteca, o si possono frequentare diversi ambienti, in momenti differenti della giornata ed in giorni della settimana diversi. Gli si può insegnare anche ad utilizzare lo stesso oggetto in modi differenti.",
+    "s": 1.7148537635803223,
+    "prompt_tokens": 452,
+    "gen_tokens": 112,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 0.7688040733337402,
+    "prompt_tokens": 408,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_94f9939bacb98a8e8aebddfd35785dd1dd02f84a_p00001": {
+   "top": {
+    "text": "SCHEDA N.\nACQUISTI DI CARBURANTE PER AUTOTRAZIONE\nDITTA, DENOMINAZIONE, RAGIONE SOCIALE O COGNOME E NOME\nMESE O TRIMESTRE\nANNO",
+    "s": 1.298732042312622,
+    "prompt_tokens": 452,
+    "gen_tokens": 62,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 0.7693240642547607,
+    "prompt_tokens": 408,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_82b52d46325a3a8f1c73eb8fd40d4031ac236d1b_p00001": {
+   "top": {
+    "text": "AVIATION INDUSTRY NEWSLETTER",
+    "s": 0.9006500244140625,
+    "prompt_tokens": 452,
+    "gen_tokens": 12,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "tenendo conto delle troppe compagnie aeree che nascono, non ci si deve affatto meravigliare\ndelle \"troppe\" compagnie aeree che chiudono. Anzi, secondo il nostro parere, il numero dei\nvettori che dovrebbero chiudere i battenti dovrebbe essere molto più elevato.",
+    "s": 1.3509650230407715,
+    "prompt_tokens": 408,
+    "gen_tokens": 79,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_229809b4e5ae4852c4399d5ae15852a54a8dda7e_p00005": {
+   "top": {
+    "text": "Misericordias Domini, in aeternum cantabo (2v).\n\nBreve momento di silenzio e di preghiera personale.",
+    "s": 1.0897400379180908,
+    "prompt_tokens": 452,
+    "gen_tokens": 36,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "5",
+    "s": 0.7367780208587646,
+    "prompt_tokens": 408,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_ebb4810b3c68e67246a7d9bf655a80a413f5d1dd_p00001": {
+   "top": {
+    "text": "AVIATION INDUSTRY NEWSLETTER",
+    "s": 0.8993191719055176,
+    "prompt_tokens": 452,
+    "gen_tokens": 12,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "bacino di traffico senza la scomoda presenza, come avviene altrove, di un agguerrito vettore di bandiera.",
+    "s": 0.9990229606628418,
+    "prompt_tokens": 408,
+    "gen_tokens": 35,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_a90f1220d89dcd71143805f4b9d5c3cb32bd27b3_p00001": {
+   "top": {
+    "text": "CIVITÀ D'ITALIA",
+    "s": 0.8821067810058594,
+    "prompt_tokens": 452,
+    "gen_tokens": 10,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "1",
+    "s": 0.7358818054199219,
+    "prompt_tokens": 408,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_out_eo_docx_batch_1_3.docx__eo__136_p00005": {
+   "top": {
+    "text": "ASTE GIUDIZIARIE INLINEA SPA\nINFORMATIVA PRIVACY AI SENSI DEL REG. UE 679/2016 (\"GDPR\")\nConformemente a quanto previsto dall'art. 13 Reg. UE 679/2016, Aste Giudiziarie Inlinea S.p.A., con sede in Livorno, Scali d'Azeglio, 2/6 (\"Aste Giudiziarie\") forisce qui di seguito informazioni sui dati personali da essa trattati in qualità di Titolare in relazione alla prestazione di servizi mediante le piattaforme astegiudiziarie.it (pubblicità giudiziaria),\nprocedure.it (informatizzazione giudiziaria), astetelematiche.it (vendita telematica) ed eventuali servizi e piattaforme connessi, ivi comprese app per dispositivi elettronici.",
+    "s": 2.569594144821167,
+    "prompt_tokens": 452,
+    "gen_tokens": 214,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "dell interessato,\nl'Utente col presente atto, da considerarsi parte integrante del contratto di servizi tra le parti, nomina Aste Giudiziarie Responsabile (esterno) del trattamento ai sensi dell'art.\n28 del GDPR secondo le disposizioni che seguono.\n\nAmbito e durata dell'incarico\nLe categorie di soggetti interessati oggetto della presente nomina sono tutti quelli interessati a qualsiasi titolo dalle procedure civili, anche concorsuali: parti, difensori, organi e ausiliari della procedura, terzi (es. offerenti e presentatori nelle aste).",
+    "s": 1.9259309768676758,
+    "prompt_tokens": 408,
+    "gen_tokens": 149,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_d6ac5af0b95f94ebbedf4e8dc238800422ec34f6_p00002": {
+   "top": {
+    "text": "riconosciute o accertate con sentenza passata in giudicato come di seguito elencato:\n_____\n6. in caso affermativo rispetto ad una delle fattispecie di cui all'art. 80 comma 5 lettere c bis), c ter) e c quater)\ndel Codice, l'operatore economico ha adottato misure di autodisciplina che di seguito si elencano:",
+    "s": 1.6250238418579102,
+    "prompt_tokens": 452,
+    "gen_tokens": 101,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Si tenga conto di quanto precisato rispetto alle curricle niveanti con il comunicato ANAC dell 8.11.2017\n(https://www.anticorruzione.it/portal/public/classic/AttivitaAutorita/AttiDellAutorita/_Atto?ca=6992). Si indichino in questo contesto i soggetti di cui all'art. 80 comma 3 in ragione di operazioni societarie.\nSi precisa che ai fini dell'art. 80 comma 3 del Codice rilevano i soli procuratori titolari di poteri decisionali di particolare ampiezza e riferiti ad una pluralità di oggetti tali da essere assimilati agli amministratori (Tar Lazio 9195/2017)",
+    "s": 2.2964138984680176,
+    "prompt_tokens": 408,
+    "gen_tokens": 193,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_a981b33ae812450064ea0eac518b2636fcaab27c_p00001": {
+   "top": {
+    "text": "PREGHIERA DEI FEDELI ANNO A\nIII DOMENICA DI AVVENTO\nSecondo la promessa del profeta, il Signore Dio viene egli stesso “a\nirrobustire le mani fiacche, a rendere salde le ginocchia vacillanti, a dare",
+    "s": 1.3874356746673584,
+    "prompt_tokens": 452,
+    "gen_tokens": 72,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "e fa' che, perseverando nella pazienza,\nmaturiamo in noi il frutto della fede\ne accogliamo con rendimento di grazie\nil vangelo della gioia. Per Cristo nostro Signore. Amen",
+    "s": 1.136185884475708,
+    "prompt_tokens": 408,
+    "gen_tokens": 52,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_928bbf9e822b84c81dcd0d5b0e33996da521ebc6_p00002": {
+   "top": {
+    "text": "Allegato 1C: Contratto di Capacità\n\n1.1. Salvo non siano definiti diversamente, i termini in maiuscolo nel presente Contratto di Capacità hanno il significato indicato nella Clausola 1.1.1 del Codice di Rigassificazione ovvero quello di cui alla Procedura.\n1.2. Il presente Contratto di Capacità sarà interpretato ai sensi delle disposizioni di cui alla Clausola",
+    "s": 1.666612148284912,
+    "prompt_tokens": 452,
+    "gen_tokens": 106,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "espressamente accettate dal Fornitore stesso.",
+    "s": 0.8257730007171631,
+    "prompt_tokens": 408,
+    "gen_tokens": 13,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_df095baeb63add868125584245d57336318ba2d7_p00004": {
+   "top": {
+    "text": "EVENTUALI ULTERIORI PARTI:\nRICORRENTE NATURA GIURIDICA(1) I... ..I",
+    "s": 1.073293924331665,
+    "prompt_tokens": 452,
+    "gen_tokens": 34,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "4",
+    "s": 0.738245964050293,
+    "prompt_tokens": 408,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_74740e13cef12946d4b526f203568a0a460eae2e_p00001": {
+   "top": {
+    "text": "FEDERAZIONE SPORT SORDI ITALIA\nFederazione Sport Sordi Italia\nFederazione riconosciuta dal Comitato Italiano Paralimpico\nCAMPIONATO CALCIO a 11 – Stag. Sport 2013/14",
+    "s": 1.3550090789794922,
+    "prompt_tokens": 452,
+    "gen_tokens": 68,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Massaggiatore\nL'ARBITRO IL DIRIGENTE ACCOMPAGNATORE UFFICIALE\nDa consegnare all'arbitro in triplice copia, 30 minuti prima dell'inizio gara.",
+    "s": 1.1677138805389404,
+    "prompt_tokens": 408,
+    "gen_tokens": 56,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_29081b8388455e3189e0693193fd9045ffab9076_p00001": {
+   "top": {
+    "text": "LICEO STATALE \"V. LINARES\"\nLiceo Classico / Liceo Scientifico / Liceo delle Scienze Umane Via Prof. S. Malfitano n. 2 - 92027 Licata (AG) Tel. 0922 -\n772266 Fax 0922 - 775234 Cod. Fiscale: 81000470849 - Cod. Mecc.: AGPC060002 - PEO: agpc060002@istruzione.it",
+    "s": 1.9484972953796387,
+    "prompt_tokens": 453,
+    "gen_tokens": 138,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "parte, perché?",
+    "s": 0.7501580715179443,
+    "prompt_tokens": 390,
+    "gen_tokens": 7,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_b515b3c1488b9315c1c92371161e37ce2438f0f8_p00001": {
+   "top": {
+    "text": "DOUJA D'OR\nComunicato Stampa – Asti 14 settembre 2018",
+    "s": 1.0121660232543945,
+    "prompt_tokens": 452,
+    "gen_tokens": 26,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "convegno nell'ambito del nostro evento più rappresentativo. Evento che mette in evidenza come il vino ricopra\nil ruolo indiscusso di motore della nostra economia territoriale. Oggi di vino non si parla soltanto in termini di\nprodotto e vendita, ma anche per molteplici aspetti riguardanti ad esempio l'enoturismo. Il cliente si è evoluto,\nCamera di Commercio Industria Artigianato e Agricoltura di Asti\n14100 Asti – Piazza Medici, 8 – tel 0141 535211",
+    "s": 1.9320039749145508,
+    "prompt_tokens": 408,
+    "gen_tokens": 149,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_7abf6360d2a783676adb6c4b39c068116817104c_p00001": {
+   "top": {
+    "text": "\"Vi siete rivestiti di Cristo\"",
+    "s": 0.900109052658081,
+    "prompt_tokens": 452,
+    "gen_tokens": 12,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Se diventare figli è anzitutto un dono, qualcosa che non dipende da noi,\ndavanti a questo fatto l'atteggiamento giusto è lo stupore gioioso e\nriconoscente. Giovanni nella sua prima lettera esclama:",
+    "s": 1.2094552516937256,
+    "prompt_tokens": 408,
+    "gen_tokens": 61,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_43a8e00f0a841e53c4e5a3a652109aa1ed6ef5ef_p00005": {
+   "top": {
+    "text": "Schema di Formulario Manifestazione di interesse – GAL MontagnAppennino Allegato B\n5. ASPETTI ECONOMICI E FINANZIARI",
+    "s": 1.1535487174987793,
+    "prompt_tokens": 453,
+    "gen_tokens": 42,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "(*) Ogni singola attività deve essere riconducibile ad un solo partner attuatore. Nel caso si tratti di un partner effettivo occorre specificare la relativa\n10",
+    "s": 1.0371131896972656,
+    "prompt_tokens": 390,
+    "gen_tokens": 43,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_cd6fe52b8201db5b88832fd28c1d7928c6f8658c_p00006": {
+   "top": {
+    "text": "AGRICORE – D1.8 – Caso d'uso Azioni di ricerca partecipativa\ninformative attraverso azioni di ricerca partecipativa\" (D1.7), che sarà terminata entro novembre 2021.\nPer la preparazione di questo rapporto, sono stati presi in considerazione i seguenti",
+    "s": 1.3853328227996826,
+    "prompt_tokens": 452,
+    "gen_tokens": 72,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "6",
+    "s": 0.7376840114593506,
+    "prompt_tokens": 408,
+    "gen_tokens": 2,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_3bf50e6d312bc298380779834b6ee712b06aecbe_p00002": {
+   "top": {
+    "text": "la pelle, le articolazioni, i reni, il cuore, il cervello. È soprannominato il “grande mimo” proprio per la\ncapacità di coinvolgere diversi organi e di presentarsi con una grande varietà di manifestazioni\ncliniche che rendono molto difficoltosa una corretta diagnosi.\n\n\"I pazienti arrivano dal reumatologo con un ritardo medio tra 1 e 2 anni dall'esordio della malattia.",
+    "s": 1.7013940811157227,
+    "prompt_tokens": 452,
+    "gen_tokens": 110,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "c.farroni@vrelations.it",
+    "s": 0.8012890815734863,
+    "prompt_tokens": 408,
+    "gen_tokens": 10,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_051d464bffc3c50247cad5fc11aaf7ff9a40647c_p00002": {
+   "top": {
+    "text": "1. di impegnarsi a pagare la somma dovuta all'arrivo del bollettino di pagamento entro la scadenza segnalata, tramite PagoPA secondo i canali evidenziati nell'avviso di pagamento (per chiarimenti: www.pagopa.gov.it)\n2. di essere a conoscenza che la responsabilità del Comune sussiste limitatamente all'effettuazione del trasporto per il tempo in cui l'alunno si trova a bordo dello scuolabus e d'impegnarsi alla custodia ed alla vigilanza dello stesso prima della salita e dopo la discesa dal mezzo. Sarà dunque la famiglia che dovrà provvedere alla sicurezza del minore dalla fermata stabilita alla propria abitazione.",
+    "s": 2.2979300022125244,
+    "prompt_tokens": 452,
+    "gen_tokens": 181,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "```markdown\n\n```",
+    "s": 0.771813154220581,
+    "prompt_tokens": 408,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_1cb7d4d2d0dee1a14783fe44e008a6c1914e68d1_p00001": {
+   "top": {
+    "text": "Spett.le\nOrdine degli Avvocati\ndi Massa Carrara",
+    "s": 0.9570798873901367,
+    "prompt_tokens": 452,
+    "gen_tokens": 19,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "advisor, anche legale, con incarico finalizzato alla predisposizione e presentazione di piani di risanamento attestati, di piani in accordi di ristrutturazione dei debiti, di convenzioni e/o accordi di moratoria con più creditori e, infine, di piani e proposte di concordati preventivi o fallimentari in continuità o misti;",
+    "s": 1.4661750793457031,
+    "prompt_tokens": 408,
+    "gen_tokens": 93,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_c814dbea868c11e6cc70a88e7ca981e670f0186c_p00001": {
+   "top": {
+    "text": "Modello aggiornato al 24.06.2017\nMANIFESTAZIONE DI INTERESSE PER L'AFFIDAMENTO DEL SERVIZIO DI\nFINANZIAMENTO DI INVESTIMENTI - CODICE C.I.G. 6762317",
+    "s": 1.4024860858917236,
+    "prompt_tokens": 452,
+    "gen_tokens": 74,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "A mero titolo esemplificativo si rappresenta che l'operazione di finanziamento potrebbe essere articolata quale accensione da subito di un mutuo di durata massima di anni 10\n1",
+    "s": 1.1223208904266357,
+    "prompt_tokens": 408,
+    "gen_tokens": 50,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_9893551554637cdf51f4ab1a638d71d059ead59c_p00001": {
+   "top": {
+    "text": "Allegato D – Informativa sulla Privacy\nINFORMATIVA PRIVACY\nAi sensi degli artt. 13-14 Regolamento (UE) 2016/679\nSecondo la normativa indicata, il trattamento relativo al presente servizio sarà improntato ai principi di cui",
+    "s": 1.4258651733398438,
+    "prompt_tokens": 452,
+    "gen_tokens": 77,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "[X] misure specifiche poste in essere per fronteggiare rischi di distruzione, perdita, modifica, accesso, divulgazione non autorizzata, la cui efficacia va valutata regolarmente.\n[X] Sistemi di autenticazione\n[X] sistemi di autorizzazione\n[X] sistemi di protezione (antivirus; firewall; antintrusione; altro) adottati per il trattamento",
+    "s": 1.5631952285766602,
+    "prompt_tokens": 408,
+    "gen_tokens": 105,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_d19c29a3c5b2300e59ed45547a47ea7c401ee2e2_p00002": {
+   "top": {
+    "text": "complessi sistemi di irrigazione costruiti dal Gran Re esprimono il grado di sviluppo che esisteva in questo periodo storico. Rientro in albergo\nper la cena e pernottamento.\n5° giorno 29 dicembre HABARANA - DAMBULLA - KANDY (B-/÷D)\nPrima colazione. Al mattino visita del famoso tempio rupestre, edificato dal re Walagam Bahu nel I\nsecolo a.C. , dichiarato Patrimonio Mondiale dell'Umanità dall'Unesco nel 1991. Il Tempio sorge sulla\nsommità di un'altura rocciosa isolata ed è il più imponente del paese. Il complesso consta di cinque\ngrotte con oltre duemila metri quadrati di pareti e soffitti dininti ed è la più grande area di pitture",
+    "s": 2.5903029441833496,
+    "prompt_tokens": 452,
+    "gen_tokens": 216,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Pag. 2",
+    "s": 0.7693021297454834,
+    "prompt_tokens": 408,
+    "gen_tokens": 6,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_47043d7fe9f4080e33a221d70f258c8510996a49_p00002": {
+   "top": {
+    "text": "IL RESPONSABILE\n2^ SETTORE-SERVIZI FINANZIARI",
+    "s": 1.066119909286499,
+    "prompt_tokens": 492,
+    "gen_tokens": 23,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Datoatto che, ai sensi dell'art. 183, comma 5, del D.Lgs. n. 267/2000 e s.m.i.e delle prescrizioni di cui all'allegato n. 4/2 del D.Lgs. n. 118/2011, comma 5 punto 5.2, lett.",
+    "s": 1.494960069656372,
+    "prompt_tokens": 444,
+    "gen_tokens": 88,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_e76b4ec19f52c1c67b3b078bfb0f440623c5f31b_p00001": {
+   "top": {
+    "text": "CE\nDichiarazione UE di Conformità\nCertificato numero: PA 1395 – 0315/2014",
+    "s": 1.0842816829681396,
+    "prompt_tokens": 452,
+    "gen_tokens": 35,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "TEANO, 22/09/2017\nFirmato a nome e per conto di\nAngelo Mottola",
+    "s": 0.9851250648498535,
+    "prompt_tokens": 408,
+    "gen_tokens": 33,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_3377505984f59ff9f8c94ecb3b80dda2dd9b44d7_p00002": {
+   "top": {
+    "text": "27.1.11 ore 10,30\n22.2.11 ore 15,30\nFiglia mia,\nalcuni consacrati e non pensano di aver\nI Miei atleti mi daranno gloria",
+    "s": 1.2770402431488037,
+    "prompt_tokens": 452,
+    "gen_tokens": 59,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Volonta tutto e a disposizione dei figli e chi vive con Me, fra le Mie braccia, che altre attenzioni potrebbe desiderare?\nsmarriti, i prigionieri e i nemici di se stessi.\nAccendete la Vita. Vi benedico.\nMaria",
+    "s": 1.2592980861663818,
+    "prompt_tokens": 408,
+    "gen_tokens": 67,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_49c3dcdcbc7822055bb3e37382925c8fa00ce72a_p00001": {
+   "top": {
+    "text": "Elezioni della RSU\nComparto Regioni e Autonomie Locali\n3-5 MARZO 2015\nSottoscrittori per la lista dei candidati\nCSA Regioni Autonomie Locali",
+    "s": 1.2371211051940918,
+    "prompt_tokens": 452,
+    "gen_tokens": 54,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "Documento di identificazione\nI firmatari dichiarano di non aver sottoscritto e non voler sottoscrivere altra lista per l’elezione della\nRSU.\nII Presentatore Lista CSA Regioni Autonomie Locali\n01_sottoscrittori_lista_CSA_RSU 1",
+    "s": 1.2983808517456055,
+    "prompt_tokens": 408,
+    "gen_tokens": 72,
+    "loop_cut": null,
+    "retry": false
+   }
+  },
+  "doc_526b1920a9773d7c7503bddd538dc2b8539391e6_p00003": {
+   "top": {
+    "text": "TAO BUK\nTAORMINA BOOK FESTIVAL\nQuestione di bruciante attualità, La politica energetica dell'Unione Europea dopo l'Ucraina:\nperché l'attacco russo ha costituito una drammatica sveglia alla sicurezza del continente e ha\nscosso – anche - l'equilibrio energetico in Europa, accelerando le trasformazioni nel panorama",
+    "s": 1.604360818862915,
+    "prompt_tokens": 452,
+    "gen_tokens": 98,
+    "loop_cut": null,
+    "retry": false
+   },
+   "bottom": {
+    "text": "CON IL SUPPORTO DI\nRegione Siciliana\nSEESICILY\nyour happy world\nCON IL PATRICO DI\nEUROPEA\nMONTREAL\nMINISTERIO DELLA CULTURA\nCON IL SUPPORTO DI\nFESR\nSICILIA 2014-2020\nMINISTERO DELLA CULTURA\nCON IL SUPPORTO DI\nUNIT\nSERIE NATURALE DEL LEGISTRO\nCONTRO SALUTO E LICITAZIONE\nTRENTE DI CULTURA\nSALUTE TRENTE",
+    "s": 3.8821229934692383,
+    "prompt_tokens": 408,
+    "gen_tokens": 141,
+    "loop_cut": null,
+    "retry": true
+   }
+  }
+ }
+}
