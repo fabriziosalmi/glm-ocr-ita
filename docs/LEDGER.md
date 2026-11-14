@@ -545,5 +545,7 @@ Data: `work/ft/train_op6.jsonl`, op1's 91 rows and the 58 DocAtlas rows of op3's
 
 **Prediction.** Gate 1: -1.5 to +0.5 against op1m0 and op1s1, a narrow pass or a fail. Gate 2: +0.0 to +0.5 on each DocAtlas set, not shown better (the most there is to win is 1.2 points).
 
+
+**Change before training (2026-11-15).** The 91 pages of op1's data (gemini sets) are on neither Mac mini any more, so op1's recipe cannot be trained again with the DocAtlas pages. op6 instead starts from `work/ft/op1m0_90_merged` (op1's recipe trained again on the first Mac mini, seed 0, fused in bf16) and trains on the 58 DocAtlas rows only (`work/ft/train_op6b.jsonl`, one pass, lr 1e-5, rank 8, seed 0; `ft_train.py --base`, `ft_merge.py --base`). Both gates compare op6 with its parent op1m0, quantized as the release (`models/v8d8e8_op1m0`), so that the noise of training does not enter: gate 1 raw against raw on `external/xfund_it_train` (`xfundtr_v8d8e8op1m0_1.0_op` exists); gate 2 with the retry on both sides on the two DocAtlas test sets, tags `docatlas_v8d8e8op6_1.0_op_rp110`, `docatlasscan_v8d8e8op6_1.0_op_rp110`, `docatlas_v8d8e8op1m0_1.0_op_rp110`, `docatlasscan_v8d8e8op1m0_1.0_op_rp110`. Thresholds and prediction as written above.
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|

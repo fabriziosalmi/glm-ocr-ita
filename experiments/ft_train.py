@@ -42,7 +42,9 @@ ap.add_argument("--template-format", action="store_true", help="the format of ru
 ap.add_argument("--prompt", choices=["official", "mlx"], default="official", help="official: the prompt of the reference implementation, as the reader uses; mlx: with /nothink and <think></think>, as runs step1 to step4")
 ap.add_argument("--trainer-mask", action="store_true", help="the loss call of runs step1 to step3, kept to reproduce them: see CAUSAL MASK below")
 ap.add_argument("--dry-run", action="store_true", help="check the data and the settings, load nothing")
+ap.add_argument("--base", default=None, help="a bf16 model folder to train on instead of the original, e.g. a fused fine-tune (op6, 2026-11-15)")
 a = ap.parse_args()
+if a.base: SOURCE = pathlib.Path(a.base)
 out = WORK / "ft" / a.name
 rows = [json.loads(l) for l in open(a.data, encoding="utf-8")]
 missing = [r["id"] for r in rows if not all(pathlib.Path(i).exists() for i in r["images"])]
