@@ -1,0 +1,402 @@
+[
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_1"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_11"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_12"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_13"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_14"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_15"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_16"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_17"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_19"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_2"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_21"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_22"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_23"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_24"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_25"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_27"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_3"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_30"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_31"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_32"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_33"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_34"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_36"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_37"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_38"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_4"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_40"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_42"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_44"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_46"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_5"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_6"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_8"
+},
+{
+"corpus": "external/xfund_it_val",
+"id": "it_val_9"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_004"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_009"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_013"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_015"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_017"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_020"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_024"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_026"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_029"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_044"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_045"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_046"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_051"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_054"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_058"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_063"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_064"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_066"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_067"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_073"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_074"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_076"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_077"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_079"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_081"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_083"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_085"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_086"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_090"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_092"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_093"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_097"
+},
+{
+"corpus": "external/ocrbench_test",
+"id": "doc_100"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0031_cert_L2_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0038_comunicazione_L1_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0039_cert_L3_en"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0052_minutes_L1_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0062_deed_L2_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0065_footnotes_L2_en"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0082_istanza_L3_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0085_registered_L4_en"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0090_determina_L1_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0091_determina_L2_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0092_minutes_L4_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0094_letter_L3_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0100_footnotes_L5_en"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0108_letter_L3_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0112_relazione_L2_en"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0117_determina_L1_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0122_istanza_L5_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0124_relazione_L1_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0126_deed_L4_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0129_court_L3_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0131_cert_L2_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0132_minutes_L3_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0134_minutes_L5_en"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0144_comunicazione_L3_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0154_court_L4_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0155_letter_L3_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0157_circular_L2_en"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0162_deed_L2_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0177_deed_L5_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0183_medical_L4_en"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0185_relazione_L1_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0188_avviso_L4_it"
+},
+{
+"corpus": "blind/itdoc_15_correspondence",
+"id": "itdoc_15_correspondence_0199_avviso_L1_it"
+}
+]

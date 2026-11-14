@@ -109,7 +109,10 @@ def test_loop_threshold_sits_in_a_gap():
     Runs saved before the corpus was recorded are kept: they are all synthetic."""
     ratios = []
     for f in glob.glob(str(corpus.RESULTS / "*.json")) + glob.glob(str(corpus.ROOT / "archive/results/*.json")):
-        run = json.load(open(f)); name = str(run.get("corpus") or "")
+        run = json.load(open(f))
+        if not isinstance(run, dict) or pathlib.Path(f).name.startswith("rival"):   # experiments/rivals.py: a page list, other models
+            continue
+        name = str(run.get("corpus") or "")
         if pathlib.Path(f).name.startswith(("omnidoc", "panelda", "panelgu", "panelre")) or name.startswith("external/") or re.match(r"chatgpt/itdoc_1\d", name):
             continue
         if f.endswith("_pieces.json"):   # experiments/pieces.py: bands and halves of a page, not whole-page readings

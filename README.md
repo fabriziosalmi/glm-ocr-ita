@@ -30,6 +30,8 @@ Against the original model (`zai-org/GLM-OCR`, bf16), same pages, paired differe
 
 **v1.5.0, the bands** (below, How it works, 6), on the same test sets, against the release's whole page: XFUND Italian forms 77.7% to **79.9%** (+2.2 [+0.9, +4.0]), ocr-bench-v1 91.8% to **96.6%** (+4.8 [+3.1, +6.6]), Omni Parse Bench with the text layer 75.5% to **77.2%** (+3.1 [+0.0, +6.9] per page, not worse), 200 unseen Italian and English letters 92.4% to **96.1%** (+3.7 [+2.7, +4.8]); no page lost on any, about 20% more time.
 
+**Against other OCR models** (2026-11-14, 100 test pages, each rival reading the whole page once with its own prompt; [details and limits](docs/RESULTS.md#against-other-ocr-models)): GLM-OCR-ita v1.5.0 89.6% of entities, the fine-tuned model alone (read as the rivals are, without retry or bands) 84.2%, MiniCPM-OCR 1.0 76.8%, PaddleOCR-VL-1.6 74.5%, Xiaomi-OCR-0 72.9%. On the real Italian forms alone, MiniCPM-OCR is not shown worse than the release (-3.8 [-7.9, +0.4]) and ties the model alone: there the lead is the harness's.
+
 Scores are the share of entities found exactly (amounts, dates, tax codes, IBAN, VAT numbers, PEC addresses; on XFUND its annotated fields), or the benchmark's own scorer where it has one. The synthetic and SROIE rows were read before the loop retry existed (v1.0.0, same weights); the retry changes only pages that loop. Size 1184 MB against 2651, peak memory 2.10 GB against 3.16, 72 generated tokens/s against 65. Every table, the per-type and per-level breakdowns and the full history are in [`docs/RESULTS.md`](docs/RESULTS.md).
 
 ## Quick start
