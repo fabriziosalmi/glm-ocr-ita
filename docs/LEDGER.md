@@ -533,3 +533,17 @@ Sets: `external/docatlas_it_test` and `external/docatlas_it_scan_test`, 40 real 
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
 | 2026-11-14 | `bands lcnet` vs whole page, `docatlas_it_test` and `docatlas_it_scan_test` | 1, 2, 3 | **Not worse, and next to nothing.** Clean 98.68% to 98.72%, scanned 98.46% to 98.49%: **+0.04 [+0.00, +0.13]** on each, 1 entity gained, 0 pages lost; within the predicted +0.0 to +0.5. CER 11.13% to 11.75% (+0.62) and 11.27% to 11.68% (+0.41): **against the prediction** (within 0.3). Excess 0.992 to 0.996, 0.990 to 0.993. No page taken for turned. The 14 and 17 entities absent from the reading are not in a letterhead or a footer: the bands do not reach them, and DocAtlas stays at its ceiling (the original reads 98.4% on both). No fine-tuning for it: half its misses would be +0.7 at most |
+
+## op6, a pilot: op1's recipe plus 58 real Italian DocAtlas pages, judged on DocAtlas
+
+Written on 2026-11-15, before training. **Question:** do real Italian pages teach the plain words the release still misreads on DocAtlas (of the 35 entities missed on the clean set, about 31 are misread words such as "individuzione" or "acquiscono", about 4 a ground-truth fault), without the loss on real forms every fine-tune after op1 showed (op2 to op5, about -2 on XFUND Italian train with the retry)? A pilot under a time limit set by the owner: no release decision follows from it alone.
+
+Data: `work/ft/train_op6.jsonl`, op1's 91 rows and the 58 DocAtlas rows of op3's data (documents in neither `external/docatlas_test_docs.json` nor any test set, checked: 0 overlap; answers built by `ft_targets.py` for op3). Training: op1's recipe (`ft_train.py`, lr 1e-5, rank 8, one pass, 149 iterations, seed 0), fused and quantized as the release (`v8d8e8`), on the first Mac mini. The DocAtlas source download is no longer on any machine, so no new pages were drawn.
+
+**Gate 1, dev, read raw (no retry), on the Mac mini:** `external/xfund_it_train` (149 forms), op6 against both op1 adapters retrained there, `op1m0` (seed 0) and `op1s1` (seed 1), raw against raw. Passed if the lower bound is above -1.5 against both (rule 4). If it fails, the pilot stops: no test read. Tag `xfundtr_v8d8e8op6_1.0_op`.
+**Gate 2, test, only if gate 1 passes:** `external/docatlas_it_test` and `external/docatlas_it_scan_test`, op6 with the retry as released (`--retry-penalty 1.1`, stage 2) against the release's saved readings (`s2_docatlas_v8d8e8op1_rp110`, `s2_docatlasscan_v8d8e8op1_rp110`). Tags `docatlas_v8d8e8op6_1.0_op_rp110`, `docatlasscan_v8d8e8op6_1.0_op_rp110`.
+
+**Prediction.** Gate 1: -1.5 to +0.5 against op1m0 and op1s1, a narrow pass or a fail. Gate 2: +0.0 to +0.5 on each DocAtlas set, not shown better (the most there is to win is 1.2 points).
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
