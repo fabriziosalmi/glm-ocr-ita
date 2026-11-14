@@ -18,7 +18,8 @@ SETS = {"external/xfund_it_val": ("xfund_it_v8d8e8op1_1.0_op_rp110", 34), "exter
 SEED, MAX_NEW = 20261114, 3000
 RIVALS = {
     "xiaomi_ocr0": {"backend": "transformers", "repo": "SeerRay-Lab/Xiaomi-OCR-0", "revision": "bbd8cf8d21f256b3644b44cb860f3a7cecb93c30",
-                    "prompt": "Extract the text in the image.", "chat": {"enable_thinking": False}},   # its "text" prompt, evaluation_pipeline
+                    "prompt": "Extract the text in the image.", "chat": {"enable_thinking": False},   # its "text" prompt, evaluation_pipeline
+                    "fit": 2048},   # its evaluation fits every image within 2048 x 2048 (evaluation_pipeline/cropping.py, LANCZOS)
     # transformers' PaddleOCR-VL generates about 2 tokens a second on MPS (8.5 s prefill, 32 tokens in 17 s, 2026-11-14): 13 minutes
     # a page. Its official GGUF on llama.cpp instead, as for MiniCPM-OCR.
     "paddleocr_vl16": {"backend": "llama.cpp", "repo": "PaddlePaddle/PaddleOCR-VL-1.6-GGUF", "revision": "511b09642bb324401f15f97cc23bc67e8f0a291d",
@@ -95,6 +96,8 @@ def read(name, limit=None):
     try:
         for p in todo:
             im = open_page(corpus.corpus_dir(p["corpus"]) / f"{p['id']}.png").convert("RGB")
+            if cfg.get("fit"):
+                im.thumbnail((cfg["fit"], cfg["fit"]), Image.Resampling.LANCZOS)
             t = time.time(); r = reader(im); r["s"] = time.time() - t
             res["pages"][f"{p['corpus']}|{p['id']}"] = r
             json.dump(res, open(out, "w"), ensure_ascii=False, indent=1)
