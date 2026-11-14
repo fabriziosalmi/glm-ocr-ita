@@ -147,25 +147,41 @@ def ours():
     return out
 
 
-def score(names):
+MODEL_ALONE = {"external/xfund_it_val": "xfund_it_v8d8e8op1_1.0_op", "external/ocrbench_test": "ocrbt_v8d8e8op1_1.0_op",
+               "blind/itdoc_15_correspondence": "itdoc15_v8d8e8op1_1.0_op_rp110"}   # no sampled letter looped: the retry never ran
+
+
+def model_alone(keys):
+    """The fine-tuned model as the rivals read: the whole page once, no retry, no bands (LEDGER, question 3), on the sampled pages."""
+    out = {}
+    for name, tag in MODEL_ALONE.items():
+        for i, p in corpus.load_run(tag)["pages"].items():
+            if f"{name}|{i}" not in keys:
+                continue
+            assert not p.get("retry"), (tag, i)
+            out[f"{name}|{i}"] = {"text": p["text"], "s": p["s"]}
+    return out
+
+
+def score(names, base_name="glm-ocr-ita v1.5.0"):
     pages = json.load(open(corpus.result_path("rivals_sample"))); keys = [f"{p['corpus']}|{p['id']}" for p in pages]
     meta = {f"{n}|{m['id']}": m for n in SETS for m in corpus.load_meta(n)}
     ref = {k: corpus.reference(k.split("|")[0], k.split("|")[1]) for k in keys}
-    runs = {"glm-ocr-ita v1.5.0": ours()}
+    runs = {"glm-ocr-ita v1.5.0": ours(), "glm-ocr-ita model alone": model_alone(set(keys))}
     for n in names:
         p = corpus.result_path(f"rival_{n}")
         if p.exists():
             runs[n] = json.load(open(p))["pages"]
     groups = {"all 100": keys, **{n.split("/")[1]: [k for k in keys if k.startswith(n)] for n in SETS}}
     count = lambda run, f: {k: (f(meta[k]["entities"], run[k]["text"]), len(meta[k]["entities"])) for k in keys if k in run}
-    base = count(runs["glm-ocr-ita v1.5.0"], metrics.found)
+    base = count(runs[base_name], metrics.found); print(f"differences against {base_name}")
     print(f"{'reader':22s} {'pages':>5s} " + " ".join(f"{g:>26s}" for g in groups) + f" {'loose':>6s} {'CER':>6s} {'s/page':>7s}")
     for r, run in runs.items():
         c, cl = count(run, metrics.found), count(run, metrics.found_loose); have = [k for k in keys if k in run]
         cells = []
         for g, ks in groups.items():
             ks = [k for k in ks if k in run]
-            if r == "glm-ocr-ita v1.5.0" or not ks:
+            if r == base_name or not ks:
                 cells.append(f"{metrics.recall(c, ks):6.1f}%".rjust(26) if ks else "-".rjust(26)); continue
             lo, hi = metrics.bootstrap(lambda s: metrics.recall(c, s) - metrics.recall(base, s), ks)
             cells.append(f"{metrics.recall(c, ks):5.1f}% {metrics.recall(c, ks) - metrics.recall(base, ks):+5.1f} [{lo:+5.1f},{hi:+5.1f}]".rjust(26))
@@ -178,4 +194,4 @@ if __name__ == "__main__":
     ap.add_argument("--limit", type=int, default=None); a = ap.parse_args()
     if a.cmd != "sample" and not corpus.ledger_has("rivals_sample"):
         sys.exit("write the question and `rivals_sample` in docs/LEDGER.md first")
-    {"sample": sample, "read": lambda: read(a.name, a.limit), "rescue": lambda: rescue(a.name), "score": lambda: score([n for n in RIVALS if n != "xiaomi_ocr0_hf"])}[a.cmd]()
+    {"sample": sample, "read": lambda: read(a.name, a.limit), "rescue": lambda: rescue(a.name), "score": lambda: [score([n for n in RIVALS if n != "xiaomi_ocr0_hf"], b) for b in ("glm-ocr-ita v1.5.0", "glm-ocr-ita model alone")]}[a.cmd]()

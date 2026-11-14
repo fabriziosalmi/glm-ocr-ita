@@ -243,3 +243,36 @@ def test_v1_5_bands(name):
     lo, hi = metrics.bootstrap(lambda s: metrics.recall(b, s) - metrics.recall(a, s), ids)
     assert (r1(lo), r1(hi)) == ci
     assert sum(b[i][0] < a[i][0] for i in ids) == lost and sum(b[i][0] > a[i][0] for i in ids) == gained
+
+
+# 2026-11-14: three other OCR models against v1.5.0 on 100 test pages (experiments/rivals.py; docs/RESULTS.md). Their readings hold
+# XFUND text and are not in git: skipped where they are missing.
+RIVALS = {"minicpm_ocr10": (76.8, -12.8, (-16.7, -9.2)), "paddleocr_vl16": (74.5, -15.2, (-20.4, -10.2)), "xiaomi_ocr0": (72.9, -16.7, (-19.4, -14.1))}
+
+
+def test_rivals():
+    import importlib.util, json
+    from huggingface_hub import try_to_load_from_cache
+    from glmocr import orient
+    names = [f"rival_{n}" for n in RIVALS] + ["rivals_sample"]
+    if not all(corpus.result_path(n).exists() for n in names):
+        pytest.skip("the rivals' readings are not in results/ (not in git)")
+    if not isinstance(try_to_load_from_cache(orient.REPO, "model.safetensors", revision=orient.REVISION), str):
+        pytest.skip("the orientation classifier's weights are not in the Hugging Face cache")
+    spec = importlib.util.spec_from_file_location("rivals", corpus.ROOT / "experiments" / "rivals.py"); rv = importlib.util.module_from_spec(spec)
+    try:
+        spec.loader.exec_module(rv); ours = rv.ours()
+    except corpus.Missing as e:
+        pytest.skip(str(e))
+    keys = [f"{p['corpus']}|{p['id']}" for p in json.load(open(corpus.result_path("rivals_sample")))]
+    meta = {f"{n}|{m['id']}": m for n in rv.SETS for m in corpus.load_meta(n)}
+    count = lambda run: {k: (metrics.found(meta[k]["entities"], run[k]["text"]), len(meta[k]["entities"])) for k in keys}
+    a = count(ours)
+    assert r1(metrics.recall(a, keys)) == 89.6
+    alone = count(rv.model_alone(set(keys)))
+    assert r1(metrics.recall(alone, keys)) == 84.2
+    for n, (recall, diff, ci) in RIVALS.items():
+        b = count(json.load(open(corpus.result_path(f"rival_{n}")))["pages"])
+        assert r1(metrics.recall(b, keys)) == recall and r1(metrics.recall(b, keys) - metrics.recall(a, keys)) == diff
+        lo, hi = metrics.bootstrap(lambda s: metrics.recall(b, s) - metrics.recall(a, s), keys)
+        assert (r1(lo), r1(hi)) == ci, n

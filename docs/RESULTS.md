@@ -15,6 +15,25 @@ Same weights as v1.3.0. What is new is the bands: after the whole page, its top 
 
 On ocr-bench-v1 no page loops, so the fine-tuned model alone and the release read every page the same, byte for byte. On Omni Parse Bench the release's harness reads 29 of the 80 pages from their PDF text layer, which the bands do not touch, and is the v1.4.0 harness (75.5%; 76.1% with v1.2.0's single retry). CER with the bands: XFUND 17.5% to 17.9%, ocr-bench-v1 6.9% to 2.9%, letters 3.0% to 3.3%; on MDPBench's phone photographs (test, a set whose failures were seen first, so a check rather than a confirmation) 22.8% to 23.8% for +0.57 [+0.19, +1.10]. The orientation classifier took no upright page for turned on any test set, and was sure of all 10 turned letters. Time: +14% on XFUND, +20% on the letters. `tests/test_release.py` recomputes the band rows where the sets and the readings are on the machine.
 
+## Against other OCR models
+
+On 2026-11-14, three OCR models published in October and November 2026 against v1.5.0 on 100 test pages drawn with a fixed seed: 34 real Italian forms (XFUND), 33 stress pages of ocr-bench-v1 (Italian and English), 33 letters no model had read before 2026-11-12 (`results/rivals_sample.json`, `experiments/rivals.py`, `LEDGER.md`, question and prediction written before any read).
+
+| Entities found exactly | GLM-OCR-ita v1.5.0 | GLM-OCR-ita, model alone | MiniCPM-OCR 1.0 | PaddleOCR-VL-1.6 | Xiaomi-OCR-0 |
+|---|---|---|---|---|---|
+| All 100 pages | **89.6%** | 84.2% | 76.8% | 74.5% | 72.9% |
+| XFUND Italian forms (34) | **80.2%** | 74.4% | 76.4% | 66.8% | 71.6% |
+| ocr-bench-v1 (33) | **95.3%** | 90.9% | 75.4% | 69.3% | 81.9% |
+| Letters (33) | **98.0%** | 92.1% | 78.9% | 92.1% | 65.2% |
+| Character error rate | **8.7%** | 10.7% | 16.5% | 18.9% | 19.5% |
+| Pages ending at the 3000-token budget | 0 | 0 | 1 | 10 | 0 |
+
+Paired differences on the 100 pages, against the release: MiniCPM-OCR -12.8 [-16.7, -9.2], PaddleOCR-VL -15.2 [-20.4, -10.2], Xiaomi-OCR-0 -16.7 [-19.4, -14.1]. Against the fine-tuned model alone, read as the rivals are (the whole page once, no retry, no bands): -7.4 [-11.7, -3.3], -9.8 [-15.7, -4.3], -11.3 [-14.6, -8.0]; the harness adds +5.4 [+3.2, +7.8]. On the XFUND forms alone no rival is shown better or worse than the model alone (MiniCPM-OCR +2.0 [-3.3, +7.3]), and against the release MiniCPM-OCR is not shown worse (-3.8 [-7.9, +0.4]): there the lead is the harness's.
+
+How they were read. Each rival reads the whole page once with its own plain-text prompt (MiniCPM-OCR `Text Recognition:`, PaddleOCR-VL `OCR:`, Xiaomi-OCR-0 `Extract the text in the image.`), greedy, at most 3000 new tokens, on llama.cpp b12377 with Metal: the official GGUFs of MiniCPM-OCR and PaddleOCR-VL, and for Xiaomi-OCR-0 the community BF16 GGUF its authors list, pages fitted within 2048 px as its own evaluation does. Weights are pinned by revision. GLM-OCR-ita is its saved v1.5.0 readings: the whole page with the loop retry, and the bands; the model alone is its saved readings without either (v1.0.0 on XFUND, the fine-tuned model alone on ocr-bench, the whole page on the letters, where no sampled page looped).
+
+What it does not show. The release has its harness (retry, bands) and the rivals read once; PaddleOCR-VL and MiniCPM-OCR are made to read the regions a layout detector cuts, and their own pipelines were not run. The letters and ocr-bench are this project's own sets, built with the cases the release was improved on: on the letters the rivals leave out whole blocks (letterhead, the closing after blank space, the footer with VAT number, tax code, PEC and IBAN), the failure the bands were made for. XFUND is the neutral set, and there MiniCPM-OCR is not shown worse. Xiaomi-OCR-0 was first read in transformers on the Mac's GPU, where 29 of the 33 ocr-bench pages came back as NaN; on the 71 sound pages its GGUF reads 70.1% against 68.2% there. Times are not compared: the rivals ran on llama.cpp, not on the GPUs they are made for.
+
 ## Release v1.4.0
 
 Same weights as v1.3.0. What is new is a third reading for a page whose loop the second reading does not break: penalty 1.3 over the last 256 tokens, after penalty 1.1 over 20 (`glmocr/engine.py`, `glmocr/llama.py`). A page that does not loop is read exactly as before.
