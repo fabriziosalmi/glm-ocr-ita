@@ -247,7 +247,7 @@ def test_v1_5_bands(name):
 
 # 2026-11-14: three other OCR models against v1.5.0 on 100 test pages (experiments/rivals.py; docs/RESULTS.md). Their readings hold
 # XFUND text and are not in git: skipped where they are missing.
-RIVALS = {"minicpm_ocr10": (76.8, -12.8, (-16.7, -9.2)), "paddleocr_vl16": (74.5, -15.2, (-20.4, -10.2)), "xiaomi_ocr0": (72.9, -16.7, (-19.4, -14.1))}
+RIVALS = {"minicpm_ocr10_harness": (83.1, -6.5, (-9.9, -3.3)), "minicpm_ocr10": (76.8, -12.8, (-16.7, -9.2)), "paddleocr_vl16": (74.5, -15.2, (-20.4, -10.2)), "xiaomi_ocr0": (72.9, -16.7, (-19.4, -14.1))}
 
 
 def test_rivals():

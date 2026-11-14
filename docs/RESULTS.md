@@ -19,16 +19,18 @@ On ocr-bench-v1 no page loops, so the fine-tuned model alone and the release rea
 
 On 2026-11-14, three OCR models published in October and November 2026 against v1.5.0 on 100 test pages drawn with a fixed seed: 34 real Italian forms (XFUND), 33 stress pages of ocr-bench-v1 (Italian and English), 33 letters no model had read before 2026-11-12 (`results/rivals_sample.json`, `experiments/rivals.py`, `LEDGER.md`, question and prediction written before any read).
 
-| Entities found exactly | GLM-OCR-ita v1.5.0 | GLM-OCR-ita, model alone | MiniCPM-OCR 1.0 | PaddleOCR-VL-1.6 | Xiaomi-OCR-0 |
-|---|---|---|---|---|---|
-| All 100 pages | **89.6%** | 84.2% | 76.8% | 74.5% | 72.9% |
-| XFUND Italian forms (34) | **80.2%** | 74.4% | 76.4% | 66.8% | 71.6% |
-| ocr-bench-v1 (33) | **95.3%** | 90.9% | 75.4% | 69.3% | 81.9% |
-| Letters (33) | **98.0%** | 92.1% | 78.9% | 92.1% | 65.2% |
-| Character error rate | **8.7%** | 10.7% | 16.5% | 18.9% | 19.5% |
-| Pages ending at the 3000-token budget | 0 | 0 | 1 | 10 | 0 |
+| Entities found exactly | GLM-OCR-ita v1.5.0 | GLM-OCR-ita, model alone | MiniCPM-OCR 1.0 with GLM-OCR-ita's harness | MiniCPM-OCR 1.0 | PaddleOCR-VL-1.6 | Xiaomi-OCR-0 |
+|---|---|---|---|---|---|---|
+| All 100 pages | **89.6%** | 84.2% | 83.1% | 76.8% | 74.5% | 72.9% |
+| XFUND Italian forms (34) | **80.2%** | 74.4% | 78.0% | 76.4% | 66.8% | 71.6% |
+| ocr-bench-v1 (33) | **95.3%** | 90.9% | 81.4% | 75.4% | 69.3% | 81.9% |
+| Letters (33) | **98.0%** | 92.1% | 93.1% | 78.9% | 92.1% | 65.2% |
+| Character error rate | **8.7%** | 10.7% | 11.8% | 16.5% | 18.9% | 19.5% |
+| Pages ending at the 3000-token budget | 0 | 0 | 0 | 1 | 10 | 0 |
 
 Paired differences on the 100 pages, against the release: MiniCPM-OCR -12.8 [-16.7, -9.2], PaddleOCR-VL -15.2 [-20.4, -10.2], Xiaomi-OCR-0 -16.7 [-19.4, -14.1]. Against the fine-tuned model alone, read as the rivals are (the whole page once, no retry, no bands): -7.4 [-11.7, -3.3], -9.8 [-15.7, -4.3], -11.3 [-14.6, -8.0]; the harness adds +5.4 [+3.2, +7.8]. On the XFUND forms alone no rival is shown better or worse than the model alone (MiniCPM-OCR +2.0 [-3.3, +7.3]), and against the release MiniCPM-OCR is not shown worse (-3.8 [-7.9, +0.4]): there the lead is the harness's.
+
+The harness around MiniCPM-OCR. GLM-OCR-ita's own llama.cpp reader (loop stop, retry at 1.1, third reading at 1.3) with MiniCPM-OCR's chat template, and the bands with the orientation guard, as `glmocr infer` reads: MiniCPM-OCR goes from 76.8% to 83.1% (+6.3; the harness adds +5.4 to the fine-tuned GLM-OCR), and stays behind v1.5.0 by -6.5 [-9.9, -3.3]. The lead that remains is the model's, on this project's own sets (ocr-bench -13.9, letters -4.8); on the XFUND forms the two are not told apart (-2.2 [-6.2, +1.8]). The 98 pages neither looped nor turned came back byte for byte as MiniCPM-OCR's own reading, so the harness changed nothing but what it is for.
 
 How they were read. Each rival reads the whole page once with its own plain-text prompt (MiniCPM-OCR `Text Recognition:`, PaddleOCR-VL `OCR:`, Xiaomi-OCR-0 `Extract the text in the image.`), greedy, at most 3000 new tokens, on llama.cpp b12377 with Metal: the official GGUFs of MiniCPM-OCR and PaddleOCR-VL, and for Xiaomi-OCR-0 the community BF16 GGUF its authors list, pages fitted within 2048 px as its own evaluation does. Weights are pinned by revision. GLM-OCR-ita is its saved v1.5.0 readings: the whole page with the loop retry, and the bands; the model alone is its saved readings without either (v1.0.0 on XFUND, the fine-tuned model alone on ocr-bench, the whole page on the letters, where no sampled page looped).
 
