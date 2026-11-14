@@ -12,6 +12,40 @@ The whole story in six pages: [overview (English)](docs/overview-v1.5.0-en.pdf),
 
 ## Results
 
+### From the original model to v1.5.0
+
+The same test pages read at each step (MLX, M4 16 GB; [`docs/RESULTS.md`](docs/RESULTS.md#release-v150)). The harness is the loop retry and, for PDFs, the text layer; the bands are v1.5.0's.
+
+| Test set | Original | Fine-tuned alone | + harness | **+ bands (v1.5.0)** | Bands against the harness [95% CI] |
+|---|---|---|---|---|---|
+| XFUND, 50 real Italian forms | 74.6% | 74.9% | 77.7% | **79.9%** | +2.2 [+0.9, +4.0] |
+| ocr-bench-v1, 50 stress pages | 83.7% | 91.8% | 91.8% | **96.6%** | +4.8 [+3.1, +6.6] |
+| Omni Parse Bench, 80 real PDF pages | 56.0% | 58.2% | 75.5% | **77.2%** | +3.1 [+0.0, +6.9], not worse |
+| 200 unseen letters, Italian and English | - | - | 92.4% | **96.1%** | +3.7 [+2.7, +4.8] |
+
+No page lost to the bands on any set; they add about 20% to the time of a page.
+
+<sub>Limits: ocr-bench and the letters are this project's own sets, built with the cases the release was improved on; XFUND and Omni Parse Bench are not. The letters were never read by the original model. On Omni Parse Bench, 29 of the 80 pages are read from their PDF text layer, which the bands do not touch.</sub>
+
+### Against other OCR models
+
+![GLM-OCR-ita v1.5.0 89.6%, the model alone 84.2%, MiniCPM-OCR with GLM-OCR-ita's harness 83.1%, MiniCPM-OCR 76.8%, PaddleOCR-VL-1.6 74.5%, Xiaomi-OCR-0 72.9%](docs/img/rivals-v1.5.0.png)
+
+| 100 test pages, entities read exactly | All | XFUND forms (34) | ocr-bench (33) | Letters (33) |
+|---|---|---|---|---|
+| **GLM-OCR-ita v1.5.0** | **89.6%** | **80.2%** | **95.3%** | **98.0%** |
+| GLM-OCR-ita, model alone | 84.2% | 74.4% | 90.9% | 92.1% |
+| MiniCPM-OCR 1.0 with GLM-OCR-ita's harness | 83.1% | 78.0% | 81.4% | 93.1% |
+| MiniCPM-OCR 1.0 | 76.8% | 76.4% | 75.4% | 78.9% |
+| PaddleOCR-VL-1.6 | 74.5% | 66.8% | 69.3% | 92.1% |
+| Xiaomi-OCR-0 | 72.9% | 71.6% | 81.9% | 65.2% |
+
+On the 100 pages MiniCPM-OCR, PaddleOCR-VL and Xiaomi-OCR-0 are each behind v1.5.0 and behind the fine-tuned model alone, with 95% intervals that exclude zero. With the same harness, MiniCPM-OCR stays 6.5 points behind v1.5.0 (-6.5 [-9.9, -3.3]) and ties the model alone. On the XFUND forms, the neutral set, MiniCPM-OCR is not told apart from either. Details in [`docs/RESULTS.md`](docs/RESULTS.md#against-other-ocr-models).
+
+<sub>Limits: each other model read the whole page once, with its own plain-text prompt and no retry, on llama.cpp; PaddleOCR-VL and MiniCPM-OCR are made to read the regions a layout detector cuts, and their own pipelines were not run. Xiaomi-OCR-0 was read from a community GGUF, after its transformers run on a Mac GPU returned NaN on 29 pages. ocr-bench and the letters are this project's own sets: on the letters the other models leave out letterheads and footers, the failure the bands were made for. Times are not compared.</sub>
+
+### Against the original model, every test set
+
 Against the original model (`zai-org/GLM-OCR`, bf16), same pages, paired difference with a 95% bootstrap interval over pages. Test sets only. M4, 16 GB.
 
 | Test set | Pages | Original | **GLM-OCR-ita** | Difference [95% CI] |
@@ -27,10 +61,6 @@ Against the original model (`zai-org/GLM-OCR`, bf16), same pages, paired differe
 | OmniDocBench, **Chinese** pages read whole (edit distance x100, lower is better) | 45 | 14.8 | 19.7 | **-4.8 [-10.6, -0.9], worse** |
 | OmniDocBench, 200 pages read by regions (`--regions`): overall, formulas by edit distance | 200 | 93.8 | 93.7 | -0.1; text not worse on English or Chinese |
 | ocr-bench-v1, synthetic stress pages (camera captures, degraded scans, stamps), Italian and English | 50 | 83.7% | **91.8%** | **+8.1 [+4.2, +13.6]** |
-
-**v1.5.0, the bands** (below, How it works, 6), on the same test sets, against the release's whole page: XFUND Italian forms 77.7% to **79.9%** (+2.2 [+0.9, +4.0]), ocr-bench-v1 91.8% to **96.6%** (+4.8 [+3.1, +6.6]), Omni Parse Bench with the text layer 75.5% to **77.2%** (+3.1 [+0.0, +6.9] per page, not worse), 200 unseen Italian and English letters 92.4% to **96.1%** (+3.7 [+2.7, +4.8]); no page lost on any, about 20% more time.
-
-**Against other OCR models** (2026-11-14, 100 test pages, each rival reading the whole page once with its own prompt; [details and limits](docs/RESULTS.md#against-other-ocr-models)): GLM-OCR-ita v1.5.0 89.6% of entities, the fine-tuned model alone (read as the rivals are, without retry or bands) 84.2%, MiniCPM-OCR 1.0 76.8%, PaddleOCR-VL-1.6 74.5%, Xiaomi-OCR-0 72.9%. On the real Italian forms alone, MiniCPM-OCR is not shown worse than the release (-3.8 [-7.9, +0.4]) and ties the model alone: there the lead is the harness's. With the same harness around it, MiniCPM-OCR reaches 83.1%, still behind v1.5.0 (-6.5 [-9.9, -3.3]).
 
 Scores are the share of entities found exactly (amounts, dates, tax codes, IBAN, VAT numbers, PEC addresses; on XFUND its annotated fields), or the benchmark's own scorer where it has one. The synthetic and SROIE rows were read before the loop retry existed (v1.0.0, same weights); the retry changes only pages that loop. Size 1184 MB against 2651, peak memory 2.10 GB against 3.16, 72 generated tokens/s against 65. Every table, the per-type and per-level breakdowns and the full history are in [`docs/RESULTS.md`](docs/RESULTS.md).
 
