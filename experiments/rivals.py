@@ -3,8 +3,8 @@
    python experiments/rivals.py score                       -> the table: release v1.5.0 against each rival
 Three OCR models of late 2026 against the release on the same 100 test pages (docs/LEDGER.md, "Three other OCR models"). Each rival
 reads the whole page with its own plain-text prompt, greedy, at most 3000 new tokens, no retry, as its authors' reference
-implementation does where it runs on a Mac: transformers bf16 on the GPU (MPS) for Xiaomi-OCR-0 and PaddleOCR-VL-1.6; the official
-GGUF on llama.cpp for MiniCPM-OCR 1.0, which transformers does not implement. The release is its saved v1.5.0 readings: the whole
+implementation does where it runs on a Mac: transformers bf16 on the GPU (MPS) for Xiaomi-OCR-0; the official GGUF on llama.cpp for MiniCPM-OCR 1.0,
+which transformers does not implement, and for PaddleOCR-VL-1.6, which transformers runs at 2 tokens a second on MPS. The release is its saved v1.5.0 readings: the whole
 page with the retry, and the bands where the orientation classifier does not take the page for turned (glmocr infer's default).
 Not measured here: the rivals' own layout pipelines (PaddleOCR-VL and MiniCPM-OCR are made to read the regions a layout detector
 cuts, as GLM-OCR is), and their speed on the hardware they are made for."""
@@ -19,8 +19,11 @@ SEED, MAX_NEW = 20261114, 3000
 RIVALS = {
     "xiaomi_ocr0": {"backend": "transformers", "repo": "SeerRay-Lab/Xiaomi-OCR-0", "revision": "bbd8cf8d21f256b3644b44cb860f3a7cecb93c30",
                     "prompt": "Extract the text in the image.", "chat": {"enable_thinking": False}},   # its "text" prompt, evaluation_pipeline
-    "paddleocr_vl16": {"backend": "transformers", "repo": "PaddlePaddle/PaddleOCR-VL-1.6", "revision": "132c45f52c0a26ed5a6b2f6bd8e3985794cc27dd",
-                       "prompt": "OCR:", "chat": {}},
+    # transformers' PaddleOCR-VL generates about 2 tokens a second on MPS (8.5 s prefill, 32 tokens in 17 s, 2026-11-14): 13 minutes
+    # a page. Its official GGUF on llama.cpp instead, as for MiniCPM-OCR.
+    "paddleocr_vl16": {"backend": "llama.cpp", "repo": "PaddlePaddle/PaddleOCR-VL-1.6-GGUF", "revision": "511b09642bb324401f15f97cc23bc67e8f0a291d",
+                       "files": ("PaddleOCR-VL-1.6-GGUF.gguf", "PaddleOCR-VL-1.6-GGUF-mmproj.gguf"), "prompt": "OCR:",
+                       "server": "work/llama-b12377/llama-b12377/llama-server"},
     "minicpm_ocr10": {"backend": "llama.cpp", "repo": "openbmb/MiniCPM-OCR-1.0-gguf", "revision": "0133ad8db635210441a55dcf421e25bfb9915142",
                       "files": ("MiniCPM-OCR-1_0-F16.gguf", "mmproj-model-f16-4x.gguf"), "prompt": "Text Recognition:",
                       "server": "work/llama-b12377/llama-b12377/llama-server"},

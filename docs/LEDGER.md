@@ -493,5 +493,7 @@ Pages: `results/rivals_sample.json`, 100 drawn with seed 20261114 from three tes
 
 **Prediction, a guess more than a measurement.** The release ahead of each rival on all 100 pages, by 2 to 10 points, lower bound above 0 against at least two of the three; widest on XFUND (Italian forms, typography and comb fields), narrowest on the letters (clean pages), where a rival may tie. **Caveats written now.** The release has a harness (retry, bands) and the rivals read once; PaddleOCR-VL and MiniCPM-OCR are made to read regions cut by a layout detector, not whole pages; two of the three sets are the project's own (synthetic), the third is real.
 
+
+**Change before any PaddleOCR-VL page was kept (2026-11-14).** In transformers 5.23.0 on MPS, PaddleOCR-VL-1.6 took 8.5 s to read the image and then generated about 2 tokens a second (32 tokens in 17 s): 13 minutes a page, 20 hours for the 100. It reads instead from PaddlePaddle's own GGUF (`PaddlePaddle/PaddleOCR-VL-1.6-GGUF`, the single full-precision file and its projector) on llama.cpp b12377, with `OCR:` and temperature 0 as its card says, as MiniCPM-OCR does. Xiaomi-OCR-0 stays on transformers (25 to 30 tokens a second there). The three smoke pages of Xiaomi-OCR-0 are kept: same configuration as the rest.
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
