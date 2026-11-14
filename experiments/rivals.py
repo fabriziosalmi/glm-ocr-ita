@@ -8,7 +8,7 @@ which transformers does not implement, and for PaddleOCR-VL-1.6, which transform
 page with the retry, and the bands where the orientation classifier does not take the page for turned (glmocr infer's default).
 Not measured here: the rivals' own layout pipelines (PaddleOCR-VL and MiniCPM-OCR are made to read the regions a layout detector
 cuts, as GLM-OCR is), and their speed on the hardware they are made for."""
-import argparse, json, pathlib, random, statistics, sys, time
+import argparse, json, pathlib, random, statistics, sys, time, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent; sys.path.insert(0, str(ROOT))
 from glmocr import corpus, metrics
@@ -24,6 +24,10 @@ RIVALS = {
     "xiaomi_ocr0": {"backend": "llama.cpp", "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF", "revision": "7bbfa072e0f3d70ac722e26fbccef5b9f64b7121",
                     "files": ("Xiaomi-OCR-0.BF16.gguf", "Xiaomi-OCR-0.mmproj-bf16.gguf"), "prompt": "Extract the text in the image.",
                     "server": "work/llama-b12377/llama-b12377/llama-server", "template": {"enable_thinking": False}, "fit": 2048},
+    # LEDGER, "The harness around MiniCPM-OCR 1.0": glmocr's own llama.cpp reader with MiniCPM-OCR's prompt, and the bands
+    "minicpm_ocr10_harness": {"backend": "glmocr", "repo": "openbmb/MiniCPM-OCR-1.0-gguf", "revision": "0133ad8db635210441a55dcf421e25bfb9915142",
+                              "files": ("MiniCPM-OCR-1_0-F16.gguf", "mmproj-model-f16-4x.gguf"), "prompt": "Text Recognition:",
+                              "server": "work/llama-b12377/llama-b12377/llama-server", "retry_penalty": 1.1},
     "xiaomi_ocr0_hf": {"backend": "transformers", "repo": "SeerRay-Lab/Xiaomi-OCR-0", "revision": "bbd8cf8d21f256b3644b44cb860f3a7cecb93c30",
                     "prompt": "Extract the text in the image.", "chat": {"enable_thinking": False},   # its "text" prompt, evaluation_pipeline
                     "fit": 2048},   # its evaluation fits every image within 2048 x 2048 (evaluation_pipeline/cropping.py, LANCZOS)
@@ -109,6 +113,30 @@ def rescue(name):
         print(f"{name} {i:48s} {r['s']:6.1f}s gen={r['gen_tokens']} float32", flush=True)
 
 
+def glmocr_reader(cfg):
+    """glmocr.llama.LlamaReader with MiniCPM-OCR's chat template in place of GLM-OCR's prompt string, wrapped in BandReader."""
+    import os
+    from huggingface_hub import hf_hub_download
+    from glmocr import bands, llama
+    os.environ["NO_PROXY"] = os.environ["no_proxy"] = "127.0.0.1,localhost"   # macOS's system proxy would take 127.0.0.1 too
+    os.environ["GLMOCR_LLAMA_SERVER"] = str(ROOT / cfg["server"])
+    m = hf_hub_download(cfg["repo"], cfg["files"][0], revision=cfg["revision"]); hf_hub_download(cfg["repo"], cfg["files"][1], revision=cfg["revision"])
+    r = llama.LlamaReader(m, max_tokens=MAX_NEW, retry_penalty=cfg["retry_penalty"], wait=True)
+    body = {"messages": [{"role": "user", "content": r.marker + cfg["prompt"]}]}
+    req = urllib.request.Request(r._url("/apply-template"), json.dumps(body).encode(), {"Content-Type": "application/json"})
+    rendered = json.load(urllib.request.urlopen(req))["prompt"]
+    assert rendered.count(r.marker + cfg["prompt"]) == 1, rendered
+    llama.PROMPT = rendered.replace(r.marker + cfg["prompt"], "{media}{task}")   # TASK_PROMPTS["text"] is "Text Recognition:" too
+    assert llama.TASK_PROMPTS["text"] == cfg["prompt"]
+    print("MiniCPM-OCR prompt:", repr(llama.PROMPT), flush=True)
+    br = bands.BandReader(r)
+    def read(image):
+        out = br.read(image)
+        return {k: out.get(k) for k in ("text", "whole_text", "bands", "retry", "prompt_tokens", "gen_tokens", "loop_cut")}
+    read.server = r.proc
+    return read
+
+
 def read(name, limit=None):
     from PIL import Image
     from glmocr.engine import open_page
@@ -118,7 +146,7 @@ def read(name, limit=None):
     todo = [p for p in pages if f"{p['corpus']}|{p['id']}" not in res["pages"]]
     if not todo:
         print("nothing to read"); return
-    reader = (transformers_reader if cfg["backend"] == "transformers" else llama_reader)(cfg)
+    reader = {"transformers": transformers_reader, "llama.cpp": llama_reader, "glmocr": glmocr_reader}[cfg["backend"]](cfg)
     try:
         for p in todo:
             im = open_page(corpus.corpus_dir(p["corpus"]) / f"{p['id']}.png").convert("RGB")
