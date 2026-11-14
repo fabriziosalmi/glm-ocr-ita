@@ -59,15 +59,16 @@ def llama_reader(cfg):
     from huggingface_hub import hf_hub_download
     m, mm = (hf_hub_download(cfg["repo"], f, revision=cfg["revision"]) for f in cfg["files"])
     port = 8131
+    local = urllib.request.build_opener(urllib.request.ProxyHandler({}))   # macOS's system proxy would otherwise take 127.0.0.1 too
     srv = subprocess.Popen([str(ROOT / cfg["server"]), "-m", m, "--mmproj", mm, "-c", "16384", "--port", str(port), "-ngl", "99", "--temp", "0"],
-                           stdout=subprocess.DEVNULL, stderr=open(ROOT / "work/rival_llama.log", "w"))
+                           stdout=subprocess.DEVNULL, stderr=open(ROOT / f"work/rival_llama_{cfg['files'][0].split('.')[0]}.log", "w"))
     for _ in range(300):
         try:
-            urllib.request.urlopen(f"http://127.0.0.1:{port}/health", timeout=2).read(); break
+            local.open(f"http://127.0.0.1:{port}/health", timeout=2).read(); break
         except Exception:
             time.sleep(1)
     else:
-        srv.kill(); sys.exit("llama-server did not start: work/rival_llama.log")
+        srv.kill(); sys.exit("llama-server did not start: see work/rival_llama_*.log")
 
     def read(image):
         buf = io.BytesIO(); image.save(buf, "PNG")
@@ -75,7 +76,7 @@ def llama_reader(cfg):
             {"type": "image_url", "image_url": {"url": "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()}},
             {"type": "text", "text": cfg["prompt"]}]}], "temperature": 0, "max_tokens": MAX_NEW}
         req = urllib.request.Request(f"http://127.0.0.1:{port}/v1/chat/completions", json.dumps(body).encode(), {"Content-Type": "application/json"})
-        r = json.load(urllib.request.urlopen(req, timeout=1800))
+        r = json.load(local.open(req, timeout=1800))
         return {"text": r["choices"][0]["message"]["content"], "prompt_tokens": r["usage"]["prompt_tokens"], "gen_tokens": r["usage"]["completion_tokens"]}
     read.server = srv
     return read
