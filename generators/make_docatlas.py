@@ -17,7 +17,11 @@ Images: long side 1754 px (A4 at 150 dpi), as every other page set. Fixed before
 reads badly: blanks drawn as rows of dots or underscores (it writes the row and stops), tick boxes (it repeats empty boxes), and
 amounts of a million or more. Markdown escapes are removed from their ground truth (plain(unescape=True)). At most one page per
 document; every other page taken from the scanned version (level 2), the
-others clean (level 1). -> external/docatlas_train."""
+others clean (level 1). -> external/docatlas_train.
+
+--prose N: N training pages of continuous Italian text (op7, 2026-11-27), for the misreads of plain words the release still makes on
+DocAtlas ("individuzione", "acquiscono"): pages whose ground truth holds at least 1500 characters and no table, from documents in
+neither the test set nor docatlas_train, one page per document, every other page scanned. -> external/docatlas_prose_train."""
 import argparse, json, os, pathlib, random, re
 from PIL import Image
 
@@ -64,6 +68,24 @@ def save(img, out, i, text, extra):
     return {"id": i, "gt": "docx_render", "tpl": "docatlas", "lang": "it", "rot90": False, "size": list(img.size), **extra, "entities": entities(text)}
 
 
+def prose_set(clean, scan, rng, n):
+    test = set(json.load(open("external/docatlas_test_docs.json")))
+    used = {m["document"] for m in json.load(open("external/docatlas_train/meta.json"))}
+    out = pathlib.Path("external/docatlas_prose_train"); out.mkdir(exist_ok=True); meta = []; docs = set()
+    pool = [i for i in sorted(clean) if i in scan and i.rsplit("_p", 1)[0] not in test | used and "<table" not in clean[i]["markdown"]
+            and len(plain(clean[i]["markdown"], unescape=True)) >= 1500]
+    rng.shuffle(pool)
+    for i in pool:
+        d = i.rsplit("_p", 1)[0]
+        if d in docs or len(meta) == n: continue
+        docs.add(d); scanned = len(meta) % 2 == 1; r = (scan if scanned else clean)[i]
+        img = Image.open(SRC / ("docatlas_it_scan" if scanned else "docatlas_it") / r["image"]).convert("RGB")
+        meta.append(save(img, out, i, plain(clean[i]["markdown"], unescape=True), {"level": 2 if scanned else 1, "need": "prose", "document": d}))
+    assert not docs & (test | used)
+    json.dump(meta, open(out / "meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(out, len(meta), "pages from", len(docs), "documents, pool", len(pool), "scanned", sum(m["level"] == 2 for m in meta))
+
+
 def train_set(clean, scan, rng, caps={"blank": 45, "box": 20, "million": 11}):
     test = set(json.load(open("external/docatlas_test_docs.json"))); used = set(); meta = []
     out = pathlib.Path("external/docatlas_train"); out.mkdir(exist_ok=True)
@@ -83,9 +105,11 @@ def train_set(clean, scan, rng, caps={"blank": 45, "box": 20, "million": 11}):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("--docs", type=int, default=40); ap.add_argument("--seed", type=int, default=20261014)
-    ap.add_argument("--train", action="store_true"); a = ap.parse_args(); rng = random.Random(a.seed)
+    ap.add_argument("--train", action="store_true"); ap.add_argument("--prose", type=int, default=0); a = ap.parse_args(); rng = random.Random(a.seed)
     clean = {r["id"]: r for r in map(json.loads, open(SRC / "docatlas_it/labels.jsonl"))}
     scan = {r["id"]: r for r in map(json.loads, open(SRC / "docatlas_it_scan/labels.jsonl"))}
+    if a.prose:
+        prose_set(clean, scan, random.Random(a.seed + 3), a.prose); raise SystemExit
     if a.train:
         train_set(clean, scan, random.Random(a.seed + 2)); raise SystemExit
     by_doc = {}

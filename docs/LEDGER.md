@@ -550,3 +550,17 @@ Data: `work/ft/train_op6.jsonl`, op1's 91 rows and the 58 DocAtlas rows of op3's
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
 | 2026-11-15 | op6 vs op1m0 and op1s1, `xfund_it_train`, raw | gate 1 | **Failed; the pilot stops, no test read.** op6 74.7%, against op1m0 77.7%: **-3.0 [-4.8, -1.2]**, worse (82 forms lost, 30 gained); against op1s1 77.9%: -3.1 [-5.2, -1.3], worse. The noise of training, op1s1 against op1m0, is +0.2 [-1.0, +1.6]. Loose check -1.8 [-3.7, +0.1]: most of the loss is real misreads, not typography. Predicted -1.5 to +0.5: worse than predicted. As op2 to op5 did, a further pass of fine-tuning, here 58 real Italian pages on top of op1's recipe, costs about 3 points on real forms; the pages being real and Italian does not prevent it. What it leaves: a next fine-tune has to hold real forms in its data, or start again from op1's recipe with the new pages mixed in (op1's pages are on the NAS), rather than add a pass on top |
+
+## op7: op1's recipe from scratch, op1's pages and 100 real Italian DocAtlas pages mixed
+
+Written on 2026-11-27, before the teacher read and before training. **Question:** op6 showed that a further pass on top of op1, even of real Italian pages, costs about 3 points on real forms. Does mixing real Italian text into op1's own recipe, trained from the original as op1 was, teach the plain words the release misreads on DocAtlas without that cost? op1's 91 pages are back from the NAS (all 91 checked) and the DocAtlas source too.
+
+Data: op1's 91 rows (`work/ft/train_op1.jsonl`, unchanged) and the answers `ft_targets.py` builds for `external/docatlas_prose_train` (100 pages of continuous text, one per document, half scanned, `generators/make_docatlas.py --prose 100`, documents in neither `external/docatlas_test_docs.json` nor `docatlas_train`; the generator stops if they are), teacher the original model as for op1 (`fttr_docprose_bf16_1.0_op`), default checks; pages it leaves out are reported. Training: op1's recipe from the original (`ft_train.py`, lr 1e-5, rank 8, one pass, seed 0), fused and quantized as the release, on the first Mac mini.
+
+**Gate 1, dev, raw:** `external/xfund_it_train` against `op1m0` and `op1s1` (op1's recipe trained again there): passed if the lower bound is above -1.5 against both. Tag `xfundtr_v8d8e8op7_1.0_op`. Fails: stop, no test read.
+**Gate 2, test, only if gate 1 passes:** both DocAtlas test sets with the retry, op7 against op1m0 read the same way. Tags `docatlas_v8d8e8op7_1.0_op_rp110`, `docatlasscan_v8d8e8op7_1.0_op_rp110`, `docatlas_v8d8e8op1m0_1.0_op_rp110`, `docatlasscan_v8d8e8op1m0_1.0_op_rp110`.
+
+**Prediction.** Gate 1: -1.0 to +0.5, a pass more likely than op6's (the mix keeps op1's data in the same pass). Gate 2: +0.2 to +0.8 on each DocAtlas set, the lower bound near 0.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
