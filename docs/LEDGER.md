@@ -519,3 +519,17 @@ Pages: `results/rivals_sample.json`. Reader: `glmocr/llama.py`'s `LlamaReader` u
 | Date | Configuration | Question | Outcome |
 |---|---|---|---|
 | 2026-11-14 | MiniCPM-OCR with the harness, 100 pages | 1, 2 | **The fine-tuned GLM-OCR stays ahead with the same harness.** Check: the 98 pages neither looped nor turned come back byte for byte as MiniCPM-OCR's chat reading; the retry ran on 1 page, the guard kept the bands off 1. MiniCPM-OCR 76.8% alone, **83.1% with the harness (+6.3)**, against v1.5.0 89.6%: **-6.5 [-9.9, -3.3]**. Predicted +3 to +6 (slightly above), about 81% (above), 6 to 10 points below v1.5.0 (held). By set against v1.5.0: XFUND 78.0 vs 80.2%, -2.2 [-6.2, +1.8], the tie predicted; ocr-bench 81.4 vs 95.3%, -13.9 [-23.2, -7.0]; letters 93.1 vs 98.0%, -4.8 [-7.8, -2.5]. Against the fine-tuned model alone, -1.1 [-5.1, +2.6]. CER 11.8% (v1.5.0 8.7%), 26.9 s a page on llama.cpp. The harness is worth about the same on both models (+5.4 on GLM-OCR-ita, +6.3 on MiniCPM-OCR); the lead that remains is the model's, on this project's own sets; on the real forms the two are not told apart |
+
+## Bands on DocAtlas, clean and scanned
+
+Written on 2026-11-14, before any band of these pages was read. **Decision:** none on the release (the bands are on by default since v1.5.0); this measures them on the two DocAtlas test sets, where the release ties the original (98.3% and 98.1% against 98.4%) and the 35 and 41 entities it misses (of 2656 each) split into near misses (21, 24) and text absent from the reading (14, 17).
+
+Sets: `external/docatlas_it_test` and `external/docatlas_it_scan_test`, 40 real Italian documents each, checked by digest between the MacBook and the first Mac mini. Whole pages: the release's saved readings (`s2_docatlas_v8d8e8op1_rp110`, `s2_docatlasscan_v8d8e8op1_rp110`, v1.4.0's retry); only the bands are read now (`experiments/pieces.py read --only top,bottom`). Tags: `s2_docatlas_v8d8e8op1_rp110_pieces`, `s2_docatlasscan_v8d8e8op1_rp110_pieces`. Policy: `bands lcnet`, as `glmocr infer` reads.
+
+**Questions.** (1) Recall against the whole page, rule 4, pages lost and gained. (2) CER and excess. (3) Pages taken for turned.
+
+**Prediction.** Not worse on both, +0.0 to +0.5 (at most the 14 and 17 absent entities, of which some sit in a letterhead or footer); 0 or 1 page lost; CER within 0.3 of the whole page's; no page taken for turned.
+
+| Date | Configuration | Question | Outcome |
+|---|---|---|---|
+| 2026-11-14 | `bands lcnet` vs whole page, `docatlas_it_test` and `docatlas_it_scan_test` | 1, 2, 3 | **Not worse, and next to nothing.** Clean 98.68% to 98.72%, scanned 98.46% to 98.49%: **+0.04 [+0.00, +0.13]** on each, 1 entity gained, 0 pages lost; within the predicted +0.0 to +0.5. CER 11.13% to 11.75% (+0.62) and 11.27% to 11.68% (+0.41): **against the prediction** (within 0.3). Excess 0.992 to 0.996, 0.990 to 0.993. No page taken for turned. The 14 and 17 entities absent from the reading are not in a letterhead or a footer: the bands do not reach them, and DocAtlas stays at its ceiling (the original reads 98.4% on both). No fine-tuning for it: half its misses would be +0.7 at most |
