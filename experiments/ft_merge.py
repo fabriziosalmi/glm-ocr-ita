@@ -11,6 +11,8 @@ from glmocr import guard
 from glmocr.corpus import ROOT, SOURCE, WORK
 
 adapter, out = pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2])
+if "--base" in sys.argv:   # the model the adapter was trained on, when it is not the original (ft_train.py --base)
+    SOURCE = pathlib.Path(sys.argv[sys.argv.index("--base") + 1])
 if out.exists(): raise SystemExit(f"{out} exists: choose another folder")
 held = guard.lock(WORK / ".model.lock", wait=True)
 guard.preflight(SOURCE); guard.apply_limits()

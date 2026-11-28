@@ -222,6 +222,10 @@ role = "test"
 # from issues that are in neither gu_dev nor gu_test).
 [dataset."external/docatlas_train"]
 role = "train"
+# op7 (2026-11-27): 100 pages of continuous Italian text, generators/make_docatlas.py --prose 100, documents in neither the test set
+# nor docatlas_train.
+[dataset."external/docatlas_prose_train"]
+role = "train"
 [dataset."external/gu_train"]
 role = "train"
 # Omni Parse Bench (Datalab), a reduced subset: 80 real PDF pages from ten suites, built by generators/make_opb.py (docs/EXTERNAL.md).
